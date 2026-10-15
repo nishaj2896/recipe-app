@@ -30,12 +30,15 @@ Free-text ingredient entry forces the server to turn `"Tomatoes "`, `"TOMATO"` a
 |---|------|-------------------------------------|
 | 1 | Unicode NFKC | unchanged |
 | 2 | Trim leading and trailing whitespace | `"Curry   LEAVES"` |
-| 3 | Collapse inner whitespace to one space | `"Curry LEAVES"` |
+| 3 | Collapse every run of whitespace to one space, as `" ".join(s.split())` does. That covers all Unicode whitespace (tab, newline, U+2003 em space, and U+00A0 no-break space, which step 1 turns into a space), not just the ASCII space | `"Curry LEAVES"` |
 | 4 | `str.casefold()` | `"curry leaves"` |
+| 5 | Unicode NFKC again, because `casefold()` can produce text that is no longer NFKC-normalized (Unicode Standard §3.13, compatibility caseless matching) | unchanged |
+
+Tests: a property test asserts `normalize(normalize(x)) == normalize(x)` for any string, and `"  Curry  LEAVES\t"` normalizes to `"curry leaves"`.
 
 It is never applied to request fields, because requests carry ids. It runs in two places only:
 - **Loading the catalog:** the catalog file is typed and edited by hand, so `"Tomato"` and `"tomato "` could be added as two ingredients by mistake. The catalog loader normalizes every display name so the startup check (rule 6) rejects near-duplicate names. It also stores every search term normalized, ready for matching; search terms are not checked for duplicates. Task 2 uses the same loader and function. Seed recipes refer to ingredients by id, so they are checked by id (rule 6), not normalized.
-- **The picker's search box:** there is no search endpoint. The app downloads the whole catalog (`GET /api/v1/ingredients`) and filters it on the device. It applies the same steps (trim, collapse spaces, casefold) to what the user types, for example `"Lady Finger "`, before prefix-matching names and search terms. Search only filters what the list shows; the request still sends the id of the item they tick.
+- **The picker's search box:** there is no search endpoint. The app downloads the whole catalog (`GET /api/v1/ingredients`) and filters it on the device. It applies the same five steps to what the user types, for example `"Lady Finger "`, before prefix-matching names and search terms. The server tests export their input and output pairs as a shared fixture file, and the app's tests run against the same file, so the two implementations can't drift. Search only filters what the list shows; the request still sends the id of the item they tick.
 
 **5. One English name per ingredient, in its common form, at one written level of detail.** Use the singular where English uses a singular (`potato`, `okra`) and the natural form otherwise (`cumin-seeds`, `curry-leaves`, `green-chillies`). Never two forms of the same ingredient, and no regional-language names anywhere in the catalog. Each entry may carry `search_terms` for English synonyms and variety names, never regional-language translations, for example Okra has `["lady finger"]` and Coriander leaves has `["cilantro"]`. The picker's search box matches the name and these terms by prefix, so typing "pota" already finds Potato and plurals aren't needed.
 
