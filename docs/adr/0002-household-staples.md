@@ -31,7 +31,7 @@ Fresh and pantry staples behave identically. `kind` only groups the staples scre
 
 Worked examples: ginger passes 2 (S, fresh). Paneer fails 1 and 2, then passes 3 (A). Milk and curd are restocked weekly but used in volume, not in small amounts to flavour, so they fail 2 and land in **B**: always core, never assumed. Coconut milk isn't kept by default in a *typical* kitchen, and it defines the curries that use it (A).
 
-**3. Milk and curd are never staples.** This is a product decision (14 Oct). A test asserts neither is class S.
+**3. Milk and curd are never staples.** This is a product decision (14 Oct). Their ids live in one named constant, `NEVER_STAPLES = frozenset({"milk", "curd"})`, in `recipe_app.domain.catalog` next to the loader check. The loader rejects a catalog that makes either of them class S, and the test imports the same constant, so the rule and its test can't drift apart.
 
 **4. Behaviour:**
 
@@ -56,11 +56,13 @@ The `diet` filter is hierarchical: it returns recipes whose diet is at or below 
 
 Tests: an egg curry is returned for `egg` and `non_veg`, and never for `vegetarian` or `vegan`. A chicken curry is returned only for `non_veg`.
 
-**7. One catalog file, versioned and validated.** `data/ingredients.v1.toml` lists every ingredient ever published, with `id`, `name`, `class`, `kind` (class S only), `diet`, `category`, `search_terms` (ADR-0001) and `retired` (default `false`). It's loaded once at startup into an immutable `IngredientCatalog` domain object. The app refuses to start if:
+**7. One catalog file, versioned and validated.** `data/ingredients.v1.toml` lists every ingredient ever published, with `id`, `name`, `class`, `kind` (class S only), `diet`, `category`, `search_terms` (ADR-0001) and `retired` (default `false`). The `v1` in the name is the **schema** version: the fields and what they mean. Adding, editing or retiring an ingredient is an ordinary edit to the same file. A `v2` file is needed only when a field is added, removed or changes meaning, and that change needs its own ADR. Each content version is identified by the SHA-256 hash of the file, computed at load as `IngredientCatalog.content_hash` and logged at startup, so you can always tell which catalog a running pod has. The file is loaded once at startup into an immutable `IngredientCatalog` domain object. The app refuses to start if:
 - the file is empty, or any id or normalized name is duplicated
 - an ingredient has an unknown class, kind or diet tag
-- milk or curd is class S
+- an id in `NEVER_STAPLES` is class S
 - a seed recipe uses an id that isn't in the catalog, or one that is retired (replace the ingredient or retire the recipe first)
+
+**The same checks run in CI.** One test loads `data/ingredients.v1.toml` and the seed recipes through the real loader, so a catalog that would stop the app from starting can't be merged. The loader is the only place these rules are written, and the test just calls it. Together with the append-only check (ADR-0001 rule 2), a data PR is validated as strictly as a code PR, and a bad catalog is caught in review instead of during a deploy.
 
 Changing an ingredient's class is a reviewed PR. Changing the rule needs a new ADR.
 
