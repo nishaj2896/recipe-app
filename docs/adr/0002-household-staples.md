@@ -68,7 +68,10 @@ Changing an ingredient's class is a reviewed PR. Changing the rule needs a new A
 **8. Read endpoints:**
 - `GET /api/v1/ingredients` returns every ingredient that isn't retired: id, name, class, kind, category, diet and search_terms, ordered by category then name.
 - `GET /api/v1/staples` returns class S ingredients that aren't retired, grouped by kind and category, in the same stable order.
-- Both are bounded reference data (under 1,000 items), so they return the full list in one response with an `ETag` and `Cache-Control: public, max-age=3600`, instead of paginating. This is a deliberate, documented exception to "pagination on every collection", to revisit if the catalog passes 2,000 items.
+- Both are bounded reference data (under 1,000 items), so they return the full list in one response instead of paginating. This is a deliberate, documented exception to "pagination on every collection", to revisit if the catalog passes 2,000 items.
+- **Caching:** both send `Cache-Control: public, no-cache` and a strong `ETag`. `no-cache` means "store it, but check before reusing it". The client sends `If-None-Match` on every load, and an unchanged catalog costs a `304 Not Modified` with no body.
+- **The ETag is the SHA-256 of the serialized response body,** quoted (`"sha256-…"`), computed once when the catalog is loaded. It is never a file modification time or a per-process counter, so every pod returns the same ETag for the same content. That only holds if serialization is deterministic: fixed field order, the stable sort above, and no timestamps in the body. A test asserts that two independently loaded catalogs give the same ETag. This is a different value from `content_hash` (rule 7), which identifies the catalog file. The ETag identifies one endpoint's response.
+- **Freshness target:** a catalog change reaches each client on its next catalog request, which the app makes on every launch and at least every 24 hours while running. The app sends its catalog ETag as `X-Catalog-Version` on every search. The server records the share of searches on an old version, and the share that return `ignored_ingredients` (ADR-0001 rule 3). An alert fires if more than 5% of searches are still on an old catalog 24 hours after a catalog deploy.
 
 **9. Every search result lists its assumed staples** in `assumed_staples`, as `{id, name}` objects, so the user can see what was taken for granted.
 
@@ -76,6 +79,7 @@ Changing an ingredient's class is a reviewed PR. Changing the rule needs a new A
 
 - **Easier:** one data file drives the picker, the staples screen, weights and diet. Two classes of behaviour (core or staple) instead of four.
 - **Easier:** a staple can't be "typed" any more, so the old questions about typed staples (Q13) and promoted aromatics disappear.
+- **Harder:** every app launch makes one catalog request, even when nothing changed. It's a `304` with no body, so the cost is one round trip, and in exchange there's no window where a client shows a catalog that's an hour old.
 - **Changed from earlier drafts:** aromatics no longer score 0.25 when the user has them. They're assumed when ticked, which is the default, and core at 0.25 only when unticked.
 - **Accepted trade-off:** the staples list reflects a typical Indian household kitchen, while recipes can be any cuisine. A pasta recipe still assumes the same salt, oil and garlic. Kitchens that differ will disagree with some classes until per-user staple defaults exist.
 - **Changed from the locked table:** egg is its own diet level instead of `non_veg`, so eggetarian users get egg dishes without meat.
