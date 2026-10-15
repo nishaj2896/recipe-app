@@ -40,7 +40,7 @@ Worked examples: ginger passes 2 (S, fresh). Paneer fails 1 and 2, then passes 3
 | A, B | Core, matched | Core, missing |
 | S | Assumed: not scored, never missing, listed in `assumed_staples` | Sent in `excluded_staples`: core at W = 0.25, listed as missing |
 
-**5. Staples are server policy with one client override.** The server decides which ingredients are staples. The client can only *subtract* staples, by unticking them, which sends them in `excluded_staples`. That field is a list of 0 to 100 ingredient ids, and each must be a class S id or the request fails with `422` naming the entry. Duplicates are rejected with `422` too, the same rule as `ingredient_ids` (ADR-0001). The app remembers unticked staples on the device (no accounts in v1) and sends them with every search.
+**5. Staples are server policy with one client override.** The server decides which ingredients are staples. The client can only *subtract* staples, by unticking them, which sends them in `excluded_staples`. That field is a list of 0 to 100 ingredient ids. An id that was never published returns `422` naming the entry, and so does a duplicate (the same rule as `ingredient_ids`, ADR-0001). A published id that is no longer class S, because it was retired or moved to class A or B, is ignored and listed in `ignored_ingredients` (ADR-0001 rule 3). The app remembers unticked staples on the device (no accounts in v1) and sends them with every search.
 
 **6. Diet is computed, never hand-labelled.** Every ingredient has one diet tag, from this ordered list: `vegan` < `vegetarian` < `egg` < `non_veg`. Eggs are `egg`. Ghee, butter, milk, curd, paneer and cream are `vegetarian`. Chicken, meat and fish are `non_veg`. A recipe's diet is the highest tag across **all** its ingredients, assumed staples included. So a dal finished with assumed ghee is `vegetarian` and never appears in a vegan search, and an egg curry is `egg`.
 
@@ -55,17 +55,17 @@ The `diet` filter is hierarchical: it returns recipes whose diet is at or below 
 
 Tests: an egg curry is returned for `egg` and `non_veg`, and never for `vegetarian` or `vegan`. A chicken curry is returned only for `non_veg`.
 
-**7. One catalog file, versioned and validated.** `data/ingredients.v1.toml` lists every ingredient with `id`, `name`, `class`, `kind` (class S only), `diet`, `category` and `search_terms` (ADR-0001). It's loaded once at startup into an immutable `IngredientCatalog` domain object. The app refuses to start if:
+**7. One catalog file, versioned and validated.** `data/ingredients.v1.toml` lists every ingredient ever published, with `id`, `name`, `class`, `kind` (class S only), `diet`, `category`, `search_terms` (ADR-0001) and `retired` (default `false`). It's loaded once at startup into an immutable `IngredientCatalog` domain object. The app refuses to start if:
 - the file is empty, or any id or normalized name is duplicated
 - an ingredient has an unknown class, kind or diet tag
 - milk or curd is class S
-- a seed recipe uses an id that isn't in the catalog
+- a seed recipe uses an id that isn't in the catalog, or one that is retired (replace the ingredient or retire the recipe first)
 
 Changing an ingredient's class is a reviewed PR. Changing the rule needs a new ADR.
 
 **8. Read endpoints:**
-- `GET /api/v1/ingredients` returns the whole catalog: id, name, class, kind, category, diet and search_terms, ordered by category then name.
-- `GET /api/v1/staples` returns class S only, grouped by kind and category, in the same stable order.
+- `GET /api/v1/ingredients` returns every ingredient that isn't retired: id, name, class, kind, category, diet and search_terms, ordered by category then name.
+- `GET /api/v1/staples` returns class S ingredients that aren't retired, grouped by kind and category, in the same stable order.
 - Both are bounded reference data (under 1,000 items), so they return the full list in one response with an `ETag` and `Cache-Control: public, max-age=3600`, instead of paginating. This is a deliberate, documented exception to "pagination on every collection", to revisit if the catalog passes 2,000 items.
 
 **9. Every search result lists its assumed staples** in `assumed_staples`, as `{id, name}` objects, so the user can see what was taken for granted.

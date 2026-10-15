@@ -12,10 +12,15 @@ Free-text ingredient entry forces the server to turn `"Tomatoes "`, `"TOMATO"` a
 
 **1. Users choose ingredients from the catalog. They never send free text.** The app shows the catalog (`GET /api/v1/ingredients`, ADR-0002) and the user ticks what they have. A search request carries ingredient **ids**, not names.
 
-**2. Ingredient ids are stable slugs, taken from the English name when the ingredient is created and never changed after:** lowercase, matching `^[a-z0-9]+(-[a-z0-9]+)*$`, at most 64 characters (`potato`, `curry-leaves`, `coconut-milk`). An id never changes once published. Renaming the display name doesn't change the id.
+**2. Ingredient ids are stable slugs, taken from the English name when the ingredient is created, and append-only:** lowercase, matching `^[a-z0-9]+(-[a-z0-9]+)*$`, at most 64 characters (`potato`, `curry-leaves`, `coconut-milk`). Once published, an id is never renamed, reused or deleted. Renaming the display name doesn't change the id. Retiring an ingredient sets `retired = true` in the catalog (ADR-0002) instead of removing it. A CI test fails if any id in `main`'s catalog is missing from the changed catalog.
 
 **3. Request validation is membership, not normalization:**
-- `ingredient_ids`: 1 to 50 items. Each must match the slug pattern and be a known non-staple ingredient. An unknown id, or a staple id (staples go in `excluded_staples`), returns `422` naming the entry.
+- `ingredient_ids`: 1 to 50 items. Each must match the slug pattern and be an id that has been published in the catalog at some point. An id that was never published returns `422` naming the entry, because only a client bug can produce one.
+- A published id that is no longer a main-list ingredient is accepted, never a `422`. A client may be showing a cached catalog, and a catalog change must not break its searches:
+  - **retired:** ignored for matching
+  - **now class S:** treated as an assumed staple, the same as a ticked staple
+  - Both are listed in the response as `ignored_ingredients`, each `{"id", "name", "reason"}` with reason `retired` or `now_staple`. The app uses this to refresh its catalog, and the server counts them as a metric so we can see stale clients.
+  - They still count toward the 50-item limit, since the limit bounds request size.
 - Duplicate ids are rejected with `422` naming the repeated id. A picker can't tick the same box twice, so a duplicate means a client bug, and failing fast surfaces it. The OpenAPI schema declares `uniqueItems: true`.
 - Ids are compared by exact equality. No case folding, trimming or substring matching happens on the request path.
 
@@ -44,7 +49,7 @@ It is never applied to request fields, because requests carry ids. It runs in tw
 
 - **Easier:** no unknown ingredients, no typos, no alias resolution per request. Matching is set membership on ids, which is trivially fast and testable.
 - **Easier:** the old normalization gate tests (`["Tomato", " tomatoes ", "TOMATO"]`) become id tests: unknown id gives `422`, a duplicate id gives `422`, and a staple id in `ingredient_ids` gives `422`.
-- **Harder:** the catalog must be complete enough that users find what they have. A missing ingredient means a support request, not a silent mismatch.
+- **Harder:** the catalog only grows. Retired ingredients stay in the file for good, which is a few hundred rows at most. That's the price of never breaking an installed app.
 - **Harder:** the picker needs good search and categories to stay usable with a few hundred items. That's app UX, made possible by `search_terms`.
 - **Retired:** the "regional alias" gate test (`["aloo", "bhindi"]` scores the same as `["potato", "okra"]`) and the locked aloo/bhindi/jeera alias decision. A user who searches in Hindi finds nothing, which is an accepted v1 trade-off; regional search terms can be added later without changing any id.
 - **Supersedes** the free-text answers to Q5 and Q13 and the `unrecognized_ingredients` field. Typing a staple is impossible now, because staples aren't offered in the main list (aromatics such as onion, garlic and tomato live only in the staples list, ADR-0002).
