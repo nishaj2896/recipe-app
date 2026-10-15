@@ -34,7 +34,7 @@ Free-text ingredient entry forces the server to turn `"Tomatoes "`, `"TOMATO"` a
 | 4 | `str.casefold()` | `"curry leaves"` |
 | 5 | Unicode NFKC again, because `casefold()` can produce text that is no longer NFKC-normalized (Unicode Standard §3.13, compatibility caseless matching) | unchanged |
 
-Tests: a property test asserts `normalize(normalize(x)) == normalize(x)` for any string, and `"  Curry  LEAVES\t"` normalizes to `"curry leaves"`.
+Tests: a property test asserts `normalize(normalize(x)) == normalize(x)` for any string, and `"  Curry\u2028\tLEAVES "` normalizes to `"curry leaves"`. Non-ASCII characters in test inputs are written as escapes, never pasted.
 
 It is never applied to request fields, because requests carry ids. It runs in two places only:
 - **Loading the catalog:** the catalog file is typed and edited by hand, so `"Tomato"` and `"tomato "` could be added as two ingredients by mistake. The catalog loader normalizes every display name so the startup check (rule 6) rejects near-duplicate names. It also stores every search term normalized, ready for matching; search terms are not checked for duplicates. Task 2 uses the same loader and function. Seed recipes refer to ingredients by id, so they are checked by id (rule 6), not normalized.
