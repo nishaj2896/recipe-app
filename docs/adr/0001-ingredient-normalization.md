@@ -61,7 +61,9 @@ A recipe lists the specific variant it was written with. Substitutions ("any dal
 
 - **Easier:** no unknown ingredients, no typos, no alias resolution per request. Matching is set membership on ids, which is trivially fast and testable.
 - **Easier:** the old normalization gate tests (`["Tomato", " tomatoes ", "TOMATO"]`) become id tests: unknown id gives `422`, a duplicate id gives `422`, and a staple id in `ingredient_ids` gives `422`.
+- **Harder:** the catalog must be complete enough that users find what they have. A missing ingredient means a support request, not a silent mismatch.
 - **Harder:** the catalog only grows. Retired ingredients stay in the file for good, which is a few hundred rows at most. That's the price of never breaking an installed app.
+- **Harder:** the picker needs good search and categories to stay usable with a few hundred items. That's app UX, made possible by `search_terms`.
 - **Harder:** a user with moong dal won't match a toor dal recipe even when they would happily swap. That's deliberate, because a wrong match is worse than a missed one. Recipe-level substitutes need their own ADR if users ask for them.
 - **Retired:** the "regional alias" gate test (`["aloo", "bhindi"]` scores the same as `["potato", "okra"]`) and the locked aloo/bhindi/jeera alias decision. A user who searches in Hindi finds nothing, which is an accepted v1 trade-off; regional search terms can be added later without changing any id.
 - **Supersedes** the free-text answers to Q5 and Q13 and the `unrecognized_ingredients` field. Typing a staple is impossible now, because staples aren't offered in the main list (aromatics such as onion, garlic and tomato live only in the staples list, ADR-0002).
