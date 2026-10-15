@@ -12,14 +12,13 @@ The original v1 rule ranked by plain match % over core ingredients: matched ÷ c
 
 ## Decision
 
-**1. Weights come from the ingredient class (ADR-0002):** A = 1.0, B = 0.5, an unticked staple = 0.25, a ticked staple = not counted. The constants live in one domain module.
+**1. Weights come from the ingredient class (ADR-0002) and are integers in quarter units:** A = 4, B = 2, an unticked staple = 1, a ticked staple = not counted. The weights shown to people (1.0, 0.5, 0.25 in ADR-0002) are these values ÷ 4. Integer sums are exact and don't depend on the order ingredients are added up, so the same recipe scores the same on every pod. The constants live in one domain module.
 
 **2. For each candidate recipe r and this request:**
-- `core(r)` = every class A and B ingredient of r, plus every staple of r that is in `excluded_staples` (at W = 0.25).
+- `core(r)` = every class A and B ingredient of r, plus every staple of r that is in `excluded_staples` (at weight 1).
 - `assumed(r)` = every other staple of r, returned as `assumed_staples`.
-- `matched(r)` = `core(r)` ∩ `ingredient_ids`. `missing(r)` = `core(r)` − `ingredient_ids`.
-
-Excluded staples are never in `ingredient_ids` (ADR-0001 rejects staple ids there), so an excluded staple in a recipe is always missing.
+- `effective_ids` = `ingredient_ids` minus every id that is retired or now class S (ADR-0001 rule 3). `matched(r)` = `core(r)` ∩ `effective_ids`. `missing(r)` = `core(r)` − `effective_ids`.
+A staple never counts as matched. A staple id in `ingredient_ids` is either rejected, if it was never published, or treated as an assumed staple (ADR-0001 rule 3). If the same staple is also in `excluded_staples`, the exclusion wins, because the user said they're out of it. So an excluded staple in a recipe is always missing.
 
 **3. Two tiers:**
 - **Scored tier:** `matched(r)` is not empty. At least one ticked ingredient appears in the recipe.
@@ -29,12 +28,14 @@ Excluded staples are never in `ingredient_ids` (ADR-0001 rejects staple ids ther
 **4. The score, for the scored tier only:**
 
 ```
-match_ratio = Σ W(matched) / Σ W(core)                  # 0 < match_ratio ≤ 1, denominator > 0
-composite   = match_ratio × log10(Σ W(matched) + 1)
+matched_q   = Σ W(matched)                               # integer, quarter units
+core_q      = Σ W(core)                                  # integer > 0
+match_ratio = Fraction(matched_q, core_q)                # exact; 0 < match_ratio ≤ 1
+composite   = float(match_ratio) × log10(matched_q / 4 + 1)
 score_int   = round(composite × 1_000_000)               # the only value used for sorting
 ```
 
-`score_int` is computed in exactly one pure function in `recipe_app.domain.scoring`. The database selects candidates but never computes or sorts by the score.
+`score_int` is computed in exactly one pure function in `recipe_app.domain.scoring`. The database selects candidates but never computes or sorts by the score. Only `log10` is a float. Every pod runs the same image, and the gate tests pin exact `score_int` values (the potato trap is 571561 against 301030), so a change in floating-point behaviour fails a test rather than silently reordering results.
 
 **5. The sort key is a total order:**
 - Scored tier: `(-score_int, total_minutes, recipe_id)`, where `total_minutes = prep_minutes + cook_minutes`.
