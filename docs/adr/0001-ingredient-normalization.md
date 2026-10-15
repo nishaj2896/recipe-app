@@ -30,7 +30,7 @@ Free-text ingredient entry forces the server to turn `"Tomatoes "`, `"TOMATO"` a
 |---|------|-------------------------------------|
 | 1 | Unicode NFKC | unchanged |
 | 2 | Trim leading and trailing whitespace | `"Curry   LEAVES"` |
-| 3 | Collapse every run of whitespace to one space, as `" ".join(s.split())` does. That covers all Unicode whitespace (tab, newline, U+2003 em space, and U+00A0 no-break space, which step 1 turns into a space), not just the ASCII space | `"Curry LEAVES"` |
+| 3 | Collapse every run of whitespace to one space, as `" ".join(s.split())` does. Step 1 already turns most Unicode spaces (U+00A0 no-break space, U+2003 em space, U+3000 ideographic space) into a plain space; this step also catches the ones NFKC leaves alone, such as tab, newline and U+2028 line separator | `"Curry LEAVES"` |
 | 4 | `str.casefold()` | `"curry leaves"` |
 | 5 | Unicode NFKC again, because `casefold()` can produce text that is no longer NFKC-normalized (Unicode Standard §3.13, compatibility caseless matching) | unchanged |
 
