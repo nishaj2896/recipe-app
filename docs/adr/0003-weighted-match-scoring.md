@@ -45,7 +45,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 
 **7. Deck assembly:** a deck holds at most 20 cards. That's up to 18 scored cards, followed by up to 2 all-staples cards, never more than 2 all-staples cards while scored recipes remain. Once the scored tier is used up, the remaining decks contain all-staples recipes only, up to 20 each.
 
-**8. What the card shows:** `match_percentage` = `match_ratio × 100`, rounded to one decimal, alongside `matched_ingredients`, `missing_ingredients` and `assumed_staples` (each a list of `{id, name}`). All-staples cards show no percentage.
+**8. What the card shows:** `match_percentage`, the share of core weight matched, rounded half-up to one decimal using integer arithmetic only: `tenths = (matched_q × 2000 + core_q) // (2 × core_q)`, then `match_percentage = tenths / 10`. No float is rounded at any point, so every server and client gets the same digits. It's shown alongside `matched_ingredients`, `missing_ingredients` and `assumed_staples` (each a list of `{id, name}`). All-staples cards show no percentage.
 
 **9. The cursor** encodes the last position in each tier, a hash of `diet`, `max_total_minutes`, `hidden_recipe_ids`, `excluded_staples` and `ingredient_ids`, and a format version. It's base64-encoded and HMAC-signed. A tampered cursor, or one reused with a different request, returns `422`.
 
@@ -64,5 +64,6 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 - **New tests this ADR requires:**
   - the potato trap: a curry with 3.5 of 4.0 core weight matched (0.572) outranks a fully matched single-potato dish (0.301)
   - a recipe whose core is empty for this request lands in the all-staples tier, with no exception
+  - the rounding boundary: matching one supporting ingredient (2) of a 32-quarter core is exactly 6.25% and shows **6.3**. Python's `round(6.25, 1)` would give 6.2. The existing values stay 85.7 (6/7) and 66.7 (4/6).
   - the same request twice gives a byte-identical response
   - `score_int` is an integer, and the cursor round-trips it exactly
