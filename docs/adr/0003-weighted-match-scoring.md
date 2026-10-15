@@ -18,6 +18,7 @@ The original v1 rule ranked by plain match % over core ingredients: matched ÷ c
 - `core(r)` = every class A and B ingredient of r, plus every staple of r that is in `excluded_staples` (at weight 1).
 - `assumed(r)` = every other staple of r, returned as `assumed_staples`.
 - `effective_ids` = `ingredient_ids` minus every id that is retired or now class S (ADR-0001 rule 3). `matched(r)` = `core(r)` ∩ `effective_ids`. `missing(r)` = `core(r)` − `effective_ids`.
+
 A staple never counts as matched. A staple id in `ingredient_ids` is either rejected, if it was never published, or treated as an assumed staple (ADR-0001 rule 3). If the same staple is also in `excluded_staples`, the exclusion wins, because the user said they're out of it. So an excluded staple in a recipe is always missing.
 
 **3. Two tiers:**
@@ -47,7 +48,23 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 
 **8. What the card shows:** `match_percentage`, the share of core weight matched, rounded half-up to one decimal using integer arithmetic only: `tenths = (matched_q × 2000 + core_q) // (2 × core_q)`, then `match_percentage = tenths / 10`. No float is rounded at any point, so every server and client gets the same digits. It's shown alongside `matched_ingredients`, `missing_ingredients` and `assumed_staples` (each a list of `{id, name}`). All-staples cards show no percentage.
 
-**9. The cursor** encodes the last position in each tier, a hash of `diet`, `max_total_minutes`, `hidden_recipe_ids`, `excluded_staples` and `ingredient_ids`, and a format version. It's base64-encoded and HMAC-signed. A tampered cursor, or one reused with a different request, returns `422`.
+**9. The cursor is an opaque, signed, versioned token.** Clients treat it as a string and send it back unchanged.
+
+- **Payload** (canonical JSON):
+  - `v`: format version
+  - `kid`: id of the key that signed it
+  - `iat`: issued-at time, in Unix seconds
+  - `catalog`: the catalog `content_hash` (ADR-0002 rule 7)
+  - `scoring`: `SCORING_VERSION`, an integer constant in `recipe_app.domain.scoring`. It must be bumped whenever weights, the formula, tiers or the sort key change, and a test fails if the scoring constants change without it.
+  - `req`: SHA-256 of the request's filters, `diet`, `max_total_minutes`, `hidden_recipe_ids`, `excluded_staples` and `ingredient_ids`, with each list sorted, so that order doesn't matter
+  - `pos`: the last position in each tier, as `(score_int, total_minutes, recipe_id)` or `(total_minutes, recipe_id)`
+- **Encoding:** `base64url(payload) + "." + base64url(HMAC-SHA256(key[kid], payload))`, without padding. Signatures are compared with `hmac.compare_digest`, which takes constant time.
+- **Checks, cheapest first:** the length is at most 1,024 characters *before* any decoding. Then it must decode and split. Then `kid` must be a key we accept, the signature must be valid, `v` must be supported, `iat` must be no more than 24 hours old and no more than 5 minutes in the future (to allow for clock skew), and `req` must match this request. Finally, `catalog` and `scoring` must match what this pod is running.
+- **Two outcomes, both `422`, with different problem `type`s** (RFC 9457):
+  - `/problems/invalid-cursor`: the cursor is too long, malformed, has a bad signature, or `req` doesn't match. Only a client bug or tampering produces this. It's logged and counted.
+  - `/problems/cursor-expired`: the cursor is older than 24 hours, `catalog` or `scoring` differ, `v` is no longer supported, or `kid` isn't one we accept. This is a normal event, for example during a rolling deploy or after a catalog change. The app reacts by quietly requesting page 1 again, without showing an error.
+- **Keys:** `CURSOR_SIGNING_KEYS` maps each `kid` to at least 32 random bytes, and `CURSOR_ACTIVE_KID` names the key used for signing. Both are injected at runtime from the secret store. They never appear in the repo, the image or the logs. Every listed key verifies cursors, and only the active one signs. The app refuses to start if the active key is missing or shorter than 32 bytes.
+- **Rotation:** first add the new key as verify-only and deploy everywhere. Then make it active. After 24 hours, which is the maximum cursor age, remove the old key. For an emergency after a leak, remove the leaked key at once. Sessions holding its cursors get `cursor-expired` and restart from page 1, and nothing else breaks.
 
 ## Consequences
 
@@ -55,6 +72,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 - **Harder:** the shown percentage is weighted. A user missing 1 of 4 ingredients can see different percentages depending on which one. The ingredient lists on the card keep it honest.
 - **Intended:** a small recipe missing one supporting ingredient (composite 0.298) ranks below a fully matched single-potato dish (0.301). With one item missing, a recipe needs core weight above about 2.0 (supporting missing), 2.9 (main missing) or 1.5 (unticked staple missing) to outrank it.
 - **Accepted trade-off:** the weights and the log factor are hand-picked. Check them against saved and hidden swipes once there's data. Tuning them is a new ADR.
+- **Harder:** every catalog change, `SCORING_VERSION` bump and removed key sends in-flight swipe sessions back to page 1 once. That's accepted, because a restart is visible and harmless, while silently computing page 2 under different rules duplicates or skips recipes. Tuning the weights (above) therefore always comes with a `SCORING_VERSION` bump.
 - **Gate tests whose expected values change** from the original Task 1 file:
   - The potato recipe (potato, peas, tomato, onion, turmeric, salt, ghee) with `ingredient_ids: ["potato", "peas"]` scores **100%**, with tomato, onion, turmeric, salt and ghee listed as assumed. Unchanged.
   - The same recipe with `excluded_staples: ["turmeric"]` scores **85.7%** (1.5 / 1.75), with turmeric missing.
@@ -67,3 +85,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
   - the rounding boundary: matching one supporting ingredient (2) of a 32-quarter core is exactly 6.25% and shows **6.3**. Python's `round(6.25, 1)` would give 6.2. The existing values stay 85.7 (6/7) and 66.7 (4/6).
   - the same request twice gives a byte-identical response
   - `score_int` is an integer, and the cursor round-trips it exactly
+  - a tampered cursor, a cursor reused with different filters, and a 1,025-character cursor each return `/problems/invalid-cursor`. The long one is rejected before it is decoded.
+  - a cursor issued under a different catalog hash, a different `SCORING_VERSION`, or more than 24 hours ago returns `/problems/cursor-expired`
+  - during a key rotation, a cursor signed with the old key is still accepted while that key is listed, and returns `cursor-expired` once it's removed
+  - changing a weight constant without bumping `SCORING_VERSION` fails a test
