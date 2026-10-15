@@ -1,4 +1,6 @@
 # Runs on every `git commit`. Update pinned versions with: uv run pre-commit autoupdate
+default_install_hook_types: [pre-commit, pre-push]
+default_stages: [pre-commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -11,7 +13,6 @@ repos:
       - id: check-added-large-files
       - id: detect-private-key
       - id: check-case-conflict
-
   # ruff runs from uv.lock, so the hook and CI can never use different versions
   - repo: local
     hooks:
@@ -27,8 +28,22 @@ repos:
         language: system
         types_or: [python, pyi]
         require_serial: true
-
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.13.1
     hooks:
       - id: uv-lock
+  # Slower checks run on `git push`, not on every commit
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: uv run --frozen mypy
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+      - id: pytest
+        name: pytest
+        entry: uv run --frozen pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
