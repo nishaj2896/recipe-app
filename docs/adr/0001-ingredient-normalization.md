@@ -37,7 +37,19 @@ It is never applied to request fields, because requests carry ids. It runs in tw
 - **Loading the catalog:** the catalog file is typed and edited by hand, so `"Tomato"` and `"tomato "` could be added as two ingredients by mistake. The catalog loader normalizes every display name so the startup check (rule 6) rejects near-duplicate names. It also stores every search term normalized, ready for matching; search terms are not checked for duplicates. Task 2 uses the same loader and function. Seed recipes refer to ingredients by id, so they are checked by id (rule 6), not normalized.
 - **The picker's search box:** there is no search endpoint. The app downloads the whole catalog (`GET /api/v1/ingredients`) and filters it on the device. It applies the same steps (trim, collapse spaces, casefold) to what the user types, for example `"Lady Finger "`, before prefix-matching names and search terms. Search only filters what the list shows; the request still sends the id of the item they tick.
 
-**5. One English name per ingredient, in its common form.** Use the singular where English uses a singular (`potato`, `okra`) and the natural form otherwise (`cumin-seeds`, `curry-leaves`, `green-chillies`). Never two forms of the same ingredient, and no regional-language names anywhere in the catalog. Each entry may carry `search_terms` for English synonyms only, for example Okra has `["lady finger"]` and Coriander leaves has `["cilantro"]`. The picker's search box matches the name and these terms by prefix, so typing "pota" already finds Potato and plurals aren't needed. Whole and ground forms of a spice are separate ingredients (`cumin-seeds` and `cumin-powder`), because recipes call for one or the other and a user can be out of just one.
+**5. One English name per ingredient, in its common form, at one written level of detail.** Use the singular where English uses a singular (`potato`, `okra`) and the natural form otherwise (`cumin-seeds`, `curry-leaves`, `green-chillies`). Never two forms of the same ingredient, and no regional-language names anywhere in the catalog. Each entry may carry `search_terms` for English synonyms and variety names, never regional-language translations, for example Okra has `["lady finger"]` and Coriander leaves has `["cilantro"]`. The picker's search box matches the name and these terms by prefix, so typing "pota" already finds Potato and plurals aren't needed.
+
+**The granularity rule:** two products are **separate ingredients** when using one in place of the other in a recipe changes the dish or makes it fail. Otherwise they are **one ingredient**, and the variants go in its `search_terms`. A reviewer checks a new entry by naming one dish where the swap fails. If nobody can name one, it's one ingredient.
+
+| Family | Decision | Ids | Why |
+|---|---|---|---|
+| Cumin | split | `cumin-seeds`, `cumin-powder` | recipes call for one or the other, and a user can be out of just one |
+| Dal | split | `toor-dal`, `moong-dal`, `masoor-dal`, `chana-dal`, `urad-dal` | cooking times and textures differ; urad is the base of idli batter |
+| Rice | split | `rice` (search terms: sona masoori, white rice), `basmati-rice`, `arborio-rice` | biryani needs long grain; risotto needs starchy short grain |
+| Cheese | split | `mozzarella`, `parmesan`, `cheddar` | melt and flavour aren't interchangeable; paneer is already its own ingredient |
+| Pasta | one | `pasta` (search terms: spaghetti, penne, fusilli, macaroni) | shapes swap freely in home cooking |
+
+A recipe lists the specific variant it was written with. Substitutions ("any dal works") are out of scope for v1.
 
 **6. The catalog is validated at startup, and the app refuses to start if:**
 - two ingredients have the same id, or the same normalized display name
@@ -50,7 +62,7 @@ It is never applied to request fields, because requests carry ids. It runs in tw
 - **Easier:** no unknown ingredients, no typos, no alias resolution per request. Matching is set membership on ids, which is trivially fast and testable.
 - **Easier:** the old normalization gate tests (`["Tomato", " tomatoes ", "TOMATO"]`) become id tests: unknown id gives `422`, a duplicate id gives `422`, and a staple id in `ingredient_ids` gives `422`.
 - **Harder:** the catalog only grows. Retired ingredients stay in the file for good, which is a few hundred rows at most. That's the price of never breaking an installed app.
-- **Harder:** the picker needs good search and categories to stay usable with a few hundred items. That's app UX, made possible by `search_terms`.
+- **Harder:** a user with moong dal won't match a toor dal recipe even when they would happily swap. That's deliberate, because a wrong match is worse than a missed one. Recipe-level substitutes need their own ADR if users ask for them.
 - **Retired:** the "regional alias" gate test (`["aloo", "bhindi"]` scores the same as `["potato", "okra"]`) and the locked aloo/bhindi/jeera alias decision. A user who searches in Hindi finds nothing, which is an accepted v1 trade-off; regional search terms can be added later without changing any id.
 - **Supersedes** the free-text answers to Q5 and Q13 and the `unrecognized_ingredients` field. Typing a staple is impossible now, because staples aren't offered in the main list (aromatics such as onion, garlic and tomato live only in the staples list, ADR-0002).
 - **Revisit when:** users regularly look for ingredients the catalog lacks. A "suggest an ingredient" flow would get its own ADR.

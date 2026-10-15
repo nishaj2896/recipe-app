@@ -37,7 +37,8 @@ Worked examples: ginger passes 2 (S, fresh). Paneer fails 1 and 2, then passes 3
 
 | Class | Ticked | Not ticked |
 |---|---|---|
-| A, B | Core, matched | Core, missing |
+| A | Main character | 1.0 | Main list, unticked by default | paneer, chicken, egg, potato, rice, basmati rice, toor dal, moong dal, coconut milk, pasta |
+| B | Supporting cast | 0.5 | Main list, unticked by default | peas, bell pepper, mushroom, cream, curd, mozzarella, parmesan, milk |
 | S | Assumed: not scored, never missing, listed in `assumed_staples` | Sent in `excluded_staples`: core at W = 0.25, listed as missing |
 
 **5. Staples are server policy with one client override.** The server decides which ingredients are staples. The client can only *subtract* staples, by unticking them, which sends them in `excluded_staples`. That field is a list of 0 to 100 ingredient ids. An id that was never published returns `422` naming the entry, and so does a duplicate (the same rule as `ingredient_ids`, ADR-0001). A published id that is no longer class S, because it was retired or moved to class A or B, is ignored and listed in `ignored_ingredients` (ADR-0001 rule 3). The app remembers unticked staples on the device (no accounts in v1) and sends them with every search.
