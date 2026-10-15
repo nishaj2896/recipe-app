@@ -19,7 +19,7 @@ Pantry-to-Plate is a recipe recommendation API. You pick the ingredients you hav
 ```bash
 git clone https://github.com/nishaj2896/recipe-app.git
 cd recipe-app
-uv sync                      # create .venv and install exactly what uv.lock pins
+uv sync --locked             # create .venv and install exactly what uv.lock pins; fails if the lock is stale
 uv run pre-commit install    # run the checks on every commit
 uv run pytest                # should pass
 ```
