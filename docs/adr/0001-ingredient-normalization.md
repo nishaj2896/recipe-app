@@ -63,7 +63,7 @@ A recipe lists the specific variant it was written with. Substitutions ("any dal
 ## Consequences
 
 - **Easier:** no unknown ingredients, no typos, no alias resolution per request. Matching is set membership on ids, which is trivially fast and testable.
-- **Easier:** the old normalization gate tests (`["Tomato", " tomatoes ", "TOMATO"]`) become id tests: unknown id gives `422`, a duplicate id gives `422`, and a staple id in `ingredient_ids` gives `422`.
+- **Easier:** the old normalization gate tests (`["Tomato", " tomatoes ", "TOMATO"]`) become id tests: an id that was never published gives `422`, a duplicate id gives `422`, and a published id that is now a staple is accepted and listed in `ignored_ingredients` (rule 3).
 - **Harder:** the catalog must be complete enough that users find what they have. A missing ingredient means a support request, not a silent mismatch.
 - **Harder:** the catalog only grows. Retired ingredients stay in the file for good, which is a few hundred rows at most. That's the price of never breaking an installed app.
 - **Harder:** the picker needs good search and categories to stay usable with a few hundred items. That's app UX, made possible by `search_terms`.
