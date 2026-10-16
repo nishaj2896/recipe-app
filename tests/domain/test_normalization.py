@@ -1,5 +1,6 @@
 import json
 import string
+import sys
 import unicodedata
 from pathlib import Path
 from typing import Literal, TypedDict
@@ -30,6 +31,17 @@ WHITESPACE = st.text(
     min_size=1,
 )
 ASCII_WORDS = st.text(alphabet=string.ascii_letters + " \t\n")
+CASEFOLD_BREAKS_NFKC = [
+    c
+    for c in map(chr, range(sys.maxunicode + 1))
+    if c.casefold() != c
+    and not unicodedata.is_normalized(
+        "NFKC", unicodedata.normalize("NFKC", c).casefold()
+    )
+]
+TEXT_WITH_CASEFOLD_TRAPS = st.text() | st.lists(
+    st.sampled_from(CASEFOLD_BREAKS_NFKC) | st.characters()
+).map("".join)
 
 
 @pytest.mark.parametrize(
@@ -63,7 +75,7 @@ def test_normalize_uses_only_single_plain_spaces(s: str) -> None:
     assert all(ch == " " or not ch.isspace() for ch in result)
 
 
-@given(st.text())
+@given(TEXT_WITH_CASEFOLD_TRAPS)
 def test_normalize_output_is_nfkc(s: str) -> None:
     """The result is NFKC, which proves step 5 re-normalizes what casefold() breaks."""
     assert unicodedata.is_normalized("NFKC", normalize(s))
