@@ -24,7 +24,10 @@ NormalForm = Literal["NFC", "NFD", "NFKC", "NFKD"]
 FORMS: tuple[NormalForm, ...] = ("NFC", "NFD", "NFKC", "NFKD")
 
 # st.text() rarely generates whitespace, so these strategies target it directly.
-WHITESPACE = st.text(alphabet=" \t\n\r ", min_size=1)
+WHITESPACE = st.text(
+    alphabet=" \t\n\r" + chr(0x00A0) + chr(0x2003) + chr(0x3000) + chr(0x2028),
+    min_size=1,
+)
 ASCII_WORDS = st.text(alphabet=string.ascii_letters + " \t\n")
 
 
