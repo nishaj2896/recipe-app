@@ -7,6 +7,7 @@ from typing import Literal, TypedDict
 import pytest
 from hypothesis import given
 from hypothesis import strategies as st
+
 from recipe_app.domain.normalization import normalize
 
 
