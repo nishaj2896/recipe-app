@@ -6,8 +6,17 @@ dist/
 wheels/
 *.egg-info
 .env
+.env.*
+!.env.example
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
 
 .DS_Store
+.hypothesis/
 
 # Virtual environments
 .venv/
