@@ -1,0 +1,68 @@
+[
+    {
+        "id": "adr-example",
+        "input": "  Curry   LEAVES ",
+        "expected": "curry leaves",
+        "why": "the ADR's table, end to end"
+    },
+    {
+        "id": "non-nfkc-whitespace",
+        "input": " Curry\u2028\tLEAVES ",
+        "expected": "curry leaves",
+        "why": "step 3 catches what NFKC leaves alone (U+2028 line separator, tab)"
+    },
+    {
+        "id": "empty",
+        "input": "",
+        "expected": "",
+        "why": "no crash on nothing"
+    },
+    {
+        "id": "whitespace-only",
+        "input": "   \t\n",
+        "expected": "",
+        "why": "trims to nothing"
+    },
+    {
+        "id": "no-break-space",
+        "input": "green\u00a0chillies",
+        "expected": "green chillies",
+        "why": "step 1 turns NBSP into a space"
+    },
+    {
+        "id": "full-width",
+        "input": "\uff34\uff4f\uff4d\uff41\uff54\uff4f",
+        "expected": "tomato",
+        "why": "phone keyboards in CJK mode"
+    },
+    {
+        "id": "ligature",
+        "input": "\ufb01nger millet",
+        "expected": "finger millet",
+        "why": "NFKC splits the ligature"
+    },
+    {
+        "id": "sharp-s",
+        "input": "Stra\u00dfe",
+        "expected": "strasse",
+        "why": "casefold, not lower"
+    },
+    {
+        "id": "combining-accent",
+        "input": "Cafe\u0301",
+        "expected": "caf\u00e9",
+        "why": "two ways of writing e become one"
+    },
+    {
+        "id": "second-nfkc",
+        "input": "\u01f0",
+        "expected": "\u01f0",
+        "why": "the only kind of input where step 5 matters: casefold splits it into j + U+030C, and NFKC rebuilds it"
+    },
+    {
+        "id": "unchanged-accent",
+        "input": "jalape\u00f1o",
+        "expected": "jalape\u00f1o",
+        "why": "normalization must not strip accents"
+    }
+]
