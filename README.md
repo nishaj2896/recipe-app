@@ -75,7 +75,7 @@ To change one of these decisions, add a new ADR that supersedes it rather than r
 
 - [x] Project foundation: uv, Ruff, mypy strict, pytest, pre-commit
 - [x] Design decisions (ADR-0001 to ADR-0003)
-- [ ] Ingredient normalization
+- [x] Ingredient normalization
 - [ ] Ingredient catalog and staples as data
 - [ ] Domain entities: ingredients, recipes, computed diet
 - [ ] Matching and ranking engine
