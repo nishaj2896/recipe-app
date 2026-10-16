@@ -104,3 +104,12 @@ def test_normalize_treats_any_whitespace_run_as_one_space(s: str, run: str) -> N
 def test_normalize_matches_simple_model_on_ascii(s: str) -> None:
     """On plain ASCII, normalize agrees with lower() plus collapsing whitespace."""
     assert normalize(s) == " ".join(s.lower().split())
+
+
+def test_fixture_cases_are_well_formed() -> None:
+    """The app will load this file too, so a malformed case must fail here first."""
+    ids = [case["id"] for case in CASES]
+    assert len(ids) == len(set(ids)), "duplicate fixture ids"
+    for case in CASES:
+        assert set(case) == {"id", "input", "expected", "why"}, case["id"]
+        assert normalize(case["expected"]) == case["expected"], case["id"]

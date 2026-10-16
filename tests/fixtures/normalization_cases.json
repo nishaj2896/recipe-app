@@ -7,7 +7,7 @@
     },
     {
         "id": "non-nfkc-whitespace",
-        "input": " Curry\u2028\tLEAVES ",
+        "input": "  Curry\u2028\tLEAVES ",
         "expected": "curry leaves",
         "why": "step 3 catches what NFKC leaves alone (U+2028 line separator, tab)"
     },
