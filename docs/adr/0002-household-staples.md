@@ -83,16 +83,16 @@ Changing an ingredient's class is a reviewed PR. Changing the rule needs a new A
 - **Declared in the data, not in code.** Each `[[category]]` has an `id` (a slug, the same pattern as ingredient ids), a display `name`, and a `position`, a unique positive integer that sets the screen order. By convention positions go up in steps of 10, so a new category can be slotted in without renumbering the others; the loader checks only that they are unique and positive.
 - **Ids are append-only,** like ingredient ids (ADR-0001 rule 2): once published, a category id is never renamed, reused or deleted, because the app may store or compare it. A category that is no longer needed is set to `retired = true` once none of its ingredients are live. Display names and positions can change in an ordinary data PR.
 - **The list of categories lives in the catalog file, not in this ADR,** so adding or reordering one is a reviewed data PR. Changing what a category means, or the rules below, needs a new ADR.
-- **Every ingredient belongs to exactly one category.** When an ingredient could fit two, these tie-break rules decide, in order:
-  1. File by what it is, not how it's packed: canned tomatoes are vegetables and canned chickpeas are dals and pulses. Legumes are the one case where form decides: fresh or frozen (green peas, edamame) are vegetables, dried ones are dals and pulses.
-  2. Dairy first: anything made from milk, including butter and ghee, goes in dairy and eggs.
-  3. Seeds used to flavour or temper (cumin, nigella, sesame, poppy) are spices; seeds eaten as food (chia, pumpkin, sunflower) go in nuts, seeds and dried fruit.
-  4. Whole, broken or flaked grain (poha, dalia, bulgur) is a grain; anything milled, fine or coarse (semolina, polenta), is a flour.
-  5. Raw fruit cooked as a vegetable (raw mango, raw banana, raw jackfruit) is a vegetable.
-  6. Coconut in any form goes in nuts, seeds and dried fruit, except coconut milk and coconut cream, which are plant-based milks.
-  7. Souring agents (tamarind, kokum, amchur) are spices.
-  8. Couscous, which is made from semolina, goes in pasta and noodles.
-  9. Extracts and flower waters (vanilla, rose water, kewra) go in flours and baking; stock and seasoning liquids (mirin, Shaoxing wine) go in sauces and condiments.
+- **Every ingredient belongs to exactly one category.** Categories below are named by their ids, which are declared in `data/ingredients.v1.toml` (added with the catalog loader). The rules are written so that no two of them apply to the same ingredient; if one ever seems to, that's a gap to close with a new ADR. When an ingredient could fit two categories, these tie-break rules decide:
+  1. File by what it is, not how it's packed: canned tomatoes go in `vegetables` and canned chickpeas in `dals-and-pulses`. Legumes are the one case where form decides: fresh or frozen (green peas, edamame) go in `vegetables`, dried ones in `dals-and-pulses`.
+  2. Dairy first: anything made from milk, including butter and ghee, goes in `dairy-and-eggs`.
+  3. Seeds used to flavour or temper (cumin, nigella, sesame, poppy) go in `spices-and-seasonings`; seeds eaten as food (chia, pumpkin, sunflower) go in `nuts-seeds-and-dried-fruit`.
+  4. Whole, broken or flaked grain (poha, dalia, bulgur) goes in `rice-and-grains`; anything milled, fine or coarse (semolina, polenta), goes in `flours-and-baking`.
+  5. Raw fruit cooked as a vegetable (raw mango, raw banana, raw jackfruit) goes in `vegetables`.
+  6. Coconut in any form goes in `nuts-seeds-and-dried-fruit`, except coconut milk and coconut cream, which go in `plant-based-milks`.
+  7. Souring agents (tamarind, kokum, amchur) go in `spices-and-seasonings`.
+  8. Couscous, which is made from semolina, goes in `pasta-and-noodles`.
+  9. Extracts and flower waters (vanilla, rose water, kewra) go in `flours-and-baking`; stock and seasoning liquids (mirin, Shaoxing wine) go in `sauces-and-condiments`.
 - **The catalog holds recipe ingredients, not groceries.** Ready dishes and mixes (baked beans, instant noodles, drink mixes), breakfast cereals and crisps are left out.
 
 ## Consequences
