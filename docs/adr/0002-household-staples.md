@@ -59,8 +59,8 @@ Tests: an egg curry is returned for `egg` and `non_veg`, and never for `vegetari
 **7. One catalog file, versioned and validated.** `data/ingredients.v1.toml` lists every ingredient ever published, with `id`, `name`, `class`, `kind` (class S only), `diet`, `category` (the id of a declared category, rule 10), `search_terms` (ADR-0001) and `retired` (default `false`). The same file declares every category ever published as `[[category]]` entries, with `id`, `name`, `position` and `retired` (default `false`), as rule 10 describes. The `v1` in the name is the **schema** version: the fields and what they mean. Adding, editing or retiring an ingredient is an ordinary edit to the same file. A `v2` file is needed only when a field is added, removed or changes meaning, and that change needs its own ADR. Each content version is identified by the SHA-256 hash of the file, computed at load as `IngredientCatalog.content_hash` and logged at startup, so you can always tell which catalog a running pod has. The file is loaded once at startup into an immutable `IngredientCatalog` domain object. The app refuses to start if:
 - the file is empty, or any id or normalized name is duplicated
 - an ingredient has an unknown class, kind or diet tag
-- an ingredient uses a category that isn't declared, or one that is retired
-- a category id or position is duplicated, or a category that isn't retired has no ingredients that aren't retired
+- an ingredient uses a category that isn't declared, or an ingredient that isn't retired uses a retired category
+- a category id, name or position is duplicated, or a category that isn't retired has no ingredients that aren't retired
 - an id in `NEVER_STAPLES` is class S
 - a seed recipe uses an id that isn't in the catalog, or one that is retired (replace the ingredient or retire the recipe first)
 
@@ -80,11 +80,11 @@ Changing an ingredient's class is a reviewed PR. Changing the rule needs a new A
 
 **10. Categories group the picker and the staples screen, and nothing else.** A category is display grouping only. Scoring, matching, diet and staple behaviour never read it, and it never repeats what another field says: there is no "non-veg" category (that's `diet`) and no "staples" category (that's class S). Each screen shows only the categories that have items for it.
 
-- **Declared in the data, not in code.** Each `[[category]]` has an `id` (a slug, the same pattern as ingredient ids), a display `name`, and a `position`, a unique positive integer that sets the screen order. Positions go up in steps of 10, so a new category can be slotted in without renumbering the others.
+- **Declared in the data, not in code.** Each `[[category]]` has an `id` (a slug, the same pattern as ingredient ids), a display `name`, and a `position`, a unique positive integer that sets the screen order. By convention positions go up in steps of 10, so a new category can be slotted in without renumbering the others; the loader checks only that they are unique and positive.
 - **Ids are append-only,** like ingredient ids (ADR-0001 rule 2): once published, a category id is never renamed, reused or deleted, because the app may store or compare it. A category that is no longer needed is set to `retired = true` once none of its ingredients are live. Display names and positions can change in an ordinary data PR.
 - **The list of categories lives in the catalog file, not in this ADR,** so adding or reordering one is a reviewed data PR. Changing what a category means, or the rules below, needs a new ADR.
 - **Every ingredient belongs to exactly one category.** When an ingredient could fit two, these tie-break rules decide, in order:
-  1. File by what it is, not how it's packed. Fresh or frozen legumes go in vegetables; dried or canned go in dals and pulses.
+  1. File by what it is, not how it's packed: canned tomatoes are vegetables and canned chickpeas are dals and pulses. Legumes are the one case where form decides: fresh or frozen (green peas, edamame) are vegetables, dried ones are dals and pulses.
   2. Dairy first: anything made from milk, including butter and ghee, goes in dairy and eggs.
   3. Seeds used to flavour or temper (cumin, nigella, sesame, poppy) are spices; seeds eaten as food (chia, pumpkin, sunflower) go in nuts, seeds and dried fruit.
   4. Whole, broken or flaked grain (poha, dalia, bulgur) is a grain; anything milled, fine or coarse (semolina, polenta), is a flour.
