@@ -60,6 +60,12 @@ class Ingredient:
 
 @dataclass(frozen=True, slots=True)
 class IngredientCatalog:
+    """Every ingredient and category in the catalog file; build it with parse_catalog.
+
+    `by_id` and `categories` include retired entries, so ids a client cached
+    stay resolvable (ADR-0001 rule 3). Filter on `retired` before listing them.
+    """
+
     by_id: Mapping[str, Ingredient]
     categories: Mapping[str, Category]
     content_hash: str
