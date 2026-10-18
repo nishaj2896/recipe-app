@@ -151,11 +151,11 @@ def _parse_categories(
             position = 0
         retired = _retired(row, where, problems)
 
-        if category_id in seen_ids:
+        if category_id and category_id in seen_ids:
             problems.append(f"duplicate category id {category_id!r}")
-        if normalize(name) in seen_names:
+        if name and normalize(name) in seen_names:
             problems.append(f"duplicate category name {normalize(name)!r}")
-        if position in seen_positions:
+        if position and position in seen_positions:
             problems.append(f"duplicate category position {position}")
         seen_ids.add(category_id)
         seen_names.add(normalize(name))
@@ -197,9 +197,9 @@ def _parse_ingredients(
         ):
             problems.append(f"{where}: {ingredient_id!r} can never be a staple")
 
-        if ingredient_id in seen_ids:
+        if ingredient_id and ingredient_id in seen_ids:
             problems.append(f"duplicate id {ingredient_id!r}")
-        if normalize(name) in seen_names:
+        if name and normalize(name) in seen_names:
             problems.append(f"duplicate name {normalize(name)!r}")
         seen_ids.add(ingredient_id)
         seen_names.add(normalize(name))

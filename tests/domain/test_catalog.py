@@ -89,6 +89,22 @@ def test_search_terms_are_stored_normalized() -> None:
     assert parse_catalog(raw).by_id["potato"].search_terms == ("baby potato",)
 
 
+def test_invalid_values_are_not_reported_as_duplicates() -> None:
+    raw = catalog(
+        category(id=None),
+        category(id=None, name="Fruits", position=0),
+        category(id="greens", name="Greens", position=0),
+        ingredient(id=None),
+        ingredient(id=None, name=None),
+        ingredient(id="leek", name=None),
+    )
+
+    with pytest.raises(CatalogError) as caught:
+        parse_catalog(raw)
+
+    assert not [p for p in caught.value.problems if "duplicate" in p]
+
+
 @pytest.mark.parametrize(
     ("raw", "message"),
     [
