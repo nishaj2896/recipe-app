@@ -1,0 +1,5600 @@
+# Every ingredient and category the app knows about (ADR-0002 rules 7 and 10).
+# Ids are append-only: retire an entry, never rename or delete it (ADR-0001 rule 2).
+# A new category and its first ingredient must land in the same PR, or the app won't start.
+
+[[category]]
+id = "vegetables"
+name = "Vegetables"
+position = 10
+
+[[category]]
+id = "meat-and-poultry"
+name = "Meat & poultry"
+position = 20
+
+[[category]]
+id = "fish-and-seafood"
+name = "Fish & seafood"
+position = 30
+
+[[category]]
+id = "tofu-and-plant-proteins"
+name = "Tofu & plant proteins"
+position = 40
+
+[[category]]
+id = "dals-and-pulses"
+name = "Dals & pulses"
+position = 50
+
+[[category]]
+id = "dairy-and-eggs"
+name = "Dairy & eggs"
+position = 60
+
+[[category]]
+id = "plant-based-milks"
+name = "Plant-based milks"
+position = 70
+
+[[category]]
+id = "rice-and-grains"
+name = "Rice & grains"
+position = 80
+
+[[category]]
+id = "pasta-and-noodles"
+name = "Pasta & noodles"
+position = 90
+
+[[category]]
+id = "bread-bakery-and-snacks"
+name = "Bread, bakery & snacks"
+position = 100
+
+[[category]]
+id = "fruits"
+name = "Fruits"
+position = 110
+
+[[category]]
+id = "fresh-herbs"
+name = "Fresh herbs"
+position = 120
+
+[[category]]
+id = "nuts-seeds-and-dried-fruit"
+name = "Nuts, seeds & dried fruit"
+position = 130
+
+[[category]]
+id = "spices-and-seasonings"
+name = "Spices & seasonings"
+position = 140
+
+[[category]]
+id = "oils-and-fats"
+name = "Oils & fats"
+position = 150
+
+[[category]]
+id = "sauces-and-condiments"
+name = "Sauces & condiments"
+position = 160
+
+[[category]]
+id = "sweeteners"
+name = "Sweeteners"
+position = 170
+
+[[category]]
+id = "flours-and-baking"
+name = "Flours & baking"
+position = 180
+
+[[category]]
+id = "drinks-and-water"
+name = "Drinks & water"
+position = 190
+
+# Vegetables
+
+[[ingredient]]
+id = "amaranth-leaves"
+name = "Amaranth leaves"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "artichoke"
+name = "Artichoke"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["artichoke hearts", "canned artichoke hearts"]
+
+[[ingredient]]
+id = "ash-gourd"
+name = "Ash gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["winter melon"]
+
+[[ingredient]]
+id = "asparagus"
+name = "Asparagus"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "avocado"
+name = "Avocado"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "baby-corn"
+name = "Baby corn"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "bamboo-shoots"
+name = "Bamboo shoots"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["canned bamboo shoots"]
+
+[[ingredient]]
+id = "banana-flower"
+name = "Banana flower"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["banana blossom"]
+
+[[ingredient]]
+id = "bean-sprouts"
+name = "Bean sprouts"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "beetroot"
+name = "Beetroot"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["beet"]
+
+[[ingredient]]
+id = "bell-pepper"
+name = "Bell pepper"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["capsicum", "red pepper", "green pepper", "yellow pepper"]
+
+[[ingredient]]
+id = "birds-eye-chillies"
+name = "Bird's eye chillies"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["thai chillies"]
+
+[[ingredient]]
+id = "bitter-gourd"
+name = "Bitter gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["bitter melon"]
+
+[[ingredient]]
+id = "bok-choy"
+name = "Bok choy"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["pak choi"]
+
+[[ingredient]]
+id = "bottle-gourd"
+name = "Bottle gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["calabash"]
+
+[[ingredient]]
+id = "brinjal"
+name = "Brinjal"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["aubergine", "eggplant"]
+
+[[ingredient]]
+id = "broad-beans"
+name = "Broad beans"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["fava beans", "fresh broad beans"]
+
+[[ingredient]]
+id = "broccoli"
+name = "Broccoli"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "brussels-sprouts"
+name = "Brussels sprouts"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "butternut-squash"
+name = "Butternut squash"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "cabbage"
+name = "Cabbage"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green cabbage"]
+
+[[ingredient]]
+id = "canned-tomatoes"
+name = "Canned tomatoes"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["chopped tomatoes", "whole peeled tomatoes", "tinned tomatoes"]
+
+[[ingredient]]
+id = "carrot"
+name = "Carrot"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "cassava"
+name = "Cassava"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["tapioca root", "yuca"]
+
+[[ingredient]]
+id = "cauliflower"
+name = "Cauliflower"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "celeriac"
+name = "Celeriac"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "celery"
+name = "Celery"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "cherry-tomatoes"
+name = "Cherry tomatoes"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "chinese-cabbage"
+name = "Chinese cabbage"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["napa cabbage"]
+
+[[ingredient]]
+id = "cluster-beans"
+name = "Cluster beans"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "colocasia"
+name = "Colocasia"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["taro root", "taro"]
+
+[[ingredient]]
+id = "corn-on-the-cob"
+name = "Corn on the cob"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["sweetcorn cob"]
+
+[[ingredient]]
+id = "cucumber"
+name = "Cucumber"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "dried-mushrooms"
+name = "Dried mushrooms"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["dried shiitake", "porcini"]
+
+[[ingredient]]
+id = "drumstick-leaves"
+name = "Drumstick leaves"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["moringa leaves"]
+
+[[ingredient]]
+id = "drumsticks"
+name = "Drumsticks"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["moringa pods"]
+
+[[ingredient]]
+id = "edamame"
+name = "Edamame"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "elephant-foot-yam"
+name = "Elephant foot yam"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["yam"]
+
+[[ingredient]]
+id = "fennel-bulb"
+name = "Fennel bulb"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "fenugreek-leaves"
+name = "Fenugreek leaves"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["fresh fenugreek"]
+
+[[ingredient]]
+id = "flat-beans"
+name = "Flat beans"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["hyacinth beans"]
+
+[[ingredient]]
+id = "french-beans"
+name = "French beans"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green beans", "string beans"]
+
+[[ingredient]]
+id = "frozen-mixed-vegetables"
+name = "Frozen mixed vegetables"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["mixed veg"]
+
+[[ingredient]]
+id = "garlic"
+name = "Garlic"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "ginger"
+name = "Ginger"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["fresh ginger"]
+
+[[ingredient]]
+id = "green-chillies"
+name = "Green chillies"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green chili", "green chilli"]
+
+[[ingredient]]
+id = "ivy-gourd"
+name = "Ivy gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "jalapeno"
+name = "Jalapeno"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["fresh jalapeno"]
+
+[[ingredient]]
+id = "kale"
+name = "Kale"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "leek"
+name = "Leek"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "lettuce"
+name = "Lettuce"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["iceberg", "romaine"]
+
+[[ingredient]]
+id = "lotus-root"
+name = "Lotus root"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["lotus stem"]
+
+[[ingredient]]
+id = "mushroom"
+name = "Mushroom"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["button mushroom", "white mushroom", "oyster mushroom", "portobello", "shiitake", "canned mushrooms"]
+
+[[ingredient]]
+id = "mustard-greens"
+name = "Mustard greens"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "okra"
+name = "Okra"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["lady finger", "ladies finger"]
+
+[[ingredient]]
+id = "onion"
+name = "Onion"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["red onion", "white onion"]
+
+[[ingredient]]
+id = "parsnip"
+name = "Parsnip"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "passata"
+name = "Passata"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["tomato passata", "tomato puree", "strained tomatoes"]
+
+[[ingredient]]
+id = "peas"
+name = "Peas"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green peas", "frozen peas", "garden peas"]
+
+[[ingredient]]
+id = "pickled-jalapenos"
+name = "Pickled jalapenos"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "pointed-gourd"
+name = "Pointed gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "potato"
+name = "Potato"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "pumpkin"
+name = "Pumpkin"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["red pumpkin"]
+
+[[ingredient]]
+id = "radish"
+name = "Radish"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["white radish", "daikon"]
+
+[[ingredient]]
+id = "raw-banana"
+name = "Raw banana"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green banana", "plantain"]
+
+[[ingredient]]
+id = "raw-jackfruit"
+name = "Raw jackfruit"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["jackfruit", "young jackfruit", "green jackfruit", "canned jackfruit"]
+
+[[ingredient]]
+id = "raw-mango"
+name = "Raw mango"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green mango"]
+
+[[ingredient]]
+id = "red-cabbage"
+name = "Red cabbage"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "ridge-gourd"
+name = "Ridge gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["luffa"]
+
+[[ingredient]]
+id = "roasted-red-peppers"
+name = "Roasted red peppers"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["jarred roasted peppers"]
+
+[[ingredient]]
+id = "rocket"
+name = "Rocket"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["arugula"]
+
+[[ingredient]]
+id = "shallot"
+name = "Shallot"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["small onions", "sambar onions"]
+
+[[ingredient]]
+id = "small-brinjal"
+name = "Small brinjal"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["baby aubergine", "baby eggplant"]
+
+[[ingredient]]
+id = "snake-gourd"
+name = "Snake gourd"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "spinach"
+name = "Spinach"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "spring-garlic"
+name = "Spring garlic"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green garlic"]
+
+[[ingredient]]
+id = "spring-onions"
+name = "Spring onions"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["scallions", "green onions"]
+
+[[ingredient]]
+id = "sprouted-mung-beans"
+name = "Sprouted mung beans"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["mung sprouts"]
+
+[[ingredient]]
+id = "sun-dried-tomatoes"
+name = "Sun-dried tomatoes"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "sweet-potato"
+name = "Sweet potato"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "sweetcorn"
+name = "Sweetcorn"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["corn kernels", "frozen corn", "canned sweetcorn"]
+
+[[ingredient]]
+id = "swiss-chard"
+name = "Swiss chard"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["chard"]
+
+[[ingredient]]
+id = "tomato"
+name = "Tomato"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "tomato-paste"
+name = "Tomato paste"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "turnip"
+name = "Turnip"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "water-chestnuts"
+name = "Water chestnuts"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["canned water chestnuts"]
+
+[[ingredient]]
+id = "watercress"
+name = "Watercress"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
+id = "zucchini"
+name = "Zucchini"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["courgette"]
+
+# Meat & poultry
+
+[[ingredient]]
+id = "bacon"
+name = "Bacon"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "beef"
+name = "Beef"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "beef-mince"
+name = "Beef mince"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["ground beef"]
+
+[[ingredient]]
+id = "chicken"
+name = "Chicken"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["whole chicken", "chicken breast", "chicken thighs", "chicken legs"]
+
+[[ingredient]]
+id = "chicken-liver"
+name = "Chicken liver"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["liver"]
+
+[[ingredient]]
+id = "chicken-mince"
+name = "Chicken mince"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["ground chicken"]
+
+[[ingredient]]
+id = "chorizo"
+name = "Chorizo"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "duck"
+name = "Duck"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "ham"
+name = "Ham"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "lamb"
+name = "Lamb"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "lamb-mince"
+name = "Lamb mince"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["ground lamb", "mutton mince", "minced meat"]
+
+[[ingredient]]
+id = "mutton"
+name = "Mutton"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["goat meat"]
+
+[[ingredient]]
+id = "mutton-liver"
+name = "Mutton liver"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "pepperoni"
+name = "Pepperoni"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "pork"
+name = "Pork"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "pork-belly"
+name = "Pork belly"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "prosciutto"
+name = "Prosciutto"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "salami"
+name = "Salami"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "sausages"
+name = "Sausages"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+[[ingredient]]
+id = "turkey"
+name = "Turkey"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+
+# Fish & seafood
+
+[[ingredient]]
+id = "anchovies"
+name = "Anchovies"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "basa"
+name = "Basa"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "canned-sardines"
+name = "Canned sardines"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["tinned sardines"]
+
+[[ingredient]]
+id = "canned-tuna"
+name = "Canned tuna"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["tinned tuna"]
+
+[[ingredient]]
+id = "catla"
+name = "Catla"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "clams"
+name = "Clams"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "cod"
+name = "Cod"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "crab"
+name = "Crab"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "dried-fish"
+name = "Dried fish"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["bombay duck"]
+
+[[ingredient]]
+id = "dried-shrimp"
+name = "Dried shrimp"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "hilsa"
+name = "Hilsa"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "kingfish"
+name = "Kingfish"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["seer fish"]
+
+[[ingredient]]
+id = "lobster"
+name = "Lobster"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "mackerel"
+name = "Mackerel"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "mussels"
+name = "Mussels"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "oysters"
+name = "Oysters"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "pomfret"
+name = "Pomfret"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "prawns"
+name = "Prawns"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["shrimp"]
+
+[[ingredient]]
+id = "rohu"
+name = "Rohu"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "salmon"
+name = "Salmon"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "sardines"
+name = "Sardines"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["fresh sardines"]
+
+[[ingredient]]
+id = "scallops"
+name = "Scallops"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "smoked-salmon"
+name = "Smoked salmon"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "squid"
+name = "Squid"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["calamari"]
+
+[[ingredient]]
+id = "tilapia"
+name = "Tilapia"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "tuna"
+name = "Tuna"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["fresh tuna"]
+
+# Tofu & plant proteins
+
+[[ingredient]]
+id = "plant-based-mince"
+name = "Plant-based mince"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+search_terms = ["vegan mince", "meat-free mince"]
+
+[[ingredient]]
+id = "seitan"
+name = "Seitan"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+
+[[ingredient]]
+id = "silken-tofu"
+name = "Silken tofu"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+
+[[ingredient]]
+id = "soya-chunks"
+name = "Soya chunks"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+search_terms = ["textured vegetable protein", "tvp", "soy chunks"]
+
+[[ingredient]]
+id = "soya-granules"
+name = "Soya granules"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+search_terms = ["soy granules"]
+
+[[ingredient]]
+id = "tempeh"
+name = "Tempeh"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+
+[[ingredient]]
+id = "tofu"
+name = "Tofu"
+class = "A"
+diet = "vegan"
+category = "tofu-and-plant-proteins"
+search_terms = ["firm tofu"]
+
+# Dals & pulses
+
+[[ingredient]]
+id = "adzuki-beans"
+name = "Adzuki beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["azuki beans"]
+
+[[ingredient]]
+id = "beluga-lentils"
+name = "Beluga lentils"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["black lentils"]
+
+[[ingredient]]
+id = "black-beans"
+name = "Black beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["canned black beans", "turtle beans"]
+
+[[ingredient]]
+id = "black-chickpeas"
+name = "Black chickpeas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["bengal gram", "brown chickpeas"]
+
+[[ingredient]]
+id = "black-urad-dal"
+name = "Black urad dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["split black urad", "split black gram with skin"]
+
+[[ingredient]]
+id = "black-eyed-peas"
+name = "Black-eyed peas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["cowpeas", "black-eyed beans"]
+
+[[ingredient]]
+id = "borlotti-beans"
+name = "Borlotti beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["cranberry beans"]
+
+[[ingredient]]
+id = "butter-beans"
+name = "Butter beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["lima beans"]
+
+[[ingredient]]
+id = "cannellini-beans"
+name = "Cannellini beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["white beans", "white kidney beans", "haricot beans", "navy beans", "great northern beans"]
+
+[[ingredient]]
+id = "chana-dal"
+name = "Chana dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["split bengal gram", "split chickpeas"]
+
+[[ingredient]]
+id = "chickpeas"
+name = "Chickpeas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["garbanzo beans", "canned chickpeas"]
+
+[[ingredient]]
+id = "dried-fava-beans"
+name = "Dried fava beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["dried broad beans"]
+
+[[ingredient]]
+id = "dried-green-chickpeas"
+name = "Dried green chickpeas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "dried-green-peas"
+name = "Dried green peas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "dried-white-peas"
+name = "Dried white peas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "flageolet-beans"
+name = "Flageolet beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "green-lentils"
+name = "Green lentils"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["brown lentils"]
+
+[[ingredient]]
+id = "green-moong-dal"
+name = "Green moong dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["split green moong", "split green gram"]
+
+[[ingredient]]
+id = "green-split-peas"
+name = "Green split peas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "horse-gram"
+name = "Horse gram"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "kidney-beans"
+name = "Kidney beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["red kidney beans", "canned kidney beans"]
+
+[[ingredient]]
+id = "masoor-dal"
+name = "Masoor dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["red lentils", "split red lentils"]
+
+[[ingredient]]
+id = "moong-dal"
+name = "Moong dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["split yellow moong", "yellow moong dal", "split mung beans"]
+
+[[ingredient]]
+id = "moth-beans"
+name = "Moth beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "mung-beans"
+name = "Mung beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["green gram", "whole mung"]
+
+[[ingredient]]
+id = "pinto-beans"
+name = "Pinto beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+[[ingredient]]
+id = "puy-lentils"
+name = "Puy lentils"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["french green lentils"]
+
+[[ingredient]]
+id = "soybeans"
+name = "Soybeans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["soya beans"]
+
+[[ingredient]]
+id = "toor-dal"
+name = "Toor dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["split pigeon peas", "pigeon pea lentils"]
+
+[[ingredient]]
+id = "urad-dal"
+name = "Urad dal"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["split black gram", "white urad dal"]
+
+[[ingredient]]
+id = "whole-masoor"
+name = "Whole masoor"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["whole red lentils"]
+
+[[ingredient]]
+id = "whole-urad"
+name = "Whole urad"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["whole black gram", "black gram"]
+
+[[ingredient]]
+id = "yellow-split-peas"
+name = "Yellow split peas"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+
+# Dairy & eggs
+
+[[ingredient]]
+id = "blue-cheese"
+name = "Blue cheese"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "brie"
+name = "Brie"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "burrata"
+name = "Burrata"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "butter"
+name = "Butter"
+class = "S"
+kind = "pantry"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["salted butter", "unsalted butter"]
+
+[[ingredient]]
+id = "buttermilk"
+name = "Buttermilk"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "camembert"
+name = "Camembert"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "cheddar"
+name = "Cheddar"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["cheddar cheese"]
+
+[[ingredient]]
+id = "chhena"
+name = "Chhena"
+class = "A"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "condensed-milk"
+name = "Condensed milk"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["sweetened condensed milk"]
+
+[[ingredient]]
+id = "cottage-cheese"
+name = "Cottage cheese"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "cream"
+name = "Cream"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["fresh cream", "single cream", "cooking cream", "light cream"]
+
+[[ingredient]]
+id = "cream-cheese"
+name = "Cream cheese"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "creme-fraiche"
+name = "Creme fraiche"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "curd"
+name = "Curd"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["yogurt", "yoghurt", "plain yogurt"]
+
+[[ingredient]]
+id = "dairy-whitener"
+name = "Dairy whitener"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["milk whitener"]
+
+[[ingredient]]
+id = "duck-egg"
+name = "Duck egg"
+class = "A"
+diet = "egg"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "egg"
+name = "Egg"
+class = "A"
+diet = "egg"
+category = "dairy-and-eggs"
+search_terms = ["hen eggs", "chicken eggs", "egg whites"]
+
+[[ingredient]]
+id = "emmental"
+name = "Emmental"
+class = "B"
+diet = "non_veg"
+category = "dairy-and-eggs"
+search_terms = ["swiss cheese"]
+
+[[ingredient]]
+id = "evaporated-milk"
+name = "Evaporated milk"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "feta"
+name = "Feta"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "ghee"
+name = "Ghee"
+class = "S"
+kind = "pantry"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["clarified butter"]
+
+[[ingredient]]
+id = "goat-cheese"
+name = "Goat cheese"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["chevre"]
+
+[[ingredient]]
+id = "gouda"
+name = "Gouda"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "gruyere"
+name = "Gruyere"
+class = "B"
+diet = "non_veg"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "halloumi"
+name = "Halloumi"
+class = "A"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "hung-curd"
+name = "Hung curd"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["greek yogurt", "strained yogurt"]
+
+[[ingredient]]
+id = "kefir"
+name = "Kefir"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "khoa"
+name = "Khoa"
+class = "A"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "malai"
+name = "Malai"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "mascarpone"
+name = "Mascarpone"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "milk"
+name = "Milk"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["whole milk", "toned milk", "uht milk", "full cream milk"]
+
+[[ingredient]]
+id = "milk-powder"
+name = "Milk powder"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["powdered milk"]
+
+[[ingredient]]
+id = "mozzarella"
+name = "Mozzarella"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "paneer"
+name = "Paneer"
+class = "A"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["indian cottage cheese"]
+
+[[ingredient]]
+id = "parmesan"
+name = "Parmesan"
+class = "B"
+diet = "non_veg"
+category = "dairy-and-eggs"
+search_terms = ["parmigiano reggiano"]
+
+[[ingredient]]
+id = "pecorino"
+name = "Pecorino"
+class = "B"
+diet = "non_veg"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "processed-cheese"
+name = "Processed cheese"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["cheese slices", "cheese spread"]
+
+[[ingredient]]
+id = "quail-egg"
+name = "Quail egg"
+class = "A"
+diet = "egg"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "ricotta"
+name = "Ricotta"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "sour-cream"
+name = "Sour cream"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+
+[[ingredient]]
+id = "whipping-cream"
+name = "Whipping cream"
+class = "B"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["double cream", "heavy cream"]
+
+# Plant-based milks
+
+[[ingredient]]
+id = "almond-milk"
+name = "Almond milk"
+class = "B"
+diet = "vegan"
+category = "plant-based-milks"
+
+[[ingredient]]
+id = "cashew-milk"
+name = "Cashew milk"
+class = "B"
+diet = "vegan"
+category = "plant-based-milks"
+
+[[ingredient]]
+id = "coconut-cream"
+name = "Coconut cream"
+class = "B"
+diet = "vegan"
+category = "plant-based-milks"
+search_terms = ["canned coconut cream"]
+
+[[ingredient]]
+id = "coconut-milk"
+name = "Coconut milk"
+class = "A"
+diet = "vegan"
+category = "plant-based-milks"
+search_terms = ["canned coconut milk", "coconut milk powder"]
+
+[[ingredient]]
+id = "oat-milk"
+name = "Oat milk"
+class = "B"
+diet = "vegan"
+category = "plant-based-milks"
+
+[[ingredient]]
+id = "rice-milk"
+name = "Rice milk"
+class = "B"
+diet = "vegan"
+category = "plant-based-milks"
+
+[[ingredient]]
+id = "soy-milk"
+name = "Soy milk"
+class = "B"
+diet = "vegan"
+category = "plant-based-milks"
+search_terms = ["soya milk"]
+
+# Rice & grains
+
+[[ingredient]]
+id = "amaranth"
+name = "Amaranth"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["amaranth seeds"]
+
+[[ingredient]]
+id = "arborio-rice"
+name = "Arborio rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["risotto rice", "carnaroli rice"]
+
+[[ingredient]]
+id = "barnyard-millet"
+name = "Barnyard millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "basmati-rice"
+name = "Basmati rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "black-rice"
+name = "Black rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["forbidden rice"]
+
+[[ingredient]]
+id = "bomba-rice"
+name = "Bomba rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["paella rice"]
+
+[[ingredient]]
+id = "broken-wheat"
+name = "Broken wheat"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["cracked wheat"]
+
+[[ingredient]]
+id = "brown-rice"
+name = "Brown rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "buckwheat"
+name = "Buckwheat"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["buckwheat groats"]
+
+[[ingredient]]
+id = "bulgur"
+name = "Bulgur"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["bulgur wheat"]
+
+[[ingredient]]
+id = "farro"
+name = "Farro"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "finger-millet"
+name = "Finger millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "flattened-rice"
+name = "Flattened rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["beaten rice"]
+
+[[ingredient]]
+id = "fonio"
+name = "Fonio"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "foxtail-millet"
+name = "Foxtail millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "freekeh"
+name = "Freekeh"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "glutinous-rice"
+name = "Glutinous rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["sticky rice"]
+
+[[ingredient]]
+id = "gobindobhog-rice"
+name = "Gobindobhog rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "idli-rice"
+name = "Idli rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "jasmine-rice"
+name = "Jasmine rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["thai rice"]
+
+[[ingredient]]
+id = "kodo-millet"
+name = "Kodo millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "little-millet"
+name = "Little millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "parboiled-rice"
+name = "Parboiled rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "pearl-barley"
+name = "Pearl barley"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["barley"]
+
+[[ingredient]]
+id = "pearl-millet"
+name = "Pearl millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "popcorn-kernels"
+name = "Popcorn kernels"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "proso-millet"
+name = "Proso millet"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["millet"]
+
+[[ingredient]]
+id = "puffed-rice"
+name = "Puffed rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "quinoa"
+name = "Quinoa"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "red-rice"
+name = "Red rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["matta rice", "kerala red rice"]
+
+[[ingredient]]
+id = "rice"
+name = "Rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["white rice", "sona masoori", "ponni rice"]
+
+[[ingredient]]
+id = "rolled-oats"
+name = "Rolled oats"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["oats", "porridge oats"]
+
+[[ingredient]]
+id = "rye-berries"
+name = "Rye berries"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "sago"
+name = "Sago"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["sago pearls", "tapioca pearls", "boba"]
+
+[[ingredient]]
+id = "sorghum"
+name = "Sorghum"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "spelt"
+name = "Spelt"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "steel-cut-oats"
+name = "Steel-cut oats"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "sushi-rice"
+name = "Sushi rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "teff"
+name = "Teff"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "wheat-berries"
+name = "Wheat berries"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+[[ingredient]]
+id = "wild-rice"
+name = "Wild rice"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+
+# Pasta & noodles
+
+[[ingredient]]
+id = "cannelloni-tubes"
+name = "Cannelloni tubes"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "cheese-filled-pasta"
+name = "Cheese-filled pasta"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+search_terms = ["ravioli", "tortellini", "ricotta ravioli"]
+
+[[ingredient]]
+id = "couscous"
+name = "Couscous"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "egg-noodles"
+name = "Egg noodles"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "egg-pasta"
+name = "Egg pasta"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+search_terms = ["fresh egg pasta", "tagliatelle", "pappardelle"]
+
+[[ingredient]]
+id = "flat-rice-noodles"
+name = "Flat rice noodles"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["rice noodles"]
+
+[[ingredient]]
+id = "glass-noodles"
+name = "Glass noodles"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["cellophane noodles", "bean thread noodles"]
+
+[[ingredient]]
+id = "gnocchi"
+name = "Gnocchi"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "hakka-noodles"
+name = "Hakka noodles"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "indian-vermicelli"
+name = "Indian vermicelli"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["roasted vermicelli"]
+
+[[ingredient]]
+id = "lasagne-sheets"
+name = "Lasagne sheets"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+search_terms = ["lasagna"]
+
+[[ingredient]]
+id = "meat-filled-pasta"
+name = "Meat-filled pasta"
+class = "A"
+diet = "non_veg"
+category = "pasta-and-noodles"
+search_terms = ["meat ravioli", "meat tortellini"]
+
+[[ingredient]]
+id = "orzo"
+name = "Orzo"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "pasta"
+name = "Pasta"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["spaghetti", "penne", "fusilli", "macaroni", "linguine", "fettuccine", "rigatoni", "farfalle", "conchiglie", "shells", "orecchiette", "ditalini", "angel hair", "whole-wheat pasta", "gluten-free pasta"]
+
+[[ingredient]]
+id = "pearl-couscous"
+name = "Pearl couscous"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["giant couscous", "israeli couscous"]
+
+[[ingredient]]
+id = "ramen-noodles"
+name = "Ramen noodles"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "rice-paper"
+name = "Rice paper"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["rice paper sheets"]
+
+[[ingredient]]
+id = "rice-vermicelli"
+name = "Rice vermicelli"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+search_terms = ["rice sticks"]
+
+[[ingredient]]
+id = "shirataki-noodles"
+name = "Shirataki noodles"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "soba"
+name = "Soba"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "somen"
+name = "Somen"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "spring-roll-wrappers"
+name = "Spring roll wrappers"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "sweet-potato-noodles"
+name = "Sweet potato noodles"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "udon"
+name = "Udon"
+class = "A"
+diet = "vegan"
+category = "pasta-and-noodles"
+
+[[ingredient]]
+id = "wonton-wrappers"
+name = "Wonton wrappers"
+class = "A"
+diet = "egg"
+category = "pasta-and-noodles"
+search_terms = ["dumpling wrappers", "gyoza wrappers"]
+
+# Bread, bakery & snacks
+
+[[ingredient]]
+id = "amaretti"
+name = "Amaretti"
+class = "A"
+diet = "egg"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "bagels"
+name = "Bagels"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "baguette"
+name = "Baguette"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "breadcrumbs"
+name = "Breadcrumbs"
+class = "B"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "brown-bread"
+name = "Brown bread"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["whole-wheat bread"]
+
+[[ingredient]]
+id = "burger-buns"
+name = "Burger buns"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "chocolate-sandwich-cookies"
+name = "Chocolate sandwich cookies"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+search_terms = ["cream biscuits"]
+
+[[ingredient]]
+id = "corn-tortillas"
+name = "Corn tortillas"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "croissants"
+name = "Croissants"
+class = "A"
+diet = "egg"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "digestive-biscuits"
+name = "Digestive biscuits"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "english-muffins"
+name = "English muffins"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "filo-pastry"
+name = "Filo pastry"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["phyllo"]
+
+[[ingredient]]
+id = "flour-tortillas"
+name = "Flour tortillas"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["wraps"]
+
+[[ingredient]]
+id = "frozen-parathas"
+name = "Frozen parathas"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+search_terms = ["ready rotis", "frozen rotis"]
+
+[[ingredient]]
+id = "glucose-biscuits"
+name = "Glucose biscuits"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "graham-crackers"
+name = "Graham crackers"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "hot-dog-buns"
+name = "Hot dog buns"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "ladyfingers"
+name = "Ladyfingers"
+class = "A"
+diet = "egg"
+category = "bread-bakery-and-snacks"
+search_terms = ["savoiardi", "sponge fingers"]
+
+[[ingredient]]
+id = "lavash"
+name = "Lavash"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "marie-biscuits"
+name = "Marie biscuits"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "naan"
+name = "Naan"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "panko"
+name = "Panko"
+class = "B"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["japanese breadcrumbs"]
+
+[[ingredient]]
+id = "papad"
+name = "Papad"
+class = "B"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["poppadom", "papadum"]
+
+[[ingredient]]
+id = "pav"
+name = "Pav"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+search_terms = ["dinner rolls", "bread rolls"]
+
+[[ingredient]]
+id = "pita-bread"
+name = "Pita bread"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["pitta"]
+
+[[ingredient]]
+id = "pizza-base"
+name = "Pizza base"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["pizza crust"]
+
+[[ingredient]]
+id = "puff-pastry"
+name = "Puff pastry"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "rusk"
+name = "Rusk"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+search_terms = ["toast biscuits"]
+
+[[ingredient]]
+id = "sev"
+name = "Sev"
+class = "B"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "shortcrust-pastry"
+name = "Shortcrust pastry"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+search_terms = ["pie crust"]
+
+[[ingredient]]
+id = "sourdough"
+name = "Sourdough"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "taco-shells"
+name = "Taco shells"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "wafer-biscuits"
+name = "Wafer biscuits"
+class = "A"
+diet = "vegetarian"
+category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "white-bread"
+name = "White bread"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["sandwich bread"]
+
+# Fruits
+
+[[ingredient]]
+id = "apple"
+name = "Apple"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "apricot"
+name = "Apricot"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "banana"
+name = "Banana"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "blackberries"
+name = "Blackberries"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "blueberries"
+name = "Blueberries"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "cherries"
+name = "Cherries"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "cranberries"
+name = "Cranberries"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "custard-apple"
+name = "Custard apple"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["sugar apple"]
+
+[[ingredient]]
+id = "dragon-fruit"
+name = "Dragon fruit"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "fig"
+name = "Fig"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["fresh figs"]
+
+[[ingredient]]
+id = "fresh-dates"
+name = "Fresh dates"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "fresh-kokum"
+name = "Fresh kokum"
+class = "B"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "grapefruit"
+name = "Grapefruit"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "grapes"
+name = "Grapes"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "guava"
+name = "Guava"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "indian-gooseberry"
+name = "Indian gooseberry"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "kiwi"
+name = "Kiwi"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "lemon"
+name = "Lemon"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "fruits"
+search_terms = ["lemon juice"]
+
+[[ingredient]]
+id = "lime"
+name = "Lime"
+class = "B"
+diet = "vegan"
+category = "fruits"
+search_terms = ["lime juice"]
+
+[[ingredient]]
+id = "lychee"
+name = "Lychee"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["litchi", "canned lychee"]
+
+[[ingredient]]
+id = "mango"
+name = "Mango"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["ripe mango", "alphonso"]
+
+[[ingredient]]
+id = "muskmelon"
+name = "Muskmelon"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["cantaloupe"]
+
+[[ingredient]]
+id = "orange"
+name = "Orange"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "papaya"
+name = "Papaya"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "passion-fruit"
+name = "Passion fruit"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "peach"
+name = "Peach"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["canned peaches"]
+
+[[ingredient]]
+id = "pear"
+name = "Pear"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "persimmon"
+name = "Persimmon"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "pineapple"
+name = "Pineapple"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["canned pineapple"]
+
+[[ingredient]]
+id = "plum"
+name = "Plum"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "pomegranate"
+name = "Pomegranate"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "quince"
+name = "Quince"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "raspberries"
+name = "Raspberries"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "rhubarb"
+name = "Rhubarb"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "ripe-jackfruit"
+name = "Ripe jackfruit"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["jackfruit"]
+
+[[ingredient]]
+id = "sapota"
+name = "Sapota"
+class = "A"
+diet = "vegan"
+category = "fruits"
+search_terms = ["sapodilla"]
+
+[[ingredient]]
+id = "strawberries"
+name = "Strawberries"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "sweet-lime"
+name = "Sweet lime"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+[[ingredient]]
+id = "watermelon"
+name = "Watermelon"
+class = "A"
+diet = "vegan"
+category = "fruits"
+
+# Fresh herbs
+
+[[ingredient]]
+id = "banana-leaves"
+name = "Banana leaves"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "basil"
+name = "Basil"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["sweet basil"]
+
+[[ingredient]]
+id = "betel-leaves"
+name = "Betel leaves"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "chives"
+name = "Chives"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "coriander-leaves"
+name = "Coriander leaves"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["cilantro", "fresh coriander"]
+
+[[ingredient]]
+id = "curry-leaves"
+name = "Curry leaves"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "dill"
+name = "Dill"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["dill leaves"]
+
+[[ingredient]]
+id = "holy-basil"
+name = "Holy basil"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "lemongrass"
+name = "Lemongrass"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "makrut-lime-leaves"
+name = "Makrut lime leaves"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["lime leaves", "kaffir lime leaves"]
+
+[[ingredient]]
+id = "mint"
+name = "Mint"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["mint leaves"]
+
+[[ingredient]]
+id = "oregano"
+name = "Oregano"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["fresh oregano"]
+
+[[ingredient]]
+id = "pandan-leaves"
+name = "Pandan leaves"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["pandan"]
+
+[[ingredient]]
+id = "parsley"
+name = "Parsley"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "rosemary"
+name = "Rosemary"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["fresh rosemary"]
+
+[[ingredient]]
+id = "sage"
+name = "Sage"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["fresh sage"]
+
+[[ingredient]]
+id = "tarragon"
+name = "Tarragon"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "thai-basil"
+name = "Thai basil"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+
+[[ingredient]]
+id = "thyme"
+name = "Thyme"
+class = "B"
+diet = "vegan"
+category = "fresh-herbs"
+search_terms = ["fresh thyme"]
+
+# Nuts, seeds & dried fruit
+
+[[ingredient]]
+id = "almond-butter"
+name = "Almond butter"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "almond-flakes"
+name = "Almond flakes"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["flaked almonds", "sliced almonds"]
+
+[[ingredient]]
+id = "almonds"
+name = "Almonds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "basil-seeds"
+name = "Basil seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["sweet basil seeds"]
+
+[[ingredient]]
+id = "brazil-nuts"
+name = "Brazil nuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "candied-peel"
+name = "Candied peel"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["mixed peel"]
+
+[[ingredient]]
+id = "cashew-butter"
+name = "Cashew butter"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "cashews"
+name = "Cashews"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["cashew nuts"]
+
+[[ingredient]]
+id = "charoli"
+name = "Charoli"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "chestnuts"
+name = "Chestnuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "chia-seeds"
+name = "Chia seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "coconut"
+name = "Coconut"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["fresh coconut", "grated coconut", "frozen grated coconut", "scraped coconut"]
+
+[[ingredient]]
+id = "coconut-butter"
+name = "Coconut butter"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "currants"
+name = "Currants"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dates"
+name = "Dates"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["dried dates"]
+
+[[ingredient]]
+id = "desiccated-coconut"
+name = "Desiccated coconut"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-apple-rings"
+name = "Dried apple rings"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-apricots"
+name = "Dried apricots"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-blueberries"
+name = "Dried blueberries"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-cherries"
+name = "Dried cherries"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-coconut"
+name = "Dried coconut"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["copra"]
+
+[[ingredient]]
+id = "dried-cranberries"
+name = "Dried cranberries"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-figs"
+name = "Dried figs"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-mango"
+name = "Dried mango"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "dried-mulberries"
+name = "Dried mulberries"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "flax-seeds"
+name = "Flax seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["linseeds"]
+
+[[ingredient]]
+id = "fox-nuts"
+name = "Fox nuts"
+class = "A"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["lotus seeds", "puffed lotus seeds"]
+
+[[ingredient]]
+id = "garden-cress-seeds"
+name = "Garden cress seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "glace-cherries"
+name = "Glace cherries"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["candied cherries"]
+
+[[ingredient]]
+id = "goji-berries"
+name = "Goji berries"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "hazelnuts"
+name = "Hazelnuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "hemp-seeds"
+name = "Hemp seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "macadamia-nuts"
+name = "Macadamia nuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "marzipan"
+name = "Marzipan"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["almond paste"]
+
+[[ingredient]]
+id = "melon-seeds"
+name = "Melon seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "peanut-butter"
+name = "Peanut butter"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "peanuts"
+name = "Peanuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["groundnuts"]
+
+[[ingredient]]
+id = "pecans"
+name = "Pecans"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "pine-nuts"
+name = "Pine nuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "pistachios"
+name = "Pistachios"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "prunes"
+name = "Prunes"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "pumpkin-seed-butter"
+name = "Pumpkin seed butter"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "pumpkin-seeds"
+name = "Pumpkin seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["pepitas"]
+
+[[ingredient]]
+id = "raisins"
+name = "Raisins"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["golden raisins", "sultanas", "black raisins"]
+
+[[ingredient]]
+id = "sunflower-seed-butter"
+name = "Sunflower seed butter"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "sunflower-seeds"
+name = "Sunflower seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "tahini"
+name = "Tahini"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["sesame paste"]
+
+[[ingredient]]
+id = "tender-coconut"
+name = "Tender coconut"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+search_terms = ["coconut water"]
+
+[[ingredient]]
+id = "tutti-frutti"
+name = "Tutti frutti"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "walnuts"
+name = "Walnuts"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+[[ingredient]]
+id = "watermelon-seeds"
+name = "Watermelon seeds"
+class = "B"
+diet = "vegan"
+category = "nuts-seeds-and-dried-fruit"
+
+# Spices & seasonings
+
+[[ingredient]]
+id = "allspice"
+name = "Allspice"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "asafoetida"
+name = "Asafoetida"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "baharat"
+name = "Baharat"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "bay-leaves"
+name = "Bay leaves"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["bay leaf", "indian bay leaf"]
+
+[[ingredient]]
+id = "berbere"
+name = "Berbere"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "biryani-masala"
+name = "Biryani masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "black-cardamom"
+name = "Black cardamom"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "black-cumin"
+name = "Black cumin"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["shahi cumin"]
+
+[[ingredient]]
+id = "black-pepper"
+name = "Black pepper"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["black peppercorns", "ground black pepper", "peppercorns"]
+
+[[ingredient]]
+id = "black-salt"
+name = "Black salt"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "cajun-seasoning"
+name = "Cajun seasoning"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "caraway-seeds"
+name = "Caraway seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "carom-seeds"
+name = "Carom seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "celery-seeds"
+name = "Celery seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "chaat-masala"
+name = "Chaat masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "chai-masala"
+name = "Chai masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["tea masala"]
+
+[[ingredient]]
+id = "chilli-flakes"
+name = "Chilli flakes"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["red pepper flakes", "crushed red pepper"]
+
+[[ingredient]]
+id = "chinese-five-spice"
+name = "Chinese five-spice"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["five spice"]
+
+[[ingredient]]
+id = "chole-masala"
+name = "Chole masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["chana masala"]
+
+[[ingredient]]
+id = "cinnamon-sticks"
+name = "Cinnamon sticks"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["cinnamon", "cassia bark"]
+
+[[ingredient]]
+id = "citric-acid"
+name = "Citric acid"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "cloves"
+name = "Cloves"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "coriander-powder"
+name = "Coriander powder"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["ground coriander"]
+
+[[ingredient]]
+id = "coriander-seeds"
+name = "Coriander seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "cumin-powder"
+name = "Cumin powder"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["ground cumin"]
+
+[[ingredient]]
+id = "cumin-seeds"
+name = "Cumin seeds"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["whole cumin"]
+
+[[ingredient]]
+id = "curry-powder"
+name = "Curry powder"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "dill-seeds"
+name = "Dill seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "dried-basil"
+name = "Dried basil"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["basil"]
+
+[[ingredient]]
+id = "dried-chives"
+name = "Dried chives"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "dried-dill"
+name = "Dried dill"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["dill"]
+
+[[ingredient]]
+id = "dried-fenugreek-leaves"
+name = "Dried fenugreek leaves"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "dried-lemongrass"
+name = "Dried lemongrass"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "dried-makrut-lime-leaves"
+name = "Dried makrut lime leaves"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["dried lime leaves", "dried kaffir lime leaves"]
+
+[[ingredient]]
+id = "dried-marjoram"
+name = "Dried marjoram"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["marjoram"]
+
+[[ingredient]]
+id = "dried-mint"
+name = "Dried mint"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["mint"]
+
+[[ingredient]]
+id = "dried-oregano"
+name = "Dried oregano"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["oregano"]
+
+[[ingredient]]
+id = "dried-parsley"
+name = "Dried parsley"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["parsley"]
+
+[[ingredient]]
+id = "dried-pomegranate-seeds"
+name = "Dried pomegranate seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "dried-red-chillies"
+name = "Dried red chillies"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["whole red chillies"]
+
+[[ingredient]]
+id = "dried-rosemary"
+name = "Dried rosemary"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["rosemary"]
+
+[[ingredient]]
+id = "dried-sage"
+name = "Dried sage"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["sage"]
+
+[[ingredient]]
+id = "dried-tarragon"
+name = "Dried tarragon"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["tarragon"]
+
+[[ingredient]]
+id = "dried-thyme"
+name = "Dried thyme"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["thyme"]
+
+[[ingredient]]
+id = "dry-ginger-powder"
+name = "Dry ginger powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["ground ginger"]
+
+[[ingredient]]
+id = "dry-mango-powder"
+name = "Dry mango powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["mango powder"]
+
+[[ingredient]]
+id = "dukkah"
+name = "Dukkah"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "everything-bagel-seasoning"
+name = "Everything bagel seasoning"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "fennel-seeds"
+name = "Fennel seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "fenugreek-powder"
+name = "Fenugreek powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "fenugreek-seeds"
+name = "Fenugreek seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "fish-masala"
+name = "Fish masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "furikake"
+name = "Furikake"
+class = "B"
+diet = "non_veg"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "garam-masala"
+name = "Garam masala"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "garlic-powder"
+name = "Garlic powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "goda-masala"
+name = "Goda masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "green-cardamom"
+name = "Green cardamom"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["cardamom"]
+
+[[ingredient]]
+id = "ground-cinnamon"
+name = "Ground cinnamon"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["cinnamon powder"]
+
+[[ingredient]]
+id = "herbes-de-provence"
+name = "Herbes de Provence"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "idli-podi"
+name = "Idli podi"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["gunpowder", "chutney powder"]
+
+[[ingredient]]
+id = "italian-seasoning"
+name = "Italian seasoning"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["mixed herbs"]
+
+[[ingredient]]
+id = "jerk-seasoning"
+name = "Jerk seasoning"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "juniper-berries"
+name = "Juniper berries"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "kashmiri-chilli-powder"
+name = "Kashmiri chilli powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "kitchen-king-masala"
+name = "Kitchen king masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "kokum"
+name = "Kokum"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["dried kokum"]
+
+[[ingredient]]
+id = "lemon-pepper"
+name = "Lemon pepper"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "long-pepper"
+name = "Long pepper"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "mace"
+name = "Mace"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "meat-masala"
+name = "Meat masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "msg"
+name = "MSG"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["monosodium glutamate"]
+
+[[ingredient]]
+id = "mustard-powder"
+name = "Mustard powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["mustard flour"]
+
+[[ingredient]]
+id = "mustard-seeds"
+name = "Mustard seeds"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["black mustard seeds", "brown mustard seeds"]
+
+[[ingredient]]
+id = "nigella-seeds"
+name = "Nigella seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["black onion seeds"]
+
+[[ingredient]]
+id = "nutmeg"
+name = "Nutmeg"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "nutritional-yeast"
+name = "Nutritional yeast"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "onion-powder"
+name = "Onion powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "panch-phoron"
+name = "Panch phoron"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["bengali five spice"]
+
+[[ingredient]]
+id = "paprika"
+name = "Paprika"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "pav-bhaji-masala"
+name = "Pav bhaji masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "pink-peppercorns"
+name = "Pink peppercorns"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "pomegranate-molasses"
+name = "Pomegranate molasses"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "poppy-seeds"
+name = "Poppy seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "ras-el-hanout"
+name = "Ras el hanout"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "rasam-powder"
+name = "Rasam powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "red-chilli-powder"
+name = "Red chilli powder"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["chilli powder", "cayenne", "cayenne pepper"]
+
+[[ingredient]]
+id = "rock-salt"
+name = "Rock salt"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["pink salt", "himalayan salt"]
+
+[[ingredient]]
+id = "saffron"
+name = "Saffron"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "salt"
+name = "Salt"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["table salt", "iodised salt", "sea salt", "kosher salt", "flaky salt"]
+
+[[ingredient]]
+id = "sambar-powder"
+name = "Sambar powder"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "sesame-seeds"
+name = "Sesame seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "shichimi-togarashi"
+name = "Shichimi togarashi"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "sichuan-peppercorns"
+name = "Sichuan peppercorns"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["szechuan pepper"]
+
+[[ingredient]]
+id = "smoked-paprika"
+name = "Smoked paprika"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "star-anise"
+name = "Star anise"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "stone-flower"
+name = "Stone flower"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["black stone flower"]
+
+[[ingredient]]
+id = "sumac"
+name = "Sumac"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "taco-seasoning"
+name = "Taco seasoning"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "tamarind"
+name = "Tamarind"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["tamarind pulp", "tamarind block"]
+
+[[ingredient]]
+id = "tandoori-masala"
+name = "Tandoori masala"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "turmeric"
+name = "Turmeric"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["turmeric powder", "ground turmeric"]
+
+[[ingredient]]
+id = "vanilla-beans"
+name = "Vanilla beans"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["vanilla pods"]
+
+[[ingredient]]
+id = "white-pepper"
+name = "White pepper"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "yellow-mustard-seeds"
+name = "Yellow mustard seeds"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+[[ingredient]]
+id = "zaatar"
+name = "Za'atar"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+
+# Oils & fats
+
+[[ingredient]]
+id = "avocado-oil"
+name = "Avocado oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "beef-tallow"
+name = "Beef tallow"
+class = "B"
+diet = "non_veg"
+category = "oils-and-fats"
+search_terms = ["tallow"]
+
+[[ingredient]]
+id = "chilli-oil"
+name = "Chilli oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+search_terms = ["chili crisp"]
+
+[[ingredient]]
+id = "coconut-oil"
+name = "Coconut oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "cooking-spray"
+name = "Cooking spray"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "duck-fat"
+name = "Duck fat"
+class = "B"
+diet = "non_veg"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "extra-virgin-olive-oil"
+name = "Extra-virgin olive oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+search_terms = ["evoo"]
+
+[[ingredient]]
+id = "lard"
+name = "Lard"
+class = "B"
+diet = "non_veg"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "margarine"
+name = "Margarine"
+class = "B"
+diet = "vegetarian"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "mustard-oil"
+name = "Mustard oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "oil"
+name = "Oil"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "oils-and-fats"
+search_terms = ["cooking oil", "vegetable oil", "sunflower oil", "refined oil", "canola oil", "rapeseed oil", "corn oil", "groundnut oil", "peanut oil", "rice bran oil", "safflower oil"]
+
+[[ingredient]]
+id = "olive-oil"
+name = "Olive oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+search_terms = ["light olive oil", "pomace olive oil"]
+
+[[ingredient]]
+id = "sesame-oil"
+name = "Sesame oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+search_terms = ["gingelly oil"]
+
+[[ingredient]]
+id = "shortening"
+name = "Shortening"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+search_terms = ["vegetable shortening", "vegetable ghee"]
+
+[[ingredient]]
+id = "toasted-sesame-oil"
+name = "Toasted sesame oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "truffle-oil"
+name = "Truffle oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+[[ingredient]]
+id = "walnut-oil"
+name = "Walnut oil"
+class = "B"
+diet = "vegan"
+category = "oils-and-fats"
+
+# Sauces & condiments
+
+[[ingredient]]
+id = "apple-cider-vinegar"
+name = "Apple cider vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "balsamic-glaze"
+name = "Balsamic glaze"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "balsamic-vinegar"
+name = "Balsamic vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "barbecue-sauce"
+name = "Barbecue sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["bbq sauce"]
+
+[[ingredient]]
+id = "black-bean-sauce"
+name = "Black bean sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "black-vinegar"
+name = "Black vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["chinkiang vinegar"]
+
+[[ingredient]]
+id = "cane-vinegar"
+name = "Cane vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "capers"
+name = "Capers"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "chicken-stock"
+name = "Chicken stock"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+search_terms = ["chicken broth", "chicken stock cube", "chicken bouillon"]
+
+[[ingredient]]
+id = "chilli-garlic-sauce"
+name = "Chilli garlic sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "cranberry-sauce"
+name = "Cranberry sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "dark-soy-sauce"
+name = "Dark soy sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "dijon-mustard"
+name = "Dijon mustard"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "doubanjiang"
+name = "Doubanjiang"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["chilli bean paste"]
+
+[[ingredient]]
+id = "fish-sauce"
+name = "Fish sauce"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "gherkins"
+name = "Gherkins"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["cornichons"]
+
+[[ingredient]]
+id = "ginger-garlic-paste"
+name = "Ginger-garlic paste"
+class = "S"
+kind = "fresh"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "gochujang"
+name = "Gochujang"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "green-chutney"
+name = "Green chutney"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["mint chutney", "coriander chutney"]
+
+[[ingredient]]
+id = "harissa"
+name = "Harissa"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "hoisin-sauce"
+name = "Hoisin sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "horseradish-sauce"
+name = "Horseradish sauce"
+class = "B"
+diet = "vegetarian"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "hot-sauce"
+name = "Hot sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["chilli sauce"]
+
+[[ingredient]]
+id = "japanese-mayonnaise"
+name = "Japanese mayonnaise"
+class = "B"
+diet = "egg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "ketchup"
+name = "Ketchup"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["tomato ketchup", "tomato sauce"]
+
+[[ingredient]]
+id = "kimchi"
+name = "Kimchi"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "lime-pickle"
+name = "Lime pickle"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "liquid-smoke"
+name = "Liquid smoke"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "malt-vinegar"
+name = "Malt vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "mango-pickle"
+name = "Mango pickle"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "mayonnaise"
+name = "Mayonnaise"
+class = "B"
+diet = "egg"
+category = "sauces-and-condiments"
+search_terms = ["mayo"]
+
+[[ingredient]]
+id = "mint-sauce"
+name = "Mint sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "mirin"
+name = "Mirin"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "miso"
+name = "Miso"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["miso paste"]
+
+[[ingredient]]
+id = "mixed-vegetable-pickle"
+name = "Mixed vegetable pickle"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["mixed pickle"]
+
+[[ingredient]]
+id = "olives"
+name = "Olives"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["black olives", "green olives"]
+
+[[ingredient]]
+id = "oyster-sauce"
+name = "Oyster sauce"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "pasta-sauce"
+name = "Pasta sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["marinara", "tomato pasta sauce"]
+
+[[ingredient]]
+id = "pesto"
+name = "Pesto"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+search_terms = ["basil pesto"]
+
+[[ingredient]]
+id = "pizza-sauce"
+name = "Pizza sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "ponzu"
+name = "Ponzu"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "red-wine-vinegar"
+name = "Red wine vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "rice-vinegar"
+name = "Rice vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "sake"
+name = "Sake"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["cooking sake"]
+
+[[ingredient]]
+id = "salsa"
+name = "Salsa"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "sauerkraut"
+name = "Sauerkraut"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "schezwan-sauce"
+name = "Schezwan sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["szechuan sauce"]
+
+[[ingredient]]
+id = "shaoxing-wine"
+name = "Shaoxing wine"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["chinese cooking wine"]
+
+[[ingredient]]
+id = "sherry-vinegar"
+name = "Sherry vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "soy-sauce"
+name = "Soy sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["light soy sauce"]
+
+[[ingredient]]
+id = "sriracha"
+name = "Sriracha"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "sweet-chilli-sauce"
+name = "Sweet chilli sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "tamari"
+name = "Tamari"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "tamarind-chutney"
+name = "Tamarind chutney"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["sweet chutney"]
+
+[[ingredient]]
+id = "tartar-sauce"
+name = "Tartar sauce"
+class = "B"
+diet = "egg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "teriyaki-sauce"
+name = "Teriyaki sauce"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "thai-curry-paste"
+name = "Thai curry paste"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+search_terms = ["red curry paste", "green curry paste"]
+
+[[ingredient]]
+id = "vegetable-stock"
+name = "Vegetable stock"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["vegetable broth", "vegetable stock cube", "vegetable bouillon"]
+
+[[ingredient]]
+id = "white-vinegar"
+name = "White vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["distilled vinegar", "synthetic vinegar"]
+
+[[ingredient]]
+id = "white-wine-vinegar"
+name = "White wine vinegar"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "wholegrain-mustard"
+name = "Wholegrain mustard"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "worcestershire-sauce"
+name = "Worcestershire sauce"
+class = "B"
+diet = "non_veg"
+category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "yellow-mustard"
+name = "Yellow mustard"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["american mustard"]
+
+# Sweeteners
+
+[[ingredient]]
+id = "agave-syrup"
+name = "Agave syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["agave nectar"]
+
+[[ingredient]]
+id = "brown-sugar"
+name = "Brown sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["light brown sugar", "dark brown sugar"]
+
+[[ingredient]]
+id = "caramel-sauce"
+name = "Caramel sauce"
+class = "B"
+diet = "vegetarian"
+category = "sweeteners"
+
+[[ingredient]]
+id = "chocolate-syrup"
+name = "Chocolate syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "coconut-sugar"
+name = "Coconut sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "date-syrup"
+name = "Date syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "demerara-sugar"
+name = "Demerara sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["turbinado sugar", "raw sugar"]
+
+[[ingredient]]
+id = "elderflower-cordial"
+name = "Elderflower cordial"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "erythritol"
+name = "Erythritol"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "glucose-powder"
+name = "Glucose powder"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "glucose-syrup"
+name = "Glucose syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["liquid glucose", "corn syrup"]
+
+[[ingredient]]
+id = "golden-syrup"
+name = "Golden syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "honey"
+name = "Honey"
+class = "B"
+diet = "vegetarian"
+category = "sweeteners"
+
+[[ingredient]]
+id = "icing-sugar"
+name = "Icing sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["powdered sugar", "confectioners sugar"]
+
+[[ingredient]]
+id = "jaggery"
+name = "Jaggery"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["jaggery powder"]
+
+[[ingredient]]
+id = "jam"
+name = "Jam"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["fruit preserve"]
+
+[[ingredient]]
+id = "kala-khatta-syrup"
+name = "Kala khatta syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "khandsari-sugar"
+name = "Khandsari sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "khus-syrup"
+name = "Khus syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["vetiver syrup"]
+
+[[ingredient]]
+id = "lime-cordial"
+name = "Lime cordial"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "maple-syrup"
+name = "Maple syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "marmalade"
+name = "Marmalade"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "molasses"
+name = "Molasses"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["black treacle", "treacle"]
+
+[[ingredient]]
+id = "monk-fruit-sweetener"
+name = "Monk fruit sweetener"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "muscovado-sugar"
+name = "Muscovado sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "palm-sugar"
+name = "Palm sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "rice-syrup"
+name = "Rice syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["brown rice syrup"]
+
+[[ingredient]]
+id = "rock-sugar"
+name = "Rock sugar"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["sugar candy"]
+
+[[ingredient]]
+id = "rose-syrup"
+name = "Rose syrup"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "stevia"
+name = "Stevia"
+class = "B"
+diet = "vegan"
+category = "sweeteners"
+
+[[ingredient]]
+id = "sugar"
+name = "Sugar"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "sweeteners"
+search_terms = ["white sugar", "granulated sugar", "caster sugar", "sugar cubes"]
+
+# Flours & baking
+
+[[ingredient]]
+id = "00-flour"
+name = "00 flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["tipo 00"]
+
+[[ingredient]]
+id = "active-dry-yeast"
+name = "Active dry yeast"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["dry yeast", "instant yeast"]
+
+[[ingredient]]
+id = "agar-agar"
+name = "Agar-agar"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["china grass", "agar"]
+
+[[ingredient]]
+id = "all-purpose-flour"
+name = "All-purpose flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["plain flour"]
+
+[[ingredient]]
+id = "almond-extract"
+name = "Almond extract"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "almond-flour"
+name = "Almond flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["ground almonds", "almond meal"]
+
+[[ingredient]]
+id = "amaranth-flour"
+name = "Amaranth flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "arrowroot-powder"
+name = "Arrowroot powder"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["arrowroot"]
+
+[[ingredient]]
+id = "baking-powder"
+name = "Baking powder"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "baking-soda"
+name = "Baking soda"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["bicarbonate of soda", "bicarb"]
+
+[[ingredient]]
+id = "bread-flour"
+name = "Bread flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["strong flour"]
+
+[[ingredient]]
+id = "buckwheat-flour"
+name = "Buckwheat flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "cake-flour"
+name = "Cake flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "chocolate-chips"
+name = "Chocolate chips"
+class = "B"
+diet = "vegetarian"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "chocolate-spread"
+name = "Chocolate spread"
+class = "B"
+diet = "vegetarian"
+category = "flours-and-baking"
+search_terms = ["hazelnut chocolate spread"]
+
+[[ingredient]]
+id = "cocoa-butter"
+name = "Cocoa butter"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "cocoa-nibs"
+name = "Cocoa nibs"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "cocoa-powder"
+name = "Cocoa powder"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "coconut-flour"
+name = "Coconut flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "cornflour"
+name = "Cornflour"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["cornstarch", "corn starch"]
+
+[[ingredient]]
+id = "cornmeal"
+name = "Cornmeal"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["fine cornmeal"]
+
+[[ingredient]]
+id = "couverture-chocolate"
+name = "Couverture chocolate"
+class = "A"
+diet = "vegetarian"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "cream-of-tartar"
+name = "Cream of tartar"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "custard-powder"
+name = "Custard powder"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "dark-chocolate"
+name = "Dark chocolate"
+class = "A"
+diet = "vegetarian"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "edible-glitter"
+name = "Edible glitter"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "finger-millet-flour"
+name = "Finger millet flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "fondant"
+name = "Fondant"
+class = "B"
+diet = "non_veg"
+category = "flours-and-baking"
+search_terms = ["sugar paste"]
+
+[[ingredient]]
+id = "fresh-yeast"
+name = "Fresh yeast"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "fruit-salt"
+name = "Fruit salt"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "gel-food-colouring"
+name = "Gel food colouring"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["gel food coloring"]
+
+[[ingredient]]
+id = "gelatin"
+name = "Gelatin"
+class = "B"
+diet = "non_veg"
+category = "flours-and-baking"
+search_terms = ["gelatine"]
+
+[[ingredient]]
+id = "glutinous-rice-flour"
+name = "Glutinous rice flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["sweet rice flour", "sticky rice flour"]
+
+[[ingredient]]
+id = "gram-flour"
+name = "Gram flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["chickpea flour", "bengal gram flour"]
+
+[[ingredient]]
+id = "grits"
+name = "Grits"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "kewra-water"
+name = "Kewra water"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["screwpine water"]
+
+[[ingredient]]
+id = "kuzu"
+name = "Kuzu"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["kudzu starch"]
+
+[[ingredient]]
+id = "lemon-extract"
+name = "Lemon extract"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "liquid-food-colouring"
+name = "Liquid food colouring"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["food coloring", "food colour"]
+
+[[ingredient]]
+id = "masa-harina"
+name = "Masa harina"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "meringue-powder"
+name = "Meringue powder"
+class = "B"
+diet = "egg"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "milk-chocolate"
+name = "Milk chocolate"
+class = "A"
+diet = "vegetarian"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "multigrain-flour"
+name = "Multigrain flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "oat-flour"
+name = "Oat flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "orange-blossom-water"
+name = "Orange blossom water"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["orange flower water"]
+
+[[ingredient]]
+id = "pearl-millet-flour"
+name = "Pearl millet flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "pectin"
+name = "Pectin"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "peppermint-extract"
+name = "Peppermint extract"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "polenta"
+name = "Polenta"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["coarse cornmeal"]
+
+[[ingredient]]
+id = "potato-starch"
+name = "Potato starch"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "rennet"
+name = "Rennet"
+class = "B"
+diet = "non_veg"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "rice-flour"
+name = "Rice flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "rose-water"
+name = "Rose water"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "rye-flour"
+name = "Rye flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "self-raising-flour"
+name = "Self-raising flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["self-rising flour"]
+
+[[ingredient]]
+id = "semolina"
+name = "Semolina"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "sorghum-flour"
+name = "Sorghum flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "soy-flour"
+name = "Soy flour"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "spelt-flour"
+name = "Spelt flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "sprinkles"
+name = "Sprinkles"
+class = "B"
+diet = "vegetarian"
+category = "flours-and-baking"
+search_terms = ["hundreds and thousands"]
+
+[[ingredient]]
+id = "tapioca-starch"
+name = "Tapioca starch"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["tapioca flour", "sago flour"]
+
+[[ingredient]]
+id = "urad-flour"
+name = "Urad flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "vanilla-extract"
+name = "Vanilla extract"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["vanilla essence"]
+
+[[ingredient]]
+id = "vital-wheat-gluten"
+name = "Vital wheat gluten"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "water-chestnut-flour"
+name = "Water chestnut flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "white-chocolate"
+name = "White chocolate"
+class = "A"
+diet = "vegetarian"
+category = "flours-and-baking"
+
+[[ingredient]]
+id = "whole-wheat-flour"
+name = "Whole-wheat flour"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["chapati flour", "wholemeal flour"]
+
+[[ingredient]]
+id = "xanthan-gum"
+name = "Xanthan gum"
+class = "B"
+diet = "vegan"
+category = "flours-and-baking"
+
+# Drinks & water
+
+[[ingredient]]
+id = "beer"
+name = "Beer"
+class = "B"
+diet = "vegetarian"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "black-tea"
+name = "Black tea"
+class = "A"
+diet = "vegan"
+category = "drinks-and-water"
+search_terms = ["tea leaves", "ctc tea", "assam tea"]
+
+[[ingredient]]
+id = "brandy"
+name = "Brandy"
+class = "B"
+diet = "vegetarian"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "chamomile"
+name = "Chamomile"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+search_terms = ["chamomile tea"]
+
+[[ingredient]]
+id = "coffee-beans"
+name = "Coffee beans"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "earl-grey"
+name = "Earl Grey"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+search_terms = ["earl grey tea"]
+
+[[ingredient]]
+id = "espresso-powder"
+name = "Espresso powder"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+search_terms = ["instant espresso"]
+
+[[ingredient]]
+id = "green-tea"
+name = "Green tea"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "ground-coffee"
+name = "Ground coffee"
+class = "A"
+diet = "vegan"
+category = "drinks-and-water"
+search_terms = ["filter coffee"]
+
+[[ingredient]]
+id = "instant-coffee"
+name = "Instant coffee"
+class = "A"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "jasmine-tea"
+name = "Jasmine tea"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "matcha"
+name = "Matcha"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "red-wine"
+name = "Red wine"
+class = "B"
+diet = "vegetarian"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "rooibos"
+name = "Rooibos"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "rum"
+name = "Rum"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "water"
+name = "Water"
+class = "S"
+kind = "pantry"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "white-wine"
+name = "White wine"
+class = "B"
+diet = "vegetarian"
+category = "drinks-and-water"
