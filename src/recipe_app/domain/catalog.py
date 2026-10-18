@@ -116,7 +116,14 @@ def _tables(
     if not isinstance(tables, list) or not tables:
         problems.append(f"the catalog has no [[{key}]] entries")
         return []
-    return [table for table in tables if isinstance(table, dict)]
+
+    rows: list[dict[str, object]] = []
+    for number, table in enumerate(tables, start=1):
+        if isinstance(table, dict):
+            rows.append(table)
+        else:
+            problems.append(f"{key} #{number} is not a table")
+    return rows
 
 
 def _parse_categories(

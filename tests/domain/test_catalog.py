@@ -70,6 +70,13 @@ def test_minimal_catalog_is_valid() -> None:
             id="id-not-a-slug",
         ),
         pytest.param(
+            b'ingredient = [{ id = "potato", name = "Potato", class = "A", '
+            b'diet = "vegan", category = "vegetables" }, "leek"]\n'
+            + catalog(category()),
+            "ingredient #2 is not a table",
+            id="entry-not-a-table",
+        ),
+        pytest.param(
             catalog(category(), ingredient(id="a" * 65)),
             "is longer than 64 characters",
             id="id-too-long",
