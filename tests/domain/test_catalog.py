@@ -1,3 +1,4 @@
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -57,6 +58,38 @@ def catalog(*tables: str) -> bytes:
 
 def test_minimal_catalog_is_valid() -> None:
     assert "potato" in parse_catalog(catalog(CATEGORY, ingredient())).by_id
+
+
+def test_reports_every_problem_at_once() -> None:
+    raw = catalog(category(), ingredient(diet="meat", retierd=True))
+
+    with pytest.raises(CatalogError) as caught:
+        parse_catalog(raw)
+
+    assert len(caught.value.problems) == 2
+
+
+def test_retired_ingredient_may_stay_in_retired_category() -> None:
+    raw = catalog(
+        category(),
+        category(id="old", name="Old", position=20, retired=True),
+        ingredient(),
+        ingredient(id="leek", name="Leek", category="old", retired=True),
+    )
+
+    assert parse_catalog(raw).by_id["leek"].retired
+
+
+def test_content_hash_is_sha256_of_the_file() -> None:
+    raw = catalog(category(), ingredient())
+
+    assert parse_catalog(raw).content_hash == hashlib.sha256(raw).hexdigest()
+
+
+def test_search_terms_are_stored_normalized() -> None:
+    raw = catalog(category(), ingredient(search_terms=["  Baby  POTATO "]))
+
+    assert parse_catalog(raw).by_id["potato"].search_terms == ("baby potato",)
 
 
 @pytest.mark.parametrize(
@@ -144,7 +177,7 @@ def test_minimal_catalog_is_valid() -> None:
             catalog(
                 category(),
                 ingredient(),
-                ingredient(id="potato-2", name=" POTATO "),
+                ingredient(id="potato-2", name="POTATO"),
             ),
             "duplicate name 'potato'",
             id="duplicate-normalized-name",
@@ -174,7 +207,7 @@ def test_minimal_catalog_is_valid() -> None:
         pytest.param(
             catalog(
                 category(),
-                category(id="greens", name=" VEGETABLES ", position=20),
+                category(id="greens", name="VEGETABLES", position=20),
                 ingredient(),
                 ingredient(id="spinach", name="Spinach", category="greens"),
             ),
