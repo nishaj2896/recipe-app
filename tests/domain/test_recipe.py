@@ -164,7 +164,11 @@ def test_reports_every_problem_at_once() -> None:
     with pytest.raises(RecipeError) as caught:
         build(prep_minutes=-5, ingredient_ids=("potatoe", "leek"))
 
-    assert len(caught.value.problems) == 3
+    problems = caught.value.problems
+    assert len(problems) == 3
+    assert any("prep_minutes must be" in p for p in problems)
+    assert any("unknown ingredient 'potatoe'" in p for p in problems)
+    assert any("retired ingredient 'leek'" in p for p in problems)
 
 
 def test_recipe_is_read_only() -> None:

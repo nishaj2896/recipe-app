@@ -58,7 +58,6 @@ def build_recipe(
     Collects every problem before raising, like parse_catalog, so a seed file
     with several mistakes shows them all in one run.
     """
-
     problems: list[str] = []
 
     if not isinstance(name, str) or not name.strip():
