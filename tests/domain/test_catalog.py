@@ -1,7 +1,5 @@
 import hashlib
-import json
 import re
-from pathlib import Path
 
 import pytest
 
@@ -11,8 +9,7 @@ from recipe_app.domain.catalog import (
     IngredientCatalog,
     parse_catalog,
 )
-
-DATA_FILE = Path(__file__).parents[2] / "data" / "ingredients.v1.toml"
+from tests.domain.factories import DATA_FILE, catalog, category, ingredient
 
 
 def test_real_catalog_file_loads() -> None:
@@ -20,42 +17,6 @@ def test_real_catalog_file_loads() -> None:
 
     assert isinstance(catalog, IngredientCatalog)
     assert "potato" in catalog.by_id
-
-
-def category(**fields: object) -> str:
-    """A valid [[category]] table for vegetables. Override fields; None drops one."""
-    row: dict[str, object] = {
-        "id": "vegetables",
-        "name": "Vegetables",
-        "position": 10,
-    } | fields
-    lines = [
-        f"{key} = {json.dumps(value)}"
-        for key, value in row.items()
-        if value is not None
-    ]
-    return "[[category]]\n" + "\n".join(lines) + "\n"
-
-
-def ingredient(**fields: object) -> str:
-    """A valid [[ingredient]] table for potato. Override fields; None drops one."""
-    row: dict[str, object] = {
-        "id": "potato",
-        "name": "Potato",
-        "class": "A",
-        "diet": "vegan",
-        "category": "vegetables",
-    } | fields
-    lines = [
-        f"{key} = {json.dumps(value)}"
-        for key, value in row.items()
-        if value is not None
-    ]
-    return "[[ingredient]]\n" + "\n".join(lines) + "\n"
-
-
-def catalog(*tables: str) -> bytes:
-    return "\n".join(tables).encode()
 
 
 def test_minimal_catalog_is_valid() -> None:
