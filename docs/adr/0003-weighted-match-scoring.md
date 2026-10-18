@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-10-15
+- Amended: 2026-10-18 (recipe times: rule 10)
 - Deciders: Nisha
 - Supersedes: the "Result shape" ranking rule, the plain match-percentage definition, and the "fresh staple typed is promoted to core" rule in the Task 1 "Product decisions locked" table
 - Related: ADR-0001, ADR-0002
@@ -66,12 +67,15 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 - **Keys:** `CURSOR_SIGNING_KEYS` maps each `kid` to at least 32 random bytes, and `CURSOR_ACTIVE_KID` names the key used for signing. Both are injected at runtime from the secret store. They never appear in the repo, the image or the logs. Every listed key verifies cursors, and only the active one signs. The app refuses to start if the active key is missing or shorter than 32 bytes.
 - **Rotation:** first add the new key as verify-only and deploy everywhere. Then make it active. After 24 hours, which is the maximum cursor age, remove the old key. For an emergency after a leak, remove the leaked key at once. Sessions holding its cursors get `cursor-expired` and restart from page 1, and nothing else breaks.
 
+**10. Recipe times are whole minutes with fixed bounds.** A recipe stores `prep_minutes` and `cook_minutes`; `total_minutes` is always derived, never stored. Each is a whole number, 0 or more, so a raita (no cooking) and boiled eggs (no prep) are both valid. The total must be at least 1, because a recipe with nothing to prep or cook is food, not a recipe, and a zero total is usually a missing value. The total is at most 1,440 (24 hours, `MAX_TOTAL_MINUTES` in `recipe_app.domain.recipe`), which allows overnight soaking and fermenting but catches typos such as 3000 for 30. Soaking, fermenting and marinating count as prep time, so every seed author records idli or rajma the same way. A recipe that breaks any of these is rejected when it is loaded, with the other seed-recipe checks in ADR-0002 rule 7.
+
 ## Consequences
 
 - **Easier:** substantial dishes you can almost cook beat trivial ones, and a missing main ingredient costs more than a missing garnish.
 - **Harder:** the shown percentage is weighted. A user missing 1 of 4 ingredients can see different percentages depending on which one. The ingredient lists on the card keep it honest.
 - **Intended:** a small recipe missing one supporting ingredient (composite 0.298) ranks below a fully matched single-potato dish (0.301). With one item missing, a recipe needs core weight above about 2.0 (supporting missing), 2.9 (main missing) or 1.5 (unticked staple missing) to outrank it.
 - **Accepted trade-off:** the weights and the log factor are hand-picked. Check them against saved and hidden swipes once there's data. Tuning them is a new ADR.
+- **Accepted trade-off (rule 10):** recipes over 600 minutes, the largest `max_total_minutes` a search accepts, appear only in searches that send no time filter. A card shows the full total, so a 12-hour fermented dish looks long even though most of that time is waiting. Splitting active and waiting time is a later, additive field.
 - **Harder:** every catalog change, `SCORING_VERSION` bump and removed key sends in-flight swipe sessions back to page 1 once. That's accepted, because a restart is visible and harmless, while silently computing page 2 under different rules duplicates or skips recipes. Tuning the weights (above) therefore always comes with a `SCORING_VERSION` bump.
 - **Gate tests whose expected values change** from the original Task 1 file:
   - The potato recipe (potato, peas, tomato, onion, turmeric, salt, ghee) with `ingredient_ids: ["potato", "peas"]` scores **100%**, with tomato, onion, turmeric, salt and ghee listed as assumed. Unchanged.
