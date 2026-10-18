@@ -17,9 +17,6 @@ def test_real_catalog_file_loads() -> None:
     assert "potato" in catalog.by_id
 
 
-CATEGORY = '[[category]]\nid = "vegetables"\nname = "Vegetables"\nposition = 10\n'
-
-
 def category(**fields: object) -> str:
     """A valid [[category]] table for vegetables. Override fields; None drops one."""
     row: dict[str, object] = {
@@ -57,7 +54,7 @@ def catalog(*tables: str) -> bytes:
 
 
 def test_minimal_catalog_is_valid() -> None:
-    assert "potato" in parse_catalog(catalog(CATEGORY, ingredient())).by_id
+    assert "potato" in parse_catalog(catalog(category(), ingredient())).by_id
 
 
 def test_reports_every_problem_at_once() -> None:
