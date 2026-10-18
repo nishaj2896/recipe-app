@@ -105,5 +105,5 @@ def build_recipe(
         name=name,
         prep_minutes=prep_minutes,
         cook_minutes=cook_minutes,
-        ingredients=tuple(catalog.by_id[item] for item in ingredient_ids),
+        ingredients=tuple(ingredients),
     )
