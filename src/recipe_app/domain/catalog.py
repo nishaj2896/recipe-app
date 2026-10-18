@@ -138,7 +138,7 @@ def _parse_categories(
         before = len(problems)
         _check_fields(row, CATEGORY_FIELDS, where, problems)
         category_id = _id(row, where, problems)
-        name = _text(row, "name", where, problems)
+        name = _name(row, where, problems)
         position = row.get("position")
         if type(position) is not int or position < 1:
             problems.append(f"{where}: position must be a positive integer")
@@ -171,7 +171,7 @@ def _parse_ingredients(
         before = len(problems)
         _check_fields(row, INGREDIENT_FIELDS, where, problems)
         ingredient_id = _id(row, where, problems)
-        name = _text(row, "name", where, problems)
+        name = _name(row, where, problems)
         ingredient_class = _choice(IngredientClass, row, "class", where, problems)
         diet = _choice(Diet, row, "diet", where, problems)
         category = _text(row, "category", where, problems)
@@ -270,6 +270,14 @@ def _text(row: dict[str, object], field: str, where: str, problems: list[str]) -
         return value
     problems.append(f"{where}: {field} must be a non-empty string")
     return ""
+
+
+def _name(row: dict[str, object], where: str, problems: list[str]) -> str:
+    """Return the display name, rejecting stray spaces the API would send as is."""
+    value = _text(row, "name", where, problems)
+    if value != " ".join(value.split()):
+        problems.append(f"{where}: name {value!r} has extra whitespace")
+    return value
 
 
 def _choice[E: StrEnum](

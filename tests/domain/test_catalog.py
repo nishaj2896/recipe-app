@@ -77,6 +77,11 @@ def test_minimal_catalog_is_valid() -> None:
             id="entry-not-a-table",
         ),
         pytest.param(
+            catalog(category(), ingredient(name=" Potato  ")),
+            "name ' Potato  ' has extra whitespace",
+            id="name-with-extra-whitespace",
+        ),
+        pytest.param(
             catalog(category(), ingredient(id="a" * 65)),
             "is longer than 64 characters",
             id="id-too-long",
@@ -149,6 +154,11 @@ def test_minimal_catalog_is_valid() -> None:
             catalog(category(retired=True), ingredient()),
             "uses retired category 'vegetables'",
             id="live-ingredient-in-retired-category",
+        ),
+        pytest.param(
+            catalog(category(name="Fresh  vegetables"), ingredient()),
+            "name 'Fresh  vegetables' has extra whitespace",
+            id="category-name-with-extra-whitespace",
         ),
         pytest.param(
             catalog(category(position=0), ingredient()),
