@@ -53,7 +53,11 @@ def build_recipe(
     ingredient_ids: Sequence[str],
     catalog: IngredientCatalog,
 ) -> Recipe:
-    """Resolve every ingredient id against the catalog and return the recipe."""
+    """Resolve every ingredient id against the catalog and check every rule.
+
+    Collects every problem before raising, like parse_catalog, so a seed file
+    with several mistakes shows them all in one run.
+    """
 
     problems: list[str] = []
 
