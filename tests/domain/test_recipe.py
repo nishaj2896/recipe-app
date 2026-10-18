@@ -82,6 +82,7 @@ def test_total_minutes_is_prep_plus_cook() -> None:
         pytest.param(0, 20, id="no-prep-boiled-eggs"),
         pytest.param(10, 0, id="no-cook-raita"),
         pytest.param(1440, 0, id="exactly-24-hours"),
+        pytest.param(0, 1, id="exactly-1-minute"),
     ],
 )
 def test_accepts_edge_times(prep_minutes: int, cook_minutes: int) -> None:
