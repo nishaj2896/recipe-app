@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-10-15
+- Amended: 2026-10-18 (ignored reasons: rule 3)
 - Deciders: Nisha
 
 ## Context
@@ -19,7 +20,7 @@ Free-text ingredient entry forces the server to turn `"Tomatoes "`, `"TOMATO"` a
 - A published id that is no longer a main-list ingredient is accepted, never a `422`. A client may be showing a cached catalog, and a catalog change must not break its searches:
   - **retired:** ignored for matching
   - **now class S:** treated as an assumed staple, the same as a ticked staple
-  - Both are listed in the response as `ignored_ingredients`, each `{"id", "name", "reason"}` with reason `retired` or `now_staple`. The app uses this to refresh its catalog, and the server counts them as a metric so we can see stale clients.
+  - These ids are listed in the response as `ignored_ingredients`, each `{"id", "name", "reason"}`. The reason is `retired`, `now_staple`, or `not_staple` for a published id in `excluded_staples` that isn't class S (ADR-0002 rule 5). Each id gets exactly one reason, checked in that order, so a retired id is always `retired`. The app uses this to refresh its catalog, and the server counts them as a metric so we can see stale clients.
   - They still count toward the 50-item limit, since the limit bounds request size.
 - Duplicate ids are rejected with `422` naming the repeated id. A picker can't tick the same box twice, so a duplicate means a client bug, and failing fast surfaces it. The OpenAPI schema declares `uniqueItems: true`.
 - Ids are compared by exact equality. No case folding, trimming or substring matching happens on the request path.
