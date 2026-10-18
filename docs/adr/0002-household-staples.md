@@ -3,6 +3,7 @@
 - Status: Accepted
 - Date: 2026-10-15
 - Amended: 2026-10-17 (ingredient categories: rules 7, 8 and 10)
+- Amended by: ADR-0004 (rule 10, tie-break 6)
 - Deciders: Nisha
 - Supersedes: "Egg is non-veg" and the three-level diet filter in the Task 1 "Product decisions locked" table
 - Related: ADR-0001 (catalog and ids), ADR-0003 (weighted scoring)
