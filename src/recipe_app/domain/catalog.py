@@ -7,6 +7,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from enum import StrEnum
 from types import MappingProxyType
+from typing import assert_never
 
 from recipe_app.domain.normalization import normalize
 
@@ -36,6 +37,25 @@ class Diet(StrEnum):
     VEGETARIAN = "vegetarian"
     EGG = "egg"
     NON_VEG = "non_veg"
+
+    @property
+    def rank(self) -> int:
+        """Order from ADR-0002 rule 6. Only `allows` and recipe diet read it."""
+        match self:
+            case Diet.VEGAN:
+                return 0
+            case Diet.VEGETARIAN:
+                return 1
+            case Diet.EGG:
+                return 2
+            case Diet.NON_VEG:
+                return 3
+            case _:
+                assert_never(self)
+
+    def allows(self, other: "Diet") -> bool:
+        """Whether a user who asks for this diet may see a recipe that is `other`."""
+        return other.rank <= self.rank
 
 
 @dataclass(frozen=True, slots=True)

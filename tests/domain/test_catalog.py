@@ -1,13 +1,15 @@
 import hashlib
-import json
 import re
-from pathlib import Path
 
 import pytest
 
-from recipe_app.domain.catalog import CatalogError, IngredientCatalog, parse_catalog
-
-DATA_FILE = Path(__file__).parents[2] / "data" / "ingredients.v1.toml"
+from recipe_app.domain.catalog import (
+    CatalogError,
+    Diet,
+    IngredientCatalog,
+    parse_catalog,
+)
+from tests.domain.factories import DATA_FILE, catalog, category, ingredient
 
 
 def test_real_catalog_file_loads() -> None:
@@ -15,42 +17,6 @@ def test_real_catalog_file_loads() -> None:
 
     assert isinstance(catalog, IngredientCatalog)
     assert "potato" in catalog.by_id
-
-
-def category(**fields: object) -> str:
-    """A valid [[category]] table for vegetables. Override fields; None drops one."""
-    row: dict[str, object] = {
-        "id": "vegetables",
-        "name": "Vegetables",
-        "position": 10,
-    } | fields
-    lines = [
-        f"{key} = {json.dumps(value)}"
-        for key, value in row.items()
-        if value is not None
-    ]
-    return "[[category]]\n" + "\n".join(lines) + "\n"
-
-
-def ingredient(**fields: object) -> str:
-    """A valid [[ingredient]] table for potato. Override fields; None drops one."""
-    row: dict[str, object] = {
-        "id": "potato",
-        "name": "Potato",
-        "class": "A",
-        "diet": "vegan",
-        "category": "vegetables",
-    } | fields
-    lines = [
-        f"{key} = {json.dumps(value)}"
-        for key, value in row.items()
-        if value is not None
-    ]
-    return "[[ingredient]]\n" + "\n".join(lines) + "\n"
-
-
-def catalog(*tables: str) -> bytes:
-    return "\n".join(tables).encode()
 
 
 def test_minimal_catalog_is_valid() -> None:
@@ -103,6 +69,35 @@ def test_invalid_values_are_not_reported_as_duplicates() -> None:
         parse_catalog(raw)
 
     assert not [p for p in caught.value.problems if "duplicate" in p]
+
+
+@pytest.mark.parametrize(
+    ("requested", "recipe_diet", "expected"),
+    [
+        pytest.param(Diet.VEGAN, Diet.VEGAN, True, id="vegan-sees-vegan"),
+        pytest.param(Diet.VEGAN, Diet.VEGETARIAN, False, id="vegan-hides-vegetarian"),
+        pytest.param(Diet.VEGAN, Diet.EGG, False, id="vegan-hides-egg"),
+        pytest.param(Diet.VEGAN, Diet.NON_VEG, False, id="vegan-hides-non-veg"),
+        pytest.param(Diet.VEGETARIAN, Diet.VEGAN, True, id="vegetarian-sees-vegan"),
+        pytest.param(
+            Diet.VEGETARIAN, Diet.VEGETARIAN, True, id="vegetarian-sees-vegetarian"
+        ),
+        pytest.param(Diet.VEGETARIAN, Diet.EGG, False, id="vegetarian-hides-egg"),
+        pytest.param(
+            Diet.VEGETARIAN, Diet.NON_VEG, False, id="vegetarian-hides-non-veg"
+        ),
+        pytest.param(Diet.EGG, Diet.VEGAN, True, id="egg-sees-vegan"),
+        pytest.param(Diet.EGG, Diet.VEGETARIAN, True, id="egg-sees-vegetarian"),
+        pytest.param(Diet.EGG, Diet.EGG, True, id="egg-sees-egg"),
+        pytest.param(Diet.EGG, Diet.NON_VEG, False, id="egg-hides-non-veg"),
+        pytest.param(Diet.NON_VEG, Diet.VEGAN, True, id="non-veg-sees-vegan"),
+        pytest.param(Diet.NON_VEG, Diet.VEGETARIAN, True, id="non-veg-sees-vegetarian"),
+        pytest.param(Diet.NON_VEG, Diet.EGG, True, id="non-veg-sees-egg"),
+        pytest.param(Diet.NON_VEG, Diet.NON_VEG, True, id="non-veg-sees-non-veg"),
+    ],
+)
+def test_diet_allows(requested: Diet, recipe_diet: Diet, expected: bool) -> None:
+    assert requested.allows(recipe_diet) is expected
 
 
 @pytest.mark.parametrize(
