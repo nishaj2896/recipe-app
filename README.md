@@ -75,6 +75,11 @@ Every error is an [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) `applicatio
 | Type check | `uv run mypy` |
 | Run every pre-commit check | `uv run pre-commit run --all-files` |
 | Add a dependency | `uv add <package>` (or `uv add --dev <package>`) |
+| Start the local database | `docker compose up -d --wait` |
+| Stop it (keeps the data) | `docker compose down` |
+| Wipe it | `docker compose down -v` |
+
+Point the app at it with `DATABASE_URL=postgresql+asyncpg://recipe_app:recipe_app@localhost:5433/recipe_app`.
 
 Tool settings live in `pyproject.toml`. mypy runs in strict mode, and pytest treats warnings as errors.
 
