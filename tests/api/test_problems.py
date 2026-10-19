@@ -12,7 +12,7 @@ from recipe_app.api.problems import (
     field_path,
 )
 from recipe_app.domain.cursor import SigningKeys
-from tests.api.conftest import NOW, AppFactory, client_for
+from tests.apps import NOW, AppFactory, client_for
 
 pytestmark = pytest.mark.anyio
 
