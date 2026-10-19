@@ -3,7 +3,8 @@
 import json
 from pathlib import Path
 
-DATA_FILE = Path(__file__).parents[2] / "data" / "ingredients.v1.toml"
+DATA_DIR = Path(__file__).parents[2] / "data"
+DATA_FILE = DATA_DIR / "ingredients.v1.toml"
 
 
 def category(**fields: object) -> str:
