@@ -1,29 +1,49 @@
-from collections.abc import Sequence
+import re
+from dataclasses import FrozenInstanceError
+from typing import Any
 from uuid import UUID
 
 import pytest
 
-from recipe_app.domain.catalog import Ingredient, parse_catalog
-from recipe_app.domain.matching import (
-    AllStaplesMatch,
-    ScoredMatch,
-    match_recipe,
-    resolve_pantry,
+from recipe_app.domain.catalog import Diet, parse_catalog
+from recipe_app.domain.recipe import (
+    MAX_TOTAL_MINUTES,
+    Recipe,
+    RecipeError,
+    build_recipe,
 )
-from recipe_app.domain.recipe import Recipe, build_recipe
-from tests.domain.factories import DATA_FILE
+from tests.domain.factories import DATA_FILE, catalog, category, ingredient
 
-# ADR-0003 names real ingredients, so these tests use the real catalog.
-CATALOG = parse_catalog(DATA_FILE.read_bytes())
+RECIPE_ID = UUID("6f1c2b9e-3d4a-4c5e-9f70-1a2b3c4d5e6f")
 
-ALOO_MATAR = ["potato", "peas", "tomato", "onion", "turmeric", "salt", "ghee"]
-KHEER = ["rice", "milk", "sugar"]
-TOMATO_SOUP = ["tomato", "onion", "garlic", "butter", "salt"]
+CATALOG = parse_catalog(
+    catalog(
+        category(),
+        ingredient(),
+        ingredient(id="toor-dal", name="Toor dal"),
+        ingredient(
+            id="ghee", name="Ghee", **{"class": "S"}, kind="pantry", diet="vegetarian"
+        ),
+        ingredient(id="paneer", name="Paneer", diet="vegetarian"),
+        ingredient(id="egg", name="Egg", diet="egg"),
+        ingredient(id="chicken", name="Chicken", diet="non_veg"),
+        ingredient(id="leek", name="Leek", **{"class": "B"}, retired=True),
+    )
+)
 
 
-def recipe(ingredient_ids: Sequence[str]) -> Recipe:
-    return build_recipe(
-        id=UUID("6f1c2b9e-3d4a-4c5e-9f70-1a2b3c4d5e6f"),
+@pytest.mark.parametrize(
+    ("ingredient_ids", "expected"),
+    [
+        pytest.param(["potato", "toor-dal"], Diet.VEGAN, id="all-vegan"),
+        pytest.param(["toor-dal", "ghee"], Diet.VEGETARIAN, id="assumed-ghee-counts"),
+        pytest.param(["potato", "egg"], Diet.EGG, id="egg-beats-vegan"),
+        pytest.param(["paneer", "chicken"], Diet.NON_VEG, id="chicken-beats-paneer"),
+    ],
+)
+def test_recipe_diet(ingredient_ids: list[str], expected: Diet) -> None:
+    recipe = build_recipe(
+        id=RECIPE_ID,
         name="Test recipe",
         prep_minutes=10,
         cook_minutes=20,
@@ -31,75 +51,152 @@ def recipe(ingredient_ids: Sequence[str]) -> Recipe:
         catalog=CATALOG,
     )
 
+    assert recipe.diet is expected
 
-def match(
-    ingredient_ids: Sequence[str],
-    have: Sequence[str],
-    excluded_staples: Sequence[str] = (),
-) -> ScoredMatch | AllStaplesMatch | None:
-    pantry = resolve_pantry(
-        ingredient_ids=have, excluded_staples=excluded_staples, catalog=CATALOG
+
+def build(
+    *,
+    name: str = "Aloo matar",
+    prep_minutes: int = 10,
+    cook_minutes: int = 20,
+    ingredient_ids: tuple[str, ...] = ("potato",),
+) -> Recipe:
+    """A valid recipe from CATALOG. Override one argument to break one rule."""
+    return build_recipe(
+        id=RECIPE_ID,
+        name=name,
+        prep_minutes=prep_minutes,
+        cook_minutes=cook_minutes,
+        ingredient_ids=ingredient_ids,
+        catalog=CATALOG,
     )
-    return match_recipe(recipe(ingredient_ids), pantry)
 
 
-def ids(ingredients: Sequence[Ingredient]) -> list[str]:
-    return [item.id for item in ingredients]
-
-
-def scored(result: ScoredMatch | AllStaplesMatch | None) -> ScoredMatch:
-    assert isinstance(result, ScoredMatch)
-    return result
-
-
-def test_assumed_staples_make_a_full_match() -> None:
-    result = scored(match(ALOO_MATAR, ["potato", "peas"]))
-
-    assert result.match_tenths == 1000
-    assert result.score_int == 397940
-    assert ids(result.matched) == ["potato", "peas"]
-    assert ids(result.missing) == []
-    assert ids(result.assumed) == ["tomato", "onion", "turmeric", "salt", "ghee"]
-
-
-def test_excluded_staple_is_missing_at_a_quarter() -> None:
-    result = scored(match(ALOO_MATAR, ["potato", "peas"], ["turmeric"]))
-
-    assert result.match_tenths == 857
-    assert ids(result.missing) == ["turmeric"]
-    assert ids(result.assumed) == ["tomato", "onion", "salt", "ghee"]
-
-
-def test_missing_supporting_ingredient() -> None:
-    result = scored(match(KHEER, ["rice"]))
-
-    assert result.match_tenths == 667
-    assert ids(result.matched) == ["rice"]
-    assert ids(result.missing) == ["milk"]
-    assert ids(result.assumed) == ["sugar"]
-
-
-def test_lists_keep_recipe_order() -> None:
-    result = scored(match(ALOO_MATAR, ["peas", "potato"]))
-
-    assert ids(result.matched) == ["potato", "peas"]
-
-
-def test_only_staples_lands_in_the_all_staples_tier() -> None:
-    result = match(TOMATO_SOUP, ["potato"])
-
-    assert isinstance(result, AllStaplesMatch)
-    assert ids(result.assumed) == TOMATO_SOUP
+def test_total_minutes_is_prep_plus_cook() -> None:
+    assert build(prep_minutes=15, cook_minutes=25).total_minutes == 40
 
 
 @pytest.mark.parametrize(
-    ("ingredient_ids", "have", "excluded_staples"),
+    ("prep_minutes", "cook_minutes"),
     [
-        pytest.param(ALOO_MATAR, ["paneer"], [], id="nothing-matched"),
-        pytest.param(TOMATO_SOUP, ["potato"], ["salt"], id="excluded-staple-only"),
+        pytest.param(0, 20, id="no-prep-boiled-eggs"),
+        pytest.param(10, 0, id="no-cook-raita"),
+        pytest.param(1440, 0, id="exactly-24-hours"),
+        pytest.param(0, 1, id="exactly-1-minute"),
     ],
 )
-def test_not_shown(
-    ingredient_ids: list[str], have: list[str], excluded_staples: list[str]
-) -> None:
-    assert match(ingredient_ids, have, excluded_staples) is None
+def test_accepts_edge_times(prep_minutes: int, cook_minutes: int) -> None:
+    recipe = build(prep_minutes=prep_minutes, cook_minutes=cook_minutes)
+
+    assert recipe.total_minutes == prep_minutes + cook_minutes
+
+
+def test_keeps_ingredient_order() -> None:
+    recipe = build(ingredient_ids=("toor-dal", "ghee", "potato"))
+
+    assert [item.id for item in recipe.ingredients] == ["toor-dal", "ghee", "potato"]
+
+
+@pytest.mark.parametrize(
+    ("overrides", "message"),
+    [
+        pytest.param(
+            {"ingredient_ids": ("potatoe",)},
+            "unknown ingredient 'potatoe'",
+            id="unknown-id",
+        ),
+        pytest.param(
+            {"ingredient_ids": ("potato", "leek")},
+            "retired ingredient 'leek'",
+            id="retired-id",
+        ),
+        pytest.param(
+            {"ingredient_ids": ("potato", "potato")},
+            "duplicate ingredient 'potato'",
+            id="duplicate-id",
+        ),
+        pytest.param({"ingredient_ids": ()}, "has no ingredients", id="no-ingredients"),
+        pytest.param({"name": ""}, "name must be a non-empty string", id="empty-name"),
+        pytest.param(
+            {"name": "Aloo  matar"},
+            "name 'Aloo  matar' has extra whitespace",
+            id="name-whitespace",
+        ),
+        pytest.param(
+            {"prep_minutes": -5},
+            "prep_minutes must be a whole number, 0 or more",
+            id="negative-prep",
+        ),
+        pytest.param(
+            {"cook_minutes": -1},
+            "cook_minutes must be a whole number, 0 or more",
+            id="negative-cook",
+        ),
+        pytest.param(
+            {"prep_minutes": True},
+            "prep_minutes must be a whole number, 0 or more",
+            id="bool-prep",
+        ),
+        pytest.param(
+            {"prep_minutes": 0, "cook_minutes": 0},
+            "total time must be at least 1 minute",
+            id="zero-total",
+        ),
+        pytest.param(
+            {"prep_minutes": 1000, "cook_minutes": 441},
+            f"total time must be at most {MAX_TOTAL_MINUTES} minutes",
+            id="over-24-hours",
+        ),
+    ],
+)
+def test_rejects(overrides: dict[str, Any], message: str) -> None:
+    with pytest.raises(RecipeError, match=re.escape(message)):
+        build(**overrides)
+
+
+def test_problem_names_the_recipe() -> None:
+    with pytest.raises(
+        RecipeError, match=re.escape(f"recipe 'Aloo matar' ({RECIPE_ID})")
+    ):
+        build(ingredient_ids=("potatoe",))
+
+
+def test_reports_every_problem_at_once() -> None:
+    with pytest.raises(RecipeError) as caught:
+        build(prep_minutes=-5, ingredient_ids=("potatoe", "leek"))
+
+    problems = caught.value.problems
+    assert len(problems) == 3
+    assert any("prep_minutes must be" in p for p in problems)
+    assert any("unknown ingredient 'potatoe'" in p for p in problems)
+    assert any("retired ingredient 'leek'" in p for p in problems)
+
+
+def test_recipe_is_read_only() -> None:
+    recipe = build()
+
+    with pytest.raises(FrozenInstanceError):
+        recipe.name = "Changed"  # type: ignore[misc]
+
+
+def test_potato_recipe_from_real_catalog_is_vegetarian() -> None:
+    real_catalog = parse_catalog(DATA_FILE.read_bytes())
+
+    recipe = build_recipe(
+        id=RECIPE_ID,
+        name="Aloo matar",
+        prep_minutes=10,
+        cook_minutes=25,
+        ingredient_ids=[
+            "potato",
+            "peas",
+            "tomato",
+            "onion",
+            "turmeric",
+            "salt",
+            "ghee",
+        ],
+        catalog=real_catalog,
+    )
+
+    assert recipe.diet is Diet.VEGETARIAN
