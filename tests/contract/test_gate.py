@@ -15,6 +15,7 @@ from uuid import UUID, uuid4
 import pytest
 from httpx import AsyncClient, Response
 
+from recipe_app.api.app import create_app
 from recipe_app.api.problems import (
     CURSOR_EXPIRED,
     INVALID_CURSOR,
@@ -25,7 +26,8 @@ from recipe_app.domain.recipe import Recipe
 from recipe_app.domain.scoring import SCORING_VERSION
 from recipe_app.services import search as search_service
 from recipe_app.services.ports import RecipeRepository
-from tests.apps import NOW, AppFactory, client_for
+from recipe_app.services.search import RecipeService
+from tests.apps import KEYS, NOW, AppFactory, client_for
 from tests.contract.conftest import (
     CHANA,
     CHICKEN_CURRY,
@@ -163,12 +165,17 @@ async def test_request_schemas_forbid_extra_properties(gate: AsyncClient) -> Non
 async def test_happy_path_is_ranked_with_correct_missing_lists(
     gate: AsyncClient,
 ) -> None:
+    """ADR-0003 rule 5: by score, then shorter total time, then id."""
     response = await search(gate, ingredient_ids=["potato", "peas"])
     scored = [c for c in cards(response) if c["tier"] == "scored"]
 
-    assert ids(scored)[0] == str(POTATO_CURRY)
-    percentages = [c["match_percentage"] for c in scored]
-    assert percentages[0] == 100.0
+    assert [(c["id"], c["match_percentage"], c["total_minutes"]) for c in scored] == [
+        (str(POTATO_CURRY), 100.0, 30),
+        (str(SLOW_POTATO), 66.7, 35),
+        (str(QUICK_PEAS_RICE), 33.3, 20),
+        (str(PANEER_PEAS), 33.3, 30),
+        (str(SLOW_PEAS_RICE), 33.3, 40),
+    ]
     dum_aloo = card(response, SLOW_POTATO)
     assert dum_aloo["missing_ingredients"] == [{"id": "curd", "name": "Curd"}]
     assert dum_aloo["matched_ingredients"] == [{"id": "potato", "name": "Potato"}]
@@ -206,10 +213,34 @@ async def test_empty_pantry_is_422(gate: AsyncClient) -> None:
     assert response.json()["errors"][0]["field"] == "ingredient_ids"
 
 
-async def test_pantry_over_the_limit_is_422(gate: AsyncClient) -> None:
-    pantry = [f"item-{n}" for n in range(51)]
+def published_ids(catalog: IngredientCatalog, count: int) -> list[str]:
+    """Live ids, staples first, so ignored ids count toward the limit too."""
+    live = sorted(
+        (i for i in catalog.by_id.values() if not i.retired),
+        key=lambda i: (i.ingredient_class != "S", i.id),
+    )
+    assert len(live) >= count
+    return [i.id for i in live[:count]]
 
-    assert_problem(await search(gate, ingredient_ids=pantry), 422, "about:blank")
+
+async def test_pantry_of_50_published_ids_is_accepted(
+    gate: AsyncClient, real_catalog: IngredientCatalog
+) -> None:
+    """ADR-0001: the limit is 50 ids, staples and ignored ids included."""
+    response = await search(gate, ingredient_ids=published_ids(real_catalog, 50))
+
+    assert response.status_code == 200, response.text
+
+
+async def test_pantry_over_the_limit_is_422(
+    gate: AsyncClient, real_catalog: IngredientCatalog
+) -> None:
+    response = await search(gate, ingredient_ids=published_ids(real_catalog, 51))
+
+    assert_problem(response, 422, "about:blank")
+    error = response.json()["errors"][0]
+    assert error["field"] == "ingredient_ids"
+    assert "at most 50 items" in error["message"]
 
 
 async def test_ingredient_id_over_max_length_is_rejected(gate: AsyncClient) -> None:
@@ -311,6 +342,7 @@ async def test_excluded_non_staple_is_ignored_not_rejected(gate: AsyncClient) ->
         gate, ingredient_ids=["potato"], excluded_staples=["paneer"]
     )
 
+    assert response.status_code == 200, response.text
     assert response.json()["ignored_ingredients"] == [
         {"id": "paneer", "name": "Paneer", "reason": "not_staple"}
     ]
@@ -533,18 +565,24 @@ async def test_hidden_recipes_never_appear(
 async def test_hiding_between_decks_keeps_the_cursor_valid(
     make_app: AppFactory, real_catalog: IngredientCatalog
 ) -> None:
+    """ADR-0003 rule 6: a recipe hidden after deck 1 is left out of deck 2."""
     pool = bulk(real_catalog, 40, 0)
     async with client_for(make_app(recipes=pool)) as client:
         first = (await search(client, ingredient_ids=["potato"])).json()
-        hide = [first["results"][0]["id"]]
-        second = await search(
-            client,
-            ingredient_ids=["potato"],
-            hidden_recipe_ids=hide,
-            cursor=first["next_cursor"],
+        cursor = first["next_cursor"]
+        second = ids(
+            cards(await search(client, ingredient_ids=["potato"], cursor=cursor))
+        )
+        hide = second[3]
+        again = await search(
+            client, ingredient_ids=["potato"], hidden_recipe_ids=[hide], cursor=cursor
         )
 
-    assert not set(ids(cards(second))) & set(ids(first["results"]))
+    shown = ids(cards(again))
+    assert hide not in shown
+    # The rest keep their order, and the deck refills from the next position.
+    assert shown[: len(second) - 1] == [i for i in second if i != hide]
+    assert not set(shown) & set(ids(first["results"]))
 
 
 @pytest.mark.parametrize(
@@ -632,20 +670,35 @@ async def test_regional_names_live_in_search_terms(gate: AsyncClient) -> None:
 async def test_staples_endpoint_is_complete_grouped_and_stable(
     gate: AsyncClient, real_catalog: IngredientCatalog
 ) -> None:
+    """ADR-0002 rule 8: by kind, then category position, then name."""
     first = await gate.get("/api/v1/staples")
     second = await gate.get("/api/v1/staples")
-    groups = first.json()["groups"]
+    shown = [
+        (group["kind"], category["id"], [s["id"] for s in category["staples"]])
+        for group in first.json()["groups"]
+        for category in group["categories"]
+    ]
 
-    assert first.content == second.content
-    assert [g["kind"] for g in groups] == ["fresh", "pantry"]
-    shown = [s["id"] for g in groups for cat in g["categories"] for s in cat["staples"]]
-    expected = [
-        i.id
+    live = [
+        i
         for i in real_catalog.by_id.values()
         if i.ingredient_class == "S" and not i.retired
     ]
-    assert sorted(shown) == sorted(expected)
-    assert len(shown) == len(set(shown))
+    expected = []
+    for kind in ("fresh", "pantry"):
+        of_kind = [i for i in live if i.kind == kind]
+        for category in sorted(
+            {i.category for i in of_kind},
+            key=lambda c: real_catalog.categories[c].position,
+        ):
+            items = sorted(
+                (i for i in of_kind if i.category == category),
+                key=lambda i: (i.name.casefold(), i.id),
+            )
+            expected.append((kind, category, [i.id for i in items]))
+
+    assert first.content == second.content
+    assert shown == expected
 
 
 async def test_cumin_seeds_and_powder_are_separate_staples(gate: AsyncClient) -> None:
@@ -699,10 +752,6 @@ class BrokenRepository:
 async def test_forced_internal_error_is_a_generic_500(
     real_catalog: IngredientCatalog,
 ) -> None:
-    from recipe_app.api.app import create_app
-    from recipe_app.services.search import RecipeService
-    from tests.apps import KEYS
-
     repository: RecipeRepository = BrokenRepository()
     service = RecipeService(
         catalog=real_catalog, repository=repository, keys=KEYS, clock=lambda: NOW
