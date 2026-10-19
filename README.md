@@ -4,7 +4,7 @@ Tell it what's in your kitchen, and it shows you what you can cook.
 
 Pantry-to-Plate is a recipe recommendation API. You pick the ingredients you have from a catalog. The API returns a deck of recipe cards, ranked by how much of each recipe you can already make. Household staples like salt, oil and spices are assumed, so you never have to tick them.
 
-> **Status: early development.** The project foundation and the design decisions are done. The domain logic and the HTTP API are being built step by step, so there are no endpoints to call yet. See [Roadmap](#roadmap).
+> **Status: early development.** The `v1` API runs on an in-memory seed of hand-picked recipes. A database comes next. See [Roadmap](#roadmap).
 
 ## How it works
 
@@ -33,6 +33,36 @@ uv sync --locked             # create .venv and install exactly what uv.lock pin
 uv run pre-commit install    # run the checks on every commit
 uv run pytest                # should pass
 ```
+
+## Running the API
+
+The API signs its "generate more" cursors, so it needs a signing key before it starts. For local use, make a throwaway one:
+
+```bash
+export CURSOR_ACTIVE_KID=dev
+export CURSOR_SIGNING_KEYS="{\"dev\": \"$(uv run python -c 'import base64, os; print(base64.urlsafe_b64encode(os.urandom(32)).decode())')\"}"
+uv run recipe-app            # or: uv run uvicorn --factory recipe_app.api.app:build_app --reload
+```
+
+Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` with `{"ingredient_ids": ["potato", "peas"]}`.
+
+| Variable | Meaning |
+|---|---|
+| `CURSOR_SIGNING_KEYS` | JSON object of key id to a base64url key of at least 32 bytes. Every key verifies cursors |
+| `CURSOR_ACTIVE_KID` | The key id that signs new cursors |
+| `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and `recipes.v1.toml` (default `./data`) |
+
+The app refuses to start if a key is missing or too short, or if a data file breaks a rule. In production the keys come from the secret store, never from the repo or the logs.
+
+| Endpoint | What it does |
+|---|---|
+| `POST /api/v1/recipes/search` | One swipe deck for a pantry, with filters and a `next_cursor` |
+| `GET /api/v1/recipes/{id}` | One recipe |
+| `GET /api/v1/ingredients` | The ingredient catalog for the picker (ETag, `304` when unchanged) |
+| `GET /api/v1/staples` | Staples grouped by kind and category (ETag, `304` when unchanged) |
+| `GET /healthz` | Liveness |
+
+Every error is an [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) `application/problem+json` body. A stale cursor returns `422` with type `/problems/cursor-expired`: search again without a cursor.
 
 ## Development
 
@@ -76,13 +106,13 @@ To change one of these decisions, add a new ADR that supersedes it rather than r
 - [x] Project foundation: uv, Ruff, mypy strict, pytest, pre-commit
 - [x] Design decisions (ADR-0001 to ADR-0003)
 - [x] Ingredient normalization
-- [ ] Ingredient catalog and staples as data
-- [ ] Domain entities: ingredients, recipes, computed diet
-- [ ] Matching and ranking engine
-- [ ] Deck assembly and signed cursor
-- [ ] Repository interface with an in-memory seed
-- [ ] Service layer
-- [ ] HTTP API (`/api/v1`) with RFC 9457 errors
+- [x] Ingredient catalog and staples as data
+- [x] Domain entities: ingredients, recipes, computed diet
+- [x] Matching and ranking engine
+- [x] Deck assembly and signed cursor
+- [x] Repository interface with an in-memory seed
+- [x] Service layer
+- [x] HTTP API (`/api/v1`) with RFC 9457 errors
 - [ ] Contract tests
 
 Later: PostgreSQL, Docker, Kubernetes.
