@@ -130,7 +130,7 @@ id = "01a15175-3c11-7d06-89b9-1b9f415eeffd"
 name = "Lemon rice"
 prep_minutes = 10
 cook_minutes = 15
-ingredients = ["rice", "peanuts", "lemon", "mustard-seeds", "curry-leaves", "turmeric", "green-chillies", "chana-dal", "oil", "salt"]
+ingredients = ["rice", "peanuts", "lemon", "mustard-seeds", "curry-leaves", "turmeric", "green-chillies", "oil", "salt"]
 
 [[recipe]]
 id = "01a15175-3c12-7238-998a-d2b358a0c24e"
@@ -151,14 +151,14 @@ id = "01a15175-3c14-7cfa-a4d1-5f700c77cb53"
 name = "Kanda poha"
 prep_minutes = 10
 cook_minutes = 15
-ingredients = ["flattened-rice", "onion", "potato", "peanuts", "mustard-seeds", "curry-leaves", "turmeric", "green-chillies", "lemon", "sugar", "salt", "oil", "coriander-leaves"]
+ingredients = ["flattened-rice", "onion", "peanuts", "mustard-seeds", "curry-leaves", "turmeric", "green-chillies", "lemon", "sugar", "salt", "oil", "coriander-leaves"]
 
 [[recipe]]
 id = "01a15175-3c15-7017-9787-d9be73c0cb5f"
 name = "Rava upma"
 prep_minutes = 5
 cook_minutes = 15
-ingredients = ["semolina", "onion", "mustard-seeds", "urad-dal", "curry-leaves", "green-chillies", "ginger", "oil", "salt", "water"]
+ingredients = ["semolina", "onion", "mustard-seeds", "curry-leaves", "green-chillies", "ginger", "oil", "salt", "water"]
 
 [[recipe]]
 id = "01a15175-3c16-7eb1-a711-d43ee35c650f"
@@ -249,7 +249,7 @@ id = "01a15175-3c22-7b07-abf6-87ad9705c184"
 name = "Macaroni and cheese"
 prep_minutes = 5
 cook_minutes = 20
-ingredients = ["pasta", "cheddar", "milk", "butter", "all-purpose-flour", "salt", "black-pepper"]
+ingredients = ["pasta", "cheddar", "milk", "butter", "salt", "black-pepper"]
 
 [[recipe]]
 id = "01a15175-3c23-770c-afb9-16d99fa0592d"
@@ -311,5 +311,26 @@ ingredients = ["lemon", "sugar", "salt", "water"]
 id = "01a15175-3c2b-7dd6-aec8-9b35af3404ac"
 name = "Garlic chutney"
 prep_minutes = 5
-cook_minutes = 5
+cook_minutes = 10
 ingredients = ["garlic", "dried-red-chillies", "salt", "oil"]
+
+[[recipe]]
+id = "01a15175-3c2c-75c4-a0fb-92fed93ef6e7"
+name = "Egg fried rice"
+prep_minutes = 10
+cook_minutes = 10
+ingredients = ["egg", "rice", "spring-onions", "soy-sauce", "garlic", "oil", "salt"]
+
+[[recipe]]
+id = "01a15175-3c2d-7620-b329-81eec06563fc"
+name = "Shakshuka"
+prep_minutes = 10
+cook_minutes = 20
+ingredients = ["egg", "bell-pepper", "onion", "tomato", "garlic", "paprika", "olive-oil", "salt"]
+
+[[recipe]]
+id = "01a15175-3c2e-777b-bda3-6dd751f0fa1c"
+name = "Kachumber salad"
+prep_minutes = 10
+cook_minutes = 0
+ingredients = ["tomato", "onion", "green-chillies", "lemon", "salt", "coriander-leaves"]

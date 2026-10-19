@@ -1,4 +1,8 @@
-"""The RecipeRepository contract. Every adapter runs these; Task 2 adds Postgres."""
+"""The RecipeRepository contract. Every adapter runs these; Task 2 adds Postgres.
+
+The seed loads at import, not in a fixture, because the Hypothesis strategies
+below need its ingredient ids when the module is collected.
+"""
 
 import asyncio
 from collections.abc import Callable, Iterable
@@ -15,9 +19,10 @@ from recipe_app.domain.recipe import Recipe
 from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.services.ports import RecipeRepository
+from tests.domain.factories import DATA_DIR
 
-CATALOG = load_catalog()
-SEED = load_recipes(CATALOG)
+CATALOG = load_catalog(DATA_DIR)
+SEED = load_recipes(CATALOG, DATA_DIR)
 STAPLE = IngredientClass.STAPLE
 USED = sorted({item.id for recipe in SEED for item in recipe.ingredients})
 CORE_IDS = [i for i in USED if CATALOG.by_id[i].ingredient_class is not STAPLE]
@@ -44,7 +49,11 @@ def test_get_unknown_id_returns_none(repository: RecipeRepository) -> None:
 
 @settings(max_examples=200, deadline=None)
 @given(
-    have=st.lists(st.sampled_from(CORE_IDS), min_size=1, max_size=8, unique=True),
+    # Staple ids too: a request of only staples leaves pantry.have empty, and
+    # then only the all-staples recipes can show.
+    have=st.lists(
+        st.sampled_from(CORE_IDS + STAPLE_IDS), min_size=1, max_size=8, unique=True
+    ),
     out_of=st.lists(st.sampled_from(STAPLE_IDS), max_size=4, unique=True),
     diet=st.none() | st.sampled_from(Diet),
     max_total_minutes=st.none() | st.integers(1, 600),

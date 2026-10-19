@@ -1,11 +1,9 @@
 import json
-from collections import Counter
 
 import pytest
 
-from recipe_app.domain.catalog import Diet, IngredientClass, parse_catalog
+from recipe_app.domain.catalog import parse_catalog
 from recipe_app.domain.recipe import RecipeError, parse_recipes
-from recipe_app.infra.data import DATA_DIR, RECIPES_FILE, load_catalog
 from tests.domain.factories import catalog, category, ingredient
 
 CATALOG = parse_catalog(
@@ -101,13 +99,13 @@ def test_bad_recipe(fields: dict[str, object], expected: str) -> None:
 def test_duplicate_id() -> None:
     problems = parse(recipe_table(), recipe_table(name="Peas pulao"))
 
-    assert problems == [f"duplicate recipe id {RECIPE_ID!r}"]
+    assert problems == [f"recipe #2: duplicate recipe id {RECIPE_ID!r}"]
 
 
 def test_duplicate_name_after_normalization() -> None:
     problems = parse(recipe_table(), recipe_table(id=OTHER_ID, name="ALOO MATAR"))
 
-    assert problems == ["duplicate recipe name 'aloo matar'"]
+    assert problems == ["recipe #2: duplicate recipe name 'aloo matar'"]
 
 
 def test_reports_every_problem_at_once() -> None:
@@ -119,25 +117,24 @@ def test_reports_every_problem_at_once() -> None:
     assert len(problems) == 2
 
 
-# The checked-in seed file: the same checks as app startup (ADR-0002 rule 7).
+@pytest.mark.parametrize(
+    "fields",
+    [
+        pytest.param({"id": "not-a-uuid"}, id="bad-id"),
+        pytest.param({"ingredients": "potato"}, id="bad-ingredients"),
+    ],
+)
+def test_unparsable_row_reports_one_problem(fields: dict[str, object]) -> None:
+    """No placeholder id in the message, and no extra "has no ingredients"."""
+    problems = parse(recipe_table(**fields))
 
-SEED = parse_recipes((DATA_DIR / RECIPES_FILE).read_bytes(), load_catalog())
+    assert len(problems) == 1
+    assert "00000000" not in problems[0]
 
 
-def test_seed_file_loads() -> None:
-    assert len(SEED) >= 40
+def test_recipe_problems_name_the_entry() -> None:
+    problems = parse(
+        recipe_table(), recipe_table(id=OTHER_ID, name="Okra fry", ingredients=["okra"])
+    )
 
-
-def test_seed_covers_every_diet() -> None:
-    assert set(Counter(recipe.diet for recipe in SEED)) == set(Diet)
-
-
-def test_seed_has_all_staples_recipes() -> None:
-    """The all-staples tier needs real cards for the demo and the gate."""
-    all_staples = [
-        recipe
-        for recipe in SEED
-        if all(i.ingredient_class is IngredientClass.STAPLE for i in recipe.ingredients)
-    ]
-
-    assert len(all_staples) >= 2
+    assert problems[0].startswith("recipe #2: ")

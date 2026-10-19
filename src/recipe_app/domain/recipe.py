@@ -154,23 +154,27 @@ def parse_recipes(raw: bytes, catalog: IngredientCatalog) -> tuple[Recipe, ...]:
         recipe_id = _recipe_id(row.get("id"), where, problems)
         if recipe_id is not None:
             if recipe_id in seen_ids:
-                problems.append(f"duplicate recipe id {str(recipe_id)!r}")
+                problems.append(f"{where}: duplicate recipe id {str(recipe_id)!r}")
             seen_ids.add(recipe_id)
         name = row.get("name")
         if isinstance(name, str) and name.strip():
             if normalize(name) in seen_names:
-                problems.append(f"duplicate recipe name {normalize(name)!r}")
+                problems.append(f"{where}: duplicate recipe name {normalize(name)!r}")
             seen_names.add(normalize(name))
         ingredient_ids = row.get("ingredients")
         if not isinstance(ingredient_ids, list) or not all(
             isinstance(item, str) for item in ingredient_ids
         ):
             problems.append(f"{where}: ingredients must be a list of ingredient ids")
-            ingredient_ids = []
+            ingredient_ids = None
+        if recipe_id is None or ingredient_ids is None:
+            # build_recipe would name a placeholder id or report a second,
+            # misleading "no ingredients" problem for the same mistake.
+            continue
 
         try:
             recipe = build_recipe(
-                id=recipe_id or UUID(int=0),
+                id=recipe_id,
                 name=name,  # type: ignore[arg-type]  # build_recipe checks it
                 prep_minutes=row.get("prep_minutes"),  # type: ignore[arg-type]
                 cook_minutes=row.get("cook_minutes"),  # type: ignore[arg-type]
@@ -178,7 +182,7 @@ def parse_recipes(raw: bytes, catalog: IngredientCatalog) -> tuple[Recipe, ...]:
                 catalog=catalog,
             )
         except RecipeError as error:
-            problems.extend(error.problems)
+            problems.extend(f"{where}: {problem}" for problem in error.problems)
             continue
         recipes.append(recipe)
 
