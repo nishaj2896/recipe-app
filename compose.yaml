@@ -1,0 +1,22 @@
+# Local development only. The password is not a secret: the database listens
+# on 127.0.0.1 only and holds nothing but data synced from the repo.
+
+name: recipe-app
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: recipe_app
+      POSTGRES_PASSWORD: recipe_app
+      POSTGRES_DB: recipe_app
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U recipe_app -d recipe_app"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+volumes:
+  pgdata:

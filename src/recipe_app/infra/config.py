@@ -15,6 +15,8 @@ KEYS_VARIABLE = "CURSOR_SIGNING_KEYS"
 ACTIVE_KID_VARIABLE = "CURSOR_ACTIVE_KID"
 DATA_DIR_VARIABLE = "RECIPE_APP_DATA_DIR"
 DEFAULT_DATA_DIR = Path("data")
+DATABASE_URL_VARIABLE = "DATABASE_URL"
+DATABASE_SCHEME = "postgresql+asyncpg"
 
 
 class ConfigError(ValueError):
@@ -62,3 +64,18 @@ def data_dir_from_env(environ: Mapping[str, str]) -> Path:
             f"data directory {str(data_dir)!r} not found; set {DATA_DIR_VARIABLE}"
         )
     return data_dir
+
+
+def database_url_from_env(environ: Mapping[str, str]) -> str:
+    """The SQLAlchemy URL of the app's database; it must use asyncpg.
+
+    Error messages never echo the URL, because it usually holds a password.
+    """
+    url = environ.get(DATABASE_URL_VARIABLE)
+    if not url:
+        raise ConfigError(f"{DATABASE_URL_VARIABLE} must be set")
+    if not url.startswith(f"{DATABASE_SCHEME}://"):
+        raise ConfigError(
+            f"{DATABASE_URL_VARIABLE} must start with {DATABASE_SCHEME}://"
+        )
+    return url
