@@ -7,6 +7,7 @@ docstring says which one. Static checks (ruff, mypy) run in CI.
 import ast
 import base64
 import json
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 from uuid import UUID, uuid4
@@ -21,6 +22,8 @@ from recipe_app.api.problems import (
 )
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.scoring import SCORING_VERSION
+from recipe_app.services import search as search_service
 from recipe_app.services.ports import RecipeRepository
 from tests.apps import NOW, AppFactory, client_for
 from tests.contract.conftest import (
@@ -583,6 +586,35 @@ async def test_old_cursor_is_expired(
     async with client_for(make_app(recipes=pool)) as client:
         cursor = (await search(client, ingredient_ids=["potato"])).json()["next_cursor"]
     async with client_for(make_app(recipes=pool, now=NOW + 86_401)) as later:
+        response = await search(later, ingredient_ids=["potato"], cursor=cursor)
+
+    assert_problem(response, 422, CURSOR_EXPIRED)
+
+
+async def test_cursor_from_another_catalog_is_expired(
+    make_app: AppFactory, real_catalog: IngredientCatalog
+) -> None:
+    """ADR-0003 rule 9: a catalog change restarts the deck, it is not an error."""
+    pool = bulk(real_catalog, 30, 0)
+    async with client_for(make_app(recipes=pool)) as client:
+        cursor = (await search(client, ingredient_ids=["potato"])).json()["next_cursor"]
+    changed = replace(real_catalog, content_hash="0" * 64)
+    async with client_for(make_app(recipes=pool, catalog=changed)) as later:
+        response = await search(later, ingredient_ids=["potato"], cursor=cursor)
+
+    assert_problem(response, 422, CURSOR_EXPIRED)
+
+
+async def test_cursor_from_another_scoring_version_is_expired(
+    make_app: AppFactory,
+    real_catalog: IngredientCatalog,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    pool = bulk(real_catalog, 30, 0)
+    async with client_for(make_app(recipes=pool)) as client:
+        cursor = (await search(client, ingredient_ids=["potato"])).json()["next_cursor"]
+    monkeypatch.setattr(search_service, "SCORING_VERSION", SCORING_VERSION + 1)
+    async with client_for(make_app(recipes=pool)) as later:
         response = await search(later, ingredient_ids=["potato"], cursor=cursor)
 
     assert_problem(response, 422, CURSOR_EXPIRED)
