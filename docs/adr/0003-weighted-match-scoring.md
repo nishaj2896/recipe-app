@@ -3,7 +3,7 @@
 - Status: Accepted
 - Date: 2026-10-15
 - Amended: 2026-10-18 (recipe times: rule 10)
-- Amended: 2026-10-19 (deck mix: rule 7; cursor `req`: rule 9)
+- Amended: 2026-10-19 (deck mix and deck sizes: rule 7; cursor `req`: rule 9)
 - Deciders: Nisha
 - Supersedes: the "Result shape" ranking rule, the plain match-percentage definition, and the "fresh staple typed is promoted to core" rule in the Task 1 "Product decisions locked" table
 - Related: ADR-0001, ADR-0002
@@ -47,6 +47,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 **6. Filters run before ranking and deck assembly:** `diet`, `max_total_minutes` and `hidden_recipe_ids` remove recipes first.
 
 **7. Deck assembly:** a deck holds at most 20 cards. That's up to 18 scored cards, followed by up to 2 all-staples cards, never more than 2 all-staples cards while scored recipes remain. Once the scored tier is used up, the remaining decks contain all-staples recipes only, up to 20 each. A deck that holds any scored card holds at most 2 all-staples cards, even when it is the last deck with scored cards: 30 scored and 10 all-staples recipes give decks of 18 + 2, 12 + 2, then 6.
+For a deck smaller than 20, up to `size − 2` scored cards come first (never fewer than one while scored recipes remain), followed by up to 2 all-staples cards: a 10-card deck is 8 + 2, a 3-card deck 1 + 2, and a 1-card deck 1 + 0.
 
 **8. What the card shows:** `match_percentage`, the share of core weight matched, rounded half-up to one decimal using integer arithmetic only: `tenths = (matched_q × 2000 + core_q) // (2 × core_q)`, then `match_percentage = tenths / 10`. No float is rounded at any point, so every server and client gets the same digits. It's shown alongside `matched_ingredients`, `missing_ingredients` and `assumed_staples` (each a list of `{id, name}`). All-staples cards show no percentage.
 
