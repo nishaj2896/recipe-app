@@ -99,6 +99,8 @@ Decisions that would be expensive to reverse are recorded as ADRs in [`docs/adr/
 - [ADR-0001](docs/adr/0001-ingredient-normalization.md): users pick ingredients from a catalog by id, and normalization applies only to catalog data and search
 - [ADR-0002](docs/adr/0002-household-staples.md): ingredient classes and household staples are server-owned catalog data
 - [ADR-0003](docs/adr/0003-weighted-match-scoring.md): recipes are ranked by a weighted, size-aware score with a deterministic integer sort key
+- [ADR-0004](docs/adr/0004-coconut-category-rule.md): coconut products are filed by what they are used as
+- [ADR-0005](docs/adr/0005-postgres-persistence.md): recipes and the catalog live in PostgreSQL, loaded from the reviewed data files
 
 To change one of these decisions, add a new ADR that supersedes it rather than rewriting the old one.
 
