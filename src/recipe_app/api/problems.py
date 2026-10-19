@@ -5,6 +5,7 @@ can't act on (why a cursor was refused, what crashed) go to the log only.
 """
 
 import logging
+import re
 from collections.abc import Sequence
 from http import HTTPStatus
 from typing import Any
@@ -25,6 +26,14 @@ PROBLEM_MEDIA_TYPE = "application/problem+json"
 INVALID_CURSOR = "/problems/invalid-cursor"
 CURSOR_EXPIRED = "/problems/cursor-expired"
 _REQUEST_LOCATIONS = frozenset({"body", "path", "query", "header", "cookie"})
+# A 50-item list can fail 50 ways; past this many, more errors don't help.
+MAX_ERRORS = 20
+_SAFE_NAME = re.compile(r"[a-z_][a-z0-9_]{0,63}")
+# Pydantic messages that quote part of the input get a fixed text instead.
+_FIXED_MESSAGES = {
+    "json_invalid": "Request body is not valid JSON",
+    "uuid_parsing": "Input should be a valid UUID",
+}
 
 
 class RecipeNotFoundError(LookupError):
@@ -42,20 +51,28 @@ def problem_response(problem: Problem) -> JSONResponse:
 
 
 def invalid_request(errors: list[FieldError]) -> Problem:
+    """Sends the first MAX_ERRORS errors; `detail` still counts all of them."""
     noun = "field" if len(errors) == 1 else "fields"
+    shown = "" if len(errors) <= MAX_ERRORS else f" The first {MAX_ERRORS} are listed."
     return Problem(
         title="Invalid request",
         status=422,
-        detail=f"{len(errors)} {noun} failed validation.",
-        errors=errors,
+        detail=f"{len(errors)} {noun} failed validation.{shown}",
+        errors=errors[:MAX_ERRORS],
     )
 
 
 def field_path(loc: Sequence[int | str]) -> str:
-    """("body", "ingredient_ids", 0) -> "ingredient_ids[0]"."""
+    """("body", "ingredient_ids", 0) -> "ingredient_ids[0]".
+
+    A name that isn't a plain identifier came from the client (an unknown
+    key), so it is never echoed: the path is just "body".
+    """
     parts = list(loc[1:] if loc and loc[0] in _REQUEST_LOCATIONS else loc)
     path = ""
     for part in parts:
+        if isinstance(part, str) and not _SAFE_NAME.fullmatch(part):
+            return "body"
         if isinstance(part, int):
             path += f"[{part}]"
         else:
@@ -76,17 +93,23 @@ def register_problem_handlers(app: FastAPI) -> None:
 
 async def _validation(_: Request, exc: RequestValidationError) -> JSONResponse:
     raw: Sequence[Any] = exc.errors()
-    errors = [
-        # "msg" never contains the input; "input" and "ctx" can, so they're dropped.
-        FieldError(field=field_path(error["loc"]), message=error["msg"])
-        for error in raw
-    ]
+    errors = [_field_error(error) for error in raw]
     problem = invalid_request(errors)
     if errors and all(error.field == "cursor" for error in errors):
         # A cursor that is too long fails here, before the domain sees it, but
-        # it is still an invalid cursor (ADR-0003 rule 9).
+        # it is still an invalid cursor (ADR-0003 rule 9), logged like the rest.
+        logger.warning("invalid cursor: failed request validation")
         problem = _cursor_problem(INVALID_CURSOR)
     return problem_response(problem)
+
+
+def _field_error(error: Any) -> FieldError:
+    # "input" and "ctx" can hold what the client sent, so only "msg" is used,
+    # and the few messages that quote the input are replaced.
+    if error["type"] == "json_invalid":
+        return FieldError(field="body", message=_FIXED_MESSAGES["json_invalid"])
+    message = _FIXED_MESSAGES.get(error["type"], error["msg"])
+    return FieldError(field=field_path(error["loc"]), message=message)
 
 
 async def _pantry(_: Request, exc: PantryError) -> JSONResponse:

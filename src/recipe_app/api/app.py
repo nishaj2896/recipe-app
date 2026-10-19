@@ -15,6 +15,7 @@ from recipe_app.api.routes import CachedBody, health_router, router
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.infra.config import data_dir_from_env, signing_keys_from_env
 from recipe_app.infra.data import load_catalog, load_recipes
+from recipe_app.infra.logs import configure_logging
 from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.services.search import RecipeService
 
@@ -60,6 +61,7 @@ def build_app() -> FastAPI:
 
     Run with `uvicorn --factory recipe_app.api.app:build_app`.
     """
+    configure_logging()
     data_dir = data_dir_from_env(os.environ)
     keys = signing_keys_from_env(os.environ)
     catalog = load_catalog(data_dir)
