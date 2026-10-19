@@ -138,3 +138,11 @@ def test_recipe_problems_name_the_entry() -> None:
     )
 
     assert problems[0].startswith("recipe #2: ")
+
+
+def test_bad_id_still_reports_the_rows_other_problems() -> None:
+    problems = parse(recipe_table(id="not-a-uuid", ingredients=["okra"]))
+
+    assert len(problems) == 2
+    assert "unknown ingredient 'okra'" in problems[1]
+    assert not any("00000000" in problem for problem in problems)

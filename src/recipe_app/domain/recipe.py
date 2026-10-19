@@ -62,6 +62,36 @@ def build_recipe(
     Collects every problem before raising, like parse_catalog, so a seed file
     with several mistakes shows them all in one run.
     """
+    problems, ingredients = _check_recipe(
+        name=name,
+        prep_minutes=prep_minutes,
+        cook_minutes=cook_minutes,
+        ingredient_ids=ingredient_ids,
+        catalog=catalog,
+    )
+    if problems:
+        raise RecipeError(
+            [f"recipe {name!r} ({id}): {problem}" for problem in problems]
+        )
+
+    return Recipe(
+        id=id,
+        name=name,
+        prep_minutes=prep_minutes,
+        cook_minutes=cook_minutes,
+        ingredients=tuple(ingredients),
+    )
+
+
+def _check_recipe(
+    *,
+    name: str,
+    prep_minutes: int,
+    cook_minutes: int,
+    ingredient_ids: Sequence[str],
+    catalog: IngredientCatalog,
+) -> tuple[list[str], list[Ingredient]]:
+    """Every per-recipe problem, without naming the recipe, and its ingredients."""
     problems: list[str] = []
 
     if not isinstance(name, str) or not name.strip():
@@ -101,19 +131,7 @@ def build_recipe(
             problems.append(f"retired ingredient {ingredient_id!r}")
         else:
             ingredients.append(found)
-
-    if problems:
-        raise RecipeError(
-            [f"recipe {name!r} ({id}): {problem}" for problem in problems]
-        )
-
-    return Recipe(
-        id=id,
-        name=name,
-        prep_minutes=prep_minutes,
-        cook_minutes=cook_minutes,
-        ingredients=tuple(ingredients),
-    )
+    return problems, ingredients
 
 
 def parse_recipes(raw: bytes, catalog: IngredientCatalog) -> tuple[Recipe, ...]:
@@ -167,9 +185,19 @@ def parse_recipes(raw: bytes, catalog: IngredientCatalog) -> tuple[Recipe, ...]:
         ):
             problems.append(f"{where}: ingredients must be a list of ingredient ids")
             ingredient_ids = None
-        if recipe_id is None or ingredient_ids is None:
-            # build_recipe would name a placeholder id or report a second,
-            # misleading "no ingredients" problem for the same mistake.
+        if ingredient_ids is None:
+            # Checking an empty list would add a misleading "has no ingredients".
+            continue
+        if recipe_id is None:
+            # No id to name it by, but the other mistakes still show this run.
+            found, _ = _check_recipe(
+                name=name,  # type: ignore[arg-type]  # _check_recipe checks it
+                prep_minutes=row.get("prep_minutes"),  # type: ignore[arg-type]
+                cook_minutes=row.get("cook_minutes"),  # type: ignore[arg-type]
+                ingredient_ids=ingredient_ids,
+                catalog=catalog,
+            )
+            problems.extend(f"{where}: {problem}" for problem in found)
             continue
 
         try:

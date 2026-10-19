@@ -326,7 +326,7 @@ id = "01a15175-3c2d-7620-b329-81eec06563fc"
 name = "Shakshuka"
 prep_minutes = 10
 cook_minutes = 20
-ingredients = ["egg", "bell-pepper", "onion", "tomato", "garlic", "paprika", "olive-oil", "salt"]
+ingredients = ["egg", "bell-pepper", "onion", "tomato", "garlic", "paprika", "oil", "salt"]
 
 [[recipe]]
 id = "01a15175-3c2e-777b-bda3-6dd751f0fa1c"
