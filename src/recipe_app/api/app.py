@@ -10,6 +10,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from recipe_app.api import presenters
+from recipe_app.api.limits import BodySizeLimit
 from recipe_app.api.problems import problem_media_types, register_problem_handlers
 from recipe_app.api.routes import CachedBody, health_router, router
 from recipe_app.domain.catalog import IngredientCatalog
@@ -34,7 +35,11 @@ def create_app(*, catalog: IngredientCatalog, service: RecipeService) -> FastAPI
             "ignore response fields they don't recognise."
         ),
         debug=False,
+        # No route ends in a slash, and a redirect would name this pod's own
+        # host and scheme, not the load balancer's: a stray slash is a 404.
+        redirect_slashes=False,
     )
+    app.add_middleware(BodySizeLimit)
     app.state.service = service
     app.state.ingredients_body = _cache(presenters.ingredients_response(catalog))
     app.state.staples_body = _cache(presenters.staples_response(catalog))

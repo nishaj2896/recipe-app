@@ -164,13 +164,13 @@ async def test_unknown_recipe_problem(client: AsyncClient) -> None:
 
 async def test_errors_are_capped_but_counted(client: AsyncClient) -> None:
     body: dict[str, object] = {"ingredient_ids": ["potato"]}
-    body |= {f"extra_{n}": n for n in range(5_000)}
+    body |= {f"extra_{n}": n for n in range(1_000)}
 
     response = await client.post(SEARCH, json=body)
 
     assert_problem(response, 422, "about:blank")
     assert len(response.json()["errors"]) == MAX_ERRORS
-    assert response.json()["detail"].startswith("5000 fields failed validation.")
+    assert response.json()["detail"].startswith("1000 fields failed validation.")
     assert len(response.content) < 4_096
 
 

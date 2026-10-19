@@ -5,6 +5,7 @@ from typing import Annotated
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, Request, Response
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from recipe_app.api import presenters
 from recipe_app.api.problems import RecipeNotFoundError, problem_responses
@@ -67,7 +68,7 @@ health_router = APIRouter()
     "/recipes/search",
     tags=["recipes"],
     response_model=SearchResponse,
-    responses=problem_responses(422, 500),
+    responses=problem_responses(413, 422, 500),
 )
 async def search_recipes(request: SearchRequest, service: Service) -> SearchResponse:
     """One swipe deck. Follow `next_cursor`, unchanged, for the next deck."""
@@ -83,6 +84,16 @@ async def search_recipes(request: SearchRequest, service: Service) -> SearchResp
         )
     )
     return presenters.search_response(result)
+
+
+@router.api_route(
+    "/recipes/search",
+    methods=["GET", "HEAD", "PUT", "PATCH", "DELETE"],
+    include_in_schema=False,
+)
+async def search_wrong_method() -> None:
+    """Without this, GET /recipes/search matches /recipes/{recipe_id}: a 422."""
+    raise StarletteHTTPException(405, headers={"Allow": "POST"})
 
 
 @router.get(
