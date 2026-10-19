@@ -21,9 +21,6 @@ CATALOG = parse_catalog(
         ingredient(id="chicken", name="Chicken", diet="non_veg"),
         ingredient(id="tomato", name="Tomato", **{"class": "S"}, kind="fresh"),
         ingredient(id="salt", name="Salt", **{"class": "S"}, kind="pantry"),
-        ingredient(
-            id="ghee", name="Ghee", **{"class": "S"}, kind="pantry", diet="vegetarian"
-        ),
     )
 )
 
@@ -117,15 +114,6 @@ def test_diet_filter(diet: Diet | None, expected: list[int]) -> None:
     ranking = ranked([egg_curry, chicken_curry], filters=SearchFilters(diet=diet))
 
     assert scored_ids(ranking) == expected
-
-
-def test_vegan_search_never_shows_assumed_ghee() -> None:
-    """ADR-0002 rule 6: an assumed staple still sets the recipe's diet."""
-    dal = recipe(1, ["toor-dal", "ghee"])
-
-    ranking = ranked([dal], ["toor-dal"], SearchFilters(diet=Diet.VEGAN))
-
-    assert scored_ids(ranking) == []
 
 
 def test_max_total_minutes_keeps_the_boundary() -> None:
