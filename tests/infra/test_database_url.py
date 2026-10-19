@@ -16,7 +16,7 @@ def test_database_url_loads() -> None:
         pytest.param({"DATABASE_URL": ""}, "must be set", id="empty"),
         pytest.param(
             {"DATABASE_URL": "postgresql://u:p@localhost/db"},
-            "must start with postgresql",
+            r"must start with postgresql\+asyncpg://",
             id="sync-driver",
         ),
     ],
