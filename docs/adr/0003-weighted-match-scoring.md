@@ -3,6 +3,7 @@
 - Status: Accepted
 - Date: 2026-10-15
 - Amended: 2026-10-18 (recipe times: rule 10)
+- Amended: 2026-10-19 (deck mix: rule 7; cursor `req`: rule 9)
 - Deciders: Nisha
 - Supersedes: the "Result shape" ranking rule, the plain match-percentage definition, and the "fresh staple typed is promoted to core" rule in the Task 1 "Product decisions locked" table
 - Related: ADR-0001, ADR-0002
@@ -45,7 +46,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 
 **6. Filters run before ranking and deck assembly:** `diet`, `max_total_minutes` and `hidden_recipe_ids` remove recipes first.
 
-**7. Deck assembly:** a deck holds at most 20 cards. That's up to 18 scored cards, followed by up to 2 all-staples cards, never more than 2 all-staples cards while scored recipes remain. Once the scored tier is used up, the remaining decks contain all-staples recipes only, up to 20 each.
+**7. Deck assembly:** a deck holds at most 20 cards. That's up to 18 scored cards, followed by up to 2 all-staples cards, never more than 2 all-staples cards while scored recipes remain. Once the scored tier is used up, the remaining decks contain all-staples recipes only, up to 20 each. A deck that holds any scored card holds at most 2 all-staples cards, even when it is the last deck with scored cards: 30 scored and 10 all-staples recipes give decks of 18 + 2, 12 + 2, then 6.
 
 **8. What the card shows:** `match_percentage`, the share of core weight matched, rounded half-up to one decimal using integer arithmetic only: `tenths = (matched_q × 2000 + core_q) // (2 × core_q)`, then `match_percentage = tenths / 10`. No float is rounded at any point, so every server and client gets the same digits. It's shown alongside `matched_ingredients`, `missing_ingredients` and `assumed_staples` (each a list of `{id, name}`). All-staples cards show no percentage.
 
@@ -57,7 +58,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
   - `iat`: issued-at time, in Unix seconds
   - `catalog`: the catalog `content_hash` (ADR-0002 rule 7)
   - `scoring`: `SCORING_VERSION`, an integer constant in `recipe_app.domain.scoring`. It must be bumped whenever weights, the formula, tiers or the sort key change, and a test fails if the scoring constants change without it.
-  - `req`: SHA-256 of the request's filters, `diet`, `max_total_minutes`, `hidden_recipe_ids`, `excluded_staples` and `ingredient_ids`, with each list sorted, so that order doesn't matter
+  - `req`: SHA-256 of the request's filters, `diet`, `max_total_minutes`, `excluded_staples` and `ingredient_ids`, with each list sorted, so that order doesn't matter. An omitted `diet` is hashed as `non_veg`, because both return the same recipes (ADR-0002 rule 6). `hidden_recipe_ids` is left out on purpose: the app adds a recipe to it on every left swipe, and hiding only removes cards, which never moves the position the cursor resumes from. Every deck leaves out the recipes hidden in its own request
   - `pos`: the last position in each tier, as `(score_int, total_minutes, recipe_id)` or `(total_minutes, recipe_id)`
 - **Encoding:** `base64url(payload) + "." + base64url(HMAC-SHA256(key[kid], payload))`, without padding. Signatures are compared with `hmac.compare_digest`, which takes constant time.
 - **Checks, cheapest first:** the length is at most 1,024 characters *before* any decoding. Then it must decode and split. Then `kid` must be a key we accept, the signature must be valid, `v` must be supported, `iat` must be no more than 24 hours old and no more than 5 minutes in the future (to allow for clock skew), and `req` must match this request. Finally, `catalog` and `scoring` must match what this pod is running.
@@ -90,6 +91,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
   - the same request twice gives a byte-identical response
   - `score_int` is an integer, and the cursor round-trips it exactly
   - a tampered cursor, a cursor reused with different filters, and a 1,025-character cursor each return `/problems/invalid-cursor`. The long one is rejected before it is decoded.
+  - a cursor still works when `hidden_recipe_ids` grows between decks, and when an omitted `diet` becomes `non_veg`; a recipe hidden after deck 1 is left out of deck 2
   - a cursor issued under a different catalog hash, a different `SCORING_VERSION`, or more than 24 hours ago returns `/problems/cursor-expired`
   - during a key rotation, a cursor signed with the old key is still accepted while that key is listed, and returns `cursor-expired` once it's removed
   - changing a weight constant without bumping `SCORING_VERSION` fails a test
