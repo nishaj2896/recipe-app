@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from typing import Annotated
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, Header, Request, Response
+from fastapi import APIRouter, Depends, Request, Response
 
 from recipe_app.api import presenters
 from recipe_app.api.problems import RecipeNotFoundError, problem_responses
@@ -21,6 +21,17 @@ from recipe_app.services.search import RecipeService, SearchQuery
 JSON = "application/json"
 # Store it, but ask before reusing it: a changed catalog is seen on the next load.
 CATALOG_CACHE_CONTROL = "public, no-cache"
+IF_NONE_MATCH_DOC = {
+    "parameters": [
+        {
+            "name": "If-None-Match",
+            "in": "header",
+            "required": False,
+            "schema": {"type": "string"},
+            "description": "The ETag from the last response; 304 if unchanged.",
+        }
+    ]
+}
 
 
 @dataclass(frozen=True, slots=True)
@@ -47,7 +58,6 @@ def get_staples_body(request: Request) -> CachedBody:
 
 
 Service = Annotated[RecipeService, Depends(get_service)]
-IfNoneMatch = Annotated[str | None, Header()]
 
 router = APIRouter(prefix="/api/v1")
 health_router = APIRouter()
@@ -93,13 +103,13 @@ async def get_recipe(recipe_id: UUID, service: Service) -> RecipeDetail:
     tags=["catalog"],
     response_model=IngredientsResponse,
     responses={304: {"description": "Not Modified"}, **problem_responses(500)},
+    openapi_extra=IF_NONE_MATCH_DOC,
 )
 async def list_ingredients(
-    cached: Annotated[CachedBody, Depends(get_ingredients_body)],
-    if_none_match: IfNoneMatch = None,
+    request: Request, cached: Annotated[CachedBody, Depends(get_ingredients_body)]
 ) -> Response:
     """Every live ingredient for the picker. Send `If-None-Match` on every load."""
-    return _cached_response(cached, if_none_match)
+    return _cached_response(cached, request.headers.get("if-none-match"))
 
 
 @router.get(
@@ -107,13 +117,13 @@ async def list_ingredients(
     tags=["catalog"],
     response_model=StaplesResponse,
     responses={304: {"description": "Not Modified"}, **problem_responses(500)},
+    openapi_extra=IF_NONE_MATCH_DOC,
 )
 async def list_staples(
-    cached: Annotated[CachedBody, Depends(get_staples_body)],
-    if_none_match: IfNoneMatch = None,
+    request: Request, cached: Annotated[CachedBody, Depends(get_staples_body)]
 ) -> Response:
     """Live staples by kind, then category, for the staples screen."""
-    return _cached_response(cached, if_none_match)
+    return _cached_response(cached, request.headers.get("if-none-match"))
 
 
 @health_router.get(
@@ -125,6 +135,8 @@ async def healthz() -> Health:
 
 
 def _cached_response(cached: CachedBody, if_none_match: str | None) -> Response:
+    # Read from the raw headers, not a Header() parameter: no header value can
+    # fail validation, so these routes have no 422 to document.
     headers = {"ETag": cached.etag, "Cache-Control": CATALOG_CACHE_CONTROL}
     if if_none_match is not None and _matches(if_none_match, cached.etag):
         return Response(status_code=304, headers=headers)
