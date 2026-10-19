@@ -169,6 +169,13 @@ def test_malformed_is_invalid(token: str) -> None:
         read(token)
 
 
+def test_characters_outside_base64url_are_rejected_not_dropped() -> None:
+    """A lenient decoder drops `*` and reports a bad signature instead."""
+    payload, signature = issue(Position()).split(".")
+    with pytest.raises(InvalidCursorError, match="not base64url"):
+        read(f"{payload[:5]}*{payload[5:]}.{signature}")
+
+
 # Expired: normal, the app restarts at page 1
 
 

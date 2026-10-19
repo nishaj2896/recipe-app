@@ -158,7 +158,9 @@ def _b64encode(raw: bytes) -> str:
 
 def _b64decode(text: str) -> bytes:
     try:
-        return base64.urlsafe_b64decode(text + "=" * (-len(text) % 4))
+        return base64.b64decode(
+            text + "=" * (-len(text) % 4), altchars=b"-_", validate=True
+        )
     except (binascii.Error, ValueError) as error:
         raise InvalidCursorError("not base64url") from error
 

@@ -23,6 +23,7 @@ from recipe_app.domain.deck import (
 from recipe_app.domain.matching import resolve_pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters, rank
 from recipe_app.domain.recipe import Recipe, build_recipe
+from recipe_app.domain.scoring import SCORING_VERSION
 from tests.domain.factories import catalog, category, ingredient
 
 CATALOG = parse_catalog(
@@ -41,7 +42,7 @@ PANTRY = resolve_pantry(
 KEYS = SigningKeys(active_kid="a", keys={"a": b"a" * 32})
 SCOPE = Scope(
     catalog=CATALOG.content_hash,
-    scoring=1,
+    scoring=SCORING_VERSION,
     req=request_fingerprint(
         diet=None,
         max_total_minutes=None,
