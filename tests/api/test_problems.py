@@ -112,8 +112,12 @@ async def a_cursor(client: AsyncClient, **body: object) -> str:
     ],
 )
 async def test_invalid_cursor_problem(
-    client: AsyncClient, cursor: str | None, body: dict[str, object]
+    client: AsyncClient,
+    caplog: pytest.LogCaptureFixture,
+    cursor: str | None,
+    body: dict[str, object],
 ) -> None:
+    """ADR-0003 rule 9: every invalid cursor is logged, wherever it is rejected."""
     if cursor is None:
         cursor = await a_cursor(client)
         if body.pop("tamper", False):
@@ -124,6 +128,7 @@ async def test_invalid_cursor_problem(
 
     assert_problem(response, 422, INVALID_CURSOR)
     assert "errors" not in response.json()
+    assert "invalid cursor" in caplog.text
 
 
 async def test_expired_cursor_problem_when_old_or_key_removed(
