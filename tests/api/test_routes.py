@@ -2,7 +2,7 @@ import pytest
 from httpx import AsyncClient
 
 from recipe_app.api.problems import PROBLEM_MEDIA_TYPE
-from tests.api.conftest import AppFactory, client_for
+from tests.apps import AppFactory, client_for
 
 pytestmark = pytest.mark.anyio
 
