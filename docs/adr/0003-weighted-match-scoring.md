@@ -3,7 +3,7 @@
 - Status: Accepted
 - Date: 2026-10-15
 - Amended: 2026-10-18 (recipe times: rule 10)
-- Amended: 2026-10-19 (deck mix: rule 7; cursor `req`: rule 9)
+- Amended: 2026-10-19 (deck mix and deck sizes: rule 7; cursor `req`: rule 9)
 - Deciders: Nisha
 - Supersedes: the "Result shape" ranking rule, the plain match-percentage definition, and the "fresh staple typed is promoted to core" rule in the Task 1 "Product decisions locked" table
 - Related: ADR-0001, ADR-0002
@@ -47,6 +47,7 @@ score_int   = round(composite × 1_000_000)               # the only value used 
 **6. Filters run before ranking and deck assembly:** `diet`, `max_total_minutes` and `hidden_recipe_ids` remove recipes first.
 
 **7. Deck assembly:** a deck holds at most 20 cards. That's up to 18 scored cards, followed by up to 2 all-staples cards, never more than 2 all-staples cards while scored recipes remain. Once the scored tier is used up, the remaining decks contain all-staples recipes only, up to 20 each. A deck that holds any scored card holds at most 2 all-staples cards, even when it is the last deck with scored cards: 30 scored and 10 all-staples recipes give decks of 18 + 2, 12 + 2, then 6.
+For a deck smaller than 20, up to `size − 2` scored cards come first (never fewer than one while scored recipes remain), followed by up to 2 all-staples cards: a 10-card deck is 8 + 2, a 3-card deck 1 + 2, and a 1-card deck 1 + 0.
 
 **8. What the card shows:** `match_percentage`, the share of core weight matched, rounded half-up to one decimal using integer arithmetic only: `tenths = (matched_q × 2000 + core_q) // (2 × core_q)`, then `match_percentage = tenths / 10`. No float is rounded at any point, so every server and client gets the same digits. It's shown alongside `matched_ingredients`, `missing_ingredients` and `assumed_staples` (each a list of `{id, name}`). All-staples cards show no percentage.
 
@@ -59,12 +60,12 @@ score_int   = round(composite × 1_000_000)               # the only value used 
   - `catalog`: the catalog `content_hash` (ADR-0002 rule 7)
   - `scoring`: `SCORING_VERSION`, an integer constant in `recipe_app.domain.scoring`. It must be bumped whenever weights, the formula, tiers or the sort key change, and a test fails if the scoring constants change without it.
   - `req`: SHA-256 of the request's filters, `diet`, `max_total_minutes`, `excluded_staples` and `ingredient_ids`, with each list sorted, so that order doesn't matter. An omitted `diet` is hashed as `non_veg`, because both return the same recipes (ADR-0002 rule 6). `hidden_recipe_ids` is left out on purpose: the app adds a recipe to it on every left swipe, and hiding only removes cards, which never moves the position the cursor resumes from. Every deck leaves out the recipes hidden in its own request
-  - `pos`: the last position in each tier, as `(score_int, total_minutes, recipe_id)` or `(total_minutes, recipe_id)`
+  - `pos`: the sort key (rule 5) of the last card shown in each tier, `(-score_int, total_minutes, recipe_id)` or `(total_minutes, recipe_id)`, or null if the tier has shown nothing yet. The score is stored negated so that resuming is a single "greater than" comparison
 - **Encoding:** `base64url(payload) + "." + base64url(HMAC-SHA256(key[kid], payload))`, without padding. Signatures are compared with `hmac.compare_digest`, which takes constant time.
 - **Checks, cheapest first:** the length is at most 1,024 characters *before* any decoding. Then it must decode and split. Then `kid` must be a key we accept, the signature must be valid, `v` must be supported, `iat` must be no more than 24 hours old and no more than 5 minutes in the future (to allow for clock skew), and `req` must match this request. Finally, `catalog` and `scoring` must match what this pod is running.
 - **Two outcomes, both `422`, with different problem `type`s** (RFC 9457):
   - `/problems/invalid-cursor`: the cursor is too long, malformed, has a bad signature, or `req` doesn't match. Only a client bug or tampering produces this. It's logged and counted.
-  - `/problems/cursor-expired`: the cursor is older than 24 hours, `catalog` or `scoring` differ, `v` is no longer supported, or `kid` isn't one we accept. This is a normal event, for example during a rolling deploy or after a catalog change. The app reacts by quietly requesting page 1 again, without showing an error.
+  - `/problems/cursor-expired`: the cursor is older than 24 hours, `iat` is more than 5 minutes in the future (a pod's clock is off; the signature already proved we issued it), `catalog` or `scoring` differ, `v` is no longer supported, or `kid` isn't one we accept. This is a normal event, for example during a rolling deploy or after a catalog change. The app reacts by quietly requesting page 1 again, without showing an error.
 - **Keys:** `CURSOR_SIGNING_KEYS` maps each `kid` to at least 32 random bytes, and `CURSOR_ACTIVE_KID` names the key used for signing. Both are injected at runtime from the secret store. They never appear in the repo, the image or the logs. Every listed key verifies cursors, and only the active one signs. The app refuses to start if the active key is missing or shorter than 32 bytes.
 - **Rotation:** first add the new key as verify-only and deploy everywhere. Then make it active. After 24 hours, which is the maximum cursor age, remove the old key. For an emergency after a leak, remove the leaked key at once. Sessions holding its cursors get `cursor-expired` and restart from page 1, and nothing else breaks.
 
