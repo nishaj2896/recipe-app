@@ -8,6 +8,7 @@ import binascii
 import hashlib
 import hmac
 import json
+import re
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from uuid import UUID
@@ -19,6 +20,7 @@ MAX_CURSOR_LENGTH = 1024
 MAX_AGE_SECONDS = 24 * 60 * 60
 MAX_CLOCK_SKEW_SECONDS = 5 * 60
 MIN_KEY_BYTES = 32
+BASE64URL = re.compile(r"[A-Za-z0-9_-]*")
 
 type ScoredKey = tuple[int, int, UUID]
 type AllStaplesKey = tuple[int, UUID]
@@ -157,6 +159,9 @@ def _b64encode(raw: bytes) -> str:
 
 
 def _b64decode(text: str) -> bytes:
+    # altchars maps "-_" onto "+/" before validating, so "+" and "/" need this.
+    if not BASE64URL.fullmatch(text):
+        raise InvalidCursorError("not base64url")
     try:
         return base64.b64decode(
             text + "=" * (-len(text) % 4), altchars=b"-_", validate=True
