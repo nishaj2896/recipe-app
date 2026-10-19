@@ -46,7 +46,7 @@ def rank(recipes: Iterable[Recipe], pantry: Pantry, filters: SearchFilters) -> R
     scored: list[ScoredMatch] = []
     all_staples: list[AllStaplesMatch] = []
     for recipe in recipes:
-        if not _passes(recipe, filters):
+        if not passes_filters(recipe, filters):
             continue
         match = match_recipe(recipe, pantry)
         if isinstance(match, ScoredMatch):
@@ -60,7 +60,8 @@ def rank(recipes: Iterable[Recipe], pantry: Pantry, filters: SearchFilters) -> R
     )
 
 
-def _passes(recipe: Recipe, filters: SearchFilters) -> bool:
+def passes_filters(recipe: Recipe, filters: SearchFilters) -> bool:
+    """Whether the recipe survives diet, time and hidden ids (ADR-0003 rule 6)."""
     if filters.diet is not None and not filters.diet.allows(recipe.diet):
         return False
     if (
