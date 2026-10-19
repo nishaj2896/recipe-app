@@ -1,6 +1,10 @@
-from recipe_app.domain.catalog import IngredientClass, StapleKind, parse_catalog
+from recipe_app.domain.catalog import (
+    IngredientCatalog,
+    IngredientClass,
+    StapleKind,
+    parse_catalog,
+)
 from recipe_app.domain.normalization import normalize
-from recipe_app.infra.data import load_catalog
 from recipe_app.services.catalog import listed_ingredients, staple_groups
 from tests.domain.factories import catalog, category, ingredient
 
@@ -53,8 +57,10 @@ def test_staples_by_kind_then_category_then_name() -> None:
     ]
 
 
-def test_real_catalog_listing_is_complete_and_sorted() -> None:
-    real = load_catalog()
+def test_real_catalog_listing_is_complete_and_sorted(
+    real_catalog: IngredientCatalog,
+) -> None:
+    real = real_catalog
     listed = listed_ingredients(real)
 
     assert len(listed) == sum(not item.retired for item in real.by_id.values())
@@ -62,8 +68,10 @@ def test_real_catalog_listing_is_complete_and_sorted() -> None:
     assert keys == sorted(keys)
 
 
-def test_real_staples_are_every_live_staple_once() -> None:
-    real = load_catalog()
+def test_real_staples_are_every_live_staple_once(
+    real_catalog: IngredientCatalog,
+) -> None:
+    real = real_catalog
     shown = [
         item.id
         for group in staple_groups(real)

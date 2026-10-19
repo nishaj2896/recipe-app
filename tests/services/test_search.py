@@ -17,14 +17,14 @@ from recipe_app.domain.recipe import Recipe, build_recipe
 from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.services.search import RecipeService, SearchQuery, SearchResult
-from tests.domain.factories import catalog, category, ingredient
+from tests.domain.factories import DATA_DIR, catalog, category, ingredient
 
 KEYS = SigningKeys(active_kid="a", keys={"a": b"a" * 32})
 NOW = 1_800_000_000
 MAX_PAGES = 100
 
-CATALOG = load_catalog()
-SEED = load_recipes(CATALOG)
+CATALOG = load_catalog(DATA_DIR)
+SEED = load_recipes(CATALOG, DATA_DIR)
 # Common enough that most seed recipes are scored, so walks span several decks.
 BROAD = ["potato", "peas", "paneer", "rice", "basmati-rice", "egg", "chicken"]
 
@@ -72,14 +72,17 @@ def test_walk_returns_every_eligible_recipe_once() -> None:
     shown = [i for page in pages for i in card_ids(page.deck)]
     assert len(pages) > 2
     assert all(card_ids(page.deck) for page in pages)
-    assert len(shown) == len(set(shown))
     assert all(len(card_ids(page.deck)) <= 7 for page in pages)
+    assert len(shown) == len(set(shown))
     pantry = resolve_pantry(ingredient_ids=BROAD, excluded_staples=[], catalog=CATALOG)
     full = rank(SEED, pantry, SearchFilters())
-    eligible = [m.recipe.id for m in full.scored] + [
+    # Each tier comes out in exact rank order across the pages.
+    assert [m.recipe.id for page in pages for m in page.deck.scored] == [
+        m.recipe.id for m in full.scored
+    ]
+    assert [m.recipe.id for page in pages for m in page.deck.all_staples] == [
         m.recipe.id for m in full.all_staples
     ]
-    assert sorted(shown) == sorted(eligible)
 
 
 def recipes_named(*names: str) -> tuple[Recipe, ...]:
@@ -149,11 +152,34 @@ def test_cursor_reused_with_other_filters_is_invalid(change: dict[str, object]) 
 
 def test_cursor_survives_a_different_limit() -> None:
     query = SearchQuery(ingredient_ids=BROAD, limit=5)
-    cursor = search(service(), query).next_cursor
+    first = search(service(), query)
+    second_small = search(service(), replace(query, cursor=first.next_cursor))
 
-    page = search(service(), replace(query, cursor=cursor, limit=20))
+    second_big = search(service(), replace(query, cursor=first.next_cursor, limit=20))
+
+    assert not set(card_ids(first.deck)) & set(card_ids(second_big.deck))
+    assert second_big.deck.scored[0] == second_small.deck.scored[0]
+
+
+@pytest.mark.parametrize("limit", [0, 21])
+def test_limit_out_of_range_fails_before_any_work(limit: int) -> None:
+    with pytest.raises(ValueError, match="limit"):
+        SearchQuery(ingredient_ids=["potato"], limit=limit)
+
+
+def test_key_rotation_keeps_old_cursors_until_the_old_key_is_removed() -> None:
+    query = SearchQuery(ingredient_ids=BROAD, limit=5)
+    cursor = search(service(), query).next_cursor
+    rotated = SigningKeys(active_kid="b", keys={"a": b"a" * 32, "b": b"b" * 32})
+    removed = SigningKeys(active_kid="b", keys={"b": b"b" * 32})
+
+    page = search(service(keys=rotated), replace(query, cursor=cursor))
 
     assert page.deck.scored
+    assert page.next_cursor is not None
+    assert search(service(keys=rotated), replace(query, cursor=page.next_cursor))
+    with pytest.raises(ExpiredCursorError):
+        search(service(keys=removed), replace(query, cursor=cursor))
 
 
 def test_cursor_after_a_catalog_change_is_expired() -> None:

@@ -39,6 +39,11 @@ class SearchQuery:
     limit: int = MAX_DECK_SIZE
     cursor: str | None = None
 
+    def __post_init__(self) -> None:
+        # Here, not in build_deck, so a bad limit fails before any I/O.
+        if not 1 <= self.limit <= MAX_DECK_SIZE:
+            raise ValueError(f"need 1 <= limit <= {MAX_DECK_SIZE}, got {self.limit}")
+
 
 @dataclass(frozen=True, slots=True)
 class SearchResult:
