@@ -133,3 +133,25 @@ async def test_wrong_method_is_a_problem_with_allow(client: AsyncClient) -> None
     assert response.status_code == 405
     assert response.headers["content-type"] == PROBLEM_MEDIA_TYPE
     assert response.headers["allow"] == "GET"
+
+
+@pytest.mark.parametrize("method", ["GET", "PUT", "PATCH", "DELETE"])
+async def test_wrong_method_on_search_is_405_not_a_recipe_id(
+    client: AsyncClient, method: str
+) -> None:
+    response = await client.request(method, SEARCH)
+
+    assert response.status_code == 405
+    assert response.headers["content-type"] == PROBLEM_MEDIA_TYPE
+    assert response.headers["allow"] == "POST"
+
+
+async def test_trailing_slash_is_not_redirected(client: AsyncClient) -> None:
+    card = (await client.post(SEARCH, json={"ingredient_ids": ["potato"]})).json()[
+        "results"
+    ][0]
+
+    response = await client.get(f"/api/v1/recipes/{card['id']}/")
+
+    assert response.status_code == 404
+    assert "location" not in response.headers
