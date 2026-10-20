@@ -10,17 +10,22 @@ from collections.abc import Sequence
 from uuid import UUID
 
 from sqlalchemy import (
+    ARRAY,
     ColumnElement,
     RowMapping,
+    Text,
+    Uuid,
     and_,
+    any_,
+    bindparam,
     exists,
     func,
     or_,
     select,
-    true,
 )
 from sqlalchemy.dialects.postgresql import aggregate_order_by
 from sqlalchemy.ext.asyncio import AsyncEngine
+from sqlalchemy.sql.elements import CollectionAggregate
 
 from recipe_app.domain.catalog import Diet, IngredientCatalog
 from recipe_app.domain.matching import Pantry
@@ -66,7 +71,7 @@ class PostgresRecipeRepository:
                 .mappings()
                 .one_or_none()
             )
-        return None if row is None else self._to_recipe(row)
+        return None if row is None else next(iter(self._to_recipes([row])), None)
 
     async def candidates(
         self, pantry: Pantry, filters: SearchFilters
@@ -77,37 +82,54 @@ class PostgresRecipeRepository:
         )
         async with self._engine.connect() as connection:
             rows = (await connection.execute(statement)).mappings().all()
-        found = (self._to_recipe(row) for row in rows)
-        return [recipe for recipe in found if recipe is not None]
+        return self._to_recipes(rows)
 
-    def _to_recipe(self, row: RowMapping) -> Recipe | None:
-        ingredient_ids: list[str] = row["ingredient_ids"]
-        missing = [item for item in ingredient_ids if item not in self._catalog.by_id]
-        if missing:
-            # A sync added ingredients after this process loaded its catalog; the
-            # recipe shows again after the restart that follows (ADR-0005 risk).
-            logger.warning(
-                "skipping recipe %s: ingredients %s are not in catalog %s",
-                row["id"],
-                missing,
-                self._catalog.content_hash,
+    def _to_recipes(self, rows: Sequence[RowMapping]) -> list[Recipe]:
+        """Map rows to recipes, skipping any this process can't build.
+
+        A bad row costs that recipe, never the whole request. The usual cause
+        is a sync that added ingredients after this process loaded its catalog;
+        those recipes show again after the restart that follows (ADR-0005 risk).
+        One warning per call, so a busy pod doesn't log once per recipe.
+        """
+        found: list[Recipe] = []
+        skipped: list[UUID] = []
+        missing: set[str] = set()
+        for row in rows:
+            # array_agg over no rows is NULL; the schema can't forbid that.
+            ingredient_ids: list[str] = row["ingredient_ids"] or []
+            unknown = {i for i in ingredient_ids if i not in self._catalog.by_id}
+            if not ingredient_ids or unknown:
+                skipped.append(row["id"])
+                missing |= unknown
+                continue
+            # Built directly: the sync already ran build_recipe's checks on this data.
+            found.append(
+                Recipe(
+                    id=row["id"],
+                    name=row["name"],
+                    prep_minutes=row["prep_minutes"],
+                    cook_minutes=row["cook_minutes"],
+                    ingredients=tuple(self._catalog.by_id[i] for i in ingredient_ids),
+                )
             )
-            return None
-        # Built directly: the sync already ran build_recipe's checks on this data.
-        return Recipe(
-            id=row["id"],
-            name=row["name"],
-            prep_minutes=row["prep_minutes"],
-            cook_minutes=row["cook_minutes"],
-            ingredients=tuple(self._catalog.by_id[item] for item in ingredient_ids),
-        )
+        if skipped:
+            logger.warning(
+                "skipped %d recipes catalog %s can't build "
+                "(no ingredients, or unknown ingredients %s): %s",
+                len(skipped),
+                self._catalog.content_hash,
+                sorted(missing),
+                [str(recipe_id) for recipe_id in skipped[:10]],
+            )
+        return found
 
 
 def _uses_any(ingredient_ids: frozenset[str]) -> ColumnElement[bool]:
     """Served by ix_recipe_ingredients_ingredient_id_recipe_id."""
     return recipes.c.id.in_(
         select(recipe_ingredients.c.recipe_id).where(
-            recipe_ingredients.c.ingredient_id.in_(sorted(ingredient_ids))
+            recipe_ingredients.c.ingredient_id == _any_text("have", ingredient_ids)
         )
     )
 
@@ -118,19 +140,31 @@ def _all_staples_for(out_of: frozenset[str]) -> ColumnElement[bool]:
         recipes.c.all_staples,
         ~exists().where(
             recipe_ingredients.c.recipe_id == recipes.c.id,
-            recipe_ingredients.c.ingredient_id.in_(sorted(out_of)),
+            recipe_ingredients.c.ingredient_id == _any_text("out_of", out_of),
         ),
     )
 
 
 def _filters(filters: SearchFilters) -> list[ColumnElement[bool]]:
     """The same rules as ranking.passes_filters, on the stored columns."""
-    conditions: list[ColumnElement[bool]] = [true()]
+    conditions: list[ColumnElement[bool]] = []
     if filters.diet is not None:
-        allowed = [diet.value for diet in Diet if filters.diet.allows(diet)]
-        conditions.append(recipes.c.diet.in_(allowed))
+        allowed = {diet.value for diet in Diet if filters.diet.allows(diet)}
+        conditions.append(recipes.c.diet == _any_text("diets", allowed))
     if filters.max_total_minutes is not None:
         conditions.append(recipes.c.total_minutes <= filters.max_total_minutes)
     if filters.hidden_recipe_ids:
-        conditions.append(recipes.c.id.not_in(sorted(filters.hidden_recipe_ids)))
+        hidden = bindparam(
+            "hidden", sorted(filters.hidden_recipe_ids), type_=ARRAY(Uuid)
+        )
+        conditions.append(~(recipes.c.id == any_(hidden)))
     return conditions
+
+
+def _any_text(
+    name: str, values: frozenset[str] | set[str]
+) -> CollectionAggregate[bool]:
+    """`= ANY(:name)` with one array parameter, so the SQL text stays the same
+    whatever the list length and asyncpg's prepared-statement cache keeps hitting.
+    """
+    return any_(bindparam(name, sorted(values), type_=ARRAY(Text)))
