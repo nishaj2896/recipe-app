@@ -1,5 +1,5 @@
 def main() -> None:
-    """Run the API locally: `uv run recipe-app` (see README for the keys)."""
-    import uvicorn
+    """`uv run recipe-app` serves the API; `uv run recipe-app db sync` loads data."""
+    from recipe_app.cli import main as run
 
-    uvicorn.run("recipe_app.api.app:build_app", factory=True)
+    raise SystemExit(run())
