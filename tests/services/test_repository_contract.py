@@ -1,23 +1,25 @@
-"""The RecipeRepository contract. Every adapter runs these; Task 2 adds Postgres.
+"""The RecipeRepository contract. Every adapter runs these.
 
 The seed loads at import, not in a fixture, because the Hypothesis strategies
 below need its ingredient ids when the module is collected.
 """
 
 import asyncio
-from collections.abc import Callable, Iterable
+from collections.abc import Iterator
 from uuid import UUID
 
 import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
+from sqlalchemy.ext.asyncio import create_async_engine
+from sqlalchemy.pool import NullPool
 
 from recipe_app.domain.catalog import Diet, IngredientClass
 from recipe_app.domain.matching import resolve_pantry
 from recipe_app.domain.ranking import SearchFilters, rank
-from recipe_app.domain.recipe import Recipe
 from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.memory import InMemoryRecipeRepository
+from recipe_app.infra.postgres import PostgresRecipeRepository
 from recipe_app.services.ports import RecipeRepository
 from tests.domain.factories import DATA_DIR
 
@@ -28,15 +30,19 @@ USED = sorted({item.id for recipe in SEED for item in recipe.ingredients})
 CORE_IDS = [i for i in USED if CATALOG.by_id[i].ingredient_class is not STAPLE]
 STAPLE_IDS = [i for i in USED if CATALOG.by_id[i].ingredient_class is STAPLE]
 
-ADAPTERS: list[Callable[[Iterable[Recipe]], RecipeRepository]] = [
-    InMemoryRecipeRepository,
-]
 
-
-@pytest.fixture(params=ADAPTERS, ids=lambda adapter: adapter.__name__)
-def repository(request: pytest.FixtureRequest) -> RecipeRepository:
-    adapter: Callable[[Iterable[Recipe]], RecipeRepository] = request.param
-    return adapter(SEED)
+@pytest.fixture(scope="module", params=["memory", "postgres"])
+def repository(request: pytest.FixtureRequest) -> Iterator[RecipeRepository]:
+    """Each adapter over the seed. Module scope, so Hypothesis can use it."""
+    if request.param == "memory":
+        yield InMemoryRecipeRepository(SEED)
+        return
+    url: str = request.getfixturevalue("seeded_database_url")
+    # No pool: every test step runs in its own event loop via asyncio.run, and
+    # a pooled asyncpg connection can't move between loops.
+    engine = create_async_engine(url, poolclass=NullPool)
+    yield PostgresRecipeRepository(engine, CATALOG)
+    asyncio.run(engine.dispose())
 
 
 def test_get_returns_the_recipe(repository: RecipeRepository) -> None:
@@ -60,6 +66,7 @@ def test_get_unknown_id_returns_none(repository: RecipeRepository) -> None:
     hidden=st.sets(st.sampled_from([recipe.id for recipe in SEED]), max_size=5),
 )
 def test_candidates_never_lose_a_recipe_the_ranking_would_show(
+    repository: RecipeRepository,
     have: list[str],
     out_of: list[str],
     diet: Diet | None,
@@ -75,10 +82,9 @@ def test_candidates_never_lose_a_recipe_the_ranking_would_show(
         max_total_minutes=max_total_minutes,
         hidden_recipe_ids=frozenset(hidden),
     )
-    for adapter in ADAPTERS:
-        candidates = asyncio.run(adapter(SEED).candidates(pantry, filters))
+    candidates = asyncio.run(repository.candidates(pantry, filters))
 
-        assert rank(candidates, pantry, filters) == rank(SEED, pantry, filters)
+    assert rank(candidates, pantry, filters) == rank(SEED, pantry, filters)
 
 
 def test_candidates_apply_the_filters(repository: RecipeRepository) -> None:

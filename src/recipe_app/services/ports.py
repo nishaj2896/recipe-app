@@ -1,7 +1,7 @@
 """What the services need from the outside world, as Protocols (ports).
 
-Task 1 runs on the in-memory adapter in recipe_app.infra.memory; Task 2 adds a
-Postgres one. Both must pass tests/services/test_repository_contract.py.
+The adapters are recipe_app.infra.memory (Task 1) and recipe_app.infra.postgres
+(Task 2). Both must pass tests/services/test_repository_contract.py.
 """
 
 from collections.abc import Sequence
