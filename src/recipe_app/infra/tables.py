@@ -67,8 +67,10 @@ categories = Table(
     metadata,
     Column("id", String(MAX_ID_LENGTH), primary_key=True),
     Column("name", Text, nullable=False),
-    Column("position", Integer, nullable=False, unique=True),
+    Column("position", Integer, nullable=False),
     Column("retired", Boolean, nullable=False),
+    # Checked at commit, so one sync can swap two categories' positions.
+    UniqueConstraint("position", deferrable=True, initially="DEFERRED"),
     CheckConstraint("position > 0", name="position_positive"),
     _id_is_slug(),
     _name_not_blank(),

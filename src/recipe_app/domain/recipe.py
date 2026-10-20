@@ -5,7 +5,12 @@ from collections.abc import Sequence
 from dataclasses import dataclass
 from uuid import UUID
 
-from recipe_app.domain.catalog import Diet, Ingredient, IngredientCatalog
+from recipe_app.domain.catalog import (
+    Diet,
+    Ingredient,
+    IngredientCatalog,
+    IngredientClass,
+)
 from recipe_app.domain.normalization import normalize
 
 RECIPE_FIELDS = frozenset({"id", "name", "prep_minutes", "cook_minutes", "ingredients"})
@@ -36,6 +41,14 @@ class Recipe:
         return max(
             (ingredient.diet for ingredient in self.ingredients),
             key=lambda diet: diet.rank,
+        )
+
+    @property
+    def all_staples(self) -> bool:
+        """Every ingredient is a staple, so any pantry can cook it (ADR-0003)."""
+        return all(
+            ingredient.ingredient_class is IngredientClass.STAPLE
+            for ingredient in self.ingredients
         )
 
 

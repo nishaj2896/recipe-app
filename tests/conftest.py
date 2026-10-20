@@ -1,9 +1,12 @@
 import asyncio
 import os
 from collections.abc import AsyncIterator, Callable, Iterator
+from pathlib import Path
 from uuid import uuid4
 
 import pytest
+from alembic import command
+from alembic.config import Config
 from fastapi import FastAPI
 from httpx import AsyncClient
 from sqlalchemy import make_url, text
@@ -20,6 +23,7 @@ from tests.apps import KEYS, NOW, AppFactory, client_for
 from tests.domain.factories import DATA_DIR
 
 TEST_DATABASE_URL_VARIABLE = "TEST_DATABASE_URL"
+ALEMBIC_INI = Path(__file__).parents[1] / "alembic.ini"
 
 
 @pytest.fixture(scope="session")
@@ -96,6 +100,16 @@ def make_empty_database() -> Iterator[Callable[[], str]]:
 def empty_database_url(make_empty_database: Callable[[], str]) -> str:
     """The URL of a new, empty database, dropped after the test."""
     return make_empty_database()
+
+
+@pytest.fixture
+def migrated_database_url(empty_database_url: str) -> str:
+    """A new database with every migration applied, dropped after the test."""
+    config = Config(ALEMBIC_INI)
+    config.attributes["url"] = empty_database_url
+    config.attributes["configure_logger"] = False
+    command.upgrade(config, "head")
+    return empty_database_url
 
 
 async def _admin(url: str, statement: str) -> None:

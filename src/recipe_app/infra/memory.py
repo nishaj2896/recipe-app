@@ -5,7 +5,6 @@ from collections.abc import Iterable, Sequence
 from types import MappingProxyType
 from uuid import UUID
 
-from recipe_app.domain.catalog import IngredientClass
 from recipe_app.domain.matching import Pantry
 from recipe_app.domain.ranking import SearchFilters, passes_filters
 from recipe_app.domain.recipe import Recipe
@@ -24,10 +23,7 @@ class InMemoryRecipeRepository:
             by_id[recipe.id] = recipe
             for ingredient in recipe.ingredients:
                 by_ingredient[ingredient.id].append(recipe)
-            if all(
-                item.ingredient_class is IngredientClass.STAPLE
-                for item in recipe.ingredients
-            ):
+            if recipe.all_staples:
                 all_staples.append(recipe)
         self._by_id = MappingProxyType(by_id)
         self._by_ingredient = MappingProxyType(
