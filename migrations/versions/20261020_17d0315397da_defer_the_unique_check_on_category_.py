@@ -1,7 +1,7 @@
 """defer the unique check on category positions
 
 Revision ID: 17d0315397da
-Revises: b9c084a51e74
+Revises: 8134395b3d5f
 Create Date: 2026-10-20 19:24:41.055949
 """
 
@@ -10,7 +10,7 @@ from collections.abc import Sequence
 from alembic import op
 
 revision: str = "17d0315397da"
-down_revision: str | Sequence[str] | None = "b9c084a51e74"
+down_revision: str | Sequence[str] | None = "8134395b3d5f"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 
