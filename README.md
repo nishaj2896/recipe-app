@@ -36,7 +36,16 @@ uv run pytest                # should pass
 
 ## Running the API
 
-The API signs its "generate more" cursors, so it needs a signing key before it starts. For local use, make a throwaway one:
+The API reads recipes and the ingredient catalog from PostgreSQL, so start the local database, create the tables and load the data files first:
+
+```bash
+docker compose up -d --wait
+export DATABASE_URL=postgresql+asyncpg://recipe_app:recipe_app@localhost:5433/recipe_app
+uv run alembic upgrade head
+uv run recipe-app db sync
+```
+
+It also signs its "generate more" cursors, so it needs a signing key before it starts. For local use, make a throwaway one:
 
 ```bash
 export CURSOR_ACTIVE_KID=dev
@@ -50,9 +59,10 @@ Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` wit
 |---|---|
 | `CURSOR_SIGNING_KEYS` | JSON object of key id to a base64url key of at least 32 bytes. Every key verifies cursors |
 | `CURSOR_ACTIVE_KID` | The key id that signs new cursors |
-| `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and `recipes.v1.toml` (default `./data`) |
+| `DATABASE_URL` | `postgresql+asyncpg://` URL of the database the sync filled |
+| `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and `recipes.v1.toml` (default `./data`); only `recipe-app db sync` reads it |
 
-The app refuses to start if a key is missing or too short, or if a data file breaks a rule. In production the keys come from the secret store, never from the repo or the logs.
+The app refuses to start if a key is missing or too short, if `DATABASE_URL` is missing, or if the database has never been synced. It loads the catalog once at startup, so after a sync, restart the app to pick up the new catalog. In production the keys come from the secret store, never from the repo or the logs.
 
 | Endpoint | What it does |
 |---|---|

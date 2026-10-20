@@ -1,7 +1,8 @@
 """Reading the data files; parsing and every check live in the domain.
 
 There is no default directory: the files ship next to the code, not inside
-the wheel, so the composition root passes the directory from settings.
+the wheel, so `recipe-app db sync` passes the directory from settings. The
+server itself reads the database, not these files (ADR-0005 rule 1).
 """
 
 from pathlib import Path
