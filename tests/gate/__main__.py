@@ -3,7 +3,8 @@
     uv run python -m tests.gate load     # sync 50,000 recipes into DATABASE_URL
     uv run python -m tests.gate explain  # EXPLAIN ANALYZE every gate search
 
-Point DATABASE_URL at a throwaway database: `load` replaces its recipes.
+Point DATABASE_URL at an empty, migrated throwaway database (`alembic
+upgrade head`): the sync behind `load` refuses to delete recipes already there.
 """
 
 import argparse
