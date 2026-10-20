@@ -7,21 +7,22 @@ loaded, never through a second model of a recipe.
 
 import logging
 from collections.abc import Sequence
+from typing import Any
 from uuid import UUID
 
 from sqlalchemy import (
     ARRAY,
     ColumnElement,
     RowMapping,
+    Select,
     Text,
     Uuid,
-    and_,
     any_,
     bindparam,
     exists,
     func,
-    or_,
     select,
+    union_all,
 )
 from sqlalchemy.dialects.postgresql import aggregate_order_by
 from sqlalchemy.ext.asyncio import AsyncEngine
@@ -76,12 +77,12 @@ class PostgresRecipeRepository:
     async def candidates(
         self, pantry: Pantry, filters: SearchFilters
     ) -> Sequence[Recipe]:
-        statement = _RECIPE.where(
-            or_(_uses_any(pantry.have), _all_staples_for(pantry.out_of)),
-            *_filters(filters),
-        )
         async with self._engine.connect() as connection:
-            rows = (await connection.execute(statement)).mappings().all()
+            rows = (
+                (await connection.execute(candidates_query(pantry, filters)))
+                .mappings()
+                .all()
+            )
         return self._to_recipes(rows)
 
     def _to_recipes(self, rows: Sequence[RowMapping]) -> list[Recipe]:
@@ -125,21 +126,39 @@ class PostgresRecipeRepository:
         return found
 
 
-def _uses_any(ingredient_ids: frozenset[str]) -> ColumnElement[bool]:
-    """Served by ix_recipe_ingredients_ingredient_id_recipe_id."""
-    return recipes.c.id.in_(
-        select(recipe_ingredients.c.recipe_id).where(
-            recipe_ingredients.c.ingredient_id == _any_text("have", ingredient_ids)
-        )
+def candidates_query(pantry: Pantry, filters: SearchFilters) -> Select[Any]:
+    """The search's SQL; public so the Task 2 gate can EXPLAIN exactly this.
+
+    The two ways in are a UNION of ids, not an OR. Given an OR, Postgres
+    tested both conditions against every recipe (issue #34); given a UNION,
+    each side looks up its own index.
+    """
+    return _RECIPE.where(
+        recipes.c.id.in_(
+            union_all(_uses_any(pantry.have), _all_staples_for(pantry.out_of))
+        ),
+        *_filters(filters),
     )
 
 
-def _all_staples_for(out_of: frozenset[str]) -> ColumnElement[bool]:
-    """All staples, and none of them unticked (ADR-0003 rule 3)."""
-    return and_(
-        recipes.c.all_staples,
+def _uses_any(ingredient_ids: frozenset[str]) -> Select[tuple[UUID]]:
+    """Served by ix_recipe_ingredients_ingredient_id_recipe_id."""
+    return select(recipe_ingredients.c.recipe_id).where(
+        recipe_ingredients.c.ingredient_id == _any_text("have", ingredient_ids)
+    )
+
+
+def _all_staples_for(out_of: frozenset[str]) -> Select[tuple[UUID]]:
+    """All staples, and none of them unticked (ADR-0003 rule 3).
+
+    Served by ix_recipes_all_staples. Its own alias, so the NOT EXISTS
+    correlates here and not with the outer query's recipes.
+    """
+    staples_only = recipes.alias("staples_only")
+    return select(staples_only.c.id).where(
+        staples_only.c.all_staples,
         ~exists().where(
-            recipe_ingredients.c.recipe_id == recipes.c.id,
+            recipe_ingredients.c.recipe_id == staples_only.c.id,
             recipe_ingredients.c.ingredient_id == _any_text("out_of", out_of),
         ),
     )

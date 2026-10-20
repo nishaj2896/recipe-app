@@ -24,6 +24,7 @@ from sqlalchemy import (
     Text,
     UniqueConstraint,
     Uuid,
+    text,
 )
 
 from recipe_app.domain.catalog import (
@@ -136,6 +137,8 @@ recipes = Table(
     ),
     CheckConstraint(_one_of("diet", Diet), name="diet_known"),
     _name_not_blank(),
+    # The search's other way in: the few recipes any pantry can cook.
+    Index("ix_recipes_all_staples", "id", postgresql_where=text("all_staples")),
 )
 
 recipe_ingredients = Table(
