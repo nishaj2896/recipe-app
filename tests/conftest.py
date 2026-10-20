@@ -1,6 +1,7 @@
 import asyncio
 import os
 from collections.abc import AsyncIterator, Callable, Iterator
+from datetime import UTC, datetime
 from pathlib import Path
 from uuid import uuid4
 
@@ -18,6 +19,7 @@ from recipe_app.domain.cursor import SigningKeys
 from recipe_app.domain.recipe import Recipe
 from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.memory import InMemoryRecipeRepository
+from recipe_app.infra.sync import sync
 from recipe_app.services.search import RecipeService
 from tests.apps import KEYS, NOW, AppFactory, client_for
 from tests.domain.factories import DATA_DIR
@@ -71,29 +73,20 @@ async def client(make_app: AppFactory) -> AsyncIterator[AsyncClient]:
 
 @pytest.fixture
 def make_empty_database() -> Iterator[Callable[[], str]]:
-    """Creates new, empty databases on demand and drops them all after the test.
-
-    Skips when TEST_DATABASE_URL isn't set, except in CI, where a skipped
-    database test would hide a broken migration.
-    """
-    server = os.environ.get(TEST_DATABASE_URL_VARIABLE)
-    if not server:
-        if os.environ.get("CI"):
-            pytest.fail(f"{TEST_DATABASE_URL_VARIABLE} must be set in CI")
-        pytest.skip(f"set {TEST_DATABASE_URL_VARIABLE} to run the database tests")
+    """Creates new, empty databases on demand and drops them all after the test."""
+    server = _database_server()
     created: list[str] = []
 
     def make() -> str:
-        name = f"test_{uuid4().hex[:12]}"
-        asyncio.run(_admin(server, f'CREATE DATABASE "{name}"'))
-        created.append(name)
-        return make_url(server).set(database=name).render_as_string(hide_password=False)
+        url = _create_database(server)
+        created.append(url)
+        return url
 
     try:
         yield make
     finally:
-        for name in created:
-            asyncio.run(_admin(server, f'DROP DATABASE "{name}" WITH (FORCE)'))
+        for url in created:
+            _drop_database(server, url)
 
 
 @pytest.fixture
@@ -105,11 +98,63 @@ def empty_database_url(make_empty_database: Callable[[], str]) -> str:
 @pytest.fixture
 def migrated_database_url(empty_database_url: str) -> str:
     """A new database with every migration applied, dropped after the test."""
+    _migrate(empty_database_url)
+    return empty_database_url
+
+
+@pytest.fixture(scope="session")
+def seeded_database_url(
+    real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]
+) -> Iterator[str]:
+    """One migrated database holding the seed, shared by tests that only read it."""
+    server = _database_server()
+    url = _create_database(server)
+    try:
+        _migrate(url)
+        asyncio.run(_sync_seed(url, real_catalog, seed))
+        yield url
+    finally:
+        _drop_database(server, url)
+
+
+def _database_server() -> str:
+    """TEST_DATABASE_URL; skips without it, except in CI, where a skipped
+    database test would hide a broken migration.
+    """
+    server = os.environ.get(TEST_DATABASE_URL_VARIABLE)
+    if not server:
+        if os.environ.get("CI"):
+            pytest.fail(f"{TEST_DATABASE_URL_VARIABLE} must be set in CI")
+        pytest.skip(f"set {TEST_DATABASE_URL_VARIABLE} to run the database tests")
+    return server
+
+
+def _create_database(server: str) -> str:
+    name = f"test_{uuid4().hex[:12]}"
+    asyncio.run(_admin(server, f'CREATE DATABASE "{name}"'))
+    return make_url(server).set(database=name).render_as_string(hide_password=False)
+
+
+def _drop_database(server: str, url: str) -> None:
+    name = make_url(url).database
+    asyncio.run(_admin(server, f'DROP DATABASE "{name}" WITH (FORCE)'))
+
+
+def _migrate(url: str) -> None:
     config = Config(ALEMBIC_INI)
-    config.attributes["url"] = empty_database_url
+    config.attributes["url"] = url
     config.attributes["configure_logger"] = False
     command.upgrade(config, "head")
-    return empty_database_url
+
+
+async def _sync_seed(
+    url: str, catalog: IngredientCatalog, recipes: tuple[Recipe, ...]
+) -> None:
+    engine = create_async_engine(url)
+    try:
+        await sync(engine, catalog, recipes, now=datetime.now(UTC))
+    finally:
+        await engine.dispose()
 
 
 async def _admin(url: str, statement: str) -> None:
