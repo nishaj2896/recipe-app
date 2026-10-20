@@ -16,12 +16,27 @@ from recipe_app.infra.config import database_url_from_env
 from recipe_app.infra.tables import metadata
 
 config = context.config
-if config.config_file_name is not None:
+# Tests pass configure_logger=False so a migration doesn't reset pytest's logging.
+if config.config_file_name is not None and config.attributes.get(
+    "configure_logger", True
+):
     fileConfig(config.config_file_name, disable_existing_loggers=False)
+
+# The plugin makes autogenerate and `alembic check` notice a CHECK constraint
+# that was added or dropped (matched by name). A changed expression under the
+# same name is caught by tests/infra/test_migrations.py instead.
+AUTOGENERATE_PLUGINS = [
+    "alembic.autogenerate.*",
+    "alembic.ext.checkconstraint_byname",
+]
 
 
 def run_migrations(connection: Connection) -> None:
-    context.configure(connection=connection, target_metadata=metadata)
+    context.configure(
+        connection=connection,
+        target_metadata=metadata,
+        autogenerate_plugins=AUTOGENERATE_PLUGINS,
+    )
     with context.begin_transaction():
         context.run_migrations()
 

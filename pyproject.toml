@@ -64,7 +64,7 @@ docstring-code-format = true
 [tool.mypy]
 strict = true
 plugins = ["pydantic.mypy"]
-files = ["src", "tests"]
+files = ["src", "tests", "migrations"]
 warn_unreachable = true
 
 

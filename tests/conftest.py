@@ -1,6 +1,6 @@
 import asyncio
 import os
-from collections.abc import AsyncIterator, Iterator
+from collections.abc import AsyncIterator, Callable, Iterator
 from uuid import uuid4
 
 import pytest
@@ -66,8 +66,8 @@ async def client(make_app: AppFactory) -> AsyncIterator[AsyncClient]:
 
 
 @pytest.fixture
-def empty_database_url() -> Iterator[str]:
-    """The URL of a new, empty database, dropped after the test.
+def make_empty_database() -> Iterator[Callable[[], str]]:
+    """Creates new, empty databases on demand and drops them all after the test.
 
     Skips when TEST_DATABASE_URL isn't set, except in CI, where a skipped
     database test would hide a broken migration.
@@ -77,12 +77,25 @@ def empty_database_url() -> Iterator[str]:
         if os.environ.get("CI"):
             pytest.fail(f"{TEST_DATABASE_URL_VARIABLE} must be set in CI")
         pytest.skip(f"set {TEST_DATABASE_URL_VARIABLE} to run the database tests")
-    name = f"test_{uuid4().hex[:12]}"
-    asyncio.run(_admin(server, f'CREATE DATABASE "{name}"'))
+    created: list[str] = []
+
+    def make() -> str:
+        name = f"test_{uuid4().hex[:12]}"
+        asyncio.run(_admin(server, f'CREATE DATABASE "{name}"'))
+        created.append(name)
+        return make_url(server).set(database=name).render_as_string(hide_password=False)
+
     try:
-        yield make_url(server).set(database=name).render_as_string(hide_password=False)
+        yield make
     finally:
-        asyncio.run(_admin(server, f'DROP DATABASE "{name}" WITH (FORCE)'))
+        for name in created:
+            asyncio.run(_admin(server, f'DROP DATABASE "{name}" WITH (FORCE)'))
+
+
+@pytest.fixture
+def empty_database_url(make_empty_database: Callable[[], str]) -> str:
+    """The URL of a new, empty database, dropped after the test."""
+    return make_empty_database()
 
 
 async def _admin(url: str, statement: str) -> None:
