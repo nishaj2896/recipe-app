@@ -15,6 +15,22 @@ jobs:
     name: lint, types, tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: recipe_app
+          POSTGRES_PASSWORD: recipe_app
+          POSTGRES_DB: recipe_app
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U recipe_app -d recipe_app"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 15
+    env:
+      TEST_DATABASE_URL: postgresql+asyncpg://recipe_app:recipe_app@localhost:5432/recipe_app
     steps:
       # Actions are pinned to a full commit SHA, because a tag can be moved to different code.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

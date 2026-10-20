@@ -1,8 +1,13 @@
-from collections.abc import AsyncIterator
+import asyncio
+import os
+from collections.abc import AsyncIterator, Callable, Iterator
+from uuid import uuid4
 
 import pytest
 from fastapi import FastAPI
 from httpx import AsyncClient
+from sqlalchemy import make_url, text
+from sqlalchemy.ext.asyncio import create_async_engine
 
 from recipe_app.api.app import create_app
 from recipe_app.domain.catalog import IngredientCatalog
@@ -13,6 +18,8 @@ from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.services.search import RecipeService
 from tests.apps import KEYS, NOW, AppFactory, client_for
 from tests.domain.factories import DATA_DIR
+
+TEST_DATABASE_URL_VARIABLE = "TEST_DATABASE_URL"
 
 
 @pytest.fixture(scope="session")
@@ -56,3 +63,46 @@ def make_app(real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]) -> AppFa
 async def client(make_app: AppFactory) -> AsyncIterator[AsyncClient]:
     async with client_for(make_app()) as c:
         yield c
+
+
+@pytest.fixture
+def make_empty_database() -> Iterator[Callable[[], str]]:
+    """Creates new, empty databases on demand and drops them all after the test.
+
+    Skips when TEST_DATABASE_URL isn't set, except in CI, where a skipped
+    database test would hide a broken migration.
+    """
+    server = os.environ.get(TEST_DATABASE_URL_VARIABLE)
+    if not server:
+        if os.environ.get("CI"):
+            pytest.fail(f"{TEST_DATABASE_URL_VARIABLE} must be set in CI")
+        pytest.skip(f"set {TEST_DATABASE_URL_VARIABLE} to run the database tests")
+    created: list[str] = []
+
+    def make() -> str:
+        name = f"test_{uuid4().hex[:12]}"
+        asyncio.run(_admin(server, f'CREATE DATABASE "{name}"'))
+        created.append(name)
+        return make_url(server).set(database=name).render_as_string(hide_password=False)
+
+    try:
+        yield make
+    finally:
+        for name in created:
+            asyncio.run(_admin(server, f'DROP DATABASE "{name}" WITH (FORCE)'))
+
+
+@pytest.fixture
+def empty_database_url(make_empty_database: Callable[[], str]) -> str:
+    """The URL of a new, empty database, dropped after the test."""
+    return make_empty_database()
+
+
+async def _admin(url: str, statement: str) -> None:
+    # CREATE/DROP DATABASE can't run inside a transaction, hence AUTOCOMMIT.
+    engine = create_async_engine(url, isolation_level="AUTOCOMMIT")
+    try:
+        async with engine.connect() as connection:
+            await connection.execute(text(statement))
+    finally:
+        await engine.dispose()

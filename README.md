@@ -78,6 +78,9 @@ Every error is an [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) `applicatio
 | Start the local database | `docker compose up -d --wait` |
 | Stop it (keeps the data) | `docker compose down` |
 | Wipe it | `docker compose down -v` |
+| Apply migrations | `uv run alembic upgrade head` (needs `DATABASE_URL`) |
+| New migration (a draft: read it before committing) | `uv run alembic revision --autogenerate -m "<what changed>"` |
+| Run the database tests | `TEST_DATABASE_URL=postgresql+asyncpg://recipe_app:recipe_app@localhost:5433/recipe_app uv run pytest` |
 
 Point the app at it with `DATABASE_URL=postgresql+asyncpg://recipe_app:recipe_app@localhost:5433/recipe_app`.
 
