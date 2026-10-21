@@ -1,6 +1,14 @@
 import { animate, m, type PanInfo, useMotionValue, useTransform } from "motion/react";
-import { type ReactNode, type Ref, useImperativeHandle, useRef, useState } from "react";
+import {
+  type ReactNode,
+  type Ref,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 
+import { useAfterPaint } from "../motion/afterPaint";
 import { haptic } from "../motion/haptics";
 import { usePrefersReducedMotion } from "../motion/reducedMotion";
 import { COMMIT_SHARE, type Direction, swipeOutcome } from "./swipe";
@@ -41,6 +49,32 @@ export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
   const [armed, setArmed] = useState<Direction | null>(null);
   const leaving = useRef(false);
   const reduceMotion = usePrefersReducedMotion();
+  // Drag measures the page as it mounts, which forces the browser to lay out
+  // everything that mounted with the card at once. Waiting a frame lets that
+  // layout happen on its own.
+  const draggable = useAfterPaint();
+
+  // The card is gone once its flight ends, or once it unmounts mid-flight
+  // (say, new filters deal a new deck): either way the deck hears it once.
+  const flight = useRef<{ stop: () => void } | null>(null);
+  const gone = useRef(false);
+  const latestOnGone = useRef(onGone);
+  useEffect(() => {
+    latestOnGone.current = onGone;
+  });
+  function finish() {
+    if (gone.current) return;
+    gone.current = true;
+    latestOnGone.current();
+  }
+  useEffect(
+    () => () => {
+      if (!leaving.current) return;
+      flight.current?.stop();
+      finish();
+    },
+    [],
+  );
 
   function leave(direction: Direction, velocity = 0) {
     if (leaving.current) return;
@@ -49,18 +83,20 @@ export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
     onSwipe(direction);
     // With reduce motion the card doesn't fly; the next one just appears.
     if (reduceMotion) {
-      onGone();
+      finish();
       return;
     }
     const width = card.current?.offsetWidth ?? 360;
     const distance = (direction === "right" ? 1 : -1) * (window.innerWidth / 2 + width);
-    void animate(x, distance, {
+    const animation = animate(x, distance, {
       type: "spring",
       stiffness: 260,
       damping: 32,
       velocity,
       restDelta: 20,
-    }).then(onGone);
+    });
+    flight.current = animation;
+    void animation.then(finish);
   }
 
   useImperativeHandle(ref, () => ({
@@ -98,7 +134,7 @@ export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
       className={styles.card}
       data-armed={armed ?? undefined}
       aria-label={label}
-      drag="x"
+      drag={draggable ? "x" : false}
       dragMomentum={false}
       onDrag={onDrag}
       onDragEnd={onDragEnd}

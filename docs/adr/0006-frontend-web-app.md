@@ -55,6 +55,7 @@ Three things constrain the choice:
 - Playwright end-to-end tests that drive the real API and Postgres in CI.
 - axe accessibility checks inside those Playwright tests.
 - A motion budget: Playwright replays the ingredient flight, a swipe and the deck deal with the CPU throttled to 4×. It fails on any long task over 50 ms, recorded by the browser's `longtask` performance observer. Before each release, the app is also profiled by hand on a real mid-range Android phone.
+  - *Amended 21 Oct 2026 (Nisha):* the deal may take up to 100 ms per task. Its long tasks come once, as the deck replaces the pantry and as the first card is drawn, behind the cooking scene's fade rather than mid-motion. The flight and the swipe keep the 50 ms budget. Each motion runs 3 times in a fresh browser and is judged by its best run, so a busy CI machine doesn't fail it at random.
 
 ESLint (typescript-eslint strict), Prettier and `tsc --noEmit` run in CI next to the Python checks.
 

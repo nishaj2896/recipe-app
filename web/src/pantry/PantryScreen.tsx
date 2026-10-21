@@ -129,8 +129,16 @@ export function PantryScreen() {
       removeFromPantry(ingredient.id);
       return;
     }
-    addToPantry([ingredient.id]);
-    if (art) launch(art, ingredient.id, ingredient.category.id);
+    if (!art) {
+      addToPantry([ingredient.id]);
+      return;
+    }
+    launch(art, ingredient.id, ingredient.category.id);
+    // The flight starts this frame; the pantry re-renders in the next task,
+    // so the two never block one frame together (ADR-0006 rule 10).
+    window.setTimeout(() => {
+      addToPantry([ingredient.id]);
+    });
   }
 
   // Staples are named too, so "onions" is answered rather than ignored.

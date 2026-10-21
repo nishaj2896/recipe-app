@@ -111,6 +111,8 @@ The web app lives in `web/`. Run these from that folder, after `npm ci`:
 | Lint, type check, check formatting | `npm run lint`, `npm run typecheck`, `npm run format:check` |
 | Regenerate the API types after changing the API | `npm run api:generate` (commit `openapi.json` and `src/api/schema.d.ts`) |
 | Build for production | `npm run build` |
+| Install the browser the end-to-end tests use (once) | `npx playwright install --with-deps chromium` |
+| Run the end-to-end, accessibility and motion tests (the frontend gate) | `npm run e2e` (needs `DATABASE_URL` of a migrated, synced database; starts the API and the built app itself) |
 
 ## Project layout
 

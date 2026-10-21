@@ -13,6 +13,8 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    // e2e/ holds the Playwright tests, which run against the real API instead.
+    include: ["src/**/*.test.{ts,tsx}"],
     globals: true,
     setupFiles: ["./src/test/setup.ts"],
     // tokens.test.ts reads the token file as text, so it must not be stubbed out.

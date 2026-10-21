@@ -1,10 +1,11 @@
 import { AnimatePresence, m } from "motion/react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router";
 
 import type { RecipeCard } from "../api/client";
 import { useCatalog } from "../api/queries";
 import { Sheet } from "../app/Sheet";
+import { useAfterPaint } from "../motion/afterPaint";
 import { greetingFor } from "../pantry/greeting";
 import { RecipeDetail } from "../recipe/RecipeDetail";
 import { useDevice } from "../store/device";
@@ -27,6 +28,15 @@ interface Swipe {
 
 /** Cards drawn under the top one, to show the deck's depth. */
 const STACK = 3;
+
+/**
+ * Shows its children from the second frame on. A fresh deal draws the top
+ * card first and the cards under it a frame later, so the browser never lays
+ * out the whole stack in one go (ADR-0006 rule 10).
+ */
+function AfterFirstPaint({ children }: { children: ReactNode }) {
+  return useAfterPaint() ? children : null;
+}
 
 /** The swipe deck: right to save, left to skip, one deck of 20 at a time. */
 export function DeckScreen() {
@@ -318,22 +328,24 @@ export function DeckScreen() {
           {current ? (
             <>
               <div className={styles.stack}>
-                {remaining
-                  .slice(1, STACK)
-                  .reverse()
-                  .map((card) => {
-                    const depth = remaining.indexOf(card);
-                    return (
-                      <m.div
-                        key={card.id}
-                        className={styles.under}
-                        aria-hidden="true"
-                        animate={{ scale: 1 - depth * 0.05, y: depth * 16 }}
-                      >
-                        <RecipeFace card={card} categories={categories} />
-                      </m.div>
-                    );
-                  })}
+                <AfterFirstPaint key={dealKey}>
+                  {remaining
+                    .slice(1, STACK)
+                    .reverse()
+                    .map((card) => {
+                      const depth = remaining.indexOf(card);
+                      return (
+                        <m.div
+                          key={card.id}
+                          className={styles.under}
+                          aria-hidden="true"
+                          animate={{ scale: 1 - depth * 0.05, y: depth * 16 }}
+                        >
+                          <RecipeFace card={card} categories={categories} />
+                        </m.div>
+                      );
+                    })}
+                </AfterFirstPaint>
                 <SwipeCard
                   key={current.id}
                   ref={top}
