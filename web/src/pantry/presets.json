@@ -1,0 +1,84 @@
+{
+  "popular": [
+    "potato",
+    "milk",
+    "paneer",
+    "egg",
+    "peas",
+    "basmati-rice",
+    "spinach",
+    "chicken",
+    "curd",
+    "carrot",
+    "cauliflower",
+    "mushroom",
+    "chickpeas",
+    "toor-dal",
+    "tofu",
+    "cucumber",
+    "banana",
+    "prawns"
+  ],
+  "quick_starts": [
+    {
+      "id": "indian-basics",
+      "name": "Indian basics",
+      "ingredient_ids": [
+        "potato",
+        "basmati-rice",
+        "toor-dal",
+        "moong-dal",
+        "curd",
+        "paneer",
+        "peas",
+        "spinach",
+        "whole-wheat-flour",
+        "cauliflower",
+        "chickpeas",
+        "gram-flour"
+      ]
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "ingredient_ids": [
+        "egg",
+        "milk",
+        "white-bread",
+        "banana",
+        "rolled-oats",
+        "curd",
+        "semolina",
+        "potato"
+      ]
+    },
+    {
+      "id": "student",
+      "name": "Student kitchen",
+      "ingredient_ids": [
+        "egg",
+        "pasta",
+        "hakka-noodles",
+        "white-bread",
+        "potato",
+        "rice",
+        "processed-cheese",
+        "peas"
+      ]
+    },
+    {
+      "id": "vegan",
+      "name": "Vegan",
+      "ingredient_ids": [
+        "tofu",
+        "chickpeas",
+        "spinach",
+        "oat-milk",
+        "basmati-rice",
+        "masoor-dal",
+        "mushroom",
+        "potato"
+      ]
+    }
+  ]
+}

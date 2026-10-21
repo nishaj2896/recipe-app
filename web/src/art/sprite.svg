@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+ <!-- Drawn 3D-style ingredient art (ADR-0006 rule 8). Rendered once by ArtSprite; IngredientArt draws a symbol with <use>. -->
+ <defs>
+  <radialGradient id="art-gMilk" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#e9eef8"/><stop offset="1" stop-color="#9aa7c4"/></radialGradient>
+  <linearGradient id="art-gGlassB" x1="0" x2="1"><stop offset="0" stop-color="#cfe6ff" stop-opacity=".9"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".35"/><stop offset="1" stop-color="#9fc4f0" stop-opacity=".8"/></linearGradient>
+  <linearGradient id="art-gCap" x1="0" x2="1"><stop offset="0" stop-color="#2f7dff"/><stop offset=".5" stop-color="#7fb2ff"/><stop offset="1" stop-color="#1a4fc2"/></linearGradient>
+  <radialGradient id="art-gPotato" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#f6d59a"/><stop offset=".6" stop-color="#d9a560"/><stop offset="1" stop-color="#8e5f2a"/></radialGradient>
+  <radialGradient id="art-gTomato" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ff9a8a"/><stop offset=".5" stop-color="#ff3d3d"/><stop offset="1" stop-color="#9c0f1e"/></radialGradient>
+  <radialGradient id="art-gLeaf" cx=".4" cy=".3" r=".9"><stop offset="0" stop-color="#9dffb0"/><stop offset=".6" stop-color="#2fbf5b"/><stop offset="1" stop-color="#0f6b2c"/></radialGradient>
+  <radialGradient id="art-gEgg" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#fff8ee"/><stop offset=".6" stop-color="#f3dcc0"/><stop offset="1" stop-color="#b9906a"/></radialGradient>
+  <radialGradient id="art-gPea" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#d8ffa0"/><stop offset=".6" stop-color="#6fd23c"/><stop offset="1" stop-color="#2d7a12"/></radialGradient>
+  <linearGradient id="art-gPaneerT" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf5"/><stop offset="1" stop-color="#efe6cf"/></linearGradient>
+  <linearGradient id="art-gPaneerS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8dcbd"/><stop offset="1" stop-color="#b8a67c"/></linearGradient>
+  <radialGradient id="art-gOnion" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffb3d9"/><stop offset=".55" stop-color="#c2408a"/><stop offset="1" stop-color="#5e1043"/></radialGradient>
+  <radialGradient id="art-gChili" cx=".3" cy=".3" r=".9"><stop offset="0" stop-color="#ff9a7a"/><stop offset=".5" stop-color="#ff2d3d"/><stop offset="1" stop-color="#8a0a1a"/></radialGradient>
+  <radialGradient id="art-gRice" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d7d2c4"/></radialGradient>
+  <radialGradient id="art-gSpin" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#8dffb8"/><stop offset=".6" stop-color="#18a14f"/><stop offset="1" stop-color="#05501f"/></radialGradient>
+
+  <symbol id="art-milk" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="93" rx="24" ry="4" fill="#000" opacity=".35"/>
+   <path d="M38 22h24v10c0 4 10 10 10 20v34c0 5-4 8-9 8H37c-5 0-9-3-9-8V52c0-10 10-16 10-20z" fill="url(#art-gGlassB)"/>
+   <path d="M30 56h40v30c0 5-4 8-9 8H39c-5 0-9-3-9-8z" fill="url(#art-gMilk)"/>
+   <rect x="36" y="10" width="28" height="14" rx="5" fill="url(#art-gCap)"/>
+   <rect x="34" y="62" width="32" height="16" rx="4" fill="#2f7dff" opacity=".85"/>
+   <text x="50" y="74" font-family="Unbounded Variable, Unbounded, sans-serif" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">MILK</text>
+   <path d="M34 40c1-4 5-7 6-10" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".8"/>
+   <rect x="33" y="52" width="4" height="34" rx="2" fill="#fff" opacity=".55"/>
+  </symbol>
+  <symbol id="art-potato" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="30" ry="5" fill="#000" opacity=".35"/>
+   <path d="M18 54c0-20 18-30 36-28s30 12 28 30-18 28-36 26-28-10-28-28z" fill="url(#art-gPotato)"/>
+   <circle cx="40" cy="48" r="2.2" fill="#8e5f2a"/><circle cx="60" cy="60" r="2" fill="#8e5f2a"/><circle cx="66" cy="44" r="1.6" fill="#8e5f2a"/>
+   <ellipse cx="38" cy="40" rx="10" ry="5" fill="#fff" opacity=".35" transform="rotate(-20 38 40)"/>
+  </symbol>
+  <symbol id="art-tomato" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="28" ry="5" fill="#000" opacity=".35"/>
+   <circle cx="50" cy="56" r="30" fill="url(#art-gTomato)"/>
+   <path d="M50 30l6-8 2 9 9-3-6 8 8 4-10 1-9 4-9-4-10-1 8-4-6-8 9 3 2-9z" fill="url(#art-gLeaf)"/>
+   <ellipse cx="38" cy="46" rx="9" ry="5" fill="#fff" opacity=".45" transform="rotate(-30 38 46)"/>
+  </symbol>
+  <symbol id="art-egg" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="22" ry="4" fill="#000" opacity=".35"/>
+   <path d="M50 14c16 0 28 26 28 44S66 88 50 88 22 76 22 58s12-44 28-44z" fill="url(#art-gEgg)"/>
+   <ellipse cx="40" cy="38" rx="6" ry="11" fill="#fff" opacity=".6" transform="rotate(20 40 38)"/>
+  </symbol>
+  <symbol id="art-peas" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="86" rx="32" ry="5" fill="#000" opacity=".3"/>
+   <path d="M12 58c14-22 52-30 78-18-10 22-50 36-78 18z" fill="url(#art-gLeaf)"/>
+   <circle cx="34" cy="54" r="9" fill="url(#art-gPea)"/><circle cx="52" cy="50" r="9.5" fill="url(#art-gPea)"/><circle cx="70" cy="46" r="9" fill="url(#art-gPea)"/>
+   <path d="M12 58c20 6 50 0 78-18" stroke="#0f6b2c" stroke-width="2.5" fill="none"/>
+  </symbol>
+  <symbol id="art-paneer" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="30" ry="5" fill="#000" opacity=".35"/>
+   <path d="M20 40l30-14 30 14-30 14z" fill="url(#art-gPaneerT)"/>
+   <path d="M20 40v30l30 14V54z" fill="url(#art-gPaneerS)"/>
+   <path d="M80 40v30L50 84V54z" fill="#d4c497"/>
+   <circle cx="34" cy="60" r="2" fill="#b8a67c"/><circle cx="62" cy="66" r="2.4" fill="#b8a67c"/><circle cx="46" cy="38" r="2" fill="#e3d6b2"/>
+  </symbol>
+  <symbol id="art-onion" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="26" ry="5" fill="#000" opacity=".35"/>
+   <path d="M50 18c6 10 30 22 30 42 0 16-14 26-30 26S20 76 20 60c0-20 24-32 30-42z" fill="url(#art-gOnion)"/>
+   <path d="M50 22c-4 14-8 40 0 62M50 22c4 14 8 40 0 62" stroke="#ffd1ea" stroke-width="1.5" fill="none" opacity=".5"/>
+   <ellipse cx="38" cy="52" rx="6" ry="11" fill="#fff" opacity=".35" transform="rotate(15 38 52)"/>
+  </symbol>
+  <symbol id="art-chili" viewBox="0 0 100 100">
+   <ellipse cx="52" cy="86" rx="30" ry="4" fill="#000" opacity=".3"/>
+   <path d="M24 30c4 30 24 46 58 50 4 0 4-4 0-6-22-6-34-22-40-44z" fill="url(#art-gChili)"/>
+   <path d="M24 30c-4-6 2-14 10-10l8 0c-2 4-8 6-18 10z" fill="url(#art-gLeaf)"/>
+   <path d="M34 42c6 14 18 24 34 30" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".45"/>
+  </symbol>
+  <symbol id="art-rice" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="32" ry="5" fill="#000" opacity=".35"/>
+   <ellipse cx="50" cy="52" rx="32" ry="12" fill="url(#art-gRice)"/>
+   <path d="M18 52c0 22 14 34 32 34s32-12 32-34z" fill="#5c7cff"/>
+   <path d="M18 52c0 22 14 34 32 34s32-12 32-34" fill="none" stroke="#a9baff" stroke-width="2"/>
+   <path d="M30 46c6-10 34-10 40 0" fill="url(#art-gRice)"/>
+   <ellipse cx="32" cy="64" rx="4" ry="10" fill="#fff" opacity=".35"/>
+  </symbol>
+  <symbol id="art-spinach" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="28" ry="5" fill="#000" opacity=".3"/>
+   <path d="M50 84C24 70 20 40 40 20c10 14 14 40 10 64z" fill="url(#art-gSpin)"/>
+   <path d="M50 84c26-14 30-44 10-64-10 14-14 40-10 64z" fill="url(#art-gLeaf)"/>
+   <path d="M50 84c-2-20-4-40-8-58M50 84c2-20 4-40 8-58" stroke="#c9ffd9" stroke-width="1.6" fill="none" opacity=".6"/>
+  </symbol>
+  <symbol id="art-jar" viewBox="0 0 100 100">
+   <rect x="22" y="8" width="56" height="14" rx="6" fill="#ffb547"/>
+   <rect x="22" y="8" width="56" height="6" rx="3" fill="#ffd27a"/>
+   <path d="M18 26h64c4 0 6 3 6 7v50c0 7-6 12-13 12H25c-7 0-13-5-13-12V33c0-4 2-7 6-7z" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+   <rect x="20" y="34" width="5" height="50" rx="2.5" fill="#fff" opacity=".35"/>
+  </symbol>
+  <radialGradient id="art-gMeat" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffc58a"/><stop offset=".55" stop-color="#d9772f"/><stop offset="1" stop-color="#7a3210"/></radialGradient>
+  <radialGradient id="art-gCarrot" cx=".3" cy=".3" r=".9"><stop offset="0" stop-color="#ffc07a"/><stop offset=".5" stop-color="#ff7a1a"/><stop offset="1" stop-color="#a33a05"/></radialGradient>
+  <radialGradient id="art-gCap2" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#f3d7b8"/><stop offset=".6" stop-color="#b5835a"/><stop offset="1" stop-color="#5e3a1e"/></radialGradient>
+  <radialGradient id="art-gBanana" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff3a6"/><stop offset=".55" stop-color="#ffd53b"/><stop offset="1" stop-color="#b98a06"/></radialGradient>
+  <radialGradient id="art-gFish" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#d6f3ff"/><stop offset=".55" stop-color="#5fb4e8"/><stop offset="1" stop-color="#1d5f8f"/></radialGradient>
+  <radialGradient id="art-gLentil" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#e98a1c"/></radialGradient>
+  <radialGradient id="art-gClay" cx=".4" cy=".2" r="1"><stop offset="0" stop-color="#e7a07a"/><stop offset=".6" stop-color="#b4552e"/><stop offset="1" stop-color="#5e2410"/></radialGradient>
+  <radialGradient id="art-gBread" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#ffe0a8"/><stop offset=".55" stop-color="#d99a4e"/><stop offset="1" stop-color="#8a4f19"/></radialGradient>
+  <radialGradient id="art-gApple" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffb0a0"/><stop offset=".5" stop-color="#ef2b3d"/><stop offset="1" stop-color="#7d0a1a"/></radialGradient>
+  <radialGradient id="art-gAlmond" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#f5c79a"/><stop offset=".6" stop-color="#b06a35"/><stop offset="1" stop-color="#5e300f"/></radialGradient>
+  <linearGradient id="art-gOil" x1="0" x2="1"><stop offset="0" stop-color="#c98f06"/><stop offset=".45" stop-color="#ffe27a"/><stop offset="1" stop-color="#a87104"/></linearGradient>
+  <linearGradient id="art-gSauce" x1="0" x2="1"><stop offset="0" stop-color="#9c0f1e"/><stop offset=".45" stop-color="#ff4a3d"/><stop offset="1" stop-color="#7a0a16"/></linearGradient>
+  <radialGradient id="art-gHoney" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#ffe08a"/><stop offset=".6" stop-color="#f2a312"/><stop offset="1" stop-color="#9a5a02"/></radialGradient>
+  <radialGradient id="art-gSack" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff4e0"/><stop offset=".6" stop-color="#e3cfa8"/><stop offset="1" stop-color="#9c8256"/></radialGradient>
+  <radialGradient id="art-gCurd" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8e2d6"/></radialGradient>
+  <linearGradient id="art-gCarton" x1="0" x2="1"><stop offset="0" stop-color="#e9f5e4"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#bcd8b0"/></linearGradient>
+  <radialGradient id="art-gNoodle" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff0b0"/><stop offset="1" stop-color="#f2c14e"/></radialGradient>
+  <radialGradient id="art-gSpice" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#ff9a5a"/><stop offset="1" stop-color="#c2280f"/></radialGradient>
+  <radialGradient id="art-gCauli" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f1ead2"/><stop offset="1" stop-color="#b9ad86"/></radialGradient>
+
+  <symbol id="art-drumstick" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="30" ry="4" fill="#000" opacity=".32"/>
+   <path d="M30 22c16-10 40-2 44 18 4 18-10 30-24 34l-6 2c-6 2-10-2-12-6-6-10-16-30-2-48z" fill="url(#art-gMeat)"/>
+   <rect x="52" y="70" width="10" height="18" rx="5" fill="#fff2dd" transform="rotate(-35 57 79)"/>
+   <circle cx="66" cy="88" r="6" fill="#fff2dd"/><circle cx="72" cy="82" r="6" fill="#fff2dd"/>
+   <ellipse cx="40" cy="34" rx="10" ry="6" fill="#fff" opacity=".4" transform="rotate(-30 40 34)"/>
+  </symbol>
+  <symbol id="art-carrot" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="26" ry="4" fill="#000" opacity=".3"/>
+   <path d="M38 30c8-4 22 0 24 8 2 10-8 34-20 50-2 2-5 2-6-1-6-18-10-50 2-57z" fill="url(#art-gCarrot)" transform="rotate(20 50 55)"/>
+   <path d="M52 26c-4-10-2-16 2-18 2 6 2 12-2 18zM56 28c2-10 8-14 12-14-2 6-6 12-12 14zM50 28c-8-6-10-12-8-16 4 4 8 10 8 16z" fill="url(#art-gLeaf)"/>
+   <path d="M42 44h8M40 56h7M42 68h6" stroke="#a33a05" stroke-width="2" stroke-linecap="round" opacity=".5" transform="rotate(20 50 55)"/>
+   <ellipse cx="44" cy="44" rx="4" ry="10" fill="#fff" opacity=".35" transform="rotate(20 44 44)"/>
+  </symbol>
+  <symbol id="art-mushroom" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="26" ry="4" fill="#000" opacity=".32"/>
+   <path d="M40 52h20l4 30c0 4-4 6-14 6s-14-2-14-6z" fill="#f6ead6"/>
+   <path d="M14 54c0-22 16-36 36-36s36 14 36 36c0 4-4 6-8 6H22c-4 0-8-2-8-6z" fill="url(#art-gCap2)"/>
+   <circle cx="36" cy="36" r="4" fill="#f3d7b8" opacity=".7"/><circle cx="60" cy="30" r="3" fill="#f3d7b8" opacity=".7"/>
+   <ellipse cx="34" cy="30" rx="10" ry="5" fill="#fff" opacity=".35" transform="rotate(-25 34 30)"/>
+  </symbol>
+  <symbol id="art-banana" viewBox="0 0 100 100">
+   <ellipse cx="52" cy="88" rx="32" ry="4" fill="#000" opacity=".3"/>
+   <path d="M18 40c4 28 30 44 62 36 6-2 6-8 0-8-26 4-46-8-52-30-2-6-10-6-10 2z" fill="url(#art-gBanana)"/>
+   <path d="M18 40c-2-4 0-8 4-8l4 2c0 4-4 6-8 6z" fill="#6b4a0a"/>
+   <path d="M30 46c8 14 24 22 44 22" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".45"/>
+  </symbol>
+  <symbol id="art-curd" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="32" ry="5" fill="#000" opacity=".35"/>
+   <path d="M18 50c0 22 14 34 32 34s32-12 32-34z" fill="url(#art-gClay)"/>
+   <ellipse cx="50" cy="50" rx="32" ry="10" fill="url(#art-gCurd)"/>
+   <path d="M38 48c6-6 18-6 24 0" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+   <ellipse cx="30" cy="64" rx="4" ry="10" fill="#fff" opacity=".3"/>
+  </symbol>
+  <symbol id="art-cauliflower" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="30" ry="4" fill="#000" opacity=".32"/>
+   <path d="M20 62c-6 14 10 22 30 22s36-8 30-22c-10 8-50 8-60 0z" fill="url(#art-gLeaf)"/>
+   <circle cx="34" cy="50" r="14" fill="url(#art-gCauli)"/><circle cx="66" cy="50" r="14" fill="url(#art-gCauli)"/>
+   <circle cx="50" cy="40" r="16" fill="url(#art-gCauli)"/><circle cx="50" cy="60" r="14" fill="url(#art-gCauli)"/>
+   <ellipse cx="44" cy="32" rx="7" ry="4" fill="#fff" opacity=".7" transform="rotate(-20 44 32)"/>
+  </symbol>
+  <symbol id="art-fish" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="86" rx="34" ry="4" fill="#000" opacity=".3"/>
+   <path d="M14 54c10-18 40-24 60-8l14-12c2 10 2 26 0 36L74 58C54 74 24 70 14 54z" fill="url(#art-gFish)"/>
+   <circle cx="28" cy="50" r="3.5" fill="#0d2c44"/><circle cx="27" cy="49" r="1.2" fill="#fff"/>
+   <path d="M40 44c4 6 4 14 0 20" stroke="#1d5f8f" stroke-width="2" fill="none" opacity=".6"/>
+   <path d="M30 42c10-6 26-6 36 0" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".45"/>
+  </symbol>
+  <symbol id="art-lentils" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="32" ry="5" fill="#000" opacity=".35"/>
+   <path d="M18 50c0 22 14 34 32 34s32-12 32-34z" fill="url(#art-gClay)"/>
+   <ellipse cx="50" cy="50" rx="32" ry="10" fill="url(#art-gLentil)"/>
+   <g fill="#c96a0e"><circle cx="38" cy="48" r="2.4"/><circle cx="48" cy="52" r="2.4"/><circle cx="58" cy="47" r="2.4"/><circle cx="66" cy="52" r="2.4"/><circle cx="44" cy="44" r="2.4"/><circle cx="54" cy="55" r="2.4"/></g>
+   <ellipse cx="30" cy="64" rx="4" ry="10" fill="#fff" opacity=".3"/>
+  </symbol>
+  <symbol id="art-carton" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="92" rx="22" ry="4" fill="#000" opacity=".35"/>
+   <path d="M30 30l10-14h20l10 14v56c0 3-2 5-5 5H35c-3 0-5-2-5-5z" fill="url(#art-gCarton)"/>
+   <path d="M40 16h20v-6H40z" fill="#4ed37a"/>
+   <rect x="30" y="50" width="40" height="18" fill="#4ed37a" opacity=".9"/>
+   <path d="M44 56c4-4 8-4 12 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+   <rect x="33" y="32" width="4" height="50" rx="2" fill="#fff" opacity=".6"/>
+  </symbol>
+  <symbol id="art-noodles" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="32" ry="5" fill="#000" opacity=".35"/>
+   <path d="M18 50c0 22 14 34 32 34s32-12 32-34z" fill="#2f2a44"/>
+   <ellipse cx="50" cy="50" rx="32" ry="10" fill="url(#art-gNoodle)"/>
+   <path d="M28 50c6-6 10 6 16 0s10 6 16 0 10 6 14 0M30 46c6-4 10 4 16 0s10 4 16 0" stroke="#d9a23a" stroke-width="2" fill="none"/>
+   <path d="M66 20l-10 30M74 22l-12 30" stroke="#8a5a2a" stroke-width="3" stroke-linecap="round"/>
+   <ellipse cx="30" cy="64" rx="4" ry="10" fill="#fff" opacity=".2"/>
+  </symbol>
+  <symbol id="art-bread" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="34" ry="5" fill="#000" opacity=".35"/>
+   <path d="M16 58c0-20 16-30 34-30s34 10 34 30c0 14-6 24-34 24S16 72 16 58z" fill="url(#art-gBread)"/>
+   <path d="M34 40l-6 10M50 36l-4 12M66 40l-4 10" stroke="#ffe7bd" stroke-width="4" stroke-linecap="round"/>
+   <ellipse cx="34" cy="38" rx="10" ry="4" fill="#fff" opacity=".3" transform="rotate(-20 34 38)"/>
+  </symbol>
+  <symbol id="art-apple" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="28" ry="5" fill="#000" opacity=".35"/>
+   <path d="M50 32c-10-8-32-6-32 20 0 18 14 34 24 34 4 0 6-2 8-2s4 2 8 2c10 0 24-16 24-34 0-26-22-28-32-20z" fill="url(#art-gApple)"/>
+   <path d="M50 32c0-8 2-12 6-16" stroke="#5e3a1e" stroke-width="3" stroke-linecap="round" fill="none"/>
+   <path d="M54 22c6-8 16-8 20-4-6 6-14 6-20 4z" fill="url(#art-gLeaf)"/>
+   <ellipse cx="34" cy="46" rx="6" ry="10" fill="#fff" opacity=".4" transform="rotate(20 34 46)"/>
+  </symbol>
+  <symbol id="art-almond" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="88" rx="26" ry="4" fill="#000" opacity=".32"/>
+   <path d="M50 14c18 10 26 36 18 56-4 10-12 16-18 16s-14-6-18-16c-8-20 0-46 18-56z" fill="url(#art-gAlmond)"/>
+   <path d="M50 22c-4 20-4 40 0 58" stroke="#5e300f" stroke-width="1.5" fill="none" opacity=".5"/>
+   <ellipse cx="42" cy="40" rx="5" ry="12" fill="#fff" opacity=".35" transform="rotate(15 42 40)"/>
+  </symbol>
+  <symbol id="art-spice" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="28" ry="5" fill="#000" opacity=".35"/>
+   <path d="M24 54h52v26c0 4-3 8-8 8H32c-5 0-8-4-8-8z" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+   <path d="M26 60h48v20c0 3-3 6-6 6H32c-3 0-6-3-6-6z" fill="url(#art-gSpice)"/>
+   <path d="M30 46c8-16 32-16 40 0z" fill="url(#art-gSpice)"/>
+   <path d="M64 30l10-16" stroke="#d9c5a5" stroke-width="5" stroke-linecap="round"/>
+   <ellipse cx="62" cy="34" rx="8" ry="4" fill="#d9c5a5"/>
+   <rect x="28" y="58" width="4" height="24" rx="2" fill="#fff" opacity=".45"/>
+  </symbol>
+  <symbol id="art-oil" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="93" rx="20" ry="4" fill="#000" opacity=".35"/>
+   <path d="M44 10h12v14c0 4 12 10 12 20v42c0 4-3 7-7 7H39c-4 0-7-3-7-7V44c0-10 12-16 12-20z" fill="url(#art-gOil)"/>
+   <rect x="42" y="6" width="16" height="8" rx="3" fill="#2e9e5b"/>
+   <rect x="34" y="56" width="32" height="16" rx="3" fill="#fff8ee" opacity=".9"/>
+   <path d="M44 64h12" stroke="#c98f06" stroke-width="3" stroke-linecap="round"/>
+   <rect x="36" y="42" width="4" height="40" rx="2" fill="#fff" opacity=".5"/>
+  </symbol>
+  <symbol id="art-sauce" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="93" rx="20" ry="4" fill="#000" opacity=".35"/>
+   <path d="M42 18h16v10c0 4 10 8 10 18v40c0 4-3 7-7 7H39c-4 0-7-3-7-7V46c0-10 10-14 10-18z" fill="url(#art-gSauce)"/>
+   <path d="M44 6h12l-2 12H46z" fill="#fff8ee"/>
+   <rect x="34" y="54" width="32" height="18" rx="3" fill="#fff8ee"/>
+   <path d="M42 62c4-4 12-4 16 0" stroke="#ff4a3d" stroke-width="3" stroke-linecap="round" fill="none"/>
+   <rect x="36" y="40" width="4" height="40" rx="2" fill="#fff" opacity=".45"/>
+  </symbol>
+  <symbol id="art-honey" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="28" ry="5" fill="#000" opacity=".35"/>
+   <path d="M26 40c0-6 4-8 10-8h28c6 0 10 2 10 8v38c0 6-6 10-12 10H38c-6 0-12-4-12-10z" fill="url(#art-gHoney)"/>
+   <rect x="30" y="22" width="40" height="12" rx="4" fill="#8a5a2a"/>
+   <path d="M30 22h40" stroke="#fff4e6" stroke-width="2" opacity=".5"/>
+   <path d="M40 34v10c0 3 4 3 4 0v-6" stroke="#ffd25a" stroke-width="4" stroke-linecap="round" fill="none"/>
+   <ellipse cx="34" cy="56" rx="4" ry="14" fill="#fff" opacity=".35"/>
+  </symbol>
+  <symbol id="art-sack" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="30" ry="5" fill="#000" opacity=".35"/>
+   <path d="M34 28c-12 10-18 26-18 40 0 12 12 18 34 18s34-6 34-18c0-14-6-30-18-40z" fill="url(#art-gSack)"/>
+   <path d="M34 28c4-8 28-8 32 0-6 4-26 4-32 0z" fill="#f7ecd6"/>
+   <path d="M38 26c4-10 20-10 24 0" stroke="#9c8256" stroke-width="3" fill="none"/>
+   <path d="M40 56c6 4 14 4 20 0" stroke="#c9a96a" stroke-width="3" stroke-linecap="round" fill="none"/>
+   <ellipse cx="32" cy="52" rx="5" ry="12" fill="#fff" opacity=".5"/>
+  </symbol>
+  <symbol id="art-glass" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="92" rx="22" ry="4" fill="#000" opacity=".35"/>
+   <path d="M28 14h44l-6 72c0 3-3 6-6 6H40c-3 0-6-3-6-6z" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.6)" stroke-width="1.5"/>
+   <path d="M31 40h38l-4 46c0 2-2 4-4 4H39c-2 0-4-2-4-4z" fill="#7fd3ff" opacity=".75"/>
+   <circle cx="44" cy="58" r="2.5" fill="#fff" opacity=".7"/><circle cx="56" cy="70" r="2" fill="#fff" opacity=".7"/>
+   <rect x="33" y="18" width="4" height="66" rx="2" fill="#fff" opacity=".5"/>
+  </symbol>
+  <symbol id="art-produce" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="90" rx="34" ry="5" fill="#000" opacity=".35"/>
+   <circle cx="36" cy="48" r="14" fill="url(#art-gTomato)"/>
+   <path d="M56 26c-12 10-12 30 0 40 12-10 12-30 0-40z" fill="url(#art-gLeaf)"/>
+   <path d="M18 56h64l-6 26c-1 4-4 6-8 6H32c-4 0-7-2-8-6z" fill="url(#art-gBread)"/>
+   <path d="M24 64h52M27 74h46" stroke="#8a4f19" stroke-width="2" opacity=".6"/>
+   <ellipse cx="30" cy="42" rx="4" ry="3" fill="#fff" opacity=".5"/>
+  </symbol>
+ </defs>
+</svg>

@@ -1,10 +1,15 @@
 import { render, screen } from "@testing-library/react";
 
+import { stubApi } from "../test/api";
 import { App } from "./App";
 
-test("the app opens on the pantry screen", () => {
+afterEach(() => {
+  vi.unstubAllGlobals();
+});
+
+test("the app opens on the pantry screen", async () => {
+  stubApi();
   render(<App />);
-  expect(
-    screen.getByRole("heading", { name: "What's in your kitchen?" }),
-  ).toBeInTheDocument();
+  expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/^What's for /);
+  expect(await screen.findByRole("button", { name: /Potato/ })).toBeInTheDocument();
 });
