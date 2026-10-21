@@ -32,7 +32,7 @@ async function openDeck(search?: SearchHandler) {
   const api = stubApi(search);
   const user = userEvent.setup();
   render(<App />);
-  expect(screen.getByText(/Cooking up ideas/)).toBeInTheDocument();
+  expect(await screen.findByText(/Cooking up ideas/)).toBeInTheDocument();
   await user.click(await screen.findByRole("button", { name: "Skip" }));
   // Let the scene fade out, so a later search's scene is the only one.
   await waitFor(() => {
@@ -249,13 +249,13 @@ test("pantry items the API now ignores are taken out, and the user is told", asy
   expect(useDevice.getState().pantry).toEqual(["paneer", "potato", "egg"]);
 });
 
-test("an empty pantry is sent back to fill it, without searching", () => {
+test("an empty pantry is sent back to fill it, without searching", async () => {
   useDevice.setState({ pantry: [] });
   const { searches } = stubApi();
   render(<App />);
 
   expect(
-    screen.getByRole("heading", { name: "Your pantry is empty" }),
+    await screen.findByRole("heading", { name: "Your pantry is empty" }),
   ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Fill your pantry" })).toHaveAttribute(
     "href",
