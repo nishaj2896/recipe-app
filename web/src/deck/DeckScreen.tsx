@@ -9,6 +9,7 @@ import { useAfterPaint } from "../motion/afterPaint";
 import { greetingFor } from "../pantry/greeting";
 import { RecipeDetail } from "../recipe/RecipeDetail";
 import { useDevice } from "../store/device";
+import { dealMessage, swipeMessage, undoMessage } from "./announce";
 import { CookingScene } from "./CookingScene";
 import styles from "./DeckScreen.module.css";
 import { type Filters, FilterSheet } from "./FilterSheet";
@@ -24,6 +25,14 @@ import { SearchError, useDeck } from "./useDeck";
 interface Swipe {
   id: string;
   direction: Direction;
+}
+
+/** Whether a key press is someone typing, which never swipes or undoes. */
+function isTyping(target: EventTarget | null): boolean {
+  return (
+    target instanceof HTMLElement &&
+    (target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName))
+  );
 }
 
 /** Cards drawn under the top one, to show the deck's depth. */
@@ -86,7 +95,12 @@ export function DeckScreen() {
   // The card flying off: its choice is already stored, but it stays on top
   // until it has left the screen.
   const [flying, setFlying] = useState<string | null>(null);
+  // What a screen reader is told after each swipe and undo (ADR-0006 rule 9).
+  const [announcement, setAnnouncement] = useState("");
+  const [announcedDeal, setAnnouncedDeal] = useState<string | null>(null);
   const top = useRef<SwipeCardHandle>(null);
+  // The key handler is set up once, so it calls whichever undo is current.
+  const latestUndo = useRef<() => void>(() => undefined);
   const meal = useMemo(() => greetingFor(new Date()).meal, []);
 
   const deck = useDeck(search ?? null, round);
@@ -141,6 +155,37 @@ export function DeckScreen() {
   const waiting = search !== null && search !== undefined && !page && !deck.isError;
   const showScene = waiting || (page !== undefined && sceneDoneFor !== dealKey);
 
+  // Each deal's first card is spoken once the cooking scene has gone, so a
+  // screen reader hears every card, not just those after a swipe.
+  if (page && !showScene && announcedDeal !== dealKey) {
+    setAnnouncedDeal(dealKey);
+    setAnnouncement(dealMessage(remaining));
+  }
+
+  function swiped(card: RecipeCard, direction: Direction) {
+    if (direction === "right") saveRecipe(card.id);
+    else hideRecipe(card.id);
+    markSwipeHintSeen();
+    setFlying(card.id);
+    setHistory((past) => [...past, { id: card.id, direction }]);
+    setAnnouncement(swipeMessage(card, direction, remaining[1]));
+  }
+
+  function undo() {
+    const last = swipesHere.at(-1);
+    // Not while a card is in the air: the undo would be for that card.
+    if (!last || flying !== null) return;
+    if (last.direction === "right") unsaveRecipe(last.id);
+    else unhideRecipe(last.id);
+    setHistory((past) => past.filter((swipe) => swipe !== last));
+    const card = dealt.find((item) => item.id === last.id);
+    if (card) setAnnouncement(undoMessage(card, last.direction));
+  }
+
+  useEffect(() => {
+    latestUndo.current = undo;
+  });
+
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
       // Alt or Cmd with an arrow is the browser's back and forward, and a held
@@ -158,28 +203,13 @@ export function DeckScreen() {
       }
       if (event.key === "ArrowRight") top.current?.fling("right");
       if (event.key === "ArrowLeft") top.current?.fling("left");
+      if (event.key === "Backspace" && !isTyping(event.target)) latestUndo.current();
     }
     window.addEventListener("keydown", onKey);
     return () => {
       window.removeEventListener("keydown", onKey);
     };
   }, []);
-
-  function swiped(card: RecipeCard, direction: Direction) {
-    if (direction === "right") saveRecipe(card.id);
-    else hideRecipe(card.id);
-    markSwipeHintSeen();
-    setFlying(card.id);
-    setHistory((past) => [...past, { id: card.id, direction }]);
-  }
-
-  function undo() {
-    const last = swipesHere.at(-1);
-    if (!last) return;
-    if (last.direction === "right") unsaveRecipe(last.id);
-    else unhideRecipe(last.id);
-    setHistory((past) => past.filter((swipe) => swipe !== last));
-  }
 
   function dealMore() {
     setDeckIndex((index) => index + 1);
@@ -370,6 +400,7 @@ export function DeckScreen() {
                   className={styles.round}
                   data-kind="undo"
                   aria-label="Undo last swipe"
+                  aria-keyshortcuts="Backspace"
                   disabled={swipesHere.length === 0 || flying !== null}
                   onClick={undo}
                 >
@@ -380,6 +411,7 @@ export function DeckScreen() {
                   className={styles.round}
                   data-kind="skip"
                   aria-label={`Skip ${current.name}`}
+                  aria-keyshortcuts="ArrowLeft"
                   onClick={() => top.current?.fling("left")}
                 >
                   ✕
@@ -389,6 +421,7 @@ export function DeckScreen() {
                   className={styles.round}
                   data-kind="save"
                   aria-label={`Save ${current.name}`}
+                  aria-keyshortcuts="ArrowRight"
                   onClick={() => top.current?.fling("right")}
                 >
                   ♥
@@ -485,6 +518,10 @@ export function DeckScreen() {
           )}
         </>
       )}
+
+      <p className={styles.visuallyHidden} role="status">
+        {announcement}
+      </p>
 
       <AnimatePresence>
         {showScene && !deck.isError && (
