@@ -30,3 +30,28 @@ export function useStaples() {
     ...ONCE_PER_VISIT,
   });
 }
+
+/**
+ * One recipe's details, or null when the API says it doesn't exist right now.
+ * A 404 can be temporary (ADR-0005, Risk), so the saved id is kept and the
+ * recipe shows as unavailable (ADR-0006 rule 5).
+ */
+export function recipeQuery(id: string) {
+  return {
+    queryKey: ["recipe", id],
+    queryFn: async () => {
+      const { data, error, response } = await api.GET("/api/v1/recipes/{recipe_id}", {
+        params: { path: { recipe_id: id } },
+      });
+      if (data) return data;
+      if (response.status === 404) return null;
+      throw new Error(`could not load recipe ${id}: ${error.title}`);
+    },
+    // A recipe never changes within a visit.
+    staleTime: Infinity,
+  };
+}
+
+export function useRecipe(id: string) {
+  return useQuery(recipeQuery(id));
+}

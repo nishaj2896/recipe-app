@@ -4,7 +4,9 @@ import { Link } from "react-router";
 
 import type { RecipeCard } from "../api/client";
 import { useCatalog } from "../api/queries";
+import { Sheet } from "../app/Sheet";
 import { greetingFor } from "../pantry/greeting";
+import { RecipeDetail } from "../recipe/RecipeDetail";
 import { useDevice } from "../store/device";
 import { CookingScene } from "./CookingScene";
 import styles from "./DeckScreen.module.css";
@@ -52,6 +54,8 @@ export function DeckScreen() {
   const [deckIndex, setDeckIndex] = useState(0);
   const [history, setHistory] = useState<Swipe[]>([]);
   const [sceneDoneFor, setSceneDoneFor] = useState<string | null>(null);
+  // The recipe whose details are open over the deck, if any.
+  const [about, setAbout] = useState<string | null>(null);
   const top = useRef<SwipeCardHandle>(null);
   const meal = useMemo(() => greetingFor(new Date()).meal, []);
 
@@ -116,7 +120,9 @@ export function DeckScreen() {
         event.altKey ||
         event.metaKey ||
         event.ctrlKey ||
-        event.defaultPrevented
+        event.defaultPrevented ||
+        // Not while a recipe's details are open over the deck.
+        document.querySelector("dialog[open]")
       ) {
         return;
       }
@@ -130,15 +136,8 @@ export function DeckScreen() {
   }, []);
 
   function swiped(card: RecipeCard, direction: Direction) {
-    if (direction === "right") {
-      // The first save asks the browser to keep this site's storage
-      // (ADR-0006 rule 5); browsers that don't support it just carry on.
-      if (useDevice.getState().saved.length === 0)
-        void (navigator.storage as StorageManager | undefined)?.persist();
-      saveRecipe(card.id);
-    } else {
-      hideRecipe(card.id);
-    }
+    if (direction === "right") saveRecipe(card.id);
+    else hideRecipe(card.id);
     setHistory((past) => [...past, { id: card.id, direction }]);
   }
 
@@ -195,16 +194,20 @@ export function DeckScreen() {
             {meal.charAt(0).toUpperCase() + meal.slice(1)} picks
           </h1>
         </div>
-        <m.span
-          key={saved.length}
-          className={styles.hearts}
-          aria-label={`${String(saved.length)} saved`}
-          role="img"
-          initial={{ scale: saved.length > 0 ? 1.35 : 1 }}
-          animate={{ scale: 1 }}
+        <Link
+          to="/saved"
+          className={styles.heartsLink}
+          aria-label={`Your cookbook: ${String(saved.length)} saved`}
         >
-          <span aria-hidden="true">♥</span> {saved.length}
-        </m.span>
+          <m.span
+            key={saved.length}
+            className={styles.hearts}
+            initial={{ scale: saved.length > 0 ? 1.35 : 1 }}
+            animate={{ scale: 1 }}
+          >
+            <span aria-hidden="true">♥</span> {saved.length}
+          </m.span>
+        </Link>
       </header>
       {dealt.length > 0 && current && (
         <div className={styles.progress} aria-hidden="true">
@@ -311,7 +314,55 @@ export function DeckScreen() {
                 >
                   ♥
                 </button>
+                <button
+                  type="button"
+                  className={styles.round}
+                  data-kind="info"
+                  aria-label={`About ${current.name}`}
+                  onClick={() => {
+                    setAbout(current.id);
+                  }}
+                >
+                  i
+                </button>
               </div>
+              <Sheet
+                open={about === current.id}
+                onClose={() => {
+                  setAbout(null);
+                }}
+                title="About this recipe"
+              >
+                {about === current.id && (
+                  <RecipeDetail
+                    recipeId={current.id}
+                    actions={
+                      <>
+                        <button
+                          type="button"
+                          className={styles.sheetSkip}
+                          onClick={() => {
+                            setAbout(null);
+                            top.current?.fling("left");
+                          }}
+                        >
+                          Skip
+                        </button>
+                        <button
+                          type="button"
+                          className={styles.sheetSave}
+                          onClick={() => {
+                            setAbout(null);
+                            top.current?.fling("right");
+                          }}
+                        >
+                          Save
+                        </button>
+                      </>
+                    }
+                  />
+                )}
+              </Sheet>
             </>
           ) : dealt.length === 0 && deckIndex === 0 ? (
             <div className={styles.empty}>

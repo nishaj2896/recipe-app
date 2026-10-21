@@ -1,0 +1,107 @@
+import { render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+import { App } from "../app/App";
+import { emptyDevice, useDevice } from "../store/device";
+import { DECK, stubApi } from "../test/api";
+
+const [matar, aloo] = DECK as [(typeof DECK)[0], (typeof DECK)[0]];
+const GONE = "00000000-0000-4000-8000-00000000dead";
+
+beforeEach(() => {
+  stubApi();
+  useDevice.setState({ ...emptyDevice, pantry: ["paneer"], hydration: "ready" });
+});
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+});
+
+function open(path: string) {
+  window.history.pushState({}, "", path);
+  render(<App />);
+  return userEvent.setup();
+}
+
+test("an empty cookbook points to the deck", () => {
+  open("/saved");
+
+  expect(screen.getByText("Recipes you swipe right on land here.")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Find something to cook" })).toHaveAttribute(
+    "href",
+    "/deck",
+  );
+});
+
+test("saved recipes are listed newest first, and a missing one is kept as unavailable", async () => {
+  useDevice.setState({ saved: [matar.id, GONE, aloo.id] });
+  open("/saved");
+
+  await screen.findByText("Unavailable right now");
+  await screen.findByText("Matar Paneer");
+  const rows = screen.getAllByRole("listitem");
+  expect(rows.map((row) => row.textContent)).toEqual([
+    "Aloo Gobi30 min · Vegetarian›",
+    "Unavailable right now›",
+    "Matar Paneer30 min · Vegetarian›",
+  ]);
+  expect(useDevice.getState().saved).toEqual([matar.id, GONE, aloo.id]);
+});
+
+test("a recipe sorts its ingredients into have, need and assumed staples", async () => {
+  useDevice.setState({ saved: [matar.id], pantry: ["paneer"] });
+  open(`/recipe/${matar.id}`);
+
+  expect(
+    await screen.findByRole("heading", { name: "Matar Paneer" }),
+  ).toBeInTheDocument();
+  const items = (group: string) =>
+    within(screen.getByRole("region", { name: group }))
+      .getAllByRole("listitem")
+      .map((item) => item.textContent);
+  expect(items("You have")).toEqual(["Paneer"]);
+  expect(items("You'll need")).toEqual(["Potato", "Cream"]);
+  expect(items("Staples we assume you have")).toEqual(["Salt"]);
+});
+
+test("a staple you're out of moves to what you'll need", async () => {
+  useDevice.setState({ outOfStaples: ["salt"] });
+  open(`/recipe/${matar.id}`);
+
+  const need = await screen.findByRole("region", { name: "You'll need" });
+  expect(within(need).getByText("Salt")).toBeInTheDocument();
+  expect(screen.queryByRole("region", { name: "Staples we assume you have" })).toBeNull();
+});
+
+test("the save button saves and unsaves", async () => {
+  useDevice.setState({ saved: [matar.id] });
+  const user = open(`/recipe/${matar.id}`);
+
+  const button = await screen.findByRole("button", { name: "♥ Saved" });
+  await user.click(button);
+  expect(useDevice.getState().saved).toEqual([]);
+  expect(button).toHaveAttribute("aria-pressed", "false");
+
+  await user.click(button);
+  expect(useDevice.getState().saved).toEqual([matar.id]);
+});
+
+test("a recipe the API can't find right now says so", async () => {
+  open(`/recipe/${GONE}`);
+
+  expect(
+    await screen.findByText(/This recipe isn't available right now/),
+  ).toBeInTheDocument();
+});
+
+test("the pantry links to the cookbook once something is saved", async () => {
+  const user = open("/");
+  expect(screen.queryByRole("link", { name: /Your cookbook/ })).toBeNull();
+
+  useDevice.getState().saveRecipe(matar.id);
+  await user.click(await screen.findByRole("link", { name: "Your cookbook: 1 saved" }));
+
+  expect(
+    await screen.findByRole("heading", { name: "Your cookbook" }),
+  ).toBeInTheDocument();
+});

@@ -1,14 +1,8 @@
 import type { RecipeCard } from "../api/client";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
+import { DIETS } from "./diets";
 import { listNames } from "./names";
 import styles from "./RecipeFace.module.css";
-
-const DIETS: Record<RecipeCard["diet"], string> = {
-  vegan: "Vegan",
-  vegetarian: "Vegetarian",
-  egg: "Has egg",
-  non_veg: "Non-veg",
-};
 
 /** The match ring: how much of the recipe's core the pantry covers. */
 function MatchRing({ percentage }: { percentage: number }) {

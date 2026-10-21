@@ -24,6 +24,7 @@ async function coldStart(
   tabs.push(factory);
   vi.resetModules();
   const device = await import("./device");
+  loaded.push(device);
   await vi.waitFor(() => {
     expect(device.useDevice.getState().hydration).not.toBe("pending");
   });
@@ -38,10 +39,13 @@ async function coldStart(
 }
 
 const tabs: IDBFactory[] = [];
+const loaded: DeviceModule[] = [];
 
 afterEach(() => {
   vi.unstubAllGlobals();
   tabs.length = 0;
+  // Each test's stores stop listening, so they can't re-read in later tests.
+  for (const device of loaded.splice(0)) device.stopSync();
 });
 
 const v1 = (pantry: string[], outOfStaples: string[] = []) =>
@@ -178,6 +182,16 @@ describe("actions", () => {
     expect(hidden).toHaveLength(MAX_HIDDEN);
     expect(hidden[0]).toBe("r1");
     expect(hidden.at(-1)).toBe(`r${String(MAX_HIDDEN)}`);
+  });
+
+  test("the first save asks the browser to keep this site's data", () => {
+    const persist = vi.fn(() => Promise.resolve(true));
+    vi.stubGlobal("navigator", { storage: { persist } });
+
+    useDevice.getState().saveRecipe("r1");
+    useDevice.getState().saveRecipe("r2");
+
+    expect(persist).toHaveBeenCalledTimes(1);
   });
 
   test("toggling a staple marks it out of stock, then back in", () => {
