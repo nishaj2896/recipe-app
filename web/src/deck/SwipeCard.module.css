@@ -1,0 +1,64 @@
+.card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  z-index: 3;
+  transition:
+    border-color 160ms,
+    box-shadow 160ms;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+/* Past the line the card glows in the colour of what will happen. */
+.card[data-armed="right"] {
+  border-color: var(--go);
+  box-shadow:
+    0 0 0 2px var(--go),
+    0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.card[data-armed="left"] {
+  border-color: var(--stop);
+  box-shadow:
+    0 0 0 2px var(--stop),
+    0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.stamp {
+  position: absolute;
+  top: var(--space-6);
+  z-index: 4;
+  padding: var(--space-1) var(--space-3);
+  border: 3px solid currentColor;
+  border-radius: var(--radius-s);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.stamp[data-kind="save"] {
+  left: var(--space-6);
+  color: var(--go);
+  transform: rotate(-12deg);
+}
+
+.stamp[data-kind="skip"] {
+  right: var(--space-6);
+  color: var(--stop);
+  transform: rotate(12deg);
+}

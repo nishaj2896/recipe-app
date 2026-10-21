@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { domAnimation, LazyMotion, MotionConfig } from "motion/react";
+import { domMax, LazyMotion, MotionConfig } from "motion/react";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 
@@ -15,8 +15,9 @@ export function App() {
     <QueryClientProvider client={queryClient}>
       {/* "user" follows the phone's reduce-motion setting (ADR-0006 rule 7). */}
       <MotionConfig reducedMotion="user">
-        {/* Only the DOM animation features, with `m` components, keep the bundle small. */}
-        <LazyMotion features={domAnimation} strict>
+        {/* `m` components with only the DOM features keep the bundle small;
+            domMax adds the drag the swipe deck needs. */}
+        <LazyMotion features={domMax} strict>
           <ArtSprite />
           <FlightProvider>
             <BrowserRouter>

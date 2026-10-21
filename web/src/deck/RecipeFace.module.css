@@ -1,0 +1,152 @@
+.art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 1;
+  padding-top: var(--space-8);
+  min-height: 220px;
+}
+
+.garnish {
+  position: absolute;
+  top: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-2);
+  z-index: 1;
+}
+
+.garnish > svg:nth-child(2) {
+  transform: translateY(-10px) rotate(8deg);
+}
+
+.garnish > svg:first-child {
+  transform: rotate(-12deg);
+}
+
+.ring {
+  position: absolute;
+  right: var(--space-4);
+  bottom: -18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--card);
+}
+
+.ring svg {
+  transform: rotate(-90deg);
+}
+
+.ringTrack,
+.ringFill {
+  fill: none;
+  stroke-width: 6;
+}
+
+.ringTrack {
+  stroke: var(--surface-strong);
+}
+
+.ringFill {
+  stroke: var(--go);
+  stroke-linecap: round;
+}
+
+.ringText {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.ringText small {
+  font-size: 10px;
+}
+
+.basics {
+  position: absolute;
+  right: var(--space-2);
+  bottom: -10px;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-6) var(--space-6);
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 800;
+  padding-right: 64px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+/* Green means "fine to have" here too: the vegetarian mark. */
+.chip[data-diet="vegan"] .dot,
+.chip[data-diet="vegetarian"] .dot {
+  background: var(--go);
+}
+
+.have {
+  color: var(--text-muted);
+}
+
+.have strong {
+  color: var(--text);
+}
+
+.nudge,
+.missing {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-s);
+  font-size: 15px;
+}
+
+/* Saffron means missing (ADR-0006 rule 6). */
+.nudge {
+  border: 1.5px dashed var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.nudge strong,
+.missing strong {
+  color: var(--accent);
+}
+
+.missing {
+  background: var(--surface);
+  color: var(--text-muted);
+}

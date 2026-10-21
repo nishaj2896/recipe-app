@@ -1,21 +1,188 @@
 .screen {
+  display: flex;
+  flex-direction: column;
   max-width: 520px;
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: var(--space-8) var(--space-4);
+  padding: var(--space-4) var(--space-4)
+    calc(var(--space-6) + env(safe-area-inset-bottom));
+  overflow-x: hidden;
 }
 
-.title {
-  font-size: 28px;
-}
-
-.text {
-  margin-top: var(--space-2);
-  color: var(--text-muted);
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .back {
-  display: inline-block;
-  margin-top: var(--space-6);
-  color: var(--accent);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.eyebrow {
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.hearts {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-weight: 800;
+}
+
+.hearts > span {
+  color: var(--go);
+}
+
+.progress {
+  height: 4px;
+  margin-top: var(--space-3);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  overflow: hidden;
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  background: var(--text);
+  transform-origin: 0 50%;
+}
+
+.notice {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-s);
+  background: var(--surface-strong);
+  font-size: 14px;
+}
+
+.stack {
+  position: relative;
+  flex: 1;
+  min-height: 500px;
+  margin: var(--space-4) 0 32px;
+}
+
+.under {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  transform-origin: 50% 100%;
+  pointer-events: none;
+}
+
+.hint {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-3);
+}
+
+.round {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.round:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.round[data-kind="undo"] {
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+/* Red means skip and green means save (ADR-0006 rule 6). */
+.round[data-kind="skip"] {
+  border: 2px solid var(--stop);
+  color: var(--stop);
+}
+
+.round[data-kind="save"] {
+  width: 76px;
+  height: 76px;
+  border: 0;
+  background: var(--go);
+  color: var(--on-go);
+  font-size: 28px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin: auto 0;
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: 24px;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.primary {
+  padding: var(--space-3) var(--space-6);
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
 }
