@@ -99,3 +99,11 @@
   cursor: pointer;
   padding: 0;
 }
+
+.warning {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-m);
+  border: 1px solid var(--stop);
+  color: var(--text);
+  font-size: 14px;
+}

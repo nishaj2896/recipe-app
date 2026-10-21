@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CatalogIngredient } from "../api/client";
 import { useCatalog, useStaples } from "../api/queries";
@@ -28,12 +28,27 @@ export function PantryScreen() {
     removeFromPantry,
     clearPantry,
     toggleStaple,
+    hydration,
   } = useDevice();
   const { launch } = useFlight();
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState(POPULAR_TAB);
   const [pantryOpen, setPantryOpen] = useState(false);
   const greeting = useMemo(() => greetingFor(new Date()), []);
+  const staggered = useRef<number[]>([]);
+
+  useEffect(
+    () => () => {
+      staggered.current.forEach((id) => {
+        window.clearTimeout(id);
+      });
+    },
+    [],
+  );
+
+  // Taps wait until the saved pantry has been read, so a tap can't race it
+  // (the store refuses writes before then anyway).
+  const loaded = hydration !== "pending";
 
   const ingredients = useMemo(() => catalog.data ?? [], [catalog.data]);
   const byId = useMemo(
@@ -65,13 +80,11 @@ export function PantryScreen() {
       ? POPULAR.flatMap((id) => byId.get(id) ?? [])
       : ingredients.filter((item) => item.category.id === tab);
 
-  const stapleCount =
-    (staples.data ?? []).reduce(
-      (total, group) =>
-        total +
-        group.categories.reduce((sum, category) => sum + category.staples.length, 0),
-      0,
-    ) - outOfStaples.length;
+  // Out-of-stock ids are kept even when a staple leaves the list (ADR-0006
+  // rule 5), so count the listed staples rather than subtract.
+  const stapleCount = (staples.data ?? [])
+    .flatMap((group) => group.categories.flatMap((category) => category.staples))
+    .filter((staple) => !outOfStaples.includes(staple.id)).length;
 
   function toggle(ingredient: CatalogIngredient, art: Element | null) {
     haptic.tap();
@@ -89,9 +102,10 @@ export function PantryScreen() {
     addToPantry(added.map((item) => item.id));
     added.forEach((item, index) => {
       // A short stagger, so the ingredients fly as a stream, not a clump.
-      window.setTimeout(() => {
-        launch(origin, item.id, item.category.id);
+      const id = window.setTimeout(() => {
+        if (origin.isConnected) launch(origin, item.id, item.category.id);
       }, index * 70);
+      staggered.current.push(id);
     });
   }
 
@@ -104,7 +118,16 @@ export function PantryScreen() {
         </h1>
       </header>
 
-      {presets.length > 0 && <QuickStarts presets={presets} onPick={pickPreset} />}
+      {hydration === "failed" && (
+        <p className={styles.warning} role="alert">
+          We couldn't read the pantry saved on this phone. You can still pick ingredients,
+          but they won't be saved this visit.
+        </p>
+      )}
+
+      {loaded && presets.length > 0 && (
+        <QuickStarts presets={presets} onPick={pickPreset} />
+      )}
 
       <div className={styles.search}>
         <input
@@ -137,7 +160,9 @@ export function PantryScreen() {
         </nav>
       )}
 
-      {catalog.isPending && <p className={styles.status}>Loading ingredients…</p>}
+      {(catalog.isPending || !loaded) && !catalog.isError && (
+        <p className={styles.status}>Loading ingredients…</p>
+      )}
       {catalog.isError && (
         <p className={styles.status} role="alert">
           We couldn't load the ingredients.{" "}
@@ -157,17 +182,18 @@ export function PantryScreen() {
       )}
 
       <div className={styles.grid}>
-        {shown.map((ingredient) => (
-          <IngredientTile
-            key={ingredient.id}
-            ingredient={ingredient}
-            inPantry={inPantry.has(ingredient.id)}
-            onToggle={toggle}
-          />
-        ))}
+        {loaded &&
+          shown.map((ingredient) => (
+            <IngredientTile
+              key={ingredient.id}
+              ingredient={ingredient}
+              inPantry={inPantry.has(ingredient.id)}
+              onToggle={toggle}
+            />
+          ))}
       </div>
 
-      {staples.data && (
+      {loaded && staples.data && (
         <StaplesStrip
           groups={staples.data}
           outOf={outOfStaples}
@@ -177,7 +203,7 @@ export function PantryScreen() {
 
       <PantryDock
         items={pantryItems}
-        stapleCount={Math.max(stapleCount, 0)}
+        stapleCount={stapleCount}
         onOpenPantry={() => {
           setPantryOpen(true);
         }}
