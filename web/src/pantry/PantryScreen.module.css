@@ -62,7 +62,8 @@
 
 .searchInput {
   width: 100%;
-  padding: var(--space-4) var(--space-6);
+  /* Room on the right for the mic. */
+  padding: var(--space-4) 56px var(--space-4) var(--space-6);
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
@@ -127,4 +128,15 @@
   border: 1px solid var(--stop);
   color: var(--text);
   font-size: 14px;
+}
+
+/* Always in the page, even empty, so screen readers hear what it says next. */
+.voice {
+  padding: 0 var(--space-4);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.voice:not(:empty) {
+  margin-top: var(--space-2);
 }

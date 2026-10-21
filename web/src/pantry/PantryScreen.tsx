@@ -14,9 +14,32 @@ import { PantrySheet } from "./PantrySheet";
 import { POPULAR, QUICK_STARTS } from "./presets";
 import { QuickStarts } from "./QuickStarts";
 import { searchIngredients } from "./search";
+import { type Listening, useSpeech } from "./speech";
+import { findSpoken } from "./spoken";
 import { StaplesStrip } from "./StaplesStrip";
+import { VoiceAdd } from "./VoiceAdd";
 
 const POPULAR_TAB = "popular";
+
+/** Something a spoken sentence can name: an ingredient, or a staple. */
+interface Nameable {
+  name: string;
+  otherNames: readonly string[];
+  ingredient: CatalogIngredient | null;
+}
+
+/** What the last spoken sentence added, for the status line. */
+interface VoiceResult {
+  sentence: string;
+  added: string[];
+  already: string[];
+  staples: string[];
+}
+
+const list = (names: readonly string[]) =>
+  names.length < 2
+    ? names.join("")
+    : `${names.slice(0, -1).join(", ")} and ${names.at(-1) ?? ""}`;
 
 /** The first screen: tell the app what's in your kitchen. */
 export function PantryScreen() {
@@ -38,6 +61,9 @@ export function PantryScreen() {
   const [pantryOpen, setPantryOpen] = useState(false);
   const greeting = useMemo(() => greetingFor(new Date()), []);
   const staggered = useRef<number[]>([]);
+  const mic = useRef<HTMLButtonElement>(null);
+  const [voiceResult, setVoiceResult] = useState<VoiceResult | null>(null);
+  const speech = useSpeech(heard);
 
   useEffect(
     () => () => {
@@ -98,6 +124,40 @@ export function PantryScreen() {
     if (art) launch(art, ingredient.id, ingredient.category.id);
   }
 
+  // Staples are named too, so "onions" is answered rather than ignored.
+  const nameables = useMemo<Nameable[]>(
+    () => [
+      ...ingredients.map((item) => ({
+        name: item.name,
+        otherNames: item.search_terms,
+        ingredient: item,
+      })),
+      ...(staples.data ?? []).flatMap((group) =>
+        group.categories.flatMap((category) =>
+          category.staples.map((staple) => ({
+            name: staple.name,
+            otherNames: [],
+            ingredient: null,
+          })),
+        ),
+      ),
+    ],
+    [ingredients, staples.data],
+  );
+
+  function heard(sentence: string) {
+    const found = findSpoken(nameables, sentence, (item) => item.otherNames);
+    const items = found.flatMap((item) => item.ingredient ?? []);
+    const current = new Set(useDevice.getState().pantry);
+    setVoiceResult({
+      sentence,
+      added: items.filter((item) => !current.has(item.id)).map((item) => item.name),
+      already: items.filter((item) => current.has(item.id)).map((item) => item.name),
+      staples: found.filter((item) => !item.ingredient).map((item) => item.name),
+    });
+    if (mic.current) pickPreset(items, mic.current);
+  }
+
   function pickPreset(items: readonly CatalogIngredient[], origin: Element) {
     haptic.tap();
     const added = items.filter((item) => !inPantry.has(item.id));
@@ -151,7 +211,19 @@ export function PantryScreen() {
             setQuery(event.target.value);
           }}
         />
+        {speech.supported && loaded && (
+          <VoiceAdd
+            ref={mic}
+            listening={speech.listening.state === "listening"}
+            onStart={() => {
+              setVoiceResult(null);
+              speech.start();
+            }}
+            onStop={speech.stop}
+          />
+        )}
       </div>
+      <VoiceStatus listening={speech.listening} result={voiceResult} />
 
       {!query.trim() && categories.length > 0 && (
         <nav className={styles.tabs} aria-label="Browse by category">
@@ -229,5 +301,39 @@ export function PantryScreen() {
         onClear={clearPantry}
       />
     </main>
+  );
+}
+
+function VoiceStatus({
+  listening,
+  result,
+}: {
+  listening: Listening;
+  result: VoiceResult | null;
+}) {
+  let text: string | null = null;
+  if (listening.state === "listening") {
+    text = listening.heard ? `“${listening.heard}”` : "Listening… say what you have";
+  } else if (listening.state === "blocked") {
+    text = "The microphone is off for this site. You can type instead.";
+  } else if (listening.state === "failed") {
+    text = "We couldn't hear that. Try again, or type instead.";
+  } else if (result) {
+    const parts = [
+      result.added.length > 0 && `Added ${list(result.added).toLowerCase()}.`,
+      result.already.length > 0 &&
+        `${list(result.already)} ${result.already.length === 1 ? "was" : "were"} already in.`,
+      result.staples.length > 0 &&
+        `${list(result.staples)} ${result.staples.length === 1 ? "is a staple" : "are staples"}: we assume you have ${result.staples.length === 1 ? "it" : "them"}.`,
+    ].filter(Boolean);
+    text =
+      parts.length > 0
+        ? parts.join(" ")
+        : `We didn't find an ingredient in “${result.sentence}”. Try saying just the names.`;
+  }
+  return (
+    <p className={styles.voice} role="status">
+      {text}
+    </p>
   );
 }
