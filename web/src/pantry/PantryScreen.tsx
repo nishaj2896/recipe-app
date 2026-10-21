@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router";
 
 import type { CatalogIngredient } from "../api/client";
 import { useCatalog, useStaples } from "../api/queries";
@@ -29,6 +30,7 @@ export function PantryScreen() {
     clearPantry,
     toggleStaple,
     hydration,
+    saved,
   } = useDevice();
   const { launch } = useFlight();
   const [query, setQuery] = useState("");
@@ -111,7 +113,16 @@ export function PantryScreen() {
 
   return (
     <main className={styles.screen}>
-      <header>
+      <header className={styles.header}>
+        {saved.length > 0 && (
+          <Link
+            to="/saved"
+            className={styles.cookbook}
+            aria-label={`Your cookbook: ${String(saved.length)} saved`}
+          >
+            <span aria-hidden="true">♥</span> {saved.length}
+          </Link>
+        )}
         <p className={styles.hello}>{greeting.hello}</p>
         <h1 className={styles.title}>
           What's for <span className={styles.meal}>{greeting.meal}</span>?

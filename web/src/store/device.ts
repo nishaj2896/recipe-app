@@ -122,14 +122,14 @@ export function announceWrites(
   };
 }
 
-const channel =
+let channel =
   "BroadcastChannel" in globalThis ? new BroadcastChannel("recipe-app:device") : null;
 
 let readSucceeded = false;
 
 export const useDevice = create<DeviceState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       ...emptyDevice,
       hydration: "pending",
       addToPantry: (ids) => {
@@ -152,6 +152,10 @@ export const useDevice = create<DeviceState>()(
         }));
       },
       saveRecipe: (id) => {
+        // The first save asks the browser to keep this site's storage
+        // (ADR-0006 rule 5); browsers without the API just carry on.
+        if (get().saved.length === 0)
+          void (navigator.storage as StorageManager | undefined)?.persist();
         set((state) => ({
           saved: toEnd(state.saved, id),
           hidden: without(state.hidden, id),
@@ -203,6 +207,15 @@ export const useDevice = create<DeviceState>()(
 // Another tab wrote: take its copy. Two tabs acting in the same instant can
 // still race, and the later write wins; with one person on one phone that's
 // rare, and accounts in v2 replace this.
-channel?.addEventListener("message", () => {
+function onOtherTabWrite() {
   void useDevice.persist.rehydrate();
-});
+}
+channel?.addEventListener("message", onOtherTabWrite);
+
+/** Stops listening to other tabs. Tests call it, so old stores stop re-reading. */
+export function stopSync(): void {
+  channel?.close();
+  // A write still in flight then announces nothing, rather than posting on a
+  // closed channel, which throws.
+  channel = null;
+}

@@ -99,6 +99,23 @@ export const DECK = [
   recipe(3, "Egg Bhurji", ["egg", "milk"]),
 ];
 
+/** The full recipe behind a card, as GET /recipes/{id} returns it. */
+export function detailOf(card: RecipeCard): components["schemas"]["RecipeDetail"] {
+  return {
+    id: card.id,
+    name: card.name,
+    prep_minutes: card.prep_minutes,
+    cook_minutes: card.cook_minutes,
+    total_minutes: card.total_minutes,
+    diet: card.diet,
+    ingredients: [
+      ...card.matched_ingredients,
+      ...card.missing_ingredients,
+      ...card.assumed_staples,
+    ],
+  };
+}
+
 export type SearchHandler = (body: SearchRequest) => SearchResponse | Response;
 
 /** One deck: every card, no next page, nothing ignored. */
@@ -118,6 +135,16 @@ export function stubApi(search: SearchHandler = oneDeck): { searches: SearchRequ
     "fetch",
     vi.fn(async (request: Request) => {
       const path = new URL(request.url).pathname;
+      const recipeId = /^\/api\/v1\/recipes\/([0-9a-f-]{36})$/.exec(path)?.[1];
+      if (recipeId) {
+        const card = DECK.find((item) => item.id === recipeId);
+        return card
+          ? Response.json(detailOf(card))
+          : Response.json(
+              { type: "/problems/not-found", title: "Not Found", status: 404 },
+              { status: 404, headers: { "content-type": "application/problem+json" } },
+            );
+      }
       if (path === "/api/v1/recipes/search") {
         const body = (await request.json()) as SearchRequest;
         searches.push(body);

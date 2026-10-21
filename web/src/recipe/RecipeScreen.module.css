@@ -1,0 +1,14 @@
+.screen {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-4)
+    calc(var(--space-8) + env(safe-area-inset-bottom));
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  color: var(--text-muted);
+  font-weight: 700;
+  text-decoration: none;
+}

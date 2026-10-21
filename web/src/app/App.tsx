@@ -4,9 +4,11 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import { ArtSprite } from "../art/IngredientArt";
+import { CookbookScreen } from "../cookbook/CookbookScreen";
 import { DeckScreen } from "../deck/DeckScreen";
 import { FlightProvider } from "../motion/flight";
 import { PantryScreen } from "../pantry/PantryScreen";
+import { RecipeScreen } from "../recipe/RecipeScreen";
 
 export function App() {
   // One client per mount, so tests never share a cache.
@@ -24,6 +26,8 @@ export function App() {
               <Routes>
                 <Route path="/" element={<PantryScreen />} />
                 <Route path="/deck" element={<DeckScreen />} />
+                <Route path="/saved" element={<CookbookScreen />} />
+                <Route path="/recipe/:recipeId" element={<RecipeScreen />} />
               </Routes>
             </BrowserRouter>
           </FlightProvider>

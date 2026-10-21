@@ -79,7 +79,9 @@ test("save and skip buttons swipe the card and remember the choice", async () =>
   await user.click(screen.getByRole("button", { name: "Save Matar Paneer" }));
   await nextCardIs("Aloo Gobi");
   expect(useDevice.getState().saved).toEqual([matar.id]);
-  expect(screen.getByRole("img", { name: "1 saved" })).toBeInTheDocument();
+  expect(
+    screen.getByRole("link", { name: "Your cookbook: 1 saved" }),
+  ).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: "Skip Aloo Gobi" }));
   await nextCardIs("Egg Bhurji");
@@ -109,6 +111,24 @@ test("browser shortcuts and held keys never skip a card", async () => {
 
   expect(topCard()).toHaveAccessibleName("Matar Paneer");
   expect(useDevice.getState().hidden).toEqual([]);
+});
+
+test("the info button opens the recipe, and saving there swipes the card", async () => {
+  const { user } = await openDeck();
+
+  await user.click(screen.getByRole("button", { name: "About Matar Paneer" }));
+  const sheet = await screen.findByRole("dialog", { name: "About this recipe" });
+  // The sheet's own title is the h2, so the recipe's name comes one level down.
+  expect(
+    await within(sheet).findByRole("heading", { level: 3, name: "Matar Paneer" }),
+  ).toBeInTheDocument();
+  expect(
+    await within(sheet).findByRole("region", { name: "You have" }),
+  ).toHaveTextContent("Paneer");
+
+  await user.click(within(sheet).getByRole("button", { name: "Save" }));
+  await nextCardIs("Aloo Gobi");
+  expect(useDevice.getState().saved).toEqual([matar.id]);
 });
 
 test("undo brings the last card back and forgets the choice", async () => {

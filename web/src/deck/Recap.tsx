@@ -96,6 +96,9 @@ export function Recap({ dealt, saved, hasMore, onDealMore, byId }: Props) {
           Add ingredients for more
         </Link>
       )}
+      <Link to="/saved" className={styles.back}>
+        Open your cookbook <span aria-hidden="true">→</span>
+      </Link>
       <Link to="/" className={styles.back}>
         Back to your pantry
       </Link>
