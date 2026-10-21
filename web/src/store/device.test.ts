@@ -88,6 +88,23 @@ const v4 = (data: Partial<DeviceData>) =>
     version: 4,
   });
 
+const v5 = (data: Partial<DeviceData>) =>
+  JSON.stringify({
+    state: {
+      pantry: [],
+      outOfStaples: [],
+      saved: [],
+      hidden: [],
+      diet: null,
+      maxTotalMinutes: null,
+      swipeHintSeen: false,
+      voiceNoticeSeen: false,
+      installNudgeDismissed: false,
+      ...data,
+    },
+    version: 5,
+  });
+
 test("a first visit starts empty and saves what the user adds", async () => {
   const { device, stored } = await coldStart();
   const { useDevice } = device;
@@ -95,7 +112,7 @@ test("a first visit starts empty and saves what the user adds", async () => {
 
   useDevice.getState().addToPantry(["milk"]);
 
-  expect(await stored()).toBe(v4({ pantry: ["milk"] }));
+  expect(await stored()).toBe(v5({ pantry: ["milk"] }));
 });
 
 test("a return visit gets back what was saved", async () => {
@@ -108,8 +125,9 @@ test("a return visit gets back what was saved", async () => {
     maxTotalMinutes: 30,
     swipeHintSeen: true,
     voiceNoticeSeen: true,
+    installNudgeDismissed: true,
   };
-  const { device } = await coldStart(v4(saved));
+  const { device } = await coldStart(v5(saved));
 
   expect(device.useDevice.getState()).toMatchObject({ hydration: "ready", ...saved });
 });
@@ -129,7 +147,7 @@ test("data saved before recipes existed (v1) is upgraded, not lost", async () =>
   useDevice.getState().saveRecipe("r1");
 
   expect(await stored()).toBe(
-    v4({
+    v5({
       pantry: ["milk", "egg"],
       outOfStaples: ["salt"],
       saved: ["r1"],
@@ -167,13 +185,25 @@ test("data saved before voice add (v3) is upgraded: nobody has seen its notice",
     diet: "vegan",
     swipeHintSeen: true,
     voiceNoticeSeen: false,
+    installNudgeDismissed: false,
+  });
+});
+
+test("data saved before the install nudge (v4) is upgraded", async () => {
+  const { device } = await coldStart(v4({ saved: ["r1"], voiceNoticeSeen: true }));
+
+  expect(device.useDevice.getState()).toMatchObject({
+    hydration: "ready",
+    saved: ["r1"],
+    voiceNoticeSeen: true,
+    installNudgeDismissed: false,
   });
 });
 
 test.each([
   [
     "from a newer version of the app",
-    JSON.stringify({ state: { pantry: ["milk"], saved: ["r1"], lists: [] }, version: 5 }),
+    JSON.stringify({ state: { pantry: ["milk"], saved: ["r1"], lists: [] }, version: 6 }),
   ],
   ["that isn't valid JSON", "{not json"],
 ])("data %s is never written over", async (_case, saved) => {
@@ -309,7 +339,7 @@ describe("two tabs", () => {
 
     a.getState().addToPantry(["egg"]);
 
-    expect(await second.stored()).toBe(v4({ pantry: ["milk", "egg"], saved: ["r1"] }));
+    expect(await second.stored()).toBe(v5({ pantry: ["milk", "egg"], saved: ["r1"] }));
   });
 });
 

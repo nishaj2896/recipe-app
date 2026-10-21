@@ -3,6 +3,7 @@ import { Link } from "react-router";
 
 import type { CatalogIngredient, RecipeCard } from "../api/client";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
+import { InstallNudge } from "../install/InstallNudge";
 import styles from "./Recap.module.css";
 import { shoppingList, shoppingText } from "./shopping";
 
@@ -55,6 +56,7 @@ export function Recap({ dealt, saved, hasMore, onDealMore, byId }: Props) {
             : "You've seen every recipe your pantry can make."
           : `You saved ${String(saved.length)} ${saved.length === 1 ? "recipe" : "recipes"}.`}
       </p>
+      {saved.length > 0 && <InstallNudge />}
 
       {items.length > 0 && (
         <div className={styles.list}>

@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { recipeQuery } from "../api/queries";
 import { DishArt } from "../art/IngredientArt";
 import { DIETS } from "../deck/diets";
+import { InstallNudge } from "../install/InstallNudge";
 import { useDevice } from "../store/device";
 import styles from "./CookbookScreen.module.css";
 
@@ -23,6 +24,8 @@ export function CookbookScreen() {
         </Link>
         <h1 className={styles.title}>Your cookbook</h1>
       </header>
+
+      <InstallNudge />
 
       {hydration !== "pending" && saved.length === 0 && (
         <div className={styles.empty}>
