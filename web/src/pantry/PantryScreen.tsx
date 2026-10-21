@@ -243,8 +243,8 @@ export function PantryScreen() {
         title="Before you speak"
       >
         <p className={styles.noticeText}>
-          Your browser sends what you say to its speech service (Google or Apple) to turn
-          it into text. This app only gets the text.
+          Your browser sends what you say to its speech service (for example Google or
+          Apple) to turn it into text. This app only gets the text.
         </p>
         <button
           type="button"

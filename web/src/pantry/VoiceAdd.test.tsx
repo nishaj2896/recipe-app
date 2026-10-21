@@ -186,7 +186,7 @@ test("the first tap explains where the voice goes, and listens only after OK", a
   await user.click(screen.getByRole("button", { name: "Say what you have" }));
   const notice = await screen.findByRole("dialog", { name: "Before you speak" });
   expect(notice).toHaveTextContent(
-    "Your browser sends what you say to its speech service (Google or Apple)",
+    "Your browser sends what you say to its speech service (for example Google or Apple)",
   );
   expect(FakeRecognition.last).toBeNull();
 
