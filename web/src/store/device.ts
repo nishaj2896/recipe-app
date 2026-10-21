@@ -13,6 +13,13 @@ export interface DeviceData {
   pantry: string[];
   /** Staple ids the user unticked: they're out of them right now. */
   outOfStaples: string[];
+  /**
+   * Recipe ids the user swiped right on, oldest first. Never pruned, and an id
+   * is never in both lists: saving un-hides, and hiding a saved id does nothing.
+   */
+  saved: string[];
+  /** Recipe ids the user swiped left on, oldest first: the newest 200 at most. */
+  hidden: string[];
 }
 
 /**
@@ -27,22 +34,43 @@ interface DeviceActions {
   removeFromPantry: (id: string) => void;
   clearPantry: () => void;
   toggleStaple: (id: string) => void;
+  saveRecipe: (id: string) => void;
+  unsaveRecipe: (id: string) => void;
+  hideRecipe: (id: string) => void;
+  unhideRecipe: (id: string) => void;
 }
 
 export type DeviceState = DeviceData & DeviceActions & { hydration: Hydration };
 
 export const DEVICE_STORE_NAME = "device";
-export const DEVICE_STORE_VERSION = 1;
+export const DEVICE_STORE_VERSION = 2;
+/** The most hidden ids the search API accepts (ADR-0006 rule 5). */
+export const MAX_HIDDEN = 200;
 
-export const emptyDevice: DeviceData = { pantry: [], outOfStaples: [] };
+export const emptyDevice: DeviceData = {
+  pantry: [],
+  outOfStaples: [],
+  saved: [],
+  hidden: [],
+};
+
+/** Moves an id to the end of a list, so the list stays oldest first. */
+const toEnd = (list: readonly string[], id: string) => [
+  ...list.filter((item) => item !== id),
+  id,
+];
+const without = (list: readonly string[], id: string) =>
+  list.filter((item) => item !== id);
 
 /**
  * Upgrades data saved by an older version of the app. Each future version
  * adds a step here. A version it doesn't know (say, from a newer build after
  * a rollback) is refused, never guessed at: the store then stays read-only.
  */
-export function migrateDevice(saved: unknown, version: number): DeviceData {
-  if (version === DEVICE_STORE_VERSION) return saved as DeviceData;
+export function migrateDevice(stored: unknown, version: number): DeviceData {
+  if (version === DEVICE_STORE_VERSION) return stored as DeviceData;
+  // v1 had no recipes yet.
+  if (version === 1) return { ...(stored as DeviceData), saved: [], hidden: [] };
   throw new Error(`no migration from device store version ${version}`);
 }
 
@@ -61,6 +89,41 @@ export function writeAfterRead(
     removeItem: (name) => (canWrite() ? storage.removeItem(name) : undefined),
   };
 }
+
+/**
+ * Tells the app's other tabs when this one has written, so they re-read
+ * instead of later writing their stale copy over it (issue #44).
+ *
+ * A write that wouldn't change what's stored is skipped, and so is its
+ * message: re-reading sets state, which would otherwise write, which would
+ * wake the other tab, and so on forever.
+ */
+export function announceWrites(
+  storage: StateStorage,
+  announce: () => void,
+): StateStorage {
+  let known: string | null = null;
+  return {
+    getItem: async (name) => {
+      known = await storage.getItem(name);
+      return known;
+    },
+    setItem: async (name, value) => {
+      if (value === known) return;
+      known = value;
+      await storage.setItem(name, value);
+      announce();
+    },
+    removeItem: async (name) => {
+      known = null;
+      await storage.removeItem(name);
+      announce();
+    },
+  };
+}
+
+const channel =
+  "BroadcastChannel" in globalThis ? new BroadcastChannel("recipe-app:device") : null;
 
 let readSucceeded = false;
 
@@ -88,14 +151,46 @@ export const useDevice = create<DeviceState>()(
             : [...state.outOfStaples, id],
         }));
       },
+      saveRecipe: (id) => {
+        set((state) => ({
+          saved: toEnd(state.saved, id),
+          hidden: without(state.hidden, id),
+        }));
+      },
+      unsaveRecipe: (id) => {
+        set((state) => ({ saved: without(state.saved, id) }));
+      },
+      hideRecipe: (id) => {
+        set((state) =>
+          // A save is never undone by accident (ADR-0006 rule 5): only
+          // unsaving removes it.
+          state.saved.includes(id)
+            ? state
+            : // The oldest hide falls off past the API's limit.
+              { hidden: toEnd(state.hidden, id).slice(-MAX_HIDDEN) },
+        );
+      },
+      unhideRecipe: (id) => {
+        set((state) => ({ hidden: without(state.hidden, id) }));
+      },
     }),
     {
       name: DEVICE_STORE_NAME,
       version: DEVICE_STORE_VERSION,
       storage: createJSONStorage(() =>
-        writeAfterRead(createIdbStorage(), () => readSucceeded),
+        writeAfterRead(
+          announceWrites(createIdbStorage(), () => {
+            channel?.postMessage("written");
+          }),
+          () => readSucceeded,
+        ),
       ),
-      partialize: ({ pantry, outOfStaples }): DeviceData => ({ pantry, outOfStaples }),
+      partialize: ({ pantry, outOfStaples, saved, hidden }): DeviceData => ({
+        pantry,
+        outOfStaples,
+        saved,
+        hidden,
+      }),
       migrate: migrateDevice,
       onRehydrateStorage: () => (_state, error) => {
         readSucceeded = error === undefined;
@@ -104,3 +199,10 @@ export const useDevice = create<DeviceState>()(
     },
   ),
 );
+
+// Another tab wrote: take its copy. Two tabs acting in the same instant can
+// still race, and the later write wins; with one person on one phone that's
+// rare, and accounts in v2 replace this.
+channel?.addEventListener("message", () => {
+  void useDevice.persist.rehydrate();
+});
