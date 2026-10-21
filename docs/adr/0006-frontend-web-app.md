@@ -1,6 +1,6 @@
 # ADR-0006: The frontend is a mobile-first web app in this repository
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-10-21
 - Deciders: Nisha
 - Related: ADR-0003 (cursor, deck), ADR-0005 (the API it calls)
