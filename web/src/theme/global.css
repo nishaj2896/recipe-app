@@ -16,13 +16,23 @@ body,
 }
 
 body {
-  background: var(--glow), var(--bg);
-  background-attachment: fixed;
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* The glow sits on its own fixed layer: a fixed background repaints on every
+   scroll frame on Android and is ignored on iOS. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--glow);
 }
 
 h1,

@@ -2,7 +2,8 @@
  * Design tokens (ADR-0006 rule 6). Saffron Night is the dark theme and
  * Fresh Market the light one; the system setting picks between them.
  * Colour meanings are fixed in both: --go means save or have, --stop means
- * skip, --accent means missing or a call to action.
+ * skip, --accent means missing or a call to action. Each text colour meets
+ * WCAG AA (4.5:1) on the background it sits on; tokens.test.ts checks both.
  */
 :root {
   --font-display: "Unbounded Variable", system-ui, sans-serif;
@@ -42,11 +43,11 @@
     --surface-strong: rgba(42, 26, 16, 0.08);
     --border: rgba(42, 26, 16, 0.12);
     --text: #2a1a10;
-    --text-muted: #8a7462;
-    --accent: #e2572b;
+    --text-muted: #76614f;
+    --accent: #bf461c;
     --on-accent: #fff8ee;
-    --stop: #e2572b;
-    --go: #2e9e5b;
+    --stop: #be1e3a;
+    --go: #237a47;
     --on-go: #ffffff;
     --highlight: #f5a524;
     --glow: radial-gradient(circle at 50% 0%, rgba(255, 217, 194, 0.9), transparent 60%);

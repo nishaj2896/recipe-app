@@ -15,6 +15,7 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./src/test/setup.ts"],
-    css: { modules: { classNameStrategy: "non-scoped" } },
+    // tokens.test.ts reads the token file as text, so it must not be stubbed out.
+    css: { include: [/tokens\.css/], modules: { classNameStrategy: "non-scoped" } },
   },
 });
