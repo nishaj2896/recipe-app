@@ -7,12 +7,14 @@ export interface InstallPromptEvent extends Event {
 }
 
 /**
- * How this browser can add the app to the home screen:
- * - "prompt": Chrome or Edge offered its install dialog.
- * - "ios": Safari on iPhone or iPad, where it's Share, then Add to Home Screen.
- * - null: already installed, or no way to install.
+ * How this browser can add the app to the home screen: "prompt" when Chrome
+ * or Edge offered its install dialog, else null.
+ *
+ * iPhone and iPad never get a tip: a home-screen app there starts with empty
+ * storage, separate from Safari's, so installing would hide the user's saves
+ * (issue #55; Nisha chose to hide it until accounts in v2).
  */
-export type InstallWay = "prompt" | "ios" | null;
+export type InstallWay = "prompt" | null;
 
 let deferred: InstallPromptEvent | null = null;
 let installed = false;
@@ -47,19 +49,9 @@ function runningInstalled(): boolean {
   );
 }
 
-function isIos(): boolean {
-  const { userAgent, maxTouchPoints } = navigator;
-  // iPadOS reports itself as a Mac, but a Mac has no touch screen.
-  return (
-    /iPhone|iPad|iPod/.test(userAgent) ||
-    (/Macintosh/.test(userAgent) && maxTouchPoints > 1)
-  );
-}
-
 function installWay(): InstallWay {
   if (installed || runningInstalled()) return null;
-  if (deferred) return "prompt";
-  return isIos() ? "ios" : null;
+  return deferred ? "prompt" : null;
 }
 
 function subscribe(listener: () => void) {

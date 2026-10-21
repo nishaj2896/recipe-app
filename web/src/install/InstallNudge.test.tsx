@@ -69,16 +69,14 @@ test("Not now hides the nudge for good", async () => {
   expect(useDevice.getState().installNudgeDismissed).toBe(true);
 });
 
-test("on an iPhone it explains Share, then Add to Home Screen", async () => {
+test("an iPhone never gets the tip: its home-screen app wouldn't have the saves (#55)", async () => {
   vi.spyOn(navigator, "userAgent", "get").mockReturnValue(
     "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Safari/604.1",
   );
   render(<App />);
 
-  expect(
-    await screen.findByText(/tap Share, then Add to Home Screen/),
-  ).toBeInTheDocument();
-  expect(screen.queryByRole("button", { name: "Install" })).toBeNull();
+  expect(await screen.findByText("Matar Paneer")).toBeInTheDocument();
+  expect(nudge()).toBeNull();
 });
 
 test("nothing is suggested before the first save, or once installed", async () => {

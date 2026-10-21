@@ -27,22 +27,18 @@ export function InstallNudge() {
       <div className={styles.text}>
         <p className={styles.title}>Keep your recipes on your home screen</p>
         <p className={styles.body}>
-          {way === "ios"
-            ? "In Safari, tap Share, then Add to Home Screen. Your saves stay put."
-            : "Install the app so your saves stay put and it opens like any other app."}
+          Install the app so your saves stay put and it opens like any other app.
         </p>
         <div className={styles.actions}>
-          {way === "prompt" && (
-            <button
-              type="button"
-              className={styles.install}
-              onClick={() => {
-                void promptInstall();
-              }}
-            >
-              Install
-            </button>
-          )}
+          <button
+            type="button"
+            className={styles.install}
+            onClick={() => {
+              void promptInstall();
+            }}
+          >
+            Install
+          </button>
           <button type="button" className={styles.later} onClick={dismiss}>
             Not now
           </button>
