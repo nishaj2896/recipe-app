@@ -11,10 +11,14 @@ interface Props {
   recipeId: string;
   /** Replaces the save button, as the deck does with its own Skip and Save. */
   actions?: ReactNode;
+  /** Inside a sheet, which has its own h2 title, the headings start one level down. */
+  nested?: boolean;
 }
 
 /** A recipe's full ingredient list, sorted into what you have and what you'd need. */
-export function RecipeDetail({ recipeId, actions }: Props) {
+export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
+  const Name = nested ? "h3" : "h1";
+  const GroupTitle = nested ? "h4" : "h2";
   const recipe = useRecipe(recipeId);
   const catalog = useCatalog();
   const staples = useStaples();
@@ -23,7 +27,10 @@ export function RecipeDetail({ recipeId, actions }: Props) {
   const saved = useDevice((state) => state.saved);
   const { saveRecipe, unsaveRecipe } = useDevice.getState();
 
-  if (recipe.isPending) return <p className={styles.status}>Loading the recipe…</p>;
+  // Without the staples, every staple would flash under "You'll need".
+  if (recipe.isPending || staples.isPending) {
+    return <p className={styles.status}>Loading the recipe…</p>;
+  }
   if (recipe.isError) {
     return (
       <p className={styles.status} role="alert">
@@ -83,9 +90,9 @@ export function RecipeDetail({ recipeId, actions }: Props) {
       <div className={styles.art}>
         <DishArt recipeId={detail.id} size={220} />
       </div>
-      <h1 id="recipe-name" className={styles.name}>
+      <Name id="recipe-name" className={styles.name}>
         {detail.name}
-      </h1>
+      </Name>
       <dl className={styles.times}>
         <div>
           <dt>Prep</dt>
@@ -109,7 +116,7 @@ export function RecipeDetail({ recipeId, actions }: Props) {
         ([title, items]) =>
           items.length > 0 && (
             <section key={title} className={styles.group} aria-label={title}>
-              <h2 className={styles.groupTitle}>{title}</h2>
+              <GroupTitle className={styles.groupTitle}>{title}</GroupTitle>
               <ul className={styles.list}>
                 {items.map((item) => (
                   <li key={item.id} className={styles.item}>

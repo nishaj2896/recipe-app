@@ -336,6 +336,7 @@ export function DeckScreen() {
                 {about === current.id && (
                   <RecipeDetail
                     recipeId={current.id}
+                    nested
                     actions={
                       <>
                         <button

@@ -53,7 +53,7 @@ test("a recipe sorts its ingredients into have, need and assumed staples", async
   open(`/recipe/${matar.id}`);
 
   expect(
-    await screen.findByRole("heading", { name: "Matar Paneer" }),
+    await screen.findByRole("heading", { level: 1, name: "Matar Paneer" }),
   ).toBeInTheDocument();
   const items = (group: string) =>
     within(screen.getByRole("region", { name: group }))
@@ -62,6 +62,33 @@ test("a recipe sorts its ingredients into have, need and assumed staples", async
   expect(items("You have")).toEqual(["Paneer"]);
   expect(items("You'll need")).toEqual(["Potato", "Cream"]);
   expect(items("Staples we assume you have")).toEqual(["Salt"]);
+});
+
+test("staples are never shown as needed while they're still loading", async () => {
+  let release: () => void = () => undefined;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const fetch = globalThis.fetch;
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async (request: Request) => {
+      if (new URL(request.url).pathname === "/api/v1/staples") await gate;
+      return fetch(request);
+    }),
+  );
+  open(`/recipe/${matar.id}`);
+
+  // The recipe arrives first; it waits for the staples rather than guess.
+  await new Promise((resolve) => setTimeout(resolve, 50));
+  expect(screen.getByText("Loading the recipe…")).toBeInTheDocument();
+  expect(screen.queryByRole("region", { name: "You'll need" })).toBeNull();
+
+  release();
+  const assumed = await screen.findByRole("region", {
+    name: "Staples we assume you have",
+  });
+  expect(within(assumed).getByText("Salt")).toBeInTheDocument();
 });
 
 test("a staple you're out of moves to what you'll need", async () => {

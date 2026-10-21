@@ -118,6 +118,10 @@ test("the info button opens the recipe, and saving there swipes the card", async
 
   await user.click(screen.getByRole("button", { name: "About Matar Paneer" }));
   const sheet = await screen.findByRole("dialog", { name: "About this recipe" });
+  // The sheet's own title is the h2, so the recipe's name comes one level down.
+  expect(
+    await within(sheet).findByRole("heading", { level: 3, name: "Matar Paneer" }),
+  ).toBeInTheDocument();
   expect(
     await within(sheet).findByRole("region", { name: "You have" }),
   ).toHaveTextContent("Paneer");
