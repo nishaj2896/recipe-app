@@ -38,6 +38,11 @@ def create_app(*, catalog: IngredientCatalog, service: RecipeService) -> FastAPI
     return app
 
 
+def openapi_schema() -> dict[str, Any]:
+    """The API's OpenAPI document; the web app generates its types from it."""
+    return _new_app().openapi()
+
+
 def _new_app(lifespan: Lifespan | None = None) -> FastAPI:
     app = FastAPI(
         title="Pantry to Plate",

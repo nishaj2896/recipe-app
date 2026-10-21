@@ -21,6 +21,7 @@ Pantry-to-Plate is a recipe recommendation API. You pick the ingredients you hav
 | Web framework | FastAPI, Pydantic v2, Uvicorn |
 | Packaging | [uv](https://docs.astral.sh/uv/), with a committed `uv.lock` |
 | Quality | Ruff (lint and format), mypy (strict), pytest, pre-commit |
+| Web app | React 19, TypeScript (strict), Vite, Vitest, ESLint, Prettier, Node 22 ([ADR-0006](docs/adr/0006-frontend-web-app.md)) |
 
 ## Getting started
 
@@ -99,6 +100,18 @@ Point the app at it with `DATABASE_URL=postgresql+asyncpg://recipe_app:recipe_ap
 
 Tool settings live in `pyproject.toml`. mypy runs in strict mode, and pytest treats warnings as errors.
 
+### Web app
+
+The web app lives in `web/`. Run these from that folder, after `npm ci`:
+
+| Task | Command |
+|---|---|
+| Start it (proxies `/api` to the API on `:8000`; set `API_URL` to change) | `npm run dev` |
+| Run the tests | `npm test` |
+| Lint, type check, check formatting | `npm run lint`, `npm run typecheck`, `npm run format:check` |
+| Regenerate the API types after changing the API | `npm run api:generate` (commit `openapi.json` and `src/api/schema.d.ts`) |
+| Build for production | `npm run build` |
+
 ## Project layout
 
 ```text
@@ -110,6 +123,7 @@ src/recipe_app/
 tests/           # mirrors src/; tests/contract drives the API end to end over HTTP,
                  # tests/gate checks the search's query plans on 50,000 recipes
 docs/adr/        # architecture decision records
+web/             # the web app (React); src/api/schema.d.ts is generated from web/openapi.json
 ```
 
 Dependencies point inward: `api` → `services` → `domain`, with `infra` plugged in behind interfaces. The domain never imports FastAPI or a database driver, so the core rules can be tested without HTTP, and swapping storage later doesn't touch them.
