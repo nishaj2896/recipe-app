@@ -122,7 +122,7 @@ export function announceWrites(
   };
 }
 
-const channel =
+let channel =
   "BroadcastChannel" in globalThis ? new BroadcastChannel("recipe-app:device") : null;
 
 let readSucceeded = false;
@@ -215,4 +215,7 @@ channel?.addEventListener("message", onOtherTabWrite);
 /** Stops listening to other tabs. Tests call it, so old stores stop re-reading. */
 export function stopSync(): void {
   channel?.close();
+  // A write still in flight then announces nothing, rather than posting on a
+  // closed channel, which throws.
+  channel = null;
 }
