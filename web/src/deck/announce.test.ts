@@ -1,5 +1,5 @@
 import { DECK } from "../test/api";
-import { describeCard, swipeMessage, undoMessage } from "./announce";
+import { dealMessage, describeCard, swipeMessage, undoMessage } from "./announce";
 
 const [matar, aloo] = DECK as [(typeof DECK)[0], (typeof DECK)[0]];
 
@@ -9,6 +9,16 @@ test("a card is described by its name, match and what's missing", () => {
   );
   expect(describeCard({ ...aloo, match_percentage: null })).toContain("pantry basics");
   expect(describeCard({ ...aloo, missing_ingredients: [] })).toContain("nothing missing");
+});
+
+test("a deal names how many cards and the first one", () => {
+  expect(dealMessage([matar, aloo])).toBe(
+    `Your deck has 2 recipes. First: ${describeCard(matar)}.`,
+  );
+  expect(dealMessage([aloo])).toBe(
+    `Your deck has 1 recipe. First: ${describeCard(aloo)}.`,
+  );
+  expect(dealMessage([])).toBe("");
 });
 
 test("a swipe names the choice and the next card, or the deck's end", () => {

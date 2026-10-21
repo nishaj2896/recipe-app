@@ -15,6 +15,14 @@ export function describeCard(card: RecipeCard): string {
   return `${card.name}, ${match}, ${missing}`;
 }
 
+/** What a screen reader is told when a deal's cards appear. */
+export function dealMessage(cards: readonly RecipeCard[]): string {
+  const [first] = cards;
+  if (!first) return "";
+  const count = cards.length === 1 ? "1 recipe" : `${String(cards.length)} recipes`;
+  return `Your deck has ${count}. First: ${describeCard(first)}.`;
+}
+
 /** What a screen reader is told after a swipe, and which card is next. */
 export function swipeMessage(
   card: RecipeCard,

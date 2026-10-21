@@ -32,7 +32,10 @@ async function openDeck(search?: SearchHandler) {
   const api = stubApi(search);
   const user = userEvent.setup();
   render(<App />);
-  expect(await screen.findByText(/Cooking up ideas/)).toBeInTheDocument();
+  // A cold run transforms the lazy deck chunk here, which can pass 1 s.
+  expect(
+    await screen.findByText(/Cooking up ideas/, undefined, { timeout: 5000 }),
+  ).toBeInTheDocument();
   await user.click(await screen.findByRole("button", { name: "Skip" }));
   // Let the scene fade out, so a later search's scene is the only one.
   await waitFor(() => {
@@ -150,12 +153,17 @@ test("undo brings the last card back and forgets the choice", async () => {
   expect(useDevice.getState().saved).toEqual([]);
 });
 
-test("Backspace undoes too, and a screen reader hears every swipe and undo", async () => {
+test("Backspace undoes too, and a screen reader hears the deal, every swipe and undo", async () => {
   const { user } = await openDeck();
   const status = () =>
     screen
       .getAllByRole("status")
-      .find((element) => element.textContent.match(/Saved|Skipped|Undid/));
+      .find((element) => element.textContent.match(/Your deck has|Saved|Skipped|Undid/));
+
+  // The first card is spoken when the deal appears.
+  expect(status()).toHaveTextContent(
+    /^Your deck has 3 recipes\. First: Matar Paneer, 67% match, missing cream\.$/,
+  );
 
   await user.keyboard("{ArrowRight}");
   await nextCardIs("Aloo Gobi");

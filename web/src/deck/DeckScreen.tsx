@@ -9,7 +9,7 @@ import { useAfterPaint } from "../motion/afterPaint";
 import { greetingFor } from "../pantry/greeting";
 import { RecipeDetail } from "../recipe/RecipeDetail";
 import { useDevice } from "../store/device";
-import { swipeMessage, undoMessage } from "./announce";
+import { dealMessage, swipeMessage, undoMessage } from "./announce";
 import { CookingScene } from "./CookingScene";
 import styles from "./DeckScreen.module.css";
 import { type Filters, FilterSheet } from "./FilterSheet";
@@ -97,6 +97,7 @@ export function DeckScreen() {
   const [flying, setFlying] = useState<string | null>(null);
   // What a screen reader is told after each swipe and undo (ADR-0006 rule 9).
   const [announcement, setAnnouncement] = useState("");
+  const [announcedDeal, setAnnouncedDeal] = useState<string | null>(null);
   const top = useRef<SwipeCardHandle>(null);
   // The key handler is set up once, so it calls whichever undo is current.
   const latestUndo = useRef<() => void>(() => undefined);
@@ -153,6 +154,13 @@ export function DeckScreen() {
 
   const waiting = search !== null && search !== undefined && !page && !deck.isError;
   const showScene = waiting || (page !== undefined && sceneDoneFor !== dealKey);
+
+  // Each deal's first card is spoken once the cooking scene has gone, so a
+  // screen reader hears every card, not just those after a swipe.
+  if (page && !showScene && announcedDeal !== dealKey) {
+    setAnnouncedDeal(dealKey);
+    setAnnouncement(dealMessage(remaining));
+  }
 
   function swiped(card: RecipeCard, direction: Direction) {
     if (direction === "right") saveRecipe(card.id);
