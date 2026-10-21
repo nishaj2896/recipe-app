@@ -23,10 +23,12 @@ function open(path: string) {
   return userEvent.setup();
 }
 
-test("an empty cookbook points to the deck", () => {
+test("an empty cookbook points to the deck", async () => {
   open("/saved");
 
-  expect(screen.getByText("Recipes you swipe right on land here.")).toBeInTheDocument();
+  expect(
+    await screen.findByText("Recipes you swipe right on land here."),
+  ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Find something to cook" })).toHaveAttribute(
     "href",
     "/deck",
