@@ -29,6 +29,11 @@ export interface DeviceData {
   maxTotalMinutes: number | null;
   /** Whether the user has swiped once, so the first-run hint never shows again. */
   swipeHintSeen: boolean;
+  /**
+   * Whether the user has been told, before their first use of the mic, that
+   * the browser sends what they say to its speech service.
+   */
+  voiceNoticeSeen: boolean;
 }
 
 /**
@@ -49,12 +54,13 @@ interface DeviceActions {
   unhideRecipe: (id: string) => void;
   setFilters: (filters: Pick<DeviceData, "diet" | "maxTotalMinutes">) => void;
   markSwipeHintSeen: () => void;
+  markVoiceNoticeSeen: () => void;
 }
 
 export type DeviceState = DeviceData & DeviceActions & { hydration: Hydration };
 
 export const DEVICE_STORE_NAME = "device";
-export const DEVICE_STORE_VERSION = 3;
+export const DEVICE_STORE_VERSION = 4;
 /** The most hidden ids the search API accepts (ADR-0006 rule 5). */
 export const MAX_HIDDEN = 200;
 
@@ -66,6 +72,7 @@ export const emptyDevice: DeviceData = {
   diet: null,
   maxTotalMinutes: null,
   swipeHintSeen: false,
+  voiceNoticeSeen: false,
 };
 
 /** Moves an id to the end of a list, so the list stays oldest first. */
@@ -83,15 +90,20 @@ const without = (list: readonly string[], id: string) =>
  */
 export function migrateDevice(stored: unknown, version: number): DeviceData {
   if (version === DEVICE_STORE_VERSION) return stored as DeviceData;
+  // v3 had no voice add, so nobody has seen its notice.
+  if (version === 3) return { ...(stored as DeviceData), voiceNoticeSeen: false };
   // v2 had no filters and no hint. Someone with saves has clearly swiped.
   if (version === 2) {
     const v2 = stored as DeviceData;
-    return {
-      ...v2,
-      diet: null,
-      maxTotalMinutes: null,
-      swipeHintSeen: v2.saved.length > 0 || v2.hidden.length > 0,
-    };
+    return migrateDevice(
+      {
+        ...v2,
+        diet: null,
+        maxTotalMinutes: null,
+        swipeHintSeen: v2.saved.length > 0 || v2.hidden.length > 0,
+      },
+      3,
+    );
   }
   // v1 had no recipes yet.
   if (version === 1)
@@ -208,6 +220,9 @@ export const useDevice = create<DeviceState>()(
       markSwipeHintSeen: () => {
         set((state) => (state.swipeHintSeen ? state : { swipeHintSeen: true }));
       },
+      markVoiceNoticeSeen: () => {
+        set((state) => (state.voiceNoticeSeen ? state : { voiceNoticeSeen: true }));
+      },
     }),
     {
       name: DEVICE_STORE_NAME,
@@ -228,6 +243,7 @@ export const useDevice = create<DeviceState>()(
         diet,
         maxTotalMinutes,
         swipeHintSeen,
+        voiceNoticeSeen,
       }): DeviceData => ({
         pantry,
         outOfStaples,
@@ -236,6 +252,7 @@ export const useDevice = create<DeviceState>()(
         diet,
         maxTotalMinutes,
         swipeHintSeen,
+        voiceNoticeSeen,
       }),
       migrate: migrateDevice,
       onRehydrateStorage: () => (_state, error) => {

@@ -10,6 +10,7 @@ import { greetingFor } from "./greeting";
 import { IngredientTile } from "./IngredientTile";
 import { PantryDock } from "./PantryDock";
 import styles from "./PantryScreen.module.css";
+import { Sheet } from "../app/Sheet";
 import { PantrySheet } from "./PantrySheet";
 import { POPULAR, QUICK_STARTS } from "./presets";
 import { QuickStarts } from "./QuickStarts";
@@ -54,6 +55,8 @@ export function PantryScreen() {
     toggleStaple,
     hydration,
     saved,
+    voiceNoticeSeen,
+    markVoiceNoticeSeen,
   } = useDevice();
   const { launch } = useFlight();
   const [query, setQuery] = useState("");
@@ -64,6 +67,12 @@ export function PantryScreen() {
   const mic = useRef<HTMLButtonElement>(null);
   const [voiceResult, setVoiceResult] = useState<VoiceResult | null>(null);
   const speech = useSpeech(heard);
+  const [voiceNoticeOpen, setVoiceNoticeOpen] = useState(false);
+
+  function listen() {
+    setVoiceResult(null);
+    speech.start();
+  }
 
   useEffect(
     () => () => {
@@ -217,14 +226,38 @@ export function PantryScreen() {
             ref={mic}
             listening={speech.listening.state === "listening"}
             onStart={() => {
-              setVoiceResult(null);
-              speech.start();
+              // Before the first use, say where the voice goes.
+              if (voiceNoticeSeen) listen();
+              else setVoiceNoticeOpen(true);
             }}
             onStop={speech.stop}
           />
         )}
       </div>
       <VoiceStatus listening={speech.listening} result={voiceResult} />
+      <Sheet
+        open={voiceNoticeOpen}
+        onClose={() => {
+          setVoiceNoticeOpen(false);
+        }}
+        title="Before you speak"
+      >
+        <p className={styles.noticeText}>
+          Your browser sends what you say to its speech service (Google or Apple) to turn
+          it into text. This app only gets the text.
+        </p>
+        <button
+          type="button"
+          className={styles.noticeOk}
+          onClick={() => {
+            markVoiceNoticeSeen();
+            setVoiceNoticeOpen(false);
+            listen();
+          }}
+        >
+          OK, start listening
+        </button>
+      </Sheet>
 
       {!query.trim() && categories.length > 0 && (
         <nav className={styles.tabs} aria-label="Browse by category">

@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { App } from "../app/App";
@@ -45,7 +45,12 @@ class FakeRecognition extends EventTarget {
 
 beforeEach(() => {
   stubApi();
-  useDevice.setState({ ...emptyDevice, pantry: ["egg"], hydration: "ready" });
+  useDevice.setState({
+    ...emptyDevice,
+    pantry: ["egg"],
+    voiceNoticeSeen: true,
+    hydration: "ready",
+  });
   FakeRecognition.last = null;
   window.history.pushState({}, "", "/");
 });
@@ -171,4 +176,37 @@ test("the mic waits for the ingredients to load", async () => {
 
   expect(screen.queryByRole("button", { name: "Say what you have" })).toBeNull();
   expect(await screen.findByRole("button", { name: "Say what you have" })).toBeEnabled();
+});
+
+test("the first tap explains where the voice goes, and listens only after OK", async () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  useDevice.setState({ voiceNoticeSeen: false });
+  const user = await openApp();
+
+  await user.click(screen.getByRole("button", { name: "Say what you have" }));
+  const notice = await screen.findByRole("dialog", { name: "Before you speak" });
+  expect(notice).toHaveTextContent(
+    "Your browser sends what you say to its speech service (Google or Apple)",
+  );
+  expect(FakeRecognition.last).toBeNull();
+
+  await user.click(within(notice).getByRole("button", { name: "OK, start listening" }));
+
+  expect(FakeRecognition.last?.started).toBe(true);
+  expect(useDevice.getState().voiceNoticeSeen).toBe(true);
+});
+
+test("closing the notice without OK doesn't listen, and it shows again next time", async () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  useDevice.setState({ voiceNoticeSeen: false });
+  const user = await openApp();
+
+  await user.click(screen.getByRole("button", { name: "Say what you have" }));
+  const notice = await screen.findByRole("dialog", { name: "Before you speak" });
+  await user.click(within(notice).getByRole("button", { name: "Done" }));
+
+  expect(FakeRecognition.last).toBeNull();
+  expect(useDevice.getState().voiceNoticeSeen).toBe(false);
+  await user.click(screen.getByRole("button", { name: "Say what you have" }));
+  expect(await screen.findByRole("dialog", { name: "Before you speak" })).toBeVisible();
 });
