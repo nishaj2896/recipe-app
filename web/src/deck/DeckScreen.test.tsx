@@ -150,6 +150,46 @@ test("undo brings the last card back and forgets the choice", async () => {
   expect(useDevice.getState().saved).toEqual([]);
 });
 
+test("Backspace undoes too, and a screen reader hears every swipe and undo", async () => {
+  const { user } = await openDeck();
+  const status = () =>
+    screen
+      .getAllByRole("status")
+      .find((element) => element.textContent.match(/Saved|Skipped|Undid/));
+
+  await user.keyboard("{ArrowRight}");
+  await nextCardIs("Aloo Gobi");
+  expect(status()).toHaveTextContent(
+    /^Saved Matar Paneer\. Next: Aloo Gobi, \d+% match, missing cauliflower, cream\.$/,
+  );
+
+  await user.keyboard("{Backspace}");
+  await nextCardIs("Matar Paneer");
+  expect(useDevice.getState().saved).toEqual([]);
+  expect(status()).toHaveTextContent("Undid the save of Matar Paneer. It's back on top.");
+
+  // Nothing left to undo: Backspace does nothing.
+  await user.keyboard("{Backspace}");
+  expect(topCard()).toHaveAccessibleName("Matar Paneer");
+});
+
+test("the save, skip and undo buttons name their keys", async () => {
+  await openDeck();
+
+  expect(screen.getByRole("button", { name: "Save Matar Paneer" })).toHaveAttribute(
+    "aria-keyshortcuts",
+    "ArrowRight",
+  );
+  expect(screen.getByRole("button", { name: "Skip Matar Paneer" })).toHaveAttribute(
+    "aria-keyshortcuts",
+    "ArrowLeft",
+  );
+  expect(screen.getByRole("button", { name: "Undo last swipe" })).toHaveAttribute(
+    "aria-keyshortcuts",
+    "Backspace",
+  );
+});
+
 test("recipes saved earlier aren't dealt again", async () => {
   useDevice.setState({ saved: [aloo.id] });
   const { user } = await openDeck();
