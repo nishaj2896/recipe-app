@@ -19,3 +19,14 @@ test("past the API's limits the newest ingredients and skips are sent", () => {
   expect(search?.ingredient_ids[0]).toBe("ingredient-5");
   expect(search?.hidden_recipe_ids).toHaveLength(MAX_HIDDEN);
 });
+
+test("the deck's filters go with the search", () => {
+  const search = searchFor({
+    ...emptyDevice,
+    pantry: ["paneer"],
+    diet: "vegetarian",
+    maxTotalMinutes: 30,
+  });
+
+  expect(search).toMatchObject({ diet: "vegetarian", max_total_minutes: 30 });
+});
