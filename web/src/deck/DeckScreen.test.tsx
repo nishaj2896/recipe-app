@@ -362,3 +362,18 @@ test("when filters leave nothing to cook, they can be cleared", async () => {
   expect(api.searches[1]).toMatchObject({ max_total_minutes: null });
   expect(useDevice.getState().maxTotalMinutes).toBeNull();
 });
+
+test("a save is kept even if the user leaves before the card has flown off", async () => {
+  const { user } = await openDeck();
+
+  await user.click(screen.getByRole("button", { name: "Save Matar Paneer" }));
+  // Straight away, mid-flight: the card is still on top.
+  expect(topCard()).toHaveAccessibleName("Matar Paneer");
+  expect(screen.getByRole("button", { name: "Undo last swipe" })).toBeDisabled();
+  await user.click(screen.getByRole("link", { name: "Your cookbook: 1 saved" }));
+
+  expect(useDevice.getState().saved).toEqual([matar.id]);
+  expect(
+    await screen.findByRole("heading", { name: "Your cookbook" }),
+  ).toBeInTheDocument();
+});
