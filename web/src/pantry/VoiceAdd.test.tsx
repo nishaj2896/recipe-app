@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { App } from "../app/App";
 import { emptyDevice, useDevice } from "../store/device";
 import { stubApi } from "../test/api";
+import { speechLanguage, useSpeech } from "./speech";
 
 /** A stand-in for the browser's speech recognition, driven by the test. */
 class FakeRecognition extends EventTarget {
@@ -46,6 +47,7 @@ beforeEach(() => {
   stubApi();
   useDevice.setState({ ...emptyDevice, pantry: ["egg"], hydration: "ready" });
   FakeRecognition.last = null;
+  window.history.pushState({}, "", "/");
 });
 
 afterEach(() => {
@@ -129,4 +131,44 @@ test("a blocked microphone is explained, and nothing is added", async () => {
     screen.getByText("The microphone is off for this site. You can type instead."),
   ).toBeInTheDocument();
   expect(useDevice.getState().pantry).toEqual(["egg"]);
+});
+
+test("English speakers are heard as Indian English", () => {
+  expect(speechLanguage("en-US")).toBe("en-IN");
+  expect(speechLanguage("en")).toBe("en-IN");
+  expect(speechLanguage("hi-IN")).toBe("hi-IN");
+  expect(speechLanguage("")).toBe("en-IN");
+});
+
+test("leaving the screen mid-sentence delivers nothing", () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  const onSentence = vi.fn();
+  function Mic() {
+    const speech = useSpeech(onSentence);
+    return (
+      <button type="button" onClick={speech.start}>
+        Talk
+      </button>
+    );
+  }
+  const { unmount } = render(<Mic />);
+  act(() => {
+    screen.getByRole("button", { name: "Talk" }).click();
+  });
+  act(() => {
+    FakeRecognition.last?.hear("potatoes and milk", true);
+  });
+
+  // Unmounting aborts, and an aborted recognition still fires "end".
+  unmount();
+
+  expect(onSentence).not.toHaveBeenCalled();
+});
+
+test("the mic waits for the ingredients to load", async () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  render(<App />);
+
+  expect(screen.queryByRole("button", { name: "Say what you have" })).toBeNull();
+  expect(await screen.findByRole("button", { name: "Say what you have" })).toBeEnabled();
 });

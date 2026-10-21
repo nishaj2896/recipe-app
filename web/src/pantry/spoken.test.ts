@@ -31,3 +31,11 @@ test("a sentence naming nothing finds nothing", () => {
   expect(names("what can I cook tonight")).toEqual([]);
   expect(names("")).toEqual([]);
 });
+
+test("an ingredient's own name beats another's other name, whatever the order", () => {
+  const herbs = [
+    { name: "Dried mint", other: ["mint"] },
+    { name: "Mint", other: ["fresh mint"] },
+  ];
+  expect(findSpoken(herbs, "some mint", (item) => item.other)).toEqual([herbs[1]]);
+});

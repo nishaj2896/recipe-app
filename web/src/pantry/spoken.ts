@@ -39,14 +39,15 @@ export function findSpoken<T extends Pick<CatalogIngredient, "name">>(
   sentence: string,
   otherNames: (item: T) => readonly string[] = () => [],
 ): T[] {
+  // An item's own name beats another item's other name, so "mint" is Mint,
+  // not Dried mint. Between two other names, catalog order decides.
   const byPhrase = new Map<string, T>();
-  for (const item of items) {
-    for (const name of [item.name, ...otherNames(item)]) {
-      const phrase = key(words(name));
-      // The first item to claim a phrase keeps it: catalog order decides.
-      if (phrase && !byPhrase.has(phrase)) byPhrase.set(phrase, item);
-    }
-  }
+  const claim = (item: T, name: string) => {
+    const phrase = key(words(name));
+    if (phrase && !byPhrase.has(phrase)) byPhrase.set(phrase, item);
+  };
+  for (const item of items) claim(item, item.name);
+  for (const item of items) for (const name of otherNames(item)) claim(item, name);
 
   const said = words(sentence);
   const found = new Set<T>();

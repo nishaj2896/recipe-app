@@ -28,6 +28,14 @@ function recognitionClass(): RecognitionClass | undefined {
   return scope.SpeechRecognition ?? scope.webkitSpeechRecognition;
 }
 
+/**
+ * Indian English for any English speaker: it hears "paneer", "jeera" and
+ * "toor dal" far better than US or UK English does.
+ */
+export function speechLanguage(language: string): string {
+  return !language || language.toLowerCase().startsWith("en") ? "en-IN" : language;
+}
+
 export type Listening =
   | { state: "idle" }
   | { state: "listening"; heard: string }
@@ -47,8 +55,12 @@ export function useSpeech(onSentence: (sentence: string) => void) {
     latest.current = onSentence;
   });
 
+  // Leaving the screen mid-sentence delivers nothing: abort() still fires
+  // "end", and a late sentence would fill the pantry after the user has gone.
+  const left = useRef(false);
   useEffect(
     () => () => {
+      left.current = true;
       current.current?.abort();
     },
     [],
@@ -59,7 +71,7 @@ export function useSpeech(onSentence: (sentence: string) => void) {
   function start() {
     if (!Recognition || current.current) return;
     const recognition = new Recognition();
-    recognition.lang = navigator.language || "en-IN";
+    recognition.lang = speechLanguage(navigator.language);
     recognition.interimResults = true;
     recognition.continuous = false;
     let final = "";
@@ -90,7 +102,7 @@ export function useSpeech(onSentence: (sentence: string) => void) {
     });
     recognition.addEventListener("end", () => {
       current.current = null;
-      if (failed) return;
+      if (failed || left.current) return;
       setListening({ state: "idle" });
       if (final.trim()) latest.current(final.trim());
     });

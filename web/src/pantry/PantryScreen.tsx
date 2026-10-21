@@ -211,7 +211,8 @@ export function PantryScreen() {
             setQuery(event.target.value);
           }}
         />
-        {speech.supported && loaded && (
+        {/* Only once everything a sentence can name has loaded. */}
+        {speech.supported && loaded && catalog.isSuccess && staples.isSuccess && (
           <VoiceAdd
             ref={mic}
             listening={speech.listening.state === "listening"}
