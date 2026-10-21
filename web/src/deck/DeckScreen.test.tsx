@@ -122,6 +122,16 @@ test("browser shortcuts and held keys never skip a card", async () => {
   expect(useDevice.getState().hidden).toEqual([]);
 });
 
+test("tapping the card opens the recipe too", async () => {
+  const { user } = await openDeck();
+
+  await user.click(topCard());
+  const sheet = await screen.findByRole("dialog", { name: "About this recipe" });
+  expect(
+    await within(sheet).findByRole("heading", { level: 3, name: "Matar Paneer" }),
+  ).toBeInTheDocument();
+});
+
 test("the info button opens the recipe, and saving there swipes the card", async () => {
   const { user } = await openDeck();
 

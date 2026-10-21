@@ -1,4 +1,4 @@
-import { act, render } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import { domMax, LazyMotion } from "motion/react";
 import { createRef } from "react";
 
@@ -8,14 +8,21 @@ function renderCard() {
   const ref = createRef<SwipeCardHandle>();
   const onSwipe = vi.fn();
   const onGone = vi.fn();
+  const onOpen = vi.fn();
   const view = render(
     <LazyMotion features={domMax} strict>
-      <SwipeCard ref={ref} label="Aloo matar" onSwipe={onSwipe} onGone={onGone}>
+      <SwipeCard
+        ref={ref}
+        label="Aloo matar"
+        onSwipe={onSwipe}
+        onGone={onGone}
+        onOpen={onOpen}
+      >
         Aloo matar
       </SwipeCard>
     </LazyMotion>,
   );
-  return { ...view, ref, onSwipe, onGone };
+  return { ...view, ref, onSwipe, onGone, onOpen };
 }
 
 test("a card that unmounts mid-flight is reported gone once", async () => {
@@ -40,4 +47,19 @@ test("a card that never left isn't reported gone when it unmounts", () => {
   const { onGone, unmount } = renderCard();
   unmount();
   expect(onGone).not.toHaveBeenCalled();
+});
+
+test("a tap opens the recipe, but not once the card is leaving", () => {
+  const { ref, onOpen } = renderCard();
+  const card = screen.getByRole("article", { name: "Aloo matar" });
+
+  fireEvent.pointerDown(card);
+  fireEvent.click(card);
+  expect(onOpen).toHaveBeenCalledTimes(1);
+
+  act(() => {
+    ref.current?.fling("left");
+  });
+  fireEvent.click(card);
+  expect(onOpen).toHaveBeenCalledTimes(1);
 });

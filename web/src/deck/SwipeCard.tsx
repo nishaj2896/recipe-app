@@ -29,6 +29,8 @@ interface Props {
   onSwipe: (direction: Direction) => void;
   /** The card has flown off the screen. */
   onGone: () => void;
+  /** A tap, not a drag: opens the recipe, as the About button does. */
+  onOpen: () => void;
   children: ReactNode;
 }
 
@@ -40,7 +42,7 @@ const RETURN = { type: "spring", stiffness: 500, damping: 32 } as const;
  * then it either flies off at the finger's speed or springs back (ADR-0006
  * rule 7). Only transform and opacity animate.
  */
-export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
+export function SwipeCard({ ref, label, onSwipe, onGone, onOpen, children }: Props) {
   const card = useRef<HTMLElement>(null);
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-300, 300], [-16, 16]);
@@ -48,6 +50,8 @@ export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
   const skipOpacity = useTransform(x, [-120, -24], [1, 0]);
   const [armed, setArmed] = useState<Direction | null>(null);
   const leaving = useRef(false);
+  // A press that turned into a drag isn't a tap, even if it ends where it began.
+  const dragged = useRef(false);
   const reduceMotion = usePrefersReducedMotion();
   // Drag measures the page as it mounts, which forces the browser to lay out
   // everything that mounted with the card at once. Waiting a frame lets that
@@ -136,6 +140,15 @@ export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
       aria-label={label}
       drag={draggable ? "x" : false}
       dragMomentum={false}
+      onPointerDown={() => {
+        dragged.current = false;
+      }}
+      onDragStart={() => {
+        dragged.current = true;
+      }}
+      onClick={() => {
+        if (!dragged.current && !leaving.current) onOpen();
+      }}
       onDrag={onDrag}
       onDragEnd={onDragEnd}
       style={{ x, rotate }}

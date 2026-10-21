@@ -23,9 +23,9 @@ test("pantry to deck to cookbook, and the saves survive a reload", async ({ page
   await page.getByRole("button", { name: `Skip ${skipped}`, exact: true }).click();
   await expect(page.getByRole("article")).not.toHaveAttribute("aria-label", skipped);
 
-  // Read about the next one, then save it from the sheet.
+  // Tap the next one to read about it, then save it from the sheet.
   const third = await topCardName(page);
-  await page.getByRole("button", { name: `About ${third}`, exact: true }).click();
+  await page.getByRole("article").click();
   const sheet = page.getByRole("dialog");
   await expect(sheet.getByRole("heading", { name: third })).toBeVisible();
   await sheet.getByRole("button", { name: "Save" }).click();
