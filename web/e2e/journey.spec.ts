@@ -23,8 +23,13 @@ test("pantry to deck to cookbook, and the saves survive a reload", async ({ page
   await page.getByRole("button", { name: `Skip ${skipped}`, exact: true }).click();
   await expect(page.getByRole("article")).not.toHaveAttribute("aria-label", skipped);
 
-  // Tap the next one to read about it, then save it from the sheet.
+  // A short drag springs back: it neither swipes nor counts as a tap.
   const third = await topCardName(page);
+  await dragCard(page, 80);
+  await expect(page.getByRole("dialog", { name: "About this recipe" })).toHaveCount(0);
+  await expect(page.getByRole("article")).toHaveAttribute("aria-label", third);
+
+  // Tap it to read about it, then save it from the sheet.
   await page.getByRole("article").click();
   const sheet = page.getByRole("dialog");
   await expect(sheet.getByRole("heading", { name: third })).toBeVisible();
