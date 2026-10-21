@@ -1,4 +1,4 @@
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { App } from "../app/App";
@@ -20,8 +20,11 @@ beforeEach(() => {
   window.history.pushState({}, "", "/deck");
 });
 
+let dealtOnce = false;
+
 afterEach(() => {
   vi.unstubAllGlobals();
+  dealtOnce = false;
 });
 
 /** Opens the deck and skips the cooking scene once the cards are ready. */
@@ -94,6 +97,20 @@ test("the arrow keys swipe too", async () => {
   expect(useDevice.getState()).toMatchObject({ hidden: [matar.id], saved: [aloo.id] });
 });
 
+test("browser shortcuts and held keys never skip a card", async () => {
+  const { user } = await openDeck();
+
+  await user.keyboard("{Alt>}{ArrowLeft}{/Alt}");
+  await user.keyboard("{Meta>}{ArrowLeft}{/Meta}");
+  // A held key's repeats.
+  fireEvent.keyDown(window, { key: "ArrowLeft", repeat: true });
+  // Long enough for a fling to land, had one started.
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
+  expect(topCard()).toHaveAccessibleName("Matar Paneer");
+  expect(useDevice.getState().hidden).toEqual([]);
+});
+
 test("undo brings the last card back and forgets the choice", async () => {
   const { user } = await openDeck();
   const undo = screen.getByRole("button", { name: "Undo last swipe" });
@@ -157,14 +174,49 @@ test("deal more fetches the next deck with the cursor and the new skips", async 
   });
 });
 
+test("a fresh deck after a stale cursor doesn't count earlier saves again", async () => {
+  const { user } = await openDeck((body) => {
+    if (body.cursor) {
+      return Response.json(
+        { type: "/problems/cursor-expired", title: "Cursor expired", status: 422 },
+        { status: 422, headers: { "content-type": "application/problem+json" } },
+      );
+    }
+    // The first deck is one card; the fresh one deals everything not hidden.
+    const results = body.hidden_recipe_ids.length === 0 && !dealtOnce ? [matar] : DECK;
+    dealtOnce = true;
+    return { results, next_cursor: "page-2", ignored_ingredients: [] };
+  });
+
+  await user.click(screen.getByRole("button", { name: "Save Matar Paneer" }));
+  await user.click(await screen.findByRole("button", { name: "Deal more" }));
+  await user.click(await screen.findByRole("button", { name: "Deal a fresh deck" }));
+  await user.click(await screen.findByRole("button", { name: "Skip" }));
+
+  await nextCardIs("Aloo Gobi");
+  expect(screen.getByText("Your deck · 1 of 2")).toBeInTheDocument();
+  await user.click(screen.getByRole("button", { name: "Skip Aloo Gobi" }));
+  await nextCardIs("Egg Bhurji");
+  await user.click(screen.getByRole("button", { name: "Skip Egg Bhurji" }));
+
+  expect(
+    await screen.findByText("Nothing caught your eye this time."),
+  ).toBeInTheDocument();
+  expect(screen.queryByRole("list")).not.toBeInTheDocument();
+});
+
 test("pantry items the API now ignores are taken out, and the user is told", async () => {
   await openDeck((body) => ({
     results: DECK.filter((card) => !body.hidden_recipe_ids.includes(card.id)),
     next_cursor: null,
-    ignored_ingredients: [{ id: "milk", name: "Milk", reason: "retired" }],
+    ignored_ingredients: [
+      { id: "milk", name: "Milk", reason: "retired" },
+      // Sent as out of stock, never in the pantry: not announced.
+      { id: "old-spice", name: "Old spice", reason: "retired" },
+    ],
   }));
 
-  expect(screen.getByText(/We took milk out of your pantry/)).toHaveAttribute(
+  expect(screen.getByText(/We took milk out of your pantry:/)).toHaveAttribute(
     "role",
     "status",
   );

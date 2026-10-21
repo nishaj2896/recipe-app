@@ -40,10 +40,13 @@ export function DeckScreen() {
     () => (loaded ? searchFor(useDevice.getState()) : undefined),
     [loaded],
   );
-  const savedBefore = useMemo(
+  const savedOnOpen = useMemo(
     () => (loaded ? new Set(useDevice.getState().saved) : new Set<string>()),
     [loaded],
   );
+  // A fresh deck is read again: it can deal recipes saved earlier this visit.
+  const [savedOnFreshDeck, setSavedOnFreshDeck] = useState<Set<string> | null>(null);
+  const savedBefore = savedOnFreshDeck ?? savedOnOpen;
 
   const [round, setRound] = useState(0);
   const [deckIndex, setDeckIndex] = useState(0);
@@ -67,14 +70,16 @@ export function DeckScreen() {
   );
 
   // Pantry ids the API now ignores (retired, or now a staple) leave the
-  // pantry, and the user is told which (ADR-0006 rule 5).
+  // pantry, and the user is told which (ADR-0006 rule 5). Only ids sent as
+  // pantry count: a retired out-of-stock staple was never in the pantry.
   const firstPage = pages[0];
   const ignored = useMemo(
     () =>
       (firstPage?.ignored_ingredients ?? []).filter(
-        (item) => item.reason !== "not_staple",
+        (item) =>
+          item.reason !== "not_staple" && search?.ingredient_ids.includes(item.id),
       ),
-    [firstPage],
+    [firstPage, search],
   );
   useEffect(() => {
     for (const item of ignored) {
@@ -104,6 +109,17 @@ export function DeckScreen() {
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
+      // Alt or Cmd with an arrow is the browser's back and forward, and a held
+      // key repeats: neither should skip a card.
+      if (
+        event.repeat ||
+        event.altKey ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.defaultPrevented
+      ) {
+        return;
+      }
       if (event.key === "ArrowRight") top.current?.fling("right");
       if (event.key === "ArrowLeft") top.current?.fling("left");
     }
@@ -140,6 +156,7 @@ export function DeckScreen() {
   }
 
   function startOver() {
+    setSavedOnFreshDeck(new Set(useDevice.getState().saved));
     setRound((value) => value + 1);
     setDeckIndex(0);
   }
