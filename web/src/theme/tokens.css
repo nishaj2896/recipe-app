@@ -1,0 +1,55 @@
+/*
+ * Design tokens (ADR-0006 rule 6). Saffron Night is the dark theme and
+ * Fresh Market the light one; the system setting picks between them.
+ * Colour meanings are fixed in both: --go means save or have, --stop means
+ * skip, --accent means missing or a call to action. Each text colour meets
+ * WCAG AA (4.5:1) on the background it sits on; tokens.test.ts checks both.
+ */
+:root {
+  --font-display: "Unbounded Variable", system-ui, sans-serif;
+  --font-body: "Inter Variable", system-ui, sans-serif;
+
+  --radius-s: 12px;
+  --radius-m: 20px;
+  --radius-l: 28px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Saffron Night */
+  --bg: #140d09;
+  --surface: rgba(255, 236, 214, 0.08);
+  --surface-strong: rgba(255, 236, 214, 0.12);
+  --border: rgba(255, 236, 214, 0.16);
+  --text: #fff4e6;
+  --text-muted: #bfa88e;
+  --accent: #ffb13b;
+  --on-accent: #2a1600;
+  --stop: #ff5a36;
+  --go: #4ed37a;
+  --on-go: #062611;
+  --highlight: #e04a7a;
+  --glow: radial-gradient(circle at 50% 0%, rgba(255, 122, 26, 0.22), transparent 60%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Fresh Market */
+    --bg: #fff8ee;
+    --surface: rgba(42, 26, 16, 0.05);
+    --surface-strong: rgba(42, 26, 16, 0.08);
+    --border: rgba(42, 26, 16, 0.12);
+    --text: #2a1a10;
+    --text-muted: #76614f;
+    --accent: #bf461c;
+    --on-accent: #fff8ee;
+    --stop: #be1e3a;
+    --go: #237a47;
+    --on-go: #ffffff;
+    --highlight: #f5a524;
+    --glow: radial-gradient(circle at 50% 0%, rgba(255, 217, 194, 0.9), transparent 60%);
+  }
+}

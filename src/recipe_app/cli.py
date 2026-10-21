@@ -1,7 +1,10 @@
-"""The `recipe-app` command: no arguments serves the API; `db sync` loads data."""
+"""The `recipe-app` command: no arguments serves the API; `db sync` loads data;
+`openapi` prints the API's OpenAPI document.
+"""
 
 import argparse
 import asyncio
+import json
 import os
 import sys
 from collections.abc import Sequence
@@ -27,16 +30,26 @@ def main(argv: Sequence[str] | None = None) -> int:
     db_commands.add_parser(
         "sync", help="load data/*.toml into the database (needs DATABASE_URL)"
     )
+    commands.add_parser("openapi", help="print the OpenAPI document as JSON")
     args = parser.parse_args(argv)
 
     if args.command is None:
         _serve()
+        return 0
+    if args.command == "openapi":
+        _print_openapi()
         return 0
     try:
         return asyncio.run(_sync())
     except (ConfigError, CatalogError, RecipeError, SyncError) as error:
         print(error, file=sys.stderr)
         return 1
+
+
+def _print_openapi() -> None:
+    from recipe_app.api.app import openapi_schema
+
+    print(json.dumps(openapi_schema(), indent=2, sort_keys=True))
 
 
 def _serve() -> None:
