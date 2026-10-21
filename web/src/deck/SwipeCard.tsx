@@ -14,7 +14,13 @@ export interface SwipeCardHandle {
 interface Props {
   ref?: Ref<SwipeCardHandle>;
   label: string;
+  /**
+   * The choice, made the moment the card starts to leave: storing it then
+   * means leaving the screen mid-flight can't lose a save (issue #54).
+   */
   onSwipe: (direction: Direction) => void;
+  /** The card has flown off the screen. */
+  onGone: () => void;
   children: ReactNode;
 }
 
@@ -26,7 +32,7 @@ const RETURN = { type: "spring", stiffness: 500, damping: 32 } as const;
  * then it either flies off at the finger's speed or springs back (ADR-0006
  * rule 7). Only transform and opacity animate.
  */
-export function SwipeCard({ ref, label, onSwipe, children }: Props) {
+export function SwipeCard({ ref, label, onSwipe, onGone, children }: Props) {
   const card = useRef<HTMLElement>(null);
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-300, 300], [-16, 16]);
@@ -40,9 +46,10 @@ export function SwipeCard({ ref, label, onSwipe, children }: Props) {
     if (leaving.current) return;
     leaving.current = true;
     haptic.land();
+    onSwipe(direction);
     // With reduce motion the card doesn't fly; the next one just appears.
     if (reduceMotion) {
-      onSwipe(direction);
+      onGone();
       return;
     }
     const width = card.current?.offsetWidth ?? 360;
@@ -53,9 +60,7 @@ export function SwipeCard({ ref, label, onSwipe, children }: Props) {
       damping: 32,
       velocity,
       restDelta: 20,
-    }).then(() => {
-      onSwipe(direction);
-    });
+    }).then(onGone);
   }
 
   useImperativeHandle(ref, () => ({

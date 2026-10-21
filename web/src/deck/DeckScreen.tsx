@@ -73,6 +73,9 @@ export function DeckScreen() {
   // The recipe whose details are open over the deck, if any.
   const [about, setAbout] = useState<string | null>(null);
   const [filtering, setFiltering] = useState(false);
+  // The card flying off: its choice is already stored, but it stays on top
+  // until it has left the screen.
+  const [flying, setFlying] = useState<string | null>(null);
   const top = useRef<SwipeCardHandle>(null);
   const meal = useMemo(() => greetingFor(new Date()).meal, []);
 
@@ -116,7 +119,7 @@ export function DeckScreen() {
   const hiddenNow = new Set(hidden);
   const dealt = (page?.results ?? []).filter((card) => !savedBefore.has(card.id));
   const remaining = dealt.filter(
-    (card) => !savedNow.has(card.id) && !hiddenNow.has(card.id),
+    (card) => card.id === flying || (!savedNow.has(card.id) && !hiddenNow.has(card.id)),
   );
   const current = remaining[0];
   const dealtIds = new Set(dealt.map((card) => card.id));
@@ -156,6 +159,7 @@ export function DeckScreen() {
     if (direction === "right") saveRecipe(card.id);
     else hideRecipe(card.id);
     markSwipeHintSeen();
+    setFlying(card.id);
     setHistory((past) => [...past, { id: card.id, direction }]);
   }
 
@@ -337,6 +341,9 @@ export function DeckScreen() {
                   onSwipe={(direction) => {
                     swiped(current, direction);
                   }}
+                  onGone={() => {
+                    setFlying(null);
+                  }}
                 >
                   <RecipeFace card={current} categories={categories} />
                   {!swipeHintSeen && <SwipeHint />}
@@ -351,7 +358,7 @@ export function DeckScreen() {
                   className={styles.round}
                   data-kind="undo"
                   aria-label="Undo last swipe"
-                  disabled={swipesHere.length === 0}
+                  disabled={swipesHere.length === 0 || flying !== null}
                   onClick={undo}
                 >
                   ↺
