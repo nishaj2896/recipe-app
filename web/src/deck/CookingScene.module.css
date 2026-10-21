@@ -1,0 +1,79 @@
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--bg);
+}
+
+.scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glow);
+  pointer-events: none;
+}
+
+.stage {
+  position: relative;
+  width: 220px;
+  height: 230px;
+}
+
+.pot {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* The lid sits on the rim and rattles from its bottom edge. */
+.lid {
+  position: absolute;
+  left: 50%;
+  bottom: 118px;
+  margin-left: -75px;
+  transform-origin: 50% 100%;
+  z-index: 2;
+}
+
+/* Ingredients fall in behind the lid, so they vanish into the pot. */
+.drop {
+  position: absolute;
+  top: 40px;
+  margin-left: -22px;
+  z-index: 1;
+}
+
+.steam {
+  position: absolute;
+  bottom: 160px;
+  width: 14px;
+  height: 34px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text) 35%, transparent);
+  filter: blur(5px);
+  z-index: 3;
+}
+
+.text {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: 18px;
+  text-align: center;
+}
+
+.skip {
+  position: relative;
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+}

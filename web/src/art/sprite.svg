@@ -254,5 +254,36 @@
    <path d="M24 64h52M27 74h46" stroke="#8a4f19" stroke-width="2" opacity=".6"/>
    <ellipse cx="30" cy="42" rx="4" ry="3" fill="#fff" opacity=".5"/>
   </symbol>
+  <!-- Dishes and the cooking pot. A dish's soup takes the colour set on the <svg> (currentColor). -->
+  <linearGradient id="art-gBowl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffb26b"/><stop offset=".6" stop-color="#e8722c"/><stop offset="1" stop-color="#a8431a"/></linearGradient>
+  <radialGradient id="art-gSoupShine" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="art-gPot" x1="0" x2="1"><stop offset="0" stop-color="#3a3f4a"/><stop offset=".35" stop-color="#9aa3b5"/><stop offset=".55" stop-color="#5b6270"/><stop offset="1" stop-color="#22262e"/></linearGradient>
+  <linearGradient id="art-gLid" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c4ccdb"/><stop offset="1" stop-color="#4a505c"/></linearGradient>
+
+  <symbol id="art-bowl" viewBox="0 0 100 70">
+   <ellipse cx="50" cy="65" rx="34" ry="4" fill="#000" opacity=".3"/>
+   <path d="M7 24h86c0 23-19 38-43 38S7 47 7 24z" fill="url(#art-gBowl)"/>
+   <ellipse cx="50" cy="24" rx="43" ry="10" fill="#5a240c"/>
+   <ellipse cx="50" cy="25" rx="40" ry="8" fill="currentColor"/>
+   <ellipse cx="50" cy="25" rx="40" ry="8" fill="url(#art-gSoupShine)"/>
+   <path d="M17 34c3 12 12 19 22 21" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".35"/>
+  </symbol>
+
+  <symbol id="art-pot" viewBox="0 0 100 100">
+   <ellipse cx="50" cy="94" rx="38" ry="5" fill="#000" opacity=".35"/>
+   <rect x="4" y="44" width="14" height="8" rx="4" fill="#2a2e36"/>
+   <rect x="82" y="44" width="14" height="8" rx="4" fill="#2a2e36"/>
+   <path d="M14 38h72v40c0 8-6 14-14 14H28c-8 0-14-6-14-14z" fill="url(#art-gPot)"/>
+   <ellipse cx="50" cy="38" rx="36" ry="7" fill="#1b1e24"/>
+   <ellipse cx="50" cy="39" rx="33" ry="5" fill="#ffb13b"/>
+   <path d="M22 50v26" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+  </symbol>
+
+  <symbol id="art-lid" viewBox="0 0 100 40">
+   <path d="M12 32c4-14 20-22 38-22s34 8 38 22z" fill="url(#art-gLid)"/>
+   <rect x="10" y="30" width="80" height="5" rx="2.5" fill="#3a3f4a"/>
+   <rect x="42" y="2" width="16" height="10" rx="5" fill="#ffb13b"/>
+   <path d="M26 24c6-6 14-9 22-9" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".45"/>
+  </symbol>
  </defs>
 </svg>

@@ -23,6 +23,8 @@
   --bg: #140d09;
   --surface: rgba(255, 236, 214, 0.08);
   --surface-strong: rgba(255, 236, 214, 0.12);
+  /* Recipe cards: opaque, so the cards under the top one never show through. */
+  --card: #22160f;
   --border: rgba(255, 236, 214, 0.16);
   --text: #fff4e6;
   --text-muted: #bfa88e;
@@ -41,6 +43,7 @@
     --bg: #fff8ee;
     --surface: rgba(42, 26, 16, 0.05);
     --surface-strong: rgba(42, 26, 16, 0.08);
+    --card: #ffffff;
     --border: rgba(42, 26, 16, 0.12);
     --text: #2a1a10;
     --text-muted: #76614f;
