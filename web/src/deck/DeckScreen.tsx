@@ -386,6 +386,9 @@ export function DeckScreen() {
                   onGone={() => {
                     setFlying(null);
                   }}
+                  onOpen={() => {
+                    setAbout(current.id);
+                  }}
                 >
                   <RecipeFace card={current} categories={categories} />
                   {!swipeHintSeen && <SwipeHint />}
