@@ -1,0 +1,43 @@
+.empty {
+  color: var(--text-muted);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  max-height: 50dvh;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.name {
+  flex: 1;
+  font-weight: 600;
+}
+
+.remove {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clear {
+  margin-top: var(--space-4);
+  border: 0;
+  background: none;
+  color: var(--stop);
+  font-weight: 700;
+  padding: var(--space-2) 0;
+  cursor: pointer;
+}

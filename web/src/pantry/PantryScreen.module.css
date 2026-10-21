@@ -1,0 +1,109 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 520px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4) calc(140px + env(safe-area-inset-bottom));
+}
+
+.hello {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.title {
+  margin-top: var(--space-2);
+  font-size: clamp(28px, 8vw, 38px);
+  font-weight: 800;
+}
+
+.meal {
+  background: linear-gradient(90deg, var(--highlight), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-color-scheme: light) {
+  .meal {
+    background: none;
+    color: var(--accent);
+  }
+}
+
+.search {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  margin: calc(-1 * var(--space-3)) calc(-1 * var(--space-4)) 0;
+  padding: 0 var(--space-4);
+  scrollbar-width: none;
+}
+
+.tab {
+  flex: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab[aria-pressed="true"] {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.status {
+  color: var(--text-muted);
+}
+
+.retry {
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.warning {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-m);
+  border: 1px solid var(--stop);
+  color: var(--text);
+  font-size: 14px;
+}

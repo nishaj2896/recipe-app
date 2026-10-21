@@ -1,0 +1,21 @@
+.screen {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.title {
+  font-size: 28px;
+}
+
+.text {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+}
+
+.back {
+  display: inline-block;
+  margin-top: var(--space-6);
+  color: var(--accent);
+  font-weight: 700;
+}
