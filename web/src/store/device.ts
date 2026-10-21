@@ -34,6 +34,8 @@ export interface DeviceData {
    * the browser sends what they say to its speech service.
    */
   voiceNoticeSeen: boolean;
+  /** Whether the user said "Not now" to adding the app to their home screen. */
+  installNudgeDismissed: boolean;
 }
 
 /**
@@ -55,12 +57,13 @@ interface DeviceActions {
   setFilters: (filters: Pick<DeviceData, "diet" | "maxTotalMinutes">) => void;
   markSwipeHintSeen: () => void;
   markVoiceNoticeSeen: () => void;
+  dismissInstallNudge: () => void;
 }
 
 export type DeviceState = DeviceData & DeviceActions & { hydration: Hydration };
 
 export const DEVICE_STORE_NAME = "device";
-export const DEVICE_STORE_VERSION = 4;
+export const DEVICE_STORE_VERSION = 5;
 /** The most hidden ids the search API accepts (ADR-0006 rule 5). */
 export const MAX_HIDDEN = 200;
 
@@ -73,6 +76,7 @@ export const emptyDevice: DeviceData = {
   maxTotalMinutes: null,
   swipeHintSeen: false,
   voiceNoticeSeen: false,
+  installNudgeDismissed: false,
 };
 
 /** Moves an id to the end of a list, so the list stays oldest first. */
@@ -90,8 +94,11 @@ const without = (list: readonly string[], id: string) =>
  */
 export function migrateDevice(stored: unknown, version: number): DeviceData {
   if (version === DEVICE_STORE_VERSION) return stored as DeviceData;
+  // v4 had no install nudge.
+  if (version === 4) return { ...(stored as DeviceData), installNudgeDismissed: false };
   // v3 had no voice add, so nobody has seen its notice.
-  if (version === 3) return { ...(stored as DeviceData), voiceNoticeSeen: false };
+  if (version === 3)
+    return migrateDevice({ ...(stored as DeviceData), voiceNoticeSeen: false }, 4);
   // v2 had no filters and no hint. Someone with saves has clearly swiped.
   if (version === 2) {
     const v2 = stored as DeviceData;
@@ -223,6 +230,9 @@ export const useDevice = create<DeviceState>()(
       markVoiceNoticeSeen: () => {
         set((state) => (state.voiceNoticeSeen ? state : { voiceNoticeSeen: true }));
       },
+      dismissInstallNudge: () => {
+        set({ installNudgeDismissed: true });
+      },
     }),
     {
       name: DEVICE_STORE_NAME,
@@ -244,6 +254,7 @@ export const useDevice = create<DeviceState>()(
         maxTotalMinutes,
         swipeHintSeen,
         voiceNoticeSeen,
+        installNudgeDismissed,
       }): DeviceData => ({
         pantry,
         outOfStaples,
@@ -253,6 +264,7 @@ export const useDevice = create<DeviceState>()(
         maxTotalMinutes,
         swipeHintSeen,
         voiceNoticeSeen,
+        installNudgeDismissed,
       }),
       migrate: migrateDevice,
       onRehydrateStorage: () => (_state, error) => {

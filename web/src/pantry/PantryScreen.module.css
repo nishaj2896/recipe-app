@@ -4,7 +4,11 @@
   gap: var(--space-6);
   max-width: 520px;
   margin: 0 auto;
-  padding: var(--space-8) var(--space-4) calc(140px + env(safe-area-inset-bottom));
+  /* Clear of the notch and status bar when installed (viewport-fit=cover). */
+  padding: calc(var(--space-8) + env(safe-area-inset-top))
+    max(var(--space-4), env(safe-area-inset-right))
+    calc(140px + env(safe-area-inset-bottom))
+    max(var(--space-4), env(safe-area-inset-left));
 }
 
 .header {
