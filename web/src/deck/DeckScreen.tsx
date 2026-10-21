@@ -10,11 +10,14 @@ import { RecipeDetail } from "../recipe/RecipeDetail";
 import { useDevice } from "../store/device";
 import { CookingScene } from "./CookingScene";
 import styles from "./DeckScreen.module.css";
+import { type Filters, FilterSheet } from "./FilterSheet";
+import { filterSummary } from "./filters";
 import { Recap } from "./Recap";
 import { RecipeFace } from "./RecipeFace";
-import { searchFor } from "./searchRequest";
+import { type SearchRequest, searchFor } from "./searchRequest";
 import type { Direction } from "./swipe";
 import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
+import { SwipeHint } from "./SwipeHint";
 import { SearchError, useDeck } from "./useDeck";
 
 interface Swipe {
@@ -31,17 +34,30 @@ export function DeckScreen() {
   const saved = useDevice((state) => state.saved);
   const hidden = useDevice((state) => state.hidden);
   const pantry = useDevice((state) => state.pantry);
-  const { saveRecipe, unsaveRecipe, hideRecipe, unhideRecipe, removeFromPantry } =
-    useDevice.getState();
+  const diet = useDevice((state) => state.diet);
+  const maxTotalMinutes = useDevice((state) => state.maxTotalMinutes);
+  const swipeHintSeen = useDevice((state) => state.swipeHintSeen);
+  const {
+    saveRecipe,
+    unsaveRecipe,
+    hideRecipe,
+    unhideRecipe,
+    removeFromPantry,
+    setFilters,
+    markSwipeHintSeen,
+  } = useDevice.getState();
   const catalog = useCatalog();
   const loaded = hydration !== "pending";
 
   // The search and what was saved before are read once, when the deck opens:
   // swiping changes both, and the deck must not reshuffle under the finger.
-  const search = useMemo(
+  const searchOnOpen = useMemo(
     () => (loaded ? searchFor(useDevice.getState()) : undefined),
     [loaded],
   );
+  // New filters are a new search, read when they're applied.
+  const [searchWithFilters, setSearchWithFilters] = useState<SearchRequest | null>();
+  const search = searchWithFilters === undefined ? searchOnOpen : searchWithFilters;
   const savedOnOpen = useMemo(
     () => (loaded ? new Set(useDevice.getState().saved) : new Set<string>()),
     [loaded],
@@ -56,6 +72,7 @@ export function DeckScreen() {
   const [sceneDoneFor, setSceneDoneFor] = useState<string | null>(null);
   // The recipe whose details are open over the deck, if any.
   const [about, setAbout] = useState<string | null>(null);
+  const [filtering, setFiltering] = useState(false);
   const top = useRef<SwipeCardHandle>(null);
   const meal = useMemo(() => greetingFor(new Date()).meal, []);
 
@@ -138,6 +155,7 @@ export function DeckScreen() {
   function swiped(card: RecipeCard, direction: Direction) {
     if (direction === "right") saveRecipe(card.id);
     else hideRecipe(card.id);
+    markSwipeHintSeen();
     setHistory((past) => [...past, { id: card.id, direction }]);
   }
 
@@ -159,6 +177,15 @@ export function DeckScreen() {
     setRound((value) => value + 1);
     setDeckIndex(0);
   }
+
+  function applyFilters(filters: Filters) {
+    setFilters(filters);
+    setFiltering(false);
+    setSearchWithFilters(searchFor(useDevice.getState()));
+    startOver();
+  }
+
+  const filtered = diet !== null || maxTotalMinutes !== null;
 
   if (search === null) {
     return (
@@ -209,6 +236,36 @@ export function DeckScreen() {
           </m.span>
         </Link>
       </header>
+      <button
+        type="button"
+        className={styles.filterChip}
+        data-active={filtered || undefined}
+        aria-label={`Filters: ${filterSummary(diet, maxTotalMinutes)}`}
+        onClick={() => {
+          setFiltering(true);
+        }}
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+          <path
+            d="M2 4h12M4 8h8M6 12h4"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </svg>
+        {filterSummary(diet, maxTotalMinutes)}
+      </button>
+      <Sheet
+        open={filtering}
+        onClose={() => {
+          setFiltering(false);
+        }}
+        title="Filters"
+      >
+        {filtering && (
+          <FilterSheet initial={{ diet, maxTotalMinutes }} onApply={applyFilters} />
+        )}
+      </Sheet>
       {dealt.length > 0 && current && (
         <div className={styles.progress} aria-hidden="true">
           <m.span
@@ -282,9 +339,12 @@ export function DeckScreen() {
                   }}
                 >
                   <RecipeFace card={current} categories={categories} />
+                  {!swipeHintSeen && <SwipeHint />}
                 </SwipeCard>
               </div>
-              <p className={styles.hint}>Swipe right to save, left to skip</p>
+              {swipeHintSeen && (
+                <p className={styles.hint}>Swipe right to save, left to skip</p>
+              )}
               <div className={styles.controls}>
                 <button
                   type="button"
@@ -368,12 +428,32 @@ export function DeckScreen() {
           ) : dealt.length === 0 && deckIndex === 0 ? (
             <div className={styles.empty}>
               <h2 className={styles.emptyTitle}>Nothing to cook yet</h2>
-              <p className={styles.muted}>
-                No recipe matches this pantry. Add a few more ingredients and try again.
-              </p>
-              <Link to="/" className={styles.primary}>
-                Add ingredients
-              </Link>
+              {filtered ? (
+                <>
+                  <p className={styles.muted}>
+                    No recipe matches this pantry with these filters.
+                  </p>
+                  <button
+                    type="button"
+                    className={styles.primary}
+                    onClick={() => {
+                      applyFilters({ diet: null, maxTotalMinutes: null });
+                    }}
+                  >
+                    Clear filters
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className={styles.muted}>
+                    No recipe matches this pantry. Add a few more ingredients and try
+                    again.
+                  </p>
+                  <Link to="/" className={styles.primary}>
+                    Add ingredients
+                  </Link>
+                </>
+              )}
             </div>
           ) : (
             <Recap

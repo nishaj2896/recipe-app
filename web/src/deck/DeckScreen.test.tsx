@@ -34,6 +34,10 @@ async function openDeck(search?: SearchHandler) {
   render(<App />);
   expect(screen.getByText(/Cooking up ideas/)).toBeInTheDocument();
   await user.click(await screen.findByRole("button", { name: "Skip" }));
+  // Let the scene fade out, so a later search's scene is the only one.
+  await waitFor(() => {
+    expect(screen.queryByText(/Cooking up ideas/)).not.toBeInTheDocument();
+  });
   return { user, api };
 }
 
@@ -57,6 +61,8 @@ test("the search sends the pantry, the staples you're out of, and what you've sk
     ingredient_ids: ["paneer", "potato", "egg", "milk"],
     excluded_staples: ["salt"],
     hidden_recipe_ids: ["an-old-skip"],
+    diet: null,
+    max_total_minutes: null,
     cursor: null,
   });
 });
@@ -275,4 +281,84 @@ test("a failed search can be retried", async () => {
   await user.click(await screen.findByRole("button", { name: "Try again" }));
   await user.click(await screen.findByRole("button", { name: "Skip" }));
   await nextCardIs("Matar Paneer");
+});
+
+test("the first visit shows the swipe hint until the first swipe, then never again", async () => {
+  const { user } = await openDeck();
+
+  expect(within(topCard()).getByText("Swipe right to save, left to skip")).toBeVisible();
+
+  await user.click(screen.getByRole("button", { name: "Skip Matar Paneer" }));
+  await nextCardIs("Aloo Gobi");
+  expect(within(topCard()).queryByText(/Swipe right/)).not.toBeInTheDocument();
+  expect(useDevice.getState().swipeHintSeen).toBe(true);
+});
+
+test("the hint isn't shown once the user has swiped before", async () => {
+  useDevice.setState({ swipeHintSeen: true });
+  await openDeck();
+
+  expect(within(topCard()).queryByText(/Swipe right/)).not.toBeInTheDocument();
+  // The quiet reminder under the deck stays.
+  expect(screen.getByText("Swipe right to save, left to skip")).toBeInTheDocument();
+});
+
+test("the deck's filters are sent, and changing them deals a fresh deck", async () => {
+  useDevice.setState({ diet: "vegetarian" });
+  const { user, api } = await openDeck();
+  expect(api.searches[0]).toMatchObject({ diet: "vegetarian", max_total_minutes: null });
+
+  await user.click(screen.getByRole("button", { name: "Filters: Veg · Any time" }));
+  const sheet = await screen.findByRole("dialog", { name: "Filters" });
+  const apply = within(sheet).getByRole("button", { name: "Show recipes" });
+  expect(apply).toBeDisabled();
+
+  await user.click(within(sheet).getByRole("radio", { name: "Vegan" }));
+  await user.click(within(sheet).getByRole("radio", { name: "≤30 min" }));
+  await user.click(apply);
+
+  expect(screen.getByText(/Cooking up ideas/)).toBeInTheDocument();
+  await user.click(await screen.findByRole("button", { name: "Skip" }));
+  await nextCardIs("Matar Paneer");
+  expect(api.searches[1]).toMatchObject({
+    diet: "vegan",
+    max_total_minutes: 30,
+    cursor: null,
+  });
+  expect(useDevice.getState()).toMatchObject({ diet: "vegan", maxTotalMinutes: 30 });
+  expect(
+    screen.getByRole("button", { name: "Filters: Vegan · ≤30 min" }),
+  ).toBeInTheDocument();
+});
+
+test("closing the filters without applying keeps the deck", async () => {
+  const { user, api } = await openDeck();
+
+  await user.click(screen.getByRole("button", { name: /^Filters:/ }));
+  const sheet = await screen.findByRole("dialog", { name: "Filters" });
+  await user.click(within(sheet).getByRole("radio", { name: "Vegan" }));
+  await user.click(within(sheet).getByRole("button", { name: "Done" }));
+
+  expect(topCard()).toHaveAccessibleName("Matar Paneer");
+  expect(api.searches).toHaveLength(1);
+  expect(useDevice.getState().diet).toBeNull();
+});
+
+test("when filters leave nothing to cook, they can be cleared", async () => {
+  useDevice.setState({ maxTotalMinutes: 15 });
+  const { user, api } = await openDeck((body) => ({
+    results: body.max_total_minutes === null ? DECK : [],
+    next_cursor: null,
+    ignored_ingredients: [],
+  }));
+
+  expect(
+    screen.getByText("No recipe matches this pantry with these filters."),
+  ).toBeInTheDocument();
+  await user.click(screen.getByRole("button", { name: "Clear filters" }));
+  await user.click(await screen.findByRole("button", { name: "Skip" }));
+
+  await nextCardIs("Matar Paneer");
+  expect(api.searches[1]).toMatchObject({ max_total_minutes: null });
+  expect(useDevice.getState().maxTotalMinutes).toBeNull();
 });

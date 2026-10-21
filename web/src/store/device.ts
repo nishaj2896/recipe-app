@@ -1,7 +1,10 @@
 import { create } from "zustand";
 import { createJSONStorage, persist, type StateStorage } from "zustand/middleware";
 
+import type { components } from "../api/schema";
 import { createIdbStorage } from "./idbStorage";
+
+export type Diet = components["schemas"]["Diet"];
 
 /**
  * What this device remembers between visits (ADR-0006 rule 5). v1 has no
@@ -20,6 +23,12 @@ export interface DeviceData {
   saved: string[];
   /** Recipe ids the user swiped left on, oldest first: the newest 200 at most. */
   hidden: string[];
+  /** The strictest diet a deck may deal, or null for any. */
+  diet: Diet | null;
+  /** The longest total time a deck may deal, in minutes, or null for any. */
+  maxTotalMinutes: number | null;
+  /** Whether the user has swiped once, so the first-run hint never shows again. */
+  swipeHintSeen: boolean;
 }
 
 /**
@@ -38,12 +47,14 @@ interface DeviceActions {
   unsaveRecipe: (id: string) => void;
   hideRecipe: (id: string) => void;
   unhideRecipe: (id: string) => void;
+  setFilters: (filters: Pick<DeviceData, "diet" | "maxTotalMinutes">) => void;
+  markSwipeHintSeen: () => void;
 }
 
 export type DeviceState = DeviceData & DeviceActions & { hydration: Hydration };
 
 export const DEVICE_STORE_NAME = "device";
-export const DEVICE_STORE_VERSION = 2;
+export const DEVICE_STORE_VERSION = 3;
 /** The most hidden ids the search API accepts (ADR-0006 rule 5). */
 export const MAX_HIDDEN = 200;
 
@@ -52,6 +63,9 @@ export const emptyDevice: DeviceData = {
   outOfStaples: [],
   saved: [],
   hidden: [],
+  diet: null,
+  maxTotalMinutes: null,
+  swipeHintSeen: false,
 };
 
 /** Moves an id to the end of a list, so the list stays oldest first. */
@@ -69,9 +83,20 @@ const without = (list: readonly string[], id: string) =>
  */
 export function migrateDevice(stored: unknown, version: number): DeviceData {
   if (version === DEVICE_STORE_VERSION) return stored as DeviceData;
+  // v2 had no filters and no hint. Someone with saves has clearly swiped.
+  if (version === 2) {
+    const v2 = stored as DeviceData;
+    return {
+      ...v2,
+      diet: null,
+      maxTotalMinutes: null,
+      swipeHintSeen: v2.saved.length > 0 || v2.hidden.length > 0,
+    };
+  }
   // v1 had no recipes yet.
-  if (version === 1) return { ...(stored as DeviceData), saved: [], hidden: [] };
-  throw new Error(`no migration from device store version ${version}`);
+  if (version === 1)
+    return migrateDevice({ ...(stored as object), saved: [], hidden: [] }, 2);
+  throw new Error(`no migration from device store version ${String(version)}`);
 }
 
 /**
@@ -177,6 +202,12 @@ export const useDevice = create<DeviceState>()(
       unhideRecipe: (id) => {
         set((state) => ({ hidden: without(state.hidden, id) }));
       },
+      setFilters: ({ diet, maxTotalMinutes }) => {
+        set({ diet, maxTotalMinutes });
+      },
+      markSwipeHintSeen: () => {
+        set((state) => (state.swipeHintSeen ? state : { swipeHintSeen: true }));
+      },
     }),
     {
       name: DEVICE_STORE_NAME,
@@ -189,11 +220,22 @@ export const useDevice = create<DeviceState>()(
           () => readSucceeded,
         ),
       ),
-      partialize: ({ pantry, outOfStaples, saved, hidden }): DeviceData => ({
+      partialize: ({
         pantry,
         outOfStaples,
         saved,
         hidden,
+        diet,
+        maxTotalMinutes,
+        swipeHintSeen,
+      }): DeviceData => ({
+        pantry,
+        outOfStaples,
+        saved,
+        hidden,
+        diet,
+        maxTotalMinutes,
+        swipeHintSeen,
       }),
       migrate: migrateDevice,
       onRehydrateStorage: () => (_state, error) => {

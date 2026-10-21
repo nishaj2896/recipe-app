@@ -18,7 +18,10 @@ export const MAX_EXCLUDED_STAPLES = 100;
  * `ignored_ingredients` instead of refusing them (ADR-0006 rule 5).
  */
 export function searchFor(
-  device: Pick<DeviceData, "pantry" | "outOfStaples" | "hidden">,
+  device: Pick<
+    DeviceData,
+    "pantry" | "outOfStaples" | "hidden" | "diet" | "maxTotalMinutes"
+  >,
 ): SearchRequest | null {
   if (device.pantry.length === 0) return null;
   return {
@@ -27,5 +30,7 @@ export function searchFor(
     ingredient_ids: device.pantry.slice(-MAX_INGREDIENTS),
     excluded_staples: device.outOfStaples.slice(-MAX_EXCLUDED_STAPLES),
     hidden_recipe_ids: device.hidden.slice(-MAX_HIDDEN),
+    diet: device.diet,
+    max_total_minutes: device.maxTotalMinutes,
   };
 }

@@ -1,0 +1,63 @@
+.hint {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.track {
+  position: relative;
+  width: 210px;
+  height: 60px;
+}
+
+/* A dashed line from the finger's start to the arrow. */
+.trail {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 160px;
+  border-top: 3px dashed rgba(255, 255, 255, 0.85);
+  transform-origin: 0 50%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+  transform: translateY(-55%);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.finger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 0 0 12px rgba(255, 255, 255, 0.22),
+    0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.text {
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  background: rgba(20, 13, 9, 0.82);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}

@@ -218,3 +218,23 @@
   background: var(--go);
   color: var(--on-go);
 }
+
+.filterChip {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* An active filter is a choice the user made: it reads louder. */
+.filterChip[data-active] {
+  border-color: var(--text);
+}

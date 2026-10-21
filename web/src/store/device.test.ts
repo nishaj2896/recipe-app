@@ -57,6 +57,21 @@ const v2 = (data: Partial<DeviceData>) =>
     version: 2,
   });
 
+const v3 = (data: Partial<DeviceData>) =>
+  JSON.stringify({
+    state: {
+      pantry: [],
+      outOfStaples: [],
+      saved: [],
+      hidden: [],
+      diet: null,
+      maxTotalMinutes: null,
+      swipeHintSeen: false,
+      ...data,
+    },
+    version: 3,
+  });
+
 test("a first visit starts empty and saves what the user adds", async () => {
   const { device, stored } = await coldStart();
   const { useDevice } = device;
@@ -64,7 +79,7 @@ test("a first visit starts empty and saves what the user adds", async () => {
 
   useDevice.getState().addToPantry(["milk"]);
 
-  expect(await stored()).toBe(v2({ pantry: ["milk"] }));
+  expect(await stored()).toBe(v3({ pantry: ["milk"] }));
 });
 
 test("a return visit gets back what was saved", async () => {
@@ -73,8 +88,11 @@ test("a return visit gets back what was saved", async () => {
     outOfStaples: ["salt"],
     saved: ["r1"],
     hidden: ["r2"],
+    diet: "vegetarian" as const,
+    maxTotalMinutes: 30,
+    swipeHintSeen: true,
   };
-  const { device } = await coldStart(v2(saved));
+  const { device } = await coldStart(v3(saved));
 
   expect(device.useDevice.getState()).toMatchObject({ hydration: "ready", ...saved });
 });
@@ -94,14 +112,36 @@ test("data saved before recipes existed (v1) is upgraded, not lost", async () =>
   useDevice.getState().saveRecipe("r1");
 
   expect(await stored()).toBe(
-    v2({ pantry: ["milk", "egg"], outOfStaples: ["salt"], saved: ["r1"] }),
+    v3({
+      pantry: ["milk", "egg"],
+      outOfStaples: ["salt"],
+      saved: ["r1"],
+      swipeHintSeen: false,
+    }),
   );
+});
+
+test.each([
+  ["nothing swiped yet still gets the hint", {}, false],
+  ["a save means the user has swiped", { saved: ["r1"] }, true],
+  ["so does a skip", { hidden: ["r2"] }, true],
+])("data saved before filters (v2) is upgraded: %s", async (_case, data, seen) => {
+  const { device } = await coldStart(v2({ pantry: ["milk"], ...data }));
+
+  expect(device.useDevice.getState()).toMatchObject({
+    hydration: "ready",
+    pantry: ["milk"],
+    ...data,
+    diet: null,
+    maxTotalMinutes: null,
+    swipeHintSeen: seen,
+  });
 });
 
 test.each([
   [
     "from a newer version of the app",
-    JSON.stringify({ state: { pantry: ["milk"], saved: ["r1"], lists: [] }, version: 3 }),
+    JSON.stringify({ state: { pantry: ["milk"], saved: ["r1"], lists: [] }, version: 4 }),
   ],
   ["that isn't valid JSON", "{not json"],
 ])("data %s is never written over", async (_case, saved) => {
@@ -194,6 +234,21 @@ describe("actions", () => {
     expect(persist).toHaveBeenCalledTimes(1);
   });
 
+  test("filters are remembered for the next deck", () => {
+    useDevice.getState().setFilters({ diet: "egg", maxTotalMinutes: 45 });
+    expect(useDevice.getState()).toMatchObject({ diet: "egg", maxTotalMinutes: 45 });
+
+    useDevice.getState().setFilters({ diet: null, maxTotalMinutes: null });
+    expect(useDevice.getState()).toMatchObject({ diet: null, maxTotalMinutes: null });
+  });
+
+  test("the swipe hint, once seen, stays seen", () => {
+    expect(useDevice.getState().swipeHintSeen).toBe(false);
+    useDevice.getState().markSwipeHintSeen();
+    useDevice.getState().markSwipeHintSeen();
+    expect(useDevice.getState().swipeHintSeen).toBe(true);
+  });
+
   test("toggling a staple marks it out of stock, then back in", () => {
     useDevice.getState().toggleStaple("salt");
     expect(useDevice.getState().outOfStaples).toEqual(["salt"]);
@@ -222,7 +277,7 @@ describe("two tabs", () => {
 
     a.getState().addToPantry(["egg"]);
 
-    expect(await second.stored()).toBe(v2({ pantry: ["milk", "egg"], saved: ["r1"] }));
+    expect(await second.stored()).toBe(v3({ pantry: ["milk", "egg"], saved: ["r1"] }));
   });
 });
 
