@@ -45,6 +45,12 @@ export interface DeviceData {
  */
 export type Hydration = "pending" | "ready" | "failed";
 
+/** A saved recipe and its index in the saved list, oldest first. */
+export interface SavedPlace {
+  id: string;
+  index: number;
+}
+
 interface DeviceActions {
   addToPantry: (ids: readonly string[]) => void;
   removeFromPantry: (id: string) => void;
@@ -52,6 +58,12 @@ interface DeviceActions {
   toggleStaple: (id: string) => void;
   saveRecipe: (id: string) => void;
   unsaveRecipe: (id: string) => void;
+  clearSaved: () => void;
+  /**
+   * Undoes a removal: puts each removed recipe back where it was, keeping
+   * anything saved since (in this tab or another).
+   */
+  restoreSaved: (removed: readonly SavedPlace[]) => void;
   hideRecipe: (id: string) => void;
   unhideRecipe: (id: string) => void;
   setFilters: (filters: Pick<DeviceData, "diet" | "maxTotalMinutes">) => void;
@@ -207,6 +219,22 @@ export const useDevice = create<DeviceState>()(
       },
       unsaveRecipe: (id) => {
         set((state) => ({ saved: without(state.saved, id) }));
+      },
+      clearSaved: () => {
+        set({ saved: [] });
+      },
+      restoreSaved: (removed) => {
+        set((state) => {
+          const saved = [...state.saved];
+          const back = [...removed]
+            .sort((a, b) => a.index - b.index)
+            .filter(({ id }) => !saved.includes(id));
+          for (const { id, index } of back)
+            saved.splice(Math.min(index, saved.length), 0, id);
+          const ids = new Set(back.map(({ id }) => id));
+          // A recipe saved again is no longer skipped.
+          return { saved, hidden: state.hidden.filter((id) => !ids.has(id)) };
+        });
       },
       hideRecipe: (id) => {
         set((state) =>

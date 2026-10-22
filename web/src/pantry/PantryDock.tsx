@@ -70,6 +70,16 @@ export function PantryDock({ items, stapleCount, onOpenPantry }: Props) {
             <span className={styles.staples}>+{stapleCount} staples</span>
           )}
         </span>
+        {count > 0 && (
+          <button
+            type="button"
+            className={styles.edit}
+            aria-label="Edit your pantry"
+            onClick={onOpenPantry}
+          >
+            Edit
+          </button>
+        )}
       </div>
       {count > 0 ? (
         <Link to="/deck" className={styles.cta}>
