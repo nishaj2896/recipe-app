@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { IngredientArt } from "./IngredientArt";
 import ownArt from "./own.json";
 
-const files = import.meta.glob<string>("../../public/art/ingredients/*.svg", {
+const files = import.meta.glob<string>("/public/art/ingredients/*.svg", {
   query: "?raw",
   import: "default",
   eager: true,
@@ -11,7 +11,7 @@ const files = import.meta.glob<string>("../../public/art/ingredients/*.svg", {
 
 test("every ingredient listed as drawn has its own standalone file", () => {
   const missing = ownArt.filter((id) => {
-    const markup = files[`../../public/art/ingredients/${id}.svg`];
+    const markup = files[`/public/art/ingredients/${id}.svg`];
     return !markup?.startsWith("<svg") || !markup.includes('viewBox="0 0 100 100"');
   });
   expect(missing).toEqual([]);
