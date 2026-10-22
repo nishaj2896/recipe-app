@@ -260,6 +260,28 @@ describe("actions", () => {
     expect(useDevice.getState()).toMatchObject({ saved: ["r1"], hidden: ["r4"] });
   });
 
+  test("undoing a removal puts recipes back in place and keeps newer saves", () => {
+    for (const id of ["r1", "r2", "r3"]) useDevice.getState().saveRecipe(id);
+    useDevice.getState().unsaveRecipe("r2");
+    // Saved after the removal, here or in another tab.
+    useDevice.getState().saveRecipe("r4");
+
+    useDevice.getState().restoreSaved([{ id: "r2", index: 1 }]);
+    expect(useDevice.getState().saved).toEqual(["r1", "r2", "r3", "r4"]);
+
+    useDevice.getState().clearSaved();
+    useDevice.getState().saveRecipe("r5");
+    useDevice.getState().restoreSaved([
+      { id: "r3", index: 2 },
+      { id: "r1", index: 0 },
+      { id: "r2", index: 1 },
+      { id: "r4", index: 3 },
+      // Saved again since: not duplicated.
+      { id: "r5", index: 4 },
+    ]);
+    expect(useDevice.getState().saved).toEqual(["r1", "r2", "r3", "r4", "r5"]);
+  });
+
   test("saving a hidden recipe un-hides it", () => {
     useDevice.getState().hideRecipe("r1");
     useDevice.getState().saveRecipe("r1");
@@ -340,6 +362,31 @@ describe("two tabs", () => {
     a.getState().addToPantry(["egg"]);
 
     expect(await second.stored()).toBe(v5({ pantry: ["milk", "egg"], saved: ["r1"] }));
+  });
+});
+
+describe("two tabs, undo", () => {
+  test("an undo in one tab keeps what the other tab saved meanwhile", async () => {
+    const first = await coldStart();
+    const second = await coldStart(undefined, tabs[0]);
+    const a = first.device.useDevice;
+    const b = second.device.useDevice;
+
+    a.getState().saveRecipe("r1");
+    a.getState().saveRecipe("r2");
+    a.getState().unsaveRecipe("r1");
+    await vi.waitFor(() => {
+      expect(b.getState().saved).toEqual(["r2"]);
+    });
+    b.getState().saveRecipe("r3");
+    await vi.waitFor(() => {
+      expect(a.getState().saved).toEqual(["r2", "r3"]);
+    });
+
+    a.getState().restoreSaved([{ id: "r1", index: 0 }]);
+    await vi.waitFor(() => {
+      expect(b.getState().saved).toEqual(["r1", "r2", "r3"]);
+    });
   });
 });
 

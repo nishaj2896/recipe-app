@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { App } from "../app/App";
@@ -59,11 +59,19 @@ test("a recipe can be removed from the cookbook, and the removal undone", async 
   );
   expect(useDevice.getState().saved).toEqual([aloo.id]);
   expect(screen.getByRole("status")).toHaveTextContent("Removed Matar Paneer.");
+  // The removed row took the focused button with it: focus moves to Undo.
+  expect(screen.getByRole("button", { name: "Undo" })).toHaveFocus();
 
   await user.click(screen.getByRole("button", { name: "Undo" }));
   // Back in its old place, not moved to newest.
   expect(useDevice.getState().saved).toEqual([matar.id, aloo.id]);
   expect(screen.queryByRole("button", { name: "Undo" })).not.toBeInTheDocument();
+  expect(screen.getByRole("status")).toHaveTextContent(
+    "Put Matar Paneer back in your cookbook.",
+  );
+  await waitFor(() => {
+    expect(screen.getByRole("link", { name: /^Matar Paneer/ })).toHaveFocus();
+  });
 });
 
 test("Remove all empties the cookbook, and Undo brings every recipe back", async () => {
@@ -74,10 +82,15 @@ test("Remove all empties the cookbook, and Undo brings every recipe back", async
   expect(useDevice.getState().saved).toEqual([]);
   expect(screen.getByRole("status")).toHaveTextContent("Removed 2 recipes.");
   expect(screen.getByText("Recipes you swipe right on land here.")).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "Undo" })).toHaveFocus();
 
   await user.click(screen.getByRole("button", { name: "Undo" }));
   expect(useDevice.getState().saved).toEqual([matar.id, aloo.id]);
   expect(await screen.findByText("Matar Paneer")).toBeInTheDocument();
+  // Focus lands on the newest recipe, the top row.
+  await waitFor(() => {
+    expect(screen.getByRole("link", { name: /^Aloo Gobi/ })).toHaveFocus();
+  });
 });
 
 test("a recipe sorts its ingredients into have, need and assumed staples", async () => {
