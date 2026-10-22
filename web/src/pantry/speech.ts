@@ -82,6 +82,8 @@ export function useSpeech(onSentence: (sentence: string) => void) {
     recognition.interimResults = true;
     recognition.continuous = false;
     let final = "";
+    // Everything on screen, finished or not.
+    let shown = "";
     let failed = false;
 
     recognition.addEventListener("result", (event) => {
@@ -93,6 +95,7 @@ export function useSpeech(onSentence: (sentence: string) => void) {
         heard += text;
         if (result.isFinal) final += text;
       }
+      shown = heard;
       setListening({ state: "listening", heard });
       // One sentence per tap: once it is final, the mic goes off.
       if (final) stop();
@@ -120,7 +123,10 @@ export function useSpeech(onSentence: (sentence: string) => void) {
       if (current.current === recognition) current.current = null;
       if (failed || left.current) return;
       setListening({ state: "idle" });
-      if (final.trim()) latest.current(final.trim());
+      // What the person saw is what they get: a sentence the browser never
+      // finished (Safari, or a tap on the mic mid-sentence) still counts.
+      const sentence = (final || shown).trim();
+      if (sentence) latest.current(sentence);
     }
     finishCurrent.current = finish;
 
