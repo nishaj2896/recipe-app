@@ -12,8 +12,7 @@ import { PantryDock } from "./PantryDock";
 import styles from "./PantryScreen.module.css";
 import { Sheet } from "../app/Sheet";
 import { PantrySheet } from "./PantrySheet";
-import { POPULAR, QUICK_STARTS } from "./presets";
-import { QuickStarts } from "./QuickStarts";
+import { POPULAR } from "./presets";
 import { searchIngredients } from "./search";
 import { type Listening, useSpeech } from "./speech";
 import { findSpoken } from "./spoken";
@@ -102,15 +101,6 @@ export function PantryScreen() {
     return [...seen].map(([id, name]) => ({ id, name }));
   }, [ingredients]);
 
-  const presets = useMemo(
-    () =>
-      QUICK_STARTS.map((preset) => ({
-        preset,
-        items: preset.ingredientIds.flatMap((id) => byId.get(id) ?? []),
-      })).filter(({ items }) => items.length > 0),
-    [byId],
-  );
-
   const shown: CatalogIngredient[] = query.trim()
     ? searchIngredients(ingredients, query)
     : tab === POPULAR_TAB
@@ -172,10 +162,10 @@ export function PantryScreen() {
       already: items.filter((item) => current.has(item.id)).map((item) => item.name),
       staples: found.filter((item) => !item.ingredient).map((item) => item.name),
     });
-    if (mic.current) pickPreset(items, mic.current);
+    if (mic.current) addAll(items, mic.current);
   }
 
-  function pickPreset(items: readonly CatalogIngredient[], origin: Element) {
+  function addAll(items: readonly CatalogIngredient[], origin: Element) {
     haptic.tap();
     const added = items.filter((item) => !inPantry.has(item.id));
     addToPantry(added.map((item) => item.id));
@@ -211,10 +201,6 @@ export function PantryScreen() {
           We couldn't read the pantry saved on this phone. You can still pick ingredients,
           but they won't be saved this visit.
         </p>
-      )}
-
-      {loaded && presets.length > 0 && (
-        <QuickStarts presets={presets} onPick={pickPreset} />
       )}
 
       <div className={styles.search}>
