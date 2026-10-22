@@ -125,7 +125,7 @@ export function useSpeech(onSentence: (sentence: string) => void) {
       setListening({ state: "idle" });
       // What the person saw is what they get: a sentence the browser never
       // finished (Safari, or a tap on the mic mid-sentence) still counts.
-      const sentence = (final || shown).trim();
+      const sentence = shown.trim();
       if (sentence) latest.current(sentence);
     }
     finishCurrent.current = finish;
