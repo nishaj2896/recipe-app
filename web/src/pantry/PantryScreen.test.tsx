@@ -93,6 +93,20 @@ test("the pantry sheet lists what's in the pantry and can remove it", async () =
   expect(useDevice.getState().pantry).toEqual(["paneer", "an-id-this-catalog-lacks"]);
 });
 
+test("Edit opens the pantry, where it can be cleared in one go", async () => {
+  useDevice.setState({ pantry: ["milk", "paneer"] });
+  const user = await openApp();
+
+  await user.click(screen.getByRole("button", { name: "Edit your pantry" }));
+  const sheet = screen.getByRole("dialog", { name: "Your pantry" });
+  await user.click(within(sheet).getByRole("button", { name: "Clear pantry" }));
+
+  expect(useDevice.getState().pantry).toEqual([]);
+  expect(
+    screen.queryByRole("button", { name: "Edit your pantry" }),
+  ).not.toBeInTheDocument();
+});
+
 test("staples are assumed, and the user can untick one they're out of", async () => {
   const user = await openApp();
   const strip = await screen.findByRole("region", { name: "Staples" });

@@ -43,11 +43,41 @@ test("saved recipes are listed newest first, and a missing one is kept as unavai
   await screen.findByText("Matar Paneer");
   const rows = screen.getAllByRole("listitem");
   expect(rows.map((row) => row.textContent)).toEqual([
-    "Aloo Gobi30 min · Vegetarian›",
-    "Unavailable right now›",
-    "Matar Paneer30 min · Vegetarian›",
+    "Aloo Gobi30 min · Vegetarian›×",
+    "Unavailable right now›×",
+    "Matar Paneer30 min · Vegetarian›×",
   ]);
   expect(useDevice.getState().saved).toEqual([matar.id, GONE, aloo.id]);
+});
+
+test("a recipe can be removed from the cookbook, and the removal undone", async () => {
+  useDevice.setState({ saved: [matar.id, aloo.id] });
+  const user = open("/saved");
+
+  await user.click(
+    await screen.findByRole("button", { name: "Remove Matar Paneer from your cookbook" }),
+  );
+  expect(useDevice.getState().saved).toEqual([aloo.id]);
+  expect(screen.getByRole("status")).toHaveTextContent("Removed Matar Paneer.");
+
+  await user.click(screen.getByRole("button", { name: "Undo" }));
+  // Back in its old place, not moved to newest.
+  expect(useDevice.getState().saved).toEqual([matar.id, aloo.id]);
+  expect(screen.queryByRole("button", { name: "Undo" })).not.toBeInTheDocument();
+});
+
+test("Remove all empties the cookbook, and Undo brings every recipe back", async () => {
+  useDevice.setState({ saved: [matar.id, aloo.id] });
+  const user = open("/saved");
+
+  await user.click(await screen.findByRole("button", { name: "Remove all" }));
+  expect(useDevice.getState().saved).toEqual([]);
+  expect(screen.getByRole("status")).toHaveTextContent("Removed 2 recipes.");
+  expect(screen.getByText("Recipes you swipe right on land here.")).toBeInTheDocument();
+
+  await user.click(screen.getByRole("button", { name: "Undo" }));
+  expect(useDevice.getState().saved).toEqual([matar.id, aloo.id]);
+  expect(await screen.findByText("Matar Paneer")).toBeInTheDocument();
 });
 
 test("a recipe sorts its ingredients into have, need and assumed staples", async () => {

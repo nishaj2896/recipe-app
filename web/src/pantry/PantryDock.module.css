@@ -72,6 +72,20 @@
   white-space: nowrap;
 }
 
+.edit {
+  align-self: flex-start;
+  margin-top: 2px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
 .cta {
   margin-left: auto;
   padding: var(--space-3) var(--space-4);

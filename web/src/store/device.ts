@@ -52,6 +52,9 @@ interface DeviceActions {
   toggleStaple: (id: string) => void;
   saveRecipe: (id: string) => void;
   unsaveRecipe: (id: string) => void;
+  clearSaved: () => void;
+  /** Puts the saved list back as it was, to undo a removal. */
+  restoreSaved: (ids: readonly string[]) => void;
   hideRecipe: (id: string) => void;
   unhideRecipe: (id: string) => void;
   setFilters: (filters: Pick<DeviceData, "diet" | "maxTotalMinutes">) => void;
@@ -207,6 +210,16 @@ export const useDevice = create<DeviceState>()(
       },
       unsaveRecipe: (id) => {
         set((state) => ({ saved: without(state.saved, id) }));
+      },
+      clearSaved: () => {
+        set({ saved: [] });
+      },
+      restoreSaved: (ids) => {
+        set((state) => ({
+          saved: [...ids],
+          // A recipe saved again is no longer skipped.
+          hidden: state.hidden.filter((id) => !ids.includes(id)),
+        }));
       },
       hideRecipe: (id) => {
         set((state) =>
