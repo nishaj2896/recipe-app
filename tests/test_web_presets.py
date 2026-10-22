@@ -49,6 +49,8 @@ def test_every_catalog_category_has_art(real_catalog: IngredientCatalog) -> None
     assert sorted(categories - registry["categories"].keys()) == []
 
 
-def test_every_own_drawing_is_a_catalog_ingredient(real_catalog: IngredientCatalog) -> None:
+def test_every_own_drawing_is_a_catalog_ingredient(
+    real_catalog: IngredientCatalog,
+) -> None:
     listed = json.loads((WEB_SRC / "art" / "own.json").read_text())
     assert sorted(set(listed) - real_catalog.by_id.keys()) == []
