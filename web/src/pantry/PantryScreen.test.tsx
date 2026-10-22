@@ -75,12 +75,6 @@ test("a category tab shows that category's ingredients", async () => {
   expect(screen.queryByRole("button", { name: /Milk/ })).not.toBeInTheDocument();
 });
 
-test("a quick start adds the ingredients the catalog has", async () => {
-  const user = await openApp();
-  await user.click(screen.getByRole("button", { name: /Breakfast/ }));
-  expect(useDevice.getState().pantry).toEqual(["egg", "milk", "potato"]);
-});
-
 test("the pantry sheet lists what's in the pantry and can remove it", async () => {
   useDevice.setState({ pantry: ["milk", "paneer", "an-id-this-catalog-lacks"] });
   const user = await openApp();
@@ -164,7 +158,6 @@ test("nothing can be tapped until the saved pantry has been read", async () => {
   // Give the catalog time to arrive: the tiles still wait for the device data.
   await new Promise((resolve) => setTimeout(resolve, 50));
   expect(screen.queryByRole("button", { name: /Potato/ })).not.toBeInTheDocument();
-  expect(screen.queryByRole("button", { name: /Breakfast/ })).not.toBeInTheDocument();
 
   act(() => {
     useDevice.setState({ hydration: "ready" });

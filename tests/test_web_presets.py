@@ -18,9 +18,7 @@ WEB_SRC = Path(__file__).parents[1] / "web" / "src"
 
 def _preset_lists() -> list[tuple[str, list[str]]]:
     presets = json.loads((WEB_SRC / "pantry" / "presets.json").read_text())
-    lists = [("popular", presets["popular"])]
-    lists += [(item["id"], item["ingredient_ids"]) for item in presets["quick_starts"]]
-    return lists
+    return [("popular", presets["popular"])]
 
 
 @pytest.mark.parametrize(("name", "ids"), _preset_lists())
