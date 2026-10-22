@@ -203,7 +203,6 @@ export function PantryScreen() {
         </p>
       )}
 
-
       <div className={styles.search}>
         <input
           type="search"
