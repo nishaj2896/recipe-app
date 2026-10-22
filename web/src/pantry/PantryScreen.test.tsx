@@ -75,6 +75,41 @@ test("a category tab shows that category's ingredients", async () => {
   expect(screen.queryByRole("button", { name: /Milk/ })).not.toBeInTheDocument();
 });
 
+test("Unselect all clears every pick on the page, and Undo puts them back", async () => {
+  useDevice.setState({ pantry: ["paneer", "milk"] });
+  const user = await openApp();
+
+  expect(screen.getByText("2 selected")).toBeInTheDocument();
+  await user.click(screen.getByRole("button", { name: "Unselect all" }));
+  expect(useDevice.getState().pantry).toEqual([]);
+  expect(screen.getByRole("button", { name: /^Milk/ })).toHaveAttribute(
+    "aria-pressed",
+    "false",
+  );
+  expect(screen.getByText("Unselected 2.")).toBeInTheDocument();
+
+  const undo = screen.getByRole("button", { name: "Undo" });
+  await user.click(undo);
+  expect(useDevice.getState().pantry).toEqual(["paneer", "milk"]);
+  // The same button stays focused, now offering to unselect again.
+  expect(undo).toHaveFocus();
+  expect(undo).toHaveAccessibleName("Unselect all");
+});
+
+test("the selection line hides with nothing picked, and Undo goes once you pick again", async () => {
+  const user = await openApp();
+  expect(screen.queryByRole("button", { name: "Unselect all" })).toBeNull();
+
+  await user.click(screen.getByRole("button", { name: /^Milk/ }));
+  await user.click(screen.getByRole("button", { name: "Unselect all" }));
+  await user.click(screen.getByRole("button", { name: /^Egg/ }));
+  expect(screen.getByText("1 selected")).toBeInTheDocument();
+
+  await user.click(screen.getByRole("button", { name: /^Egg/ }));
+  expect(screen.queryByRole("button", { name: "Undo" })).toBeNull();
+  expect(screen.queryByRole("button", { name: "Unselect all" })).toBeNull();
+});
+
 test("the pantry sheet lists what's in the pantry and can remove it", async () => {
   useDevice.setState({ pantry: ["milk", "paneer", "an-id-this-catalog-lacks"] });
   const user = await openApp();

@@ -107,6 +107,30 @@
   border-color: var(--text);
 }
 
+.selection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+}
+
+.selectionText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.selectionButton {
+  min-height: 44px;
+  padding: 0 var(--space-2);
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
