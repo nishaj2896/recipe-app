@@ -137,12 +137,15 @@ export function useSpeech(onSentence: (sentence: string) => void) {
   function stop() {
     const recognition = current.current;
     if (!recognition) return;
-    recognition.stop();
+    // This session's own finish, so a late timer can't end a newer session.
+    const finish = finishCurrent.current;
     window.clearTimeout(stopTimer.current);
+    // Set before stop(): an "end" fired inside stop() clears it straight away.
     stopTimer.current = window.setTimeout(() => {
       recognition.abort();
-      finishCurrent.current();
+      finish();
     }, STOP_GRACE_MS);
+    recognition.stop();
   }
 
   return { supported: Recognition !== undefined, listening, start, stop };
