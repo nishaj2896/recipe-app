@@ -138,6 +138,57 @@ test("a blocked microphone is explained, and nothing is added", async () => {
   expect(useDevice.getState().pantry).toEqual(["egg"]);
 });
 
+/** Like Safari at times: stop() is ignored and "end" never comes. */
+class StubbornRecognition extends FakeRecognition {
+  aborted = false;
+
+  override stop() {
+    // Keeps listening.
+  }
+
+  override abort() {
+    this.aborted = true;
+  }
+}
+
+test("tapping the mic again turns it off, even when the browser ignores stop", async () => {
+  vi.useFakeTimers({ shouldAdvanceTime: true });
+  vi.stubGlobal("webkitSpeechRecognition", StubbornRecognition);
+  const user = await openApp();
+  const recognition = (await speak(user)) as StubbornRecognition;
+  act(() => {
+    recognition.hear("I have milk", false);
+  });
+
+  await user.click(screen.getByRole("button", { name: "Stop listening" }));
+  act(() => {
+    vi.advanceTimersByTime(1000);
+  });
+
+  expect(recognition.aborted).toBe(true);
+  expect(screen.getByRole("button", { name: "Say what you have" })).toHaveAttribute(
+    "aria-pressed",
+    "false",
+  );
+  vi.useRealTimers();
+});
+
+test("a finished sentence turns the mic off by itself", async () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  const user = await openApp();
+  const recognition = await speak(user);
+
+  act(() => {
+    recognition.hear("I have milk", true);
+  });
+
+  expect(useDevice.getState().pantry).toEqual(["egg", "milk"]);
+  expect(screen.getByRole("button", { name: "Say what you have" })).toHaveAttribute(
+    "aria-pressed",
+    "false",
+  );
+});
+
 test("English speakers are heard as Indian English", () => {
   expect(speechLanguage("en-US")).toBe("en-IN");
   expect(speechLanguage("en")).toBe("en-IN");
@@ -161,7 +212,7 @@ test("leaving the screen mid-sentence delivers nothing", () => {
     screen.getByRole("button", { name: "Talk" }).click();
   });
   act(() => {
-    FakeRecognition.last?.hear("potatoes and milk", true);
+    FakeRecognition.last?.hear("potatoes and milk", false);
   });
 
   // Unmounting aborts, and an aborted recognition still fires "end".

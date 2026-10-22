@@ -36,6 +36,9 @@ export function speechLanguage(language: string): string {
   return !language || language.toLowerCase().startsWith("en") ? "en-IN" : language;
 }
 
+/** How long a stopped mic may take to report "end" before it is aborted. */
+const STOP_GRACE_MS = 1000;
+
 export type Listening =
   | { state: "idle" }
   | { state: "listening"; heard: string }
@@ -61,10 +64,14 @@ export function useSpeech(onSentence: (sentence: string) => void) {
   useEffect(
     () => () => {
       left.current = true;
+      window.clearTimeout(stopTimer.current);
       current.current?.abort();
     },
     [],
   );
+
+  const stopTimer = useRef<number | undefined>(undefined);
+  const finishCurrent = useRef<() => void>(() => undefined);
 
   const Recognition = recognitionClass();
 
@@ -87,6 +94,8 @@ export function useSpeech(onSentence: (sentence: string) => void) {
         if (result.isFinal) final += text;
       }
       setListening({ state: "listening", heard });
+      // One sentence per tap: once it is final, the mic goes off.
+      if (final) stop();
     });
     recognition.addEventListener("error", (event) => {
       const { error } = event as RecognitionErrorEvent;
@@ -100,20 +109,40 @@ export function useSpeech(onSentence: (sentence: string) => void) {
             : "failed",
       });
     });
-    recognition.addEventListener("end", () => {
-      current.current = null;
+    recognition.addEventListener("end", finish);
+
+    // Runs once, on "end" or when a stop gets no "end" from the browser.
+    let done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      window.clearTimeout(stopTimer.current);
+      if (current.current === recognition) current.current = null;
       if (failed || left.current) return;
       setListening({ state: "idle" });
       if (final.trim()) latest.current(final.trim());
-    });
+    }
+    finishCurrent.current = finish;
 
     current.current = recognition;
     setListening({ state: "listening", heard: "" });
     recognition.start();
   }
 
+  /**
+   * Turns the mic off now. Some browsers (Safari among them) keep listening
+   * after stop() or never fire "end", so the mic is aborted and the turn
+   * finished if "end" hasn't come within a moment.
+   */
   function stop() {
-    current.current?.stop();
+    const recognition = current.current;
+    if (!recognition) return;
+    recognition.stop();
+    window.clearTimeout(stopTimer.current);
+    stopTimer.current = window.setTimeout(() => {
+      recognition.abort();
+      finishCurrent.current();
+    }, STOP_GRACE_MS);
   }
 
   return { supported: Recognition !== undefined, listening, start, stop };
