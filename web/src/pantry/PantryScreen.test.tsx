@@ -76,21 +76,27 @@ test("a category tab shows that category's ingredients", async () => {
 });
 
 test("Unselect all clears every pick on the page, and Undo puts them back", async () => {
-  useDevice.setState({ pantry: ["paneer", "milk"] });
+  // An id this catalog lacks is cleared and restored too, but never counted.
+  useDevice.setState({ pantry: ["paneer", "milk", "an-id-this-catalog-lacks"] });
   const user = await openApp();
 
-  expect(screen.getByText("2 selected")).toBeInTheDocument();
+  // Only the words are announced, not the button beside them.
+  expect(screen.getByText("2 selected")).toHaveAttribute("role", "status");
   await user.click(screen.getByRole("button", { name: "Unselect all" }));
   expect(useDevice.getState().pantry).toEqual([]);
   expect(screen.getByRole("button", { name: /^Milk/ })).toHaveAttribute(
     "aria-pressed",
     "false",
   );
-  expect(screen.getByText("Unselected 2.")).toBeInTheDocument();
+  expect(screen.getByText("Unselected 2.")).toHaveAttribute("role", "status");
 
   const undo = screen.getByRole("button", { name: "Undo" });
   await user.click(undo);
-  expect(useDevice.getState().pantry).toEqual(["paneer", "milk"]);
+  expect(useDevice.getState().pantry).toEqual([
+    "paneer",
+    "milk",
+    "an-id-this-catalog-lacks",
+  ]);
   // The same button stays focused, now offering to unselect again.
   expect(undo).toHaveFocus();
   expect(undo).toHaveAccessibleName("Unselect all");
