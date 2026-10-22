@@ -189,6 +189,25 @@ test("a finished sentence turns the mic off by itself", async () => {
   );
 });
 
+test("a stop that ended one sentence never cuts the next one short", async () => {
+  vi.useFakeTimers({ shouldAdvanceTime: true });
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  const user = await openApp();
+  const first = await speak(user);
+  act(() => {
+    first.hear("I have milk", true);
+  });
+
+  const second = await speak(user);
+  act(() => {
+    second.hear("and paneer", false);
+    vi.advanceTimersByTime(1100);
+  });
+
+  expect(screen.getByRole("button", { name: "Stop listening" })).toBeInTheDocument();
+  vi.useRealTimers();
+});
+
 test("English speakers are heard as Indian English", () => {
   expect(speechLanguage("en-US")).toBe("en-IN");
   expect(speechLanguage("en")).toBe("en-IN");

@@ -67,6 +67,14 @@ export function PantryScreen() {
   const [voiceResult, setVoiceResult] = useState<VoiceResult | null>(null);
   const speech = useSpeech(heard);
   const [voiceNoticeOpen, setVoiceNoticeOpen] = useState(false);
+  // What "Unselect all" took away, kept so Undo can put it back, and how
+  // many of those the page showed.
+  const [cleared, setCleared] = useState<{
+    ids: readonly string[];
+    shown: number;
+  } | null>(null);
+  // Once anything is picked again, there is nothing left to undo.
+  if (cleared && pantry.length > 0) setCleared(null);
 
   function listen() {
     setVoiceResult(null);
@@ -269,6 +277,44 @@ export function PantryScreen() {
             </button>
           ))}
         </nav>
+      )}
+
+      {loaded && (pantryItems.length > 0 || cleared) && (
+        <div className={styles.selection}>
+          {cleared && pantry.length === 0 ? (
+            <>
+              <span className={styles.selectionText} role="status">
+                Unselected {cleared.shown}.
+              </span>
+              <button
+                type="button"
+                className={styles.selectionButton}
+                onClick={() => {
+                  addToPantry([...cleared.ids]);
+                  setCleared(null);
+                }}
+              >
+                Undo
+              </button>
+            </>
+          ) : (
+            <>
+              <span className={styles.selectionText} role="status">
+                {pantryItems.length} selected
+              </span>
+              <button
+                type="button"
+                className={styles.selectionButton}
+                onClick={() => {
+                  setCleared({ ids: pantry, shown: pantryItems.length });
+                  clearPantry();
+                }}
+              >
+                Unselect all
+              </button>
+            </>
+          )}
+        </div>
       )}
 
       {(catalog.isPending || !loaded) && !catalog.isError && (
