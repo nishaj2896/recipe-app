@@ -170,7 +170,23 @@ test("tapping the mic again turns it off, even when the browser ignores stop", a
     "aria-pressed",
     "false",
   );
+  // The words on screen still count, though the browser never finished them.
+  expect(useDevice.getState().pantry).toEqual(["egg", "milk"]);
   vi.useRealTimers();
+});
+
+test("stopping mid-sentence adds what was on screen", async () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  const user = await openApp();
+  const recognition = await speak(user);
+  act(() => {
+    recognition.hear("I have paneer and", false);
+  });
+
+  await user.click(screen.getByRole("button", { name: "Stop listening" }));
+
+  expect(useDevice.getState().pantry).toEqual(["egg", "paneer"]);
+  expect(screen.getByText("Added paneer.")).toBeInTheDocument();
 });
 
 test("a finished sentence turns the mic off by itself", async () => {
@@ -206,6 +222,23 @@ test("a stop that ended one sentence never cuts the next one short", async () =>
 
   expect(screen.getByRole("button", { name: "Stop listening" })).toBeInTheDocument();
   vi.useRealTimers();
+});
+
+test("words still coming after a finished part are added too", async () => {
+  vi.stubGlobal("webkitSpeechRecognition", FakeRecognition);
+  const user = await openApp();
+  const recognition = await speak(user);
+
+  // One event: a finished part, then words the browser is still hearing.
+  act(() => {
+    const done = Object.assign([{ transcript: "I have paneer" }], { isFinal: true });
+    const coming = Object.assign([{ transcript: " and milk" }], { isFinal: false });
+    recognition.dispatchEvent(
+      Object.assign(new Event("result"), { results: [done, coming] }),
+    );
+  });
+
+  expect(useDevice.getState().pantry).toEqual(["egg", "paneer", "milk"]);
 });
 
 test("English speakers are heard as Indian English", () => {
