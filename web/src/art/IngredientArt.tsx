@@ -1,3 +1,4 @@
+import { ownArtUrl } from "./own";
 import { artFor } from "./registry";
 import { soupFor } from "./soup";
 import sprite from "./sprite.svg?raw";
@@ -11,7 +12,25 @@ interface Props {
 
 /** One ingredient's drawing. Decorative: the name next to it is the label. */
 export function IngredientArt({ ingredientId, categoryId, size = 56, className }: Props) {
-  const art = artFor(ingredientId, categoryId);
+  // An <img> keeps each drawing's markup out of the page, so hundreds of
+  // detailed drawings cost the DOM nothing; the browser caches each file.
+  const own = ownArtUrl(ingredientId);
+  if (own) {
+    return (
+      <img
+        src={own}
+        width={size}
+        height={size}
+        alt=""
+        aria-hidden="true"
+        decoding="async"
+        draggable={false}
+        className={className}
+        data-art={`ing-${ingredientId}`}
+      />
+    );
+  }
+  const href = `#art-${artFor(ingredientId, categoryId)}`;
   return (
     <svg
       width={size}
@@ -19,9 +38,9 @@ export function IngredientArt({ ingredientId, categoryId, size = 56, className }
       viewBox="0 0 100 100"
       aria-hidden="true"
       className={className}
-      data-art={art}
+      data-art={href.slice(1)}
     >
-      <use href={`#art-${art}`} />
+      <use href={href} />
     </svg>
   );
 }
