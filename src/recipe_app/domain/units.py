@@ -4,6 +4,7 @@ The web app scales amounts with the same grids; a unit added here needs its
 forms and grid there too.
 """
 
+import math
 from enum import StrEnum
 from typing import assert_never
 
@@ -90,7 +91,7 @@ class Unit(StrEnum):
 
 def on_grid(amount: float, unit: Unit) -> bool:
     """Whether a written amount is one the screen shows unchanged (rule 2)."""
-    if amount <= 0:
+    if not math.isfinite(amount) or amount <= 0:
         return False
     if unit in {Unit.KG, Unit.L}:
         return _multiple(amount, 0.05)

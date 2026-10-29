@@ -23,6 +23,8 @@ CATALOG = parse_catalog(
         ingredient(id="cherry", name="Cherry"),
         ingredient(id="tomato", name="Tomato", **{"class": "S"}, kind="fresh"),
         ingredient(id="leek", name="Leek", retired=True),
+        ingredient(id="mint", name="Mint", search_terms=["fresh mint"]),
+        ingredient(id="dried-mint", name="Dried mint", search_terms=["mint"]),
     )
 )
 MATCHER = step_matcher(CATALOG)
@@ -49,7 +51,12 @@ MATCHER = step_matcher(CATALOG)
     ],
 )
 def test_mentions(step: str, expected: list[str]) -> None:
-    assert MATCHER.mentions(step) == expected
+    assert MATCHER.mentions(step) == [(ingredient_id,) for ingredient_id in expected]
+
+
+def test_a_shared_phrase_has_every_owner() -> None:
+    assert MATCHER.mentions("Tear in the mint.") == [("mint", "dried-mint")]
+    assert MATCHER.mentions("Crumble the dried mint.") == [("dried-mint",)]
 
 
 @pytest.mark.parametrize(
@@ -67,6 +74,9 @@ def test_mentions(step: str, expected: list[str]) -> None:
         ("Add half of a cup.", "a cup"),
         ("Add a pinch of salt.", "a pinch"),
         ("Tear in four leaves.", "four leaves"),
+        ("Add 2 tsps sugar.", "2 tsps"),
+        ("Add 3 tbsps oil.", "3 tbsps"),
+        ("Add a tablespoon of oil.", "a tablespoon"),
     ],
 )
 def test_states_amount(step: str, expected: str) -> None:

@@ -188,7 +188,7 @@ ingredients = [
   { id = "water", amount = 750, unit = "ml" },
 ]
 steps = [
-  "Rinse the toor dal until the water runs clear. Pressure-cook it with the water, the turmeric and the chopped tomato for 3 whistles, or simmer in a pot for 40 minutes, until very soft.",
+  "Rinse the toor dal until the water runs clear. Pressure-cook it with the water, the turmeric and the chopped tomato for 3 whistles, until very soft.",
   "Whisk the cooked dal until smooth, season with salt, and simmer for 5 minutes, adding a splash of water if it is too thick.",
   "For the tadka, heat the ghee in a small pan. Add the cumin seeds and dried red chillies, then the sliced garlic, and fry until the garlic is golden.",
   "Add the finely chopped onion to the tadka and fry for 3 minutes until lightly browned.",
@@ -262,7 +262,7 @@ ingredients = [
   { id = "water", amount = 1.5, unit = "l" },
 ]
 steps = [
-  "Soak the chickpeas overnight in plenty of the water. Drain, then pressure-cook them in fresh water for 5 to 6 whistles, or simmer for 1 hour, until soft. Keep the cooking liquid.",
+  "Soak the chickpeas overnight in plenty of the water. Drain, then pressure-cook them in fresh water for 5 to 6 whistles, until soft. Keep the cooking liquid.",
   "Heat the oil in a pan and cook the finely chopped onion for 8 minutes until deep golden. Add the grated ginger and garlic and cook for 1 minute.",
   "Add the turmeric, the chole masala and the chopped tomato with salt, and cook for 6 minutes until thick and jammy.",
   "Add the chickpeas with enough of their cooking liquid to make a thick gravy. Simmer for 15 minutes, mashing a few chickpeas to thicken it.",
@@ -288,7 +288,7 @@ ingredients = [
   { id = "water", amount = 1.5, unit = "l" },
 ]
 steps = [
-  "Soak the kidney beans overnight in plenty of the water. Drain and pressure-cook in fresh water for 6 to 8 whistles, or boil hard for 10 minutes and simmer for 90 minutes, until completely soft.",
+  "Soak the kidney beans overnight in plenty of the water. Drain and pressure-cook in fresh water for 6 to 8 whistles, until completely soft.",
   "Heat the oil in a pan and cook the finely chopped onion for 10 minutes until browned. Add the ginger garlic paste and cook for 1 minute.",
   "Add the turmeric, red chilli powder and puréed tomato with salt and cook for 8 minutes until the oil separates.",
   "Add the kidney beans with their cooking liquid and simmer for 20 minutes, mashing some beans against the pan so the gravy turns creamy.",

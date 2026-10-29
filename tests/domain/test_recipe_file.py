@@ -233,6 +233,29 @@ def test_step_checks(steps: list[str], expected: str) -> None:
     assert any(expected in problem for problem in problems), problems
 
 
+def test_a_shared_phrase_counts_as_the_listed_owner() -> None:
+    """ "Mint" belongs to fresh and dried mint; the recipe lists only one."""
+    shared = parse_catalog(
+        catalog(
+            category(),
+            ingredient(),
+            ingredient(id="mint", name="Mint", search_terms=["fresh mint"]),
+            ingredient(id="dried-mint", name="Dried mint", search_terms=["mint"]),
+        )
+    )
+    raw = recipe_table(
+        ingredients=[
+            {"id": "potato", "amount": 2, "unit": "medium"},
+            {"id": "dried-mint", "amount": 1, "unit": "tsp"},
+        ],
+        steps=["Boil the potatoes.", "Toss them with the mint."],
+    ).encode()
+
+    book = parse_recipe_book([("a.toml", raw)], shared)
+
+    assert len(book.recipes) == 1
+
+
 def test_staples_need_not_appear_in_steps() -> None:
     assert (
         parse(

@@ -141,12 +141,16 @@ def _check_steps(
     listed = {item.id for item in recipe.ingredients}
     named: set[str] = set()
     for number, step in enumerate(steps, start=1):
-        mentions = matcher.mentions(step)
-        named.update(mentions)
+        unlisted: list[str] = []
+        for owners in matcher.mentions(step):
+            # A phrase two ingredients share counts as the one the recipe lists.
+            found = [owner for owner in owners if owner in listed]
+            named.update(found)
+            if not found:
+                unlisted.append(" or ".join(repr(owner) for owner in owners))
         problems.extend(
-            f"step {number} names {ingredient_id!r}, which the recipe doesn't list"
-            for ingredient_id in dict.fromkeys(mentions)
-            if ingredient_id not in listed
+            f"step {number} names {owners}, which the recipe doesn't list"
+            for owners in dict.fromkeys(unlisted)
         )
     problems.extend(
         f"no step names {item.id!r}"

@@ -18,8 +18,21 @@ _NUMBER = (
 )
 
 
+# Spellings the screen never shows but a step might use for a spoon.
+_SPOON_SPELLINGS = (
+    "tsps",
+    "tbsps",
+    "teaspoon",
+    "teaspoons",
+    "tablespoon",
+    "tablespoons",
+)
+
+
 def _forms(units: list[Unit]) -> str:
     forms = {form for unit in units for form in (unit.value, unit.plural)}
+    if any(unit.kind is UnitKind.SPOON for unit in units):
+        forms.update(_SPOON_SPELLINGS)
     # Longest first, so "cups" is tried before "cup".
     return "|".join(re.escape(form) for form in sorted(forms, key=len, reverse=True))
 
@@ -42,26 +55,27 @@ def states_amount(step: str) -> str | None:
 class StepMatcher:
     """Finds the catalog ingredients a step names; build it with step_matcher.
 
-    `phrases` maps each phrase's words to its ingredient id, grouped by the
-    phrase's first word and sorted longest first.
+    `phrases` maps each phrase's words to the ids of the ingredients that own
+    it, grouped by the phrase's first word and sorted longest first. A phrase
+    can have two owners: "mint" is a search term of fresh and dried mint.
     """
 
-    phrases: Mapping[str, tuple[tuple[tuple[str, ...], str], ...]]
+    phrases: Mapping[str, tuple[tuple[tuple[str, ...], tuple[str, ...]], ...]]
 
-    def mentions(self, step: str) -> list[str]:
-        """Ingredient ids in the order the step names them, repeats included.
+    def mentions(self, step: str) -> list[tuple[str, ...]]:
+        """Each phrase's owners, in the order the step names them, repeats included.
 
         One left-to-right scan: at each word the longest phrase that matches
         there wins and the scan continues after it, so matches never overlap
         and "coconut milk" is coconut milk, not coconut and milk.
         """
         words = _WORD.findall(normalize(step))
-        found: list[str] = []
+        found: list[tuple[str, ...]] = []
         position = 0
         while position < len(words):
-            for phrase, ingredient_id in self.phrases.get(words[position], ()):
+            for phrase, owners in self.phrases.get(words[position], ()):
                 if tuple(words[position : position + len(phrase)]) == phrase:
-                    found.append(ingredient_id)
+                    found.append(owners)
                     position += len(phrase)
                     break
             else:
@@ -73,25 +87,28 @@ def step_matcher(catalog: IngredientCatalog) -> StepMatcher:
     """Every live ingredient's name and search terms, plus their plurals.
 
     A phrase also matches with its last word in the regular English plural
-    ("potatoes", "eggs", "cherries"), unless that form is already another
-    ingredient's phrase.
+    ("potatoes", "eggs", "cherries"), unless that form is already a phrase as
+    written.
     """
-    exact: dict[tuple[str, ...], str] = {}
+    exact: dict[tuple[str, ...], list[str]] = {}
     for item in catalog.by_id.values():
         if item.retired:
             continue
         for text in (item.name, *item.search_terms):
             words = tuple(_WORD.findall(normalize(text)))
-            if words:
-                exact.setdefault(words, item.id)
-    phrases = dict(exact)
-    for words, ingredient_id in exact.items():
+            if words and item.id not in exact.setdefault(words, []):
+                exact[words].append(item.id)
+    phrases = {words: list(owners) for words, owners in exact.items()}
+    for words, owners in exact.items():
         for plural in _plurals(words[-1]):
-            phrases.setdefault((*words[:-1], plural), ingredient_id)
+            form = (*words[:-1], plural)
+            if form not in exact:
+                phrases.setdefault(form, [])
+                phrases[form].extend(i for i in owners if i not in phrases[form])
 
-    grouped: dict[str, list[tuple[tuple[str, ...], str]]] = {}
-    for words, ingredient_id in phrases.items():
-        grouped.setdefault(words[0], []).append((words, ingredient_id))
+    grouped: dict[str, list[tuple[tuple[str, ...], tuple[str, ...]]]] = {}
+    for words, owners in phrases.items():
+        grouped.setdefault(words[0], []).append((words, tuple(owners)))
     return StepMatcher(
         phrases=MappingProxyType(
             {

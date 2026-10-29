@@ -40,6 +40,8 @@ def test_on_grid(amount: float, unit: Unit) -> None:
         (0.25, Unit.MEDIUM),
         (0.5, Unit.CAN),
         (1.5, Unit.PIECE),
+        (float("nan"), Unit.G),
+        (float("inf"), Unit.CUP),
     ],
 )
 def test_off_grid(amount: float, unit: Unit) -> None:
