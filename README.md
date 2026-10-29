@@ -71,6 +71,7 @@ It also signs its "generate more" cursors, so it needs a signing key before it s
 ```bash
 export CURSOR_ACTIVE_KID=dev
 export CURSOR_SIGNING_KEYS="{\"dev\": \"$(uv run python -c 'import base64, os; print(base64.urlsafe_b64encode(os.urandom(32)).decode())')\"}"
+export API_DOCS=true         # serve /docs; off unless set
 uv run recipe-app            # or: uv run uvicorn --factory recipe_app.api.app:build_app --reload
 ```
 
@@ -81,9 +82,10 @@ Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` wit
 | `CURSOR_SIGNING_KEYS` | JSON object of key id to a base64url key of at least 32 bytes. Every key verifies cursors |
 | `CURSOR_ACTIVE_KID` | The key id that signs new cursors |
 | `DATABASE_URL` | `postgresql+asyncpg://` URL of the database the sync filled |
+| `API_DOCS` | `true` serves `/docs`, `/redoc` and `/openapi.json`; unset or `false` (production) answers them with 404. `scripts/dev.sh` and `docker compose` turn it on |
 | `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and `recipes.v1.toml` (default `./data`); only `recipe-app db sync` reads it |
 
-The app refuses to start if a key is missing or too short, if `DATABASE_URL` is missing, or if the database has never been synced. It loads the catalog once at startup, so after a sync, restart the app to pick up the new catalog. In production the keys come from the secret store, never from the repo or the logs.
+The app refuses to start if a key is missing or too short, if `API_DOCS` is anything but `true` or `false`, if `DATABASE_URL` is missing, or if the database has never been synced. It loads the catalog once at startup, so after a sync, restart the app to pick up the new catalog. In production the keys come from the secret store, never from the repo or the logs.
 
 | Endpoint | What it does |
 |---|---|

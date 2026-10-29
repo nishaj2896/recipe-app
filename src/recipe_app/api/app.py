@@ -10,14 +10,20 @@ from typing import Any
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from starlette.types import ASGIApp
 
 from recipe_app.api import presenters
+from recipe_app.api.headers import DOCS_PAGES, SecurityHeaders
 from recipe_app.api.limits import BodySizeLimit
 from recipe_app.api.problems import problem_media_types, register_problem_handlers
 from recipe_app.api.routes import CachedBody, health_router, router
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.infra.catalog_store import read_catalog
-from recipe_app.infra.config import database_url_from_env, signing_keys_from_env
+from recipe_app.infra.config import (
+    database_url_from_env,
+    docs_enabled_from_env,
+    signing_keys_from_env,
+)
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.logs import configure_logging
 from recipe_app.infra.postgres import PostgresRecipeRepository
@@ -31,19 +37,24 @@ API_VERSION = "1.0.0"
 Lifespan = Callable[[FastAPI], AbstractAsyncContextManager[None]]
 
 
-def create_app(*, catalog: IngredientCatalog, service: RecipeService) -> FastAPI:
+def create_app(
+    *, catalog: IngredientCatalog, service: RecipeService, docs: bool = False
+) -> FastAPI:
     """Build the app around ready parts; tests call this with their own."""
-    app = _new_app()
+    app = _new_app(docs=docs)
     _serve(app, catalog, service)
     return app
 
 
 def openapi_schema() -> dict[str, Any]:
-    """The API's OpenAPI document; the web app generates its types from it."""
+    """The API's OpenAPI document; the web app generates its types from it.
+
+    Built whether or not the app serves it: `recipe-app openapi` needs it in CI.
+    """
     return _new_app().openapi()
 
 
-def _new_app(lifespan: Lifespan | None = None) -> FastAPI:
+def _new_app(lifespan: Lifespan | None = None, *, docs: bool = False) -> FastAPI:
     app = FastAPI(
         title="Pantry to Plate",
         version=API_VERSION,
@@ -56,13 +67,29 @@ def _new_app(lifespan: Lifespan | None = None) -> FastAPI:
         # host and scheme, not the load balancer's: a stray slash is a 404.
         redirect_slashes=False,
         lifespan=lifespan,
+        # Off in production (API_DOCS): the schema maps every route and error.
+        openapi_url="/openapi.json" if docs else None,
+        docs_url="/docs" if docs else None,
+        redoc_url="/redoc" if docs else None,
     )
     app.add_middleware(BodySizeLimit)
+    _add_security_headers(app, docs=docs)
     register_problem_handlers(app)
     app.include_router(router)
     app.include_router(health_router)
     _document_problems(app)
     return app
+
+
+def _add_security_headers(app: FastAPI, *, docs: bool) -> None:
+    """Wrap the whole stack, so the 500s that Starlette's outermost error
+    middleware sends carry the headers too; add_middleware sits inside it."""
+    build = app.build_middleware_stack
+
+    def build_middleware_stack() -> ASGIApp:
+        return SecurityHeaders(build(), DOCS_PAGES if docs else frozenset())
+
+    app.build_middleware_stack = build_middleware_stack  # type: ignore[method-assign]
 
 
 def _serve(app: FastAPI, catalog: IngredientCatalog, service: RecipeService) -> None:
@@ -94,6 +121,7 @@ def build_app() -> FastAPI:
     configure_logging()
     keys = signing_keys_from_env(os.environ)
     url = database_url_from_env(os.environ)
+    docs = docs_enabled_from_env(os.environ)
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
@@ -117,7 +145,7 @@ def build_app() -> FastAPI:
         finally:
             await engine.dispose()
 
-    return _new_app(lifespan)
+    return _new_app(lifespan, docs=docs)
 
 
 def _cache(model: BaseModel) -> CachedBody:

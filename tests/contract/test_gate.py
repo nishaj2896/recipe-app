@@ -116,17 +116,19 @@ def test_inner_layers_import_no_framework(layer: str) -> None:
 # Contract checks
 
 
-async def openapi(client: AsyncClient) -> dict[str, Any]:
-    response = await client.get("/openapi.json")
+async def openapi(make_app: AppFactory) -> dict[str, Any]:
+    """The schema as a client reads it; it is served only with API_DOCS on."""
+    async with client_for(make_app(docs=True)) as client:
+        response = await client.get("/openapi.json")
     assert response.status_code == 200
     schema: dict[str, Any] = response.json()
     return schema
 
 
 async def test_every_endpoint_documents_success_and_error_models(
-    gate: AsyncClient,
+    make_app: AppFactory,
 ) -> None:
-    schema = await openapi(gate)
+    schema = await openapi(make_app)
 
     for path, operations in schema["paths"].items():
         for method, operation in operations.items():
@@ -142,8 +144,8 @@ async def test_every_endpoint_documents_success_and_error_models(
                 )
 
 
-async def test_pantry_bounds_are_in_the_schema(gate: AsyncClient) -> None:
-    request = (await openapi(gate))["components"]["schemas"]["SearchRequest"]
+async def test_pantry_bounds_are_in_the_schema(make_app: AppFactory) -> None:
+    request = (await openapi(make_app))["components"]["schemas"]["SearchRequest"]
     pantry = request["properties"]["ingredient_ids"]
 
     assert (pantry["minItems"], pantry["maxItems"]) == (1, 50)
@@ -154,8 +156,10 @@ async def test_pantry_bounds_are_in_the_schema(gate: AsyncClient) -> None:
     assert request["properties"]["excluded_staples"]["maxItems"] == 100
 
 
-async def test_request_schemas_forbid_extra_properties(gate: AsyncClient) -> None:
-    schemas = (await openapi(gate))["components"]["schemas"]
+async def test_request_schemas_forbid_extra_properties(
+    make_app: AppFactory,
+) -> None:
+    schemas = (await openapi(make_app))["components"]["schemas"]
 
     assert schemas["SearchRequest"]["additionalProperties"] is False
 
@@ -767,8 +771,10 @@ async def test_forced_internal_error_is_a_generic_500(
         assert "RuntimeError" not in response.text
 
 
-async def test_docs_render(gate: AsyncClient) -> None:
-    response = await gate.get("/docs")
+async def test_docs_render(make_app: AppFactory) -> None:
+    """Docs are opt-in (API_DOCS); local development turns them on."""
+    async with client_for(make_app(docs=True)) as client:
+        response = await client.get("/docs")
 
     assert response.status_code == 200
     assert "swagger-ui" in response.text
