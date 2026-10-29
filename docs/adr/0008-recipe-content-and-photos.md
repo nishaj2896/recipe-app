@@ -1,6 +1,6 @@
 # ADR-0008: Recipes carry quantities, steps and a photo, written for this project
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-10-29
 - Deciders: Nisha
 - Amends: ADR-0001 rule 7 (quantities arrive in v1, not v2), ADR-0005 rule 2 (recipes are a directory of files)
