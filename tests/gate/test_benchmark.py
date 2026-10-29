@@ -5,7 +5,15 @@ import pytest
 from recipe_app.api.schemas import MAX_INGREDIENT_IDS
 from recipe_app.domain.catalog import IngredientCatalog, IngredientClass
 from recipe_app.infra.database import create_engine
-from tests.gate.benchmark import DECKS_PER_ROUND, benchmark, percentile, report
+from tests.gate.benchmark import (
+    BUDGET_P95_MS,
+    DECKS_PER_ROUND,
+    Timings,
+    benchmark,
+    over_budget,
+    percentile,
+    report,
+)
 from tests.gate.searches import FULL_PANTRY
 
 
@@ -20,6 +28,19 @@ def test_percentile_interpolates_between_samples() -> None:
 def test_percentile_needs_two_samples() -> None:
     with pytest.raises(ValueError, match="two samples"):
         percentile([1.0], 95)
+
+
+def test_the_budget_is_per_search_not_pooled() -> None:
+    """A cheap search must not hide a slow one (ADR-0007 rule 7)."""
+    fast = Timings("fast", tuple([10.0] * 100))
+    slow = Timings("slow", tuple([10.0] * 90 + [BUDGET_P95_MS * 1.5] * 10))
+
+    assert over_budget([fast, slow]) == [slow]
+    assert over_budget([fast, slow], tolerance=2) == []
+    lines = report([fast, slow]).splitlines()
+    assert lines[2].startswith("slow")
+    assert lines[2].endswith("over budget")
+    assert not lines[1].endswith("over budget")
 
 
 def test_the_full_pantry_is_the_largest_the_api_accepts(

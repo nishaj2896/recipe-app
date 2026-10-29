@@ -48,6 +48,44 @@ jobs:
         run: uv run --frozen mypy
       - name: Tests
         run: uv run --frozen pytest
+  latency:
+    name: search latency on 50,000 recipes
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: recipe_app
+          POSTGRES_PASSWORD: recipe_app
+          POSTGRES_DB: recipe_app
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U recipe_app -d recipe_app"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 15
+    env:
+      DATABASE_URL: postgresql+asyncpg://recipe_app:recipe_app@localhost:5432/recipe_app
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - name: Install dependencies exactly as locked
+        run: uv sync --locked
+      - name: Migrate and load the 50,000-recipe gate seed
+        run: |
+          uv run --frozen alembic upgrade head
+          uv run --frozen python -m tests.gate load
+      # ADR-0007 rule 7: prints p50/p95/p99 per search, and fails only when a
+      # search is above twice the budget, so runner noise doesn't fail a PR.
+      - name: Time every gate search
+        run: uv run --frozen python -m tests.gate bench --check
   web:
     name: web app
     runs-on: ubuntu-latest

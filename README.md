@@ -103,7 +103,7 @@ Every error is an [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) `applicatio
 | Run only the API contract (the Task 1 gate) | `uv run pytest tests/contract -v` |
 | Run only the query-plan checks on 50,000 recipes (the Task 2 gate) | `uv run pytest tests/gate -v` (needs `TEST_DATABASE_URL`) |
 | Print the search's query plans to read them | `uv run python -m tests.gate load`, then `uv run python -m tests.gate explain` (needs `DATABASE_URL` of an empty, migrated throwaway database) |
-| Time the search on 50,000 recipes: p50, p95 and p99 per search (the Task 3 gate) | `uv run python -m tests.gate load`, then `uv run python -m tests.gate bench` (same database as above; `--rounds 5` for a quick look) |
+| Time the search on 50,000 recipes: p50, p95 and p99 per search (the Task 3 gate) | `uv run python -m tests.gate load`, then `uv run python -m tests.gate bench` (same database as above; `--rounds 5` for a quick look, `--check` to fail above twice the budget as CI does) |
 | Lint | `uv run ruff check` |
 | Format | `uv run ruff format` |
 | Type check | `uv run mypy` |
@@ -179,6 +179,7 @@ To change one of these decisions, add a new ADR that supersedes it rather than r
 - [x] HTTP API (`/api/v1`) with RFC 9457 errors
 - [x] Contract tests for the Task 1 verification gate
 - [x] PostgreSQL persistence, checked on 50,000 recipes (the Task 2 gate)
+- [x] Ranking in PostgreSQL, every search within p95 200 ms on 50,000 recipes, checked in CI (the Task 3 gate)
 
 Later: Docker, Kubernetes.
 
