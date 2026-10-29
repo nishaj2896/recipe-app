@@ -45,6 +45,17 @@ class RecipeContent:
     image: Image | None
 
 
+@dataclass(frozen=True, slots=True)
+class RecipeWithContent:
+    """A recipe and its content, read together so the two always agree.
+
+    `content` is None for a recipe synced before it had content.
+    """
+
+    recipe: Recipe
+    content: RecipeContent | None
+
+
 def build_content(
     row: dict[str, object],
     entries: list[dict[str, object]],

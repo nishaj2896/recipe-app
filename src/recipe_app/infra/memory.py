@@ -9,7 +9,7 @@ from collections.abc import Iterable, Mapping, Sequence
 from types import MappingProxyType
 from uuid import UUID
 
-from recipe_app.domain.content import RecipeContent
+from recipe_app.domain.content import RecipeContent, RecipeWithContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import resume
 from recipe_app.domain.matching import Pantry
@@ -45,11 +45,11 @@ class InMemoryRecipeRepository:
             {key: value for key, value in content.items() if key in by_id}
         )
 
-    async def get(self, recipe_id: UUID) -> Recipe | None:
-        return self._by_id.get(recipe_id)
-
-    async def content(self, recipe_id: UUID) -> RecipeContent | None:
-        return self._content.get(recipe_id)
+    async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:
+        recipe = self._by_id.get(recipe_id)
+        if recipe is None:
+            return None
+        return RecipeWithContent(recipe=recipe, content=self._content.get(recipe_id))
 
     async def ranked(
         self, pantry: Pantry, filters: SearchFilters, after: Position, limit: int

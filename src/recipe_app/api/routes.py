@@ -103,10 +103,10 @@ async def search_wrong_method() -> None:
     responses=problem_responses(404, 422, 500),
 )
 async def get_recipe(recipe_id: UUID, service: Service) -> RecipeDetail:
-    recipe = await service.get_recipe(recipe_id)
-    if recipe is None:
+    detail = await service.get_detail(recipe_id)
+    if detail is None:
         raise RecipeNotFoundError(recipe_id)
-    return presenters.recipe_detail(recipe, await service.get_content(recipe_id))
+    return presenters.recipe_detail(detail)
 
 
 @router.get(

@@ -2,7 +2,7 @@ from uuid import UUID
 
 from recipe_app.api.presenters import recipe_detail
 from recipe_app.domain.catalog import parse_catalog
-from recipe_app.domain.content import Amount, Image, RecipeContent
+from recipe_app.domain.content import Amount, Image, RecipeContent, RecipeWithContent
 from recipe_app.domain.recipe import build_recipe
 from recipe_app.domain.units import Unit
 from tests.domain.factories import catalog, category, ingredient
@@ -29,7 +29,7 @@ def test_photo_url_is_versioned_by_its_hash() -> None:
         ),
     )
 
-    detail = recipe_detail(RECIPE, content)
+    detail = recipe_detail(RecipeWithContent(recipe=RECIPE, content=content))
 
     assert detail.image is not None
     assert detail.image.url == f"/dishes/{RECIPE.id}.webp?v=0123456789ab"
@@ -41,7 +41,7 @@ def test_photo_url_is_versioned_by_its_hash() -> None:
 
 
 def test_a_recipe_without_content_still_lists_its_ingredients() -> None:
-    detail = recipe_detail(RECIPE, None)
+    detail = recipe_detail(RecipeWithContent(recipe=RECIPE, content=None))
 
     assert detail.serves is None
     assert detail.steps == []

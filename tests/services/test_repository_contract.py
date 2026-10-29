@@ -15,6 +15,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.pool import NullPool
 
 from recipe_app.domain.catalog import Diet, IngredientClass
+from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import Deck, position_after
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch, resolve_pantry
@@ -48,22 +49,18 @@ def repository(request: pytest.FixtureRequest) -> Iterator[RecipeRepository]:
     asyncio.run(engine.dispose())
 
 
-def test_get_returns_the_recipe(repository: RecipeRepository) -> None:
-    assert asyncio.run(repository.get(SEED[0].id)) == SEED[0]
-
-
-def test_get_unknown_id_returns_none(repository: RecipeRepository) -> None:
-    assert asyncio.run(repository.get(UUID(int=0))) is None
-
-
-def test_content_round_trips_for_every_recipe(repository: RecipeRepository) -> None:
-    """Amounts survive numeric(9, 3), and steps and amounts keep their order."""
+def test_detail_round_trips_for_every_recipe(repository: RecipeRepository) -> None:
+    """Same recipe; amounts survive numeric(9, 3), and steps and amounts keep
+    their order.
+    """
     for recipe in SEED:
-        assert asyncio.run(repository.content(recipe.id)) == BOOK.content[recipe.id]
+        assert asyncio.run(repository.detail(recipe.id)) == RecipeWithContent(
+            recipe=recipe, content=BOOK.content[recipe.id]
+        )
 
 
-def test_content_of_unknown_id_is_none(repository: RecipeRepository) -> None:
-    assert asyncio.run(repository.content(UUID(int=0))) is None
+def test_detail_of_unknown_id_is_none(repository: RecipeRepository) -> None:
+    assert asyncio.run(repository.detail(UUID(int=0))) is None
 
 
 @settings(max_examples=200, deadline=None)

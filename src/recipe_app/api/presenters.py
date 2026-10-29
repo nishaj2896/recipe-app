@@ -17,7 +17,7 @@ from recipe_app.api.schemas import (
     Tier,
 )
 from recipe_app.domain.catalog import Ingredient, IngredientCatalog
-from recipe_app.domain.content import RecipeContent
+from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch
 from recipe_app.domain.recipe import Recipe
 from recipe_app.services.catalog import listed_ingredients, staple_groups
@@ -43,7 +43,8 @@ DISHES_PATH = "/dishes"
 IMAGE_VERSION_LENGTH = 12
 
 
-def recipe_detail(recipe: Recipe, content: RecipeContent | None) -> RecipeDetail:
+def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
+    recipe, content = detail.recipe, detail.content
     amounts = content.amounts if content else (None,) * len(recipe.ingredients)
     image = content.image if content else None
     return RecipeDetail(

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from uuid import UUID
 
 from recipe_app.domain.catalog import Diet, IngredientCatalog
-from recipe_app.domain.content import RecipeContent
+from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.cursor import (
     Position,
     Scope,
@@ -23,7 +23,6 @@ from recipe_app.domain.deck import (
 )
 from recipe_app.domain.matching import Ignored, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters
-from recipe_app.domain.recipe import Recipe
 from recipe_app.domain.scoring import SCORING_VERSION
 from recipe_app.services.ports import RecipeRepository
 
@@ -69,11 +68,8 @@ class RecipeService:
         self._keys = keys
         self._clock = clock
 
-    async def get_recipe(self, recipe_id: UUID) -> Recipe | None:
-        return await self._repository.get(recipe_id)
-
-    async def get_content(self, recipe_id: UUID) -> RecipeContent | None:
-        return await self._repository.content(recipe_id)
+    async def get_detail(self, recipe_id: UUID) -> RecipeWithContent | None:
+        return await self._repository.detail(recipe_id)
 
     async def search(self, query: SearchQuery) -> SearchResult:
         """Raises PantryError, InvalidCursorError or ExpiredCursorError."""

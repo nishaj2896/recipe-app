@@ -229,6 +229,8 @@ def test_ignored_ids_are_reported() -> None:
     ]
 
 
-def test_get_recipe() -> None:
-    assert asyncio.run(service().get_recipe(SEED[0].id)) == SEED[0]
-    assert asyncio.run(service().get_recipe(UUID(int=0))) is None
+def test_get_detail() -> None:
+    detail = asyncio.run(service().get_detail(SEED[0].id))
+    assert detail is not None
+    assert detail.recipe == SEED[0]
+    assert asyncio.run(service().get_detail(UUID(int=0))) is None
