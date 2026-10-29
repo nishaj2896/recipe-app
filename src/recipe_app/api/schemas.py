@@ -16,6 +16,7 @@ from recipe_app.domain.catalog import MAX_ID_LENGTH, SLUG, Diet
 from recipe_app.domain.cursor import MAX_CURSOR_LENGTH
 from recipe_app.domain.deck import MAX_DECK_SIZE
 from recipe_app.domain.matching import IgnoredReason
+from recipe_app.domain.units import Unit
 
 MAX_INGREDIENT_IDS = 50
 MAX_EXCLUDED_STAPLES = 100
@@ -109,6 +110,18 @@ class SearchResponse(BaseModel):
     ignored_ingredients: list[IgnoredIngredient]
 
 
+class RecipeIngredient(IngredientRef):
+    amount: float | None = Field(
+        description="For the recipe's `serves`; null with `unit` when to taste."
+    )
+    unit: Unit | None
+
+
+class RecipeImage(BaseModel):
+    url: str = Field(description="A path on the web origin, versioned by content.")
+    alt: str
+
+
 class RecipeDetail(BaseModel):
     id: UUID
     name: str
@@ -116,7 +129,12 @@ class RecipeDetail(BaseModel):
     cook_minutes: int
     total_minutes: int
     diet: Diet
-    ingredients: list[IngredientRef]
+    serves: int | None = Field(
+        description="Servings the amounts are written for; null before a sync."
+    )
+    ingredients: list[RecipeIngredient]
+    steps: list[str]
+    image: RecipeImage | None
 
 
 class CategoryRef(BaseModel):

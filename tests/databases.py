@@ -5,9 +5,11 @@ Shared by the conftests that build database fixtures.
 
 import asyncio
 import os
+from collections.abc import Mapping
 from datetime import UTC, datetime
 from pathlib import Path
-from uuid import uuid4
+from types import MappingProxyType
+from uuid import UUID, uuid4
 
 import pytest
 from alembic import command
@@ -16,6 +18,7 @@ from sqlalchemy import make_url, text
 from sqlalchemy.ext.asyncio import create_async_engine
 
 from recipe_app.domain.catalog import IngredientCatalog
+from recipe_app.domain.content import RecipeContent
 from recipe_app.domain.recipe import Recipe
 from recipe_app.infra.sync import sync
 
@@ -54,11 +57,14 @@ def migrate(url: str) -> None:
 
 
 async def sync_seed(
-    url: str, catalog: IngredientCatalog, recipes: tuple[Recipe, ...]
+    url: str,
+    catalog: IngredientCatalog,
+    recipes: tuple[Recipe, ...],
+    content: Mapping[UUID, RecipeContent] = MappingProxyType({}),
 ) -> None:
     engine = create_async_engine(url)
     try:
-        await sync(engine, catalog, recipes, now=datetime.now(UTC))
+        await sync(engine, catalog, recipes, now=datetime.now(UTC), content=content)
     finally:
         await engine.dispose()
 

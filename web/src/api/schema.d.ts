@@ -233,14 +233,45 @@ export interface components {
        * Format: uuid
        */
       id: string;
+      image: components["schemas"]["RecipeImage"] | null;
       /** Ingredients */
-      ingredients: components["schemas"]["IngredientRef"][];
+      ingredients: components["schemas"]["RecipeIngredient"][];
       /** Name */
       name: string;
       /** Prep Minutes */
       prep_minutes: number;
+      /**
+       * Serves
+       * @description Servings the amounts are written for; null before a sync.
+       */
+      serves: number | null;
+      /** Steps */
+      steps: string[];
       /** Total Minutes */
       total_minutes: number;
+    };
+    /** RecipeImage */
+    RecipeImage: {
+      /** Alt */
+      alt: string;
+      /**
+       * Url
+       * @description A path on the web origin, versioned by content.
+       */
+      url: string;
+    };
+    /** RecipeIngredient */
+    RecipeIngredient: {
+      /**
+       * Amount
+       * @description For the recipe's `serves`; null with `unit` when to taste.
+       */
+      amount: number | null;
+      /** Id */
+      id: string;
+      /** Name */
+      name: string;
+      unit: components["schemas"]["Unit"] | null;
     };
     /** SearchRequest */
     SearchRequest: {
@@ -305,6 +336,30 @@ export interface components {
      * @enum {string}
      */
     Tier: "scored" | "all_staples";
+    /**
+     * Unit
+     * @enum {string}
+     */
+    Unit:
+      | "g"
+      | "kg"
+      | "ml"
+      | "l"
+      | "tsp"
+      | "tbsp"
+      | "cup"
+      | "small"
+      | "medium"
+      | "large"
+      | "small-head"
+      | "bunch"
+      | "piece"
+      | "clove"
+      | "sprig"
+      | "slice"
+      | "leaf"
+      | "pinch"
+      | "can";
   };
   responses: never;
   parameters: never;

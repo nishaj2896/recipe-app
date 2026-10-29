@@ -17,7 +17,7 @@ from recipe_app.infra.config import (
     data_dir_from_env,
     database_url_from_env,
 )
-from recipe_app.infra.data import load_catalog, load_recipes
+from recipe_app.infra.data import load_catalog, load_recipe_book
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.sync import SyncError, sync
 
@@ -62,11 +62,13 @@ async def _sync() -> int:
     url = database_url_from_env(os.environ)
     data_dir = data_dir_from_env(os.environ)
     catalog = load_catalog(data_dir)
-    recipes = load_recipes(catalog, data_dir)
+    book = load_recipe_book(catalog, data_dir)
 
     engine = create_engine(url)
     try:
-        report = await sync(engine, catalog, recipes, now=datetime.now(UTC))
+        report = await sync(
+            engine, catalog, book.recipes, now=datetime.now(UTC), content=book.content
+        )
     finally:
         await engine.dispose()
     print(

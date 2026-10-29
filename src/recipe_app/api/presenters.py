@@ -8,6 +8,8 @@ from recipe_app.api.schemas import (
     IngredientsResponse,
     RecipeCard,
     RecipeDetail,
+    RecipeImage,
+    RecipeIngredient,
     SearchResponse,
     StapleCategory,
     StapleKindGroup,
@@ -15,6 +17,7 @@ from recipe_app.api.schemas import (
     Tier,
 )
 from recipe_app.domain.catalog import Ingredient, IngredientCatalog
+from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch
 from recipe_app.domain.recipe import Recipe
 from recipe_app.services.catalog import listed_ingredients, staple_groups
@@ -35,7 +38,15 @@ def search_response(result: SearchResult) -> SearchResponse:
     )
 
 
-def recipe_detail(recipe: Recipe) -> RecipeDetail:
+# Photos are served by the web app (ADR-0008 rule 6).
+DISHES_PATH = "/dishes"
+IMAGE_VERSION_LENGTH = 12
+
+
+def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
+    recipe, content = detail.recipe, detail.content
+    amounts = content.amounts if content else (None,) * len(recipe.ingredients)
+    image = content.image if content else None
     return RecipeDetail(
         id=recipe.id,
         name=recipe.name,
@@ -43,7 +54,23 @@ def recipe_detail(recipe: Recipe) -> RecipeDetail:
         cook_minutes=recipe.cook_minutes,
         total_minutes=recipe.total_minutes,
         diet=recipe.diet,
-        ingredients=_refs(recipe.ingredients),
+        serves=content.serves if content else None,
+        ingredients=[
+            RecipeIngredient(
+                id=item.id,
+                name=item.name,
+                amount=amount.value if amount else None,
+                unit=amount.unit if amount else None,
+            )
+            for item, amount in zip(recipe.ingredients, amounts, strict=True)
+        ],
+        steps=list(content.steps) if content else [],
+        image=None
+        if image is None
+        else RecipeImage(
+            url=f"{DISHES_PATH}/{image.file}?v={image.sha256[:IMAGE_VERSION_LENGTH]}",
+            alt=image.alt,
+        ),
     )
 
 

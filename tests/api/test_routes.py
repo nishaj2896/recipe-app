@@ -59,7 +59,22 @@ async def test_recipe_detail(client: AsyncClient) -> None:
     detail = response.json()
     assert detail["id"] == card["id"]
     assert detail["name"] == card["name"]
-    assert {"id": "potato", "name": "Potato"} in detail["ingredients"]
+    potato = next(item for item in detail["ingredients"] if item["id"] == "potato")
+    assert potato["name"] == "Potato"
+    assert potato["unit"] is not None
+    assert potato["amount"] > 0
+    assert 1 <= detail["serves"] <= 12
+    assert len(detail["steps"]) >= 2
+    assert detail["image"] is None
+
+
+async def test_recipe_detail_marks_to_taste_ingredients(client: AsyncClient) -> None:
+    jeera_aloo = "01a15175-3c01-7f7f-bbc8-f5c5fce48a60"
+
+    detail = (await client.get(f"/api/v1/recipes/{jeera_aloo}")).json()
+
+    salt = next(item for item in detail["ingredients"] if item["id"] == "salt")
+    assert (salt["amount"], salt["unit"]) == (None, None)
 
 
 @pytest.mark.parametrize("path", ["/api/v1/ingredients", "/api/v1/staples"])

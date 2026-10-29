@@ -2,19 +2,22 @@
 
 import logging
 from collections.abc import AsyncIterator
+from dataclasses import replace
 from datetime import UTC, datetime
 from uuid import UUID
 
 import pytest
 from sqlalchemy import insert
-from sqlalchemy.ext.asyncio import AsyncEngine
+from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog, parse_catalog
+from recipe_app.domain.content import Amount, Image, RecipeContent, RecipeWithContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.matching import max_core_weight, resolve_pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe import Recipe, build_recipe
 from recipe_app.domain.scoring import score_int
+from recipe_app.domain.units import Unit
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.postgres import PostgresRecipeRepository, reachable_core_q
 from recipe_app.infra.sync import sync
@@ -50,7 +53,9 @@ async def test_every_seed_recipe_round_trips(
     repository = await PostgresRecipeRepository.open(seeded_engine, real_catalog)
 
     for recipe in seed:
-        assert await repository.get(recipe.id) == recipe
+        detail = await repository.detail(recipe.id)
+        assert detail is not None
+        assert detail.recipe == recipe
 
 
 async def test_a_recipe_using_an_ingredient_this_catalog_lacks_is_skipped(
@@ -77,7 +82,7 @@ async def test_a_recipe_using_an_ingredient_this_catalog_lacks_is_skipped(
     )
 
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
-        assert await repository.get(recipe_id) is None
+        assert await repository.detail(recipe_id) is None
         assert await repository.ranked(pantry, SearchFilters(), Position(), 20) == EMPTY
 
     assert "unknown ingredients ['onion']" in caplog.text
@@ -114,7 +119,7 @@ async def test_a_recipe_with_no_ingredient_rows_is_skipped_not_fatal(
     pantry = resolve_pantry(ingredient_ids=["potato"], excluded_staples=[], catalog=one)
 
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
-        assert await repository.get(bare) is None
+        assert await repository.detail(bare) is None
         ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
         assert [match.recipe for match in ranked.scored] == [kept]
 
@@ -235,3 +240,103 @@ async def test_the_reachable_core_q_matches_the_domain(
 
 async def test_an_empty_database_reaches_no_core_q(empty_engine: AsyncEngine) -> None:
     assert await reachable_core_q(empty_engine) == 0
+
+
+async def test_content_with_a_photo_and_a_to_taste_ingredient_round_trips(
+    empty_engine: AsyncEngine,
+) -> None:
+    one = parse_catalog(
+        catalog(
+            category(),
+            ingredient(),
+            ingredient(id="salt", name="Salt", **{"class": "S"}, kind="pantry"),
+        )
+    )
+    recipe = build_recipe(
+        id=UUID(int=7),
+        name="Salted potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato", "salt"],
+        catalog=one,
+    )
+    content = RecipeContent(
+        serves=2,
+        amounts=(Amount(value=0.333, unit=Unit.KG), None),
+        steps=("Boil the potatoes.", "Season and serve."),
+        image=Image(file=f"{recipe.id}.webp", sha256="ab" * 32, alt="Potatoes"),
+    )
+    await sync(empty_engine, one, [recipe], now=NOW, content={recipe.id: content})
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+
+    assert await repository.detail(recipe.id) == RecipeWithContent(
+        recipe=recipe, content=content
+    )
+
+
+async def test_a_recipe_synced_without_content_has_none(
+    empty_engine: AsyncEngine,
+) -> None:
+    """Rows from before the ADR-0008 migration and sync have NULL serves."""
+    one = parse_catalog(catalog(category(), ingredient()))
+    recipe = build_recipe(
+        id=UUID(int=8),
+        name="Plain potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato"],
+        catalog=one,
+    )
+    await sync(empty_engine, one, [recipe], now=NOW)
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+
+    assert await repository.detail(recipe.id) == RecipeWithContent(
+        recipe=recipe, content=None
+    )
+
+
+async def test_detail_reads_one_version_while_a_sync_commits(
+    empty_engine: AsyncEngine, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """A sync committing between the recipe and its content can't mix versions.
+
+    The sync here lands after the recipe's ingredients are read and before
+    its amounts are: under READ COMMITTED the detail would pair two
+    ingredients with one amount.
+    """
+    one = parse_catalog(
+        catalog(category(), ingredient(), ingredient(id="onion", name="Onion"))
+    )
+    recipe = build_recipe(
+        id=UUID(int=9),
+        name="Onion potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato", "onion"],
+        catalog=one,
+    )
+    content = RecipeContent(
+        serves=2,
+        amounts=(Amount(value=2, unit=Unit.MEDIUM), Amount(value=1, unit=Unit.SMALL)),
+        steps=("Slice the onion.", "Fry it with the potatoes."),
+        image=None,
+    )
+    await sync(empty_engine, one, [recipe], now=NOW, content={recipe.id: content})
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+    edited = replace(recipe, ingredients=recipe.ingredients[:1])
+    edited_content = replace(content, amounts=content.amounts[:1])
+    read_content = PostgresRecipeRepository._content
+
+    async def sync_first(
+        self: PostgresRecipeRepository, connection: AsyncConnection, recipe_id: UUID
+    ) -> RecipeContent | None:
+        await sync(
+            empty_engine, one, [edited], now=NOW, content={recipe.id: edited_content}
+        )
+        return await read_content(self, connection, recipe_id)
+
+    monkeypatch.setattr(PostgresRecipeRepository, "_content", sync_first)
+
+    assert await repository.detail(recipe.id) == RecipeWithContent(
+        recipe=recipe, content=content
+    )

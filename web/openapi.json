@@ -286,9 +286,19 @@
             "title": "Id",
             "type": "string"
           },
+          "image": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RecipeImage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "ingredients": {
             "items": {
-              "$ref": "#/components/schemas/IngredientRef"
+              "$ref": "#/components/schemas/RecipeIngredient"
             },
             "title": "Ingredients",
             "type": "array"
@@ -300,6 +310,25 @@
           "prep_minutes": {
             "title": "Prep Minutes",
             "type": "integer"
+          },
+          "serves": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Servings the amounts are written for; null before a sync.",
+            "title": "Serves"
+          },
+          "steps": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Steps",
+            "type": "array"
           },
           "total_minutes": {
             "title": "Total Minutes",
@@ -313,9 +342,65 @@
           "cook_minutes",
           "total_minutes",
           "diet",
-          "ingredients"
+          "serves",
+          "ingredients",
+          "steps",
+          "image"
         ],
         "title": "RecipeDetail",
+        "type": "object"
+      },
+      "RecipeImage": {
+        "properties": {
+          "alt": {
+            "title": "Alt",
+            "type": "string"
+          },
+          "url": {
+            "description": "A path on the web origin, versioned by content.",
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": ["url", "alt"],
+        "title": "RecipeImage",
+        "type": "object"
+      },
+      "RecipeIngredient": {
+        "properties": {
+          "amount": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "For the recipe's `serves`; null with `unit` when to taste.",
+            "title": "Amount"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Unit"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": ["id", "name", "amount", "unit"],
+        "title": "RecipeIngredient",
         "type": "object"
       },
       "SearchRequest": {
@@ -496,6 +581,31 @@
       "Tier": {
         "enum": ["scored", "all_staples"],
         "title": "Tier",
+        "type": "string"
+      },
+      "Unit": {
+        "enum": [
+          "g",
+          "kg",
+          "ml",
+          "l",
+          "tsp",
+          "tbsp",
+          "cup",
+          "small",
+          "medium",
+          "large",
+          "small-head",
+          "bunch",
+          "piece",
+          "clove",
+          "sprig",
+          "slice",
+          "leaf",
+          "pinch",
+          "can"
+        ],
+        "title": "Unit",
         "type": "string"
       }
     }

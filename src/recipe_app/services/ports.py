@@ -7,15 +7,20 @@ The adapters are recipe_app.infra.memory (Task 1) and recipe_app.infra.postgres
 from typing import Protocol
 from uuid import UUID
 
+from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.matching import Pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters
-from recipe_app.domain.recipe import Recipe
 
 
 class RecipeRepository(Protocol):
-    async def get(self, recipe_id: UUID) -> Recipe | None:
-        """The recipe with this id, or None if there isn't one."""
+    async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:
+        """The recipe and what a cook needs for it (ADR-0008), or None if there
+        isn't one.
+
+        Both come from one version of the recipe: its amounts pair with its
+        ingredients by position, so a mix of two versions would pair them wrong.
+        """
         ...
 
     async def ranked(

@@ -4,16 +4,20 @@ The sync is the only writer. It runs in one transaction, so a failed run
 changes nothing, and it recomputes every derived column on every run.
 """
 
-from collections.abc import Iterable, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
 from datetime import datetime
+from decimal import Decimal
+from types import MappingProxyType
 from typing import Any
+from uuid import UUID
 
 from sqlalchemy import Table, delete, func, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog
+from recipe_app.domain.content import Amount, RecipeContent
 from recipe_app.domain.matching import match_weight
 from recipe_app.domain.recipe import Recipe
 from recipe_app.infra import tables
@@ -45,8 +49,13 @@ async def sync(
     recipes: Sequence[Recipe],
     *,
     now: datetime,
+    content: Mapping[UUID, RecipeContent] = MappingProxyType({}),
 ) -> SyncReport:
-    """Make the database hold exactly these files, or raise and change nothing."""
+    """Make the database hold exactly these files, or raise and change nothing.
+
+    `content` is what a cook needs for each recipe (ADR-0008); the data files
+    have it for every recipe, and a recipe without it gets NULLs.
+    """
     async with engine.begin() as connection:
         # Held until commit or rollback; a second sync waits here.
         await connection.execute(select(func.pg_advisory_xact_lock(SYNC_LOCK_KEY)))
@@ -103,6 +112,7 @@ async def sync(
                     "diet": recipe.diet.value,
                     "all_staples": recipe.all_staples,
                     "core_weight": sum(match_weight(i) for i in recipe.ingredients),
+                    **_content_columns(content.get(recipe.id)),
                 }
                 for recipe in recipes
             ],
@@ -116,9 +126,19 @@ async def sync(
                     "position": position,
                     "ingredient_id": item.id,
                     "weight": match_weight(item),
+                    **_amount_columns(content.get(recipe.id), position),
                 }
                 for recipe in recipes
                 for position, item in enumerate(recipe.ingredients)
+            ],
+        )
+        await _replace(
+            connection,
+            tables.recipe_steps,
+            [
+                {"recipe_id": recipe_id, "position": position, "text": step}
+                for recipe_id, recipe_content in content.items()
+                for position, step in enumerate(recipe_content.steps)
             ],
         )
         await _upsert(
@@ -140,6 +160,24 @@ async def sync(
         recipes=len(recipes),
         content_hash=catalog.content_hash,
     )
+
+
+def _content_columns(content: RecipeContent | None) -> dict[str, Any]:
+    image = content.image if content else None
+    return {
+        "serves": content.serves if content else None,
+        "image_file": image.file if image else None,
+        "image_sha256": image.sha256 if image else None,
+        "image_alt": image.alt if image else None,
+    }
+
+
+def _amount_columns(content: RecipeContent | None, position: int) -> dict[str, Any]:
+    amount: Amount | None = content.amounts[position] if content else None
+    return {
+        "amount": Decimal(str(amount.value)) if amount else None,
+        "unit": amount.unit.value if amount else None,
+    }
 
 
 async def _refuse_deletions(
