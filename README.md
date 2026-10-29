@@ -35,6 +35,16 @@ uv run pre-commit install    # run the checks on every commit
 uv run pytest                # should pass
 ```
 
+## Running the whole app
+
+With [Docker Desktop](https://www.docker.com/products/docker-desktop/) running, uv and Node 22 installed, one command runs everything:
+
+```bash
+scripts/dev.sh               # add --host to open it from a phone on the same Wi-Fi
+```
+
+It starts the database, applies the migrations, loads the data files, then serves the API on <http://127.0.0.1:8000> and the web app on <http://localhost:5173>. Ctrl+C stops both servers; `docker compose down` stops the database. On its first run it writes a git-ignored `.env` from [`.env.example`](.env.example) with a new signing key, and other commands can read it too: `uv run --env-file .env recipe-app db sync`. The sections below do the same steps by hand.
+
 ## Running the API
 
 The API reads recipes and the ingredient catalog from PostgreSQL, so start the local database, create the tables and load the data files first:
