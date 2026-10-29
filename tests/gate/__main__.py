@@ -2,6 +2,7 @@
 
     uv run python -m tests.gate load     # sync 50,000 recipes into DATABASE_URL
     uv run python -m tests.gate explain  # EXPLAIN ANALYZE every gate search
+    uv run python -m tests.gate bench    # p50/p95/p99 of every gate search
 
 Point DATABASE_URL at an empty, migrated throwaway database (`alembic
 upgrade head`): the sync behind `load` refuses to delete recipes already there.
@@ -19,15 +20,28 @@ from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.sync import sync
 from tests.domain.factories import DATA_DIR
+from tests.gate.benchmark import benchmark, report
 from tests.gate.searches import SEARCHES, explain, gate_recipes, search_query
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="python -m tests.gate")
-    parser.add_argument("command", choices=["load", "explain"])
-    command = parser.parse_args().command
+    parser.add_argument("command", choices=["load", "explain", "bench"])
+    parser.add_argument(
+        "--rounds",
+        type=int,
+        default=30,
+        help="bench: swipe sessions per search, each up to 3 decks (default 30)",
+    )
+    arguments = parser.parse_args()
     engine = create_engine(os.environ["DATABASE_URL"])
-    asyncio.run(_load(engine) if command == "load" else _explain(engine))
+    match arguments.command:
+        case "load":
+            asyncio.run(_load(engine))
+        case "explain":
+            asyncio.run(_explain(engine))
+        case "bench":
+            asyncio.run(_bench(engine, arguments.rounds))
 
 
 async def _load(engine: AsyncEngine) -> None:
@@ -59,6 +73,14 @@ async def _explain(engine: AsyncEngine) -> None:
                 print("\n".join(line for (line,) in result))
     finally:
         await engine.dispose()
+
+
+async def _bench(engine: AsyncEngine, rounds: int) -> None:
+    try:
+        results = await benchmark(engine, rounds=rounds)
+    finally:
+        await engine.dispose()
+    print(report(results))
 
 
 if __name__ == "__main__":

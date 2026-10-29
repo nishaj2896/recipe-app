@@ -1,5 +1,5 @@
-"""The searches the Task 2 gate measures: a narrow and a broad pantry, with
-and without filters. Shared by the plan test and `python -m tests.gate`.
+"""The searches the Task 2 and Task 3 gates measure: narrow and broad pantries,
+with and without filters. Shared by the gate tests and `python -m tests.gate`.
 """
 
 from collections import Counter
@@ -16,6 +16,62 @@ from recipe_app.infra.postgres import candidates_query
 from tests.gate.synthetic import synthetic_recipes
 
 GATE_RECIPES = 50_000
+
+# The worst case the API allows: a full pantry (MAX_INGREDIENT_IDS) of the
+# seed's 50 most-used class A and B ingredients, most used first. Each one
+# pulls in more recipes, so this search matches the most.
+FULL_PANTRY = [
+    "egg",
+    "peas",
+    "curd",
+    "milk",
+    "potato",
+    "rice",
+    "paneer",
+    "cream",
+    "carrot",
+    "basmati-rice",
+    "chicken",
+    "pasta",
+    "bell-pepper",
+    "soy-sauce",
+    "kashmiri-chilli-powder",
+    "dried-fenugreek-leaves",
+    "toor-dal",
+    "brinjal",
+    "tamarind",
+    "french-beans",
+    "peanuts",
+    "olive-oil",
+    "chilli-flakes",
+    "spring-onions",
+    "cauliflower",
+    "okra",
+    "dry-mango-powder",
+    "spinach",
+    "cashews",
+    "moong-dal",
+    "masoor-dal",
+    "chickpeas",
+    "chole-masala",
+    "kidney-beans",
+    "drumsticks",
+    "sambar-powder",
+    "flattened-rice",
+    "semolina",
+    "all-purpose-flour",
+    "baking-powder",
+    "mint",
+    "biryani-masala",
+    "saffron",
+    "kingfish",
+    "coconut-milk",
+    "coconut-oil",
+    "prawns",
+    "lamb-mince",
+    "parsley",
+    "canned-tomatoes",
+]
 
 SEARCHES: dict[str, tuple[list[str], SearchFilters]] = {
     "two rare ingredients": (["kingfish", "okra"], SearchFilters()),
@@ -39,6 +95,7 @@ SEARCHES: dict[str, tuple[list[str], SearchFilters]] = {
         ],
         SearchFilters(),
     ),
+    "full pantry": (FULL_PANTRY, SearchFilters()),
 }
 
 
