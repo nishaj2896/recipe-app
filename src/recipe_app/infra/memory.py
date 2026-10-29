@@ -5,10 +5,11 @@ adapter is tested against (ADR-0007 rule 6).
 """
 
 from collections import defaultdict
-from collections.abc import Iterable, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from types import MappingProxyType
 from uuid import UUID
 
+from recipe_app.domain.content import RecipeContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import resume
 from recipe_app.domain.matching import Pantry
@@ -19,7 +20,11 @@ from recipe_app.domain.recipe import Recipe
 class InMemoryRecipeRepository:
     """Indexes recipes by id and by ingredient, the way Task 2's tables will."""
 
-    def __init__(self, recipes: Iterable[Recipe]) -> None:
+    def __init__(
+        self,
+        recipes: Iterable[Recipe],
+        content: Mapping[UUID, RecipeContent] = MappingProxyType({}),
+    ) -> None:
         by_id: dict[UUID, Recipe] = {}
         by_ingredient: defaultdict[str, list[Recipe]] = defaultdict(list)
         all_staples: list[Recipe] = []
@@ -36,9 +41,15 @@ class InMemoryRecipeRepository:
             {key: tuple(value) for key, value in by_ingredient.items()}
         )
         self._all_staples = tuple(all_staples)
+        self._content = MappingProxyType(
+            {key: value for key, value in content.items() if key in by_id}
+        )
 
     async def get(self, recipe_id: UUID) -> Recipe | None:
         return self._by_id.get(recipe_id)
+
+    async def content(self, recipe_id: UUID) -> RecipeContent | None:
+        return self._content.get(recipe_id)
 
     async def ranked(
         self, pantry: Pantry, filters: SearchFilters, after: Position, limit: int

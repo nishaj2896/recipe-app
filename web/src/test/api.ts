@@ -108,11 +108,14 @@ export function detailOf(card: RecipeCard): components["schemas"]["RecipeDetail"
     cook_minutes: card.cook_minutes,
     total_minutes: card.total_minutes,
     diet: card.diet,
+    serves: 4,
     ingredients: [
       ...card.matched_ingredients,
       ...card.missing_ingredients,
       ...card.assumed_staples,
-    ],
+    ].map((item) => ({ ...item, amount: 1, unit: "cup" as const })),
+    steps: ["Gather everything.", "Cook it all together."],
+    image: null,
   };
 }
 

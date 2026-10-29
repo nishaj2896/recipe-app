@@ -6,10 +6,11 @@ from fastapi import FastAPI
 from httpx import AsyncClient
 
 from recipe_app.api.app import create_app
+from recipe_app.domain.book import RecipeBook
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.cursor import SigningKeys
 from recipe_app.domain.recipe import Recipe
-from recipe_app.infra.data import load_catalog, load_recipes
+from recipe_app.infra.data import load_catalog, load_recipe_book
 from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.services.search import RecipeService
 from tests.apps import KEYS, NOW, AppFactory, client_for
@@ -29,8 +30,13 @@ def real_catalog() -> IngredientCatalog:
 
 
 @pytest.fixture(scope="session")
-def seed(real_catalog: IngredientCatalog) -> tuple[Recipe, ...]:
-    return load_recipes(real_catalog, DATA_DIR)
+def seed_book(real_catalog: IngredientCatalog) -> RecipeBook:
+    return load_recipe_book(real_catalog, DATA_DIR)
+
+
+@pytest.fixture(scope="session")
+def seed(seed_book: RecipeBook) -> tuple[Recipe, ...]:
+    return seed_book.recipes
 
 
 @pytest.fixture
@@ -39,7 +45,9 @@ def anyio_backend() -> str:
 
 
 @pytest.fixture
-def make_app(real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]) -> AppFactory:
+def make_app(
+    real_catalog: IngredientCatalog, seed: tuple[Recipe, ...], seed_book: RecipeBook
+) -> AppFactory:
     """An app over the real catalog; pass recipes, keys or a clock to change one."""
 
     def make(
@@ -51,7 +59,7 @@ def make_app(real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]) -> AppFa
     ) -> FastAPI:
         service = RecipeService(
             catalog=catalog,
-            repository=InMemoryRecipeRepository(recipes),
+            repository=InMemoryRecipeRepository(recipes, seed_book.content),
             keys=keys,
             clock=lambda: now,
         )
@@ -99,14 +107,14 @@ def migrated_database_url(empty_database_url: str) -> str:
 
 @pytest.fixture(scope="session")
 def seeded_database_url(
-    real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]
+    real_catalog: IngredientCatalog, seed_book: RecipeBook
 ) -> Iterator[str]:
     """One migrated database holding the seed, shared by tests that only read it."""
     server = database_server()
     url = create_database(server)
     try:
         migrate(url)
-        asyncio.run(sync_seed(url, real_catalog, seed))
+        asyncio.run(sync_seed(url, real_catalog, seed_book.recipes, seed_book.content))
         yield url
     finally:
         drop_database(server, url)

@@ -10,11 +10,13 @@ from sqlalchemy import insert
 from sqlalchemy.ext.asyncio import AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog, parse_catalog
+from recipe_app.domain.content import Amount, Image, RecipeContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.matching import max_core_weight, resolve_pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe import Recipe, build_recipe
 from recipe_app.domain.scoring import score_int
+from recipe_app.domain.units import Unit
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.postgres import PostgresRecipeRepository, reachable_core_q
 from recipe_app.infra.sync import sync
@@ -235,3 +237,52 @@ async def test_the_reachable_core_q_matches_the_domain(
 
 async def test_an_empty_database_reaches_no_core_q(empty_engine: AsyncEngine) -> None:
     assert await reachable_core_q(empty_engine) == 0
+
+
+async def test_content_with_a_photo_and_a_to_taste_ingredient_round_trips(
+    empty_engine: AsyncEngine,
+) -> None:
+    one = parse_catalog(
+        catalog(
+            category(),
+            ingredient(),
+            ingredient(id="salt", name="Salt", **{"class": "S"}, kind="pantry"),
+        )
+    )
+    recipe = build_recipe(
+        id=UUID(int=7),
+        name="Salted potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato", "salt"],
+        catalog=one,
+    )
+    content = RecipeContent(
+        serves=2,
+        amounts=(Amount(value=0.333, unit=Unit.KG), None),
+        steps=("Boil the potatoes.", "Season and serve."),
+        image=Image(file=f"{recipe.id}.webp", sha256="ab" * 32, alt="Potatoes"),
+    )
+    await sync(empty_engine, one, [recipe], now=NOW, content={recipe.id: content})
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+
+    assert await repository.content(recipe.id) == content
+
+
+async def test_a_recipe_synced_without_content_has_none(
+    empty_engine: AsyncEngine,
+) -> None:
+    """Rows from before the ADR-0008 migration and sync have NULL serves."""
+    one = parse_catalog(catalog(category(), ingredient()))
+    recipe = build_recipe(
+        id=UUID(int=8),
+        name="Plain potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato"],
+        catalog=one,
+    )
+    await sync(empty_engine, one, [recipe], now=NOW)
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+
+    assert await repository.content(recipe.id) is None

@@ -19,6 +19,7 @@ TABLES = {
     "ingredient_search_terms",
     "recipes",
     "recipe_ingredients",
+    "recipe_steps",
     "catalog_state",
 }
 

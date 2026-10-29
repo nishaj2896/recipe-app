@@ -36,6 +36,7 @@ from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.sql.elements import CollectionAggregate, Grouping
 
 from recipe_app.domain.catalog import Diet, IngredientCatalog
+from recipe_app.domain.content import Amount, Image, RecipeContent
 from recipe_app.domain.cursor import AllStaplesKey, Position, ScoredKey
 from recipe_app.domain.matching import (
     AllStaplesMatch,
@@ -46,7 +47,8 @@ from recipe_app.domain.matching import (
 from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe import Recipe
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
-from recipe_app.infra.tables import recipe_ingredients, recipes
+from recipe_app.domain.units import Unit
+from recipe_app.infra.tables import recipe_ingredients, recipe_steps, recipes
 
 logger = logging.getLogger(__name__)
 
@@ -71,6 +73,9 @@ _RECIPE = select(
     _INGREDIENT_IDS,
 )
 
+_CONTENT = select(
+    recipes.c.serves, recipes.c.image_file, recipes.c.image_sha256, recipes.c.image_alt
+)
 
 # The largest core_q any request can give any recipe: every staple unticked.
 # Grouped once and joined, not counted per recipe: about half the time.
@@ -126,6 +131,45 @@ class PostgresRecipeRepository:
                 .one_or_none()
             )
         return None if row is None else next(iter(self._to_recipes([row])), None)
+
+    async def content(self, recipe_id: UUID) -> RecipeContent | None:
+        async with self._engine.connect() as connection:
+            row = (
+                (await connection.execute(_CONTENT.where(recipes.c.id == recipe_id)))
+                .mappings()
+                .one_or_none()
+            )
+            if row is None or row["serves"] is None:
+                return None
+            amounts = (
+                await connection.execute(
+                    select(recipe_ingredients.c.amount, recipe_ingredients.c.unit)
+                    .where(recipe_ingredients.c.recipe_id == recipe_id)
+                    .order_by(recipe_ingredients.c.position)
+                )
+            ).all()
+            steps = await connection.scalars(
+                select(recipe_steps.c.text)
+                .where(recipe_steps.c.recipe_id == recipe_id)
+                .order_by(recipe_steps.c.position)
+            )
+            return RecipeContent(
+                serves=row["serves"],
+                amounts=tuple(
+                    None
+                    if unit is None
+                    else Amount(value=float(amount), unit=Unit(unit))
+                    for amount, unit in amounts
+                ),
+                steps=tuple(steps),
+                image=None
+                if row["image_file"] is None
+                else Image(
+                    file=row["image_file"],
+                    sha256=row["image_sha256"],
+                    alt=row["image_alt"],
+                ),
+            )
 
     async def ranked(
         self, pantry: Pantry, filters: SearchFilters, after: Position, limit: int

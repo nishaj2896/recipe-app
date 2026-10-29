@@ -19,14 +19,15 @@ from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import Deck, position_after
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters, rank
-from recipe_app.infra.data import load_catalog, load_recipes
+from recipe_app.infra.data import load_catalog, load_recipe_book
 from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.infra.postgres import PostgresRecipeRepository
 from recipe_app.services.ports import RecipeRepository
 from tests.domain.factories import DATA_DIR
 
 CATALOG = load_catalog(DATA_DIR)
-SEED = load_recipes(CATALOG, DATA_DIR)
+BOOK = load_recipe_book(CATALOG, DATA_DIR)
+SEED = BOOK.recipes
 STAPLE = IngredientClass.STAPLE
 USED = sorted({item.id for recipe in SEED for item in recipe.ingredients})
 CORE_IDS = [i for i in USED if CATALOG.by_id[i].ingredient_class is not STAPLE]
@@ -37,7 +38,7 @@ STAPLE_IDS = [i for i in USED if CATALOG.by_id[i].ingredient_class is STAPLE]
 def repository(request: pytest.FixtureRequest) -> Iterator[RecipeRepository]:
     """Each adapter over the seed. Module scope, so Hypothesis can use it."""
     if request.param == "memory":
-        yield InMemoryRecipeRepository(SEED)
+        yield InMemoryRecipeRepository(SEED, BOOK.content)
         return
     url: str = request.getfixturevalue("seeded_database_url")
     # No pool: every test step runs in its own event loop via asyncio.run, and
@@ -53,6 +54,16 @@ def test_get_returns_the_recipe(repository: RecipeRepository) -> None:
 
 def test_get_unknown_id_returns_none(repository: RecipeRepository) -> None:
     assert asyncio.run(repository.get(UUID(int=0))) is None
+
+
+def test_content_round_trips_for_every_recipe(repository: RecipeRepository) -> None:
+    """Amounts survive numeric(9, 3), and steps and amounts keep their order."""
+    for recipe in SEED:
+        assert asyncio.run(repository.content(recipe.id)) == BOOK.content[recipe.id]
+
+
+def test_content_of_unknown_id_is_none(repository: RecipeRepository) -> None:
+    assert asyncio.run(repository.content(UUID(int=0))) is None
 
 
 @settings(max_examples=200, deadline=None)

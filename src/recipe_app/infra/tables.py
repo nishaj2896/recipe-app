@@ -18,6 +18,7 @@ from sqlalchemy import (
     Index,
     Integer,
     MetaData,
+    Numeric,
     SmallInteger,
     String,
     Table,
@@ -34,7 +35,13 @@ from recipe_app.domain.catalog import (
     IngredientClass,
     StapleKind,
 )
+from recipe_app.domain.content import (
+    MAX_SERVES,
+    MAX_STEP_LENGTH,
+    MIN_SERVES,
+)
 from recipe_app.domain.recipe import MAX_TOTAL_MINUTES
+from recipe_app.domain.units import Unit
 
 # Every constraint gets a predictable name, so a later migration can drop it by name.
 metadata = MetaData(
@@ -133,6 +140,12 @@ recipes = Table(
     # Sum of recipe_ingredients.weight; also derived and recomputed (ADR-0007 rule 3).
     # NULL only between the migration that added it and the next sync.
     Column("core_weight", Integer),
+    # What a cook needs (ADR-0008 rule 5). NULL only between the migration
+    # that added them and the next sync; image_* are all set or all NULL.
+    Column("serves", SmallInteger),
+    Column("image_file", Text),
+    Column("image_sha256", String(64)),
+    Column("image_alt", Text),
     CheckConstraint("prep_minutes >= 0", name="prep_not_negative"),
     CheckConstraint("core_weight >= 0", name="core_weight_not_negative"),
     CheckConstraint("cook_minutes >= 0", name="cook_not_negative"),
@@ -140,6 +153,14 @@ recipes = Table(
         f"total_minutes BETWEEN 1 AND {MAX_TOTAL_MINUTES}", name="total_in_range"
     ),
     CheckConstraint(_one_of("diet", Diet), name="diet_known"),
+    CheckConstraint(
+        f"serves BETWEEN {MIN_SERVES} AND {MAX_SERVES}", name="serves_in_range"
+    ),
+    CheckConstraint(
+        "(image_file IS NULL) = (image_sha256 IS NULL)"
+        " AND (image_file IS NULL) = (image_alt IS NULL)",
+        name="image_all_or_none",
+    ),
     _name_not_blank(),
     # The search's other way in: the few recipes any pantry can cook.
     Index("ix_recipes_all_staples", "id", postgresql_where=text("all_staples")),
@@ -158,9 +179,15 @@ recipe_ingredients = Table(
     Column("ingredient_id", ForeignKey("ingredients.id"), nullable=False),
     # What a match on this ingredient is worth, by its class (ADR-0007 rule 3).
     Column("weight", SmallInteger),
+    # The written amount, both NULL when the ingredient is to taste (ADR-0008).
+    Column("amount", Numeric(9, 3)),
+    Column("unit", Text),
     UniqueConstraint("recipe_id", "ingredient_id"),
     CheckConstraint("position >= 0", name="position_not_negative"),
     CheckConstraint("weight >= 0", name="weight_not_negative"),
+    CheckConstraint("amount > 0", name="amount_positive"),
+    CheckConstraint(_one_of("unit", Unit), name="unit_known"),
+    CheckConstraint("(amount IS NULL) = (unit IS NULL)", name="amount_has_unit"),
     # The search's hot path: which recipes use any of these ingredients, and
     # what are they worth? Covering weight lets Postgres skip the table.
     Index(
@@ -168,6 +195,23 @@ recipe_ingredients = Table(
         "ingredient_id",
         "recipe_id",
         postgresql_include=["weight"],
+    ),
+)
+
+recipe_steps = Table(
+    "recipe_steps",
+    metadata,
+    Column(
+        "recipe_id",
+        ForeignKey("recipes.id", ondelete="CASCADE"),
+        primary_key=True,
+    ),
+    # Cooking order, from 0; the screen numbers them from 1.
+    Column("position", SmallInteger, primary_key=True),
+    Column("text", Text, nullable=False),
+    CheckConstraint("position >= 0", name="position_not_negative"),
+    CheckConstraint(
+        f"length(text) BETWEEN 1 AND {MAX_STEP_LENGTH}", name="text_length"
     ),
 )
 

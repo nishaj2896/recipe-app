@@ -106,7 +106,7 @@ async def get_recipe(recipe_id: UUID, service: Service) -> RecipeDetail:
     recipe = await service.get_recipe(recipe_id)
     if recipe is None:
         raise RecipeNotFoundError(recipe_id)
-    return presenters.recipe_detail(recipe)
+    return presenters.recipe_detail(recipe, await service.get_content(recipe_id))
 
 
 @router.get(

@@ -5,6 +5,7 @@ from dataclasses import dataclass, field
 from uuid import UUID
 
 from recipe_app.domain.catalog import Diet, IngredientCatalog
+from recipe_app.domain.content import RecipeContent
 from recipe_app.domain.cursor import (
     Position,
     Scope,
@@ -70,6 +71,9 @@ class RecipeService:
 
     async def get_recipe(self, recipe_id: UUID) -> Recipe | None:
         return await self._repository.get(recipe_id)
+
+    async def get_content(self, recipe_id: UUID) -> RecipeContent | None:
+        return await self._repository.content(recipe_id)
 
     async def search(self, query: SearchQuery) -> SearchResult:
         """Raises PantryError, InvalidCursorError or ExpiredCursorError."""
