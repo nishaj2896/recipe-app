@@ -729,6 +729,14 @@ category = "vegetables"
 search_terms = ["chard"]
 
 [[ingredient]]
+id = "tinda"
+name = "Tinda"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["apple gourd", "round gourd", "indian round gourd"]
+
+[[ingredient]]
 id = "tomato"
 name = "Tomato"
 class = "S"

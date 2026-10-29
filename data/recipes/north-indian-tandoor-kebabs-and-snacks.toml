@@ -1,0 +1,795 @@
+# North Indian: tandoor, kebabs and snacks (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a188aa-f1bb-7de8-bf53-445fbba68aca"
+name = "Tandoori chicken"
+serves = 4
+prep_minutes = 270
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tbsp" },
+  { id = "tandoori-masala", amount = 1, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in legs and thighs. Make deep cuts to the bone, rub with half the lemon juice, the Kashmiri chilli powder and salt and rest for 30 minutes.",
+  "Whisk the hung or thick curd with the ginger garlic paste, tandoori masala, garam masala and mustard oil. Coat the chicken well, pushing the marinade into the cuts, and refrigerate for at least 4 hours.",
+  "Heat the oven to its highest setting, around 240 °C, with a rack over a tray.",
+  "Roast the chicken on the rack for 25 to 30 minutes, turning once and basting with the melted butter, until charred at the edges and cooked through.",
+  "Sprinkle with the chaat masala and the rest of the lemon juice and serve with the onion cut into rings.",
+]
+
+[[recipe]]
+id = "01a188aa-f1be-73ed-a585-cf2dc55a06d0"
+name = "Chicken tikka"
+serves = 4
+prep_minutes = 150
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "gram-flour", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut boneless chicken thighs into 4 cm cubes and rub them with half the lemon juice and salt.",
+  "Toast the gram flour in a dry pan until it smells nutty, cool it, and whisk it into the curd with the ginger garlic paste, Kashmiri chilli powder, garam masala, cumin powder and mustard oil.",
+  "Coat the chicken in the marinade and refrigerate for at least 2 hours.",
+  "Thread onto skewers and grill or roast at 240 °C for 12 to 15 minutes, turning once and basting with the melted butter, until charred in spots.",
+  "Finish with the chaat masala and the rest of the lemon juice.",
+]
+
+[[recipe]]
+id = "01a188aa-f1c1-73fb-9543-fd72dee5304c"
+name = "Chicken malai tikka"
+serves = 4
+prep_minutes = 150
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "hung-curd", amount = 0.5, unit = "cup" },
+  { id = "cream", amount = 4, unit = "tbsp" },
+  { id = "cream-cheese", amount = 50, unit = "g" },
+  { id = "cashews", amount = 20, unit = "g" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "nutmeg", amount = 1, unit = "pinch" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut boneless chicken into 4 cm cubes and rub them with the ginger garlic paste, lemon juice, white pepper and salt. Rest for 20 minutes.",
+  "Grind the cashews with the green chillies, the seeds of the cardamom and a splash of the cream to a smooth paste.",
+  "Whisk the hung curd, cream cheese, the rest of the cream, the nutmeg and the cashew paste until smooth, coat the chicken and refrigerate for 2 hours.",
+  "Thread onto skewers and grill or roast at 230 °C for 12 to 15 minutes, basting with the melted butter, until just golden. Keep the heat gentle enough that the tikka stays pale and juicy.",
+]
+
+[[recipe]]
+id = "01a188aa-f1c3-75fe-a474-6b5c552d8ff7"
+name = "Chicken seekh kebab"
+serves = 4
+prep_minutes = 40
+cook_minutes = 20
+ingredients = [
+  { id = "chicken-mince", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "breadcrumbs", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Grate the onion and squeeze out its juice. Finely chop the green chillies, coriander leaves and mint.",
+  "Mix the chicken mince with the onion, herbs, ginger garlic paste, garam masala, cumin powder, Kashmiri chilli powder, breadcrumbs and salt and knead for 3 minutes until sticky. Chill for 30 minutes.",
+  "With wet hands press the mixture around flat skewers into long kebabs.",
+  "Grill or roast at 230 °C for 12 to 15 minutes, turning and brushing with the melted butter, until browned and cooked through.",
+  "Squeeze over the lemon juice before serving.",
+]
+
+[[recipe]]
+id = "01a188aa-f1c6-79e3-abfa-5caa9d08a92a"
+name = "Mutton seekh kebab"
+serves = 4
+prep_minutes = 40
+cook_minutes = 20
+ingredients = [
+  { id = "lamb-mince", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "gram-flour", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Ask for mince with some fat in it, ground twice. Grate the onion and squeeze it dry. Toast the gram flour in a dry pan until nutty.",
+  "Mix the lamb mince with the onion, the finely chopped green chillies, coriander leaves and mint, the ginger garlic paste, garam masala, cumin powder, red chilli powder, gram flour and salt. Knead well and chill for 30 minutes.",
+  "Press the mixture onto flat skewers with wet hands.",
+  "Grill over charcoal or roast at 240 °C for 12 to 15 minutes, turning and basting with the ghee, until browned outside and just cooked inside.",
+  "Squeeze over the lemon juice to serve.",
+]
+
+[[recipe]]
+id = "01a188aa-f1c8-7e46-bac6-1c917b930b0f"
+name = "Galouti kebab"
+serves = 4
+prep_minutes = 270
+cook_minutes = 30
+ingredients = [
+  { id = "lamb-mince", amount = 500, unit = "g" },
+  { id = "papaya", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "gram-flour", amount = 2, unit = "tbsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "kewra-water", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "mace", amount = 1, unit = "pinch" },
+  { id = "nutmeg", amount = 1, unit = "pinch" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 5, unit = "tbsp" },
+  { id = "milk", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Grate the raw papaya to a paste. Mix it with the lamb mince, ginger garlic paste and salt and refrigerate for 4 hours so the meat turns very soft.",
+  "Fry the thinly sliced onion in half the ghee until deep brown and crisp, then crush it. Toast the gram flour in a dry pan. Soak the saffron in the warm milk.",
+  "Grind the cardamom, cloves, mace, nutmeg and black pepper to a fine powder.",
+  "Pass the mince through a grinder or pound it until it is a smooth, almost silky paste. Mix in the onion, gram flour, spice powder, red chilli powder, saffron milk and kewra water and chill for 30 minutes.",
+  "Shape small flat patties with wet hands. They are very soft, so handle them gently.",
+  "Fry them in the rest of the ghee in a heavy pan over medium-low heat for 2 to 3 minutes on each side until a deep crust forms.",
+]
+
+[[recipe]]
+id = "01a188aa-f1ca-74c1-976b-a15fbbe73ec2"
+name = "Shami kebab"
+serves = 4
+prep_minutes = 30
+cook_minutes = 60
+ingredients = [
+  { id = "lamb-mince", amount = 500, unit = "g" },
+  { id = "chana-dal", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 15, unit = "g" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "black-cardamom", amount = 1, unit = "piece" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "egg", amount = 1, unit = "piece" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it for 30 minutes.",
+  "Simmer the lamb mince with the dal, ginger, garlic, dried red chillies, black cardamom, green cardamom, cloves, cinnamon, black pepper, salt and the water for 40 minutes until the dal is soft and all the water has dried up.",
+  "Cool, then grind everything to a smooth, dry paste. Mix in the beaten egg.",
+  "Finely chop the onion, mint, coriander leaves and green chillies. Take a ball of the paste, flatten it, put a little of this filling in the middle and close it into a smooth round patty.",
+  "Shallow fry the kebabs in the oil for 2 to 3 minutes on each side until crisp and brown.",
+]
+
+[[recipe]]
+id = "01a188aa-f1cc-7900-a94f-6142775566e4"
+name = "Paneer tikka"
+serves = 4
+prep_minutes = 45
+cook_minutes = 15
+ingredients = [
+  { id = "paneer", amount = 400, unit = "g" },
+  { id = "hung-curd", amount = 0.5, unit = "cup" },
+  { id = "bell-pepper", amount = 1, unit = "large" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "gram-flour", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "carom-seeds", amount = 0.25, unit = "tsp" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the paneer, bell pepper and onion into 3 cm squares.",
+  "Toast the gram flour in a dry pan until it smells nutty, then whisk it into the hung curd with the ginger garlic paste, Kashmiri chilli powder, garam masala, carom seeds, mustard oil, lemon juice and salt.",
+  "Fold in the paneer and vegetables and marinate for 30 minutes.",
+  "Thread onto skewers and grill or roast at 230 °C for 10 to 12 minutes until charred at the edges. Sprinkle with the chaat masala.",
+]
+
+[[recipe]]
+id = "01a188aa-f1cf-7eed-a6b4-363efdcb5cc9"
+name = "Hara bhara kebab"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "spinach", amount = 200, unit = "g" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "paneer", amount = 50, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "mint", amount = 1, unit = "tbsp" },
+  { id = "gram-flour", amount = 3, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Boil the potato, peel and mash it. Blanch the spinach and peas in the boiling water for 2 minutes, cool them and squeeze the spinach dry.",
+  "Pulse the spinach, peas, green chillies, ginger, coriander leaves and mint to a coarse paste.",
+  "Toast the gram flour until nutty. Mix it with the paste, the potato, the grated paneer, chaat masala, garam masala and salt into a firm dough.",
+  "Shape into flat rounds and press one of the cashews into the middle of each.",
+  "Shallow fry in the oil for 2 to 3 minutes on each side until crisp.",
+]
+
+[[recipe]]
+id = "01a188aa-f1d1-74a3-83d0-414a5d541a1a"
+name = "Tandoori aloo"
+serves = 4
+prep_minutes = 45
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 500, unit = "g" },
+  { id = "hung-curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "tandoori-masala", amount = 2, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Use baby potatoes. Boil them in the salted water for 8 minutes until almost tender, drain and halve.",
+  "Whisk the hung curd with the ginger garlic paste, Kashmiri chilli powder, tandoori masala, dry mango powder, mustard oil and salt, coat the potato and rest for 30 minutes.",
+  "Thread onto skewers and roast at 230 °C for 15 minutes until charred in spots.",
+  "Sprinkle with the chaat masala and lemon juice.",
+]
+
+[[recipe]]
+id = "01a188aa-f1d3-7d25-9b1d-fcf6dd348a28"
+name = "Tandoori gobi"
+serves = 4
+prep_minutes = 45
+cook_minutes = 25
+ingredients = [
+  { id = "cauliflower", amount = 1, unit = "small-head" },
+  { id = "hung-curd", amount = 0.5, unit = "cup" },
+  { id = "gram-flour", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "tandoori-masala", amount = 2, unit = "tsp" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Cut the cauliflower into large florets and blanch them in the boiling salted water for 3 minutes. Drain and pat dry.",
+  "Toast the gram flour until nutty and whisk it with the hung curd, ginger garlic paste, Kashmiri chilli powder, tandoori masala, mustard oil and salt.",
+  "Coat the florets and marinate for 30 minutes.",
+  "Roast at 230 °C for 18 to 20 minutes, turning once, until charred at the tips. Finish with the chaat masala and lemon juice.",
+]
+
+[[recipe]]
+id = "01a188aa-f1d5-7f72-8c2e-8fccf033b963"
+name = "Amritsari fish fry"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "basa", amount = 500, unit = "g" },
+  { id = "gram-flour", amount = 0.5, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "carom-seeds", amount = 1, unit = "tsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Cut the basa into finger-sized strips and rub them with half the lemon juice and salt. Rest for 15 minutes and pat dry.",
+  "Mix the gram flour, rice flour, carom seeds, ginger garlic paste, Kashmiri chilli powder, turmeric and salt with just enough of the water to make a thick batter that clings.",
+  "Coat the fish in the batter and rest for 10 minutes.",
+  "Fry in the hot oil in small batches for 3 to 4 minutes until crisp and golden. Drain on paper.",
+  "Sprinkle with the chaat masala and the rest of the lemon juice.",
+]
+
+[[recipe]]
+id = "01a188aa-f1d8-72f8-b06b-92069ff0ac6b"
+name = "Samosa"
+serves = 4
+prep_minutes = 40
+cook_minutes = 45
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 15, unit = "g" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Rub the ghee into the all-purpose flour with the carom seeds and salt until it holds together when pressed. Add the water a little at a time to make a stiff dough, cover and rest for 30 minutes.",
+  "Boil, peel and roughly crumble the potato.",
+  "Heat a little of the oil, add the cumin seeds and crushed coriander seeds, then the grated ginger, chopped green chillies and peas. Cook for 3 minutes, add the potato, garam masala, dry mango powder, red chilli powder and salt, and mix well. Stir in the coriander leaves and cool.",
+  "Divide the dough into balls, roll each into an oval and cut it in half. Fold each half into a cone, sealing the edge with water, fill it and pinch the top closed.",
+  "Heat the rest of the oil to warm, not hot. Fry the samosas on low heat for 12 to 15 minutes, turning, until the pastry is firm, blistered and golden.",
+]
+
+[[recipe]]
+id = "01a188aa-f1da-773c-b67e-c654f0ec5824"
+name = "Aloo tikki"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Boil, peel and mash the potato while warm. Lightly crush the boiled peas.",
+  "Mix the potato with the peas, cornflour, chopped green chillies, grated ginger, coriander leaves, cumin powder, chaat masala, red chilli powder and salt.",
+  "Shape into flat patties about 1.5 cm thick.",
+  "Cook them in the oil on a heavy griddle over medium heat for 5 to 6 minutes on each side, pressing lightly, until a thick golden crust forms.",
+]
+
+[[recipe]]
+id = "01a188aa-f1dd-7874-a4eb-9c6cc6e04957"
+name = "Pyaaz pakora"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Slice the onion thinly, separate the layers, add the salt and leave for 10 minutes until the onion releases its juice.",
+  "Add the gram flour, rice flour, chopped green chillies, coriander leaves, carom seeds, red chilli powder and turmeric and mix with your fingers. The onion juice should bind it; sprinkle in a little water only if needed.",
+  "Drop loose clusters into the hot oil and fry for 3 to 4 minutes until deep golden and crisp. Drain on paper.",
+]
+
+[[recipe]]
+id = "01a188aa-f1df-7f86-8d0d-9e2ec2d74f6c"
+name = "Mixed pakora"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "gram-flour", amount = 1.5, unit = "cup" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cauliflower", amount = 0.5, unit = "small-head" },
+  { id = "spinach", amount = 50, unit = "g" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Slice the potato thinly, cut the onion into rings, break the cauliflower into small florets and pick the spinach leaves.",
+  "Whisk the gram flour with the carom seeds, red chilli powder, turmeric, baking soda, salt and the water into a smooth, thick batter.",
+  "Dip the vegetables and whole green chillies in the batter and fry in the hot oil in batches for 3 to 4 minutes until crisp.",
+  "Drain on paper and sprinkle with the chaat masala.",
+]
+
+[[recipe]]
+id = "01a188aa-f1e1-7f08-9c22-03d8629a8f33"
+name = "Paneer pakora"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the paneer into thick rectangles and slit each one through the middle without cutting all the way. Spread the green chutney inside.",
+  "Whisk the gram flour, rice flour, carom seeds, red chilli powder, baking soda and salt with the water into a thick batter.",
+  "Dip the paneer in the batter and fry in the hot oil for 3 minutes until golden.",
+  "Drain and sprinkle with the chaat masala.",
+]
+
+[[recipe]]
+id = "01a188aa-f1e3-77ad-ac8b-74cb57af4709"
+name = "Bread pakora"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "white-bread", amount = 8, unit = "slice" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Boil, peel and mash the potato and mix it with the chopped green chillies, grated ginger, coriander leaves, garam masala, dry mango powder and salt.",
+  "Spread the green chutney on half the white bread, top with the potato filling and close with the rest. Cut each sandwich into triangles.",
+  "Whisk the gram flour, carom seeds, red chilli powder and salt with the water into a thick batter.",
+  "Dip the sandwiches in the batter to coat every side and fry in the hot oil for 3 to 4 minutes until golden and crisp.",
+]
+
+[[recipe]]
+id = "01a188aa-f1e6-7825-a419-b34dd6c20104"
+name = "Papdi chaat"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "carom-seeds", amount = 0.25, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "chickpeas", amount = 0.5, unit = "cup" },
+  { id = "curd", amount = 1.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "green-chutney", amount = 4, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 4, unit = "tbsp" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "pomegranate", amount = 0.25, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Rub the ghee into the all-purpose flour with the carom seeds and salt, add the water and knead into a stiff dough. Rest for 15 minutes.",
+  "Roll the dough thin, cut small rounds, prick them with a fork and fry in the hot oil on low heat until crisp and pale golden. These are the papdi.",
+  "Whisk the curd with the sugar and a little salt until smooth. Boil and dice the potato. Use cooked chickpeas.",
+  "Arrange the papdi on a plate and top with the potato and chickpeas. Spoon over the curd, then the green chutney and tamarind chutney.",
+  "Sprinkle with the cumin powder, chaat masala and red chilli powder and finish with the sev, pomegranate seeds and coriander leaves. Serve at once.",
+]
+
+[[recipe]]
+id = "01a188aa-f1e8-75ef-947b-3b34f38d276e"
+name = "Aloo chaat"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "black-salt", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "green-chutney", amount = 2, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 3, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Boil the potato until just tender, cool completely, peel and cut into 2 cm cubes.",
+  "Fry the cubes in the oil on a hot griddle for 10 minutes, turning, until crisp on all sides.",
+  "Toss the hot potato with the chaat masala, cumin powder, red chilli powder, black salt, salt and the lemon juice.",
+  "Plate and drizzle with the green chutney and tamarind chutney. Top with the finely chopped onion and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a188aa-f1ea-7c30-9f08-d4e9a514d6ab"
+name = "Dahi bhalla"
+serves = 4
+prep_minutes = 300
+cook_minutes = 30
+ingredients = [
+  { id = "urad-dal", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "curd", amount = 3, unit = "cup" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "green-chutney", amount = 4, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 4, unit = "tbsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "black-salt", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Soak the urad dal for 4 hours. Grind it with the ginger and green chillies, using very little water, to a thick, smooth batter.",
+  "Beat the batter with your hand for 5 minutes until light and fluffy; a drop should float in water. Add salt.",
+  "Drop spoonfuls into the medium-hot oil and fry for 4 to 5 minutes until golden and cooked through.",
+  "Soak the fried bhallas in lukewarm salted water for 20 minutes until soft and spongy, then press each gently between your palms to squeeze out the water.",
+  "Whisk the curd with the sugar and a little salt. Arrange the bhallas on a plate and cover them with the curd.",
+  "Drizzle with the green chutney and tamarind chutney and sprinkle with the cumin powder, black salt and red chilli powder. Chill before serving.",
+]
+
+[[recipe]]
+id = "01a188aa-f1ed-790d-ba6f-b70ded489d70"
+name = "Chole tikki chaat"
+serves = 4
+prep_minutes = 30
+cook_minutes = 40
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "chickpeas", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "chole-masala", amount = 1, unit = "tbsp" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 4, unit = "tbsp" },
+  { id = "sev", amount = 0.25, unit = "cup" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 5, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Boil, peel and mash the potato, mix in the cornflour and salt, and shape into flat patties.",
+  "Fry the patties on a griddle in most of the oil for 5 minutes on each side until crisp.",
+  "Heat the rest of the oil, cook half the onion, finely chopped, with the ginger garlic paste, then the chopped tomato and chole masala. Add the cooked chickpeas and the water and simmer for 10 minutes until thick.",
+  "Place two patties on each plate, lightly crush them and ladle over the chickpeas.",
+  "Top with the whisked curd, the green chutney and tamarind chutney, the rest of the onion, the sev, chaat masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a188aa-f1ef-7af4-af63-473bbcc685b1"
+name = "Matar kulcha"
+serves = 4
+prep_minutes = 480
+cook_minutes = 60
+ingredients = [
+  { id = "dried-white-peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "tamarind-chutney", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "baking-powder", amount = 0.5, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Soak the dried white peas overnight and pressure cook them with salt and most of the water for 4 whistles until soft but whole.",
+  "Mash a few of the dried white peas and stir in the cumin powder, red chilli powder and chaat masala. Simmer for 5 minutes.",
+  "For the kulcha, mix the all-purpose flour with the baking powder, baking soda, sugar and salt, add the curd and enough of the remaining water to knead a soft dough. Cover and rest for 2 hours.",
+  "Divide the dough, roll each ball into an oval and cook on a hot griddle until spotted on both sides. Brush with the butter.",
+  "Serve the dried white peas topped with the finely chopped onion, tomato, green chillies and ginger, a squeeze of lemon juice, the tamarind chutney and coriander leaves, with the warm kulcha.",
+]
+
+[[recipe]]
+id = "01a188aa-f1f1-7c4b-9658-07a441bbf987"
+name = "Raj kachori"
+serves = 4
+prep_minutes = 60
+cook_minutes = 45
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "sprouted-mung-beans", amount = 0.5, unit = "cup" },
+  { id = "chickpeas", amount = 0.5, unit = "cup" },
+  { id = "curd", amount = 1.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "green-chutney", amount = 4, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 4, unit = "tbsp" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "pomegranate", amount = 0.25, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Mix the semolina, all-purpose flour, baking soda and salt, add the water a little at a time and knead to a firm dough. Rest for 30 minutes.",
+  "Roll small balls into thin rounds and fry them one at a time in the hot oil, pressing gently so they puff into large hollow rounds. Fry until crisp and golden.",
+  "Boil and dice the potato. Steam the sprouted mung beans for 5 minutes. Use cooked chickpeas. Whisk the curd with the sugar and a little salt.",
+  "Crack a hole in the top of each round and fill it with potato, sprouts and chickpeas.",
+  "Spoon in the curd, the green chutney and tamarind chutney, then sprinkle with the cumin powder, chaat masala and red chilli powder.",
+  "Top generously with the sev, pomegranate seeds and coriander leaves and serve at once.",
+]
+
+[[recipe]]
+id = "01a188aa-f1f3-79fb-9b99-1d1edd507e7d"
+name = "Moong dal chilla"
+serves = 4
+prep_minutes = 240
+cook_minutes = 25
+ingredients = [
+  { id = "moong-dal", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "paneer", amount = 100, unit = "g" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Soak the moong dal for 4 hours, drain and grind it with the ginger, green chillies and the water to a smooth, pourable batter.",
+  "Stir in the cumin seeds, asafoetida and salt.",
+  "Heat a griddle, grease it with a little of the oil and pour a ladle of batter, spreading it into a thin round.",
+  "Scatter over some of the finely chopped onion, tomato and coriander leaves and the crumbled paneer, drizzle oil around the edge and cook until golden underneath. Flip, cook for 1 minute and fold.",
+]
+
+[[recipe]]
+id = "01a188aa-f1f6-7749-bc3e-d98e4a2b3a10"
+name = "Besan chilla"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "gram-flour", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.25, unit = "cup" },
+]
+steps = [
+  "Whisk the gram flour with the water until there are no lumps. The batter should pour easily from a ladle.",
+  "Stir in the finely chopped onion, tomato, green chillies and coriander leaves, the carom seeds, turmeric, red chilli powder and salt.",
+  "Heat a griddle, grease it with a little of the oil and spread a ladle of batter into a thin round.",
+  "Drizzle oil around the edge and cook for 2 minutes until set, then flip and cook for 1 to 2 minutes until golden in spots.",
+]
+
+[[recipe]]
+id = "01a188aa-f1f8-7392-b067-b7fa74c30949"
+name = "Paneer bhurji"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "paneer", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 0.5, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "pav-bhaji-masala", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Crumble the paneer with your fingers. Finely chop the onion, tomato, bell pepper and green chillies, and grate the ginger.",
+  "Melt the butter, add the cumin seeds, then the onion, ginger and green chillies, and cook until soft.",
+  "Add the bell pepper, tomato, turmeric, red chilli powder, pav bhaji masala and salt and cook until the tomato is soft.",
+  "Add the paneer and toss for 2 to 3 minutes until heated through; overcooking makes it rubbery. Finish with the coriander leaves.",
+]

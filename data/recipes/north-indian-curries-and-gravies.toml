@@ -450,3 +450,1777 @@ steps = [
   "Add the peas and the water, cover and simmer for 15 minutes until the lamb mince is tender.",
   "Stir in the garam masala, cook uncovered until thick and serve with roti.",
 ]
+
+[[recipe]]
+id = "01a18812-66df-7ccf-b265-66e449208513"
+name = "Chicken tikka masala"
+serves = 4
+prep_minutes = 150
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "cream", amount = 100, unit = "ml" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into 4 cm chunks. Mix the curd, half the ginger garlic paste, half the Kashmiri chilli powder, half the garam masala, the juice of the lemon and some salt, coat the chicken and refrigerate for at least 2 hours.",
+  "Thread the chicken onto skewers and grill or bake at 230 °C for 12 to 15 minutes, turning once, until charred at the edges and just cooked through.",
+  "Meanwhile heat the oil and half the butter in a heavy pan and cook the finely chopped onion for 10 minutes until golden. Add the rest of the ginger garlic paste and cook for 1 minute.",
+  "Add the chopped tomato, the coriander powder and the rest of the Kashmiri chilli powder and cook for 10 to 12 minutes until the tomato breaks down and the oil separates. Blend to a smooth sauce with the water.",
+  "Return the sauce to the pan, add the chicken and simmer for 5 minutes. Stir in the cream, the sugar, the rest of the garam masala and the dried fenugreek leaves crushed between your palms.",
+  "Finish with the remaining butter and check the salt before serving.",
+]
+
+[[recipe]]
+id = "01a18812-66e1-7e53-9639-1744613bb000"
+name = "Kadai chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "coriander-seeds", amount = 1.5, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 4, unit = "piece" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "large" },
+  { id = "ginger", amount = 20, unit = "g" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dry roast the coriander seeds and dried red chillies in a kadai for 2 minutes until fragrant, cool and grind them coarsely.",
+  "Cut the chicken into curry pieces. Finely chop one onion and the tomato, slice the other onion and the bell pepper into squares, and crush the ginger and garlic.",
+  "Heat the oil in the kadai, cook the chopped onion until golden, then add the ginger, garlic and turmeric and stir for 1 minute.",
+  "Add the tomato and half the ground spice mix and cook until the masala thickens and the oil separates.",
+  "Add the chicken and salt and cook on high heat for 5 minutes, then cover and cook on low heat for 15 to 20 minutes until tender, stirring now and then.",
+  "Add the sliced onion, the bell pepper and the rest of the spice mix and stir-fry for 3 minutes so they stay crisp. Finish with the garam masala, crushed dried fenugreek leaves and the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18812-66e4-7839-95e5-6eec566ea16c"
+name = "Chicken korma"
+serves = 4
+prep_minutes = 75
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "cashews", amount = 20, unit = "g" },
+  { id = "almonds", amount = 15, unit = "g" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "kewra-water", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Mix the chicken with the curd, ginger garlic paste, red chilli powder and salt and leave it to marinate for 1 hour.",
+  "Soak the cashews and almonds in hot water for 15 minutes, then grind them to a smooth paste with a little of the water.",
+  "Heat the ghee in a heavy pan and fry the thinly sliced onion for 12 to 15 minutes until deep golden. Lift out half, let it crisp and crush it.",
+  "Add the cardamom, cloves, cinnamon and bay leaves to the remaining onion and stir for 30 seconds, then add the coriander powder.",
+  "Add the chicken with its marinade and cook on medium heat for 10 minutes, stirring, until the curd no longer looks raw.",
+  "Add the nut paste, the crushed onion and the rest of the water, cover and simmer for 20 minutes until the chicken is tender and the gravy is thick and glossy.",
+  "Stir in the garam masala and kewra water, rest for 5 minutes with the lid on and serve.",
+]
+
+[[recipe]]
+id = "01a18812-66e6-7c65-86e5-04930d86c859"
+name = "Chicken do pyaza"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "onion", amount = 4, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop half the onion and cut the rest into thick petals. Chop the tomato and whisk the curd.",
+  "Heat the oil, fry the onion petals for 3 to 4 minutes until lightly charred but still crunchy, and set them aside.",
+  "In the same oil add the cumin seeds and bay leaves, then cook the chopped onion for 10 minutes until golden. Add the ginger garlic paste and cook for 1 minute.",
+  "Add the turmeric, red chilli powder, coriander powder and tomato and cook until soft and the oil separates.",
+  "Add the chicken and salt and sear for 5 minutes. Lower the heat, stir in the curd, cover and cook for 20 minutes until the chicken is tender.",
+  "Fold in the fried onion petals and the garam masala and cook for 3 more minutes. Finish with the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18812-671b-7b6a-9f23-dbdbf7526cf0"
+name = "Chicken saagwala"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "spinach", amount = 400, unit = "g" },
+  { id = "fenugreek-leaves", amount = 50, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil, blanch the spinach and fenugreek leaves for 2 minutes, plunge them into cold water, then blend with the green chillies to a coarse purée.",
+  "Heat the oil and add the cumin seeds. Cook the chopped onion for 8 to 10 minutes until golden, then add the ginger garlic paste and cook for 1 minute.",
+  "Add the chopped tomato, coriander powder and red chilli powder and cook until the masala thickens.",
+  "Add the chicken and salt and cook for 8 minutes, stirring, then cover and cook for 15 minutes until almost tender.",
+  "Stir in the greens and simmer uncovered for 10 minutes so the flavours meld and the colour stays bright.",
+  "Finish with the garam masala, the cream and the butter.",
+]
+
+[[recipe]]
+id = "01a18812-671e-7d3c-8c9d-dc581af533dd"
+name = "Methi chicken"
+serves = 4
+prep_minutes = 45
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "fenugreek-leaves", amount = 100, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Marinate the chicken with the curd, half the ginger garlic paste, the turmeric and salt for 30 minutes.",
+  "Pick the fenugreek leaves from their stems, chop them, sprinkle with salt and leave for 10 minutes, then squeeze to take out some of the bitterness.",
+  "Heat the oil and cook the finely chopped onion for 10 minutes until golden. Add the rest of the ginger garlic paste, then the chopped tomato, red chilli powder and coriander powder, and cook until the oil separates.",
+  "Add the chicken with its marinade and cook for 10 minutes, stirring, then cover and cook for 15 minutes.",
+  "Add the fenugreek leaves and cook uncovered for 8 to 10 minutes until they wilt into the gravy.",
+  "Stir in the garam masala and the cream and simmer for 2 more minutes.",
+]
+
+[[recipe]]
+id = "01a18812-6720-7e3c-931f-62ab9d87ce8f"
+name = "Dhaba chicken curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 50
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "mustard-oil", amount = 5, unit = "tbsp" },
+  { id = "black-cardamom", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Heat the mustard oil until it just smokes, then let it cool slightly. Add the black cardamom, cloves, cinnamon and bay leaves.",
+  "Add the finely chopped onion and cook for 15 minutes, stirring, until deep brown. This colour gives the curry its roadside depth.",
+  "Add the ginger garlic paste and slit green chillies and cook for 2 minutes, then the turmeric, Kashmiri chilli powder and coriander powder with a splash of the water.",
+  "Add the chopped tomato and salt and cook for 10 minutes until the masala is dark and the fat rises.",
+  "Add the chicken and bhuno over high heat for 10 minutes, scraping the pan, until the pieces are coated and browned.",
+  "Pour in the rest of the water, cover and simmer for 20 minutes until tender. Finish with the garam masala and the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18812-6723-7412-8bfb-1565d14f7e7f"
+name = "Murgh musallam"
+serves = 4
+prep_minutes = 180
+cook_minutes = 60
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "egg", amount = 4, unit = "piece" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "cashews", amount = 30, unit = "g" },
+  { id = "almonds", amount = 20, unit = "g" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 5, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Prick a whole cleaned chicken all over with a knife. Rub it with the lemon juice, salt, half the ginger garlic paste and half the Kashmiri chilli powder, then coat it with half the curd and refrigerate for at least 2 hours.",
+  "Hard boil the egg for 10 minutes, cool and peel. Soak the saffron in the warm milk. Soak the cashews and almonds in hot water and grind them to a paste.",
+  "Heat the ghee in a large heavy pot and brown the chicken on all sides for 10 minutes, then lift it out.",
+  "In the same ghee cook the sliced onion for 12 minutes until golden, add the cardamom and the rest of the ginger garlic paste, then the chopped tomato, the coriander powder and the rest of the Kashmiri chilli powder, and cook until thick.",
+  "Stir in the remaining curd and the nut paste, then return the chicken, pour in the water, cover tightly and cook on low heat for 40 minutes, turning and basting every 10 minutes.",
+  "Add the peeled egg to the gravy, sprinkle over the garam masala and the saffron milk, and simmer for 5 minutes. Serve the chicken whole with the gravy around it.",
+]
+
+[[recipe]]
+id = "01a18812-6725-7086-8370-27cb6d78f9e4"
+name = "Rogan josh"
+serves = 4
+prep_minutes = 15
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tbsp" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "mustard-oil", amount = 5, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Grind the fennel seeds to a fine powder. Whisk the curd until smooth and mix in the Kashmiri chilli powder with a splash of the water.",
+  "Heat the mustard oil until it smokes, then cool slightly. Add the green cardamom, black cardamom, cloves, cinnamon, bay leaves and asafoetida.",
+  "Add the mutton and salt and sear on high heat for 10 minutes, turning, until browned all over.",
+  "Lower the heat and add the curd a little at a time, stirring constantly so it doesn't split, until the meat is coated in a deep red masala.",
+  "Add the fennel powder, the dry ginger powder and the rest of the water. Cover and simmer gently for 60 to 75 minutes until the mutton is very tender and a red sheen of fat floats on top.",
+  "Sprinkle over the garam masala and rest for 5 minutes before serving.",
+]
+
+[[recipe]]
+id = "01a18812-6727-7cb4-9f54-7c25a947bee2"
+name = "Mutton korma"
+serves = 4
+prep_minutes = 75
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "cashews", amount = 25, unit = "g" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "cloves", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 5, unit = "tbsp" },
+  { id = "rose-water", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Marinate the mutton with the curd, ginger garlic paste, red chilli powder and salt for 1 hour.",
+  "Soak the cashews in hot water for 15 minutes and grind them to a smooth paste.",
+  "Heat the ghee and fry the thinly sliced onion for 15 minutes until deep golden. Lift out the onion, crush it to a paste and set aside.",
+  "Add the cardamom, cloves, cinnamon and bay leaves to the ghee, then the mutton with its marinade, and cook on medium heat for 15 minutes until the curd reduces.",
+  "Add the coriander powder, the onion paste and the water, cover and simmer for 60 to 70 minutes until the mutton is tender.",
+  "Stir in the cashew paste and simmer for 5 minutes, then finish with the garam masala and rose water.",
+]
+
+[[recipe]]
+id = "01a18812-6729-72de-b1c0-1cd7ec0890d3"
+name = "Bhuna gosht"
+serves = 4
+prep_minutes = 15
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "onion", amount = 4, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "oil", amount = 5, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Heat the oil in a heavy pot, add the black cardamom and bay leaves, then the thinly sliced onion, and cook for 15 minutes until dark golden.",
+  "Add the ginger garlic paste and slit green chillies and cook for 2 minutes. Add the mutton and salt and sear on high heat for 10 minutes.",
+  "Add the turmeric, red chilli powder, coriander powder and cumin powder with a splash of the water and keep stirring and scraping for 10 minutes. This frying is the bhuna.",
+  "Add the chopped tomato and cook until it melts into the meat.",
+  "Pour in the rest of the water, cover and cook on low heat for 50 to 60 minutes until the mutton is tender.",
+  "Uncover and cook on high heat, stirring, until the masala clings to the meat and almost no gravy is left. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18812-672c-7509-8e08-16d0d0d2d8ce"
+name = "Aloo keema"
+serves = 4
+prep_minutes = 10
+cook_minutes = 40
+ingredients = [
+  { id = "lamb-mince", amount = 500, unit = "g" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Peel the potato and cut it into 2 cm cubes. Finely chop the onion, tomato and green chillies.",
+  "Heat the oil, add the cumin seeds, then cook the onion for 8 minutes until golden. Add the ginger garlic paste and green chillies and cook for 1 minute.",
+  "Add the lamb mince and cook on high heat for 8 to 10 minutes, breaking it up, until it browns and any liquid evaporates.",
+  "Add the turmeric, red chilli powder, coriander powder, tomato and salt and cook for 5 minutes until the tomato softens.",
+  "Add the potato and the water, cover and simmer for 15 to 20 minutes until the potato is tender and the keema is moist but not runny.",
+  "Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18812-672e-7e5e-9e18-9973c85d213a"
+name = "Nihari"
+serves = 4
+prep_minutes = 15
+cook_minutes = 240
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "whole-wheat-flour", amount = 3, unit = "tbsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tbsp" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "nutmeg", amount = 1, unit = "pinch" },
+  { id = "mace", amount = 1, unit = "pinch" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 6, unit = "tbsp" },
+  { id = "ginger", amount = 20, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Dry roast the fennel seeds, black cardamom, green cardamom, cloves, cinnamon and black pepper for 2 minutes and grind them with the nutmeg, mace and dry ginger powder to a fine nihari masala.",
+  "Heat the ghee in a heavy pot and fry the thinly sliced onion for 15 minutes until deep brown. Lift out half for garnish.",
+  "Add the mutton, preferably shank, and the ginger garlic paste and sear for 10 minutes. Add the turmeric, Kashmiri chilli powder, the nihari masala and salt and stir for 2 minutes.",
+  "Pour in most of the water, bring to a boil, then cover tightly and cook on the lowest heat for 3 hours until the meat falls from the bone.",
+  "Whisk the whole wheat flour with the rest of the water until smooth, stir it into the pot and simmer for 15 minutes, stirring, until the gravy is silky.",
+  "Serve topped with the fried onion, the ginger cut into thin strips, the sliced green chillies, the coriander leaves and the lemon in wedges.",
+]
+
+[[recipe]]
+id = "01a18812-6730-7099-83c5-19af8f61e6e9"
+name = "Laal maas"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "dried-red-chillies", amount = 15, unit = "piece" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "garlic", amount = 10, unit = "clove" },
+  { id = "ginger", amount = 20, unit = "g" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "ghee", amount = 6, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Soak the dried red chillies, preferably mathania, in hot water for 20 minutes, then grind them with the garlic and ginger to a smooth red paste.",
+  "Heat the ghee in a heavy pot, add the black cardamom, green cardamom, cloves and bay leaves, then the sliced onion, and cook for 12 minutes until golden.",
+  "Add the mutton and salt and sear on high heat for 10 minutes.",
+  "Add the chilli paste, coriander powder and turmeric and cook for 10 minutes, stirring often, until the paste darkens and the ghee separates.",
+  "Lower the heat, stir in the whisked curd a spoonful at a time, then add the water, cover and simmer for 60 to 70 minutes until the mutton is tender and the gravy is a deep red.",
+  "Rest for 10 minutes so the ghee rises to the top before serving.",
+]
+
+[[recipe]]
+id = "01a18812-6733-728f-98f0-dadfcedbcb95"
+name = "Safed maas"
+serves = 4
+prep_minutes = 15
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "cashews", amount = 40, unit = "g" },
+  { id = "almonds", amount = 30, unit = "g" },
+  { id = "melon-seeds", amount = 2, unit = "tbsp" },
+  { id = "cream", amount = 100, unit = "ml" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "white-pepper", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 6, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "ghee", amount = 5, unit = "tbsp" },
+  { id = "kewra-water", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Soak the cashews, almonds and melon seeds in hot water for 20 minutes, then grind them with the milk to a very smooth white paste.",
+  "Boil the onion in a little of the water for 10 minutes until soft, then blend it with the green chillies.",
+  "Heat the ghee without letting it brown, add the cardamom, cloves and cinnamon, then the mutton, the ginger garlic paste and salt, and cook on medium heat for 10 minutes without colouring the meat.",
+  "Add the onion paste and the rest of the water, cover and simmer for 60 minutes until the mutton is tender.",
+  "Stir in the whisked curd and the nut paste and simmer for 10 minutes on low heat, stirring so nothing catches.",
+  "Add the cream, white pepper and kewra water, warm through and serve. The gravy should stay ivory white.",
+]
+
+[[recipe]]
+id = "01a18813-915d-78a8-a3da-6f5f2edc97ba"
+name = "Kadai paneer"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "bell-pepper", amount = 1, unit = "large" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dry roast the coriander seeds and dried red chillies for 2 minutes and grind them coarsely.",
+  "Cut the paneer into 2 cm cubes. Cut the bell pepper and one onion into squares, and finely chop the other onion and the tomato.",
+  "Heat the oil in a kadai, toss the bell pepper and onion squares on high heat for 2 minutes and set aside.",
+  "In the same oil cook the chopped onion until golden, add the ginger garlic paste, then the tomato, turmeric, half the ground spices and salt, and cook until the oil separates.",
+  "Add the paneer, the fried vegetables and the rest of the spices and toss gently for 2 to 3 minutes.",
+  "Finish with the crushed dried fenugreek leaves, the garam masala, the cream and the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18813-915f-7056-bd66-9f687cc3ed6f"
+name = "Shahi paneer"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "paneer", amount = 300, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "cashews", amount = 30, unit = "g" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "cream", amount = 100, unit = "ml" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Roughly chop the onion and tomato and simmer them with the cashews and half the water for 10 minutes. Cool and blend to a very smooth paste.",
+  "Heat the ghee, add the cardamom and bay leaves, then the ginger garlic paste, and cook for 1 minute.",
+  "Add the paste and cook for 8 minutes, stirring, until it thickens and the ghee separates. Stir in the Kashmiri chilli powder.",
+  "Lower the heat and stir in the whisked curd, the rest of the water, the sugar and salt and simmer for 5 minutes.",
+  "Add the paneer cut into cubes, the cream and the saffron and simmer gently for 3 minutes. Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a18813-9162-7201-a15a-3fde8b150f67"
+name = "Paneer do pyaza"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Finely chop one onion and the tomato. Cut the remaining onion into petals and the bell pepper and paneer into cubes.",
+  "Heat the oil and sauté the onion petals and bell pepper on high heat for 2 minutes until just charred, then set aside.",
+  "Add the cumin seeds to the pan, then the chopped onion, and cook until golden. Add the ginger garlic paste and cook for 1 minute.",
+  "Add the tomato, turmeric, red chilli powder, coriander powder and salt and cook until the masala is thick, adding the water to loosen it.",
+  "Add the paneer and the fried vegetables and toss for 2 minutes. Finish with the garam masala and crushed dried fenugreek leaves.",
+]
+
+[[recipe]]
+id = "01a18813-9164-74f7-a41f-34424892557e"
+name = "Paneer lababdar"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "paneer", amount = 300, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "cashews", amount = 20, unit = "g" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 4, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Simmer the chopped tomato and cashews with the water for 8 minutes and blend to a smooth purée.",
+  "Grate half the paneer and cut the rest into cubes. Finely chop the onion.",
+  "Heat the butter and oil and cook the onion for 8 minutes until golden. Add the ginger garlic paste and the slit green chillies and cook for 1 minute.",
+  "Add the Kashmiri chilli powder and coriander powder, then the tomato purée, and cook for 10 minutes until it thickens and darkens.",
+  "Stir in the grated paneer so it thickens the gravy, then the cubes, the sugar, salt and cream, and simmer for 3 minutes.",
+  "Finish with the garam masala and crushed dried fenugreek leaves.",
+]
+
+[[recipe]]
+id = "01a18813-9166-7175-8846-b0ce683b98f3"
+name = "Paneer tikka masala"
+serves = 4
+prep_minutes = 45
+cook_minutes = 35
+ingredients = [
+  { id = "paneer", amount = 300, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "gram-flour", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Whisk the curd with the gram flour, half the ginger garlic paste, half the Kashmiri chilli powder, half the garam masala and salt.",
+  "Cut the paneer, the bell pepper and one onion into large cubes, coat them in the marinade and rest for 30 minutes.",
+  "Thread them on skewers and grill or cook in a hot pan with a little of the oil until charred in spots.",
+  "Heat the rest of the oil and cook the remaining onion, finely chopped, until golden. Add the rest of the ginger garlic paste, then the chopped tomato, coriander powder and the rest of the Kashmiri chilli powder, and cook until the oil separates.",
+  "Blend the masala with the water until smooth, return it to the pan and simmer for 5 minutes.",
+  "Add the grilled tikka, the rest of the garam masala, the cream and the crushed dried fenugreek leaves and simmer for 2 minutes.",
+]
+
+[[recipe]]
+id = "01a18813-9168-7124-87f8-728a0e7c0890"
+name = "Malai kofta"
+serves = 4
+prep_minutes = 30
+cook_minutes = 40
+ingredients = [
+  { id = "paneer", amount = 200, unit = "g" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "cashews", amount = 50, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cream", amount = 100, unit = "ml" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Boil, peel and mash the potato. Mix it with the grated paneer, the cornflour and salt into a soft dough.",
+  "Chop a few cashews and mix them with the raisins. Shape the dough into balls with a little of this filling in the centre of each.",
+  "Heat the oil in a deep pan and fry the koftas in batches for 3 to 4 minutes until golden. Drain on paper.",
+  "Simmer the chopped onion, tomato and the rest of the cashews in the water for 12 minutes, then blend until silky.",
+  "Melt the butter, add the ginger garlic paste and cook for 1 minute, then add the purée, Kashmiri chilli powder, coriander powder, sugar and salt and simmer for 8 minutes.",
+  "Stir in the cream and garam masala. Place the koftas in a serving dish and pour the hot gravy over them just before serving so they stay soft but whole.",
+]
+
+[[recipe]]
+id = "01a18813-916a-75ab-b120-c21d53c9f763"
+name = "Lauki kofta"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "bottle-gourd", amount = 500, unit = "g" },
+  { id = "gram-flour", amount = 0.5, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Peel and grate the bottle gourd, salt it and leave for 10 minutes, then squeeze out the juice and keep it for the gravy.",
+  "Mix the gourd with the gram flour, chopped green chillies, grated ginger and a little salt. Shape into balls.",
+  "Fry the koftas in the hot oil in batches for 4 to 5 minutes until deep golden and cooked through. Drain on paper.",
+  "Take some of the frying oil into a pan, add the cumin seeds, then the finely chopped onion, and cook until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, red chilli powder, coriander powder and salt and cook until the oil separates. Add the gourd juice and the water and simmer for 8 minutes.",
+  "Add the koftas just before serving and simmer for 2 minutes. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18813-916d-76a8-8e55-04610b474e19"
+name = "Dum aloo"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "potato", amount = 600, unit = "g" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use small baby potatoes. Boil them for 10 minutes until just tender, peel, prick all over with a fork and fry in half the oil until golden.",
+  "Heat the rest of the oil, add the cumin seeds and bay leaves, then cook the finely chopped onion until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, Kashmiri chilli powder, coriander powder and salt and cook until the masala thickens.",
+  "Lower the heat and stir in the whisked curd, then the water, and bring to a gentle simmer.",
+  "Add the potato, cover tightly and cook on the lowest heat for 15 minutes so the potatoes soak up the gravy.",
+  "Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18813-916f-7061-8fb4-2395b52e9368"
+name = "Kashmiri dum aloo"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "potato", amount = 600, unit = "g" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tbsp" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "mustard-oil", amount = 5, unit = "tbsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Boil the small potatoes for 10 minutes until just tender, peel and prick them all over.",
+  "Heat the mustard oil until it smokes, cool it slightly and fry the potatoes until golden and crisp. Lift them out.",
+  "Grind the fennel seeds to a powder. Mix the Kashmiri chilli powder with a little of the water into a paste.",
+  "In the same pan add the cardamom, cloves, cinnamon and asafoetida, then the chilli paste, and stir for 1 minute.",
+  "Lower the heat, add the whisked curd a little at a time while stirring, then the fennel powder, dry ginger powder, salt and the rest of the water.",
+  "Add the potatoes, cover and simmer on low heat for 15 minutes until the gravy is thick and red. Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a18813-9171-7847-8929-9e949df007da"
+name = "Aloo methi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "fenugreek-leaves", amount = 150, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Pick the fenugreek leaves from the stems, wash and chop them. Peel the potato and cut it into small cubes.",
+  "Heat the oil, add the cumin seeds, then the chopped garlic and green chillies, and cook until the garlic is light golden.",
+  "Add the potato, turmeric, red chilli powder, coriander powder and salt, cover and cook on low heat for 12 minutes until almost tender, stirring now and then.",
+  "Add the fenugreek leaves and cook uncovered for 6 to 8 minutes until they wilt and the potatoes are cooked through and lightly crisp.",
+]
+
+[[recipe]]
+id = "01a18813-9174-778b-b09d-7a6c5e721fd3"
+name = "Aloo palak"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "spinach", amount = 400, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Blanch the spinach in the boiling water for 2 minutes, cool it in cold water and blend to a coarse purée with the green chillies.",
+  "Peel the potato and cut it into 2 cm cubes.",
+  "Heat the oil, add the cumin seeds, then the chopped garlic and ginger, then the finely chopped onion, and cook until golden.",
+  "Add the chopped tomato, turmeric, coriander powder and salt and cook until soft. Add the potato with a splash of water, cover and cook for 12 minutes until tender.",
+  "Stir in the spinach purée and simmer for 5 minutes. Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a18813-9176-71dc-bca7-a4af053626b7"
+name = "Aloo baingan"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "brinjal", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the potato and the brinjal into 3 cm chunks, cutting the brinjal just before it goes in so it doesn't darken.",
+  "Heat the oil, add the cumin seeds, then the chopped onion, and cook until soft. Add the ginger garlic paste.",
+  "Add the potato, turmeric and salt, cover and cook for 8 minutes.",
+  "Add the brinjal, the chopped tomato, red chilli powder and coriander powder, cover and cook for 12 to 15 minutes, stirring gently, until both are tender.",
+  "Finish with the dry mango powder, garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18813-9178-7f3a-972a-f2eb49afa918"
+name = "Bhindi do pyaza"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "okra", amount = 400, unit = "g" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wash and dry the okra completely, then trim it and cut it into 3 cm lengths. Cut two onions into thick petals and finely chop the third.",
+  "Heat half the oil and fry the okra on medium-high heat for 8 to 10 minutes until it loses its stickiness and browns. Lift it out.",
+  "In the same pan fry the onion petals for 3 minutes until translucent at the edges and set aside.",
+  "Add the rest of the oil and the cumin seeds, then the chopped onion, and cook until golden. Add the chopped tomato and the powdered spices and cook until soft.",
+  "Return the okra and onion petals, add salt and toss for 3 minutes. Finish with the dry mango powder.",
+]
+
+[[recipe]]
+id = "01a18813-917b-776a-b52f-5d8fdda6cffd"
+name = "Navratan korma"
+serves = 4
+prep_minutes = 20
+cook_minutes = 35
+ingredients = [
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "cauliflower", amount = 0.5, unit = "small-head" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "paneer", amount = 100, unit = "g" },
+  { id = "pineapple", amount = 0.5, unit = "cup" },
+  { id = "cashews", amount = 50, unit = "g" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "cream", amount = 100, unit = "ml" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cut the carrot, French beans, cauliflower and potato into small even pieces and boil them with the peas in salted water for 6 to 8 minutes until just tender. Drain.",
+  "Simmer the roughly chopped onion with most of the cashews in the water for 10 minutes, then blend until smooth.",
+  "Heat the ghee, fry the paneer cubes and the remaining cashews and raisins until golden, and lift them out.",
+  "Add the cardamom and ginger garlic paste to the ghee, then the onion paste, and cook for 6 minutes without browning.",
+  "Lower the heat, stir in the whisked curd, then add the vegetables, white pepper, sugar and salt and simmer for 5 minutes.",
+  "Stir in the cream, the paneer, the diced pineapple and the garam masala. Top with the fried cashews and raisins.",
+]
+
+[[recipe]]
+id = "01a18814-ee92-7b2f-a98a-190c8ecb6874"
+name = "Methi matar malai"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "fenugreek-leaves", amount = 100, unit = "g" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "cream", amount = 150, unit = "ml" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "cashews", amount = 30, unit = "g" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Chop the fenugreek leaves, rub them with salt and rest for 10 minutes, then squeeze them to remove the bitter juice.",
+  "Simmer the roughly chopped onion, cashews, ginger, garlic and green chillies in the water for 10 minutes and blend to a smooth white paste.",
+  "Melt the butter, add the cumin seeds and cardamom, then the fenugreek leaves, and sauté for 4 minutes.",
+  "Add the paste and cook for 5 minutes on low heat without browning, then add the peas and milk and simmer for 5 minutes.",
+  "Stir in the cream, sugar, white pepper and salt and simmer for 3 minutes. Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a18814-ee94-78cb-8383-40ac5d34991e"
+name = "Mushroom matar"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "mushroom", amount = 300, unit = "g" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cream", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Wipe the mushroom clean and quarter it. Purée the tomato and finely chop the onion.",
+  "Heat the oil, add the cumin seeds, then the onion, and cook until golden. Add the ginger garlic paste and cook for 1 minute.",
+  "Add the tomato purée, turmeric, red chilli powder, coriander powder and salt and cook for 8 minutes until the oil separates.",
+  "Add the mushroom and cook on high heat for 4 minutes, then add the peas and water and simmer for 6 minutes.",
+  "Stir in the cream and garam masala and finish with the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-ee96-7f1e-b3ab-56e303682538"
+name = "Kadai mushroom"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "mushroom", amount = 400, unit = "g" },
+  { id = "bell-pepper", amount = 1, unit = "large" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dry roast the coriander seeds and dried red chillies and grind them coarsely.",
+  "Halve the mushroom, cut the bell pepper and one onion into squares, and finely chop the other onion and the tomato.",
+  "Heat the oil in a kadai and sear the mushroom on high heat until browned and its liquid has evaporated. Lift it out.",
+  "Cook the chopped onion until golden, add the ginger garlic paste, then the tomato, turmeric, ground spices and salt, and cook until thick.",
+  "Add the bell pepper and onion squares and toss for 2 minutes, then return the mushroom and cook for 2 more minutes.",
+  "Finish with the garam masala and crushed dried fenugreek leaves.",
+]
+
+[[recipe]]
+id = "01a18814-ee99-74e7-86ea-8363338f7a02"
+name = "Gobi masala"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "cauliflower", amount = 1, unit = "small-head" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the cauliflower into medium florets, soak them in hot salted water for 10 minutes and drain well.",
+  "Fry the florets in half the oil until golden at the edges and lift them out.",
+  "Heat the rest of the oil, add the cumin seeds, then cook the finely chopped onion until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, Kashmiri chilli powder, coriander powder and salt and cook until thick. Stir in the whisked curd and the water.",
+  "Add the cauliflower, cover and cook for 8 to 10 minutes until tender but still holding its shape. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-ee9b-761b-81bc-3166d38759d3"
+name = "Shalgam ki sabzi"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "turnip", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 15, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the turnip and cut it into 2 cm cubes.",
+  "Heat the mustard oil until it smokes and let it cool slightly. Add the cumin seeds, then the chopped onion, grated ginger and green chillies, and cook until soft.",
+  "Add the chopped tomato, turmeric, red chilli powder, coriander powder and salt and cook until the tomato breaks down.",
+  "Add the turnip, cover and cook on low heat for 15 to 20 minutes, stirring now and then, until tender. Mash it lightly with the back of a spoon.",
+  "Stir in the jaggery and garam masala and cook for 2 more minutes.",
+]
+
+[[recipe]]
+id = "01a18814-ee9d-725a-9e01-d7e3b5ed10fe"
+name = "Sarson ka saag"
+serves = 4
+prep_minutes = 20
+cook_minutes = 60
+ingredients = [
+  { id = "mustard-greens", amount = 500, unit = "g" },
+  { id = "spinach", amount = 250, unit = "g" },
+  { id = "cornmeal", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 20, unit = "g" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Wash the mustard greens and spinach well and chop them with the stems.",
+  "Pressure cook the greens with half the ginger, the green chillies, salt and the water for 4 whistles, or simmer covered for 40 minutes, until very soft.",
+  "Mash or pulse the greens to a coarse purée, sprinkle in the cornmeal and cook on low heat for 15 minutes, stirring, until thick.",
+  "Heat the ghee, cook the chopped onion, garlic and the rest of the ginger until golden, then add the chopped tomato and cook until soft.",
+  "Stir this tempering into the greens and simmer for 5 minutes. Top with the butter to serve.",
+]
+
+[[recipe]]
+id = "01a18814-ee9f-7fde-bbe0-b8e920056c16"
+name = "Arbi masala"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "colocasia", amount = 500, unit = "g" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Boil the colocasia in its skin in the water for 15 minutes until a knife slides in. Cool, peel and cut it into thick rounds.",
+  "Toss the rounds with the turmeric, red chilli powder, coriander powder and salt.",
+  "Heat the oil in a wide pan, add the carom seeds and slit green chillies, then lay in the colocasia in one layer.",
+  "Cook on medium heat for 10 to 12 minutes, turning once, until crisp and browned on both sides.",
+  "Sprinkle over the dry mango powder, garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-eea2-72ed-b2e6-df0f204a0b5f"
+name = "Kathal ki sabzi"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "raw-jackfruit", amount = 500, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "mustard-oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Grease your hands and knife with a little of the mustard oil, peel the raw jackfruit and cut it into 3 cm chunks. Boil them in salted water with the turmeric for 10 minutes and drain.",
+  "Heat the mustard oil until it smokes, cool slightly and fry the jackfruit until golden. Lift it out.",
+  "Add the bay leaves and finely chopped onion and cook until brown, then add the ginger garlic paste.",
+  "Add the chopped tomato, red chilli powder, coriander powder and salt and cook until the mustard oil separates. Stir in the whisked curd.",
+  "Add the jackfruit and the water, cover and simmer for 15 minutes until it is tender and has the bite of meat.",
+  "Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a18814-eea4-7109-a772-dff32cf1cc95"
+name = "Tinda masala"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "tinda", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Scrape the tinda lightly, trim the ends and cut each into quarters.",
+  "Heat the oil, add the cumin seeds, then the chopped onion and green chillies, and cook until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, red chilli powder, coriander powder and salt and cook until the masala is thick.",
+  "Add the tinda, stir to coat, cover and cook on low heat for 15 to 18 minutes until tender, sprinkling in a little water if it sticks.",
+  "Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-eea7-7f23-92a3-f7dce88deb64"
+name = "Karela masala"
+serves = 4
+prep_minutes = 40
+cook_minutes = 30
+ingredients = [
+  { id = "bitter-gourd", amount = 400, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Scrape the bitter gourd, slice it into thin rounds and remove any hard seeds. Rub with salt and leave for 30 minutes, then squeeze out the bitter juice.",
+  "Heat the oil and fry the bitter gourd for 10 minutes until browned and crisp at the edges. Lift it out.",
+  "Add the fennel seeds and the sliced onion to the pan and cook until deep golden.",
+  "Add the turmeric, red chilli powder, coriander powder and the fried gourd and toss for 3 minutes.",
+  "Stir in the jaggery and dry mango powder and cook for 2 more minutes so the sweet and sour balance the bitterness.",
+]
+
+[[recipe]]
+id = "01a18814-eea9-7a79-8a34-62d71b328e91"
+name = "Lauki chana dal"
+serves = 4
+prep_minutes = 60
+cook_minutes = 30
+ingredients = [
+  { id = "bottle-gourd", amount = 300, unit = "g" },
+  { id = "chana-dal", amount = 0.5, unit = "cup" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse and soak the chana dal for 1 hour. Peel the bottle gourd and cut it into 2 cm cubes.",
+  "Pressure cook the dal and gourd with the turmeric, salt and the water for 3 whistles, until the dal is soft but holds its shape.",
+  "Heat the ghee, add the cumin seeds and asafoetida, then the grated ginger, slit green chillies and chopped tomato, and cook until soft.",
+  "Add the red chilli powder, pour in the dal and simmer for 5 minutes. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-eeab-7ba0-b01f-f8f57248f898"
+name = "Kaddu ki sabzi"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "pumpkin", amount = 500, unit = "g" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the pumpkin and cut it into 2 cm cubes.",
+  "Heat the oil, add the fenugreek seeds and fennel seeds and let them darken slightly, then add the asafoetida, grated ginger and chopped green chillies.",
+  "Add the pumpkin, turmeric, red chilli powder, coriander powder and salt, cover and cook on low heat for 15 minutes until soft.",
+  "Mash it lightly, stir in the sugar and dry mango powder and cook for 3 minutes until glossy and sweet-sour.",
+]
+
+[[recipe]]
+id = "01a18814-eead-79f9-b123-ff5249b8a748"
+name = "Gajar matar"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "carrot", amount = 3, unit = "medium" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Peel the carrot and cut it into small cubes.",
+  "Heat the oil, add the cumin seeds, then the grated ginger and chopped green chillies.",
+  "Add the carrot, peas, turmeric, coriander powder and salt, sprinkle in a little water, cover and cook for 10 to 12 minutes until tender.",
+  "Uncover, cook off any water, and finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-eeb0-717d-ae09-db236f7e9559"
+name = "Egg ghotala"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "egg", amount = 6, unit = "piece" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 0.5, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "pav-bhaji-masala", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "processed-cheese", amount = 40, unit = "g" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Boil half the eggs in the water for 10 minutes, peel them and chop them finely.",
+  "Melt the butter on a wide pan, cook the finely chopped onion, green chillies and bell pepper until soft, then add the ginger garlic paste.",
+  "Add the chopped tomato, pav bhaji masala, red chilli powder, turmeric and salt and mash everything together until it is a thick masala.",
+  "Add the boiled egg, then crack in the rest of the eggs and stir slowly so they set softly through the masala.",
+  "Grate over the processed cheese and scatter the coriander leaves. Serve straight from the pan.",
+]
+
+[[recipe]]
+id = "01a18814-eeb2-7eba-8838-e3adc415e197"
+name = "Egg korma"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "egg", amount = 6, unit = "piece" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "cashews", amount = 30, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Hard boil the eggs in most of the water for 10 minutes, cool, peel and make shallow slits on each.",
+  "Soak the cashews in hot water and blend them to a paste.",
+  "Heat the ghee, add the cardamom, cloves and cinnamon, then the thinly sliced onion, and cook for 10 minutes until golden.",
+  "Add the ginger garlic paste, red chilli powder and coriander powder, then stir in the whisked curd on low heat.",
+  "Add the cashew paste and a little of the remaining water and simmer for 5 minutes, then add the eggs and simmer for 5 more.",
+  "Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a18814-eeb4-7fc6-8ec6-54d4a3443918"
+name = "Fish tikka masala"
+serves = 4
+prep_minutes = 45
+cook_minutes = 30
+ingredients = [
+  { id = "kingfish", amount = 500, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "gram-flour", amount = 1, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 3, unit = "tbsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the kingfish into 4 cm chunks and rub them with the lemon juice and salt.",
+  "Whisk the curd with the gram flour, carom seeds, half the ginger garlic paste and half the Kashmiri chilli powder, coat the fish and rest for 30 minutes.",
+  "Grill or pan-sear the fish in a little of the oil for 2 to 3 minutes on each side until charred and just cooked.",
+  "Heat the rest of the oil, cook the chopped onion until golden, add the rest of the ginger garlic paste, then the chopped tomato, coriander powder and the rest of the Kashmiri chilli powder, and cook until thick.",
+  "Blend the masala with the water, return it to the pan and simmer for 5 minutes. Stir in the cream, garam masala and crushed dried fenugreek leaves.",
+  "Slide in the fish and simmer for 2 minutes without stirring so the pieces stay whole.",
+]
+
+[[recipe]]
+id = "01a18814-eeb7-7186-993a-897933923772"
+name = "Amritsari fish curry"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "basa", amount = 500, unit = "g" },
+  { id = "gram-flour", amount = 2, unit = "tbsp" },
+  { id = "carom-seeds", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 4, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cut the basa into large chunks, rub with the lemon juice, salt and half the turmeric and rest for 15 minutes.",
+  "Dust the fish with the gram flour and half the carom seeds and shallow fry in half the mustard oil until golden. Lift it out.",
+  "Heat the rest of the mustard oil, add the remaining carom seeds, then cook the chopped onion until golden. Add the ginger garlic paste and slit green chillies.",
+  "Add the chopped tomato, the rest of the turmeric, red chilli powder, coriander powder and salt and cook until the mustard oil separates.",
+  "Pour in the water and simmer for 8 minutes, then slide in the fish and simmer for 3 minutes. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18814-eeb9-75ab-a2c2-ce5bda60dd82"
+name = "Prawn malai curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "coconut-milk", amount = 400, unit = "ml" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and devein the prawns, leaving the tails on, and rub them with half the turmeric and some salt.",
+  "Heat the mustard oil and fry the prawns for 1 minute on each side until they curl. Lift them out.",
+  "Add the ghee, bay leaves, cardamom and cinnamon, then the grated onion, and cook for 6 minutes until light golden. Add the ginger garlic paste.",
+  "Add the rest of the turmeric, the red chilli powder and the slit green chillies, then pour in the coconut milk with the sugar and salt and simmer gently for 6 minutes.",
+  "Return the prawns and simmer for 3 minutes until just cooked. Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a188a8-fe99-7464-a603-5cf6a0b60ff9"
+name = "Pindi chole"
+serves = 4
+prep_minutes = 480
+cook_minutes = 60
+ingredients = [
+  { id = "chickpeas", amount = 1, unit = "cup" },
+  { id = "black-tea", amount = 2, unit = "tsp" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "chole-masala", amount = 2, unit = "tbsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "dried-pomegranate-seeds", amount = 1, unit = "tbsp" },
+  { id = "ginger", amount = 30, unit = "g" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Soak the chickpeas overnight. Tie the black tea, black cardamom and bay leaves in a small muslin pouch.",
+  "Pressure cook the chickpeas with the pouch, the baking soda, salt and the water for 5 whistles, or simmer for 90 minutes, until very soft. The tea turns them dark.",
+  "Discard the pouch. Dry roast the dried pomegranate seeds and grind them with the chole masala and dry mango powder.",
+  "Heat the ghee and fry the ginger cut into thin strips and the slit green chillies for 1 minute.",
+  "Add the chickpeas with a little of their liquid and the spice mix and simmer for 10 minutes, mashing a few chickpeas to thicken. Pindi chole stay fairly dry.",
+  "Serve topped with the onion cut into rings.",
+]
+
+[[recipe]]
+id = "01a188a8-fe9b-7064-9d21-396b09a70f61"
+name = "Kadhi pakora"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "gram-flour", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "carom-seeds", amount = 0.25, unit = "tsp" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Use sour curd. Whisk it with a third of the gram flour, the turmeric, half the red chilli powder, salt and most of the water until smooth.",
+  "Bring it to a boil, stirring constantly so it doesn't split, then simmer on low heat for 30 minutes until it coats a spoon.",
+  "Meanwhile mix the rest of the gram flour with the thinly sliced onion, carom seeds, baking soda, salt and the rest of the water into a thick batter, and fry spoonfuls in the hot oil until golden.",
+  "Add the pakoras to the kadhi and simmer for 5 minutes.",
+  "Heat the ghee, add the fenugreek seeds, cumin seeds and mustard seeds, then the dried red chillies, asafoetida, curry leaves, grated ginger and the rest of the chilli powder. Pour this over the kadhi.",
+]
+
+[[recipe]]
+id = "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d"
+name = "Dal makhani"
+serves = 4
+prep_minutes = 480
+cook_minutes = 90
+ingredients = [
+  { id = "whole-urad", amount = 0.75, unit = "cup" },
+  { id = "kidney-beans", amount = 0.25, unit = "cup" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "cream", amount = 100, unit = "ml" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Soak the whole urad and kidney beans overnight, rinse, and pressure cook them with salt and most of the water for 8 whistles, or simmer for 2 hours, until completely soft.",
+  "Heat half the butter, add the cumin seeds, then the ginger garlic paste, and cook for 1 minute. Add the puréed tomato and Kashmiri chilli powder and cook for 10 minutes until thick.",
+  "Add the dal and the rest of the water, mash a little, and simmer on the lowest heat for 45 minutes or longer, stirring often. The long simmer gives it its creaminess.",
+  "Stir in the rest of the butter, the cream, the garam masala and the crushed dried fenugreek leaves and simmer for 5 more minutes.",
+]
+
+[[recipe]]
+id = "01a188a8-fea0-7a73-acf1-d80396c5eb21"
+name = "Dal fry"
+serves = 4
+prep_minutes = 30
+cook_minutes = 30
+ingredients = [
+  { id = "toor-dal", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal, soak it for 20 minutes and pressure cook it with the turmeric, salt and the water for 3 whistles. Whisk until smooth.",
+  "Heat the ghee, add the cumin seeds and asafoetida, then the chopped onion and green chillies, and cook until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato and red chilli powder and cook until soft.",
+  "Pour in the dal and simmer for 5 minutes, adding water for the consistency you like. Finish with the garam masala, the lemon juice and the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a188a8-fea2-75ca-bb35-1cffa95c141d"
+name = "Chana dal"
+serves = 4
+prep_minutes = 60
+cook_minutes = 40
+ingredients = [
+  { id = "chana-dal", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse and soak the chana dal for 1 hour, then pressure cook it with the turmeric, salt and the water for 4 whistles, until soft but holding its shape.",
+  "Heat the ghee, add the cumin seeds, then the chopped onion, garlic, ginger and green chillies, and cook until golden.",
+  "Add the chopped tomato, red chilli powder and coriander powder and cook until the tomato breaks down.",
+  "Add the dal and simmer for 8 minutes, mashing a little to thicken. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a188a8-fea4-75c1-8667-382841f117a3"
+name = "Urad chana dal"
+serves = 4
+prep_minutes = 60
+cook_minutes = 40
+ingredients = [
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 15, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the urad dal and chana dal together, soak them for 1 hour and pressure cook them with the turmeric, salt and the water for 4 whistles.",
+  "Heat the ghee, add the cumin seeds, then the chopped onion, garlic, ginger cut into strips and the green chillies, and cook until golden.",
+  "Add the chopped tomato and red chilli powder and cook until soft.",
+  "Stir in the dal and simmer for 10 minutes until thick. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe"
+name = "Panchmel dal"
+serves = 4
+prep_minutes = 60
+cook_minutes = 40
+ingredients = [
+  { id = "toor-dal", amount = 0.25, unit = "cup" },
+  { id = "chana-dal", amount = 0.25, unit = "cup" },
+  { id = "moong-dal", amount = 0.25, unit = "cup" },
+  { id = "masoor-dal", amount = 0.25, unit = "cup" },
+  { id = "urad-dal", amount = 0.25, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal, chana dal, moong dal, masoor dal and urad dal together and soak them for 1 hour.",
+  "Pressure cook the dals with the turmeric, salt and the water for 4 whistles, then whisk lightly.",
+  "Heat the ghee, add the cumin seeds, cloves, cinnamon and asafoetida, then the grated ginger and slit green chillies.",
+  "Add the chopped tomato, red chilli powder and coriander powder and cook until soft.",
+  "Pour in the dal and simmer for 10 minutes. Finish with the garam masala.",
+]
+
+[[recipe]]
+id = "01a188a8-fea9-7757-92a5-75916c3653a3"
+name = "Lobia masala"
+serves = 4
+prep_minutes = 360
+cook_minutes = 45
+ingredients = [
+  { id = "black-eyed-peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Soak the black-eyed peas for 6 hours and pressure cook them with salt and the water for 3 whistles until soft.",
+  "Heat the oil, add the cumin seeds, then cook the chopped onion until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, red chilli powder and coriander powder and cook until the oil separates.",
+  "Add the black-eyed peas with their cooking liquid and simmer for 12 minutes, mashing a few to thicken the gravy. Finish with the garam masala and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a188a8-feab-7a94-b669-c2287146ded7"
+name = "Kala chana curry"
+serves = 4
+prep_minutes = 480
+cook_minutes = 50
+ingredients = [
+  { id = "black-chickpeas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Soak the black chickpeas overnight and pressure cook them with salt and the water for 6 whistles until tender.",
+  "Heat the oil, add the cumin seeds and bay leaves, then cook the chopped onion until brown. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, red chilli powder and coriander powder and cook until the masala is thick.",
+  "Add the black chickpeas with their liquid and simmer for 15 minutes until the gravy is dark and thick.",
+  "Finish with the garam masala and dry mango powder.",
+]
+
+[[recipe]]
+id = "01a188a8-fead-7c52-9fab-c0d706330cff"
+name = "Soya chunk curry"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "soya-chunks", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Boil the soya chunks in most of the water with salt for 5 minutes, then drain, rinse in cold water and squeeze them dry.",
+  "Heat the oil, add the cumin seeds, then cook the chopped onion until golden. Add the ginger garlic paste.",
+  "Add the chopped tomato, turmeric, red chilli powder and coriander powder and cook until the oil separates. Stir in the whisked curd.",
+  "Add the soya chunks and the rest of the water and simmer for 10 minutes so they soak up the gravy.",
+  "Finish with the garam masala and coriander leaves.",
+]
