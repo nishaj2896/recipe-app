@@ -162,6 +162,7 @@ Decisions that would be expensive to reverse are recorded as ADRs in [`docs/adr/
 - [ADR-0005](docs/adr/0005-postgres-persistence.md): recipes and the catalog live in PostgreSQL, loaded from the reviewed data files
 - [ADR-0006](docs/adr/0006-frontend-web-app.md): the frontend is a mobile-first web app in `web/`, on the same origin as the API
 - [ADR-0007](docs/adr/0007-ranking-in-postgres.md): Postgres ranks and pages the search, using scores Python computed
+- [ADR-0008](docs/adr/0008-recipe-content-and-photos.md): recipes carry quantities, steps and a photo, written for this project
 
 To change one of these decisions, add a new ADR that supersedes it rather than rewriting the old one.
 
