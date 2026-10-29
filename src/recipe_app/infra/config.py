@@ -17,6 +17,7 @@ DATA_DIR_VARIABLE = "RECIPE_APP_DATA_DIR"
 DEFAULT_DATA_DIR = Path("data")
 DATABASE_URL_VARIABLE = "DATABASE_URL"
 DATABASE_SCHEME = "postgresql+asyncpg"
+DOCS_VARIABLE = "API_DOCS"
 
 
 class ConfigError(ValueError):
@@ -79,3 +80,16 @@ def database_url_from_env(environ: Mapping[str, str]) -> str:
             f"{DATABASE_URL_VARIABLE} must start with {DATABASE_SCHEME}://"
         )
     return url
+
+
+def docs_enabled_from_env(environ: Mapping[str, str]) -> bool:
+    """Whether to serve /docs, /redoc and /openapi.json: off unless set to true.
+
+    The schema describes every route and error to anyone who asks, so only
+    local development turns it on. Anything but true or false is a typo, and
+    the app refuses to start rather than guess.
+    """
+    raw = (environ.get(DOCS_VARIABLE) or "false").strip().lower()
+    if raw not in ("true", "false"):
+        raise ConfigError(f"{DOCS_VARIABLE} must be true or false")
+    return raw == "true"
