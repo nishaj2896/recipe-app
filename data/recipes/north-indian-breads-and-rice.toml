@@ -79,3 +79,391 @@ steps = [
   "Soak the saffron in a little warm water. Cook the chicken in a heavy pot with some of the ghee for 10 minutes, then layer over the basmati rice, the fried onion, the rest of the mint, the saffron and the remaining ghee.",
   "Seal the pot with a lid and cook on the lowest heat for 25 minutes. Rest for 10 minutes, then mix gently from the sides and serve with raita.",
 ]
+
+[[recipe]]
+id = "01a188ac-0597-7bfe-8ab8-24300d82453f"
+name = "Plain paratha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the whole wheat flour with the salt and a spoon of the ghee, then add the water a little at a time and knead to a soft dough. Cover and rest for 20 minutes.",
+  "Divide into balls. Roll one into a round, brush it with ghee, fold it in half and in half again into a triangle, and roll it out gently into a thin triangle.",
+  "Cook on a hot griddle for 1 minute until spots appear, flip, brush with ghee and press with a spatula until it puffs. Flip again, brush and cook until golden and flaky on both sides.",
+  "Repeat with the rest of the dough and keep the cooked ones wrapped in a cloth.",
+]
+
+[[recipe]]
+id = "01a188ac-0599-7b01-a8c0-c7e57b87d415"
+name = "Aloo paratha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 35
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with some of the salt and the water into a soft dough and rest it for 20 minutes.",
+  "Boil, peel and mash the potato until there are no lumps. Mix in the chopped green chillies, grated ginger, coriander leaves, roasted and crushed cumin seeds, garam masala, dry mango powder, red chilli powder and salt.",
+  "Roll a ball of dough into a small round, put a ball of filling in the centre, gather the edges over it and pinch to seal. Flatten and roll it gently into a round, dusting with flour so the filling stays inside.",
+  "Cook on a hot griddle until spots appear, flip, and cook with ghee on both sides, pressing the edges, until crisp and golden.",
+  "Serve hot with a little butter on top.",
+]
+
+[[recipe]]
+id = "01a188ac-059c-7117-b956-95db3c58e90f"
+name = "Gobi paratha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 35
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "cauliflower", amount = 0.5, unit = "small-head" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with the water into a soft dough and rest it for 20 minutes.",
+  "Grate the cauliflower finely, add salt and leave for 10 minutes, then squeeze out all the water. A dry filling keeps the bread from tearing.",
+  "Mix the cauliflower with the chopped green chillies, grated ginger, coriander leaves, carom seeds, garam masala and red chilli powder.",
+  "Stuff a ball of dough with the filling, seal and roll it out gently.",
+  "Cook on a hot griddle with ghee on both sides until crisp and golden brown.",
+]
+
+[[recipe]]
+id = "01a188ac-059e-7270-b094-d245c12dcf0b"
+name = "Paneer paratha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 30
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "paneer", amount = 200, unit = "g" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "chaat-masala", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with the water into a soft dough and rest it for 20 minutes.",
+  "Grate the paneer and mix it with the very finely chopped onion, green chillies and coriander leaves, the chaat masala, red chilli powder and salt.",
+  "Stuff a ball of dough with the filling, seal and roll it out gently into a round.",
+  "Cook on a hot griddle with ghee on both sides until golden spots cover the surface.",
+]
+
+[[recipe]]
+id = "01a188ac-05a0-7b93-9b54-b30f2bd33756"
+name = "Methi paratha"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "fenugreek-leaves", amount = 100, unit = "g" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Pick, wash and finely chop the fenugreek leaves.",
+  "Mix them into the whole wheat flour with the curd, chopped green chillies, grated ginger, carom seeds, turmeric, red chilli powder and salt, and knead with the water into a soft dough. Rest for 15 minutes.",
+  "Roll balls of dough into thin rounds.",
+  "Cook on a hot griddle with ghee on both sides until golden spots appear.",
+]
+
+[[recipe]]
+id = "01a188ac-05a2-7dee-9c46-e992ed52bb4e"
+name = "Mooli paratha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 30
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "radish", amount = 2, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with the water into a soft dough and rest it for 20 minutes.",
+  "Peel and grate the radish, add salt and leave it for 10 minutes, then squeeze it dry. Use the juice in place of some of the water if you knead a second batch.",
+  "Mix the radish with the chopped green chillies, grated ginger, coriander leaves, carom seeds and red chilli powder. Add it only when you are ready to roll, or it will weep.",
+  "Stuff a ball of dough with the filling, seal and roll it out gently.",
+  "Cook on a hot griddle with ghee on both sides until crisp.",
+]
+
+[[recipe]]
+id = "01a188ac-05a4-7d6b-8b51-b0183f72ee48"
+name = "Lachha paratha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 5, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with the salt and water into a soft dough and rest it for 20 minutes.",
+  "Roll a ball into a large thin round, spread it with ghee and dust it lightly with more of the whole wheat flour.",
+  "Pleat it like a paper fan, then coil the pleated strip into a spiral and tuck the end under. Rest for 5 minutes.",
+  "Roll the spiral gently into a round so the layers stay intact.",
+  "Cook on a hot griddle with ghee on both sides until crisp, then crush it lightly between your palms to open the layers.",
+]
+
+[[recipe]]
+id = "01a188ac-05a7-7dde-b069-03b15b2dd2b3"
+name = "Phulka"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with the salt and water into a soft, smooth dough. Cover and rest for 30 minutes.",
+  "Divide into small balls and roll each into a thin, even round, dusting with flour as needed.",
+  "Cook on a hot griddle for 30 seconds until small bubbles appear, flip and cook for 30 seconds more.",
+  "Lift it with tongs and hold it directly over an open flame; it should puff up like a balloon in a few seconds. Brush with ghee if you like.",
+]
+
+[[recipe]]
+id = "01a188ac-05a9-7419-8d55-e9c12cddd474"
+name = "Tandoori roti"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with the curd, baking soda, salt and water into a soft dough. Rest for 30 minutes.",
+  "Roll balls into rounds slightly thicker than a chapati.",
+  "Wet the back of each round with water and stick it, wet side down, to a very hot heavy iron griddle turned upside down over the flame, or to the wall of a tandoor.",
+  "Cook for 1 minute, then turn the griddle over the flame so the top side chars and puffs. Pry it off and brush with butter.",
+]
+
+[[recipe]]
+id = "01a188ac-05ab-7173-ac6b-80a0e9101563"
+name = "Missi roti"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "whole-wheat-flour", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Mix the gram flour and whole wheat flour with the finely chopped onion, green chillies and coriander leaves, the carom seeds, crushed dried fenugreek leaves, turmeric, red chilli powder, salt and a spoon of the ghee.",
+  "Knead with the water into a firm dough and rest for 15 minutes.",
+  "Roll balls into thick rounds, pressing them between dampened palms if they crack.",
+  "Cook on a hot griddle with ghee on both sides until golden spots appear.",
+]
+
+[[recipe]]
+id = "01a188ac-05ad-7540-a452-90d483cf792b"
+name = "Butter naan"
+serves = 4
+prep_minutes = 150
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "baking-powder", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt. Add the curd, oil and enough of the warm milk to knead a very soft, slightly sticky dough.",
+  "Cover and rest in a warm place for 2 hours.",
+  "Divide into balls, roll each into a long oval and brush the back with a little of the milk.",
+  "Stick the damp side onto a hot iron griddle and cook until bubbles appear, then turn the griddle upside down over the flame to char the top. Or bake on a hot tray at 260 °C for 3 to 4 minutes.",
+  "Brush generously with the melted butter while hot.",
+]
+
+[[recipe]]
+id = "01a188ac-05af-7758-b298-8c9999377ec6"
+name = "Garlic naan"
+serves = 4
+prep_minutes = 150
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "baking-powder", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 8, unit = "clove" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "nigella-seeds", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt. Add the curd and enough of the warm milk to knead a soft dough, and rest it for 2 hours.",
+  "Finely chop the garlic and coriander leaves.",
+  "Roll each ball into an oval, press some garlic, coriander leaves and nigella seeds into the top, and brush the back with a little of the milk.",
+  "Cook the damp side on a hot iron griddle, then turn it over the flame to char the top.",
+  "Brush with the melted butter while hot.",
+]
+
+[[recipe]]
+id = "01a188ac-05b1-784f-bb14-2bba03c32a18"
+name = "Bhatura"
+serves = 4
+prep_minutes = 150
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "semolina", amount = 2, unit = "tbsp" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "baking-powder", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Soak the semolina in the water for 10 minutes.",
+  "Mix the all-purpose flour with the semolina, baking soda, baking powder, sugar and salt, add the curd and a spoon of the oil and knead to a soft, smooth dough. Cover and rest for 2 hours.",
+  "Roll balls into large ovals about 3 mm thick, without dusting too much.",
+  "Slide one at a time into very hot oil and press gently with a slotted spoon so it puffs up. Fry for about 30 seconds on each side until pale golden. Serve at once.",
+]
+
+[[recipe]]
+id = "01a188ac-05b3-7852-994e-2b3ec2b5edf4"
+name = "Puri"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "semolina", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Mix the whole wheat flour with the semolina, salt and a spoon of the oil, and knead with the water into a stiff dough. Rest for 15 minutes.",
+  "Divide into small balls and roll each into a round about 10 cm across, using a few drops of oil instead of dry flour.",
+  "Slide each round into the very hot oil and press it gently with a slotted spoon until it puffs. Flip and fry for a few seconds until golden.",
+  "Drain on paper and serve hot.",
+]
+
+[[recipe]]
+id = "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2"
+name = "Kulcha"
+serves = 4
+prep_minutes = 150
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "baking-powder", amount = 0.5, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "nigella-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt. Add the curd and enough of the milk to knead a soft dough. Rest for 2 hours.",
+  "Roll balls into rounds about 5 mm thick and press the nigella seeds and chopped coriander leaves into the top.",
+  "Cook on a hot griddle until golden spots appear on both sides and the kulcha is cooked through.",
+  "Brush with the butter and serve warm.",
+]
+
+[[recipe]]
+id = "01a188ac-05b8-75d4-b607-f24571d2f34e"
+name = "Matar pulao"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.75, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice until the water runs clear and soak it for 20 minutes. Drain.",
+  "Heat the ghee, add the cumin seeds, bay leaves, cardamom, cloves and cinnamon, then the sliced onion and slit green chillies, and cook until the onion is light golden.",
+  "Add the peas and the basmati rice and stir gently for 2 minutes so the grains are coated.",
+  "Pour in the water, add salt and bring to a boil. Cover tightly and cook on the lowest heat for 12 minutes.",
+  "Turn off the heat and rest for 10 minutes before fluffing with a fork.",
+]

@@ -614,6 +614,14 @@ category = "vegetables"
 search_terms = ["green mango"]
 
 [[ingredient]]
+id = "raw-papaya"
+name = "Raw papaya"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green papaya", "kacha papita"]
+
+[[ingredient]]
 id = "red-cabbage"
 name = "Red cabbage"
 class = "A"
@@ -727,6 +735,14 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["chard"]
+
+[[ingredient]]
+id = "tinda"
+name = "Tinda"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["apple gourd", "round gourd", "indian round gourd"]
 
 [[ingredient]]
 id = "tomato"
