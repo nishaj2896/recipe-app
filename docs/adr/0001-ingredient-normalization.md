@@ -3,6 +3,7 @@
 - Status: Accepted
 - Date: 2026-10-15
 - Amended: 2026-10-18 (ignored reasons: rule 3)
+- Amended: 2026-10-29 (rule 7: quantities arrive in v1 as added fields; ADR-0008)
 - Deciders: Nisha
 
 ## Context

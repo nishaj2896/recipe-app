@@ -3,6 +3,7 @@
 - Status: Accepted
 - Date: 2026-10-19
 - Amended: 2026-10-29 (rules 5 and 6 superseded by ADR-0007: Postgres ranks and pages the search)
+- Amended: 2026-10-29 (rule 2: recipes are every file in `data/recipes/`; ADR-0008)
 - Deciders: Nisha
 - Related: ADR-0001 (append-only ids), ADR-0002 rule 7 (catalog as data), ADR-0003 (scoring, cursor)
 
