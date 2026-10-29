@@ -7,13 +7,14 @@ They pin today's behaviour before ranking moves into Postgres (ADR-0007).
 
 import asyncio
 from collections.abc import Sequence
+from itertools import pairwise
 from uuid import UUID
 
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
 from recipe_app.domain.catalog import IngredientClass
-from recipe_app.domain.deck import MAX_ALL_STAPLES_WITH_SCORED, MAX_DECK_SIZE
+from recipe_app.domain.deck import MAX_DECK_SIZE
 from recipe_app.domain.matching import (
     AllStaplesMatch,
     Pantry,
@@ -43,6 +44,8 @@ CORE_POOL = CORE_IDS[:12]
 STAPLE_POOL = STAPLE_IDS[:8]
 
 FULL_TENTHS = 1000  # 100.0%
+# Written out, not imported, so a change to the domain constant fails here.
+MAX_ALL_STAPLES_BESIDE_SCORED = 2  # ADR-0003 rule 7
 
 core_weights = st.integers(1, 200)
 
@@ -237,7 +240,7 @@ def test_a_swipe_session_shows_every_recipe_once_in_rank_order(
         assert cards <= limit
         assert cards > 0 or not (expected.scored or expected.all_staples)
         if deck.scored:
-            assert len(deck.all_staples) <= MAX_ALL_STAPLES_WITH_SCORED
+            assert len(deck.all_staples) <= MAX_ALL_STAPLES_BESIDE_SCORED
         scored += deck.scored
         all_staples += deck.all_staples
         hidden |= _swiped_left(data, [*deck.scored, *deck.all_staples])
@@ -249,6 +252,19 @@ def test_a_swipe_session_shows_every_recipe_once_in_rank_order(
 
     assert scored == list(expected.scored)
     assert all_staples == list(expected.all_staples)
+    # `rank` shares its sort keys with the service, so check the order
+    # against ADR-0003 rule 5 as written too.
+    _assert_strictly_ascending(
+        [(-m.score_int, m.recipe.total_minutes, m.recipe.id) for m in scored]
+    )
+    _assert_strictly_ascending(
+        [(m.recipe.total_minutes, m.recipe.id) for m in all_staples]
+    )
+
+
+def _assert_strictly_ascending(keys: Sequence[tuple[int | UUID, ...]]) -> None:
+    """Sorted, and no recipe twice (the id is the last key)."""
+    assert all(a < b for a, b in pairwise(keys))
 
 
 def _swiped_left(
