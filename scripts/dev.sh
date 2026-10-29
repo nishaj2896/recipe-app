@@ -44,7 +44,7 @@ if [[ ! -f web/node_modules/.package-lock.json || web/package-lock.json -nt web/
 fi
 
 step "Starting Postgres"
-docker compose up -d --wait
+docker compose up -d --wait postgres
 
 step "Applying migrations"
 uv run --quiet alembic upgrade head

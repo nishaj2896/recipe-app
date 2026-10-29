@@ -1,7 +1,14 @@
-# Local development only. The password is not a secret: the database listens
-# on 127.0.0.1 only and holds nothing but data synced from the repo.
+# Local development only. The password and the signing key are not secrets:
+# every port listens on 127.0.0.1 only, and the database holds nothing but
+# data synced from the repo.
+#
+#   docker compose up --build        the whole app on http://localhost:5173
+#   docker compose up -d --wait postgres   only the database (scripts/dev.sh)
 
 name: recipe-app
+
+x-database-url: &database-url postgresql+asyncpg://recipe_app:recipe_app@postgres:5432/recipe_app
+
 services:
   postgres:
     image: postgres:17
@@ -19,5 +26,60 @@ services:
       interval: 2s
       timeout: 3s
       retries: 15
+
+  # Applies the migrations and loads the data files, then exits. A separate
+  # step from serving, as ADR-0005 has it.
+  migrate:
+    build: .
+    image: recipe-app-api:local
+    command: ["sh", "-c", "alembic upgrade head && recipe-app db sync"]
+    environment:
+      DATABASE_URL: *database-url
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    build: .
+    image: recipe-app-api:local
+    environment:
+      DATABASE_URL: *database-url
+      CURSOR_ACTIVE_KID: local
+      CURSOR_SIGNING_KEYS: '{"local": "U38X7jknf4nxqUX790WM6LqAF_T96KlF6LpFsw0WxrU="}'
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  # The Vite dev server on the source folder, so web changes reload live.
+  web:
+    image: node:22.22.2-slim
+    working_dir: /web
+    # npm ci wipes node_modules, so only run it when package-lock.json changed.
+    command:
+      - sh
+      - -c
+      - >-
+        { [ -f node_modules/.package-lock.json ] && [ ! package-lock.json -nt node_modules/.package-lock.json ]; } || npm ci;
+        exec npm run dev -- --host 0.0.0.0
+    environment:
+      API_URL: http://api:8000
+    volumes:
+      - ./web:/web
+      # Linux packages for the container, apart from the Mac's own web/node_modules.
+      - web_node_modules:/web/node_modules
+    ports:
+      - "127.0.0.1:5173:5173"
+    depends_on:
+      api:
+        condition: service_healthy
+
 volumes:
   pgdata:
+  web_node_modules:

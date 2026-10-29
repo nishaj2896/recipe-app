@@ -37,20 +37,30 @@ uv run pytest                # should pass
 
 ## Running the whole app
 
-With [Docker Desktop](https://www.docker.com/products/docker-desktop/) running, uv and Node 22 installed, one command runs everything:
+There are two ways to run everything with one command. Both serve the web app on <http://localhost:5173> and the API on <http://127.0.0.1:8000>, so run one at a time.
+
+**In Docker** (needs only [Docker Desktop](https://www.docker.com/products/docker-desktop/), running):
+
+```bash
+docker compose up --build    # Ctrl+C stops it; `docker compose down` removes the containers and keeps the data
+```
+
+It starts the database, applies the migrations and loads the data files (the one-off `migrate` service), then starts the API and the Vite dev server. Web changes reload live. After changing Python code, data files or migrations, run it again with `--build`.
+
+**On your machine** (needs Docker Desktop for the database, plus uv and Node 22):
 
 ```bash
 scripts/dev.sh               # add --host to open it from a phone on the same Wi-Fi
 ```
 
-It starts the database, applies the migrations, loads the data files, then serves the API on <http://127.0.0.1:8000> and the web app on <http://localhost:5173>. Ctrl+C stops both servers; `docker compose down` stops the database. On its first run it writes a git-ignored `.env` from [`.env.example`](.env.example) with a new signing key, and other commands can read it too: `uv run --env-file .env recipe-app db sync`. The sections below do the same steps by hand.
+It does the same steps with your local tools, so the API runs from your checkout. Ctrl+C stops both servers; `docker compose down` stops the database. On its first run it writes a git-ignored `.env` from [`.env.example`](.env.example) with a new signing key, and other commands can read it too: `uv run --env-file .env recipe-app db sync`. The sections below do the same steps by hand.
 
 ## Running the API
 
 The API reads recipes and the ingredient catalog from PostgreSQL, so start the local database, create the tables and load the data files first:
 
 ```bash
-docker compose up -d --wait
+docker compose up -d --wait postgres
 export DATABASE_URL=postgresql+asyncpg://recipe_app:recipe_app@localhost:5433/recipe_app
 uv run alembic upgrade head
 uv run recipe-app db sync
@@ -98,7 +108,7 @@ Every error is an [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) `applicatio
 | Type check | `uv run mypy` |
 | Run every pre-commit check | `uv run pre-commit run --all-files` |
 | Add a dependency | `uv add <package>` (or `uv add --dev <package>`) |
-| Start the local database | `docker compose up -d --wait` |
+| Start the local database | `docker compose up -d --wait postgres` |
 | Stop it (keeps the data) | `docker compose down` |
 | Wipe it | `docker compose down -v` |
 | Apply migrations | `uv run alembic upgrade head` (needs `DATABASE_URL`) |
