@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-10-19
+- Amended: 2026-10-29 (rules 5 and 6 superseded by ADR-0007: Postgres ranks and pages the search)
 - Deciders: Nisha
 - Related: ADR-0001 (append-only ids), ADR-0002 rule 7 (catalog as data), ADR-0003 (scoring, cursor)
 
@@ -38,9 +39,9 @@ Migrations are hand-reviewed (autogenerate only drafts them), every one has a wo
 
 **4. SQLAlchemy 2 Core with asyncpg, not the ORM.** The domain types are frozen dataclasses built by validating constructors. The repository maps rows to them explicitly; there is no second, mutable model of a recipe to keep in step.
 
-**5. Scoring stays in Python; SQL finds the candidates.** `candidates()` is one indexed query: recipes that use any ingredient in `pantry.have`, plus all-staples recipes that use no unticked staple, after the diet, time and hidden-id filters. The domain then ranks them exactly as it does today, so ADR-0003 has one implementation. The repository contract tests run against both adapters and compare their results.
+**5. Scoring stays in Python; SQL finds the candidates.** _Superseded by ADR-0007, which measured this on 50,000 recipes._ `candidates()` is one indexed query: recipes that use any ingredient in `pantry.have`, plus all-staples recipes that use no unticked staple, after the diet, time and hidden-id filters. The domain then ranks them exactly as it does today, so ADR-0003 has one implementation. The repository contract tests run against both adapters and compare their results.
 
-**6. The deck resume stays in the domain for now.** Doing the keyset resume in SQL would mean computing `score_int` in SQL, which is the second implementation rule 5 avoids. Task 3 measures p95 latency on 50,000 recipes; if fetching and ranking the candidates misses the budget there, a later ADR decides how to push ranking down (for example a stored per-recipe weight total) with those numbers in hand.
+**6. The deck resume stays in the domain for now.** _Superseded by ADR-0007._ Doing the keyset resume in SQL would mean computing `score_int` in SQL, which is the second implementation rule 5 avoids. Task 3 measures p95 latency on 50,000 recipes; if fetching and ranking the candidates misses the budget there, a later ADR decides how to push ranking down (for example a stored per-recipe weight total) with those numbers in hand.
 
 **7. The app loads the catalog from the database once at startup** and refuses to start if `catalog_state` is empty. A catalog change reaches running pods on their next restart, which the deploy after a sync does anyway. The connection pool opens and closes with the app's lifespan.
 
