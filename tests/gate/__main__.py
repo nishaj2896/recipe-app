@@ -3,6 +3,7 @@
     uv run python -m tests.gate load     # sync 50,000 recipes into DATABASE_URL
     uv run python -m tests.gate explain  # EXPLAIN ANALYZE every gate search
     uv run python -m tests.gate bench    # p50/p95/p99 of every gate search
+    uv run python -m tests.gate bench --check  # also fail above 2x the budget (CI)
 
 Point DATABASE_URL at an empty, migrated throwaway database (`alembic
 upgrade head`): the sync behind `load` refuses to delete recipes already there.
@@ -11,6 +12,7 @@ upgrade head`): the sync behind `load` refuses to delete recipes already there.
 import argparse
 import asyncio
 import os
+import sys
 from datetime import UTC, datetime
 
 from sqlalchemy import text
@@ -20,7 +22,7 @@ from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.sync import sync
 from tests.domain.factories import DATA_DIR
-from tests.gate.benchmark import benchmark, report
+from tests.gate.benchmark import TOLERANCE, benchmark, over_budget, report
 from tests.gate.searches import SEARCHES, explain, gate_recipes, search_queries
 
 
@@ -33,6 +35,11 @@ def main() -> None:
         default=30,
         help="bench: swipe sessions per search, each up to 3 decks (default 30)",
     )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help=f"bench: exit 1 if a search is above {TOLERANCE}x the budget",
+    )
     arguments = parser.parse_args()
     if arguments.rounds < 2:
         # Fewer can leave a search with one sample, and no percentiles.
@@ -44,7 +51,7 @@ def main() -> None:
         case "explain":
             asyncio.run(_explain(engine))
         case "bench":
-            asyncio.run(_bench(engine, arguments.rounds))
+            asyncio.run(_bench(engine, arguments.rounds, check=arguments.check))
 
 
 async def _load(engine: AsyncEngine) -> None:
@@ -75,12 +82,17 @@ async def _explain(engine: AsyncEngine) -> None:
         await engine.dispose()
 
 
-async def _bench(engine: AsyncEngine, rounds: int) -> None:
+async def _bench(engine: AsyncEngine, rounds: int, *, check: bool) -> None:
     try:
         results = await benchmark(engine, rounds=rounds)
     finally:
         await engine.dispose()
     print(report(results))
+    if check and (slow := over_budget(results, TOLERANCE)):
+        sys.exit(
+            f"over {TOLERANCE}x the latency budget: "
+            + ", ".join(result.search for result in slow)
+        )
 
 
 if __name__ == "__main__":

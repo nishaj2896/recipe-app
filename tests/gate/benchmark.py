@@ -28,6 +28,11 @@ SEARCH_PATH = "/api/v1/recipes/search"
 DECKS_PER_ROUND = 3
 WARMUP_ROUNDS = 3
 KEYS = SigningKeys(active_kid="bench", keys={"bench": b"b" * 32})
+# The budget, for every gate search (ADR-0007 rule 7). CI fails only above
+# TOLERANCE times it, because shared runners are noisy.
+BUDGET_P95_MS = 200
+BUDGET_P99_MS = 400
+TOLERANCE = 2
 
 
 @dataclass(frozen=True, slots=True)
@@ -85,17 +90,33 @@ async def benchmark(
     return results
 
 
+def over_budget(results: Sequence[Timings], tolerance: float = 1) -> list[Timings]:
+    """Each search whose p95 or p99 is above `tolerance` times the budget."""
+    return [
+        result
+        for result in results
+        if result.p95 > BUDGET_P95_MS * tolerance
+        or result.p99 > BUDGET_P99_MS * tolerance
+    ]
+
+
 def report(results: Sequence[Timings]) -> str:
     width = max(len(result.search) for result in results)
     lines = [
         f"{'search':<{width}}  {'requests':>8}  {'p50 ms':>7}  {'p95 ms':>7}  "
         f"{'p99 ms':>7}"
     ]
+    slow = {result.search for result in over_budget(results)}
     for result in [*results, _all(results)]:
+        mark = "  over budget" if result.search in slow else ""
         lines.append(
             f"{result.search:<{width}}  {len(result.samples):>8}  "
-            f"{result.p50:>7.1f}  {result.p95:>7.1f}  {result.p99:>7.1f}"
+            f"{result.p50:>7.1f}  {result.p95:>7.1f}  {result.p99:>7.1f}{mark}"
         )
+    lines.append(
+        f"budget per search: p95 <= {BUDGET_P95_MS} ms, p99 <= {BUDGET_P99_MS} ms "
+        "(the all-searches row is for information only)"
+    )
     return "\n".join(lines)
 
 
