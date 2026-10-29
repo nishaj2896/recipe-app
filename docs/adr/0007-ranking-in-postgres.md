@@ -44,14 +44,14 @@ A storage table (`match_scores`, written by the sync and keyed by `SCORING_VERSI
 
 | Column | Holds |
 |---|---|
-| `recipe_ingredients.weight` | the ingredient's ADR-0003 weight by class: A = 4, B = 2, staple = 0 |
+| `recipe_ingredients.weight` | the ingredient's ADR-0003 weight by class: A = 4, B = 2, staple = 0; NULL until the first sync after the migration |
 | `recipes.core_weight` | the sum of `weight` over the recipe's ingredients |
 
 Per request, for each recipe that uses an id in `pantry.have`: `matched_q` = the sum of `weight` over those ids, and `core_q` = `core_weight` + 1 for each of the recipe's ingredients in `pantry.out_of` (an unticked staple counts 1, ADR-0003 rule 1). Recipes with `matched_q` = 0 are not in the scored tier. The all-staples tier keeps its Task 2 query, now sorted by `(total_minutes, id)` and resumed and limited in SQL.
 
 Like `diet` and `all_staples` (ADR-0005 rule 3), these columns derive from the catalog, are written only by the sync, and a test checks them against the domain.
 
-**4. A recipe beyond the triangle is never silently dropped.** If a sync adds a recipe whose core weight is over the pod's `max_core_q` before that pod restarts, the array index is out of range and SQL gets NULL. The query ranks such a recipe last in its tier rather than leaving it out, and rule 5 logs it. The restart that follows a sync (ADR-0005) recomputes the triangle.
+**4. A recipe beyond the triangle is never silently dropped.** If a sync adds a recipe whose core weight is over the pod's `max_core_q` before that pod restarts, the array index is out of range and SQL gets NULL. The query takes `COALESCE(score, -1)`: real scores are 0 or more, so −1 ranks such a recipe last in its tier rather than leaving it out, takes part in the cursor resume like any other value, and fits the cursor's integer key. Rule 5 logs it, since the domain's score is never −1. The restart that follows a sync (ADR-0005) recomputes the triangle.
 
 **5. Python checks the cards it shows.** The service still builds each card's match with `match_recipe` (it needs the matched, missing and assumed lists anyway). If a card's `score_int` differs from the one Postgres sorted by, the service logs an error naming the recipe, the two scores and the catalog hash, and serves the deck. **The card keeps the score Postgres sorted by**, so the cursor position after it (ADR-0003 rule 9) is Postgres's own sort key and the next deck resumes exactly where this one stopped. A mismatch then costs at most a slightly wrong order inside one deck, never a skipped or repeated card. A mismatch means the two sides disagree on weights. Outside the restart window below, that is a bug for a test to catch, not a reason to fail the user's request.
 
@@ -63,6 +63,6 @@ Like `diet` and `all_staples` (ADR-0005 rule 3), these columns derive from the c
 
 - **Easier:** deck time grows far more slowly with the number of matching recipes. Postgres still adds up one integer per matching ingredient row before it can sort, but no recipe leaves the database except the deck's: about 80 ms for the full pantry at 50,000 recipes. A swipe session's later decks cost about the same as its first. At 500,000 recipes this needs another look, for example a statement timeout (Task 4) or a pre-aggregated path.
 - **Unchanged for users:** the order, the percentages and the cursor are exactly as before, so `SCORING_VERSION` is not bumped and the web app does not change. The Task 1 and Task 2 gate tests pass unchanged.
-- **Harder:** the migration that adds the stored weights starts them at 0, so until the next sync no recipe is in the scored tier. The existing deploy order (migrate, sync, then roll the pods) already covers it, and `scripts/dev.sh` and `docker compose up` sync after migrating. A scoring change alone needs no sync.
+- **Harder:** the migration adds the stored weights as nullable columns with no default, and only the sync fills them. The app refuses to start while any recipe has a NULL `core_weight`, the same shape as ADR-0005 rule 7's refusal on an empty `catalog_state`, so the deploy order (migrate, sync, then roll the pods) enforces itself. `scripts/dev.sh` and `docker compose up` already sync after migrating. A scoring change alone needs no sync.
 - **Risk:** between a catalog sync that reclassifies an ingredient and the pod restarts that follow it (ADR-0005), Postgres sorts by the new weights while a pod's Python builds cards with its loaded catalog. Rule 5 logs each disagreement and keeps cursors on Postgres's sort key, so the worst case is a misordered card. A pod keeps issuing and accepting cursors under the catalog hash it loaded until it restarts; the restart ends the window and expires those cursors.
 - **Deferred:** a statement timeout and pool limits for the worst request (Task 4), and the latency metric on a dashboard (Task 5).
