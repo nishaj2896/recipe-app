@@ -104,9 +104,9 @@ test("a recipe sorts its ingredients into have, need and assumed staples", async
     within(screen.getByRole("region", { name: group }))
       .getAllByRole("listitem")
       .map((item) => item.textContent);
-  expect(items("You have")).toEqual(["Paneer"]);
-  expect(items("You'll need")).toEqual(["Potato", "Cream"]);
-  expect(items("Staples we assume you have")).toEqual(["Salt"]);
+  expect(items("You have")).toEqual(["Paneer1 cup"]);
+  expect(items("You'll need")).toEqual(["Potato1 cup", "Cream1 cup"]);
+  expect(items("Staples we assume you have")).toEqual(["Salt1 cup"]);
 });
 
 test("staples are never shown as needed while they're still loading", async () => {

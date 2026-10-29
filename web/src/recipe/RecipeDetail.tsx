@@ -1,11 +1,12 @@
-import type { ReactNode } from "react";
+import { type ReactNode, useState } from "react";
 
-import type { IngredientRef } from "../api/client";
+import type { RecipeIngredient } from "../api/client";
 import { useCatalog, useRecipe, useStaples } from "../api/queries";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
 import { DIETS } from "../deck/diets";
 import { useDevice } from "../store/device";
 import styles from "./RecipeDetail.module.css";
+import { MAX_SERVINGS, MIN_SERVINGS, scaledAmount } from "./scale";
 
 interface Props {
   recipeId: string;
@@ -15,7 +16,10 @@ interface Props {
   nested?: boolean;
 }
 
-/** A recipe's full ingredient list, sorted into what you have and what you'd need. */
+/**
+ * A recipe's photo, ingredients sorted into what you have and what you'd
+ * need, with amounts for the servings chosen, and its method (ADR-0008 rule 8).
+ */
 export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
   const Name = nested ? "h3" : "h1";
   const GroupTitle = nested ? "h4" : "h2";
@@ -25,6 +29,11 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
   const pantry = useDevice((state) => state.pantry);
   const outOfStaples = useDevice((state) => state.outOfStaples);
   const saved = useDevice((state) => state.saved);
+  // Not saved: each recipe opens at its written size (ADR-0008 rule 8). The
+  // id keeps a choice from carrying over when the deck shows the next recipe.
+  const [chosen, setChosen] = useState<{ recipeId: string; servings: number } | null>(
+    null,
+  );
   const { saveRecipe, unsaveRecipe } = useDevice.getState();
 
   // Without the staples, every staple would flash under "You'll need".
@@ -68,7 +77,7 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
     (catalog.data ?? []).map((item) => [item.id, item.category.id]),
   );
 
-  const groups: [string, IngredientRef[]][] = [
+  const groups: [string, RecipeIngredient[]][] = [
     ["You have", detail.ingredients.filter((item) => have.has(item.id))],
     [
       "You'll need",
@@ -84,11 +93,25 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
     ],
   ];
   const isSaved = saved.includes(detail.id);
+  const serves = detail.serves;
+  const shownServings = chosen?.recipeId === detail.id ? chosen.servings : serves;
+  const setServings = (servings: number) => {
+    setChosen({ recipeId: detail.id, servings });
+  };
+  const amountOf = (item: RecipeIngredient) => {
+    if (serves === null || shownServings === null) return null;
+    if (item.amount === null || item.unit === null) return "to taste";
+    return scaledAmount(item.amount, item.unit, serves, shownServings);
+  };
 
   return (
     <article className={styles.detail} aria-labelledby="recipe-name">
       <div className={styles.art}>
-        <DishArt recipeId={detail.id} size={220} />
+        {detail.image ? (
+          <DishPhoto key={detail.image.url} {...detail.image} recipeId={detail.id} />
+        ) : (
+          <DishArt recipeId={detail.id} size={220} />
+        )}
       </div>
       <Name id="recipe-name" className={styles.name}>
         {detail.name}
@@ -112,25 +135,73 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
         </div>
       </dl>
 
+      {serves !== null && shownServings !== null && (
+        <div className={styles.servings} role="group" aria-label="Servings">
+          <span className={styles.servingsLabel}>Serves</span>
+          <button
+            type="button"
+            className={styles.stepper}
+            aria-label="Fewer servings"
+            disabled={shownServings <= MIN_SERVINGS}
+            onClick={() => {
+              setServings(Math.max(MIN_SERVINGS, shownServings - 1));
+            }}
+          >
+            −
+          </button>
+          <output className={styles.servingsCount} aria-live="polite">
+            {shownServings}
+          </output>
+          <button
+            type="button"
+            className={styles.stepper}
+            aria-label="More servings"
+            disabled={shownServings >= MAX_SERVINGS}
+            onClick={() => {
+              setServings(Math.min(MAX_SERVINGS, shownServings + 1));
+            }}
+          >
+            +
+          </button>
+        </div>
+      )}
+
       {groups.map(
         ([title, items]) =>
           items.length > 0 && (
             <section key={title} className={styles.group} aria-label={title}>
               <GroupTitle className={styles.groupTitle}>{title}</GroupTitle>
               <ul className={styles.list}>
-                {items.map((item) => (
-                  <li key={item.id} className={styles.item}>
-                    <IngredientArt
-                      ingredientId={item.id}
-                      categoryId={categoryOf.get(item.id) ?? ""}
-                      size={32}
-                    />
-                    {item.name}
-                  </li>
-                ))}
+                {items.map((item) => {
+                  const amount = amountOf(item);
+                  return (
+                    <li key={item.id} className={styles.item}>
+                      <IngredientArt
+                        ingredientId={item.id}
+                        categoryId={categoryOf.get(item.id) ?? ""}
+                        size={32}
+                      />
+                      <span className={styles.itemName}>{item.name}</span>
+                      {amount !== null && <span className={styles.amount}>{amount}</span>}
+                    </li>
+                  );
+                })}
               </ul>
             </section>
           ),
+      )}
+
+      {detail.steps.length > 0 && (
+        <section className={styles.group} aria-label="Method">
+          <GroupTitle className={styles.groupTitle}>Method</GroupTitle>
+          <ol className={styles.method}>
+            {detail.steps.map((step, index) => (
+              <li key={index} className={styles.step}>
+                {step}
+              </li>
+            ))}
+          </ol>
+        </section>
       )}
 
       <div className={styles.actions}>
@@ -149,5 +220,30 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
         )}
       </div>
     </article>
+  );
+}
+
+interface PhotoProps {
+  recipeId: string;
+  url: string;
+  alt: string;
+}
+
+/** The dish's photo; the drawn bowl stands in if the file doesn't load. */
+function DishPhoto({ recipeId, url, alt }: PhotoProps) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return <DishArt recipeId={recipeId} size={220} />;
+  return (
+    <img
+      className={styles.photo}
+      src={url}
+      alt={alt}
+      width={800}
+      height={800}
+      decoding="async"
+      onError={() => {
+        setFailed(true);
+      }}
+    />
   );
 }

@@ -100,7 +100,7 @@ export const DECK = [
 ];
 
 /** The full recipe behind a card, as GET /recipes/{id} returns it. */
-export function detailOf(card: RecipeCard): components["schemas"]["RecipeDetail"] {
+export function detailOf(card: RecipeCard): RecipeDetail {
   return {
     id: card.id,
     name: card.name,
@@ -128,11 +128,17 @@ export const oneDeck: SearchHandler = (body) => ({
   ignored_ingredients: [],
 });
 
+type RecipeDetail = components["schemas"]["RecipeDetail"];
+
 /**
- * Answers the API's catalog routes from the fixtures above, and searches
- * with `search`. Every search body is kept in `searches`.
+ * Answers the API's catalog routes from the fixtures above, searches with
+ * `search`, and answers a deck card's recipe with `detail`. Every search
+ * body is kept in `searches`.
  */
-export function stubApi(search: SearchHandler = oneDeck): { searches: SearchRequest[] } {
+export function stubApi(
+  search: SearchHandler = oneDeck,
+  detail: (card: RecipeCard) => RecipeDetail = detailOf,
+): { searches: SearchRequest[] } {
   const searches: SearchRequest[] = [];
   vi.stubGlobal(
     "fetch",
@@ -142,7 +148,7 @@ export function stubApi(search: SearchHandler = oneDeck): { searches: SearchRequ
       if (recipeId) {
         const card = DECK.find((item) => item.id === recipeId);
         return card
-          ? Response.json(detailOf(card))
+          ? Response.json(detail(card))
           : Response.json(
               { type: "/problems/not-found", title: "Not Found", status: 404 },
               { status: 404, headers: { "content-type": "application/problem+json" } },

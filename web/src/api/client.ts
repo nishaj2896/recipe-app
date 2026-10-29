@@ -15,3 +15,4 @@ export type RecipeCard = components["schemas"]["RecipeCard"];
 export type CatalogIngredient = components["schemas"]["CatalogIngredient"];
 export type StapleKindGroup = components["schemas"]["StapleKindGroup"];
 export type IngredientRef = components["schemas"]["IngredientRef"];
+export type RecipeIngredient = components["schemas"]["RecipeIngredient"];

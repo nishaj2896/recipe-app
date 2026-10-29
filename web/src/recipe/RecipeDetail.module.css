@@ -109,3 +109,73 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.photo {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: var(--radius-l);
+  object-fit: cover;
+}
+
+.servings {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.servingsLabel {
+  flex: 1;
+  font-weight: 700;
+}
+
+.stepper {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.stepper:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.servingsCount {
+  min-width: 2ch;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.itemName {
+  flex: 1;
+}
+
+.amount {
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.method {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-left: var(--space-6);
+  line-height: 1.5;
+}
+
+.step::marker {
+  color: var(--accent);
+  font-weight: 800;
+}
