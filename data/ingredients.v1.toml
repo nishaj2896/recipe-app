@@ -614,6 +614,14 @@ category = "vegetables"
 search_terms = ["green mango"]
 
 [[ingredient]]
+id = "raw-papaya"
+name = "Raw papaya"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["green papaya", "kacha papita"]
+
+[[ingredient]]
 id = "red-cabbage"
 name = "Red cabbage"
 class = "A"

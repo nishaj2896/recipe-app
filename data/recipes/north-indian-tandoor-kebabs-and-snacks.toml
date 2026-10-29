@@ -154,7 +154,7 @@ prep_minutes = 270
 cook_minutes = 30
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
-  { id = "papaya", amount = 2, unit = "tbsp" },
+  { id = "raw-papaya", amount = 2, unit = "tbsp" },
   { id = "onion", amount = 2, unit = "medium" },
   { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -171,7 +171,7 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Grate the raw papaya to a paste. Mix it with the lamb mince, ginger garlic paste and salt and refrigerate for 4 hours so the meat turns very soft.",
+  "Peel and grate the raw papaya to a paste. Mix it with the lamb mince, ginger garlic paste and salt and refrigerate for 4 hours so the meat turns very soft.",
   "Fry the thinly sliced onion in half the ghee until deep brown and crisp, then crush it. Toast the gram flour in a dry pan. Soak the saffron in the warm milk.",
   "Grind the cardamom, cloves, mace, nutmeg and black pepper to a fine powder.",
   "Pass the mince through a grinder or pound it until it is a smooth, almost silky paste. Mix in the onion, gram flour, spice powder, red chilli powder, saffron milk and kewra water and chill for 30 minutes.",

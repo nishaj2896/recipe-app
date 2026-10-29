@@ -1559,7 +1559,7 @@ ingredients = [
 ]
 steps = [
   "Wash the mustard greens and spinach well and chop them with the stems.",
-  "Pressure cook the greens with half the ginger, the green chillies, salt and the water for 4 whistles, or simmer covered for 40 minutes, until very soft.",
+  "Pressure cook the greens with half the ginger, the green chillies, salt and the water for 4 whistles until very soft.",
   "Mash or pulse the greens to a coarse purée, sprinkle in the cornmeal and cook on low heat for 15 minutes, stirring, until thick.",
   "Heat the ghee, cook the chopped onion, garlic and the rest of the ginger until golden, then add the chopped tomato and cook until soft.",
   "Stir this tempering into the greens and simmer for 5 minutes. Top with the butter to serve.",
@@ -1944,7 +1944,7 @@ ingredients = [
 ]
 steps = [
   "Soak the chickpeas overnight. Tie the black tea, black cardamom and bay leaves in a small muslin pouch.",
-  "Pressure cook the chickpeas with the pouch, the baking soda, salt and the water for 5 whistles, or simmer for 90 minutes, until very soft. The tea turns them dark.",
+  "Pressure cook the chickpeas with the pouch, the baking soda, salt and the water for 5 whistles until very soft. The tea turns them dark.",
   "Discard the pouch. Dry roast the dried pomegranate seeds and grind them with the chole masala and dry mango powder.",
   "Heat the ghee and fry the ginger cut into thin strips and the slit green chillies for 1 minute.",
   "Add the chickpeas with a little of their liquid and the spice mix and simmer for 10 minutes, mashing a few chickpeas to thicken. Pindi chole stay fairly dry.",
@@ -2006,7 +2006,7 @@ ingredients = [
   { id = "water", amount = 5, unit = "cup" },
 ]
 steps = [
-  "Soak the whole urad and kidney beans overnight, rinse, and pressure cook them with salt and most of the water for 8 whistles, or simmer for 2 hours, until completely soft.",
+  "Soak the whole urad and kidney beans overnight, rinse, and pressure cook them with salt and most of the water for 8 whistles until completely soft.",
   "Heat half the butter, add the cumin seeds, then the ginger garlic paste, and cook for 1 minute. Add the puréed tomato and Kashmiri chilli powder and cook for 10 minutes until thick.",
   "Add the dal and the rest of the water, mash a little, and simmer on the lowest heat for 45 minutes or longer, stirring often. The long simmer gives it its creaminess.",
   "Stir in the rest of the butter, the cream, the garam masala and the crushed dried fenugreek leaves and simmer for 5 more minutes.",
