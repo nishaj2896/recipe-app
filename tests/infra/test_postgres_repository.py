@@ -10,9 +10,11 @@ from sqlalchemy import insert
 from sqlalchemy.ext.asyncio import AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog, parse_catalog
+from recipe_app.domain.cursor import Position
 from recipe_app.domain.matching import resolve_pantry
-from recipe_app.domain.ranking import SearchFilters
+from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe import Recipe, build_recipe
+from recipe_app.domain.scoring import score_int
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.postgres import PostgresRecipeRepository
 from recipe_app.infra.sync import sync
@@ -22,6 +24,7 @@ from tests.domain.factories import catalog, category, ingredient
 pytestmark = pytest.mark.anyio
 
 NOW = datetime(2026, 10, 20, 9, 0, tzinfo=UTC)
+EMPTY = Ranking(scored=(), all_staples=())
 
 
 @pytest.fixture
@@ -75,7 +78,7 @@ async def test_a_recipe_using_an_ingredient_this_catalog_lacks_is_skipped(
 
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
         assert await repository.get(recipe_id) is None
-        assert await repository.candidates(pantry, SearchFilters()) == []
+        assert await repository.ranked(pantry, SearchFilters(), Position(), 20) == EMPTY
 
     assert "unknown ingredients ['onion']" in caplog.text
 
@@ -104,6 +107,7 @@ async def test_a_recipe_with_no_ingredient_rows_is_skipped_not_fatal(
                 cook_minutes=1,
                 diet="vegan",
                 all_staples=True,
+                core_weight=0,
             )
         )
     repository = PostgresRecipeRepository(empty_engine, one)
@@ -111,7 +115,8 @@ async def test_a_recipe_with_no_ingredient_rows_is_skipped_not_fatal(
 
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
         assert await repository.get(bare) is None
-        assert await repository.candidates(pantry, SearchFilters()) == [kept]
+        ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
+        assert [match.recipe for match in ranked.scored] == [kept]
 
     assert str(bare) in caplog.text
 
@@ -141,7 +146,80 @@ async def test_skipped_recipes_log_one_warning_per_call(
     )
 
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
-        assert await repository.candidates(pantry, SearchFilters()) == []
+        assert await repository.ranked(pantry, SearchFilters(), Position(), 20) == EMPTY
 
     assert len(caplog.records) == 1
     assert "skipped 3 recipes" in caplog.text
+
+
+async def test_a_score_postgres_and_the_domain_disagree_on_is_logged_and_served(
+    empty_engine: AsyncEngine, caplog: pytest.LogCaptureFixture
+) -> None:
+    """ADR-0007 rule 5: a sync reclassified potato before this pod restarted."""
+    synced = parse_catalog(
+        catalog(category(), ingredient(), ingredient(id="peas", name="Peas"))
+    )
+    loaded = parse_catalog(
+        catalog(
+            category(),
+            ingredient(**{"class": "B"}),
+            ingredient(id="peas", name="Peas"),
+        )
+    )
+    recipe = build_recipe(
+        id=UUID(int=1),
+        name="Potatoes and peas",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato", "peas"],
+        catalog=synced,
+    )
+    await sync(empty_engine, synced, [recipe], now=NOW)
+    repository = PostgresRecipeRepository(empty_engine, loaded)
+    pantry = resolve_pantry(
+        ingredient_ids=["potato"], excluded_staples=[], catalog=loaded
+    )
+
+    with caplog.at_level(logging.ERROR, logger="recipe_app"):
+        ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
+
+    [card] = ranked.scored
+    assert card.recipe.id == recipe.id
+    assert f"recipe {recipe.id}: postgres ranked it as scored" in caplog.text
+    # Postgres's score, so the cursor resumes where Postgres stopped (rule 5).
+    assert card.score_int == score_int(4, 8)
+
+
+async def test_a_recipe_past_the_score_triangle_ranks_last_not_missing(
+    empty_engine: AsyncEngine, caplog: pytest.LogCaptureFixture
+) -> None:
+    """ADR-0007 rule 4: a sync added a bigger recipe before this pod restarted."""
+    one = parse_catalog(
+        catalog(category(), ingredient(), ingredient(id="peas", name="Peas"))
+    )
+    small, large = (
+        build_recipe(
+            id=UUID(int=number),
+            name=name,
+            prep_minutes=5,
+            cook_minutes=20,
+            ingredient_ids=ingredients,
+            catalog=one,
+        )
+        for number, name, ingredients in (
+            (1, "Potatoes", ["potato"]),
+            (2, "Potatoes and peas", ["potato", "peas"]),
+        )
+    )
+    await sync(empty_engine, one, [small, large], now=NOW)
+    # Covers core_q 4 (potato), not 8 (potato and peas).
+    repository = PostgresRecipeRepository(empty_engine, one, max_core_q=4)
+    pantry = resolve_pantry(
+        ingredient_ids=["potato", "peas"], excluded_staples=[], catalog=one
+    )
+
+    with caplog.at_level(logging.ERROR, logger="recipe_app"):
+        ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
+
+    assert [card.recipe.id for card in ranked.scored] == [small.id, large.id]
+    assert f"recipe {large.id}: postgres ranked it as scored -1" in caplog.text

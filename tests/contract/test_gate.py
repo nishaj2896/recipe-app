@@ -22,6 +22,7 @@ from recipe_app.api.problems import (
     PROBLEM_MEDIA_TYPE,
 )
 from recipe_app.domain.catalog import IngredientCatalog
+from recipe_app.domain.ranking import Ranking
 from recipe_app.domain.recipe import Recipe
 from recipe_app.domain.scoring import SCORING_VERSION
 from recipe_app.services import search as search_service
@@ -745,7 +746,7 @@ class BrokenRepository:
     async def get(self, recipe_id: UUID) -> Recipe | None:
         raise RuntimeError("db password is hunter2")
 
-    async def candidates(self, *_: object) -> list[Recipe]:
+    async def ranked(self, *_: object) -> Ranking:
         raise RuntimeError("db password is hunter2")
 
 

@@ -15,7 +15,9 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.pool import NullPool
 
 from recipe_app.domain.catalog import Diet, IngredientClass
-from recipe_app.domain.matching import resolve_pantry
+from recipe_app.domain.cursor import Position
+from recipe_app.domain.deck import Deck, position_after
+from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters, rank
 from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.memory import InMemoryRecipeRepository
@@ -64,16 +66,20 @@ def test_get_unknown_id_returns_none(repository: RecipeRepository) -> None:
     diet=st.none() | st.sampled_from(Diet),
     max_total_minutes=st.none() | st.integers(1, 600),
     hidden=st.sets(st.sampled_from([recipe.id for recipe in SEED]), max_size=5),
+    limit=st.integers(1, 8),
 )
-def test_candidates_never_lose_a_recipe_the_ranking_would_show(
+def test_ranked_pages_through_exactly_the_domain_ranking(
     repository: RecipeRepository,
     have: list[str],
     out_of: list[str],
     diet: Diet | None,
     max_total_minutes: int | None,
     hidden: set[UUID],
+    limit: int,
 ) -> None:
-    """Ranking the candidates gives exactly the ranking of every recipe."""
+    """Walking every page gives the domain's ranking of every recipe, in order
+    (ADR-0007 rule 6). Small pages, so the keyset resume runs many times.
+    """
     pantry = resolve_pantry(
         ingredient_ids=have, excluded_staples=out_of, catalog=CATALOG
     )
@@ -82,32 +88,34 @@ def test_candidates_never_lose_a_recipe_the_ranking_would_show(
         max_total_minutes=max_total_minutes,
         hidden_recipe_ids=frozenset(hidden),
     )
-    candidates = asyncio.run(repository.candidates(pantry, filters))
+    expected = rank(SEED, pantry, filters)
 
-    assert rank(candidates, pantry, filters) == rank(SEED, pantry, filters)
+    scored: list[ScoredMatch] = []
+    all_staples: list[AllStaplesMatch] = []
+    after = Position()
+    for _ in range(len(SEED) + 1):
+        page = asyncio.run(repository.ranked(pantry, filters, after, limit))
+        assert len(page.scored) <= limit
+        assert len(page.all_staples) <= limit
+        if not (page.scored or page.all_staples):
+            break
+        scored += page.scored
+        all_staples += page.all_staples
+        after = position_after(Deck(page.scored, page.all_staples), after)
+
+    assert scored == list(expected.scored)
+    assert all_staples == list(expected.all_staples)
 
 
-def test_candidates_apply_the_filters(repository: RecipeRepository) -> None:
+def test_ranked_applies_the_filters(repository: RecipeRepository) -> None:
     pantry = resolve_pantry(
         ingredient_ids=CORE_IDS, excluded_staples=[], catalog=CATALOG
     )
     filters = SearchFilters(diet=Diet.VEGAN, max_total_minutes=20)
 
-    candidates = asyncio.run(repository.candidates(pantry, filters))
+    page = asyncio.run(repository.ranked(pantry, filters, Position(), 20))
+    shown = [m.recipe for m in page.scored] + [m.recipe for m in page.all_staples]
 
-    assert candidates
-    assert all(recipe.diet is Diet.VEGAN for recipe in candidates)
-    assert all(recipe.total_minutes <= 20 for recipe in candidates)
-
-
-def test_candidates_skip_recipes_with_nothing_in_common(
-    repository: RecipeRepository,
-) -> None:
-    """Not required by the contract, but a full scan won't survive 50k recipes."""
-    pantry = resolve_pantry(
-        ingredient_ids=["kingfish"], excluded_staples=[], catalog=CATALOG
-    )
-
-    candidates = asyncio.run(repository.candidates(pantry, SearchFilters()))
-
-    assert len(candidates) < len(SEED) // 2
+    assert shown
+    assert all(recipe.diet is Diet.VEGAN for recipe in shown)
+    assert all(recipe.total_minutes <= 20 for recipe in shown)

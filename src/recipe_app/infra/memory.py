@@ -1,12 +1,18 @@
-"""An in-memory RecipeRepository over the seed recipes (Task 1)."""
+"""An in-memory RecipeRepository over the seed recipes (Task 1).
+
+It ranks with the domain itself, so it is the reference the Postgres
+adapter is tested against (ADR-0007 rule 6).
+"""
 
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from types import MappingProxyType
 from uuid import UUID
 
+from recipe_app.domain.cursor import Position
+from recipe_app.domain.deck import resume
 from recipe_app.domain.matching import Pantry
-from recipe_app.domain.ranking import SearchFilters, passes_filters
+from recipe_app.domain.ranking import Ranking, SearchFilters, passes_filters, rank
 from recipe_app.domain.recipe import Recipe
 
 
@@ -34,9 +40,18 @@ class InMemoryRecipeRepository:
     async def get(self, recipe_id: UUID) -> Recipe | None:
         return self._by_id.get(recipe_id)
 
-    async def candidates(
-        self, pantry: Pantry, filters: SearchFilters
-    ) -> Sequence[Recipe]:
+    async def ranked(
+        self, pantry: Pantry, filters: SearchFilters, after: Position, limit: int
+    ) -> Ranking:
+        remaining = resume(
+            rank(self._candidates(pantry, filters), pantry, filters), after
+        )
+        return Ranking(
+            scored=remaining.scored[:limit], all_staples=remaining.all_staples[:limit]
+        )
+
+    def _candidates(self, pantry: Pantry, filters: SearchFilters) -> Sequence[Recipe]:
+        """Every recipe the ranking could show, without scanning them all."""
         found: dict[UUID, Recipe] = {}
         for ingredient_id in sorted(pantry.have):
             for recipe in self._by_ingredient.get(ingredient_id, ()):

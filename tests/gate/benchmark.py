@@ -123,8 +123,12 @@ async def _round(client: AsyncClient, name: str) -> list[float]:
 
 
 def _body(name: str) -> dict[str, Any]:
-    ingredient_ids, filters = SEARCHES[name]
-    body: dict[str, Any] = {"ingredient_ids": ingredient_ids}
+    search = SEARCHES[name]
+    filters = search.filters
+    body: dict[str, Any] = {
+        "ingredient_ids": search.ingredient_ids,
+        "excluded_staples": search.excluded_staples,
+    }
     if filters.diet is not None:
         body["diet"] = filters.diet.value
     if filters.max_total_minutes is not None:

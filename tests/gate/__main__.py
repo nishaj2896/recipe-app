@@ -21,7 +21,7 @@ from recipe_app.infra.database import create_engine
 from recipe_app.infra.sync import sync
 from tests.domain.factories import DATA_DIR
 from tests.gate.benchmark import benchmark, report
-from tests.gate.searches import SEARCHES, explain, gate_recipes, search_query
+from tests.gate.searches import SEARCHES, explain, gate_recipes, search_queries
 
 
 def main() -> None:
@@ -65,15 +65,12 @@ async def _explain(engine: AsyncEngine) -> None:
     try:
         async with engine.connect() as connection:
             for name in SEARCHES:
-                result = await connection.exec_driver_sql(
-                    *explain(
-                        "EXPLAIN (ANALYZE, BUFFERS)",
-                        search_query(name, catalog),
-                        engine.dialect,
+                for part, query in search_queries(name, catalog).items():
+                    result = await connection.exec_driver_sql(
+                        *explain("EXPLAIN (ANALYZE, BUFFERS)", query, engine.dialect)
                     )
-                )
-                print(f"\n## {name}\n")
-                print("\n".join(line for (line,) in result))
+                    print(f"\n## {name}: {part}\n")
+                    print("\n".join(line for (line,) in result))
     finally:
         await engine.dispose()
 

@@ -130,7 +130,11 @@ recipes = Table(
     # Derived from the catalog; the sync recomputes both on every run (ADR rule 3).
     Column("diet", Text, nullable=False),
     Column("all_staples", Boolean, nullable=False),
+    # Sum of recipe_ingredients.weight; also derived and recomputed (ADR-0007 rule 3).
+    # NULL only between the migration that added it and the next sync.
+    Column("core_weight", Integer),
     CheckConstraint("prep_minutes >= 0", name="prep_not_negative"),
+    CheckConstraint("core_weight >= 0", name="core_weight_not_negative"),
     CheckConstraint("cook_minutes >= 0", name="cook_not_negative"),
     CheckConstraint(
         f"total_minutes BETWEEN 1 AND {MAX_TOTAL_MINUTES}", name="total_in_range"
@@ -152,13 +156,18 @@ recipe_ingredients = Table(
     # The order a cook gathers them in; cards keep it.
     Column("position", SmallInteger, primary_key=True),
     Column("ingredient_id", ForeignKey("ingredients.id"), nullable=False),
+    # What a match on this ingredient is worth, by its class (ADR-0007 rule 3).
+    Column("weight", SmallInteger),
     UniqueConstraint("recipe_id", "ingredient_id"),
     CheckConstraint("position >= 0", name="position_not_negative"),
-    # The search's hot path: which recipes use any of these ingredients?
+    CheckConstraint("weight >= 0", name="weight_not_negative"),
+    # The search's hot path: which recipes use any of these ingredients, and
+    # what are they worth? Covering weight lets Postgres skip the table.
     Index(
         "ix_recipe_ingredients_ingredient_id_recipe_id",
         "ingredient_id",
         "recipe_id",
+        postgresql_include=["weight"],
     ),
 )
 
