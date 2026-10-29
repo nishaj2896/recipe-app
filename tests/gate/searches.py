@@ -1,5 +1,5 @@
-"""The searches the Task 2 gate measures: a narrow and a broad pantry, with
-and without filters. Shared by the plan test and `python -m tests.gate`.
+"""The searches the Task 2 and Task 3 gates measure: narrow and broad pantries,
+with and without filters. Shared by the gate tests and `python -m tests.gate`.
 """
 
 from collections import Counter
@@ -16,6 +16,64 @@ from recipe_app.infra.postgres import candidates_query
 from tests.gate.synthetic import synthetic_recipes
 
 GATE_RECIPES = 50_000
+
+# Close to the worst case the API allows: a full pantry (MAX_INGREDIENT_IDS)
+# of the seed's most-used class A and B ingredients, most used first. The
+# tail is a tie broken by file order, and it touches 44,571 of the 50,000
+# gate recipes. Fixed, not computed, so a seed change can't silently move
+# the benchmark; recompute it deliberately if the seed grows a lot.
+FULL_PANTRY = [
+    "egg",
+    "peas",
+    "curd",
+    "milk",
+    "potato",
+    "rice",
+    "paneer",
+    "cream",
+    "carrot",
+    "basmati-rice",
+    "chicken",
+    "pasta",
+    "bell-pepper",
+    "soy-sauce",
+    "kashmiri-chilli-powder",
+    "dried-fenugreek-leaves",
+    "toor-dal",
+    "brinjal",
+    "tamarind",
+    "french-beans",
+    "peanuts",
+    "olive-oil",
+    "chilli-flakes",
+    "spring-onions",
+    "cauliflower",
+    "okra",
+    "dry-mango-powder",
+    "spinach",
+    "cashews",
+    "moong-dal",
+    "masoor-dal",
+    "chickpeas",
+    "chole-masala",
+    "kidney-beans",
+    "drumsticks",
+    "sambar-powder",
+    "flattened-rice",
+    "semolina",
+    "all-purpose-flour",
+    "baking-powder",
+    "mint",
+    "biryani-masala",
+    "saffron",
+    "kingfish",
+    "coconut-milk",
+    "coconut-oil",
+    "prawns",
+    "lamb-mince",
+    "parsley",
+    "canned-tomatoes",
+]
 
 SEARCHES: dict[str, tuple[list[str], SearchFilters]] = {
     "two rare ingredients": (["kingfish", "okra"], SearchFilters()),
@@ -39,6 +97,7 @@ SEARCHES: dict[str, tuple[list[str], SearchFilters]] = {
         ],
         SearchFilters(),
     ),
+    "full pantry": (FULL_PANTRY, SearchFilters()),
 }
 
 

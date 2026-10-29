@@ -103,6 +103,7 @@ Every error is an [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) `applicatio
 | Run only the API contract (the Task 1 gate) | `uv run pytest tests/contract -v` |
 | Run only the query-plan checks on 50,000 recipes (the Task 2 gate) | `uv run pytest tests/gate -v` (needs `TEST_DATABASE_URL`) |
 | Print the search's query plans to read them | `uv run python -m tests.gate load`, then `uv run python -m tests.gate explain` (needs `DATABASE_URL` of an empty, migrated throwaway database) |
+| Time the search on 50,000 recipes: p50, p95 and p99 per search (the Task 3 gate) | `uv run python -m tests.gate load`, then `uv run python -m tests.gate bench` (same database as above; `--rounds 5` for a quick look) |
 | Lint | `uv run ruff check` |
 | Format | `uv run ruff format` |
 | Type check | `uv run mypy` |
@@ -143,7 +144,7 @@ src/recipe_app/
 ├── infra/       # adapters: data files, and later the database
 └── api/         # FastAPI routers and request/response schemas
 tests/           # mirrors src/; tests/contract drives the API end to end over HTTP,
-                 # tests/gate checks the search's query plans on 50,000 recipes
+                 # tests/gate checks and times the search on 50,000 recipes
 docs/adr/        # architecture decision records
 web/             # the web app (React); src/api/schema.d.ts is generated from web/openapi.json
 ```
