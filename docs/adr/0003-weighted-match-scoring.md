@@ -39,7 +39,7 @@ composite   = float(match_ratio) × log10(matched_q / 4 + 1)
 score_int   = round(composite × 1_000_000)               # the only value used for sorting
 ```
 
-`score_int` is computed in exactly one pure function in `recipe_app.domain.scoring`. The database never computes the score. Since ADR-0007 it sorts by `score_int` values this function computed, which the sync stores in a lookup table. Only `log10` is a float. Every pod runs the same image, and the gate tests pin exact `score_int` values (the potato trap is 571561 against 301030), so a change in floating-point behaviour fails a test rather than silently reordering results.
+`score_int` is computed in exactly one pure function in `recipe_app.domain.scoring`. The database never computes the score. Since ADR-0007 it sorts by `score_int` values this function computed, which each pod sends with the query. Only `log10` is a float. Every pod runs the same image, and the gate tests pin exact `score_int` values (the potato trap is 571561 against 301030), so a change in floating-point behaviour fails a test rather than silently reordering results.
 
 **5. The sort key is a total order:**
 - Scored tier: `(-score_int, total_minutes, recipe_id)`, where `total_minutes = prep_minutes + cook_minutes`.
