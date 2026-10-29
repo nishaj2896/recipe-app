@@ -4,6 +4,7 @@
 - Date: 2026-10-15
 - Amended: 2026-10-18 (recipe times: rule 10)
 - Amended: 2026-10-19 (deck mix and deck sizes: rule 7; cursor `req`: rule 9)
+- Amended: 2026-10-29 (rule 4: Postgres sorts by `score_int`, looked up from values this function computed; ADR-0007)
 - Deciders: Nisha
 - Supersedes: the "Result shape" ranking rule, the plain match-percentage definition, and the "fresh staple typed is promoted to core" rule in the Task 1 "Product decisions locked" table
 - Related: ADR-0001, ADR-0002
@@ -38,7 +39,7 @@ composite   = float(match_ratio) × log10(matched_q / 4 + 1)
 score_int   = round(composite × 1_000_000)               # the only value used for sorting
 ```
 
-`score_int` is computed in exactly one pure function in `recipe_app.domain.scoring`. The database selects candidates but never computes or sorts by the score. Only `log10` is a float. Every pod runs the same image, and the gate tests pin exact `score_int` values (the potato trap is 571561 against 301030), so a change in floating-point behaviour fails a test rather than silently reordering results.
+`score_int` is computed in exactly one pure function in `recipe_app.domain.scoring`. The database never computes the score. Since ADR-0007 it sorts by `score_int` values this function computed, which the sync stores in a lookup table. Only `log10` is a float. Every pod runs the same image, and the gate tests pin exact `score_int` values (the potato trap is 571561 against 301030), so a change in floating-point behaviour fails a test rather than silently reordering results.
 
 **5. The sort key is a total order:**
 - Scored tier: `(-score_int, total_minutes, recipe_id)`, where `total_minutes = prep_minutes + cook_minutes`.
