@@ -78,7 +78,7 @@ async def test_postgres_ranks_what_memory_ranks_at_scale(
     """The first three decks' worth of each tier, page by page (ADR-0007 rule 6)."""
     gate_search = SEARCHES[search]
     pantry = gate_search.pantry(real_catalog)
-    postgres = PostgresRecipeRepository(engine, real_catalog)
+    postgres = await PostgresRecipeRepository.open(engine, real_catalog)
 
     after = Position()
     for _ in range(3):

@@ -68,7 +68,7 @@ async def benchmark(
     catalog = await read_catalog(engine)
     service = RecipeService(
         catalog=catalog,
-        repository=PostgresRecipeRepository(engine, catalog),
+        repository=await PostgresRecipeRepository.open(engine, catalog),
         keys=KEYS,
         clock=lambda: int(time.time()),
     )

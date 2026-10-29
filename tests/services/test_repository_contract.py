@@ -43,7 +43,7 @@ def repository(request: pytest.FixtureRequest) -> Iterator[RecipeRepository]:
     # No pool: every test step runs in its own event loop via asyncio.run, and
     # a pooled asyncpg connection can't move between loops.
     engine = create_async_engine(url, poolclass=NullPool)
-    yield PostgresRecipeRepository(engine, CATALOG)
+    yield asyncio.run(PostgresRecipeRepository.open(engine, CATALOG))
     asyncio.run(engine.dispose())
 
 

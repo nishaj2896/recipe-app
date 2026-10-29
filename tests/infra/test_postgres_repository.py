@@ -11,12 +11,12 @@ from sqlalchemy.ext.asyncio import AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog, parse_catalog
 from recipe_app.domain.cursor import Position
-from recipe_app.domain.matching import resolve_pantry
+from recipe_app.domain.matching import max_core_weight, resolve_pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe import Recipe, build_recipe
 from recipe_app.domain.scoring import score_int
 from recipe_app.infra.database import create_engine
-from recipe_app.infra.postgres import PostgresRecipeRepository
+from recipe_app.infra.postgres import PostgresRecipeRepository, reachable_core_q
 from recipe_app.infra.sync import sync
 from recipe_app.infra.tables import recipes
 from tests.domain.factories import catalog, category, ingredient
@@ -47,7 +47,7 @@ async def test_every_seed_recipe_round_trips(
     seed: tuple[Recipe, ...],
 ) -> None:
     """Same fields, same ingredients, in the same order the file lists them."""
-    repository = PostgresRecipeRepository(seeded_engine, real_catalog)
+    repository = await PostgresRecipeRepository.open(seeded_engine, real_catalog)
 
     for recipe in seed:
         assert await repository.get(recipe.id) == recipe
@@ -71,7 +71,7 @@ async def test_a_recipe_using_an_ingredient_this_catalog_lacks_is_skipped(
         catalog=newer,
     )
     await sync(empty_engine, newer, [recipe], now=NOW)
-    repository = PostgresRecipeRepository(empty_engine, older)
+    repository = await PostgresRecipeRepository.open(empty_engine, older)
     pantry = resolve_pantry(
         ingredient_ids=["potato"], excluded_staples=[], catalog=older
     )
@@ -110,7 +110,7 @@ async def test_a_recipe_with_no_ingredient_rows_is_skipped_not_fatal(
                 core_weight=0,
             )
         )
-    repository = PostgresRecipeRepository(empty_engine, one)
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
     pantry = resolve_pantry(ingredient_ids=["potato"], excluded_staples=[], catalog=one)
 
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
@@ -140,7 +140,7 @@ async def test_skipped_recipes_log_one_warning_per_call(
         for number in range(1, 4)
     ]
     await sync(empty_engine, newer, onion_recipes, now=NOW)
-    repository = PostgresRecipeRepository(empty_engine, older)
+    repository = await PostgresRecipeRepository.open(empty_engine, older)
     pantry = resolve_pantry(
         ingredient_ids=["potato"], excluded_staples=[], catalog=older
     )
@@ -148,7 +148,8 @@ async def test_skipped_recipes_log_one_warning_per_call(
     with caplog.at_level(logging.WARNING, logger="recipe_app"):
         assert await repository.ranked(pantry, SearchFilters(), Position(), 20) == EMPTY
 
-    assert len(caplog.records) == 1
+    warnings = [r for r in caplog.records if r.levelno >= logging.WARNING]
+    assert len(warnings) == 1
     assert "skipped 3 recipes" in caplog.text
 
 
@@ -175,7 +176,7 @@ async def test_a_score_postgres_and_the_domain_disagree_on_is_logged_and_served(
         catalog=synced,
     )
     await sync(empty_engine, synced, [recipe], now=NOW)
-    repository = PostgresRecipeRepository(empty_engine, loaded)
+    repository = await PostgresRecipeRepository.open(empty_engine, loaded)
     pantry = resolve_pantry(
         ingredient_ids=["potato"], excluded_staples=[], catalog=loaded
     )
@@ -223,3 +224,14 @@ async def test_a_recipe_past_the_score_triangle_ranks_last_not_missing(
 
     assert [card.recipe.id for card in ranked.scored] == [small.id, large.id]
     assert f"recipe {large.id}: postgres ranked it as scored -1" in caplog.text
+
+
+async def test_the_reachable_core_q_matches_the_domain(
+    seeded_engine: AsyncEngine, seed: tuple[Recipe, ...]
+) -> None:
+    """The triangle is sized from SQL; the domain says what it must cover."""
+    assert await reachable_core_q(seeded_engine) == max(map(max_core_weight, seed))
+
+
+async def test_an_empty_database_reaches_no_core_q(empty_engine: AsyncEngine) -> None:
+    assert await reachable_core_q(empty_engine) == 0

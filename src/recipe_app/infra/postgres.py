@@ -32,7 +32,7 @@ from sqlalchemy import (
     tuple_,
 )
 from sqlalchemy.dialects.postgresql import aggregate_order_by
-from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
+from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.sql.elements import CollectionAggregate, Grouping
 
 from recipe_app.domain.catalog import Diet, IngredientCatalog
@@ -73,33 +73,50 @@ _RECIPE = select(
 
 
 # The largest core_q any request can give any recipe: every staple unticked.
-_STAPLES = (
-    select(func.count())
-    .where(
-        recipe_ingredients.c.recipe_id == recipes.c.id,
-        recipe_ingredients.c.weight == 0,
+# Grouped once and joined, not counted per recipe: about half the time.
+_UNTICKABLE = (
+    select(
+        recipe_ingredients.c.recipe_id,
+        func.count().label("staples"),
     )
-    .scalar_subquery()
+    .where(recipe_ingredients.c.weight == 0)
+    .group_by(recipe_ingredients.c.recipe_id)
+    .subquery()
 )
-_MAX_REACHABLE_CORE_Q = select(func.max(recipes.c.core_weight + _STAPLES))
+_MAX_REACHABLE_CORE_Q = select(
+    func.max(recipes.c.core_weight + func.coalesce(_UNTICKABLE.c.staples, 0))
+).select_from(recipes.outerjoin(_UNTICKABLE, _UNTICKABLE.c.recipe_id == recipes.c.id))
+
+
+async def reachable_core_q(engine: AsyncEngine) -> int:
+    """The largest core_q any search can give a synced recipe (0 when empty)."""
+    async with engine.connect() as connection:
+        return await connection.scalar(_MAX_REACHABLE_CORE_Q) or 0
 
 
 class PostgresRecipeRepository:
     """Reads recipes; only `recipe-app db sync` writes them (ADR-0005 rule 2)."""
 
     def __init__(
-        self,
-        engine: AsyncEngine,
-        catalog: IngredientCatalog,
-        *,
-        max_core_q: int | None = None,
+        self, engine: AsyncEngine, catalog: IngredientCatalog, *, max_core_q: int
     ) -> None:
-        """`max_core_q` sizes the score triangle; None measures the database
-        on the first search and doubles it (ADR-0007 rule 2).
+        """`max_core_q` sizes the score triangle (ADR-0007 rule 2); `open`
+        measures it from the database.
         """
         self._engine = engine
         self._catalog = catalog
-        self._scores = None if max_core_q is None else score_triangle(max_core_q)
+        self._scores = score_triangle(max_core_q)
+
+    @classmethod
+    async def open(
+        cls, engine: AsyncEngine, catalog: IngredientCatalog
+    ) -> "PostgresRecipeRepository":
+        """Size the triangle at startup, so no search pays for measuring it."""
+        reachable = await reachable_core_q(engine)
+        # Room for recipes a sync adds before this process restarts.
+        max_core_q = max(2 * reachable, 1)
+        logger.info("score triangle covers core_q up to %d", max_core_q)
+        return cls(engine, catalog, max_core_q=max_core_q)
 
     async def get(self, recipe_id: UUID) -> Recipe | None:
         async with self._engine.connect() as connection:
@@ -124,7 +141,7 @@ class PostgresRecipeRepository:
                         filters,
                         after.scored,
                         limit,
-                        await self._score_triangle(connection),
+                        self._scores,
                     )
                 )
             ).all()
@@ -153,14 +170,6 @@ class PostgresRecipeRepository:
             ),
             all_staples=self._all_staples_cards(all_staples, found, pantry),
         )
-
-    async def _score_triangle(self, connection: AsyncConnection) -> list[int]:
-        if self._scores is None:
-            reachable = await connection.scalar(_MAX_REACHABLE_CORE_Q) or 0
-            # Room for recipes a sync adds before this process restarts.
-            self._scores = score_triangle(max(2 * reachable, 1))
-            logger.info("score triangle covers core_q up to %d", 2 * reachable)
-        return self._scores
 
     def _scored_cards(
         self,
