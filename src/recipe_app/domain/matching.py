@@ -153,6 +153,21 @@ def match_recipe(
     )
 
 
+def match_weight(ingredient: Ingredient) -> int:
+    """What ticking this ingredient adds to matched_q; 0 for a staple, which
+    never matches (ADR-0003 rule 2). Postgres stores it per recipe ingredient
+    so it can add up matches itself (ADR-0007 rule 3).
+    """
+    if ingredient.ingredient_class is IngredientClass.STAPLE:
+        return 0
+    return _weight(ingredient)
+
+
+def max_core_weight(recipe: Recipe) -> int:
+    """The largest core_q any request can give this recipe: every staple unticked."""
+    return sum(_weight(item) for item in recipe.ingredients)
+
+
 def _is_core(ingredient: Ingredient, pantry: Pantry) -> bool:
     return (
         ingredient.ingredient_class is not IngredientClass.STAPLE

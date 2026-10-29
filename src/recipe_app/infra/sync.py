@@ -14,6 +14,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog
+from recipe_app.domain.matching import match_weight
 from recipe_app.domain.recipe import Recipe
 from recipe_app.infra import tables
 
@@ -101,6 +102,7 @@ async def sync(
                     # Derived, so recomputed on every run (ADR-0005 rule 3).
                     "diet": recipe.diet.value,
                     "all_staples": recipe.all_staples,
+                    "core_weight": sum(match_weight(i) for i in recipe.ingredients),
                 }
                 for recipe in recipes
             ],
@@ -109,7 +111,12 @@ async def sync(
             connection,
             tables.recipe_ingredients,
             [
-                {"recipe_id": recipe.id, "position": position, "ingredient_id": item.id}
+                {
+                    "recipe_id": recipe.id,
+                    "position": position,
+                    "ingredient_id": item.id,
+                    "weight": match_weight(item),
+                }
                 for recipe in recipes
                 for position, item in enumerate(recipe.ingredients)
             ],

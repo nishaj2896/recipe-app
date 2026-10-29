@@ -23,6 +23,7 @@ from recipe_app.infra.tables import (
     categories,
     ingredient_search_terms,
     ingredients,
+    recipes,
 )
 
 
@@ -32,6 +33,17 @@ class CatalogNotSyncedError(RuntimeError):
     def __init__(self) -> None:
         super().__init__(
             "the database has no catalog; run `recipe-app db sync` before starting"
+        )
+
+
+class WeightsNotSyncedError(CatalogNotSyncedError):
+    """A migration added the ranking weights and no sync has filled them."""
+
+    def __init__(self) -> None:
+        RuntimeError.__init__(
+            self,
+            "recipes have no ranking weights yet; run `recipe-app db sync` "
+            "after migrating, before starting",
         )
 
 
@@ -46,6 +58,12 @@ async def read_catalog(engine: AsyncEngine) -> IngredientCatalog:
         content_hash = await connection.scalar(select(catalog_state.c.content_hash))
         if content_hash is None:
             raise CatalogNotSyncedError
+        # Postgres ranks by these (ADR-0007 rule 3); unsynced, every search
+        # would come back with no scored recipes and no error.
+        if await connection.scalar(
+            select(select(recipes).where(recipes.c.core_weight.is_(None)).exists())
+        ):
+            raise WeightsNotSyncedError
         category_rows = await connection.execute(
             select(categories).order_by(categories.c.position)
         )

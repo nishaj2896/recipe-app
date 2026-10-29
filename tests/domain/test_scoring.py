@@ -9,6 +9,7 @@ from recipe_app.domain.scoring import (
     SUPPORTING,
     match_tenths,
     score_int,
+    score_triangle,
 )
 
 # One row per SCORING_VERSION. Add a row when you bump; never edit an old one.
@@ -90,3 +91,14 @@ def test_scoring_changes_bump_the_version() -> None:
     assert current == SCORING_FINGERPRINTS[SCORING_VERSION], (
         "scoring changed: bump SCORING_VERSION and add a row; don't edit the old one"
     )
+
+
+def test_score_triangle_is_indexed_the_way_postgres_reads_it() -> None:
+    """ADR-0007 rule 2: 1-based index core_q * (core_q - 1) // 2 + matched_q."""
+    triangle = score_triangle(16)
+
+    assert len(triangle) == 16 * 17 // 2
+    for core_q in range(1, 17):
+        for matched_q in range(1, core_q + 1):
+            index = core_q * (core_q - 1) // 2 + matched_q
+            assert triangle[index - 1] == score_int(matched_q, core_q)

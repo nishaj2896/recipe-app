@@ -20,6 +20,20 @@ def score_int(matched_q: int, core_q: int) -> int:
     return round(composite * 1_000_000)
 
 
+def score_triangle(max_core_q: int) -> list[int]:
+    """score_int for every 1 <= matched_q <= core_q <= max_core_q, core_q-major.
+
+    Postgres ranks by indexing it, 1-based, at
+    core_q * (core_q - 1) // 2 + matched_q, so the formula stays here
+    (ADR-0007 rule 2).
+    """
+    return [
+        score_int(matched_q, core_q)
+        for core_q in range(1, max_core_q + 1)
+        for matched_q in range(1, core_q + 1)
+    ]
+
+
 def match_tenths(matched_q: int, core_q: int) -> int:
     """The match percentage in tenths, rounded half up with integers only."""
     _check(matched_q, core_q)

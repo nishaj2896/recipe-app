@@ -9,6 +9,7 @@ from sqlalchemy import Table, func, select
 from sqlalchemy.ext.asyncio import AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog, parse_catalog
+from recipe_app.domain.matching import match_weight
 from recipe_app.domain.recipe import Recipe
 from recipe_app.infra import tables
 from recipe_app.infra.database import create_engine
@@ -71,6 +72,40 @@ async def test_stored_derived_columns_match_the_domain(
         }
     assert stored == {
         recipe.id: (recipe.diet.value, recipe.all_staples, recipe.total_minutes)
+        for recipe in seed
+    }
+
+
+async def test_stored_weights_match_the_domain(
+    engine: AsyncEngine, real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]
+) -> None:
+    """ADR-0007 rule 3: Postgres adds up the same weights the domain does."""
+    await sync(engine, real_catalog, seed, now=NOW)
+
+    async with engine.connect() as connection:
+        weights = {
+            (row.recipe_id, row.ingredient_id): row.weight
+            for row in await connection.execute(
+                select(
+                    tables.recipe_ingredients.c.recipe_id,
+                    tables.recipe_ingredients.c.ingredient_id,
+                    tables.recipe_ingredients.c.weight,
+                )
+            )
+        }
+        core_weights = {
+            row.id: row.core_weight
+            for row in await connection.execute(
+                select(tables.recipes.c.id, tables.recipes.c.core_weight)
+            )
+        }
+    assert weights == {
+        (recipe.id, item.id): match_weight(item)
+        for recipe in seed
+        for item in recipe.ingredients
+    }
+    assert core_weights == {
+        recipe.id: sum(match_weight(item) for item in recipe.ingredients)
         for recipe in seed
     }
 

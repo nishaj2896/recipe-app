@@ -21,7 +21,7 @@ from recipe_app.domain.deck import (
     resume,
 )
 from recipe_app.domain.matching import Ignored, resolve_pantry
-from recipe_app.domain.ranking import SearchFilters, rank
+from recipe_app.domain.ranking import SearchFilters
 from recipe_app.domain.recipe import Recipe
 from recipe_app.domain.scoring import SCORING_VERSION
 from recipe_app.services.ports import RecipeRepository
@@ -101,8 +101,10 @@ class RecipeService:
             hidden_recipe_ids=query.hidden_recipe_ids,
         )
 
-        candidates = await self._repository.candidates(pantry, filters)
-        remaining = resume(rank(candidates, pantry, filters), before)
+        # One more than a deck per tier: the extra one says whether a next deck exists.
+        remaining = await self._repository.ranked(
+            pantry, filters, before, query.limit + 1
+        )
         deck = build_deck(remaining, query.limit)
         after = position_after(deck, before)
         rest = resume(remaining, after)

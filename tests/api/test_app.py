@@ -9,12 +9,17 @@ from contextlib import asynccontextmanager
 import pytest
 from fastapi import FastAPI
 from httpx import AsyncClient
+from sqlalchemy import update
 
 from recipe_app.api.app import build_app
 from recipe_app.domain.catalog import IngredientCatalog
-from recipe_app.infra.catalog_store import CatalogNotSyncedError
+from recipe_app.domain.recipe import Recipe
+from recipe_app.infra.catalog_store import CatalogNotSyncedError, WeightsNotSyncedError
 from recipe_app.infra.config import ConfigError
+from recipe_app.infra.database import create_engine
+from recipe_app.infra.tables import recipes
 from tests.apps import AppFactory, client_for
+from tests.databases import sync_seed
 
 pytestmark = pytest.mark.anyio
 
@@ -110,6 +115,28 @@ async def test_build_app_refuses_to_start_on_an_unsynced_database(
     app = build_app()
 
     with pytest.raises(CatalogNotSyncedError, match="recipe-app db sync"):
+        async with started(app):
+            pass
+
+
+async def test_build_app_refuses_to_start_before_the_weights_are_synced(
+    settings: pytest.MonkeyPatch,
+    migrated_database_url: str,
+    real_catalog: IngredientCatalog,
+    seed: tuple[Recipe, ...],
+) -> None:
+    """A migration added the weights as NULL; only a sync fills them (ADR-0007)."""
+    await sync_seed(migrated_database_url, real_catalog, seed)
+    engine = create_engine(migrated_database_url)
+    try:
+        async with engine.begin() as connection:
+            await connection.execute(update(recipes).values(core_weight=None))
+    finally:
+        await engine.dispose()
+    settings.setenv("DATABASE_URL", migrated_database_url)
+    app = build_app()
+
+    with pytest.raises(WeightsNotSyncedError, match="recipe-app db sync"):
         async with started(app):
             pass
 

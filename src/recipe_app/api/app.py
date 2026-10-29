@@ -108,7 +108,7 @@ def build_app() -> FastAPI:
             )
             service = RecipeService(
                 catalog=catalog,
-                repository=PostgresRecipeRepository(engine, catalog),
+                repository=await PostgresRecipeRepository.open(engine, catalog),
                 keys=keys,
                 clock=lambda: int(time.time()),
             )
