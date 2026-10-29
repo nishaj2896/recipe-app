@@ -91,7 +91,7 @@ async def _bench(engine: AsyncEngine, rounds: int, *, check: bool) -> None:
     if check and (slow := over_budget(results, TOLERANCE)):
         sys.exit(
             f"over {TOLERANCE}x the latency budget: "
-            + ", ".join(result.search for result in slow)
+            + "; ".join(result.search for result in slow)
         )
 
 
