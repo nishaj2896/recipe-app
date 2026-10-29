@@ -34,6 +34,9 @@ def main() -> None:
         help="bench: swipe sessions per search, each up to 3 decks (default 30)",
     )
     arguments = parser.parse_args()
+    if arguments.rounds < 2:
+        # Fewer can leave a search with one sample, and no percentiles.
+        parser.error("--rounds must be at least 2")
     engine = create_engine(os.environ["DATABASE_URL"])
     match arguments.command:
         case "load":

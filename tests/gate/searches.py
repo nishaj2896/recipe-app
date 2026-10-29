@@ -17,9 +17,11 @@ from tests.gate.synthetic import synthetic_recipes
 
 GATE_RECIPES = 50_000
 
-# The worst case the API allows: a full pantry (MAX_INGREDIENT_IDS) of the
-# seed's 50 most-used class A and B ingredients, most used first. Each one
-# pulls in more recipes, so this search matches the most.
+# Close to the worst case the API allows: a full pantry (MAX_INGREDIENT_IDS)
+# of the seed's most-used class A and B ingredients, most used first. The
+# tail is a tie broken by file order, and it touches 44,571 of the 50,000
+# gate recipes. Fixed, not computed, so a seed change can't silently move
+# the benchmark; recompute it deliberately if the seed grows a lot.
 FULL_PANTRY = [
     "egg",
     "peas",
