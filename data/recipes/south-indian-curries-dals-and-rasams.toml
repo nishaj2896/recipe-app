@@ -1,0 +1,88 @@
+# South Indian: curries, dals and rasams (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c0c-7410-9068-956c67818f62"
+name = "Sambar"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "toor-dal", amount = 150, unit = "g" },
+  { id = "drumsticks", amount = 2, unit = "piece" },
+  { id = "brinjal", amount = 1, unit = "small" },
+  { id = "tamarind", amount = 15, unit = "g" },
+  { id = "sambar-powder", amount = 2, unit = "tbsp" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Rinse the toor dal and cook it with half of the water and the turmeric until very soft, then mash it smooth.",
+  "Soak the tamarind in warm water from the rest of the water for 10 minutes, then squeeze out the pulp and discard the fibres.",
+  "Cut the drumsticks into finger-length pieces and the brinjal into cubes, and chop the onion and tomato. Simmer them in the tamarind water with salt for 12 minutes, until tender.",
+  "Stir in the sambar powder and the mashed dal and simmer for 8 minutes, adding the remaining water to make a pourable sambar.",
+  "Heat the oil in a small pan, add the mustard seeds and, when they pop, the curry leaves. Pour this over the sambar and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c1d-7c1d-b8aa-d85e1a2b9630"
+name = "Kerala fish curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "kingfish", amount = 500, unit = "g" },
+  { id = "coconut-milk", amount = 400, unit = "ml" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "curry-leaves", amount = 12, unit = "leaf" },
+  { id = "tamarind", amount = 10, unit = "g" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coconut-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the kingfish into thick steaks and rub them with a little of the turmeric and salt. Soak the tamarind in the water and squeeze out the pulp.",
+  "Heat the coconut oil in a clay pot or heavy pan and add half of the curry leaves, then the sliced onion, ginger and garlic. Cook for 5 minutes until soft.",
+  "Add the rest of the turmeric and the red chilli powder, then the chopped tomato, and cook until it breaks down.",
+  "Pour in the tamarind water and the coconut milk, season with salt and bring to a gentle simmer. Do not let it boil hard or the coconut milk will split.",
+  "Slide in the kingfish and simmer for 10 to 12 minutes, shaking the pan rather than stirring. Finish with the remaining curry leaves and serve.",
+]
+
+[[recipe]]
+id = "01a15175-3c1e-730e-b9ba-d7d3a63e5dac"
+name = "Prawn masala"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and devein the prawns, then toss them with a little of the turmeric and salt.",
+  "Heat the oil in a pan and cook the finely chopped onion for 8 minutes until golden. Add the ginger garlic paste and cook for 1 minute.",
+  "Add the rest of the turmeric, the red chilli powder and the chopped tomato and cook for 6 minutes until thick.",
+  "Add the prawns and cook for 4 to 5 minutes, just until they curl and turn pink. Overcooked prawns turn rubbery.",
+  "Stir in the garam masala and serve with roti.",
+]

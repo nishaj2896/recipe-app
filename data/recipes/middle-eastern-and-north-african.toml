@@ -1,0 +1,29 @@
+# Middle Eastern and North African (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c2d-7620-b329-81eec06563fc"
+name = "Shakshuka"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "egg", amount = 6, unit = "piece" },
+  { id = "bell-pepper", amount = 1, unit = "large" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 6, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "paprika", amount = 2, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oil in a wide pan and cook the sliced onion and bell pepper for 8 minutes until soft.",
+  "Add the chopped garlic and the paprika and stir for 30 seconds.",
+  "Add the chopped tomato and salt and simmer for 10 minutes until thick and saucy.",
+  "Make hollows in the sauce and crack in the egg. Cover and cook on low heat for 5 to 7 minutes, until the whites are set and the yolks still soft.",
+  "Serve straight from the pan with crusty bread.",
+]

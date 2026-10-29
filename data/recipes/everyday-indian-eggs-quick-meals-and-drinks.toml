@@ -1,0 +1,51 @@
+# Everyday Indian: eggs, quick meals and drinks (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c16-7eb1-a711-d43ee35c650f"
+name = "Masala omelette"
+serves = 2
+prep_minutes = 5
+cook_minutes = 5
+ingredients = [
+  { id = "egg", amount = 4, unit = "piece" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion, tomato, green chillies and coriander leaves.",
+  "Beat the egg in a bowl with the red chilli powder and salt, then stir in the chopped vegetables and herbs.",
+  "Heat the oil in a frying pan over medium heat and pour in half of the mixture, tilting the pan to spread it.",
+  "Cook for 2 minutes until set underneath, flip and cook for 1 minute more. Repeat with the rest and serve with toast.",
+]
+
+[[recipe]]
+id = "01a15175-3c18-79cf-a283-c1a2dae07776"
+name = "Egg bhurji"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "egg", amount = 4, unit = "piece" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Finely chop the onion, tomato and green chillies.",
+  "Melt the butter in a pan and cook the onion and green chillies for 3 minutes until soft. Add the tomato, turmeric and salt and cook for 2 minutes.",
+  "Beat the egg and pour it into the pan. Stir slowly over low heat for 2 to 3 minutes until softly scrambled.",
+  "Take it off the heat while still moist, scatter with coriander leaves and serve with toast.",
+]

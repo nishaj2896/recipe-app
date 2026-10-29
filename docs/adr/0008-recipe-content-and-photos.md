@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-10-29
+- Amended: 2026-10-29 (rule 4: the step matcher also accepts regular plurals)
 - Deciders: Nisha
 - Amends: ADR-0001 rule 7 (quantities arrive in v1, not v2), ADR-0005 rule 2 (recipes are a directory of files)
 - Related: ADR-0001 (append-only ids), ADR-0002 rule 7 (data reviewed in pull requests), ADR-0005 (Postgres, the sync), ADR-0006 (web app, content security policy)
@@ -81,7 +82,7 @@ Ingredient order, ids and the rules of ADR-0002 rule 6 are unchanged. The 47 exi
 - no step names a catalog ingredient, by name or search term, that is not in the recipe's list, so the list never forgets one the steps use;
 - every `image.file` exists under `web/public/dishes/` with the `sha256` the recipe records, and every file there belongs to a recipe.
 
-The two ingredient checks share one matcher. It normalizes each step as the search does (ADR-0001) and scans it once, left to right. At each position it takes the longest catalog phrase (any ingredient's name or search term) that matches whole words there, records that ingredient, and continues after the phrase, so matches never overlap. Only the ingredients found that way count for both checks. "Pour in the coconut milk" therefore finds `coconut-milk` and neither `coconut` nor `milk`, and "oil" never matches inside "boil". The loader's tests cover at least "coconut milk", "coconut oil" and "green chillies". A false match that remains is fixed by rewording the step, never by an allow-list.
+The two ingredient checks share one matcher. It normalizes each step as the search does (ADR-0001) and scans it once, left to right. At each position it takes the longest catalog phrase (any ingredient's name or search term) that matches whole words there, records that ingredient, and continues after the phrase, so matches never overlap. Each phrase also matches with its last word in the regular English plural (+s, +es, or y to ies), unless that form is already another ingredient's phrase, so "boil the potatoes" finds `potato` without a search term for every plural. Retired ingredients are not phrases. Only the ingredients found that way count for both checks. "Pour in the coconut milk" therefore finds `coconut-milk` and neither `coconut` nor `milk`, and "oil" never matches inside "boil". The loader's tests cover at least "coconut milk", "coconut oil" and "green chillies". A false match that remains is fixed by rewording the step, never by an allow-list.
 
 **5. The database and the sync carry the new fields.** One migration adds `recipes.serves`, `recipes.image_file` and `recipes.image_alt`, `recipe_ingredients.amount` (numeric, NULL for to-taste) and `recipe_ingredients.unit` (text with a `CHECK` on the list, NULL together with `amount`), `recipes.image_sha256`, and a new `recipe_steps` table (recipe, position, text; primary key recipe and position). The sync writes them on every run like the rest of a recipe. This amends ADR-0005 rule 2: the sync parses the catalog file and every file in `data/recipes/`, with the same checks and the same single transaction. The search queries and their indexes do not read any of them, so the ADR-0007 latency budget is unaffected.
 

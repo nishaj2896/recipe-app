@@ -1,0 +1,57 @@
+# Indo-Chinese (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c23-770c-afb9-16d99fa0592d"
+name = "Vegetable hakka noodles"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "hakka-noodles", amount = 300, unit = "g" },
+  { id = "cabbage", amount = 150, unit = "g" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Boil the hakka noodles in the water until just cooked, drain, rinse under cold water and toss with a little of the oil so they don't stick.",
+  "Shred the cabbage, cut the carrot and bell pepper into thin strips, and slice the spring onions, keeping the greens apart.",
+  "Heat the rest of the oil in a wok over the highest heat. Stir-fry the chopped garlic and ginger for 30 seconds, then the white parts of the spring onions, the cabbage, carrot and bell pepper for 2 minutes.",
+  "Add the hakka noodles, the soy sauce, the white vinegar and salt, and toss over high heat for 2 minutes.",
+  "Scatter over the green tops of the spring onions and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c2c-75c4-a0fb-92fed93ef6e7"
+name = "Egg fried rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "egg", amount = 3, unit = "piece" },
+  { id = "rice", amount = 250, unit = "g" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 500, unit = "ml" },
+]
+steps = [
+  "Cook the rice in the water, then spread it out and let it cool completely, ideally overnight in the fridge.",
+  "Heat half of the oil in a wok over high heat. Beat the egg, pour it in and scramble until just set, then lift it out.",
+  "Heat the rest of the oil and stir-fry the chopped garlic and the white parts of the spring onions for 30 seconds.",
+  "Add the rice and stir-fry for 3 minutes, pressing it against the wok, then add the soy sauce, salt and the egg.",
+  "Toss through the green tops of the spring onions and serve hot.",
+]

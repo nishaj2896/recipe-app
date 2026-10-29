@@ -81,7 +81,7 @@ Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` wit
 | `CURSOR_SIGNING_KEYS` | JSON object of key id to a base64url key of at least 32 bytes. Every key verifies cursors |
 | `CURSOR_ACTIVE_KID` | The key id that signs new cursors |
 | `DATABASE_URL` | `postgresql+asyncpg://` URL of the database the sync filled |
-| `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and `recipes.v1.toml` (default `./data`); only `recipe-app db sync` reads it |
+| `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and the `recipes/` folder of `*.toml` files (default `./data`); only `recipe-app db sync` reads it |
 
 The app refuses to start if a key is missing or too short, if `DATABASE_URL` is missing, or if the database has never been synced. It loads the catalog once at startup, so after a sync, restart the app to pick up the new catalog. In production the keys come from the secret store, never from the repo or the logs.
 

@@ -1,0 +1,50 @@
+# Italian (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c20-7774-8764-e8cf6dcf654a"
+name = "Pasta aglio e olio"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "olive-oil", amount = 0.333, unit = "cup" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "parsley", amount = 0.5, unit = "bunch" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with plenty of salt and cook the pasta until al dente. Keep back a mugful of the cooking water before draining.",
+  "While the pasta cooks, slice the garlic thinly and warm it in the olive oil over low heat for 3 to 4 minutes, until pale golden.",
+  "Add the chilli flakes, then the drained pasta and a splash of the cooking water, and toss hard until a glossy sauce clings to the pasta.",
+  "Chop the parsley, toss it through and serve straight away.",
+]
+
+[[recipe]]
+id = "01a15175-3c21-75ea-9433-d3744b9ac581"
+name = "Penne arrabbiata"
+serves = 4
+prep_minutes = 5
+cook_minutes = 20
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "basil", amount = 10, unit = "leaf" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Warm the olive oil in a pan over medium heat and cook the sliced garlic and chilli flakes for 1 minute without browning.",
+  "Add the canned tomatoes, crush them with a spoon, season with salt and simmer for 15 minutes until thick.",
+  "Meanwhile, bring the water to a boil with plenty of salt and cook the pasta until al dente.",
+  "Drain the pasta, toss it into the sauce with torn basil and serve.",
+]
