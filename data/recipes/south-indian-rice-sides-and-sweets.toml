@@ -1,0 +1,97 @@
+# South Indian: rice, sides and sweets (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c11-7d06-89b9-1b9f415eeffd"
+name = "Lemon rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "rice", amount = 250, unit = "g" },
+  { id = "peanuts", amount = 30, unit = "g" },
+  { id = "lemon", amount = 1, unit = "piece" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 500, unit = "ml" },
+]
+steps = [
+  "Cook the rice in the water until tender, then spread it out on a plate to cool so the grains stay separate.",
+  "Heat the oil in a wide pan and fry the peanuts until golden. Add the mustard seeds and, when they pop, the curry leaves and slit green chillies.",
+  "Turn the heat down, add the turmeric and stir for a few seconds.",
+  "Add the rice and salt and toss gently until every grain is yellow.",
+  "Squeeze over the juice of the lemon, toss again and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a15175-3c12-7238-998a-d2b358a0c24e"
+name = "Curd rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "rice", amount = 200, unit = "g" },
+  { id = "curd", amount = 1.5, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 8, unit = "leaf" },
+  { id = "ginger", amount = 5, unit = "g" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 600, unit = "ml" },
+]
+steps = [
+  "Cook the rice in the water until very soft, then mash it lightly and let it cool to room temperature.",
+  "Stir in the curd, the milk and salt until creamy. The milk keeps it from turning sour as it sits.",
+  "Heat the oil in a small pan, add the mustard seeds and, when they pop, the curry leaves, grated ginger and chopped green chillies.",
+  "Pour this tempering over the curd rice, mix well and serve cool.",
+]
+
+[[recipe]]
+id = "01a15175-3c29-7980-a562-3e1ffcc1a26f"
+name = "Onion tomato chutney"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 8, unit = "leaf" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat half of the oil in a pan and fry the dried red chillies for 30 seconds. Add the chopped onion and garlic and cook for 6 minutes until soft and golden.",
+  "Add the chopped tomato and salt and cook for 6 minutes until mushy. Let it cool, then blend to a coarse paste.",
+  "Heat the rest of the oil, add the mustard seeds and, when they pop, the curry leaves. Pour this over the chutney and serve with idli or dosa.",
+]
+
+[[recipe]]
+id = "01a15175-3c2b-7dd6-aec8-9b35af3404ac"
+name = "Garlic chutney"
+serves = 4
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "garlic", amount = 15, unit = "clove" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Soak the dried red chillies in the hot water for 10 minutes, then drain.",
+  "Heat the oil in a small pan and fry the peeled garlic for 3 to 4 minutes until golden.",
+  "Grind the garlic and dried red chillies with salt to a coarse paste. It keeps in the fridge for a week.",
+]

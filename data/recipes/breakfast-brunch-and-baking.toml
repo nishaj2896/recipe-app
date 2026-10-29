@@ -1,0 +1,28 @@
+# Breakfast, brunch and baking (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c19-76f2-97d3-b9a4d1936e13"
+name = "Pancakes"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "egg", amount = 1, unit = "piece" },
+  { id = "all-purpose-flour", amount = 150, unit = "g" },
+  { id = "milk", amount = 250, unit = "ml" },
+  { id = "baking-powder", amount = 2, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Whisk the all-purpose flour, baking powder, sugar and salt together in a bowl.",
+  "Melt the butter. Beat the egg with the milk, then whisk in most of the butter, keeping the rest for the pan.",
+  "Pour the wet mixture into the dry and whisk briefly until just combined. A few lumps are fine.",
+  "Heat a non-stick pan over medium heat, brush it with butter and pour in ladlefuls of batter. Cook until bubbles appear on top, flip and cook for 1 more minute.",
+  "Serve warm, stacked, with fruit or syrup.",
+]

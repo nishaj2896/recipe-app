@@ -1,0 +1,81 @@
+# North Indian: breads and rice (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c0f-7496-91c1-4e90dc98797e"
+name = "Vegetable pulao"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "basmati-rice", amount = 300, unit = "g" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 80, unit = "g" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 600, unit = "ml" },
+]
+steps = [
+  "Rinse the basmati rice three times and soak it for 20 minutes, then drain. Dice the carrot and french beans and slice the onion.",
+  "Heat the ghee in a heavy pot and add the cumin seeds, bay leaves, green cardamom, cloves and cinnamon sticks. Fry for 30 seconds until fragrant.",
+  "Add the onion and cook for 5 minutes until golden, then add the carrot, french beans and peas and stir for 2 minutes.",
+  "Add the basmati rice and stir gently to coat it in the ghee. Pour in the water, add salt and bring to a boil.",
+  "Cover tightly and cook on the lowest heat for 12 minutes. Turn off the heat and leave it covered for 5 minutes before fluffing with a fork.",
+]
+
+[[recipe]]
+id = "01a15175-3c10-76ca-bf43-23fffb096acd"
+name = "Jeera rice"
+serves = 4
+prep_minutes = 5
+cook_minutes = 20
+ingredients = [
+  { id = "basmati-rice", amount = 300, unit = "g" },
+  { id = "cumin-seeds", amount = 2, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 600, unit = "ml" },
+]
+steps = [
+  "Rinse the basmati rice until the water runs clear, soak it for 20 minutes, then drain.",
+  "Heat the ghee in a heavy pot and add the cumin seeds. Let them crackle and turn a shade darker.",
+  "Add the basmati rice and stir gently for 1 minute, then pour in the water, add salt and bring to a boil.",
+  "Cover and cook on the lowest heat for 12 minutes, then rest for 5 minutes off the heat and fluff with a fork.",
+]
+
+[[recipe]]
+id = "01a15175-3c1c-71e8-a493-8702aa35c9e3"
+name = "Chicken biryani"
+serves = 4
+prep_minutes = 60
+cook_minutes = 60
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "basmati-rice", amount = 400, unit = "g" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "mint", amount = 0.5, unit = "bunch" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "biryani-masala", amount = 2, unit = "tbsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "l" },
+]
+steps = [
+  "Marinate the chicken with the curd, ginger garlic paste, biryani masala, half of the mint and salt for at least 1 hour.",
+  "Slice the onion thinly and fry it in the ghee for 15 minutes until deep golden and crisp. Lift out the onion and keep the ghee.",
+  "Rinse and soak the basmati rice for 30 minutes. Boil it in the salted water for 5 to 6 minutes until three-quarters cooked, then drain.",
+  "Soak the saffron in a little warm water. Cook the chicken in a heavy pot with some of the ghee for 10 minutes, then layer over the basmati rice, the fried onion, the rest of the mint, the saffron and the remaining ghee.",
+  "Seal the pot with a lid and cook on the lowest heat for 25 minutes. Rest for 10 minutes, then mix gently from the sides and serve with raita.",
+]

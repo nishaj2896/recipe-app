@@ -1,0 +1,30 @@
+# North Indian: more home cooking (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c01-7f7f-bbc8-f5c5fce48a60"
+name = "Jeera aloo"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "cumin-seeds", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Boil the potato in the water for 12 to 15 minutes until just tender, then drain, cool, peel and cut it into bite-sized cubes.",
+  "Heat the oil in a wide pan over medium heat. Add the cumin seeds and let them crackle and darken slightly.",
+  "Add the slit green chillies, then the turmeric and red chilli powder, and stir for a few seconds so the spices don't burn.",
+  "Tip in the potato and the salt and toss over medium-high heat for 5 minutes, until the cubes are coated and crisp at the edges.",
+  "Scatter over the coriander leaves and serve with puri or roti.",
+]

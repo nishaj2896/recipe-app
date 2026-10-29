@@ -1,0 +1,102 @@
+# North Indian: sides, sweets and drinks (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c13-7e43-b346-d7c2279e5e6b"
+name = "Rice kheer"
+serves = 4
+prep_minutes = 5
+cook_minutes = 40
+ingredients = [
+  { id = "rice", amount = 50, unit = "g" },
+  { id = "milk", amount = 1, unit = "l" },
+  { id = "sugar", amount = 0.333, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+]
+steps = [
+  "Rinse the rice and soak it for 15 minutes, then drain.",
+  "Bring the milk to a boil in a heavy pan, add the rice and simmer on low heat for 30 to 35 minutes, stirring often so it doesn't catch, until the rice is soft and the milk has thickened.",
+  "Stir in the sugar and the crushed seeds of the green cardamom and simmer for 5 minutes more.",
+  "Serve warm, or chill it for a few hours and serve cold.",
+]
+
+[[recipe]]
+id = "01a15175-3c26-7418-8595-c4174264ab0c"
+name = "Cucumber raita"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Grate the cucumber and squeeze it well in your hands to drain it.",
+  "Whisk the curd until smooth, then stir in the cucumber, cumin powder and salt.",
+  "Scatter with chopped coriander leaves and chill until you serve it.",
+]
+
+[[recipe]]
+id = "01a15175-3c27-73b4-819d-e09422b77b02"
+name = "Masala chai"
+serves = 2
+prep_minutes = 2
+cook_minutes = 8
+ingredients = [
+  { id = "black-tea", amount = 2, unit = "tsp" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 5, unit = "g" },
+  { id = "green-cardamom", amount = 2, unit = "piece" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Bring the water to a boil with the crushed ginger and green cardamom and simmer for 2 minutes.",
+  "Add the black tea and simmer for 1 minute until the colour deepens.",
+  "Pour in the milk and sugar and bring it back to a rolling boil, letting it rise twice.",
+  "Strain into cups and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c2a-7329-8454-367648dbe421"
+name = "Nimbu pani"
+serves = 4
+prep_minutes = 5
+cook_minutes = 0
+ingredients = [
+  { id = "lemon", amount = 3, unit = "piece" },
+  { id = "sugar", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Squeeze the juice of the lemon into a jug.",
+  "Stir in the sugar and salt until dissolved, then pour in the chilled water.",
+  "Taste and balance the sweet and sour, then serve over ice.",
+]
+
+[[recipe]]
+id = "01a15175-3c2e-777b-bda3-6dd751f0fa1c"
+name = "Kachumber salad"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Finely dice the tomato and onion and chop the green chillies and coriander leaves.",
+  "Toss everything in a bowl with salt and the juice of the lemon.",
+  "Serve straight away, before the salt draws out too much juice.",
+]

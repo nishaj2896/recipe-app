@@ -1,0 +1,452 @@
+# North Indian: curries and gravies (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c00-74aa-990d-9f9791e9d729"
+name = "Aloo matar"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Peel the potato and cut it into 2 cm cubes. Finely chop the onion, tomato and green chillies.",
+  "Heat the ghee in a heavy pan over medium heat and add the cumin seeds. When they sizzle, add the onion and cook for 6 to 8 minutes until golden.",
+  "Add the green chillies, tomato, turmeric and salt. Cook for 5 minutes, pressing the tomato down, until it turns soft and the ghee shines at the edges.",
+  "Stir in the potato and the peas so they are coated in the masala, then pour in the water.",
+  "Cover and simmer for 15 minutes, until the potato is tender and the gravy has thickened slightly. Taste for salt.",
+  "Finish with the coriander leaves and serve hot with roti.",
+]
+
+[[recipe]]
+id = "01a15175-3c02-76b4-b315-57189e41c2d0"
+name = "Aloo gobi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "cauliflower", amount = 1, unit = "small-head" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Cut the cauliflower into small florets and the potato into 2 cm cubes. Finely chop the onion and tomato and grate the ginger.",
+  "Heat the oil in a wide pan over medium heat. Add the onion and cook for 5 minutes until soft and lightly golden.",
+  "Add the ginger, turmeric and coriander powder and stir for 30 seconds, then add the tomato and salt and cook until soft.",
+  "Add the potato and the cauliflower and toss well. Cover and cook on low heat for 15 to 18 minutes, stirring now and then, until both are tender. Keep the pan dry so the vegetables roast rather than steam.",
+  "Sprinkle over the garam masala, cook uncovered for 2 more minutes, and finish with the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a15175-3c03-7619-8dad-e95a1c70ce7c"
+name = "Bhindi masala"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "okra", amount = 400, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wash the okra and dry it completely with a cloth, then trim the ends and cut it into 2 cm lengths. Slice the onion and chop the tomato.",
+  "Heat the oil in a wide pan over medium-high heat and fry the okra for 8 to 10 minutes, stirring gently, until it is no longer sticky. Lift it out.",
+  "In the same pan, cook the onion for 5 minutes until golden, then add the tomato, turmeric, red chilli powder, coriander powder and salt. Cook until the tomato breaks down.",
+  "Return the okra to the pan and toss for 3 minutes so it picks up the masala.",
+  "Sprinkle over the dry mango powder, toss once more and serve with roti.",
+]
+
+[[recipe]]
+id = "01a15175-3c04-77e6-a1ae-16fb9ffe2211"
+name = "Palak paneer"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "spinach", amount = 1, unit = "bunch" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cream", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil, blanch the spinach for 2 minutes, then plunge it into cold water. Blend it with the green chillies to a smooth purée.",
+  "Cut the paneer into 2 cm cubes. Finely chop the onion, tomato, garlic and ginger.",
+  "Heat the ghee in a pan over medium heat and cook the onion for 5 minutes until soft. Add the garlic and ginger and cook for 1 minute.",
+  "Add the tomato and salt and cook until the tomato is soft, then stir in the spinach purée and simmer for 5 minutes.",
+  "Add the paneer and the garam masala and simmer for 3 minutes. Stir in the cream, take the pan off the heat and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c05-7501-8755-44f4683cdaee"
+name = "Paneer butter masala"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cashews", amount = 15, unit = "g" },
+  { id = "cream", amount = 3, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Roughly chop the tomato and onion. Simmer them with the cashews and the water for 10 minutes, then blend to a very smooth sauce.",
+  "Melt the butter in a pan over medium heat and cook the ginger garlic paste for 1 minute until it smells sweet.",
+  "Stir in the Kashmiri chilli powder, then pour in the sauce. Add the sugar and salt and simmer for 10 minutes, stirring often, until it thickens.",
+  "Cut the paneer into cubes and add it to the sauce with the garam masala. Simmer for 3 minutes.",
+  "Crush the dried fenugreek leaves between your palms over the pan, stir in the cream and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c06-7d2e-a006-d8be5bd6ccb6"
+name = "Matar paneer"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "paneer", amount = 200, unit = "g" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Blend the onion, ginger and garlic to a paste, and blend the tomato separately. Cut the paneer into cubes.",
+  "Heat the oil in a pan over medium heat and cook the onion paste for 8 minutes, stirring, until it turns light brown.",
+  "Add the turmeric and the tomato purée with the salt and cook for 6 minutes until the oil separates.",
+  "Add the peas and the water, cover and simmer for 8 minutes until the peas are soft.",
+  "Add the paneer and the garam masala, simmer for 3 minutes more and serve with roti.",
+]
+
+[[recipe]]
+id = "01a15175-3c07-7f8f-85c3-388e5af7e04a"
+name = "Dal tadka"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "toor-dal", amount = 200, unit = "g" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 750, unit = "ml" },
+]
+steps = [
+  "Rinse the toor dal until the water runs clear. Pressure-cook it with the water, the turmeric and the chopped tomato for 3 whistles, until very soft.",
+  "Whisk the cooked dal until smooth, season with salt, and simmer for 5 minutes, adding a splash of water if it is too thick.",
+  "For the tadka, heat the ghee in a small pan. Add the cumin seeds and dried red chillies, then the sliced garlic, and fry until the garlic is golden.",
+  "Add the finely chopped onion to the tadka and fry for 3 minutes until lightly browned.",
+  "Pour the sizzling tadka over the dal, scatter with coriander leaves and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c08-7c89-b35a-70fd46ca1dcd"
+name = "Moong dal"
+serves = 4
+prep_minutes = 5
+cook_minutes = 25
+ingredients = [
+  { id = "moong-dal", amount = 200, unit = "g" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 750, unit = "ml" },
+]
+steps = [
+  "Rinse the moong dal well. Simmer it with the water, turmeric and grated ginger for 20 minutes, until soft and creamy.",
+  "Add the chopped tomato and salt and simmer for 5 more minutes, whisking to smooth the dal.",
+  "Heat the ghee in a small pan, add the cumin seeds and let them crackle.",
+  "Pour the ghee and cumin seeds over the dal, stir once and serve with roti.",
+]
+
+[[recipe]]
+id = "01a15175-3c09-7ca6-ad61-f6dc043fd0dc"
+name = "Masoor dal"
+serves = 4
+prep_minutes = 5
+cook_minutes = 20
+ingredients = [
+  { id = "masoor-dal", amount = 200, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 750, unit = "ml" },
+]
+steps = [
+  "Rinse the masoor dal and simmer it with the water and turmeric for 15 minutes, until it falls apart.",
+  "Meanwhile, heat the oil in a pan and add the cumin seeds. When they crackle, add the chopped onion and garlic and cook for 5 minutes.",
+  "Add the chopped tomato and salt and cook until soft.",
+  "Stir the onion and tomato into the dal and simmer for 5 minutes. Serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c0a-725c-9c90-73d0fa294994"
+name = "Chana masala"
+serves = 4
+prep_minutes = 480
+cook_minutes = 40
+ingredients = [
+  { id = "chickpeas", amount = 200, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "chole-masala", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Soak the chickpeas overnight in plenty of the water. Drain, then pressure-cook them in fresh water for 5 to 6 whistles, until soft. Keep the cooking liquid.",
+  "Heat the oil in a pan and cook the finely chopped onion for 8 minutes until deep golden. Add the grated ginger and garlic and cook for 1 minute.",
+  "Add the turmeric, the chole masala and the chopped tomato with salt, and cook for 6 minutes until thick and jammy.",
+  "Add the chickpeas with enough of their cooking liquid to make a thick gravy. Simmer for 15 minutes, mashing a few chickpeas to thicken it.",
+  "Finish with the coriander leaves and serve with bhatura or puri.",
+]
+
+[[recipe]]
+id = "01a15175-3c0b-7b09-ba59-3db099c27b86"
+name = "Rajma"
+serves = 4
+prep_minutes = 480
+cook_minutes = 45
+ingredients = [
+  { id = "kidney-beans", amount = 200, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Soak the kidney beans overnight in plenty of the water. Drain and pressure-cook in fresh water for 6 to 8 whistles, until completely soft.",
+  "Heat the oil in a pan and cook the finely chopped onion for 10 minutes until browned. Add the ginger garlic paste and cook for 1 minute.",
+  "Add the turmeric, red chilli powder and puréed tomato with salt and cook for 8 minutes until the oil separates.",
+  "Add the kidney beans with their cooking liquid and simmer for 20 minutes, mashing some beans against the pan so the gravy turns creamy.",
+  "Stir in the garam masala and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c0d-724d-8163-07a8da4afdd6"
+name = "Baingan bharta"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "brinjal", amount = 1, unit = "large" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Roast the brinjal directly over a gas flame or under a hot grill for 12 to 15 minutes, turning, until the skin is charred all over and the flesh collapses.",
+  "Let it cool, then peel off the skin and mash the flesh roughly with a fork.",
+  "Heat the oil in a pan and cook the chopped onion, garlic and green chillies for 5 minutes until soft.",
+  "Add the chopped tomato and salt and cook until soft, then add the mashed brinjal and cook for 8 minutes, stirring, until it is thick and smoky.",
+  "Stir in the coriander leaves and serve with roti.",
+]
+
+[[recipe]]
+id = "01a15175-3c0e-79bf-83fe-3430dbbc2966"
+name = "Mixed vegetable sabzi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the carrot, potato and french beans into small even cubes and lengths. Chop the onion and tomato.",
+  "Heat the oil in a pan and cook the onion for 5 minutes until soft. Add the turmeric, tomato and salt and cook until the tomato breaks down.",
+  "Add the carrot, french beans, peas and potato with the water. Cover and cook on low heat for 15 minutes, until all the vegetables are tender.",
+  "Uncover, stir in the garam masala and cook for 2 minutes until any liquid has dried up. Serve with roti.",
+]
+
+[[recipe]]
+id = "01a15175-3c17-7fd3-9389-349bd64c3500"
+name = "Egg curry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "egg", amount = 6, unit = "piece" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Hard-boil the egg for 10 minutes, cool it in cold water, peel and make shallow slits on the sides.",
+  "Heat the oil in a pan and briefly fry the egg with a little of the turmeric until lightly blistered. Lift it out.",
+  "In the same pan, cook the finely chopped onion for 8 minutes until golden, then add the ginger garlic paste and cook for 1 minute.",
+  "Add the rest of the turmeric, the red chilli powder and the puréed tomato with salt, and cook for 6 minutes until the oil separates.",
+  "Pour in the water, add the egg and simmer for 8 minutes. Stir in the garam masala and serve with paratha.",
+]
+
+[[recipe]]
+id = "01a15175-3c1a-7713-b024-befd853a33b0"
+name = "Chicken curry"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Mix the chicken with the curd, turmeric, half of the ginger garlic paste and salt, and leave it for at least 20 minutes.",
+  "Heat the oil in a heavy pan and cook the finely sliced onion for 12 minutes, stirring, until deep brown.",
+  "Add the rest of the ginger garlic paste and the red chilli powder, then the chopped tomato, and cook for 6 minutes until thick.",
+  "Add the chicken and cook on high heat for 5 minutes, stirring, until it changes colour.",
+  "Pour in the water, cover and simmer for 25 minutes until the chicken is tender. Stir in the garam masala, scatter with coriander leaves and serve.",
+]
+
+[[recipe]]
+id = "01a15175-3c1b-7327-a70a-a937797a18f2"
+name = "Butter chicken"
+serves = 4
+prep_minutes = 60
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "tomato", amount = 5, unit = "medium" },
+  { id = "cream", amount = 0.333, unit = "cup" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "dried-fenugreek-leaves", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Marinate the chicken in the curd, half of the ginger garlic paste, half of the Kashmiri chilli powder, half of the garam masala and salt for at least 1 hour.",
+  "Grill the chicken under a very hot grill or sear it in a hot pan for 8 to 10 minutes, until charred at the edges.",
+  "Simmer the chopped tomato for 10 minutes until soft, then blend and strain it for a silky purée.",
+  "Melt the butter in a pan, cook the rest of the ginger garlic paste for 1 minute, add the rest of the Kashmiri chilli powder and the tomato purée, and simmer for 10 minutes with the sugar and salt.",
+  "Add the chicken and the rest of the garam masala and simmer for 5 minutes. Crush in the dried fenugreek leaves, stir in the cream and serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c1f-7c61-883c-38096935aec4"
+name = "Keema matar"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "lamb-mince", amount = 500, unit = "g" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Heat the oil in a heavy pan and cook the finely chopped onion for 8 minutes until golden.",
+  "Add the ginger garlic paste and cook for 1 minute, then add the lamb mince and cook on high heat for 8 minutes, breaking it up, until browned.",
+  "Add the chopped tomato and salt and cook for 5 minutes until the tomato breaks down.",
+  "Add the peas and the water, cover and simmer for 15 minutes until the lamb mince is tender.",
+  "Stir in the garam masala, cook uncovered until thick and serve with roti.",
+]

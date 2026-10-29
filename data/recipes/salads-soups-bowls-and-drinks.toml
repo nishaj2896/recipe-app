@@ -1,0 +1,51 @@
+# Salads, soups, bowls and drinks (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c24-7cf4-9ec4-2e239c353e9f"
+name = "Tofu and broccoli stir-fry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "tofu", amount = 300, unit = "g" },
+  { id = "broccoli", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "sesame-oil", amount = 2, unit = "tbsp" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Press the tofu dry in a cloth, cut it into cubes and toss with the cornflour. Cut the broccoli into florets and the bell pepper into strips.",
+  "Heat the sesame oil in a wok and fry the tofu for 6 to 8 minutes until golden on all sides. Lift it out.",
+  "Stir-fry the chopped garlic and ginger for 30 seconds, then add the broccoli and the water and cook for 3 minutes until bright green.",
+  "Add the bell pepper, the tofu and the soy sauce and toss for 2 minutes until glossy. Serve hot.",
+]
+
+[[recipe]]
+id = "01a15175-3c28-7e20-acbd-34fc9479bf29"
+name = "Tomato soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "tomato", amount = 8, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", to_taste = true },
+  { id = "water", amount = 500, unit = "ml" },
+]
+steps = [
+  "Roughly chop the tomato, onion and garlic.",
+  "Melt the butter in a pot and cook the onion and garlic for 5 minutes until soft.",
+  "Add the tomato and the water with salt and simmer for 20 minutes until the tomato has completely collapsed.",
+  "Blend until smooth, strain if you like it silky, and season with black pepper. Serve hot.",
+]

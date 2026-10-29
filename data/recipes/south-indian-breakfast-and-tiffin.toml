@@ -1,0 +1,30 @@
+# South Indian: breakfast and tiffin (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Soaking, fermenting and
+# marinating count as prep time. Steps never state an amount; the screen scales
+# the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a15175-3c15-7017-9787-d9be73c0cb5f"
+name = "Rava upma"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "semolina", amount = 180, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 500, unit = "ml" },
+]
+steps = [
+  "Dry-roast the semolina in a pan over medium heat for 5 minutes, stirring, until it smells nutty. Tip it onto a plate.",
+  "Heat the oil in the same pan, add the mustard seeds and, when they pop, the curry leaves, chopped green chillies and grated ginger.",
+  "Add the chopped onion and cook for 3 minutes until soft. Pour in the water, add salt and bring to a boil.",
+  "Lower the heat and pour in the semolina in a thin stream, stirring all the time so no lumps form.",
+  "Cover and cook on low heat for 2 minutes until the semolina has absorbed the water and is fluffy. Serve hot.",
+]
