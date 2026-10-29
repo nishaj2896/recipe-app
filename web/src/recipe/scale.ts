@@ -89,7 +89,8 @@ export function scaledAmount(
       } else {
         shown = toGrid(value, value < 100 ? 5 : 10);
         if (shown >= 1000) {
-          shown /= 1000;
+          // On the kg and l grid too, so 1,820 g shows as 1.8 kg, not 1.82.
+          shown = toGrid(shown / 1000, 0.05);
           shownUnit = kind === "mass" ? "kg" : "l";
         }
       }

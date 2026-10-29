@@ -30,6 +30,8 @@ describe("scaledAmount", () => {
     expect(at(600, "g", 4, 12)).toBe("1.8 kg");
     expect(at(250, "ml", 2, 12)).toBe("1.5 l");
     expect(at(500, "g", 4, 8)).toBe("1 kg");
+    expect(at(910, "g", 2, 4)).toBe("1.8 kg"); // 1,820 g, on the kg grid
+    expect(at(450, "ml", 4, 10)).toBe("1.15 l"); // 1,125 ml is 1,130 ml, then 1.15 l
     expect(at(330, "ml", 4, 3)).toBe("250 ml"); // 247.5, so it stays in ml
   });
 
