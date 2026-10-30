@@ -120,6 +120,11 @@
   background: var(--go);
 }
 
+/* The times leave long waits out (ADR-0009), so this one stands out. */
+.chip[data-plan-ahead] {
+  border-color: var(--accent);
+}
+
 .have {
   color: var(--text-muted);
 }

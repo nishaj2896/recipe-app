@@ -49,3 +49,25 @@ def test_a_recipe_without_content_still_lists_its_ingredients() -> None:
     assert [(i.id, i.amount, i.unit) for i in detail.ingredients] == [
         ("potato", None, None)
     ]
+
+
+def test_the_plan_ahead_wait_is_on_the_detail() -> None:
+    waits = build_recipe(
+        id=UUID(int=4),
+        name="Soaked potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato"],
+        catalog=CATALOG,
+        plan_ahead={"wait_minutes": 480, "note": "soak overnight"},
+    )
+
+    detail = recipe_detail(RecipeWithContent(recipe=waits, content=None))
+    plain = recipe_detail(RecipeWithContent(recipe=RECIPE, content=None))
+
+    assert detail.plan_ahead is not None
+    assert (detail.plan_ahead.wait_minutes, detail.plan_ahead.note) == (
+        480,
+        "soak overnight",
+    )
+    assert plain.plan_ahead is None

@@ -163,6 +163,7 @@ Decisions that would be expensive to reverse are recorded as ADRs in [`docs/adr/
 - [ADR-0006](docs/adr/0006-frontend-web-app.md): the frontend is a mobile-first web app in `web/`, on the same origin as the API
 - [ADR-0007](docs/adr/0007-ranking-in-postgres.md): Postgres ranks and pages the search, using scores Python computed
 - [ADR-0008](docs/adr/0008-recipe-content-and-photos.md): recipes carry quantities, steps and a photo, written for this project
+- [ADR-0009](docs/adr/0009-plan-ahead-label.md): recipes that need a long wait say "Plan ahead"
 
 To change one of these decisions, add a new ADR that supersedes it rather than rewriting the old one.
 

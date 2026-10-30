@@ -7,6 +7,7 @@ import { DIETS } from "../deck/diets";
 import { useDevice } from "../store/device";
 import styles from "./RecipeDetail.module.css";
 import { MAX_SERVINGS, MIN_SERVINGS, scaledAmount } from "./scale";
+import { formatWait } from "./wait";
 
 interface Props {
   recipeId: string;
@@ -134,6 +135,13 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
           <dd>{DIETS[detail.diet]}</dd>
         </div>
       </dl>
+      {detail.plan_ahead && (
+        <p className={styles.planAhead}>
+          <strong>Plan ahead: {detail.plan_ahead.note}.</strong> About{" "}
+          {formatWait(detail.plan_ahead.wait_minutes)} hands-off, not counted in the times
+          above.
+        </p>
+      )}
 
       {serves !== null && shownServings !== null && (
         <div className={styles.servings} role="group" aria-label="Servings">

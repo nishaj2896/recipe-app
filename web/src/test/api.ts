@@ -90,6 +90,7 @@ export function recipe(
     cook_minutes: 20,
     total_minutes: 30,
     diet: "vegetarian",
+    plan_ahead: null,
   };
 }
 
@@ -108,6 +109,7 @@ export function detailOf(card: RecipeCard): RecipeDetail {
     cook_minutes: card.cook_minutes,
     total_minutes: card.total_minutes,
     diet: card.diet,
+    plan_ahead: card.plan_ahead,
     serves: 4,
     ingredients: [
       ...card.matched_ingredients,

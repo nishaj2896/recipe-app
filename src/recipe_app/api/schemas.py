@@ -88,6 +88,16 @@ class Tier(StrEnum):
     ALL_STAPLES = "all_staples"
 
 
+class PlanAhead(BaseModel):
+    """A hands-off wait of an hour or more that the times leave out (ADR-0009)."""
+
+    wait_minutes: int
+    note: str = Field(
+        description='Finishes "Plan ahead: ", so it starts in lower case, '
+        'such as "soak overnight".'
+    )
+
+
 class RecipeCard(BaseModel):
     id: UUID
     name: str
@@ -102,6 +112,7 @@ class RecipeCard(BaseModel):
     cook_minutes: int
     total_minutes: int
     diet: Diet
+    plan_ahead: PlanAhead | None
 
 
 class SearchResponse(BaseModel):
@@ -129,6 +140,7 @@ class RecipeDetail(BaseModel):
     cook_minutes: int
     total_minutes: int
     diet: Diet
+    plan_ahead: PlanAhead | None
     serves: int | None = Field(
         description="Servings the amounts are written for; null before a sync."
     )

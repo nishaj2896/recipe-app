@@ -26,6 +26,7 @@ async def test_search_card_shape(client: AsyncClient) -> None:
     assert first["missing_ingredients"] == []
     assert first["total_minutes"] == first["prep_minutes"] + first["cook_minutes"]
     assert first["diet"] == "vegetarian"
+    assert first["plan_ahead"] is None
 
 
 async def test_all_staples_card_has_no_percentage(client: AsyncClient) -> None:

@@ -4,7 +4,7 @@ import pytest
 
 from recipe_app.domain.book import parse_recipe_book
 from recipe_app.domain.catalog import parse_catalog
-from recipe_app.domain.recipe import RecipeError
+from recipe_app.domain.recipe import PlanAhead, RecipeError
 from recipe_app.domain.units import Unit
 from tests.domain.factories import catalog, category, ingredient
 
@@ -304,6 +304,90 @@ def test_image_is_kept() -> None:
         "a" * 64,
         "Aloo matar",
     )
+
+
+@pytest.mark.parametrize(
+    ("plan_ahead", "expected"),
+    [
+        pytest.param("overnight", "plan_ahead must be a table", id="not-a-table"),
+        pytest.param(
+            {"wait_minutes": 59, "note": "rest the dough"},
+            "wait_minutes must be a whole number from 60 to 10080",
+            id="under-an-hour",
+        ),
+        pytest.param(
+            {"wait_minutes": 10081, "note": "pickle for a week"},
+            "wait_minutes must be",
+            id="over-a-week",
+        ),
+        pytest.param(
+            {"wait_minutes": True, "note": "soak overnight"},
+            "wait_minutes must be",
+            id="bool-minutes",
+        ),
+        pytest.param({"wait_minutes": 480}, "note must be", id="no-note"),
+        pytest.param(
+            {"wait_minutes": 480, "note": "Soak overnight"},
+            "not start with a capital letter",
+            id="capital-note",
+        ),
+        pytest.param(
+            {"wait_minutes": 480, "note": "soak overnight."},
+            "full stop",
+            id="full-stop",
+        ),
+        pytest.param(
+            {"wait_minutes": 480, "note": "soak  overnight"},
+            "single-spaced",
+            id="double-space",
+        ),
+        pytest.param(
+            {"wait_minutes": 480, "note": "s" * 41},
+            "1 to 40 characters",
+            id="long-note",
+        ),
+        pytest.param(
+            {"wait_minutes": 480, "note": "soak overnight", "kind": "soak"},
+            "plan_ahead: unknown field 'kind'",
+            id="unknown-field",
+        ),
+    ],
+)
+def test_bad_plan_ahead(plan_ahead: object, expected: str) -> None:
+    problems = parse(recipe_table(plan_ahead=plan_ahead))
+
+    assert any(expected in problem for problem in problems), problems
+
+
+def test_plan_ahead_is_kept() -> None:
+    raw = recipe_table(plan_ahead={"wait_minutes": 480, "note": "soak overnight"})
+
+    book = parse_recipe_book([("a.toml", raw.encode())], CATALOG)
+
+    assert book.recipes[0].plan_ahead == PlanAhead(
+        wait_minutes=480, note="soak overnight"
+    )
+
+
+@pytest.mark.parametrize("note", ["2-day ferment", "24 hours in the fridge"])
+def test_a_note_may_start_with_a_digit(note: str) -> None:
+    raw = recipe_table(plan_ahead={"wait_minutes": 2880, "note": note})
+
+    book = parse_recipe_book([("a.toml", raw.encode())], CATALOG)
+
+    assert book.recipes[0].plan_ahead == PlanAhead(wait_minutes=2880, note=note)
+
+
+def test_plan_ahead_is_optional() -> None:
+    book = parse_recipe_book([("a.toml", recipe_table().encode())], CATALOG)
+
+    assert book.recipes[0].plan_ahead is None
+
+
+def test_bad_id_still_reports_a_bad_plan_ahead() -> None:
+    problems = parse(recipe_table(id="not-a-uuid", plan_ahead={"wait_minutes": 30}))
+
+    assert any("wait_minutes must be" in problem for problem in problems), problems
 
 
 def test_duplicate_id() -> None:

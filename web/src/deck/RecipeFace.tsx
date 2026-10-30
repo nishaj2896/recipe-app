@@ -74,6 +74,11 @@ export function RecipeFace({
             <span className={styles.dot} aria-hidden="true" />
             {DIETS[card.diet]}
           </span>
+          {card.plan_ahead && (
+            <span className={styles.chip} data-plan-ahead>
+              <span aria-hidden="true">⏳</span> Plan ahead: {card.plan_ahead.note}
+            </span>
+          )}
         </div>
 
         {card.matched_ingredients.length > 0 ? (

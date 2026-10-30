@@ -274,6 +274,32 @@ async def test_content_with_a_photo_and_a_to_taste_ingredient_round_trips(
     )
 
 
+async def test_a_plan_ahead_wait_reaches_the_card_and_the_detail(
+    empty_engine: AsyncEngine,
+) -> None:
+    """ADR-0009: the wait rides on the recipe row, so cards need no extra query."""
+    one = parse_catalog(catalog(category(), ingredient()))
+    recipe = build_recipe(
+        id=UUID(int=9),
+        name="Soaked potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["potato"],
+        catalog=one,
+        plan_ahead={"wait_minutes": 480, "note": "soak overnight"},
+    )
+    await sync(empty_engine, one, [recipe], now=NOW)
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+    pantry = resolve_pantry(ingredient_ids=["potato"], excluded_staples=[], catalog=one)
+
+    detail = await repository.detail(recipe.id)
+    ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
+
+    assert detail is not None
+    assert detail.recipe == recipe
+    assert [card.recipe for card in ranked.scored] == [recipe]
+
+
 async def test_a_recipe_synced_without_content_has_none(
     empty_engine: AsyncEngine,
 ) -> None:

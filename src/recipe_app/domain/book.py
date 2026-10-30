@@ -13,12 +13,15 @@ from recipe_app.domain.recipe import (
     Recipe,
     RecipeError,
     build_recipe,
+    check_plan_ahead,
     check_recipe,
 )
 from recipe_app.domain.steps import StepMatcher, step_matcher
 
 RECIPE_FIELDS = (
-    frozenset({"id", "name", "prep_minutes", "cook_minutes", "ingredients"})
+    frozenset(
+        {"id", "name", "prep_minutes", "cook_minutes", "ingredients", "plan_ahead"}
+    )
     | CONTENT_FIELDS
 )
 
@@ -122,6 +125,7 @@ def _parse_file(
                 ingredient_ids=ingredient_ids,  # type: ignore[arg-type]
                 catalog=catalog,
             )
+            check_plan_ahead(row.get("plan_ahead"), found)
             problems.extend(f"{where}: {problem}" for problem in found)
             continue
 
@@ -133,6 +137,7 @@ def _parse_file(
                 cook_minutes=row.get("cook_minutes"),  # type: ignore[arg-type]
                 ingredient_ids=ingredient_ids,  # type: ignore[arg-type]
                 catalog=catalog,
+                plan_ahead=row.get("plan_ahead"),
             )
         except RecipeError as error:
             problems.extend(f"{where}: {problem}" for problem in error.problems)
