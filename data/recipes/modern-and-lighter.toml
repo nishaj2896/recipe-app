@@ -1,0 +1,280 @@
+# Modern and lighter (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c4f-8e73-782f-b11b-025134a37a2c"
+name = "Lentil bolognese"
+serves = 4
+prep_minutes = 15
+cook_minutes = 50
+ingredients = [
+  { id = "green-lentils", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 2, unit = "cup" },
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Finely chop the onion, carrot, celery and garlic. Rinse the green lentils.",
+  "Heat the olive oil in a heavy pan over medium heat. Fry the onion, carrot and celery for 10 minutes, until soft. Add the garlic for 1 minute.",
+  "Stir in the tomato paste for 1 minute, then add the green lentils, canned tomatoes, vegetable stock, dried oregano and salt.",
+  "Simmer partly covered for 35 to 40 minutes, stirring now and then, until the green lentils are tender and the sauce is thick.",
+  "Meanwhile, bring the water to a boil with salt and cook the spaghetti for 9 to 11 minutes, until al dente. Drain.",
+  "Grate the parmesan. Taste the sauce and adjust, season with the black pepper, and serve over the spaghetti with the parmesan on top.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e75-7780-bfa6-e5bcdfe6c1c8"
+name = "Roasted cauliflower steak"
+serves = 2
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "cauliflower", amount = 1, unit = "large" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "garlic-powder", amount = 0.5, unit = "tsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "tahini", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Heat the oven to 220°C. Trim the leaves from the cauliflower, keeping the core. Cut the centre into slabs about 2.5 cm thick and break the ends into florets.",
+  "Mix the olive oil, smoked paprika, cumin powder, garlic powder, salt and black pepper. Brush it over the slabs and toss the florets in what is left.",
+  "Roast on a lined tray for 25 to 30 minutes, turning once, until deep golden and tender at the core.",
+  "Whisk the tahini with the lemon juice, the water and salt until smooth and pourable.",
+  "Chop the parsley. Taste the sauce and adjust, then serve the cauliflower with the sauce drizzled over and the parsley on top.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e77-7d63-aa40-1c3a3c016a05"
+name = "Stuffed sweet potatoes"
+serves = 4
+prep_minutes = 15
+cook_minutes = 55
+ingredients = [
+  { id = "sweet-potato", amount = 4, unit = "medium" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "sweetcorn", amount = 0.5, unit = "cup" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "feta", amount = 100, unit = "g" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "hung-curd", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Prick the sweet potatoes and bake them on a tray for 45 to 50 minutes, until soft right through.",
+  "Meanwhile, drain and rinse the black beans and slice the spring onions.",
+  "Heat the olive oil in a pan over medium heat. Add the black beans, sweetcorn, spring onions, cumin powder, smoked paprika and salt and cook for 5 minutes, until hot. Squeeze in half the lime.",
+  "Dice the avocado, crumble the feta and chop the coriander leaves. Stir the rest of the lime juice and a little salt into the Greek yogurt.",
+  "Split the sweet potatoes and fluff the insides with a fork. Taste the black bean mixture and adjust, then spoon it in and top with the avocado, feta, Greek yogurt and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e7a-7051-9a08-c730ecb65523"
+name = "Zucchini fritters"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "zucchini", amount = 3, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "feta", amount = 100, unit = "g" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "hung-curd", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Coarsely grate the zucchini, toss with salt and leave in a colander for 10 minutes. Squeeze hard in a cloth to remove the liquid.",
+  "Slice the spring onions, chop the dill and crumble the feta.",
+  "Mix the zucchini with the spring onions, dill, feta, eggs, all-purpose flour and black pepper.",
+  "Heat the oil in a wide pan over medium heat. Drop in spoonfuls of the batter, flatten them to about 1 cm thick and fry for 3 to 4 minutes a side, until golden and set.",
+  "Drain on kitchen paper. Fry the rest of the batter the same way.",
+  "Grate the garlic into the Greek yogurt and stir in the lemon juice and salt.",
+  "Taste one and adjust the salt. Serve hot with the Greek yogurt sauce.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e7c-7950-bcb5-1169c9b59a47"
+name = "Mushroom stroganoff"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "mushroom", amount = 600, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "vegetable-stock", amount = 0.5, unit = "cup" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "sour-cream", amount = 0.75, unit = "cup" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "water", amount = 2.5, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the rice and simmer it in the water in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes.",
+  "Meanwhile, slice the mushrooms and onion and chop the garlic.",
+  "Heat the olive oil and butter in a wide pan over high heat. Fry the mushrooms in batches for 5 to 6 minutes, until browned and their liquid has cooked off.",
+  "Lower the heat to medium. Fry the onion for 5 minutes, then the garlic and smoked paprika for 1 minute. Return the mushrooms.",
+  "Add the vegetable stock and dijon mustard and simmer for 2 minutes. Stir in the sour cream over low heat and heat through without boiling.",
+  "Chop the parsley. Taste and adjust, season with the black pepper, and serve over the rice with the parsley scattered over.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e7e-7813-b3c1-301bf746f818"
+name = "Vegetable pot pie"
+serves = 6
+prep_minutes = 30
+cook_minutes = 55
+ingredients = [
+  { id = "puff-pastry", amount = 300, unit = "g" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "leek", amount = 1, unit = "medium" },
+  { id = "peas", amount = 1, unit = "cup" },
+  { id = "mushroom", amount = 200, unit = "g" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 1.5, unit = "cup" },
+  { id = "milk", amount = 0.75, unit = "cup" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and dice the potatoes and carrots, slice the leek and quarter the mushrooms.",
+  "Melt the butter in a pot over medium heat. Fry the leek for 5 minutes, then the mushrooms for 5 minutes.",
+  "Stir in the all-purpose flour for 2 minutes. Whisk in the vegetable stock and milk slowly and bring to a simmer.",
+  "Add the potatoes, carrots, dried thyme, salt and black pepper and simmer for 12 to 15 minutes, until just tender and the sauce is thick. Stir in the peas. Taste and adjust, then leave to cool slightly.",
+  "Heat the oven to 200°C. Pour the filling into a pie dish. Roll out the puff pastry, lay it over and press the edges onto the rim. Cut a slit in the top.",
+  "Beat the egg and brush it over the pastry.",
+  "Bake for 25 to 30 minutes, until puffed and deep golden. Rest for 5 minutes and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e80-7d75-8d4a-c2c4fc11e9f0"
+name = "Spinach and ricotta cannelloni"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "cannelloni-tubes", amount = 250, unit = "g" },
+  { id = "spinach", amount = 500, unit = "g" },
+  { id = "ricotta", amount = 250, unit = "g" },
+  { id = "parmesan", amount = 100, unit = "g" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "passata", amount = 2, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "mozzarella", amount = 150, unit = "g" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wilt the spinach in a dry pan over medium heat for 3 to 4 minutes. Cool, squeeze out the liquid and chop finely.",
+  "Grate the parmesan. Mix the spinach with the ricotta, egg, nutmeg, half the parmesan, salt and black pepper. Taste and adjust.",
+  "Slice the garlic. Heat the olive oil in a pan over medium heat, fry the garlic for 1 minute, then add the passata, dried oregano and salt and simmer for 10 minutes.",
+  "Heat the oven to 190°C. Spread a third of the sauce in a baking dish.",
+  "Spoon or pipe the filling into the cannelloni tubes and lay them in the dish.",
+  "Pour the rest of the sauce over to cover the tubes completely. Tear the mozzarella over and scatter the rest of the parmesan.",
+  "Cover with foil and bake for 25 minutes, then uncover and bake for 10 to 15 minutes, until bubbling and golden. Rest for 5 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e83-7646-8bd2-bc94525cd58e"
+name = "Black bean burgers"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "black-beans", amount = 2, unit = "can" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "rolled-oats", amount = 0.5, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "burger-buns", amount = 4, unit = "piece" },
+  { id = "lettuce", amount = 4, unit = "leaf" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C. Drain and rinse the black beans, pat them dry, spread them on a tray and bake for 15 minutes, until dry on the surface.",
+  "Finely chop the onion and garlic. Pulse the rolled oats in a blender until coarse.",
+  "Mash most of the black beans in a bowl, leaving the rest of them whole. Mix in the onion, garlic, oats, cumin powder, smoked paprika, egg, soy sauce and salt.",
+  "Shape into patties about 10 cm across and 2 cm thick. Chill for 30 minutes.",
+  "Heat the oil in a pan over medium heat. Fry the patties for 4 to 5 minutes a side, until crusty and hot through.",
+  "Slice the tomato and toast the burger buns cut side down for 1 minute.",
+  "Taste and adjust the salt. Spread the buns with the mayonnaise and fill with the patties, lettuce and tomato. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e85-7482-8de8-08d92e7b961f"
+name = "Grilled chicken salad"
+serves = 2
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 400, unit = "g" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "dried-oregano", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "honey", amount = 1, unit = "tsp" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "cherry-tomatoes", amount = 1, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken breast. Flatten it to an even thickness and rub with some of the olive oil, the dried oregano, salt and black pepper.",
+  "Heat a grill pan over medium-high heat. Cook the chicken for 5 to 6 minutes a side, until charred and cooked through. Rest for 5 minutes, then slice.",
+  "Grate the garlic. Whisk the rest of the olive oil with the lemon juice, garlic, dijon mustard, honey and salt.",
+  "Tear the lettuce, halve the cherry tomatoes, slice the cucumber and dice the avocado.",
+  "Toss the salad with most of the dressing. Taste and adjust.",
+  "Top with the chicken, drizzle the rest of the dressing over and serve at once.",
+]

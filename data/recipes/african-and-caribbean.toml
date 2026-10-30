@@ -1,0 +1,499 @@
+# African and Caribbean (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c4a-5f8e-7c60-acaf-8a4fe25a35f2"
+name = "Jollof rice"
+serves = 6
+prep_minutes = 20
+cook_minutes = 50
+ingredients = [
+  { id = "parboiled-rice", amount = 2, unit = "cup" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "birds-eye-chillies", amount = 1, unit = "piece" },
+  { id = "tomato-paste", amount = 3, unit = "tbsp" },
+  { id = "chicken-stock", amount = 3, unit = "cup" },
+  { id = "curry-powder", amount = 1, unit = "tsp" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Blend the tomatoes, red bell peppers, one of the onions, the bird's eye chillies, garlic and ginger until smooth.",
+  "Slice the other onion. Rinse the parboiled rice until the rinsing runs clear and drain.",
+  "Heat the oil in a heavy pot over medium heat. Fry the sliced onion for 5 minutes, then stir in the tomato paste and fry for 3 minutes, until it darkens.",
+  "Add the blended mixture, curry powder, dried thyme, bay leaves and salt. Simmer for 15 to 20 minutes, stirring often, until reduced by half and the oil rises to the top.",
+  "Stir in the parboiled rice and chicken stock. Bring to a boil, then cover tightly and cook on the lowest heat for 25 to 30 minutes, until the parboiled rice is tender. Don't stir; let a little crust form on the base.",
+  "Stir in the butter and fluff the parboiled rice.",
+  "Taste and adjust the salt. Pick out the bay leaves and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f90-7c75-81a5-7add2dad1f6f"
+name = "Chicken yassa"
+serves = 4
+prep_minutes = 20
+cook_minutes = 50
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "onion", amount = 4, unit = "large" },
+  { id = "lemon", amount = 3, unit = "medium" },
+  { id = "dijon-mustard", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "birds-eye-chillies", amount = 1, unit = "piece" },
+  { id = "olives", amount = 0.33, unit = "cup" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs and legs. Slice the onions thinly and grate the garlic.",
+  "Mix the lemon juice, dijon mustard, garlic, black pepper, salt and half the oil. Toss the chicken and onions in it and leave for at least 2 hours, or overnight in the fridge.",
+  "Lift the chicken out, shaking off the onions. Grill or pan-fry it over medium-high heat for 4 to 5 minutes a side, until browned.",
+  "Heat the rest of the oil in a heavy pot over medium heat. Drain the onions, keeping the marinade, and cook them for 15 to 20 minutes, stirring, until soft and golden.",
+  "Add the marinade, chicken stock, bay leaves and the whole bird's eye chillies. Return the chicken, cover and simmer on low heat for 25 to 30 minutes, until tender.",
+  "Add the olives for the last 5 minutes.",
+  "Taste and balance the sourness and salt. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f93-7445-b9e5-2ace755af2f9"
+name = "Bobotie"
+serves = 6
+prep_minutes = 20
+cook_minutes = 55
+ingredients = [
+  { id = "beef-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "curry-powder", amount = 2, unit = "tbsp" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "white-bread", amount = 2, unit = "slice" },
+  { id = "milk", amount = 1.25, unit = "cup" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "jam", amount = 2, unit = "tbsp" },
+  { id = "raisins", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "bay-leaves", amount = 4, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C. Soak the white bread in a third of the milk.",
+  "Chop the onions and garlic. Heat the oil in a pan over medium heat and fry them for 8 minutes, until soft.",
+  "Add the curry powder and turmeric for 1 minute, then the beef mince. Cook for 8 minutes, breaking it up, until browned.",
+  "Squeeze the bread, saving the milk, and mash it into the beef mince with the jam, raisins, lemon juice and salt. Cook for 2 minutes. Taste and adjust.",
+  "Spread in a baking dish and press down.",
+  "Whisk the eggs with the rest of the milk, the saved milk and a little salt. Pour it over the meat and push the bay leaves into the top.",
+  "Bake for 35 to 40 minutes, until the custard is set and golden. Rest for 5 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f95-7947-95e0-ec51b3e1b290"
+name = "Bunny chow"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "star-anise", amount = 1, unit = "piece" },
+  { id = "curry-powder", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "white-bread", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Use bone-in goat meat cut into small chunks. Chop the onion and tomatoes, grate the garlic and ginger, and peel and quarter the potatoes.",
+  "Heat the oil in a heavy pot over medium heat. Fry the cinnamon sticks, star anise and curry leaves for 30 seconds, then the onion for 8 minutes, until golden.",
+  "Add the garlic, ginger and curry powder for 1 minute. Add the meat and stir for 5 minutes.",
+  "Add the tomatoes, salt and the water. Cover and simmer on low heat for 50 to 60 minutes, until the meat is nearly tender.",
+  "Add the potatoes and simmer for 20 minutes, until tender and the gravy is thick. Stir in the garam masala.",
+  "Use an unsliced loaf of white bread. Cut it into quarters and hollow out each piece, keeping the soft bread.",
+  "Taste the curry and adjust. Fill the bread with curry, scatter the coriander leaves over and serve with the soft bread on top for dipping.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f97-7a26-8dd0-5204054b53a1"
+name = "Peri peri chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1.5, unit = "kg" },
+  { id = "birds-eye-chillies", amount = 6, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "paprika", amount = 2, unit = "tsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "red-wine-vinegar", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Spatchcock a whole chicken by cutting out the backbone and pressing it flat. Slash the thighs and legs to the bone.",
+  "Blend the bird's eye chillies, garlic, the juice of one of the lemons, the paprika, dried oregano, red wine vinegar, olive oil and salt into a sauce.",
+  "Set aside a third of the sauce for serving. Rub the rest over the chicken and leave for at least 2 hours, or overnight in the fridge.",
+  "Heat the oven to 200°C. Roast the chicken skin side up on a rack for 40 to 45 minutes, until the juices run clear.",
+  "Finish under a hot grill or on a barbecue for 3 to 5 minutes, until charred in spots.",
+  "Rest for 10 minutes. Taste the set-aside sauce and adjust, then serve the chicken with it and the other lemon cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f9a-7afb-bf63-efbb88a1395d"
+name = "Doro wat"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "onion", amount = 4, unit = "large" },
+  { id = "ghee", amount = 0.33, unit = "cup" },
+  { id = "berbere", amount = 3, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Use bone-in chicken legs. Remove the skin, rub with the lemon juice and salt and leave for 15 minutes.",
+  "Chop the onions very finely. Cook them in a dry heavy pot over medium-low heat for 20 to 25 minutes, stirring often, until they reduce and turn deep golden.",
+  "Add the ghee and berbere and cook for 10 minutes, stirring, until dark red and fragrant.",
+  "Add the grated garlic, ginger and tomato paste for 2 minutes. Add the chicken and stir to coat.",
+  "Pour in the water, cover and simmer on low heat for 45 minutes, stirring now and then, until the chicken is very tender and the sauce is thick.",
+  "Hard-boil the eggs in a pan of boiling tap water for 9 minutes, peel and score them lightly. Add them to the stew for the last 10 minutes.",
+  "Taste and adjust the salt. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f9c-76aa-b08e-975f307ae259"
+name = "Misir wot"
+serves = 4
+prep_minutes = 10
+cook_minutes = 40
+ingredients = [
+  { id = "masoor-dal", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "berbere", amount = 2, unit = "tbsp" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the red lentils. Chop the onions finely and grate the garlic and ginger.",
+  "Cook the onions in a dry pot over medium-low heat for 10 minutes, stirring, until soft and starting to colour.",
+  "Add the ghee and berbere and fry for 3 to 4 minutes, until deep red.",
+  "Add the garlic, ginger and tomato paste for 1 minute.",
+  "Add the lentils and the water and simmer for 20 to 25 minutes, stirring often, until the lentils have broken down into a thick stew.",
+  "Taste and adjust the salt. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f9e-7bee-8ce8-4ef55d36a07c"
+name = "Suya"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "beef", amount = 600, unit = "g" },
+  { id = "peanuts", amount = 0.5, unit = "cup" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "garlic-powder", amount = 1, unit = "tsp" },
+  { id = "onion-powder", amount = 1, unit = "tsp" },
+  { id = "paprika", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use sirloin or flank steak and slice it very thinly across the grain into strips about 3 cm wide.",
+  "Toast the peanuts in a dry pan for 5 minutes, until golden. Grind them to a fine powder, stopping before they turn oily.",
+  "Mix the peanut powder with the ground ginger, garlic powder, onion powder, paprika, red chilli powder and salt. Set aside a little for serving.",
+  "Toss the beef with the oil, then with the spice mix, pressing it on. Leave for 30 minutes.",
+  "Thread onto skewers and grill over high heat for 3 to 4 minutes a side, until charred at the edges.",
+  "Slice the onion and tomatoes.",
+  "Taste and sprinkle with the set-aside spice. Serve hot with the onion and tomatoes.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fa1-7e18-b603-388db5e762a7"
+name = "Githeri"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "sweetcorn", amount = 2, unit = "cup" },
+  { id = "kidney-beans", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "curry-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Chop the onion, tomatoes and garlic and dice the carrot. Drain the kidney beans.",
+  "Heat the oil in a pot over medium heat. Fry the onion for 6 minutes, until soft, then the garlic and curry powder for 1 minute.",
+  "Add the tomatoes and carrot and cook for 6 minutes, until the tomatoes break down.",
+  "Add the sweetcorn, kidney beans, the water and salt. Simmer for 10 minutes, until thick.",
+  "Taste and adjust the salt. Scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fa3-749b-91ba-ee309bcc42dc"
+name = "Chakalaka"
+serves = 6
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "baked-beans", amount = 1, unit = "can" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "curry-powder", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Chop the onion, bell peppers and tomatoes, grate the carrots, grate the garlic and ginger, and chop the green chillies.",
+  "Heat the oil in a pan over medium heat. Fry the onion for 6 minutes, until soft.",
+  "Add the garlic, ginger, green chillies and curry powder and stir for 1 minute.",
+  "Add the bell peppers and carrots and cook for 6 to 8 minutes, until tender.",
+  "Add the tomatoes and cook for 5 minutes, then the baked beans for 5 minutes, until hot and thick.",
+  "Taste and adjust the salt. Serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fa6-7e7e-94e0-4bb386f1c399"
+name = "Groundnut stew"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "peanut-butter", amount = 0.5, unit = "cup" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "birds-eye-chillies", amount = 1, unit = "piece" },
+  { id = "sweet-potato", amount = 1, unit = "large" },
+  { id = "spinach", amount = 3, unit = "cup" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs cut into chunks. Season with salt. Chop the onion, grate the garlic and ginger, chop the bird's eye chillies, and peel and cube the sweet potato.",
+  "Heat the oil in a heavy pot over medium-high heat. Brown the chicken for 5 minutes and lift it out.",
+  "Fry the onion for 6 minutes, then the garlic, ginger and chillies for 1 minute.",
+  "Add the canned tomatoes and cook for 5 minutes. Whisk the peanut butter into the chicken stock until smooth and pour it in.",
+  "Return the chicken with the sweet potato. Simmer on low heat for 20 to 25 minutes, stirring often so it doesn't catch, until the sweet potato is tender.",
+  "Stir in the spinach for 2 minutes, until wilted.",
+  "Taste and adjust. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fa8-7cf2-b166-0d8dcc87af9a"
+name = "Jerk chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "jerk-seasoning", amount = 3, unit = "tbsp" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "brown-sugar", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs and legs and slash them to the bone.",
+  "Blend the spring onions, garlic, jerk seasoning, the juice of one of the limes, the soy sauce, brown sugar, oil and salt into a paste.",
+  "Rub the paste into the chicken and leave for at least 4 hours, or overnight in the fridge.",
+  "Heat the oven to 200°C. Roast the chicken on a rack for 35 minutes.",
+  "Finish on a hot barbecue or under a hot grill for 5 to 8 minutes, turning, until charred in spots and cooked through.",
+  "Rest for 5 minutes, taste and serve with the other lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c4a-5faa-7c6d-9b1e-0d3fb026c018"
+name = "Rice and peas"
+serves = 6
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "rice", amount = 2, unit = "cup" },
+  { id = "kidney-beans", amount = 1, unit = "can" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "thyme", amount = 3, unit = "sprig" },
+  { id = "allspice", amount = 0.25, unit = "tsp" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and drain. Crush the garlic and cut the spring onions into lengths.",
+  "Put the kidney beans with their liquid, the coconut milk, the water, garlic, spring onions, thyme, allspice and salt in a heavy pot. Bring to a simmer.",
+  "Add the rice and lay the whole bird's eye chillies on top. Don't let them burst.",
+  "Bring back to a boil, then cover tightly and cook on the lowest heat for 25 minutes, until the rice is tender and the liquid absorbed.",
+  "Rest covered for 5 minutes. Pick out the bird's eye chillies, thyme stalks and spring onions.",
+  "Fluff with a fork, taste and adjust the salt. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fac-7f0e-bbdc-0fe2ceaa316a"
+name = "Curry goat"
+serves = 6
+prep_minutes = 20
+cook_minutes = 135
+ingredients = [
+  { id = "mutton", amount = 1.2, unit = "kg" },
+  { id = "curry-powder", amount = 3, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "thyme", amount = 4, unit = "sprig" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "allspice", amount = 0.5, unit = "tsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Use bone-in goat meat cut into chunks about 4 cm across. Rub it with a third of the curry powder, the allspice, the grated garlic and ginger and salt. Leave for at least 2 hours.",
+  "Chop the onion and spring onions.",
+  "Heat the oil in a heavy pot over medium heat. Fry the rest of the curry powder for 1 to 2 minutes, stirring, until it darkens. Don't let it burn.",
+  "Add the meat and brown it for 8 to 10 minutes. Add the onion, spring onions and thyme for 3 minutes.",
+  "Pour in the water, add the whole bird's eye chillies and simmer covered on low heat for 1 and a half hours, stirring now and then.",
+  "Peel and cube the potatoes and add them. Simmer for 25 to 30 minutes, until the meat is falling off the bone and the potatoes thicken the gravy.",
+  "Pick out the bird's eye chillies and thyme stalks, taste and adjust the salt, and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5faf-755f-b1fa-b49a0e48fada"
+name = "Doubles"
+serves = 6
+prep_minutes = 30
+cook_minutes = 40
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "chickpeas", amount = 2, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "curry-powder", amount = 1, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 0.33, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "For the bara, stir the dry yeast and sugar into a third of the water, warm, and leave for 5 minutes. Mix the all-purpose flour with half the turmeric, half the cumin powder and salt, add the yeast and knead into a soft, sticky dough. Cover and leave for 1 hour.",
+  "For the channa, chop the onion and garlic. Heat a spoonful of the oil in a pot over medium heat and fry them for 5 minutes. Add the curry powder and the rest of the turmeric and cumin powder for 1 minute.",
+  "Add the drained chickpeas, the rest of the water and salt. Simmer for 20 minutes, mashing some chickpeas, until soft and saucy.",
+  "With oiled hands, pinch off balls of dough about 4 cm across and press each into a thin round about 10 cm across.",
+  "Heat the rest of the oil in a deep pan to 180°C. Fry the bara for 30 seconds a side, until puffed and pale golden. Drain.",
+  "Slice the cucumber thinly. Taste the channa and adjust.",
+  "Sandwich a spoonful of channa between 2 bara and top with the tamarind chutney and cucumber. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fb1-7545-9231-705002a3aa96"
+name = "Brown stew chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "brown-sugar", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "thyme", amount = 3, unit = "sprig" },
+  { id = "allspice", amount = 0.5, unit = "tsp" },
+  { id = "ketchup", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use bone-in chicken pieces. Season with the allspice, soy sauce, grated garlic and salt and leave for 30 minutes.",
+  "Slice the onion, bell pepper and carrot and chop the tomatoes and spring onions.",
+  "Heat the oil in a heavy pot over medium heat. Add the brown sugar and let it melt and darken for 2 to 3 minutes, until almost smoking and deep brown.",
+  "Carefully add the chicken and turn it in the caramel for 5 minutes, until browned all over.",
+  "Add the onion, bell pepper, carrot, tomatoes, spring onions and thyme and stir for 3 minutes.",
+  "Add the ketchup and the water. Cover and simmer on low heat for 30 to 35 minutes, until the chicken is tender and the sauce is rich and thick.",
+  "Taste and adjust. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"
+name = "Fried plantains"
+serves = 4
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "raw-banana", amount = 3, unit = "large" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use very ripe plantains, with mostly black skins. They should give when pressed.",
+  "Cut off the ends, slit the skin lengthwise and peel.",
+  "Slice on a long diagonal about 1.5 cm thick.",
+  "Heat the oil in a large frying pan over medium heat. Fry the slices for 2 to 3 minutes a side, until deep golden and caramelised at the edges.",
+  "Drain on kitchen paper and sprinkle with salt.",
+  "Taste one and serve hot.",
+]

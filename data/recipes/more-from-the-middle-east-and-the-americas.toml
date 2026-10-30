@@ -1,0 +1,447 @@
+# More from the Middle East and the Americas (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c4f-8e51-78cf-94a3-56308cf794c4"
+name = "Shish tawook"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "pita-bread", amount = 4, unit = "piece" },
+]
+steps = [
+  "Use boneless chicken breast. Cut it into cubes about 3 cm across. Grate the garlic and juice the lemon.",
+  "Mix the yogurt, garlic, lemon juice, tomato paste, paprika, dried oregano, olive oil, salt and black pepper. Toss the chicken in it and leave in the fridge for at least 2 hours.",
+  "Thread the chicken onto skewers, leaving small gaps between the pieces.",
+  "Heat a grill pan over high heat. Cook the skewers for 10 to 12 minutes, turning, until charred at the edges and cooked through.",
+  "Warm the pita bread in the pan for 30 seconds a side.",
+  "Taste and adjust the salt. Serve the chicken in the warm pita bread.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e53-7495-8f63-15b7f7108ae9"
+name = "Kibbeh"
+serves = 6
+prep_minutes = 40
+cook_minutes = 55
+ingredients = [
+  { id = "bulgur", amount = 1, unit = "cup" },
+  { id = "lamb-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "pine-nuts", amount = 0.33, unit = "cup" },
+  { id = "allspice", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the bulgur, cover it with the water and soak for 20 minutes. Drain and squeeze dry.",
+  "Grate one of the onions and finely chop the other.",
+  "For the shell, knead most of the lamb mince with the bulgur, grated onion, half the allspice, the cumin powder, salt and black pepper for 5 minutes, until smooth and paste-like.",
+  "For the filling, heat a little of the olive oil in a pan over medium heat. Toast the pine nuts for 2 minutes, until golden, and lift them out. Fry the chopped onion for 6 minutes, then the rest of the lamb mince for 6 to 8 minutes, until browned. Stir in the rest of the allspice, the ground cinnamon, salt and the pine nuts.",
+  "Heat the oven to 190°C. Brush a baking dish with some of the olive oil.",
+  "Press half the shell mixture into the dish. Spread the filling over, then cover with the rest of the shell mixture, smoothing it with wet hands.",
+  "Score into diamonds with a knife and pour the rest of the olive oil over.",
+  "Bake for 35 to 40 minutes, until deep brown and crisp at the edges.",
+  "Rest for 10 minutes. Taste and adjust the salt at the table, then serve warm, cut into diamonds.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e55-73a0-8bb2-260a88b5cbba"
+name = "Lentil kofte"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "masoor-dal", amount = 1, unit = "cup" },
+  { id = "bulgur", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "olive-oil", amount = 0.25, unit = "cup" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Rinse the red lentils and simmer them in the water for 15 to 18 minutes, until soft and the pan is nearly dry.",
+  "Take the pan off the heat, stir in the bulgur, cover and leave for 20 minutes, until the bulgur is soft.",
+  "Meanwhile, finely chop the onion. Heat the olive oil in a pan over medium heat and fry the onion for 6 minutes. Stir in the tomato paste, cumin powder and chilli flakes for 1 minute.",
+  "Chop the spring onions and parsley and juice the lemon. Knead everything into the lentil mixture with salt for 3 minutes.",
+  "Taste and adjust the salt and lemon. Shape into small ovals, pressing each one in your fist.",
+  "Serve at room temperature on the lettuce leaves.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e58-7536-bc42-a0213004d778"
+name = "Cilbir"
+serves = 2
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "hung-curd", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "paprika", amount = 0.5, unit = "tsp" },
+  { id = "white-vinegar", amount = 1, unit = "tbsp" },
+  { id = "dill", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Grate the garlic and stir it into the Greek yogurt with salt. Let it come to room temperature.",
+  "Bring the water to a gentle simmer in a wide pan and add the white vinegar.",
+  "Crack the eggs one at a time into a small bowl and slide each into the water. Poach for 3 to 4 minutes, until the whites are set and the yolks still runny.",
+  "Melt the butter in a small pan over medium heat until it foams and smells nutty. Stir in the chilli flakes and paprika for 10 seconds.",
+  "Spread the Greek yogurt on plates. Lift out the eggs with a slotted spoon, drain, and set them on top. Spoon the spiced butter over.",
+  "Chop the dill and scatter it over. Taste and adjust the salt, then serve at once.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e5a-77a7-9415-b73c042fda4c"
+name = "Menemen"
+serves = 2
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "parsley", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Chop the onion and bell pepper. Grate the tomatoes and discard the skins.",
+  "Heat the olive oil and butter in a pan over medium heat. Fry the onion and bell pepper for 6 minutes, until soft.",
+  "Add the tomatoes, chilli flakes and salt and simmer for 6 to 8 minutes, until thick and glossy.",
+  "Beat the eggs lightly and pour them in. Stir gently now and then for 2 to 3 minutes, until just set and still soft.",
+  "Chop the parsley. Taste and adjust the salt, add the black pepper and serve at once with the parsley on top.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e5c-748a-8845-63b90ed3c9c8"
+name = "Imam bayildi"
+serves = 4
+prep_minutes = 25
+cook_minutes = 65
+ingredients = [
+  { id = "brinjal", amount = 4, unit = "medium" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "olive-oil", amount = 0.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Peel the aubergines in stripes, leaving the stalks on. Soak in salted tap water for 20 minutes, then pat dry.",
+  "Heat most of the olive oil in a wide pan over medium heat. Fry the aubergines whole for 10 to 12 minutes, turning, until soft and golden all over. Lift them out.",
+  "Thinly slice the onions, slice the garlic and chop the tomatoes and parsley.",
+  "In the rest of the olive oil, fry the onions for 12 minutes, until very soft. Add the garlic for 2 minutes, then the tomatoes, sugar and salt for 5 minutes. Stir in the parsley.",
+  "Heat the oven to 180°C. Slit each aubergine lengthwise to make a pocket and lay them in a baking dish. Pack the filling into the pockets.",
+  "Squeeze the lemon over, pour the water around them, cover with foil and bake for 40 minutes, until very soft.",
+  "Cool to room temperature. Taste and adjust the salt, then serve with the pan juices spooned over.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e5f-7dc6-8f18-c542dcd5f7ae"
+name = "Lahmacun"
+serves = 4
+prep_minutes = 40
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 3, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "water", amount = 1, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "lamb-mince", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Warm the water to body heat. Dissolve the sugar and dry yeast in it and leave for 10 minutes, until foamy.",
+  "Mix the all-purpose flour and salt, add the yeast mixture and the olive oil, and knead for 8 to 10 minutes, until smooth. Cover and leave for 1 hour, until doubled.",
+  "Very finely chop the onion, tomatoes, bell pepper, garlic and half the parsley. Mix with the lamb mince, tomato paste, red chilli powder, cumin powder and salt into a soft paste.",
+  "Heat the oven to its highest setting with a tray inside.",
+  "Divide the dough into balls about 6 cm across and roll each one very thin into an oval.",
+  "Spread the topping thinly right to the edges.",
+  "Bake in batches on the hot tray for 6 to 8 minutes, until the edges are crisp and the meat is cooked.",
+  "Chop the rest of the parsley and cut the lemons into wedges. Taste and adjust the salt, then serve hot, scattered with the parsley, with the lemons to squeeze over before rolling up.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e61-7023-ac97-767e5615f7dc"
+name = "Baklava"
+serves = 12
+prep_minutes = 40
+cook_minutes = 60
+ingredients = [
+  { id = "filo-pastry", amount = 450, unit = "g" },
+  { id = "walnuts", amount = 300, unit = "g" },
+  { id = "pistachios", amount = 100, unit = "g" },
+  { id = "butter", amount = 1, unit = "cup" },
+  { id = "ground-cinnamon", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1.5, unit = "cup" },
+  { id = "water", amount = 1, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "honey", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Make the syrup: simmer the sugar in the water for 10 minutes, until slightly thickened. Stir in the honey and the juice of the lemon and leave to cool.",
+  "Finely chop the walnuts and pistachios and mix with the ground cinnamon. Melt the butter.",
+  "Heat the oven to 170°C. Brush a baking tin with butter. Layer half the filo pastry in it, brushing each layer with butter.",
+  "Spread the nut mixture evenly over.",
+  "Layer the rest of the filo pastry on top, brushing each layer with butter, and brush the top with the rest of the butter.",
+  "Cut into diamonds all the way through with a sharp knife.",
+  "Bake for 45 to 50 minutes, until deep golden and crisp.",
+  "Pour the cool syrup over the hot baklava. Leave for at least 4 hours to soak, then taste and serve.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e63-7cd3-a190-7be2ee65327a"
+name = "Nachos"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "corn-tortillas", amount = 12, unit = "piece" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "cheddar", amount = 200, unit = "g" },
+  { id = "pickled-jalapenos", amount = 2, unit = "tbsp" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the corn tortillas into wedges. Heat the oil in a wide pan over medium-high heat and fry the wedges in batches for 1 to 2 minutes, until crisp and golden. Drain and sprinkle with salt.",
+  "Heat the oven to 200°C. Drain and rinse the black beans and toss them with the cumin powder and salt. Grate the cheddar.",
+  "Spread the fried wedges on a tray and top with the black beans, cheddar and pickled jalapenos.",
+  "Bake for 6 to 8 minutes, until the cheddar melts.",
+  "Meanwhile, chop the tomatoes, onion and coriander leaves and mix them with the lime juice and salt. Mash the avocado with a little salt.",
+  "Taste the tomato mixture and adjust. Spoon it over the nachos with the avocado and sour cream and serve at once.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e65-79bf-90f1-c901a3d60b0c"
+name = "Philly cheesesteak"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "beef", amount = 600, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "processed-cheese", amount = 8, unit = "slice" },
+  { id = "hot-dog-buns", amount = 4, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless ribeye. Freeze the beef for 30 minutes, then slice it as thinly as you can. Season with salt and black pepper.",
+  "Thinly slice the onions and bell pepper.",
+  "Heat half the oil in a wide pan over medium heat and fry the onions and bell pepper for 10 minutes, until soft and lightly browned. Push them to one side.",
+  "Turn the heat to high, add the rest of the oil and the beef, and cook for 2 to 3 minutes, chopping with a spatula, until just browned. Mix with the onions.",
+  "Split the hot dog buns, spread the insides with the butter and toast them cut side down in another pan for 1 minute.",
+  "Divide the meat into portions in the pan, lay the processed cheese on top and cover for 1 minute, until melted.",
+  "Taste and adjust the salt. Scoop each portion into a bun and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e68-7c87-92fa-cbcb9822a6d8"
+name = "Jambalaya"
+serves = 6
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "sausages", amount = 300, unit = "g" },
+  { id = "prawns", amount = 300, unit = "g" },
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "chicken-stock", amount = 3, unit = "cup" },
+  { id = "cajun-seasoning", amount = 1, unit = "tbsp" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs and smoked sausages. Cut the chicken into chunks, slice the sausages into rounds, and peel and devein the prawns. Toss the chicken with half the cajun seasoning.",
+  "Chop the onion, bell pepper, celery and garlic.",
+  "Heat the oil in a heavy pot over medium-high heat. Brown the sausages for 4 minutes, then the chicken for 5 minutes. Lift them out.",
+  "Fry the onion, bell pepper and celery for 8 minutes, until soft, then the garlic for 1 minute.",
+  "Add the rice, the rest of the cajun seasoning, the canned tomatoes, chicken stock, bay leaves and salt. Return the chicken and sausages. Bring to a boil, then cover and simmer on low heat for 20 minutes.",
+  "Tuck in the prawns, cover and cook for 5 to 7 minutes, until the prawns are pink and the rice is tender.",
+  "Slice the spring onions. Pick out the bay leaves, taste and adjust the salt, and serve hot with the spring onions scattered over.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e6a-7ce8-be6d-bcfabfeb03f8"
+name = "Gumbo"
+serves = 6
+prep_minutes = 25
+cook_minutes = 95
+ingredients = [
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "sausages", amount = 300, unit = "g" },
+  { id = "okra", amount = 200, unit = "g" },
+  { id = "chicken-stock", amount = 1.5, unit = "l" },
+  { id = "cajun-seasoning", amount = 1, unit = "tbsp" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "rice", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs and smoked sausages. Chop the onion, bell pepper and celery, mince the garlic, cut the chicken into chunks, and slice the sausages and okra into rounds.",
+  "Heat the oil in a heavy pot over medium heat. Whisk in the all-purpose flour and cook for 30 to 40 minutes, stirring constantly, until the roux is a deep reddish brown. Don't let it burn.",
+  "Add the onion, bell pepper and celery and stir for 5 minutes, then the garlic for 1 minute.",
+  "Whisk in the chicken stock slowly. Add the chicken, sausages, okra, cajun seasoning, bay leaves, dried thyme and salt. Simmer uncovered for 45 minutes, stirring now and then, until thickened.",
+  "Meanwhile, rinse the rice and simmer it in the water in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes.",
+  "Slice the spring onions. Pick out the bay leaves, taste and adjust, and serve the gumbo over the rice with the spring onions on top.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e6c-75c5-a86d-561682e482fb"
+name = "Shrimp and grits"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "grits", amount = 1, unit = "cup" },
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "water", amount = 2, unit = "cup" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "cheddar", amount = 100, unit = "g" },
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "bacon", amount = 4, unit = "slice" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "cajun-seasoning", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Bring the milk and the water to a boil with salt. Whisk in the grits slowly, then cook on low heat for 20 to 25 minutes, stirring often, until thick and smooth.",
+  "Grate the cheddar and stir it into the grits with the butter. Season with the black pepper, cover and keep warm.",
+  "Peel and devein the prawns and toss them with the cajun seasoning. Chop the bacon, mince the garlic and slice the spring onions.",
+  "Fry the bacon in a pan over medium heat for 6 minutes, until crisp. Lift it out and keep the pan on the heat.",
+  "Add the prawns to the pan and cook for 2 minutes a side, until pink. Add the garlic for 30 seconds and squeeze the lemon over.",
+  "Taste and adjust. Spoon the grits into bowls and top with the prawns, bacon and spring onions.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e6e-76f6-a398-89fe22d9b099"
+name = "Tuna melt"
+serves = 2
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "canned-tuna", amount = 1, unit = "can" },
+  { id = "mayonnaise", amount = 3, unit = "tbsp" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "white-bread", amount = 4, unit = "slice" },
+  { id = "cheddar", amount = 100, unit = "g" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Drain the canned tuna. Finely chop the celery and onion.",
+  "Mix the canned tuna with the mayonnaise, celery, onion, the juice of the lemon, black pepper and salt. Taste and adjust.",
+  "Grate the cheddar. Spread the white bread with the butter on one side.",
+  "Lay half the bread butter side down and spread the canned tuna mixture on top. Cover with the cheddar and the rest of the bread, butter side up.",
+  "Cook in a pan over medium-low heat for 3 to 4 minutes a side, pressing gently, until golden and the cheddar has melted.",
+  "Cut diagonally and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e71-7ee7-aca9-e7e6741bae51"
+name = "Pumpkin pie"
+serves = 8
+prep_minutes = 30
+cook_minutes = 90
+ingredients = [
+  { id = "shortcrust-pastry", amount = 300, unit = "g" },
+  { id = "pumpkin", amount = 800, unit = "g" },
+  { id = "brown-sugar", amount = 0.75, unit = "cup" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "evaporated-milk", amount = 1, unit = "can" },
+  { id = "ground-cinnamon", amount = 1, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "cloves", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the pumpkin, cut it into chunks and steam for 20 to 25 minutes, until very soft. Drain well and blend to a smooth puree. Leave to cool.",
+  "Heat the oven to 200°C. Roll out the shortcrust pastry and line a deep pie tin. Prick the base, line with baking paper weighed down with pie weights and bake for 15 minutes.",
+  "Lift out the paper and weights and bake for 5 minutes more, until dry. Lower the oven to 180°C.",
+  "Whisk the pumpkin puree with the brown sugar, eggs, evaporated milk, ground cinnamon, ground ginger, nutmeg, ground cloves and salt until smooth.",
+  "Pour into the pastry case and bake for 40 to 50 minutes, until set at the edges with a slight wobble in the centre.",
+  "Cool completely on a rack. Taste and serve in wedges, at room temperature or chilled.",
+]

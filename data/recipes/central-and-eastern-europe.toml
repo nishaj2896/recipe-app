@@ -1,0 +1,339 @@
+# Central and Eastern Europe (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c4f-8e37-7126-acc4-b385b93d789a"
+name = "Goulash"
+serves = 6
+prep_minutes = 20
+cook_minutes = 140
+ingredients = [
+  { id = "beef", amount = 1, unit = "kg" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "paprika", amount = 3, unit = "tbsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "caraway-seeds", amount = 1, unit = "tsp" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Cut the beef into cubes about 3 cm across. Chop the onions, slice the garlic, and dice the bell peppers and tomatoes.",
+  "Heat the oil in a heavy pot over medium heat. Fry the onions for 12 to 15 minutes, until soft and golden.",
+  "Take the pot off the heat and stir in the paprika, smoked paprika and caraway seeds for 30 seconds. Don't let the paprika burn.",
+  "Return the pot to the heat, add the beef and garlic and stir for 5 minutes, until the beef is coated and no longer pink.",
+  "Add the tomato paste, bell peppers, tomatoes, bay leaves, salt and the water. Bring to a boil, then cover and simmer on low heat for 1 and a half hours.",
+  "Peel and cube the potatoes and carrots and add them. Simmer uncovered for 25 to 30 minutes, until the beef and potatoes are tender and the broth has thickened slightly.",
+  "Pick out the bay leaves, taste and adjust the salt, and serve hot in deep bowls.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e3a-7063-b073-a7536c40ab46"
+name = "Chicken paprikash"
+serves = 4
+prep_minutes = 15
+cook_minutes = 55
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "paprika", amount = 2, unit = "tbsp" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+  { id = "sour-cream", amount = 0.75, unit = "cup" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Use bone-in chicken thighs. Season them with salt and black pepper. Finely chop the onions and garlic, and dice the bell pepper and tomato.",
+  "Heat the oil and butter in a wide pan over medium-high heat. Brown the chicken skin side down for 6 to 8 minutes, until golden, then turn for 2 minutes. Lift it out.",
+  "Lower the heat to medium. Fry the onions in the same pan for 10 minutes, until soft and golden, then the garlic for 1 minute.",
+  "Take the pan off the heat and stir in the paprika for 30 seconds. Add the bell pepper, tomato and chicken stock.",
+  "Return the chicken, cover and simmer on low heat for 30 to 35 minutes, until the chicken is cooked through. Lift it out again.",
+  "Whisk the all-purpose flour into the sour cream, then whisk in a little of the hot liquid from the pan. Stir it all into the pan and simmer gently for 2 to 3 minutes, until thickened. Don't let it boil hard.",
+  "Return the chicken, taste and adjust the salt, and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e3d-7b71-8c32-bf5237331077"
+name = "Pierogi"
+serves = 4
+prep_minutes = 60
+cook_minutes = 50
+ingredients = [
+  { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "sour-cream", amount = 0.33, unit = "cup" },
+  { id = "water", amount = 0.5, unit = "cup" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "cottage-cheese", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Mix the all-purpose flour and salt in a bowl. Add the egg, sour cream and the water and knead for 8 minutes, until smooth and soft. Cover and leave for 30 minutes.",
+  "Peel the potatoes, cut them into chunks and boil in salted tap water for 15 to 20 minutes, until tender.",
+  "Finely chop the onions. Melt half the butter in a pan over medium heat and fry the onions for 12 to 15 minutes, until deep golden.",
+  "Drain and mash the potatoes. Mix in the cottage cheese, half the onions, the black pepper and salt. Taste and adjust, then leave to cool.",
+  "Roll the dough out thin on a floured surface and cut rounds about 8 cm across.",
+  "Put a spoonful of filling in the centre of each round, fold over into a crescent and pinch the edges firmly to seal.",
+  "Cook the pierogi in batches in a large pot of boiling salted tap water for 3 to 4 minutes after they float. Lift out with a slotted spoon.",
+  "Melt the rest of the butter in a wide pan over medium heat. Toss the pierogi in it for 2 to 3 minutes, until lightly golden.",
+  "Taste one and serve hot with the rest of the onions spooned over.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e3f-75c2-bb6a-2fea6fbd422c"
+name = "Borscht"
+serves = 6
+prep_minutes = 25
+cook_minutes = 50
+ingredients = [
+  { id = "beetroot", amount = 4, unit = "medium" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cabbage", amount = 200, unit = "g" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "red-wine-vinegar", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "vegetable-stock", amount = 1.5, unit = "l" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "dill", amount = 0.25, unit = "cup" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and coarsely grate the beetroot and carrot. Chop the onion, grate the garlic, peel and cube the potatoes and shred the cabbage.",
+  "Heat the oil in a large pot over medium heat. Fry the onion and carrot for 8 minutes, until soft.",
+  "Add the beetroot, tomato paste, red wine vinegar and sugar and cook for 10 minutes, stirring, until the beetroot softens and turns glossy.",
+  "Pour in the vegetable stock, add the potatoes and bay leaves, and simmer for 15 minutes.",
+  "Add the cabbage and simmer for 10 to 15 minutes, until the potatoes and cabbage are tender.",
+  "Stir in the garlic, black pepper and salt and turn off the heat. Leave covered for 10 minutes.",
+  "Chop the dill. Taste and adjust the salt and red wine vinegar until it is gently sweet and sour. Serve hot with the sour cream and dill on top.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e41-773d-81a2-1f6f4e80757a"
+name = "Beef stroganoff"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "beef", amount = 600, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "mushroom", amount = 300, unit = "g" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "sour-cream", amount = 0.75, unit = "cup" },
+  { id = "chicken-stock", amount = 0.5, unit = "cup" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Slice the beef thinly across the grain into strips. Season with salt, black pepper and the paprika. Slice the onion and mushrooms and chop the garlic.",
+  "Heat the oil in a wide pan over high heat. Sear the beef in batches for 1 minute a side, until browned but still pink inside. Lift it out.",
+  "Lower the heat to medium and add the butter. Fry the onion for 5 minutes, then the mushrooms for 6 to 8 minutes, until browned and dry. Add the garlic for 1 minute.",
+  "Pour in the chicken stock and stir in the dijon mustard. Simmer for 2 minutes.",
+  "Turn the heat to low and stir in the sour cream. Return the beef with its juices and heat for 1 to 2 minutes. Don't let it boil.",
+  "Chop the parsley. Taste and adjust the salt, and serve hot with the parsley scattered over.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e43-75c6-8647-fe98c8b15ce7"
+name = "Schnitzel"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "pork", amount = 600, unit = "g" },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "breadcrumbs", amount = 1.5, unit = "cup" },
+  { id = "oil", amount = 1, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless pork loin. Cut it into slices about 1 cm thick, lay them between sheets of cling film and pound them with a rolling pin until about 5 mm thick.",
+  "Season with salt and black pepper. Beat the eggs. Put the all-purpose flour, eggs and breadcrumbs in three shallow dishes.",
+  "Dip each slice in the all-purpose flour, then the eggs, then the breadcrumbs, coating it lightly. Don't press the coating in hard.",
+  "Heat the oil in a wide pan over medium-high heat until a crumb sizzles at once.",
+  "Fry the schnitzels in batches for 2 to 3 minutes a side, swirling the pan so the oil washes over the top, until puffed and deep golden.",
+  "Drain on kitchen paper and sprinkle with salt.",
+  "Cut the lemon into wedges. Taste and serve hot with the lemon wedges.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e46-7171-8c13-0f42282cc945"
+name = "Latkes"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 0.75, unit = "cup" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and coarsely grate the potatoes and onion.",
+  "Squeeze them hard in a clean cloth to remove as much liquid as you can.",
+  "Mix with the eggs, all-purpose flour, salt and black pepper.",
+  "Heat the oil in a wide pan over medium-high heat.",
+  "Drop in spoonfuls of the mixture and flatten them to about 1 cm thick. Fry for 3 to 4 minutes a side, until deep golden and crisp.",
+  "Drain on kitchen paper and sprinkle with salt. Fry the rest of the mixture the same way.",
+  "Taste one and adjust the salt. Serve hot with the sour cream.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e48-703e-851e-ecff58525a98"
+name = "Swedish meatballs"
+serves = 4
+prep_minutes = 25
+cook_minutes = 30
+ingredients = [
+  { id = "beef-mince", amount = 500, unit = "g" },
+  { id = "breadcrumbs", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 0.33, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "allspice", amount = 0.25, unit = "tsp" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "cranberry-sauce", amount = 0.33, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Soak the breadcrumbs in the milk for 5 minutes. Finely grate the onion.",
+  "Mix the beef mince with the soaked breadcrumbs, onion, egg, allspice, nutmeg, salt and black pepper. Shape into balls about 3 cm across.",
+  "Melt half the butter in a wide pan over medium heat. Fry the meatballs in batches for 8 to 10 minutes, turning, until browned all over and cooked through. Lift them out.",
+  "Add the rest of the butter to the pan, then the all-purpose flour, and stir for 2 minutes, until light brown.",
+  "Whisk in the chicken stock a little at a time, then the cream and soy sauce. Simmer for 5 minutes, until the gravy coats a spoon.",
+  "Return the meatballs and simmer for 3 minutes.",
+  "Taste the gravy and adjust. Serve hot with the cranberry sauce on the side.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e4a-7da0-a168-9785b5513199"
+name = "Kasespatzle"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "emmental", amount = 150, unit = "g" },
+  { id = "gruyere", amount = 150, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "chives", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Beat the eggs with the milk, nutmeg and salt. Stir in the all-purpose flour and beat with a wooden spoon for 5 minutes, until the batter is thick, smooth and bubbly. Rest for 15 minutes.",
+  "Thinly slice the onions. Melt the butter in a pan over medium heat and fry the onions for 15 to 20 minutes, stirring, until deep brown and crisp.",
+  "Heat the oven to 180°C. Grate the emmental and gruyere and mix them together.",
+  "Bring the water to a boil in a large pot with salt. Press the batter through a colander with large holes into the water. Cook for 2 minutes, until the spaetzle float.",
+  "Lift out the spaetzle with a slotted spoon. Layer them in a baking dish with the grated emmental and gruyere, finishing with a layer of both.",
+  "Bake for 10 minutes, until melted and bubbling.",
+  "Chop the chives. Taste and adjust the salt, then serve hot with the fried onions and chives on top.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e4c-79fd-8fd8-bd6a304b9f44"
+name = "Cabbage rolls"
+serves = 6
+prep_minutes = 40
+cook_minutes = 80
+ingredients = [
+  { id = "cabbage", amount = 1, unit = "small-head" },
+  { id = "beef-mince", amount = 500, unit = "g" },
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "passata", amount = 2, unit = "cup" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Cut out the core of the cabbage. Lower it into a large pot of boiling salted tap water for 3 to 5 minutes, peeling off the outer leaves as they soften. Drain the leaves and shave down the thick ribs.",
+  "Rinse the rice. Finely chop the onions and garlic.",
+  "Heat half the oil in a pan over medium heat and fry half the onions for 6 minutes, until soft. Add the garlic for 1 minute and leave to cool.",
+  "Mix the beef mince with the rice, the fried onions, paprika, salt and black pepper.",
+  "Put a spoonful of filling at the base of each leaf, fold in the sides and roll up tightly.",
+  "Heat the rest of the oil in a heavy pot and fry the rest of the onions for 5 minutes. Stir in the tomato paste, passata and the water and season with salt.",
+  "Lay the rolls seam side down in the sauce, packed tightly. Cover and simmer on low heat for 60 minutes, until the cabbage is tender and the rice is cooked.",
+  "Chop the dill. Taste the sauce and adjust, then serve hot with the sour cream and dill.",
+]
+
+[[recipe]]
+id = "01a18c4f-8e4f-7cd9-b9c2-69653c3ea757"
+name = "Apple strudel"
+serves = 8
+prep_minutes = 40
+cook_minutes = 45
+ingredients = [
+  { id = "filo-pastry", amount = 250, unit = "g" },
+  { id = "apple", amount = 5, unit = "medium" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "ground-cinnamon", amount = 1, unit = "tsp" },
+  { id = "raisins", amount = 0.33, unit = "cup" },
+  { id = "walnuts", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "breadcrumbs", amount = 0.5, unit = "cup" },
+  { id = "butter", amount = 0.5, unit = "cup" },
+  { id = "icing-sugar", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Heat the oven to 190°C. Melt the butter. Toast the breadcrumbs in some of the butter in a pan over medium heat for 3 to 4 minutes, until golden.",
+  "Peel, core and thinly slice the apples. Chop the walnuts. Mix the apples with the sugar, ground cinnamon, raisins, walnuts and the zest and juice of the lemon.",
+  "Lay the filo pastry on a cloth, overlapping the sheets into a large rectangle and brushing each layer with the rest of the butter. Save a little butter for the top.",
+  "Scatter the breadcrumbs along the long edge nearest you, then spread the apple filling over them.",
+  "Using the cloth, roll it up tightly, tuck in the ends and lift onto a lined tray seam side down. Brush with the saved butter.",
+  "Bake for 35 to 40 minutes, until deep golden and crisp.",
+  "Cool for 15 minutes. Taste the filling for sweetness, dust with the icing sugar, cut into thick slices and serve warm.",
+]
