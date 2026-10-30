@@ -549,8 +549,8 @@ ingredients = [
 ]
 steps = [
   "Rinse the rice and simmer it in most of the water in a covered pan on low heat for 15 minutes, then rest covered for 10 minutes.",
-  "Slice the beef into thin strips and toss with half the soy sauce, half the sugar and a third of the grated garlic. Mix the gochujang with the rest of the sugar, a spoonful of the toasted sesame oil and a splash of the rest of the water into a sauce.",
-  "Blanch the soybean sprouts in a pan of boiling tap water for 4 minutes and drain. Blanch the spinach for 30 seconds, cool under the cold tap and squeeze dry. Season each with a little salt, garlic and toasted sesame oil.",
+  "Slice the beef into thin strips and toss with half the soy sauce, half the sugar and a third of the garlic, grated. Mix the gochujang with the rest of the sugar, a spoonful of the toasted sesame oil and a splash of the rest of the water into a sauce.",
+  "Blanch the soybean sprouts in a pan of boiling tap water for 4 minutes and drain. Blanch the spinach for 30 seconds, cool under the cold tap and squeeze dry. Season each with a little salt, the rest of the garlic and a little of the toasted sesame oil.",
   "Cut the carrot and zucchini into matchsticks and slice the mushrooms. Heat a little of the oil in a frying pan over medium-high heat and stir-fry each separately for 1 to 2 minutes with a little salt, until just tender.",
   "Stir-fry the mushrooms with the rest of the soy sauce for 3 minutes. Then stir-fry the beef for 2 to 3 minutes, until browned.",
   "Fry the eggs in the rest of the oil for 2 to 3 minutes, until the whites are set and the yolks still runny.",
@@ -687,7 +687,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 ingredients = [
-  { id = "rice-cakes", amount = 500, unit = "g" },
+  { id = "korean-rice-cakes", amount = 500, unit = "g" },
   { id = "gochujang", amount = 3, unit = "tbsp" },
   { id = "gochugaru", amount = 1, unit = "tbsp" },
   { id = "sugar", amount = 2, unit = "tbsp" },

@@ -522,6 +522,14 @@ category = "vegetables"
 search_terms = ["dried wild caper berries"]
 
 [[ingredient]]
+id = "kombu"
+name = "Kombu"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["dried kelp"]
+
+[[ingredient]]
 id = "leek"
 name = "Leek"
 class = "B"
@@ -558,6 +566,14 @@ name = "Mustard greens"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+
+[[ingredient]]
+id = "nori"
+name = "Nori"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["seaweed sheets"]
 
 [[ingredient]]
 id = "okra"
@@ -2103,6 +2119,14 @@ diet = "vegan"
 category = "rice-and-grains"
 
 [[ingredient]]
+id = "korean-rice-cakes"
+name = "Korean rice cakes"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["rice cake sticks"]
+
+[[ingredient]]
 id = "little-millet"
 name = "Little millet"
 class = "A"
@@ -2175,14 +2199,6 @@ class = "A"
 diet = "vegan"
 category = "rice-and-grains"
 search_terms = ["white rice", "sona masoori", "ponni rice"]
-
-[[ingredient]]
-id = "rice-cakes"
-name = "Korean rice cakes"
-class = "A"
-diet = "vegan"
-category = "rice-and-grains"
-search_terms = ["rice cake sticks"]
 
 [[ingredient]]
 id = "rolled-oats"
@@ -2622,14 +2638,6 @@ name = "Naan"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
-
-[[ingredient]]
-id = "nori"
-name = "Nori"
-class = "B"
-diet = "vegan"
-category = "bread-bakery-and-snacks"
-search_terms = ["seaweed sheets"]
 
 [[ingredient]]
 id = "panko"
@@ -4688,14 +4696,6 @@ name = "Kimchi"
 class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
-
-[[ingredient]]
-id = "kombu"
-name = "Kombu"
-class = "B"
-diet = "vegan"
-category = "sauces-and-condiments"
-search_terms = ["dried kelp"]
 
 [[ingredient]]
 id = "lime-pickle"

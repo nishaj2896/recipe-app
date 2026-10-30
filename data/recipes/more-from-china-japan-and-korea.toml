@@ -337,7 +337,7 @@ ingredients = [
   { id = "cabbage", amount = 3, unit = "cup" },
   { id = "sweet-potato", amount = 1, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
-  { id = "rice-cakes", amount = 200, unit = "g" },
+  { id = "korean-rice-cakes", amount = 200, unit = "g" },
   { id = "spring-onions", amount = 3, unit = "piece" },
   { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
   { id = "oil", amount = 1, unit = "tbsp" },
