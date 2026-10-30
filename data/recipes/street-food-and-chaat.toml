@@ -276,6 +276,7 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 80
 plan_ahead = { wait_minutes = 600, note = "soak overnight" }
+image = { file = "01a18bb7-fec4-7656-a6b2-1e578490c3c9.webp", sha256 = "12653655000f8b667818e744a02316ed0b65b616f9ebb8f5b8464e7ba273f6b0", alt = "Chole in a small bowl with a puffed bhatura and sliced onion" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 1, unit = "tbsp" },

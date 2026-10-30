@@ -40,6 +40,7 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 15
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+image = { file = "01a188e6-a83e-78f1-a1ee-2349f5e25707.webp", sha256 = "b5ddeb4734faaeb454bef7de088a4d720c83fff1f1286c70dc276072243ce268", alt = "Four steamed idlis on a dark plate" }
 ingredients = [
   { id = "idli-rice", amount = 2, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -100,6 +101,7 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 40
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+image = { file = "01a188e6-a842-793c-b480-e9e5cbe1d5f2.webp", sha256 = "266acde34fd5d480e311ae73c87733d00fdefaec6e55d3b9a8a3d0aaf68d698e", alt = "Masala dosa folded over a potato filling, with curry leaves, on a dark plate" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -464,6 +466,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a188e6-a860-7ddd-8d31-de266d80a111.webp", sha256 = "32f19445850361d1f42d9e4d8c2b6bcd0ed86b40498860a652156ba9d7abd0b1", alt = "Three golden medu vadas on a dark plate" }
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },

@@ -44,6 +44,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a188aa-f1be-73ed-a585-cf2dc55a06d0.webp", sha256 = "c61670f5bceac855bcfea38f8e4f588b442060d6009990e3ca2b1e8947936a94", alt = "Charred chicken tikka pieces with a halved lemon" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -397,6 +398,7 @@ name = "Samosa"
 serves = 4
 prep_minutes = 25
 cook_minutes = 45
+image = { file = "01a188aa-f1d8-72f8-b06b-92069ff0ac6b.webp", sha256 = "dbf8714c335c731c73f9b87224a2067aee226cf60e2ae5ccc8dd4d9d4866ec26", alt = "Two crisp samosas, one broken open to show a potato and pea filling" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "carom-seeds", amount = 0.5, unit = "tsp" },

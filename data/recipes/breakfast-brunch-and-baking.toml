@@ -11,6 +11,7 @@ name = "Pancakes"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a15175-3c19-76f2-97d3-b9a4d1936e13.webp", sha256 = "c49571eee16d8cd867c51ac33f99292fd49c620e4ed26fa26363a0faf85caf89", alt = "Stack of pancakes with butter, maple syrup and berries" }
 ingredients = [
   { id = "egg", amount = 1, unit = "piece" },
   { id = "all-purpose-flour", amount = 150, unit = "g" },

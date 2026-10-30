@@ -215,6 +215,7 @@ name = "Gajar ka halwa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+image = { file = "01a188e4-2cdc-7ae1-bc1a-736d9a9a15de.webp", sha256 = "fea67c15329737de7e0030cb6bc73f89ccd6561ceac24661836c0159225e451f", alt = "Gajar ka halwa in a small bowl, topped with cashews, almonds and raisins" }
 ingredients = [
   { id = "carrot", amount = 1, unit = "kg" },
   { id = "milk", amount = 1, unit = "l" },
@@ -371,6 +372,7 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 60, note = "soak in syrup for 1 hour" }
+image = { file = "01a188e4-2ce9-7b4e-b35a-8e2b508762c7.webp", sha256 = "1c5c5a6827bfbd214ed59b92595b2648ac07af3c443f25e7f54ed5d1b409d498", alt = "Three gulab jamun in syrup in a dark bowl, with cardamom pods beside it" }
 ingredients = [
   { id = "khoa", amount = 200, unit = "g" },
   { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
@@ -519,6 +521,7 @@ name = "Mango lassi"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+image = { file = "01a188e4-2cf6-7b18-9459-f97d106e2641.webp", sha256 = "474c9bb784da8aedd2ce4237d8060fffb2b40d93bb4eba44639f860680b7b63f", alt = "Tall glass of mango lassi with a mint leaf on top" }
 ingredients = [
   { id = "mango", amount = 1, unit = "large" },
   { id = "curd", amount = 1, unit = "cup" },

@@ -392,6 +392,7 @@ name = "Fish and chips"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+image = { file = "01a18c1e-2c33-789b-8049-74cd10b23778.webp", sha256 = "dc221df3c731778305560946f2a168c7f700c0e33340ca291a14e18a60e5ceae", alt = "Battered fish with thick chips, tartare sauce and a lemon wedge" }
 ingredients = [
   { id = "cod", amount = 4, unit = "piece" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -617,6 +618,7 @@ name = "Caesar salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18c1e-2c45-70d5-872a-680de59f4bec.webp", sha256 = "8b975d980aa42330b543dfe6f16bbb0c7dd859ae8b99d8f25ad05923b8464558", alt = "Caesar salad of little gem leaves with croutons, parmesan shavings and anchovies" }
 ingredients = [
   { id = "lettuce", amount = 2, unit = "small-head" },
   { id = "parmesan", amount = 0.75, unit = "cup" },
@@ -880,6 +882,7 @@ name = "Brownies"
 serves = 12
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18c1e-2c59-7b08-9eaa-6c2b7e7344e9.webp", sha256 = "8b681498f3eecf3df7d9f088eb2b30e9ffb754972cbd52787bfc17d4f729748e", alt = "Two stacked chocolate brownies on a dark plate" }
 ingredients = [
   { id = "dark-chocolate", amount = 200, unit = "g" },
   { id = "butter", amount = 0.75, unit = "cup" },

@@ -63,6 +63,7 @@ name = "Spaghetti carbonara"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bbd-3cd0-7bec-8c09-6e9f33e2d4d6.webp", sha256 = "6c097172c972ba4abddbee5b181fc8998ffad2777c5180c6311ee55db79d1840", alt = "Spaghetti carbonara twirled into a nest with crisp bacon, pecorino and black pepper" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "bacon", amount = 150, unit = "g" },
@@ -383,6 +384,7 @@ name = "Mushroom risotto"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18bbd-3ce9-71d9-a100-997abd112da6.webp", sha256 = "ce182cf43153d716648db5aa4bc31c7265821e3e76d69b5f16044e65a17e8390", alt = "Creamy mushroom risotto topped with sliced mushrooms, thyme and parmesan" }
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "mushroom", amount = 400, unit = "g" },
@@ -494,6 +496,7 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+image = { file = "01a18bbd-3cf2-72f3-97ac-b70d056785cb.webp", sha256 = "11b91d83031773b0405936b92b677c27024b44ea8f48257a029a5e32a82bba5e", alt = "Margherita pizza with blistered crust, mozzarella and basil" }
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -826,6 +829,7 @@ serves = 8
 prep_minutes = 30
 cook_minutes = 0
 plan_ahead = { wait_minutes = 360, note = "chill for 6 hours" }
+image = { file = "01a18bbd-3d0d-77cc-8ec9-0e772f02c3e7.webp", sha256 = "5ae7252c48524022d711d7c153058351e4ec08f9a4e1e286fa49c87eda19ff15", alt = "Square slice of tiramisu dusted with cocoa" }
 ingredients = [
   { id = "ladyfingers", amount = 250, unit = "g" },
   { id = "mascarpone", amount = 500, unit = "g" },

@@ -122,6 +122,7 @@ name = "Aloo paratha"
 serves = 4
 prep_minutes = 25
 cook_minutes = 35
+image = { file = "01a188ac-0599-7b01-a8c0-c7e57b87d415.webp", sha256 = "bebeb0d90bb85e1a5852d0f03d239130780cadb8ccb13021b6619fff060faf75", alt = "Stack of aloo parathas with a pat of butter and fresh coriander" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },

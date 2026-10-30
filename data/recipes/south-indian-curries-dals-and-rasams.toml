@@ -11,6 +11,7 @@ name = "Sambar"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a15175-3c0c-7410-9068-956c67818f62.webp", sha256 = "a39d5c8eccf8cc6fd72396967ab4dcb56eec46e843d055c45613ee9e228bcf41", alt = "Bowl of sambar with drumsticks, aubergine, tomato and a dried red chilli" }
 ingredients = [
   { id = "toor-dal", amount = 150, unit = "g" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -42,6 +43,7 @@ name = "Kerala fish curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a15175-3c1d-7c1d-b8aa-d85e1a2b9630.webp", sha256 = "ce1c2ce899ee37087a88d304376b75a515a82029cd79b8418f6f060eee7010a5", alt = "Kerala fish curry in a black clay bowl with red rice, curry leaves and fried shallots" }
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 400, unit = "ml" },

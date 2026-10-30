@@ -236,6 +236,7 @@ name = "Lamb kofta"
 serves = 4
 prep_minutes = 20
 cook_minutes = 12
+image = { file = "01a18c16-b207-7c33-9307-ea008a44cf84.webp", sha256 = "12aecf7ef57b78493e787f410781977b579f0e36a9e1bc7ae2f62410eea93ef3", alt = "Grilled lamb kofta on a yogurt sauce with a lemon wedge and mint" }
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "small" },

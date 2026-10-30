@@ -11,6 +11,7 @@ name = "Pad thai"
 serves = 2
 prep_minutes = 20
 cook_minutes = 12
+image = { file = "01a18c0c-0cab-74d1-84e6-cbf6625fa8ec.webp", sha256 = "061b45044f07f5bd38a6cc58ae21492bece0b8096e39f90691fa4b8fdb890456", alt = "Pad thai with prawns, tofu, bean sprouts and a lime wedge" }
 ingredients = [
   { id = "flat-rice-noodles", amount = 200, unit = "g" },
   { id = "prawns", amount = 200, unit = "g" },
@@ -195,6 +196,7 @@ name = "Tom yum soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c0c-0cb9-7a88-bdde-57551b5d091e.webp", sha256 = "0aa9ec9378ae3b67d4e2304c321741acf140d19915cd6d2e408dd7d4ecbb03f9", alt = "Tom yum soup with prawns, mushrooms and herbs in a white bowl" }
 ingredients = [
   { id = "prawns", amount = 400, unit = "g" },
   { id = "lemongrass", amount = 2, unit = "piece" },
