@@ -21,7 +21,8 @@ MAX_TOTAL_MINUTES = 24 * 60
 class Recipe:
     """A recipe made only of real catalog ingredients; build it with build_recipe.
 
-    Soaking, fermenting and marinating count as prep time.
+    Prep and cook time count hands-on work only; waiting such as soaking,
+    fermenting, marinating, resting, chilling or freezing is left out.
     """
 
     id: UUID

@@ -1,8 +1,9 @@
 # North Indian: breads and rice (data/recipes, ADR-0008 rules 2 and 3).
 #
-# Recipe ids are published: never change or reuse one. Soaking, fermenting and
-# marinating count as prep time. Steps never state an amount; the screen scales
-# the ingredient amounts and the steps don't.
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
 
 [[recipe]]
 id = "01a15175-3c0f-7496-91c1-4e90dc98797e"
@@ -63,7 +64,7 @@ steps = [
 id = "01a15175-3c1c-71e8-a493-8702aa35c9e3"
 name = "Chicken biryani"
 serves = 4
-prep_minutes = 60
+prep_minutes = 30
 cook_minutes = 60
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -95,7 +96,7 @@ steps = [
 id = "01a188ac-0597-7bfe-8ab8-24300d82453f"
 name = "Plain paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -118,7 +119,7 @@ steps = [
 id = "01a188ac-0599-7b01-a8c0-c7e57b87d415"
 name = "Aloo paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 25
 cook_minutes = 35
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -151,7 +152,7 @@ steps = [
 id = "01a188ac-059c-7117-b956-95db3c58e90f"
 name = "Gobi paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 25
 cook_minutes = 35
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -181,7 +182,7 @@ steps = [
 id = "01a188ac-059e-7270-b094-d245c12dcf0b"
 name = "Paneer paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 20
 cook_minutes = 30
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -209,7 +210,7 @@ steps = [
 id = "01a188ac-05a0-7b93-9b54-b30f2bd33756"
 name = "Methi paratha"
 serves = 4
-prep_minutes = 25
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -237,7 +238,7 @@ steps = [
 id = "01a188ac-05a2-7dee-9c46-e992ed52bb4e"
 name = "Mooli paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 25
 cook_minutes = 30
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -266,7 +267,7 @@ steps = [
 id = "01a188ac-05a4-7d6b-8b51-b0183f72ee48"
 name = "Lachha paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -289,7 +290,7 @@ steps = [
 id = "01a188ac-05a7-7dde-b069-03b15b2dd2b3"
 name = "Phulka"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 20
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -310,7 +311,7 @@ steps = [
 id = "01a188ac-05a9-7419-8d55-e9c12cddd474"
 name = "Tandoori roti"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -334,7 +335,7 @@ steps = [
 id = "01a188ac-05ab-7173-ac6b-80a0e9101563"
 name = "Missi roti"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -363,7 +364,7 @@ steps = [
 id = "01a188ac-05ad-7540-a452-90d483cf792b"
 name = "Butter naan"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -390,7 +391,7 @@ steps = [
 id = "01a188ac-05af-7758-b298-8c9999377ec6"
 name = "Garlic naan"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -420,7 +421,7 @@ steps = [
 id = "01a188ac-05b1-784f-bb14-2bba03c32a18"
 name = "Bhatura"
 serves = 4
-prep_minutes = 150
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -447,7 +448,7 @@ steps = [
 id = "01a188ac-05b3-7852-994e-2b3ec2b5edf4"
 name = "Puri"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 20
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -470,7 +471,7 @@ steps = [
 id = "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2"
 name = "Kulcha"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 20
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -497,7 +498,7 @@ steps = [
 id = "01a188ac-05b8-75d4-b607-f24571d2f34e"
 name = "Matar pulao"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -522,4 +523,345 @@ steps = [
   "Pour in the water, add salt and bring to a boil.",
   "Cover tightly and cook on the lowest heat for 12 minutes, without lifting the lid.",
   "Turn off the heat and rest for 10 minutes. Fluff gently with a fork and serve.",
+]
+
+[[recipe]]
+id = "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef"
+name = "Kashmiri pulao"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "cashews", amount = 20, unit = "g" },
+  { id = "almonds", amount = 20, unit = "g" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "apple", amount = 1, unit = "medium" },
+  { id = "pomegranate", amount = 0.25, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.25, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice in 3 changes of water, until it runs almost clear. Soak it in fresh water for 20 minutes, then drain.",
+  "Warm the milk and soak the saffron in it. Peel the apple, core it and cut into small cubes.",
+  "Heat the ghee in a heavy pot over medium heat. Fry the cashews and almonds for 2 minutes, until golden, then add the raisins for 30 seconds, until they puff. Lift everything out.",
+  "Add the green cardamom, cloves, cinnamon, bay leaves and fennel seeds to the ghee and stir for 30 seconds, until fragrant.",
+  "Add the basmati rice and stir gently for 2 minutes, so every grain is coated in ghee.",
+  "Pour in the water and saffron milk, add the sugar and salt and bring to a boil.",
+  "Cover tightly and cook on the lowest heat for 12 minutes, without lifting the lid. Turn off the heat and rest for 10 minutes.",
+  "Fluff gently with a fork. Fold in the apple and the fried nuts and raisins, scatter the pomegranate seeds over and serve.",
+]
+
+[[recipe]]
+id = "01a188e4-2cc1-7d6c-91e0-de20898e32ce"
+name = "Mutton biryani"
+serves = 6
+prep_minutes = 40
+cook_minutes = 120
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 4, unit = "large" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "biryani-masala", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "cloves", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 3, unit = "leaf" },
+  { id = "black-cumin", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 6, unit = "tbsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Thinly slice the onions. Fry them in the oil in a heavy pot over medium heat for 15 to 18 minutes, stirring often, until deep brown and crisp. Lift them out and keep the oil.",
+  "Mix the mutton with the curd, ginger garlic paste, slit green chillies, half the mint and coriander leaves, the biryani masala, red chilli powder, turmeric, lemon juice, salt, half the fried onions and a spoonful of the onion oil. Marinate for at least 2 hours.",
+  "Put the mutton and its marinade in the pot, cover and cook on low heat for 50 to 60 minutes, stirring every 15 minutes, until tender and the gravy is thick.",
+  "Rinse the basmati rice in 3 changes of water and soak it for 30 minutes.",
+  "Bring the water to a rolling boil with the green cardamom, cloves, cinnamon, bay leaves, black cumin and plenty of salt.",
+  "Drain the basmati rice, add it and boil for 5 to 6 minutes, until a grain breaks easily but still has a firm core. Drain.",
+  "Warm the milk and soak the saffron in it.",
+  "Spread the basmati rice evenly over the mutton. Scatter over the rest of the fried onions, mint and coriander leaves, and drizzle with the saffron milk and ghee.",
+  "Seal the pot with a tight lid, or with a rope of dough around the rim. Cook on high heat for 5 minutes, until you hear it sizzle.",
+  "Set the pot on a griddle over the lowest heat and cook for 25 minutes. Rest for 10 minutes without opening, then mix gently from the sides and serve.",
+]
+
+[[recipe]]
+id = "01a188e4-2cc3-741b-b1ec-d5dc88859668"
+name = "Lucknowi biryani"
+serves = 6
+prep_minutes = 30
+cook_minutes = 150
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 8, unit = "piece" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "cloves", amount = 6, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 3, unit = "leaf" },
+  { id = "mace", amount = 1, unit = "pinch" },
+  { id = "nutmeg", amount = 1, unit = "pinch" },
+  { id = "white-pepper", amount = 1, unit = "tsp" },
+  { id = "kewra-water", amount = 1, unit = "tsp" },
+  { id = "rose-water", amount = 1, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "cream", amount = 4, unit = "tbsp" },
+  { id = "ghee", amount = 8, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Tie the fennel seeds, coriander seeds, half the green cardamom, the black cardamom, half the cloves and cinnamon and the bay leaves in a muslin cloth.",
+  "Put the mutton in a large pot with the spice pouch, half the onions roughly chopped, the ginger garlic paste, salt and most of the water.",
+  "Bring to a boil, skim off any scum and simmer for 60 to 70 minutes, until the mutton is tender. This is the yakhni. Lift out the meat and strain the broth.",
+  "Thinly slice the rest of the onions. Fry them in the ghee in a heavy pot over medium heat for 10 minutes, until golden.",
+  "Add the mutton and the whisked curd and cook for 10 minutes, stirring, until the curd no longer looks raw.",
+  "Add the mace, nutmeg, white pepper and a ladle of the broth and simmer for 5 minutes, until the meat is coated in a thick gravy.",
+  "Rinse the basmati rice in 3 changes of water and soak it for 30 minutes.",
+  "Bring the rest of the broth to a boil, topped up with the rest of the water, the remaining whole spices and salt. Add the drained basmati rice and cook for 5 to 6 minutes, until a grain breaks easily but still has a firm core. Drain.",
+  "Spread the basmati rice over the mutton. Mix the saffron into the warm milk with the cream, kewra water and rose water and pour it over the top.",
+  "Seal the pot and cook on the lowest heat for 25 minutes. Rest for 10 minutes. The Lucknowi style keeps the basmati rice white and fragrant, so don't stir in any spice paste.",
+]
+
+[[recipe]]
+id = "01a188e4-2cc5-7d1d-8441-6a87ddb91dee"
+name = "Vegetable biryani"
+serves = 4
+prep_minutes = 25
+cook_minutes = 45
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "cauliflower", amount = 0.5, unit = "small-head" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "large" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "biryani-masala", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 2, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Rinse the basmati rice in 3 changes of water and soak it for 30 minutes.",
+  "Cut the carrot, french beans, cauliflower and potato into bite-sized pieces. Thinly slice the onions.",
+  "Heat the ghee in a heavy pot over medium heat. Fry the onions for 10 to 12 minutes, until golden. Lift out half.",
+  "Add the ginger garlic paste and stir for 1 minute, until the raw smell goes.",
+  "Add the vegetables, peas, curd, biryani masala, red chilli powder, turmeric and salt. Stir well, cover and cook on low heat for 10 minutes, until the vegetables are almost tender.",
+  "Bring the water to a rolling boil with the green cardamom, cloves, cinnamon, bay leaves and plenty of salt.",
+  "Add the drained basmati rice and boil for 5 minutes, until a grain breaks easily but still has a firm core. Drain.",
+  "Spread the basmati rice over the vegetables. Scatter over the fried onions, mint and coriander leaves, and pour over the saffron soaked in the warm milk.",
+  "Cover tightly and cook on the lowest heat for 20 minutes. Rest for 5 minutes, then mix gently from the sides and serve.",
+]
+
+[[recipe]]
+id = "01a188e4-2cc7-76a3-9aa0-27fb2fe4dd84"
+name = "Egg biryani"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "egg", amount = 6, unit = "piece" },
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "biryani-masala", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "l" },
+]
+steps = [
+  "Boil the eggs for 10 minutes, cool them in cold water and peel. Make 3 or 4 shallow slits on each.",
+  "Heat the oil in a pan over medium heat. Fry the eggs with a little of the turmeric for 2 minutes, turning, until blistered. Lift them out.",
+  "Rinse the basmati rice in 3 changes of water and soak it for 30 minutes.",
+  "Thinly slice the onions and chop the tomatoes. Heat the ghee in a heavy pot over medium heat and fry the onions for 10 minutes, until golden.",
+  "Add the ginger garlic paste and stir for 1 minute. Add the tomatoes, curd, biryani masala, red chilli powder, the rest of the turmeric and salt.",
+  "Cook for 6 to 8 minutes, stirring, until it becomes a thick masala and the ghee separates. Add the eggs and turn them to coat.",
+  "Bring the water to a rolling boil with the green cardamom, cloves, bay leaves and plenty of salt. Add the drained basmati rice and boil for 5 minutes, until a grain still has a firm core. Drain.",
+  "Spread the basmati rice over the masala and scatter the mint and coriander leaves over.",
+  "Cover tightly and cook on the lowest heat for 20 minutes. Rest for 5 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a188e4-2cca-72b2-8e7d-907f76755018"
+name = "Paneer biryani"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "large" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "biryani-masala", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 2, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Cut the paneer into 2 cm cubes. Coat them with the curd, half the biryani masala, the Kashmiri chilli powder, turmeric and salt. Leave for 20 minutes.",
+  "Rinse the basmati rice in 3 changes of water and soak it for 30 minutes.",
+  "Thinly slice the onions and chop the tomato. Heat the ghee in a heavy pot over medium heat and fry the onions for 10 minutes, until golden. Lift out half.",
+  "Add the ginger garlic paste and stir for 1 minute, then add the tomato and cook for 4 minutes, until soft.",
+  "Add the paneer with its marinade and the rest of the biryani masala. Cook gently for 5 minutes, until the masala thickens.",
+  "Bring the water to a rolling boil with the green cardamom, cloves, bay leaves and plenty of salt. Add the drained basmati rice and boil for 5 minutes, until a grain still has a firm core. Drain.",
+  "Spread the basmati rice over the paneer. Scatter the fried onions, mint and coriander leaves over and pour over the saffron soaked in the warm milk.",
+  "Cover tightly and cook on the lowest heat for 20 minutes. Rest for 5 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a188e4-2ccc-7d84-a054-9790a3a27f41"
+name = "Rajma chawal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 60
+ingredients = [
+  { id = "kidney-beans", amount = 1, unit = "cup" },
+  { id = "basmati-rice", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Rinse the kidney beans and soak them overnight in plenty of water. Drain.",
+  "Pressure cook them with salt and most of the water for 6 to 7 whistles. Let the pressure drop on its own. The beans must be completely soft and creamy inside.",
+  "Finely chop the onions, purée the tomatoes and slit the green chillies.",
+  "Heat the ghee in a pan over medium heat. Add the cumin seeds and let them sizzle for 20 seconds.",
+  "Add the onions and cook for 8 to 10 minutes, until golden. Add the ginger garlic paste and green chillies and stir for 1 minute.",
+  "Add the tomato purée, turmeric, red chilli powder and coriander powder and cook for 8 minutes, until the masala darkens and the ghee separates.",
+  "Add the kidney beans with their liquid and mash a few against the pan. Simmer for 20 minutes, until thick and creamy.",
+  "Meanwhile, rinse the basmati rice and bring it to a boil in the rest of the water with a little salt. Cover and cook on the lowest heat for 12 minutes, then rest for 5 minutes.",
+  "Stir the garam masala into the beans, taste for salt and scatter the coriander leaves over. Serve the beans over the basmati rice.",
+]
+
+[[recipe]]
+id = "01a188e4-2cce-7282-8ab9-28675b97891a"
+name = "Khichdi"
+serves = 4
+prep_minutes = 5
+cook_minutes = 25
+ingredients = [
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "moong-dal", amount = 0.5, unit = "cup" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and moong dal together in several changes of water. Soak them for 15 minutes and drain.",
+  "Grate the ginger.",
+  "Heat the ghee in a pressure cooker over medium heat. Add the cumin seeds and asafoetida and let them sizzle for 20 seconds.",
+  "Add the ginger, then the rice, dal and turmeric and stir for 1 minute.",
+  "Pour in the water, add salt and pressure cook for 4 whistles. Let the pressure drop on its own.",
+  "Open and stir. The khichdi should be soft and porridge-like; add a splash of hot water if it is too thick.",
+  "Serve hot with a little ghee on top.",
+]
+
+[[recipe]]
+id = "01a188e4-2cd1-7458-b604-22a48aacf77c"
+name = "Masala khichdi"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "toor-dal", amount = 0.5, unit = "cup" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and toor dal together in several changes of water. Soak them for 15 minutes and drain.",
+  "Dice the potato and carrot. Chop the onion and tomato and slit the green chillies.",
+  "Heat the ghee in a pressure cooker over medium heat. Add the cumin seeds and let them sizzle for 20 seconds.",
+  "Add the onion and green chillies and cook for 5 minutes, until soft. Add the ginger garlic paste and stir for 1 minute.",
+  "Add the tomato, turmeric and red chilli powder and cook for 3 minutes, until the tomato softens.",
+  "Add the potato, carrot and peas and stir for 2 minutes.",
+  "Add the rice, dal, water and salt and pressure cook for 4 whistles. Let the pressure drop on its own.",
+  "Stir in the garam masala, adding a splash of hot water if it is too thick. Taste for salt, scatter the coriander leaves over and serve hot.",
 ]
