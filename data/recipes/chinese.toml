@@ -387,6 +387,7 @@ name = "Char siu pork"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "hoisin-sauce", amount = 3, unit = "tbsp" },

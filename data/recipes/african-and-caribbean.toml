@@ -44,6 +44,7 @@ name = "Chicken yassa"
 serves = 4
 prep_minutes = 20
 cook_minutes = 50
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 4, unit = "large" },
@@ -140,6 +141,7 @@ name = "Peri peri chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "birds-eye-chillies", amount = 6, unit = "piece" },
@@ -335,6 +337,7 @@ name = "Jerk chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "jerk-seasoning", amount = 3, unit = "tbsp" },
@@ -388,6 +391,7 @@ name = "Curry goat"
 serves = 6
 prep_minutes = 20
 cook_minutes = 135
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "mutton", amount = 1.2, unit = "kg" },
   { id = "curry-powder", amount = 3, unit = "tbsp" },
@@ -419,6 +423,7 @@ name = "Doubles"
 serves = 6
 prep_minutes = 30
 cook_minutes = 40
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },

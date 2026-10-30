@@ -140,6 +140,7 @@ name = "Lagan nu custard"
 serves = 6
 prep_minutes = 15
 cook_minutes = 90
+plan_ahead = { wait_minutes = 180, note = "chill for 3 hours" }
 ingredients = [
   { id = "milk", amount = 4, unit = "cup" },
   { id = "condensed-milk", amount = 0.5, unit = "cup" },
@@ -205,6 +206,7 @@ name = "Sai bhaji"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "spinach", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.33, unit = "cup" },
@@ -239,6 +241,7 @@ name = "Dal pakwan"
 serves = 4
 prep_minutes = 30
 cook_minutes = 50
+plan_ahead = { wait_minutes = 120, note = "soak for 2 hours" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -480,6 +483,7 @@ name = "Goli baje"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+plan_ahead = { wait_minutes = 120, note = "rest the batter for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "rice-flour", amount = 2, unit = "tbsp" },
@@ -511,6 +515,7 @@ name = "Patrode"
 serves = 4
 prep_minutes = 40
 cook_minutes = 50
+plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
 ingredients = [
   { id = "colocasia-leaves", amount = 10, unit = "piece" },
   { id = "rice", amount = 1, unit = "cup" },

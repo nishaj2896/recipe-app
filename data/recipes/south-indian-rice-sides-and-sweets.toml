@@ -282,6 +282,7 @@ name = "Hyderabadi chicken biryani"
 serves = 6
 prep_minutes = 40
 cook_minutes = 80
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -846,6 +847,7 @@ name = "Qubani ka meetha"
 serves = 6
 prep_minutes = 10
 cook_minutes = 40
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "dried-apricots", amount = 250, unit = "g" },
   { id = "sugar", amount = 0.5, unit = "cup" },

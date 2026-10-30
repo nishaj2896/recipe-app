@@ -217,6 +217,7 @@ name = "Overnight oats"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+plan_ahead = { wait_minutes = 360, note = "chill for 6 hours" }
 ingredients = [
   { id = "rolled-oats", amount = 1, unit = "cup" },
   { id = "milk", amount = 1.25, unit = "cup" },
@@ -292,6 +293,7 @@ name = "Fruit smoothie bowl"
 serves = 2
 prep_minutes = 10
 cook_minutes = 0
+plan_ahead = { wait_minutes = 240, note = "freeze for 4 hours" }
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "strawberries", amount = 1, unit = "cup" },
@@ -368,6 +370,7 @@ name = "Cinnamon rolls"
 serves = 12
 prep_minutes = 30
 cook_minutes = 25
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "all-purpose-flour", amount = 3.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },
@@ -545,6 +548,7 @@ name = "Cheesecake"
 serves = 12
 prep_minutes = 25
 cook_minutes = 60
+plan_ahead = { wait_minutes = 420, note = "chill for 6 hours" }
 ingredients = [
   { id = "digestive-biscuits", amount = 250, unit = "g" },
   { id = "butter", amount = 0.5, unit = "cup" },
@@ -649,6 +653,7 @@ name = "Dinner rolls"
 serves = 12
 prep_minutes = 25
 cook_minutes = 20
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "bread-flour", amount = 3.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },

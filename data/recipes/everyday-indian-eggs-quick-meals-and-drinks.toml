@@ -122,6 +122,7 @@ name = "Egg dosa"
 serves = 2
 prep_minutes = 5
 cook_minutes = 15
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "egg", amount = 2, unit = "large" },
   { id = "onion", amount = 1, unit = "small" },

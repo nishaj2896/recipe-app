@@ -39,6 +39,7 @@ name = "Idli"
 serves = 6
 prep_minutes = 15
 cook_minutes = 15
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "idli-rice", amount = 2, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -98,6 +99,7 @@ name = "Masala dosa"
 serves = 4
 prep_minutes = 25
 cook_minutes = 40
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -135,6 +137,7 @@ name = "Plain dosa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -221,6 +224,7 @@ name = "Set dosa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },
@@ -245,6 +249,7 @@ name = "Neer dosa"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -268,6 +273,7 @@ name = "Pesarattu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 300, note = "soak for 5 hours" }
 ingredients = [
   { id = "mung-beans", amount = 1, unit = "cup" },
   { id = "rice", amount = 2, unit = "tbsp" },
@@ -296,6 +302,7 @@ name = "Adai"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -327,6 +334,7 @@ name = "Uttapam"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -354,6 +362,7 @@ name = "Onion tomato uttapam"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -383,6 +392,7 @@ name = "Appam"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 600, note = "soak, then ferment for 6 hours" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -453,6 +463,7 @@ name = "Medu vada"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },
@@ -481,6 +492,7 @@ name = "Masala vada"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -779,6 +791,7 @@ name = "Mysore bonda"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+plan_ahead = { wait_minutes = 120, note = "rest the batter for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -809,6 +822,7 @@ name = "Mangalore buns"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+plan_ahead = { wait_minutes = 480, note = "rest the dough for 8 hours" }
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -835,6 +849,7 @@ name = "Paniyaram"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -866,6 +881,7 @@ name = "Kuzhi paniyaram sweet"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 ingredients = [
   { id = "idli-rice", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },
@@ -928,6 +944,7 @@ name = "Malabar parotta"
 serves = 4
 prep_minutes = 40
 cook_minutes = 30
+plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 3, unit = "cup" },
   { id = "milk", amount = 0.5, unit = "cup" },

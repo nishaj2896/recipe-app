@@ -493,6 +493,7 @@ name = "Margherita pizza"
 serves = 4
 prep_minutes = 25
 cook_minutes = 20
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -521,6 +522,7 @@ name = "Pizza bianca"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -770,6 +772,7 @@ name = "Focaccia"
 serves = 8
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "bread-flour", amount = 4, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },
@@ -822,6 +825,7 @@ name = "Tiramisu"
 serves = 8
 prep_minutes = 30
 cook_minutes = 0
+plan_ahead = { wait_minutes = 360, note = "chill for 6 hours" }
 ingredients = [
   { id = "ladyfingers", amount = 250, unit = "g" },
   { id = "mascarpone", amount = 500, unit = "g" },
@@ -847,6 +851,7 @@ name = "Panna cotta"
 serves = 6
 prep_minutes = 10
 cook_minutes = 10
+plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 ingredients = [
   { id = "whipping-cream", amount = 2, unit = "cup" },
   { id = "milk", amount = 1, unit = "cup" },

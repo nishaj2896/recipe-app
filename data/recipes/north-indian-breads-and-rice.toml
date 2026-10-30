@@ -66,6 +66,7 @@ name = "Chicken biryani"
 serves = 4
 prep_minutes = 30
 cook_minutes = 60
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
@@ -366,6 +367,7 @@ name = "Butter naan"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -393,6 +395,7 @@ name = "Garlic naan"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -423,6 +426,7 @@ name = "Bhatura"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 2, unit = "tbsp" },
@@ -473,6 +477,7 @@ name = "Kulcha"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -567,6 +572,7 @@ name = "Mutton biryani"
 serves = 6
 prep_minutes = 40
 cook_minutes = 120
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -774,6 +780,7 @@ name = "Rajma chawal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 60
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "cup" },
   { id = "basmati-rice", amount = 1, unit = "cup" },

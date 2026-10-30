@@ -11,6 +11,7 @@ name = "Shish tawook"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -181,6 +182,7 @@ name = "Lahmacun"
 serves = 4
 prep_minutes = 40
 cook_minutes = 30
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "all-purpose-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -216,6 +218,7 @@ name = "Baklava"
 serves = 12
 prep_minutes = 40
 cook_minutes = 60
+plan_ahead = { wait_minutes = 240, note = "soak in syrup for 4 hours" }
 ingredients = [
   { id = "filo-pastry", amount = 450, unit = "g" },
   { id = "walnuts", amount = 300, unit = "g" },

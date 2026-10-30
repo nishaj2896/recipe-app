@@ -74,6 +74,7 @@ name = "Chicken satay (Malaysian)"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "lemongrass", amount = 2, unit = "piece" },

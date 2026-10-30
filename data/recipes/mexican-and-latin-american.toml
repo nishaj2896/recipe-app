@@ -800,6 +800,7 @@ name = "Tres leches cake"
 serves = 10
 prep_minutes = 20
 cook_minutes = 35
+plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "baking-powder", amount = 1.5, unit = "tsp" },

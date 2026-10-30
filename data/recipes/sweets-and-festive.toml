@@ -33,6 +33,7 @@ name = "Jalebi"
 serves = 6
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 480, note = "ferment the batter overnight" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "cornflour", amount = 1, unit = "tbsp" },
@@ -107,6 +108,7 @@ name = "Sabudana kheer"
 serves = 4
 prep_minutes = 5
 cook_minutes = 30
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "sago", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 4, unit = "cup" },
@@ -174,6 +176,7 @@ name = "Kalakand"
 serves = 8
 prep_minutes = 10
 cook_minutes = 45
+plan_ahead = { wait_minutes = 120, note = "let it set for 2 hours" }
 ingredients = [
   { id = "milk", amount = 6, unit = "cup" },
   { id = "lemon", amount = 1, unit = "small" },
@@ -291,6 +294,7 @@ name = "Anarsa"
 serves = 8
 prep_minutes = 40
 cook_minutes = 25
+plan_ahead = { wait_minutes = 4800, note = "soak the rice for 3 days" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 0.5, unit = "cup" },
@@ -401,6 +405,7 @@ name = "Mango kulfi"
 serves = 6
 prep_minutes = 15
 cook_minutes = 35
+plan_ahead = { wait_minutes = 480, note = "freeze for 8 hours" }
 ingredients = [
   { id = "mango", amount = 2, unit = "large" },
   { id = "milk", amount = 3, unit = "cup" },

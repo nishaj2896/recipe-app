@@ -11,6 +11,7 @@ name = "Pani puri"
 serves = 4
 prep_minutes = 45
 cook_minutes = 25
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
@@ -143,6 +144,7 @@ name = "Ragda pattice"
 serves = 4
 prep_minutes = 20
 cook_minutes = 55
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "potato", amount = 4, unit = "medium" },
@@ -273,6 +275,7 @@ name = "Chole bhature"
 serves = 4
 prep_minutes = 30
 cook_minutes = 80
+plan_ahead = { wait_minutes = 600, note = "soak overnight" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 1, unit = "tbsp" },
@@ -310,6 +313,7 @@ name = "Chole kulche"
 serves = 4
 prep_minutes = 30
 cook_minutes = 60
+plan_ahead = { wait_minutes = 600, note = "soak overnight" }
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -349,6 +353,7 @@ name = "Kachori sabzi"
 serves = 4
 prep_minutes = 40
 cook_minutes = 50
+plan_ahead = { wait_minutes = 120, note = "soak for 2 hours" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -388,6 +393,7 @@ name = "Moong dal pakoda"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 1, unit = "piece" },

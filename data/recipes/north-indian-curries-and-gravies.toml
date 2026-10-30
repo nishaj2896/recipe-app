@@ -280,6 +280,7 @@ name = "Chana masala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "chickpeas", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -312,6 +313,7 @@ name = "Rajma"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "kidney-beans", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -461,6 +463,7 @@ name = "Butter chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -520,6 +523,7 @@ name = "Chicken tikka masala"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -593,6 +597,7 @@ name = "Chicken korma"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -775,6 +780,7 @@ name = "Murgh musallam"
 serves = 4
 prep_minutes = 30
 cook_minutes = 70
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "egg", amount = 4, unit = "piece" },
@@ -850,6 +856,7 @@ name = "Mutton korma"
 serves = 4
 prep_minutes = 15
 cook_minutes = 90
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -1889,6 +1896,7 @@ name = "Lauki chana dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "bottle-gourd", amount = 300, unit = "g" },
   { id = "chana-dal", amount = 0.5, unit = "cup" },
@@ -2162,6 +2170,7 @@ name = "Pindi chole"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 2, unit = "tsp" },
@@ -2234,6 +2243,7 @@ name = "Dal makhani"
 serves = 4
 prep_minutes = 10
 cook_minutes = 90
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "whole-urad", amount = 0.75, unit = "cup" },
   { id = "kidney-beans", amount = 0.25, unit = "cup" },
@@ -2301,6 +2311,7 @@ name = "Chana dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2335,6 +2346,7 @@ name = "Urad chana dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "urad-dal", amount = 0.5, unit = "cup" },
   { id = "chana-dal", amount = 0.5, unit = "cup" },
@@ -2369,6 +2381,7 @@ name = "Panchmel dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -2407,6 +2420,7 @@ name = "Lobia masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 45
+plan_ahead = { wait_minutes = 360, note = "soak for 6 hours" }
 ingredients = [
   { id = "black-eyed-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -2439,6 +2453,7 @@ name = "Kala chana curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 50
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },

@@ -11,6 +11,7 @@ name = "Tandoori chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -42,6 +43,7 @@ name = "Chicken tikka"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -72,6 +74,7 @@ name = "Chicken malai tikka"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -166,6 +169,7 @@ name = "Galouti kebab"
 serves = 4
 prep_minutes = 25
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -644,6 +648,7 @@ name = "Dahi bhalla"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },
@@ -713,6 +718,7 @@ name = "Matar kulcha"
 serves = 4
 prep_minutes = 25
 cook_minutes = 60
+plan_ahead = { wait_minutes = 600, note = "soak overnight" }
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -791,6 +797,7 @@ name = "Moong dal chilla"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },

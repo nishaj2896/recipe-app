@@ -442,6 +442,7 @@ name = "Olan"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "ash-gourd", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.25, unit = "cup" },
@@ -467,6 +468,7 @@ name = "Erissery"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "pumpkin", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.333, unit = "cup" },
@@ -769,6 +771,7 @@ name = "Chicken varuval"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1136,6 +1139,7 @@ name = "Chicken ghee roast"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -1347,6 +1351,7 @@ name = "Mor kuzhambu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },
@@ -1416,6 +1421,7 @@ name = "Paruppu usili"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },

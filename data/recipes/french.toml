@@ -354,6 +354,7 @@ name = "Savoury galettes"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+plan_ahead = { wait_minutes = 60, note = "rest the batter for 1 hour" }
 ingredients = [
   { id = "buckwheat-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 5, unit = "large" },
@@ -428,6 +429,7 @@ name = "Chocolate mousse"
 serves = 6
 prep_minutes = 20
 cook_minutes = 5
+plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 ingredients = [
   { id = "dark-chocolate", amount = 200, unit = "g" },
   { id = "egg", amount = 6, unit = "large" },
@@ -451,6 +453,7 @@ name = "Creme brulee"
 serves = 6
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 ingredients = [
   { id = "whipping-cream", amount = 2, unit = "cup" },
   { id = "egg", amount = 6, unit = "large" },

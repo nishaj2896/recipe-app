@@ -178,6 +178,7 @@ name = "Kadala curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 70
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.75, unit = "cup" },
@@ -446,6 +447,7 @@ name = "Chickpea sundal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 50
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -813,6 +815,7 @@ name = "Mysore masala dosa"
 serves = 4
 prep_minutes = 30
 cook_minutes = 50
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -850,6 +853,7 @@ name = "Benne dosa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -877,6 +881,7 @@ name = "Ghee roast dosa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -899,6 +904,7 @@ name = "Paper dosa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -923,6 +929,7 @@ name = "Ragi idli"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "finger-millet-flour", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -947,6 +954,7 @@ name = "Kanchipuram idli"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "idli-rice", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -977,6 +985,7 @@ name = "Thayir vadai"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "curd", amount = 2, unit = "cup" },
@@ -1008,6 +1017,7 @@ name = "Rasam vada"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -1166,6 +1176,7 @@ name = "Masala puri"
 serves = 4
 prep_minutes = 25
 cook_minutes = 50
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "dried-white-peas", amount = 0.75, unit = "cup" },
   { id = "all-purpose-flour", amount = 1, unit = "cup" },

@@ -132,6 +132,7 @@ name = "Egg hoppers"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 360, note = "ferment the batter for 6 hours" }
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -190,6 +191,7 @@ name = "Chicken sekuwa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "mustard-oil", amount = 2, unit = "tbsp" },
