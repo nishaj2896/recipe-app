@@ -461,6 +461,14 @@ category = "vegetables"
 search_terms = ["green chili", "green chilli"]
 
 [[ingredient]]
+id = "green-pigeon-peas"
+name = "Green pigeon peas"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["fresh pigeon peas"]
+
+[[ingredient]]
 id = "ivy-gourd"
 name = "Ivy gourd"
 class = "A"
@@ -481,6 +489,14 @@ name = "Kale"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+
+[[ingredient]]
+id = "ker"
+name = "Ker"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["dried wild caper berries"]
 
 [[ingredient]]
 id = "leek"
@@ -659,6 +675,13 @@ class = "B"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["arugula"]
+
+[[ingredient]]
+id = "sangri"
+name = "Sangri"
+class = "A"
+diet = "vegan"
+category = "vegetables"
 
 [[ingredient]]
 id = "shallot"
@@ -960,6 +983,14 @@ name = "Basa"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+
+[[ingredient]]
+id = "bombay-duck"
+name = "Bombay duck"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["bummalo"]
 
 [[ingredient]]
 id = "canned-sardines"
@@ -3685,7 +3716,7 @@ class = "S"
 kind = "pantry"
 diet = "vegan"
 category = "spices-and-seasonings"
-search_terms = ["whole red chillies"]
+search_terms = ["whole red chillies", "dried red chilli"]
 
 [[ingredient]]
 id = "dried-rosemary"
