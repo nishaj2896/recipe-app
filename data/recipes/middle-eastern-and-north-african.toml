@@ -11,7 +11,6 @@ name = "Shakshuka"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
-image = { file = "01a15175-3c2d-7620-b329-81eec06563fc.webp", sha256 = "0e685601bb1564fa0625e4fb45345442dc462e52b1e0b6d03c26275b4e325546", alt = "Shakshuka with three eggs in a cast-iron pan, topped with feta and herbs" }
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "bell-pepper", amount = 1, unit = "large" },

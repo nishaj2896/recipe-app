@@ -63,7 +63,7 @@ name = "Spaghetti carbonara"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
-image = { file = "01a18bbd-3cd0-7bec-8c09-6e9f33e2d4d6.webp", sha256 = "6c097172c972ba4abddbee5b181fc8998ffad2777c5180c6311ee55db79d1840", alt = "Spaghetti carbonara twirled into a nest with crisp pancetta, pecorino and black pepper" }
+image = { file = "01a18bbd-3cd0-7bec-8c09-6e9f33e2d4d6.webp", sha256 = "6c097172c972ba4abddbee5b181fc8998ffad2777c5180c6311ee55db79d1840", alt = "Spaghetti carbonara twirled into a nest with crisp bacon, pecorino and black pepper" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "bacon", amount = 150, unit = "g" },

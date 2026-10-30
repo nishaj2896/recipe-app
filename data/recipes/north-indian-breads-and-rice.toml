@@ -67,7 +67,6 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
-image = { file = "01a15175-3c1c-71e8-a493-8702aa35c9e3.webp", sha256 = "7f7ce4de0efaff510efc1613b4d077093abbcd1eb7c0bcf164e985a3f3c7dbf7", alt = "Dome of chicken biryani with fried onions, cashews and mint, beside a bowl of raita" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
