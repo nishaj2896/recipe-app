@@ -1,8 +1,9 @@
 # North Indian: curries and gravies (data/recipes, ADR-0008 rules 2 and 3).
 #
-# Recipe ids are published: never change or reuse one. Soaking, fermenting and
-# marinating count as prep time. Steps never state an amount; the screen scales
-# the ingredient amounts and the steps don't.
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
 
 [[recipe]]
 id = "01a15175-3c00-74aa-990d-9f9791e9d729"
@@ -277,7 +278,7 @@ steps = [
 id = "01a15175-3c0a-725c-9c90-73d0fa294994"
 name = "Chana masala"
 serves = 4
-prep_minutes = 480
+prep_minutes = 15
 cook_minutes = 40
 ingredients = [
   { id = "chickpeas", amount = 200, unit = "g" },
@@ -309,7 +310,7 @@ steps = [
 id = "01a15175-3c0b-7b09-ba59-3db099c27b86"
 name = "Rajma"
 serves = 4
-prep_minutes = 480
+prep_minutes = 15
 cook_minutes = 45
 ingredients = [
   { id = "kidney-beans", amount = 200, unit = "g" },
@@ -426,7 +427,7 @@ steps = [
 id = "01a15175-3c1a-7713-b024-befd853a33b0"
 name = "Chicken curry"
 serves = 4
-prep_minutes = 20
+prep_minutes = 15
 cook_minutes = 40
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -458,7 +459,7 @@ steps = [
 id = "01a15175-3c1b-7327-a70a-a937797a18f2"
 name = "Butter chicken"
 serves = 4
-prep_minutes = 60
+prep_minutes = 15
 cook_minutes = 35
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
@@ -517,7 +518,7 @@ steps = [
 id = "01a18812-66df-7ccf-b265-66e449208513"
 name = "Chicken tikka masala"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 40
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
@@ -590,7 +591,7 @@ steps = [
 id = "01a18812-66e4-7839-95e5-6eec566ea16c"
 name = "Chicken korma"
 serves = 4
-prep_minutes = 75
+prep_minutes = 15
 cook_minutes = 45
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -700,7 +701,7 @@ steps = [
 id = "01a18812-671e-7d3c-8c9d-dc581af533dd"
 name = "Methi chicken"
 serves = 4
-prep_minutes = 45
+prep_minutes = 15
 cook_minutes = 40
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -772,7 +773,7 @@ steps = [
 id = "01a18812-6723-7412-8bfb-1565d14f7e7f"
 name = "Murgh musallam"
 serves = 4
-prep_minutes = 180
+prep_minutes = 30
 cook_minutes = 70
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
@@ -847,7 +848,7 @@ steps = [
 id = "01a18812-6727-7cb4-9f54-7c25a947bee2"
 name = "Mutton korma"
 serves = 4
-prep_minutes = 75
+prep_minutes = 15
 cook_minutes = 90
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
@@ -999,7 +1000,7 @@ steps = [
 id = "01a18812-6730-7099-83c5-19af8f61e6e9"
 name = "Laal maas"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 90
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
@@ -1034,7 +1035,7 @@ steps = [
 id = "01a18812-6733-728f-98f0-dadfcedbcb95"
 name = "Safed maas"
 serves = 4
-prep_minutes = 15
+prep_minutes = 10
 cook_minutes = 90
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
@@ -1212,7 +1213,7 @@ steps = [
 id = "01a18813-9166-7175-8846-b0ce683b98f3"
 name = "Paneer tikka masala"
 serves = 4
-prep_minutes = 45
+prep_minutes = 15
 cook_minutes = 35
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
@@ -1518,7 +1519,7 @@ steps = [
 id = "01a18813-917b-776a-b52f-5d8fdda6cffd"
 name = "Navratan korma"
 serves = 4
-prep_minutes = 20
+prep_minutes = 15
 cook_minutes = 35
 ingredients = [
   { id = "carrot", amount = 1, unit = "medium" },
@@ -1858,7 +1859,7 @@ steps = [
 id = "01a18814-eea7-7f23-92a3-f7dce88deb64"
 name = "Karela masala"
 serves = 4
-prep_minutes = 40
+prep_minutes = 15
 cook_minutes = 30
 ingredients = [
   { id = "bitter-gourd", amount = 400, unit = "g" },
@@ -1886,7 +1887,7 @@ steps = [
 id = "01a18814-eea9-7a79-8a34-62d71b328e91"
 name = "Lauki chana dal"
 serves = 4
-prep_minutes = 60
+prep_minutes = 10
 cook_minutes = 35
 ingredients = [
   { id = "bottle-gourd", amount = 300, unit = "g" },
@@ -2015,7 +2016,7 @@ steps = [
 id = "01a18814-eeb2-7eba-8838-e3adc415e197"
 name = "Egg korma"
 serves = 4
-prep_minutes = 15
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
@@ -2049,7 +2050,7 @@ steps = [
 id = "01a18814-eeb4-7fc6-8ec6-54d4a3443918"
 name = "Fish tikka masala"
 serves = 4
-prep_minutes = 45
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
@@ -2086,7 +2087,7 @@ steps = [
 id = "01a18814-eeb7-7186-993a-897933923772"
 name = "Amritsari fish curry"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
@@ -2159,7 +2160,7 @@ steps = [
 id = "01a188a8-fe99-7464-a603-5cf6a0b60ff9"
 name = "Pindi chole"
 serves = 4
-prep_minutes = 480
+prep_minutes = 15
 cook_minutes = 60
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
@@ -2231,7 +2232,7 @@ steps = [
 id = "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d"
 name = "Dal makhani"
 serves = 4
-prep_minutes = 480
+prep_minutes = 10
 cook_minutes = 90
 ingredients = [
   { id = "whole-urad", amount = 0.75, unit = "cup" },
@@ -2263,7 +2264,7 @@ steps = [
 id = "01a188a8-fea0-7a73-acf1-d80396c5eb21"
 name = "Dal fry"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
@@ -2298,7 +2299,7 @@ steps = [
 id = "01a188a8-fea2-75ca-bb35-1cffa95c141d"
 name = "Chana dal"
 serves = 4
-prep_minutes = 60
+prep_minutes = 10
 cook_minutes = 40
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
@@ -2332,7 +2333,7 @@ steps = [
 id = "01a188a8-fea4-75c1-8667-382841f117a3"
 name = "Urad chana dal"
 serves = 4
-prep_minutes = 60
+prep_minutes = 10
 cook_minutes = 40
 ingredients = [
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -2366,7 +2367,7 @@ steps = [
 id = "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe"
 name = "Panchmel dal"
 serves = 4
-prep_minutes = 60
+prep_minutes = 10
 cook_minutes = 40
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -2404,7 +2405,7 @@ steps = [
 id = "01a188a8-fea9-7757-92a5-75916c3653a3"
 name = "Lobia masala"
 serves = 4
-prep_minutes = 360
+prep_minutes = 10
 cook_minutes = 45
 ingredients = [
   { id = "black-eyed-peas", amount = 1, unit = "cup" },
@@ -2436,7 +2437,7 @@ steps = [
 id = "01a188a8-feab-7a94-b669-c2287146ded7"
 name = "Kala chana curry"
 serves = 4
-prep_minutes = 480
+prep_minutes = 10
 cook_minutes = 50
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },

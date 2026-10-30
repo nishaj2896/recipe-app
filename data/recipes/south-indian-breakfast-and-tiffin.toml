@@ -1,8 +1,9 @@
 # South Indian: breakfast and tiffin (data/recipes, ADR-0008 rules 2 and 3).
 #
-# Recipe ids are published: never change or reuse one. Soaking, fermenting and
-# marinating count as prep time. Steps never state an amount; the screen scales
-# the ingredient amounts and the steps don't.
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
 
 [[recipe]]
 id = "01a15175-3c15-7017-9787-d9be73c0cb5f"
@@ -36,7 +37,7 @@ steps = [
 id = "01a188e6-a83e-78f1-a1ee-2349f5e25707"
 name = "Idli"
 serves = 6
-prep_minutes = 840
+prep_minutes = 15
 cook_minutes = 15
 ingredients = [
   { id = "idli-rice", amount = 2, unit = "cup" },
@@ -62,7 +63,7 @@ steps = [
 id = "01a188e6-a840-7af6-83f9-144f64aa1b2a"
 name = "Rava idli"
 serves = 4
-prep_minutes = 25
+prep_minutes = 10
 cook_minutes = 15
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
@@ -95,7 +96,7 @@ steps = [
 id = "01a188e6-a842-793c-b480-e9e5cbe1d5f2"
 name = "Masala dosa"
 serves = 4
-prep_minutes = 840
+prep_minutes = 25
 cook_minutes = 40
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -132,7 +133,7 @@ steps = [
 id = "01a188e6-a845-7924-9cb5-dc4f1fd58989"
 name = "Plain dosa"
 serves = 4
-prep_minutes = 840
+prep_minutes = 15
 cook_minutes = 30
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -157,7 +158,7 @@ steps = [
 id = "01a188e6-a847-798f-86de-7eb83bd2dc75"
 name = "Rava dosa"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
@@ -187,7 +188,7 @@ steps = [
 id = "01a188e6-a849-7a9d-b57f-17583d1c5f72"
 name = "Onion rava dosa"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
@@ -218,7 +219,7 @@ steps = [
 id = "01a188e6-a84b-7914-b381-264e15b4ee18"
 name = "Set dosa"
 serves = 4
-prep_minutes = 840
+prep_minutes = 15
 cook_minutes = 30
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -242,7 +243,7 @@ steps = [
 id = "01a188e6-a84e-70a4-8c8d-c3da512978e1"
 name = "Neer dosa"
 serves = 4
-prep_minutes = 240
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
@@ -265,7 +266,7 @@ steps = [
 id = "01a188e6-a850-7e21-876b-7a364dca12e0"
 name = "Pesarattu"
 serves = 4
-prep_minutes = 300
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "mung-beans", amount = 1, unit = "cup" },
@@ -293,7 +294,7 @@ steps = [
 id = "01a188e6-a852-7c61-8e2e-397362b11e41"
 name = "Adai"
 serves = 4
-prep_minutes = 240
+prep_minutes = 15
 cook_minutes = 30
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
@@ -324,7 +325,7 @@ steps = [
 id = "01a188e6-a855-71ed-9bfc-0c9d642f82e1"
 name = "Uttapam"
 serves = 4
-prep_minutes = 840
+prep_minutes = 15
 cook_minutes = 30
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
@@ -351,7 +352,7 @@ steps = [
 id = "01a188e6-a857-74b4-8d83-ccabe430c05c"
 name = "Onion tomato uttapam"
 serves = 4
-prep_minutes = 840
+prep_minutes = 20
 cook_minutes = 30
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
@@ -380,7 +381,7 @@ steps = [
 id = "01a188e6-a859-75ba-bfec-282fbe3f42b8"
 name = "Appam"
 serves = 4
-prep_minutes = 600
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -429,7 +430,7 @@ steps = [
 id = "01a188e6-a85e-7a81-95c3-da336c547c81"
 name = "Puttu"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 15
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
@@ -450,7 +451,7 @@ steps = [
 id = "01a188e6-a860-7ddd-8d31-de266d80a111"
 name = "Medu vada"
 serves = 4
-prep_minutes = 240
+prep_minutes = 20
 cook_minutes = 30
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
@@ -478,7 +479,7 @@ steps = [
 id = "01a188e6-a862-77f5-8644-a458d0be7b23"
 name = "Masala vada"
 serves = 4
-prep_minutes = 180
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
@@ -693,7 +694,7 @@ steps = [
 id = "01a188e6-a872-74aa-b2be-107dfab24f90"
 name = "Ragi dosa"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "finger-millet-flour", amount = 1, unit = "cup" },
@@ -776,7 +777,7 @@ steps = [
 id = "01a188e6-a879-7572-93a6-548c198fab8f"
 name = "Mysore bonda"
 serves = 4
-prep_minutes = 150
+prep_minutes = 15
 cook_minutes = 20
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
@@ -806,7 +807,7 @@ steps = [
 id = "01a188e6-a87b-739b-9758-734584d165da"
 name = "Mangalore buns"
 serves = 4
-prep_minutes = 480
+prep_minutes = 20
 cook_minutes = 20
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
@@ -832,7 +833,7 @@ steps = [
 id = "01a188e6-a87d-7334-8571-e2e0502c93a3"
 name = "Paniyaram"
 serves = 4
-prep_minutes = 840
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
@@ -863,7 +864,7 @@ steps = [
 id = "01a188e6-a87f-7230-95d3-ef1e5b516a29"
 name = "Kuzhi paniyaram sweet"
 serves = 4
-prep_minutes = 840
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "idli-rice", amount = 1, unit = "cup" },
@@ -925,7 +926,7 @@ steps = [
 id = "01a188e6-a884-71cb-8e87-cdbd3d356c9e"
 name = "Malabar parotta"
 serves = 4
-prep_minutes = 150
+prep_minutes = 40
 cook_minutes = 30
 ingredients = [
   { id = "all-purpose-flour", amount = 3, unit = "cup" },

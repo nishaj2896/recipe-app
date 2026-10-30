@@ -1,14 +1,15 @@
 # North Indian: tandoor, kebabs and snacks (data/recipes, ADR-0008 rules 2 and 3).
 #
-# Recipe ids are published: never change or reuse one. Soaking, fermenting and
-# marinating count as prep time. Steps never state an amount; the screen scales
-# the ingredient amounts and the steps don't.
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
 
 [[recipe]]
 id = "01a188aa-f1bb-7de8-bf53-445fbba68aca"
 name = "Tandoori chicken"
 serves = 4
-prep_minutes = 270
+prep_minutes = 20
 cook_minutes = 35
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
@@ -39,7 +40,7 @@ steps = [
 id = "01a188aa-f1be-73ed-a585-cf2dc55a06d0"
 name = "Chicken tikka"
 serves = 4
-prep_minutes = 150
+prep_minutes = 15
 cook_minutes = 20
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
@@ -69,7 +70,7 @@ steps = [
 id = "01a188aa-f1c1-73fb-9543-fd72dee5304c"
 name = "Chicken malai tikka"
 serves = 4
-prep_minutes = 150
+prep_minutes = 15
 cook_minutes = 20
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
@@ -101,7 +102,7 @@ steps = [
 id = "01a188aa-f1c3-75fe-a474-6b5c552d8ff7"
 name = "Chicken seekh kebab"
 serves = 4
-prep_minutes = 40
+prep_minutes = 15
 cook_minutes = 20
 ingredients = [
   { id = "chicken-mince", amount = 500, unit = "g" },
@@ -132,7 +133,7 @@ steps = [
 id = "01a188aa-f1c6-79e3-abfa-5caa9d08a92a"
 name = "Mutton seekh kebab"
 serves = 4
-prep_minutes = 40
+prep_minutes = 15
 cook_minutes = 20
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
@@ -163,7 +164,7 @@ steps = [
 id = "01a188aa-f1c8-7e46-bac6-1c917b930b0f"
 name = "Galouti kebab"
 serves = 4
-prep_minutes = 270
+prep_minutes = 25
 cook_minutes = 30
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
@@ -199,7 +200,7 @@ steps = [
 id = "01a188aa-f1ca-74c1-976b-a15fbbe73ec2"
 name = "Shami kebab"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 60
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
@@ -236,7 +237,7 @@ steps = [
 id = "01a188aa-f1cc-7900-a94f-6142775566e4"
 name = "Paneer tikka"
 serves = 4
-prep_minutes = 45
+prep_minutes = 15
 cook_minutes = 15
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
@@ -301,7 +302,7 @@ steps = [
 id = "01a188aa-f1d1-74a3-83d0-414a5d541a1a"
 name = "Tandoori aloo"
 serves = 4
-prep_minutes = 45
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
@@ -330,7 +331,7 @@ steps = [
 id = "01a188aa-f1d3-7d25-9b1d-fcf6dd348a28"
 name = "Tandoori gobi"
 serves = 4
-prep_minutes = 45
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
@@ -360,7 +361,7 @@ steps = [
 id = "01a188aa-f1d5-7f72-8c2e-8fccf033b963"
 name = "Amritsari fish fry"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 20
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
@@ -390,7 +391,7 @@ steps = [
 id = "01a188aa-f1d8-72f8-b06b-92069ff0ac6b"
 name = "Samosa"
 serves = 4
-prep_minutes = 40
+prep_minutes = 25
 cook_minutes = 45
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -575,7 +576,7 @@ steps = [
 id = "01a188aa-f1e6-7825-a419-b34dd6c20104"
 name = "Papdi chaat"
 serves = 4
-prep_minutes = 30
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
@@ -641,7 +642,7 @@ steps = [
 id = "01a188aa-f1ea-7c30-9f08-d4e9a514d6ab"
 name = "Dahi bhalla"
 serves = 4
-prep_minutes = 300
+prep_minutes = 20
 cook_minutes = 30
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
@@ -710,7 +711,7 @@ steps = [
 id = "01a188aa-f1ef-7af4-af63-473bbcc685b1"
 name = "Matar kulcha"
 serves = 4
-prep_minutes = 480
+prep_minutes = 25
 cook_minutes = 60
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
@@ -749,7 +750,7 @@ steps = [
 id = "01a188aa-f1f1-7c4b-9658-07a441bbf987"
 name = "Raj kachori"
 serves = 4
-prep_minutes = 60
+prep_minutes = 30
 cook_minutes = 45
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
@@ -788,7 +789,7 @@ steps = [
 id = "01a188aa-f1f3-79fb-9b99-1d1edd507e7d"
 name = "Moong dal chilla"
 serves = 4
-prep_minutes = 240
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },

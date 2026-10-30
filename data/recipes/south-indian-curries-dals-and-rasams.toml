@@ -1,8 +1,9 @@
 # South Indian: curries, dals and rasams (data/recipes, ADR-0008 rules 2 and 3).
 #
-# Recipe ids are published: never change or reuse one. Soaking, fermenting and
-# marinating count as prep time. Steps never state an amount; the screen scales
-# the ingredient amounts and the steps don't.
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
 
 [[recipe]]
 id = "01a15175-3c0c-7410-9068-956c67818f62"
@@ -439,7 +440,7 @@ steps = [
 id = "01a188ea-3cac-71f6-ad23-3ec3ad770d02"
 name = "Olan"
 serves = 4
-prep_minutes = 240
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "ash-gourd", amount = 400, unit = "g" },
@@ -464,7 +465,7 @@ steps = [
 id = "01a188ea-3caf-7ed4-9d45-55c30e45120a"
 name = "Erissery"
 serves = 4
-prep_minutes = 240
+prep_minutes = 15
 cook_minutes = 35
 ingredients = [
   { id = "pumpkin", amount = 400, unit = "g" },
@@ -618,7 +619,7 @@ steps = [
 id = "01a188ea-3cba-7699-b681-9cf8fa635c20"
 name = "Carrot poriyal"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 12
 ingredients = [
   { id = "carrot", amount = 4, unit = "medium" },
@@ -766,7 +767,7 @@ steps = [
 id = "01a188ea-3cc6-740b-bac9-18d04c407137"
 name = "Chicken varuval"
 serves = 4
-prep_minutes = 60
+prep_minutes = 15
 cook_minutes = 35
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -798,7 +799,7 @@ steps = [
 id = "01a188ea-3cc8-7da1-93a4-f4117af4edcd"
 name = "Pepper chicken"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 35
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -897,7 +898,7 @@ steps = [
 id = "01a188ea-3ccf-796f-bc81-82eba4b73162"
 name = "Andhra chicken curry"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 40
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -1041,7 +1042,7 @@ steps = [
 id = "01a188ea-3cd8-7393-af5e-22e126fec6cf"
 name = "Meen moilee"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
@@ -1073,7 +1074,7 @@ steps = [
 id = "01a188ea-3cda-7b43-bedb-9819794379cb"
 name = "Fish fry (Kerala style)"
 serves = 4
-prep_minutes = 45
+prep_minutes = 15
 cook_minutes = 15
 ingredients = [
   { id = "mackerel", amount = 4, unit = "piece" },
@@ -1100,7 +1101,7 @@ steps = [
 id = "01a188ea-3cdc-72fb-9f3a-876114a5e690"
 name = "Prawn ghee roast"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
@@ -1133,7 +1134,7 @@ steps = [
 id = "01a188ea-3cdf-7d16-b4d2-673f685f5c20"
 name = "Chicken ghee roast"
 serves = 4
-prep_minutes = 60
+prep_minutes = 15
 cook_minutes = 40
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -1309,7 +1310,7 @@ steps = [
 id = "01a188ea-3cec-7210-ab93-705e0b4c0ba2"
 name = "Vatha kuzhambu"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "tamarind", amount = 2, unit = "tbsp" },
@@ -1344,7 +1345,7 @@ steps = [
 id = "01a188ea-3cee-73fc-8601-97ca471c4d6a"
 name = "Mor kuzhambu"
 serves = 4
-prep_minutes = 60
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
@@ -1378,7 +1379,7 @@ steps = [
 id = "01a188ea-3cf0-70ca-868f-023f55d47c2b"
 name = "Puli kuzhambu"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 35
 ingredients = [
   { id = "tamarind", amount = 2, unit = "tbsp" },

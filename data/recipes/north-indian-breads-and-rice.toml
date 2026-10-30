@@ -1,8 +1,9 @@
 # North Indian: breads and rice (data/recipes, ADR-0008 rules 2 and 3).
 #
-# Recipe ids are published: never change or reuse one. Soaking, fermenting and
-# marinating count as prep time. Steps never state an amount; the screen scales
-# the ingredient amounts and the steps don't.
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
 
 [[recipe]]
 id = "01a15175-3c0f-7496-91c1-4e90dc98797e"
@@ -63,7 +64,7 @@ steps = [
 id = "01a15175-3c1c-71e8-a493-8702aa35c9e3"
 name = "Chicken biryani"
 serves = 4
-prep_minutes = 60
+prep_minutes = 30
 cook_minutes = 60
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
@@ -95,7 +96,7 @@ steps = [
 id = "01a188ac-0597-7bfe-8ab8-24300d82453f"
 name = "Plain paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -118,7 +119,7 @@ steps = [
 id = "01a188ac-0599-7b01-a8c0-c7e57b87d415"
 name = "Aloo paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 25
 cook_minutes = 35
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -151,7 +152,7 @@ steps = [
 id = "01a188ac-059c-7117-b956-95db3c58e90f"
 name = "Gobi paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 25
 cook_minutes = 35
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -181,7 +182,7 @@ steps = [
 id = "01a188ac-059e-7270-b094-d245c12dcf0b"
 name = "Paneer paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 20
 cook_minutes = 30
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -209,7 +210,7 @@ steps = [
 id = "01a188ac-05a0-7b93-9b54-b30f2bd33756"
 name = "Methi paratha"
 serves = 4
-prep_minutes = 25
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -237,7 +238,7 @@ steps = [
 id = "01a188ac-05a2-7dee-9c46-e992ed52bb4e"
 name = "Mooli paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 25
 cook_minutes = 30
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -266,7 +267,7 @@ steps = [
 id = "01a188ac-05a4-7d6b-8b51-b0183f72ee48"
 name = "Lachha paratha"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -289,7 +290,7 @@ steps = [
 id = "01a188ac-05a7-7dde-b069-03b15b2dd2b3"
 name = "Phulka"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 20
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -310,7 +311,7 @@ steps = [
 id = "01a188ac-05a9-7419-8d55-e9c12cddd474"
 name = "Tandoori roti"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -334,7 +335,7 @@ steps = [
 id = "01a188ac-05ab-7173-ac6b-80a0e9101563"
 name = "Missi roti"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -363,7 +364,7 @@ steps = [
 id = "01a188ac-05ad-7540-a452-90d483cf792b"
 name = "Butter naan"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -390,7 +391,7 @@ steps = [
 id = "01a188ac-05af-7758-b298-8c9999377ec6"
 name = "Garlic naan"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -420,7 +421,7 @@ steps = [
 id = "01a188ac-05b1-784f-bb14-2bba03c32a18"
 name = "Bhatura"
 serves = 4
-prep_minutes = 150
+prep_minutes = 15
 cook_minutes = 25
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -447,7 +448,7 @@ steps = [
 id = "01a188ac-05b3-7852-994e-2b3ec2b5edf4"
 name = "Puri"
 serves = 4
-prep_minutes = 20
+prep_minutes = 10
 cook_minutes = 20
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
@@ -470,7 +471,7 @@ steps = [
 id = "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2"
 name = "Kulcha"
 serves = 4
-prep_minutes = 150
+prep_minutes = 20
 cook_minutes = 20
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -497,7 +498,7 @@ steps = [
 id = "01a188ac-05b8-75d4-b607-f24571d2f34e"
 name = "Matar pulao"
 serves = 4
-prep_minutes = 30
+prep_minutes = 10
 cook_minutes = 25
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -528,7 +529,7 @@ steps = [
 id = "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef"
 name = "Kashmiri pulao"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 30
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -564,7 +565,7 @@ steps = [
 id = "01a188e4-2cc1-7d6c-91e0-de20898e32ce"
 name = "Mutton biryani"
 serves = 6
-prep_minutes = 150
+prep_minutes = 40
 cook_minutes = 120
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
@@ -608,7 +609,7 @@ steps = [
 id = "01a188e4-2cc3-741b-b1ec-d5dc88859668"
 name = "Lucknowi biryani"
 serves = 6
-prep_minutes = 60
+prep_minutes = 30
 cook_minutes = 150
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
@@ -652,7 +653,7 @@ steps = [
 id = "01a188e4-2cc5-7d1d-8441-6a87ddb91dee"
 name = "Vegetable biryani"
 serves = 4
-prep_minutes = 45
+prep_minutes = 25
 cook_minutes = 45
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -695,7 +696,7 @@ steps = [
 id = "01a188e4-2cc7-76a3-9aa0-27fb2fe4dd84"
 name = "Egg biryani"
 serves = 4
-prep_minutes = 30
+prep_minutes = 15
 cook_minutes = 45
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
@@ -733,7 +734,7 @@ steps = [
 id = "01a188e4-2cca-72b2-8e7d-907f76755018"
 name = "Paneer biryani"
 serves = 4
-prep_minutes = 45
+prep_minutes = 20
 cook_minutes = 40
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
@@ -771,7 +772,7 @@ steps = [
 id = "01a188e4-2ccc-7d84-a054-9790a3a27f41"
 name = "Rajma chawal"
 serves = 4
-prep_minutes = 480
+prep_minutes = 10
 cook_minutes = 60
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "cup" },
@@ -806,7 +807,7 @@ steps = [
 id = "01a188e4-2cce-7282-8ab9-28675b97891a"
 name = "Khichdi"
 serves = 4
-prep_minutes = 15
+prep_minutes = 5
 cook_minutes = 25
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
@@ -833,7 +834,7 @@ steps = [
 id = "01a188e4-2cd1-7458-b604-22a48aacf77c"
 name = "Masala khichdi"
 serves = 4
-prep_minutes = 15
+prep_minutes = 10
 cook_minutes = 30
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
