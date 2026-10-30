@@ -1409,3 +1409,295 @@ steps = [
   "Grind the grated coconut with a splash of the water and stir it in with the jaggery.",
   "Simmer for 3 minutes, taste for salt and serve.",
 ]
+
+[[recipe]]
+id = "01a18b54-81b2-73c3-a493-d7534d850d9b"
+name = "Paruppu usili"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "toor-dal", amount = 0.25, unit = "cup" },
+  { id = "chana-dal", amount = 0.25, unit = "cup" },
+  { id = "french-beans", amount = 250, unit = "g" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal and chana dal together and soak them for 1 hour. Drain well.",
+  "Grind the dals with the dried red chillies, asafoetida and salt into a coarse, thick paste, without adding any liquid.",
+  "Spread the paste on a greased plate and steam it for 10 to 12 minutes, until a knife comes out clean. Cool, then crumble it with your fingers.",
+  "Trim the french beans and chop them finely. Cook them in a covered pan with the water and the turmeric over medium heat for 6 to 8 minutes, until just tender. Drain.",
+  "Heat the oil in a wide pan over medium heat. Add the mustard seeds and urad dal and fry until the seeds pop and the dal turns golden. Add the curry leaves.",
+  "Add the crumbled dal and fry for 6 to 8 minutes over medium-low heat, stirring often, until it turns dry, crumbly and lightly golden.",
+  "Add the beans and toss for 3 minutes, until everything is mixed and hot. Taste, add salt if needed, and serve with sambar and rasam.",
+]
+
+[[recipe]]
+id = "01a18b54-81b6-7ef4-b48a-43469c6fbaff"
+name = "Gutti vankaya"
+serves = 4
+prep_minutes = 20
+cook_minutes = 35
+ingredients = [
+  { id = "small-brinjal", amount = 500, unit = "g" },
+  { id = "peanuts", amount = 0.25, unit = "cup" },
+  { id = "sesame-seeds", amount = 2, unit = "tbsp" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Soak the tamarind in a little of the water, warmed, for 15 minutes. Squeeze it and strain the pulp.",
+  "Dry roast the peanuts in a pan over medium heat for 4 minutes, until they crackle and smell nutty. Add the sesame seeds, dried coconut, coriander seeds and cumin seeds and roast for 2 minutes more, until the sesame seeds turn golden.",
+  "Chop one of the onions roughly and grind it with the roasted mixture, the red chilli powder, turmeric, jaggery and salt into a thick paste.",
+  "Wash the small brinjals and cut each into four from the bottom, leaving the stalk end joined. Fill the cuts with the paste and keep the leftover paste.",
+  "Heat the oil in a wide pan over medium heat. Lay the small brinjals in one layer, cover and cook for 10 minutes, turning gently every few minutes, until they soften and brown in patches.",
+  "Lift the small brinjals out. Finely chop the other onion and cook it in the same oil with the curry leaves for 5 minutes, until golden. Add the ginger garlic paste and stir for 1 minute.",
+  "Add the leftover paste and fry for 3 minutes, until the oil starts to separate.",
+  "Pour in the tamarind pulp and the rest of the water. Return the small brinjals, cover and simmer on low heat for 10 to 12 minutes, until they are very soft and the gravy is thick and glossy.",
+  "Taste and add salt if needed. Serve with roti or chapati.",
+]
+
+[[recipe]]
+id = "01a18b54-81b8-7a60-85b4-7519966796a9"
+name = "Bagara baingan"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "small-brinjal", amount = 500, unit = "g" },
+  { id = "peanuts", amount = 0.25, unit = "cup" },
+  { id = "sesame-seeds", amount = 2, unit = "tbsp" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Soak the tamarind in a little of the water, warmed, for 15 minutes. Squeeze it and strain the pulp.",
+  "Slice the onions. Dry roast them in a pan over medium heat for 6 to 8 minutes, until browned in patches. Tip them onto a plate.",
+  "In the same pan, dry roast the peanuts for 4 minutes, until they crackle. Add the sesame seeds, dried coconut, coriander seeds and cumin seeds and roast for 2 minutes, until the sesame seeds are golden.",
+  "Grind the roasted onions and the roasted mixture with a splash of the water into a very smooth paste.",
+  "Slit each small brinjal into four from the bottom, keeping the stalk end joined.",
+  "Heat the oil in a heavy pan over medium heat. Fry the small brinjals for 6 to 8 minutes, turning, until the skins wrinkle and they are half soft. Lift them out.",
+  "Add the nigella seeds, fenugreek seeds and curry leaves to the oil and let them sizzle for 20 seconds. Add the ginger garlic paste and stir for 1 minute.",
+  "Add the ground paste, red chilli powder and turmeric and fry on low heat for 8 to 10 minutes, stirring often, until it darkens and the oil floats on top.",
+  "Add the tamarind pulp, jaggery, salt and the rest of the water and bring to a simmer.",
+  "Slide in the small brinjals, cover and cook on low heat for 12 to 15 minutes, until they are tender and the gravy is thick. Taste for salt and serve with biryani.",
+]
+
+[[recipe]]
+id = "01a18b54-81ba-79c9-9638-10695d0dc5d7"
+name = "Mirchi ka salan"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "green-chillies", amount = 10, unit = "piece" },
+  { id = "peanuts", amount = 0.25, unit = "cup" },
+  { id = "sesame-seeds", amount = 2, unit = "tbsp" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Use long, mild green chillies for this. Soak the tamarind in a little of the water, warmed, for 15 minutes, then squeeze and strain the pulp.",
+  "Slit each green chilli down one side and scrape out the seeds.",
+  "Dry roast the peanuts in a pan over medium heat for 4 minutes, until they crackle. Add the sesame seeds, dried coconut, coriander seeds and cumin seeds and roast for 2 minutes, until the sesame seeds turn golden.",
+  "Grind the roasted mixture with a splash of the water into a smooth paste.",
+  "Heat the oil in a pan over medium heat. Fry the green chillies for 2 to 3 minutes, until the skins blister in spots. Lift them out.",
+  "Chop the onion finely. Add the nigella seeds and curry leaves to the oil, then the onion, and cook for 5 minutes, until golden. Stir in the ginger garlic paste for 1 minute.",
+  "Add the paste, red chilli powder and turmeric and fry on low heat for 6 to 8 minutes, until the oil separates.",
+  "Add the tamarind pulp, jaggery, salt and the rest of the water. Simmer for 5 minutes, until it thickens to a pouring gravy.",
+  "Add the green chillies and simmer for 5 minutes more, until they are soft. Taste for salt and serve with biryani.",
+]
+
+[[recipe]]
+id = "01a18b54-81bc-7a52-880f-c3f97db20b9e"
+name = "Pappu (Andhra dal)"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "toor-dal", amount = 1, unit = "cup" },
+  { id = "spinach", amount = 1, unit = "bunch" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "tamarind", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal in several changes of water.",
+  "Wash the spinach and chop it. Chop the tomato and slit the green chillies.",
+  "Pressure cook the dal with the spinach, tomato, green chillies, turmeric and the water for 3 to 4 whistles over medium heat, until the dal is completely soft.",
+  "Soak the tamarind in a spoonful of hot tap water for 5 minutes and squeeze out the pulp.",
+  "Mash the dal well with a whisk or the back of a ladle. Stir in the tamarind pulp and salt and simmer for 3 minutes.",
+  "Crush the garlic. Heat the ghee in a small pan over medium heat. Add the mustard seeds and cumin seeds and let them pop.",
+  "Add the garlic and fry for 1 minute, until golden. Add the dried red chillies, curry leaves and asafoetida and stir for 10 seconds.",
+  "Pour the tempering over the dal. Taste, add salt if needed, and serve hot with an extra spoonful of the ghee on top.",
+]
+
+[[recipe]]
+id = "01a18b54-81bf-717b-ba26-18dc1c50374c"
+name = "Tomato pappu"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "toor-dal", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal in several changes of water.",
+  "Chop the tomatoes and onion and slit the green chillies.",
+  "Pressure cook the dal with the tomatoes, onion, green chillies, turmeric and the water for 3 to 4 whistles over medium heat, until the dal is very soft.",
+  "Mash it well, add the red chilli powder and salt and simmer for 3 to 4 minutes, until it is thick but pourable.",
+  "Crush the garlic. Heat the oil in a small pan over medium heat and fry the mustard seeds and cumin seeds until they pop.",
+  "Add the garlic and fry for 1 minute, until golden, then the dried red chillies and curry leaves for 10 seconds.",
+  "Pour the tempering over the dal and scatter the chopped coriander leaves over. Taste for salt and serve hot with chapati or a dry vegetable side.",
+]
+
+[[recipe]]
+id = "01a18b54-81c1-7126-ab7f-d0c7013944e5"
+name = "Majjige huli"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "ash-gourd", amount = 250, unit = "g" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "coconut-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it for 30 minutes with the coriander seeds.",
+  "Peel the ash gourd, scoop out the seeds and cut it into cubes about 2 cm across.",
+  "Cook the ash gourd with half the water, the turmeric and salt over medium heat for 8 to 10 minutes, until translucent and tender.",
+  "Drain the soaked dal. Grind it with the coconut, cumin seeds, green chillies, ginger and the rest of the water into a smooth paste.",
+  "Whisk the curd until smooth and mix in the ground paste.",
+  "Pour the curd mixture over the ash gourd and heat on low heat for 4 to 5 minutes, stirring constantly, until it is steaming. Don't let it boil, or the curd will split.",
+  "Heat the coconut oil in a small pan over medium heat. Add the mustard seeds and let them pop, then the dried red chillies, curry leaves and asafoetida for 10 seconds.",
+  "Pour the tempering over the curry. Taste for salt and serve warm as a side to sambar and poriyal.",
+]
+
+[[recipe]]
+id = "01a18b54-81c3-7ff4-9f69-c14cf198bfb0"
+name = "Bisi bele bath"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "rice", amount = 0.75, unit = "cup" },
+  { id = "toor-dal", amount = 0.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 10, unit = "piece" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "shallot", amount = 8, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Soak the tamarind in a little of the water, warmed, for 15 minutes. Squeeze and strain the pulp.",
+  "Rinse the rice and toor dal together. Pressure cook them with most of the water and the turmeric for 4 whistles, until very soft. Mash lightly.",
+  "Dry roast the chana dal, urad dal, coriander seeds, cumin seeds, fenugreek seeds, dried red chillies, cinnamon and cloves over low heat for 4 to 5 minutes, until the dals turn golden and smell toasty. Add the dried coconut for the last minute.",
+  "Cool the roasted spices and grind them to a fine powder.",
+  "Dice the carrot, cut the french beans into short lengths, peel the shallots and chop the tomato.",
+  "Heat half the ghee in a large pot over medium heat. Cook the shallots for 3 minutes, then add the carrot, beans, peas and tomato and cook for 5 minutes, until the tomato softens.",
+  "Add the tamarind pulp, the rest of the water and salt and simmer for 8 to 10 minutes, until the vegetables are tender.",
+  "Stir in the spice powder and jaggery and simmer for 3 minutes, until the raw smell of the spices goes.",
+  "Add the rice and dal and mix well. Simmer for 5 minutes on low heat, stirring often, until it is a thick, porridge-like mix. Add hot water from the kettle if it gets too thick.",
+  "Heat the rest of the ghee in a small pan. Fry the mustard seeds until they pop, then the cashews for 1 minute, until golden, then the curry leaves and asafoetida for 10 seconds.",
+  "Pour the tempering over. Taste for salt and serve hot; it thickens as it sits.",
+]

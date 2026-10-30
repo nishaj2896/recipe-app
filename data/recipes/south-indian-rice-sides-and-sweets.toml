@@ -106,3 +106,824 @@ steps = [
   "Grind the garlic and dried red chillies with salt to a coarse paste.",
   "Taste for salt. It keeps in the fridge for a week.",
 ]
+
+[[recipe]]
+id = "01a18b54-81c5-7e25-a61a-8625f39be958"
+name = "Tamarind rice"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "tamarind", amount = 2, unit = "tbsp" },
+  { id = "peanuts", amount = 3, unit = "tbsp" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "urad-dal", amount = 1, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 5, unit = "piece" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "asafoetida", amount = 0.25, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "sesame-oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the rice. Cook it with most of the water for 15 minutes over low heat, covered, until tender. Spread it out on a wide plate to cool so the grains stay separate.",
+  "Soak the tamarind in the rest of the water, warmed, for 15 minutes. Squeeze and strain a thick pulp.",
+  "Dry roast the sesame seeds and fenugreek seeds over low heat for 2 minutes, until the sesame seeds are golden. Grind to a powder.",
+  "Heat the sesame oil in a pan over medium heat. Fry the peanuts for 2 minutes, until crisp. Add the mustard seeds, chana dal and urad dal and fry until the seeds pop and the dals turn golden.",
+  "Add the dried red chillies, curry leaves, asafoetida and turmeric and stir for 10 seconds.",
+  "Pour in the tamarind pulp with the jaggery and salt. Simmer on low heat for 8 to 10 minutes, stirring now and then, until it is thick like a paste and the sesame oil separates at the edges.",
+  "Stir in the sesame powder. Add the rice and mix gently with your fingers or a fork until every grain is coated.",
+  "Taste and add salt if needed. Rest for 30 minutes if you can so the flavour soaks in, then serve.",
+]
+
+[[recipe]]
+id = "01a18b54-81c7-70ee-be9d-ec402bc962fd"
+name = "Coconut rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "urad-dal", amount = 1, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "coconut-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the rice. Cook it with the water over low heat, covered, for 15 minutes, until tender. Spread it out to cool.",
+  "Slit the green chillies and finely chop the ginger.",
+  "Heat the coconut oil in a wide pan over medium heat. Fry the cashews for 1 minute, until golden. Add the mustard seeds, chana dal and urad dal and fry until the seeds pop and the dals turn golden.",
+  "Add the green chillies, dried red chillies, ginger, curry leaves and asafoetida and stir for 20 seconds.",
+  "Add the grated coconut and stir on low heat for 2 to 3 minutes, until it is fragrant but still white.",
+  "Add the rice and salt and toss gently until mixed. Taste for salt and serve warm with a curry or chips.",
+]
+
+[[recipe]]
+id = "01a18b54-81ca-7f0f-8029-a15250949568"
+name = "Tomato rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the rice. Cook it with the water over low heat, covered, for 15 minutes, until tender. Spread it out to cool.",
+  "Chop the tomatoes and onion finely and slit the green chillies.",
+  "Heat the oil in a wide pan over medium heat. Add the mustard seeds and chana dal and fry until the seeds pop. Add the curry leaves and green chillies.",
+  "Add the onion and cook for 5 minutes, until soft and light golden. Stir in the ginger garlic paste for 1 minute, until the raw smell goes.",
+  "Add the tomatoes, red chilli powder, turmeric and salt. Cook for 8 to 10 minutes, mashing, until the tomatoes break down completely and the oil separates.",
+  "Stir in the garam masala. Add the rice and toss gently until every grain is red.",
+  "Scatter the coriander leaves over, taste for salt and serve with raita or chips.",
+]
+
+[[recipe]]
+id = "01a18b54-81cc-797d-9841-68d1b732760a"
+name = "Ghee rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.75, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice gently until the water runs clear, soak it for 20 minutes and drain.",
+  "Slice the onion thinly.",
+  "Heat the ghee in a heavy pot over medium heat. Fry the cashews for 1 minute, until golden, then the raisins for 20 seconds, until they puff. Lift them out.",
+  "Fry the onion in the same ghee for 8 to 10 minutes, stirring, until deep golden. Lift out half for the garnish.",
+  "Add the cardamom, cloves, cinnamon and bay leaf and stir for 30 seconds, until fragrant.",
+  "Add the basmati rice and stir gently for 2 minutes, until every grain is coated in ghee.",
+  "Pour in the water, add salt and bring to a boil. Cover tightly and cook on the lowest heat for 12 minutes. Turn off the heat and rest for 10 minutes.",
+  "Fluff with a fork, top with the fried onion, cashews and raisins, and serve with a rich curry or kurma.",
+]
+
+[[recipe]]
+id = "01a18b54-81ce-7487-b619-32fec586f59d"
+name = "Vangi bath"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "small-brinjal", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "urad-dal", amount = 1, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 2, unit = "piece" },
+  { id = "dried-red-chillies", amount = 5, unit = "piece" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice. Cook it with most of the water over low heat, covered, for 15 minutes, until tender. Spread it out to cool.",
+  "Soak the tamarind in the rest of the water, warmed, for 15 minutes. Squeeze and strain the pulp.",
+  "Dry roast half the chana dal and urad dal with the coriander seeds, cinnamon, cloves and dried red chillies over low heat for 4 minutes, until the dals turn golden. Add the dried coconut for the last minute. Cool and grind to a powder.",
+  "Cut the small brinjals into thin wedges and slice the onion.",
+  "Heat the oil in a wide pan over medium heat. Fry the peanuts for 2 minutes, then add the mustard seeds and the rest of the chana dal and urad dal and fry until the seeds pop.",
+  "Add the curry leaves, asafoetida and onion and cook for 4 minutes, until soft.",
+  "Add the small brinjals, turmeric and salt. Cover and cook on medium-low heat for 8 to 10 minutes, stirring now and then, until the small brinjals are soft but holding their shape.",
+  "Add the tamarind pulp and jaggery and cook for 3 minutes, until the liquid has nearly gone.",
+  "Stir in the spice powder for 1 minute, then add the rice and mix gently. Taste for salt and serve with raita.",
+]
+
+[[recipe]]
+id = "01a18b54-81d1-7921-ad97-8f0eec6cba72"
+name = "Hyderabadi chicken biryani"
+serves = 6
+prep_minutes = 40
+cook_minutes = 80
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 4, unit = "large" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "biryani-masala", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "cloves", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "black-cumin", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 5, unit = "tbsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Slice the onions thinly. Heat the oil in a wide pan over medium heat and fry them for 15 to 20 minutes, stirring, until deep brown and crisp. Lift them out onto paper and keep the oil.",
+  "Cut the chicken into large pieces. Slit the green chillies and chop the mint and coriander leaves.",
+  "In a heavy, wide pot, mix the chicken with the curd, ginger garlic paste, green chillies, red chilli powder, turmeric, biryani masala, lemon juice, salt, half the mint and coriander leaves, half the fried onion and a few spoonfuls of the onion oil. Cover and marinate for at least 2 hours in the fridge.",
+  "Rinse the basmati rice in several changes of water until it runs clear, then soak it for 30 minutes.",
+  "Warm the milk and soak the saffron in it.",
+  "Bring the water to a rolling boil with the cardamom, cloves, cinnamon, bay leaves, black cumin and plenty of salt. It should taste salty like the sea.",
+  "Drain the basmati rice, add it to the boiling water and cook for 5 to 6 minutes, until about 70 percent done: a grain should still have a firm white core when pressed. Drain at once.",
+  "Spread the basmati rice evenly over the raw marinated chicken. Scatter over the rest of the fried onion, mint and coriander leaves, then drizzle with the saffron milk and the ghee.",
+  "Cover with a tight lid, sealing the edge with foil. Cook on high heat for 5 minutes, until you hear it sizzle and see steam escaping.",
+  "Set the pot on a griddle over the lowest heat and cook for 35 to 40 minutes, until the chicken is cooked through and the basmati rice is fluffy.",
+  "Rest for 10 minutes before opening. Scoop from the side so each serving gets both layers, and serve with mirchi ka salan and raita.",
+]
+
+[[recipe]]
+id = "01a18b54-81d3-759d-859a-3a23caeaf910"
+name = "Hyderabadi vegetable biryani"
+serves = 4
+prep_minutes = 30
+cook_minutes = 75
+ingredients = [
+  { id = "basmati-rice", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "french-beans", amount = 12, unit = "piece" },
+  { id = "cauliflower", amount = 200, unit = "g" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "biryani-masala", amount = 1.5, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 3, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "black-cumin", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "l" },
+]
+steps = [
+  "Slice the onions thinly and fry them in the oil over medium heat for 15 to 20 minutes, until deep brown and crisp. Lift them out and keep the oil.",
+  "Cut the carrots, french beans and potato into chunks about 2 cm across, and the cauliflower into small florets.",
+  "In a heavy pot, mix the vegetables and peas with the curd, ginger garlic paste, slit green chillies, red chilli powder, turmeric, biryani masala, lemon juice, salt, half the mint and coriander leaves, half the fried onion and a few spoonfuls of the onion oil. Leave for 30 minutes.",
+  "Rinse the basmati rice until the water runs clear and soak it for 30 minutes. Warm the milk and soak the saffron in it.",
+  "Bring the water to a rolling boil with the cardamom, cloves, cinnamon, bay leaves, black cumin and plenty of salt.",
+  "Add the drained basmati rice and boil for 5 to 6 minutes, until about 70 percent done, with a firm core. Drain.",
+  "Cook the vegetables over medium heat for 8 minutes, stirring, until they start to soften and the curd thickens.",
+  "Spread the basmati rice over the vegetables, scatter the rest of the fried onion, mint and coriander leaves over, and drizzle with the saffron milk and ghee.",
+  "Cover tightly and cook on high heat for 3 minutes, then on a griddle over the lowest heat for 20 to 25 minutes, until the vegetables are tender and the basmati rice is fluffy.",
+  "Rest for 10 minutes, then serve with raita and mirchi ka salan.",
+]
+
+[[recipe]]
+id = "01a18b54-81d5-77a8-9277-708fc6936427"
+name = "Thalassery biryani"
+serves = 6
+prep_minutes = 30
+cook_minutes = 80
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "onion", amount = 4, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 10, unit = "clove" },
+  { id = "green-chillies", amount = 6, unit = "piece" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 2, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "cashews", amount = 15, unit = "piece" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "ghee", amount = 6, unit = "tbsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4.5, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice gently, soak it for 20 minutes and drain.",
+  "Slice the onions thinly. Fry them in the oil over medium heat for 15 to 20 minutes, until deep golden and crisp. Lift them out.",
+  "In the same oil, fry the cashews for 1 minute and the raisins for 20 seconds. Lift them out.",
+  "Crush the ginger, garlic and green chillies into a coarse paste. Chop the tomatoes, mint and coriander leaves.",
+  "Heat half the ghee in a heavy pot over medium heat. Add the paste and stir for 2 minutes, until the raw smell goes. Add the tomatoes and turmeric and cook for 5 minutes, until soft.",
+  "Add the chicken in large pieces, the curd, half the garam masala, half the fried onion, the lemon juice and salt. Cover and cook on medium-low heat for 25 minutes, until the chicken is tender and the masala is thick. Stir in half the mint and coriander leaves.",
+  "In another pot, heat the rest of the ghee over medium heat. Add the fennel seeds, cardamom, cloves and cinnamon and stir for 30 seconds.",
+  "Add the basmati rice and stir gently for 2 minutes. Pour in the water, add salt and bring to a boil. Cover and cook on low heat for 10 minutes, until the water is absorbed and the basmati rice is nearly done.",
+  "Spread the basmati rice over the chicken. Top with the rest of the fried onion, garam masala, mint and coriander leaves, and the cashews and raisins.",
+  "Cover tightly and cook on the lowest heat for 15 minutes. Rest for 5 minutes, then serve with raita and pickle.",
+]
+
+[[recipe]]
+id = "01a18b54-81d7-7d2d-84b8-19ea07e126fa"
+name = "Ambur biryani"
+serves = 6
+prep_minutes = 30
+cook_minutes = 100
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "dried-red-chillies", amount = 12, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5.5, unit = "cup" },
+]
+steps = [
+  "Soak the dried red chillies in a little of the water, just off the boil, for 20 minutes. Grind them with their soaking liquid into a smooth red paste.",
+  "Rinse the basmati rice gently, soak it for 20 minutes and drain.",
+  "Slice the onions and chop the tomatoes, mint and coriander leaves.",
+  "Heat the oil and ghee in a heavy pot over medium heat. Add the cardamom, cloves, cinnamon and bay leaves and stir for 30 seconds.",
+  "Add the onions and cook for 8 minutes, until light golden. Add the ginger garlic paste and stir for 2 minutes, until the raw smell goes.",
+  "Add the chilli paste and fry for 4 to 5 minutes, until it darkens and the oil separates.",
+  "Add the tomatoes and half the mint and coriander leaves and cook for 5 minutes, until the tomatoes are mushy.",
+  "Add the mutton, curd and salt and stir for 5 minutes. Pour in half the remaining water, cover and simmer on low heat for 45 to 50 minutes, until the mutton is tender.",
+  "Add the rest of the water and the lemon juice and bring to a boil. Taste the liquid; it should be quite salty.",
+  "Add the basmati rice and the rest of the mint and coriander leaves. Cook uncovered on medium heat for 5 minutes, until most of the liquid is absorbed.",
+  "Cover tightly and cook on the lowest heat for 15 minutes. Rest for 5 minutes, then serve with onion raita and a tangy curry.",
+]
+
+[[recipe]]
+id = "01a18b54-81d9-7f70-bd7a-2d0a460212b7"
+name = "Chettinad biryani"
+serves = 6
+prep_minutes = 30
+cook_minutes = 70
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "star-anise", amount = 1, unit = "piece" },
+  { id = "stone-flower", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coconut-milk", amount = 1, unit = "cup" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4.5, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice gently, soak it for 20 minutes and drain.",
+  "Dry roast the fennel seeds and black pepper over low heat for 1 minute, until fragrant, and grind them to a powder.",
+  "Slice the onions, chop the tomatoes, slit the green chillies and chop the mint and coriander leaves.",
+  "Heat the oil and ghee in a heavy pot over medium heat. Add the star anise, stone flower, cardamom, cloves, cinnamon and bay leaves and stir for 30 seconds, until fragrant.",
+  "Add the onions and green chillies and cook for 8 minutes, until golden. Stir in the ginger garlic paste for 2 minutes.",
+  "Add the tomatoes, red chilli powder, turmeric and the fennel-pepper powder and cook for 6 minutes, until the tomatoes break down and the oil separates.",
+  "Add the chicken, curd, half the mint and coriander leaves and salt. Cook covered on medium-low heat for 15 minutes, until the chicken is half cooked.",
+  "Pour in the coconut milk and water and bring to a boil. Taste; it should be a little salty.",
+  "Add the basmati rice and the rest of the herbs. Cook uncovered on medium heat for 5 minutes, until the liquid is level with the basmati rice.",
+  "Cover tightly and cook on the lowest heat for 15 to 18 minutes, until the basmati rice is tender. Rest for 5 minutes and serve with onion raita.",
+]
+
+[[recipe]]
+id = "01a18b54-81db-76fb-8c2c-f4f8a4475b55"
+name = "Coconut chutney"
+serves = 4
+prep_minutes = 10
+cook_minutes = 5
+ingredients = [
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "chana-dal", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Dry roast the chana dal in a small pan over low heat for 3 minutes, until golden. This gives the chutney body.",
+  "Grind the coconut, roasted dal, green chillies, ginger and salt with the water into a smooth, thick chutney.",
+  "Heat the oil in a small pan over medium heat. Add the mustard seeds and urad dal and fry until the seeds pop and the dal turns golden.",
+  "Add the dried red chilli and curry leaves and let them sizzle for 10 seconds.",
+  "Pour the tempering over the chutney, taste for salt and serve with idli, dosa or vada.",
+]
+
+[[recipe]]
+id = "01a18b54-81de-7c22-a0d5-0f614ac75269"
+name = "Tomato chutney"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "tamarind", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Chop the tomatoes and onion roughly.",
+  "Heat half the oil in a pan over medium heat. Fry the dried red chillies and garlic for 1 minute, until the chillies darken.",
+  "Add the onion and cook for 4 minutes, until soft. Add the tomatoes, tamarind and salt and cook for 8 minutes, until the tomatoes are mushy and the liquid has dried up.",
+  "Cool, then grind to a smooth paste.",
+  "Heat the rest of the oil in a small pan. Fry the mustard seeds and urad dal until the seeds pop, then add the curry leaves and asafoetida for 10 seconds.",
+  "Pour over the chutney, taste for salt and serve with dosa or idli.",
+]
+
+[[recipe]]
+id = "01a18b54-81e0-7187-98c3-ce9d815f6f0f"
+name = "Peanut chutney"
+serves = 4
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "peanuts", amount = 0.5, unit = "cup" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "tamarind", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Dry roast the peanuts in a pan over medium heat for 5 to 6 minutes, stirring, until they crackle and the skins blister. Cool and rub off most of the skins.",
+  "Roast the dried red chillies in the same pan for 1 minute, until they darken slightly.",
+  "Grind the peanuts, dried red chillies, garlic, tamarind and salt with the water into a smooth, thick chutney.",
+  "Heat the oil in a small pan over medium heat. Fry the mustard seeds and urad dal until the seeds pop, then add the curry leaves for 10 seconds.",
+  "Pour the tempering over the chutney, taste for salt and serve with dosa or idli.",
+]
+
+[[recipe]]
+id = "01a18b54-81e2-7b3b-9004-93f5c851d16f"
+name = "Coriander chutney"
+serves = 4
+prep_minutes = 10
+cook_minutes = 5
+ingredients = [
+  { id = "coriander-leaves", amount = 1, unit = "bunch" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "tamarind", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Wash the coriander leaves well and chop them, stems and all.",
+  "Dry roast the chana dal in a small pan over low heat for 3 minutes, until golden.",
+  "Grind the coriander leaves, coconut, roasted dal, green chillies, ginger, tamarind and salt with the water into a smooth chutney.",
+  "Heat the oil in a small pan over medium heat. Fry the mustard seeds and urad dal until the seeds pop, then add the curry leaves for 10 seconds.",
+  "Pour over the chutney, taste for salt and serve with dosa, idli or pongal.",
+]
+
+[[recipe]]
+id = "01a18b54-81e4-7c4f-bc3c-963a4f227de4"
+name = "Gunpowder (podi)"
+serves = 8
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 0.25, unit = "cup" },
+  { id = "dried-red-chillies", amount = 15, unit = "piece" },
+  { id = "sesame-seeds", amount = 2, unit = "tbsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "asafoetida", amount = 0.5, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat a heavy pan over low heat. Dry roast the urad dal for 5 to 6 minutes, stirring constantly, until it turns golden and smells nutty. Tip it onto a plate.",
+  "Roast the chana dal the same way for 5 minutes, until golden. Tip it out.",
+  "Heat the oil in the pan and fry the dried red chillies for 1 to 2 minutes, until crisp and slightly darker. Add the curry leaves and stir until they are crisp and dry.",
+  "Roast the sesame seeds for 1 minute, until they pop and turn golden. Stir in the asafoetida off the heat.",
+  "Cool everything completely. Grind it with the jaggery and salt into a coarse powder, like fine sand.",
+  "Taste for salt. Keep it in an airtight jar and serve it alongside idli and dosa.",
+]
+
+[[recipe]]
+id = "01a18b54-81e7-7b17-9646-a0def52a7eb2"
+name = "Parippu payasam"
+serves = 6
+prep_minutes = 10
+cook_minutes = 45
+ingredients = [
+  { id = "moong-dal", amount = 0.5, unit = "cup" },
+  { id = "jaggery", amount = 1, unit = "cup" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "coconut-cream", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "dry-ginger-powder", amount = 0.25, unit = "tsp" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Dry roast the moong dal in a heavy pan over medium heat for 4 to 5 minutes, stirring, until it turns golden and smells toasty.",
+  "Rinse the dal and pressure cook it with most of the water for 3 whistles, until soft. Mash it well.",
+  "Melt the jaggery in the rest of the water over low heat. Strain out any grit.",
+  "Pour the jaggery syrup into the dal with a spoonful of the ghee. Cook on low heat for 8 to 10 minutes, stirring often, until thick.",
+  "Pour in the coconut milk and simmer on low heat for 10 minutes, stirring, until it thickens slightly. Don't let it boil hard.",
+  "Crush the cardamom and grind the seeds. Stir them in with the dry ginger powder and the coconut cream, and turn off the heat.",
+  "Cut the dried coconut into small bits. Fry them in the rest of the ghee over medium heat for 1 minute, then the cashews for 1 minute, until golden, then the raisins until they puff.",
+  "Pour everything over the payasam and serve warm.",
+]
+
+[[recipe]]
+id = "01a18b54-81e9-7ed6-a0cf-b46d523cc14a"
+name = "Paal payasam"
+serves = 6
+prep_minutes = 5
+cook_minutes = 60
+ingredients = [
+  { id = "rice", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 1.5, unit = "l" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Rinse the rice and drain it well.",
+  "Bring the milk to a boil in a large, heavy pot over medium heat, stirring so it doesn't catch.",
+  "Add the rice and simmer on low heat for 40 to 50 minutes, stirring every few minutes and scraping the bottom, until the rice is very soft and the milk has thickened and turned a pale pink colour.",
+  "Add the sugar and simmer for 5 minutes, until it dissolves and the payasam thickens again.",
+  "Crush the cardamom, grind the seeds and stir them in.",
+  "Heat the ghee in a small pan and fry the cashews for 1 minute, until golden, then the raisins until they puff. Pour over the payasam and serve warm or chilled.",
+]
+
+[[recipe]]
+id = "01a18b54-81eb-78a5-ab03-e87a612113ba"
+name = "Semiya payasam"
+serves = 4
+prep_minutes = 5
+cook_minutes = 25
+ingredients = [
+  { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 1, unit = "l" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Heat the ghee in a heavy pan over medium heat. Fry the cashews for 1 minute, until golden, then the raisins until they puff. Lift them out.",
+  "Break the Indian vermicelli into short pieces and fry it in the same ghee for 2 to 3 minutes, stirring, until golden.",
+  "Pour in the milk and bring to a boil, stirring.",
+  "Simmer on low heat for 10 to 12 minutes, stirring often, until the vermicelli is soft and the milk has thickened slightly.",
+  "Add the sugar and stir for 2 minutes, until dissolved. Crush the cardamom, grind the seeds and stir them in.",
+  "Add the cashews and raisins and serve warm. It thickens as it cools, so add a splash of milk if you serve it later.",
+]
+
+[[recipe]]
+id = "01a18b54-81ed-7b59-8c51-f262d91a2e78"
+name = "Mysore pak"
+serves = 12
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 2, unit = "cup" },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Grease a deep tray, about 20 cm across, with a little of the ghee.",
+  "Sift the gram flour. Warm the rest of the ghee in a small pan until hot and keep it on the lowest heat.",
+  "Mix a quarter of the hot ghee into the gram flour to make a smooth, runny paste with no lumps.",
+  "Heat the sugar and the water in a heavy pan over medium heat, stirring until the sugar dissolves. Boil for 5 to 6 minutes, until a drop pulled between finger and thumb forms a single thread.",
+  "Turn the heat to low and add the gram flour paste a little at a time, whisking constantly so no lumps form.",
+  "Add the rest of the hot ghee a ladle at a time, stirring hard. Each time, wait until the mixture absorbs it and bubbles before adding the next.",
+  "Keep stirring for 8 to 10 minutes, until the mixture turns light and porous, froths up and starts leaving the sides of the pan.",
+  "Pour it into the tray at once; it sets quickly. Let it sit for 5 minutes, then cut into squares while still warm.",
+  "Let it cool completely before lifting the pieces out. Keep in an airtight box.",
+]
+
+[[recipe]]
+id = "01a18b54-81f0-7bcb-b74e-17be585e8b70"
+name = "Kesari bath"
+serves = 4
+prep_minutes = 5
+cook_minutes = 20
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "ghee", amount = 0.33, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "pineapple", amount = 0.25, unit = "cup" },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Heat half the ghee in a heavy pan over medium heat. Fry the cashews for 1 minute, until golden, then the raisins until they puff. Lift them out.",
+  "Add the semolina to the same ghee and roast on low heat for 5 to 6 minutes, stirring, until it smells nutty but stays pale.",
+  "Meanwhile, bring the water to a boil with the saffron in another pan. Chop the pineapple into small pieces.",
+  "Pour the boiling saffron water into the semolina slowly, stirring constantly. It will splutter, so stand back.",
+  "Cook on low heat for 3 minutes, stirring, until the semolina absorbs the water and swells.",
+  "Add the sugar and pineapple and stir for 3 to 4 minutes. It will turn runny, then thicken again.",
+  "Add the rest of the ghee a spoonful at a time and stir until the kesari leaves the sides of the pan and looks glossy.",
+  "Crush the cardamom, grind the seeds and stir them in with the cashews and raisins. Serve warm.",
+]
+
+[[recipe]]
+id = "01a18b54-81f2-7ea2-80fd-2dfa0e2f955b"
+name = "Rava ladoo"
+serves = 12
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "semolina", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "desiccated-coconut", amount = 0.25, unit = "cup" },
+  { id = "ghee", amount = 0.33, unit = "cup" },
+  { id = "milk", amount = 3, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Grind the sugar with the cardamom seeds to a fine powder.",
+  "Heat a spoonful of the ghee in a heavy pan over medium heat. Fry the chopped cashews for 1 minute, until golden, then the raisins until they puff. Lift them out.",
+  "Add the rest of the ghee and the semolina and roast on low heat for 8 to 10 minutes, stirring constantly, until it smells nutty and turns pale golden.",
+  "Add the desiccated coconut and roast for 2 minutes more.",
+  "Turn off the heat. Stir in the sugar powder, cashews and raisins.",
+  "Warm the milk and sprinkle it over the mixture, mixing as you go.",
+  "While it is still warm, take a handful and press it firmly into a ball about 4 cm across. If it won't hold, add a little more warm milk.",
+  "Let the ladoos cool and firm up, then keep them in an airtight box.",
+]
+
+[[recipe]]
+id = "01a18b54-81f4-7541-9730-2d276b3bee30"
+name = "Coconut ladoo"
+serves = 12
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "coconut", amount = 2, unit = "cup" },
+  { id = "condensed-milk", amount = 0.75, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "desiccated-coconut", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Crush the cardamom and grind the seeds.",
+  "Heat the ghee in a heavy pan over low heat. Add the grated coconut and stir for 4 to 5 minutes, until it dries out a little but stays white.",
+  "Pour in the condensed milk and cook on low heat for 10 to 12 minutes, stirring constantly, until the mixture thickens and gathers into one mass that leaves the sides of the pan.",
+  "Stir in the cardamom and turn off the heat. Let it cool until you can handle it.",
+  "Grease your palms and roll the mixture into balls about 3 cm across.",
+  "Roll each in the desiccated coconut to coat. Let them set for 30 minutes before serving.",
+]
+
+[[recipe]]
+id = "01a18b54-81f6-7fd7-a5ee-6bc05b5d3a98"
+name = "Double ka meetha"
+serves = 6
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "white-bread", amount = 8, unit = "slice" },
+  { id = "milk", amount = 750, unit = "ml" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the crusts off the white bread and cut each slice into two triangles.",
+  "Heat the ghee in a wide pan over medium heat. Fry the bread a few pieces at a time for 1 to 2 minutes per side, until golden and crisp. Drain on paper.",
+  "Bring the milk to a boil with the saffron and simmer on low heat for 15 minutes, stirring often, until reduced by about a third.",
+  "In another pan, heat the sugar with the water over medium heat, stirring until it dissolves. Boil for 3 minutes, until slightly sticky.",
+  "Crush the cardamom and grind the seeds. Stir them into the syrup.",
+  "Dip each piece of fried bread in the syrup for a few seconds and lay it in a wide dish.",
+  "Pour the reduced milk over the bread. Simmer gently on low heat for 5 minutes, or leave it to soak, until the bread is soft and has drunk most of the milk.",
+  "Slice the almonds and pistachios and scatter them over. Serve warm or chilled.",
+]
+
+[[recipe]]
+id = "01a18b54-81f8-7d67-8527-5a688f5ead83"
+name = "Qubani ka meetha"
+serves = 6
+prep_minutes = 10
+cook_minutes = 40
+ingredients = [
+  { id = "dried-apricots", amount = 250, unit = "g" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the dried apricots and soak them in the water overnight, until plump.",
+  "Lift them out, keeping the soaking liquid. Split each of the dried apricots, take out the stone and set the stones aside.",
+  "Simmer the dried apricots in the soaking liquid over medium heat for 15 minutes, until very soft.",
+  "Add the sugar and cook on low heat for 15 to 20 minutes, stirring and mashing, until it turns thick, glossy and jammy.",
+  "If you like, crack a few of the stones and add the kernels for an almond flavour. Otherwise, slice the almonds.",
+  "Cool, then serve chilled, topped with the cream and almonds.",
+]
+
+[[recipe]]
+id = "01a18b54-81fb-7b02-a01b-8336a10cf2c5"
+name = "Filter coffee"
+serves = 2
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "ground-coffee", amount = 4, unit = "tbsp" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use a South Indian coffee filter, or a small cafetière. Put the ground coffee in the upper chamber and press it down lightly with the plunger disc.",
+  "Bring the water to a boil and pour it over the coffee. Cover and let it drip for 10 to 15 minutes, until you have a thick, dark decoction below.",
+  "Heat the milk until it just starts to boil.",
+  "Put the sugar in a tumbler and pour in the decoction until it is about a quarter full.",
+  "Top up with the hot milk. Pour it back and forth between two steel tumblers from a height a few times, until frothy. Taste, add more sugar if you like, and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b54-81fd-744c-8908-c227ebd8f78d"
+name = "Panakam"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "jaggery", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "dry-ginger-powder", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Grate or crush the jaggery and stir it into the water until it dissolves completely.",
+  "Strain through a fine sieve to remove any grit.",
+  "Crush the cardamom and grind the seeds. Crush the black pepper coarsely.",
+  "Stir in the dry ginger powder, cardamom, black pepper and the lemon juice.",
+  "Taste and add more lemon or jaggery to balance it. Serve at room temperature or chilled.",
+]
+
+[[recipe]]
+id = "01a18b54-81ff-7192-8da7-8629606203ba"
+name = "Neer mor"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Grate the ginger and finely chop the green chilli, curry leaves and coriander leaves.",
+  "Whisk the curd with the water until completely smooth and thin.",
+  "Crush the ginger, green chilli and curry leaves lightly with a spoon, so they release their flavour, and stir them in.",
+  "Add the asafoetida, coriander leaves and salt and stir well.",
+  "Taste and adjust the salt. Serve chilled, straining it if you like.",
+]
