@@ -130,7 +130,7 @@ test("a recipe synced before amounts existed shows no stepper or amounts", async
   expect(amounts()).toEqual(["Paneer", "Potato", "Cream", "Salt"]);
 });
 
-test("a recipe with a long wait says to plan ahead, and one without says nothing", async () => {
+test("a recipe with a long wait says to plan ahead", async () => {
   stubApi(undefined, (card) => ({
     ...detailOf(card),
     plan_ahead: { wait_minutes: 480, note: "soak overnight" },

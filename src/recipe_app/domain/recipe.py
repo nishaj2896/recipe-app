@@ -26,7 +26,8 @@ PLAN_AHEAD_FIELDS = frozenset({"wait_minutes", "note"})
 class PlanAhead:
     """A hands-off wait of an hour or more that the times leave out (ADR-0009).
 
-    `note` finishes "Plan ahead: ", so it starts in lower case: "soak overnight".
+    `note` finishes "Plan ahead: ", so it has no capital first letter and no full
+    stop: "soak overnight".
     """
 
     wait_minutes: int
@@ -145,12 +146,13 @@ def check_plan_ahead(value: object, problems: list[str]) -> PlanAhead | None:
         or not note
         or len(note) > MAX_WAIT_NOTE_LENGTH
         or note != " ".join(note.split())
-        or not note[0].islower()
+        or note[0].isupper()
         or note.endswith(".")
     ):
         problems.append(
             f"plan_ahead note must be 1 to {MAX_WAIT_NOTE_LENGTH} characters, "
-            "single-spaced, start in lower case and not end with a full stop"
+            "single-spaced, must not start with a capital letter or end with a "
+            "full stop"
         )
     if len(problems) > before:
         return None

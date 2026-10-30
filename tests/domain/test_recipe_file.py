@@ -328,7 +328,7 @@ def test_image_is_kept() -> None:
         pytest.param({"wait_minutes": 480}, "note must be", id="no-note"),
         pytest.param(
             {"wait_minutes": 480, "note": "Soak overnight"},
-            "start in lower case",
+            "not start with a capital letter",
             id="capital-note",
         ),
         pytest.param(
@@ -367,6 +367,15 @@ def test_plan_ahead_is_kept() -> None:
     assert book.recipes[0].plan_ahead == PlanAhead(
         wait_minutes=480, note="soak overnight"
     )
+
+
+@pytest.mark.parametrize("note", ["2-day ferment", "24 hours in the fridge"])
+def test_a_note_may_start_with_a_digit(note: str) -> None:
+    raw = recipe_table(plan_ahead={"wait_minutes": 2880, "note": note})
+
+    book = parse_recipe_book([("a.toml", raw.encode())], CATALOG)
+
+    assert book.recipes[0].plan_ahead == PlanAhead(wait_minutes=2880, note=note)
 
 
 def test_plan_ahead_is_optional() -> None:
