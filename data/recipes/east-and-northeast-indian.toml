@@ -1512,7 +1512,7 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Rinse the bamboo shoots, slice them thinly and spread them on a cloth to dry completely for a few hours.",
+  "Rinse the bamboo shoots, slice them thinly and spread them on a cloth to dry completely for about 3 hours.",
   "Dry roast the mustard seeds and dried red chillies for 1 minute and grind them coarsely.",
   "Heat the mustard oil in a pan until it just smokes, then turn off the heat and let it cool for 2 minutes.",
   "Add the crushed garlic, turmeric and red chilli powder and stir.",

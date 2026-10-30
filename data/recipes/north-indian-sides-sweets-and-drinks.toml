@@ -11,7 +11,6 @@ name = "Rice kheer"
 serves = 4
 prep_minutes = 5
 cook_minutes = 40
-plan_ahead = { wait_minutes = 180, note = "chill for 3 hours" }
 ingredients = [
   { id = "rice", amount = 50, unit = "g" },
   { id = "milk", amount = 1, unit = "l" },

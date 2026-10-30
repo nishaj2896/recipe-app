@@ -909,7 +909,7 @@ name = "Shrikhand"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
-plan_ahead = { wait_minutes = 240, note = "hang the curd for 3 hours" }
+plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "icing-sugar", amount = 0.5, unit = "cup" },
@@ -1175,7 +1175,7 @@ steps = [
   "Add the onions and green chillies and cook for 8 minutes, until golden.",
   "Add the paste and fry for 5 minutes, until the oil separates.",
   "Add the rest of the meat and enough of the broth to make a thick gravy. Simmer on low heat for 30 to 40 minutes, stirring often, until it is thick and dark.",
-  "Stir in the sugar, taste and balance the salt and sourness. Rest it for a day for the best flavour, and serve with sannas or chapati.",
+  "Stir in the sugar, taste and balance the salt and sourness. Cool, cover and refrigerate for a day so the flavours develop, then reheat gently and serve with sannas or chapati.",
 ]
 
 [[recipe]]

@@ -294,7 +294,7 @@ name = "Anarsa"
 serves = 8
 prep_minutes = 40
 cook_minutes = 25
-plan_ahead = { wait_minutes = 4800, note = "soak the rice for 3 days" }
+plan_ahead = { wait_minutes = 4860, note = "soak the rice for 3 days" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 0.5, unit = "cup" },
