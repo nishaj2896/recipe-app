@@ -277,6 +277,7 @@ name = "Hara bhara kebab"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a188aa-f1cf-7eed-a6b4-363efdcb5cc9.webp", sha256 = "5c30096e0c43c4b0bb8283ae868a79f950d0f62d24e07f24604f3cca4695c700", alt = "Hara bhara kebabs, each with a cashew pressed into the middle" }
 ingredients = [
   { id = "spinach", amount = 200, unit = "g" },
   { id = "peas", amount = 0.5, unit = "cup" },
@@ -438,6 +439,7 @@ name = "Aloo tikki"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a188aa-f1da-773c-b67e-c654f0ec5824.webp", sha256 = "fc9d4c5009104058dd975c384736346f7c45011db1452a35819968373e9fc1c2", alt = "Two aloo tikki, one broken open to show a potato and pea filling" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "peas", amount = 0.25, unit = "cup" },

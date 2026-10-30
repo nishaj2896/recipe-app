@@ -11,6 +11,7 @@ name = "Nasi goreng"
 serves = 2
 prep_minutes = 10
 cook_minutes = 12
+image = { file = "01a18c12-05bc-7ee2-a97d-f619d0729c98.webp", sha256 = "cde63b3195dbd222f7a040103043dab348de0939666e3d79f88cb55ebb63dc3f", alt = "Nasi goreng topped with two fried eggs, with sliced cucumber and tomato" }
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },

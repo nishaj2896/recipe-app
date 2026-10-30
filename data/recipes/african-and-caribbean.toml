@@ -11,6 +11,7 @@ name = "Jollof rice"
 serves = 6
 prep_minutes = 20
 cook_minutes = 50
+image = { file = "01a18c4a-5f8e-7c60-acaf-8a4fe25a35f2.webp", sha256 = "ddd4927dfb547f528bbe512cde77f1b3c20b0fefab71a1721e18b02327750c06", alt = "Jollof rice in a tomato and pepper sauce" }
 ingredients = [
   { id = "parboiled-rice", amount = 2, unit = "cup" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -338,6 +339,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
+image = { file = "01a18c4a-5fa8-7cf2-b166-0d8dcc87af9a.webp", sha256 = "5a8eb8518dedd93d2a765529d04f6c78fadf6209ccff7647689c5c05df701496", alt = "Charred jerk chicken with lime wedges" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "jerk-seasoning", amount = 3, unit = "tbsp" },

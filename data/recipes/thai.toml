@@ -227,6 +227,7 @@ name = "Tom kha gai"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18c0c-0cbc-706a-93a0-33a01e525cfd.webp", sha256 = "eda68e76943ea921d8fc606a2ffc0822c27e57e86a0799240e317f5d8dcba9b2", alt = "Tom kha gai with chicken, mushrooms, chillies and coriander" }
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -524,6 +525,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a18c0c-0cd2-773b-9416-1958680405f1.webp", sha256 = "1a2e426c9e96d9708d12382a3755c4b307ed4d77ff3abd20b6922ecdfbb9b5af", alt = "Mango sticky rice with sliced mango and coconut sauce" }
 ingredients = [
   { id = "glutinous-rice", amount = 1, unit = "cup" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },

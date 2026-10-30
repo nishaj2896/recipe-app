@@ -11,6 +11,7 @@ name = "Goulash"
 serves = 6
 prep_minutes = 20
 cook_minutes = 140
+image = { file = "01a18c4f-8e37-7126-acc4-b385b93d789a.webp", sha256 = "9fb5125bb9290ac6b5c9c8ff47b59a53948efc3efe363b173a086d50e8645bb9", alt = "Goulash with beef, potato, bell pepper and carrot" }
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -75,6 +76,7 @@ name = "Pierogi"
 serves = 4
 prep_minutes = 60
 cook_minutes = 50
+image = { file = "01a18c4f-8e3d-7b71-8c32-bf5237331077.webp", sha256 = "2587417ea2174bc1cfe5f76b211fb7cb9e7e9e047d1a60c8291d4894cc6cef7d", alt = "Pierogi pan-fried and topped with onions" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "egg", amount = 1, unit = "large" },
@@ -139,6 +141,7 @@ name = "Beef stroganoff"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18c4f-8e41-773d-81a2-1f6f4e80757a.webp", sha256 = "766433f2b4018a110f99c8730f8a548ecbee59bbaccda9de4e1e214d7846809d", alt = "Beef stroganoff with mushrooms in a sour cream sauce" }
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -169,6 +172,7 @@ name = "Schnitzel"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+image = { file = "01a18c4f-8e43-75c6-8647-fe98c8b15ce7.webp", sha256 = "05dd7870b1ed69302072e73e7396f059053bee24dbce0be2e3e21fbef6fbe855", alt = "Crumbed pork schnitzel with lemon wedges" }
 ingredients = [
   { id = "pork", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
