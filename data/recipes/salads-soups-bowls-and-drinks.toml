@@ -22,10 +22,13 @@ ingredients = [
   { id = "water", amount = 0.25, unit = "cup" },
 ]
 steps = [
-  "Press the tofu dry in a cloth, cut it into cubes and toss with the cornflour. Cut the broccoli into florets and the bell pepper into strips.",
-  "Heat the sesame oil in a wok and fry the tofu for 6 to 8 minutes until golden on all sides. Lift it out.",
-  "Stir-fry the chopped garlic and ginger for 30 seconds, then add the broccoli and the water and cook for 3 minutes until bright green.",
-  "Add the bell pepper, the tofu and the soy sauce and toss for 2 minutes until glossy. Serve hot.",
+  "Wrap the tofu in a clean cloth and press it under a heavy pan for 10 minutes to squeeze out the liquid.",
+  "Cut the tofu into 2 cm cubes and toss with the cornflour.",
+  "Cut the broccoli into small florets and the bell pepper into strips. Finely chop the garlic and ginger.",
+  "Heat the sesame oil in a wok over medium-high heat. Fry the tofu for 6 to 8 minutes, turning, until golden on all sides. Lift it out.",
+  "Add the garlic and ginger and stir-fry for 30 seconds.",
+  "Add the broccoli and the water, cover and cook for 3 minutes, until bright green and just tender.",
+  "Add the bell pepper, tofu and soy sauce and toss for 2 minutes, until glossy. Serve hot.",
 ]
 
 [[recipe]]
@@ -44,8 +47,10 @@ ingredients = [
   { id = "water", amount = 500, unit = "ml" },
 ]
 steps = [
-  "Roughly chop the tomato, onion and garlic.",
-  "Melt the butter in a pot and cook the onion and garlic for 5 minutes until soft.",
-  "Add the tomato and the water with salt and simmer for 20 minutes until the tomato has completely collapsed.",
-  "Blend until smooth, strain if you like it silky, and season with black pepper. Serve hot.",
+  "Roughly chop the tomatoes, onion and garlic.",
+  "Melt the butter in a pot over medium heat. Add the onion and garlic and cook for 5 minutes, until soft but not browned.",
+  "Add the tomatoes, the water and salt and bring to a boil.",
+  "Lower the heat and simmer for 20 minutes, until the tomatoes have completely collapsed.",
+  "Let it cool for a few minutes, then blend until smooth. Strain it if you like it silky.",
+  "Reheat, season with black pepper, taste for salt and serve hot.",
 ]

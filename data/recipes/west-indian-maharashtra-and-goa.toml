@@ -25,9 +25,12 @@ ingredients = [
   { id = "coriander-leaves", amount = 2, unit = "tbsp" },
 ]
 steps = [
-  "Rinse the flattened rice in a sieve under the tap for a few seconds, then leave it to soften for 5 minutes. Toss it with the salt and sugar.",
-  "Heat the oil in a wide pan and fry the peanuts until crisp. Add the mustard seeds and, when they pop, the curry leaves and chopped green chillies.",
-  "Add the finely chopped onion and cook for 3 minutes until soft, then stir in the turmeric.",
+  "Put the flattened rice in a sieve and rinse it under the tap for 10 to 15 seconds, just until soft. Leave it to drain for 5 minutes.",
+  "Toss the flattened rice gently with the salt and sugar.",
+  "Finely chop the onion and green chillies.",
+  "Heat the oil in a wide pan over medium heat. Fry the peanuts for 2 minutes, until crisp and golden.",
+  "Add the mustard seeds and wait until they pop. Add the curry leaves and green chillies.",
+  "Add the onion and cook for 3 minutes, until soft and translucent. Stir in the turmeric.",
   "Add the flattened rice and toss gently over low heat for 3 minutes, until hot and evenly yellow.",
-  "Squeeze over the juice of the lemon, scatter with coriander leaves and serve straight away.",
+  "Turn off the heat, squeeze over the lemon juice, scatter the coriander leaves over and serve straight away.",
 ]

@@ -20,10 +20,14 @@ ingredients = [
   { id = "water", amount = 4, unit = "l" },
 ]
 steps = [
-  "Bring the water to a boil with plenty of salt and cook the pasta until al dente. Keep back a mugful of the cooking water before draining.",
-  "While the pasta cooks, slice the garlic thinly and warm it in the olive oil over low heat for 3 to 4 minutes, until pale golden.",
-  "Add the chilli flakes, then the drained pasta and a splash of the cooking water, and toss hard until a glossy sauce clings to the pasta.",
-  "Chop the parsley, toss it through and serve straight away.",
+  "Bring the water to a rolling boil and add plenty of salt.",
+  "Cook the pasta until al dente, still slightly firm in the centre.",
+  "Meanwhile, slice the garlic thinly and chop the parsley.",
+  "Warm the olive oil and garlic in a large pan over low heat for 3 to 4 minutes, until the garlic is pale golden. Don't let it brown, or it turns bitter.",
+  "Add the chilli flakes and stir for 10 seconds.",
+  "Scoop out a mugful of the pasta cooking water, then drain the pasta.",
+  "Add the pasta and a splash of the cooking water to the pan. Toss hard over medium heat for 1 minute, until a glossy sauce clings to the pasta.",
+  "Toss through the parsley and serve straight away.",
 ]
 
 [[recipe]]
@@ -43,8 +47,11 @@ ingredients = [
   { id = "water", amount = 4, unit = "l" },
 ]
 steps = [
-  "Warm the olive oil in a pan over medium heat and cook the sliced garlic and chilli flakes for 1 minute without browning.",
-  "Add the canned tomatoes, crush them with a spoon, season with salt and simmer for 15 minutes until thick.",
-  "Meanwhile, bring the water to a boil with plenty of salt and cook the pasta until al dente.",
-  "Drain the pasta, toss it into the sauce with torn basil and serve.",
+  "Slice the garlic thinly.",
+  "Warm the olive oil in a pan over medium heat. Add the garlic and chilli flakes and cook for 1 minute, until fragrant but not browned.",
+  "Add the canned tomatoes, crush them with a spoon and season with salt.",
+  "Simmer for 15 minutes, stirring now and then, until the sauce is thick and glossy.",
+  "Meanwhile, bring the water to a rolling boil with plenty of salt and cook the pasta until al dente.",
+  "Drain the pasta and toss it into the sauce for 1 minute, until coated.",
+  "Tear the basil over and serve hot.",
 ]

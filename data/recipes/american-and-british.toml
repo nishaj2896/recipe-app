@@ -20,8 +20,11 @@ ingredients = [
   { id = "water", amount = 3, unit = "l" },
 ]
 steps = [
-  "Bring the water to a boil with salt and cook the pasta until just tender, then drain.",
-  "In the same pot, melt the butter, pour in the milk and bring it to a gentle simmer.",
-  "Grate the cheddar and stir it into the milk off the heat until melted and smooth.",
-  "Return the pasta to the pot, season with salt and black pepper, and stir until every piece is coated. Serve hot.",
+  "Bring the water to a rolling boil and add a good handful of salt.",
+  "Add the pasta and cook, stirring now and then, until just tender with a slight bite, about 1 minute less than the packet says. Drain.",
+  "Grate the cheddar.",
+  "In the same pot, melt the butter over medium heat. Pour in the milk and heat until small bubbles appear at the edge, without letting it boil.",
+  "Take the pot off the heat and stir in the cheddar a handful at a time, until it melts into a smooth sauce.",
+  "Return the pasta to the pot and stir over low heat for 1 minute, until every piece is coated and the sauce is creamy.",
+  "Season with salt and black pepper and serve hot.",
 ]
