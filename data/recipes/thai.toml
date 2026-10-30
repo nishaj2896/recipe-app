@@ -1,0 +1,593 @@
+# Thai (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c0c-0cab-74d1-84e6-cbf6625fa8ec"
+name = "Pad thai"
+serves = 2
+prep_minutes = 20
+cook_minutes = 12
+ingredients = [
+  { id = "flat-rice-noodles", amount = 200, unit = "g" },
+  { id = "prawns", amount = 200, unit = "g" },
+  { id = "tofu", amount = 100, unit = "g" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "chives", amount = 0.5, unit = "cup" },
+  { id = "peanuts", amount = 3, unit = "tbsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 2, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "shallot", amount = 2, unit = "piece" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Soak the rice noodles in warm tap water for 20 to 30 minutes, until bendy but still firm. Drain.",
+  "Soak the tamarind in the water, hot, for 10 minutes, squeeze and strain. Stir in the fish sauce and palm sugar until dissolved.",
+  "Peel and devein the prawns. Cut the tofu into small cubes, chop the garlic and shallots, cut the chives into lengths about 4 cm and crush the peanuts.",
+  "Heat the oil in a wok over high heat. Fry the tofu for 3 minutes, until golden. Add the garlic, shallots and prawns and stir-fry for 2 minutes, until the prawns turn pink.",
+  "Push everything to the side, crack in the eggs and scramble for 30 seconds, until just set.",
+  "Add the noodles and the tamarind sauce and toss for 2 to 3 minutes, until the noodles soften and absorb the sauce. Add a splash of water if they stick.",
+  "Toss in the bean sprouts, chives and chilli flakes for 30 seconds. Taste and balance so it is sweet, sour and salty. Serve with the peanuts and lime wedges.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cad-740d-8f61-ea9172a571f5"
+name = "Green curry with chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "small-brinjal", amount = 6, unit = "piece" },
+  { id = "bamboo-shoots", amount = 0.5, unit = "cup" },
+  { id = "makrut-lime-leaves", amount = 4, unit = "leaf" },
+  { id = "thai-basil", amount = 0.5, unit = "cup" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "chicken-stock", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs and slice them thinly. Quarter the small brinjals and slice the bird's eye chillies.",
+  "Heat the oil in a wok or pan over medium heat. Spoon in the thick layer from the top of the coconut milk and simmer for 2 to 3 minutes, until it splits and the oil shows.",
+  "Add the green curry paste and fry for 2 minutes, stirring, until fragrant.",
+  "Add the chicken and stir for 3 minutes, until it is coated and no longer pink outside.",
+  "Pour in the rest of the coconut milk and the chicken stock. Add the small brinjals, bamboo shoots and torn makrut lime leaves and simmer for 10 to 12 minutes, until the chicken is cooked and the small brinjals are tender.",
+  "Season with the fish sauce and palm sugar. Taste and balance so it is salty and sweet.",
+  "Stir in the Thai basil and bird's eye chillies off the heat and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0caf-76db-a774-96f2e2d27906"
+name = "Red curry with vegetables"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "tofu", amount = 200, unit = "g" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "baby-corn", amount = 100, unit = "g" },
+  { id = "bamboo-shoots", amount = 0.5, unit = "cup" },
+  { id = "makrut-lime-leaves", amount = 4, unit = "leaf" },
+  { id = "thai-basil", amount = 0.5, unit = "cup" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 1, unit = "tbsp" },
+  { id = "lime", amount = 1, unit = "small" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the tofu into cubes about 2 cm across and pat dry. Slice the bell pepper and zucchini and halve the baby corn.",
+  "Heat the oil in a wok over medium-high heat. Fry the tofu for 4 to 5 minutes, until golden on several sides. Lift it out.",
+  "Lower the heat to medium. Add the red curry paste and fry for 2 minutes, until fragrant, then stir in a few spoonfuls of the coconut milk and simmer for 2 minutes, until the oil shows.",
+  "Add the rest of the coconut milk, the vegetable stock and torn makrut lime leaves. Bring to a simmer.",
+  "Add the baby corn and bamboo shoots for 3 minutes, then the bell pepper and zucchini for 3 to 4 minutes, until just tender.",
+  "Return the tofu and season with the soy sauce, palm sugar and lime juice. Taste and balance.",
+  "Stir in the Thai basil and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cb2-7c90-af98-3af5b60de70e"
+name = "Massaman curry"
+serves = 4
+prep_minutes = 20
+cook_minutes = 120
+ingredients = [
+  { id = "beef", amount = 750, unit = "g" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "peanuts", amount = 0.33, unit = "cup" },
+  { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coconut-milk", amount = 3, unit = "cup" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cut the beef into cubes about 4 cm across. Peel the potatoes and cut them into chunks. Cut the onion into wedges. Soak the tamarind in a little of the water, hot, then squeeze and strain.",
+  "Dry-roast the peanuts in a pan for 4 minutes, until golden. Lightly crush the cardamom.",
+  "Heat the oil in a heavy pan over medium heat. Fry the red curry paste with the ground cinnamon, cardamom and cumin powder for 2 minutes, until fragrant.",
+  "Add the beef and stir for 3 minutes to coat. Pour in the coconut milk and the rest of the water, cover and simmer on low heat for 75 to 90 minutes, until the beef is nearly tender.",
+  "Add the potatoes, onion and peanuts and simmer for 20 to 25 minutes, until the potatoes are tender and the beef falls apart.",
+  "Season with the tamarind liquid, fish sauce and palm sugar. The curry should be rich, sweet, salty and slightly sour.",
+  "Taste and adjust, then serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cb4-703b-9866-c2132dd12c68"
+name = "Panang curry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
+  { id = "peanut-butter", amount = 1, unit = "tbsp" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "makrut-lime-leaves", amount = 6, unit = "leaf" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "fish-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "palm-sugar", amount = 1, unit = "tbsp" },
+  { id = "thai-basil", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Use boneless chicken thighs and slice them thinly. Slice the bell pepper. Roll the makrut lime leaves up tightly and slice them into hair-thin threads.",
+  "Heat the oil in a wok over medium heat. Add a few spoonfuls of the coconut milk and simmer for 2 minutes, until the oil shows.",
+  "Add the red curry paste and peanut butter and fry for 2 minutes, stirring, until fragrant and darker.",
+  "Add the chicken and stir for 3 minutes, until coated.",
+  "Pour in the rest of the coconut milk and simmer for 10 minutes, until the chicken is cooked and the sauce is thick enough to coat a spoon.",
+  "Add the bell pepper and most of the makrut lime leaves for 2 minutes. Season with the fish sauce and palm sugar.",
+  "Taste and balance, then serve topped with the Thai basil and the rest of the makrut lime leaves.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cb7-778d-a748-3cf502c8b871"
+name = "Yellow curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "thai-curry-paste", amount = 2, unit = "tbsp" },
+  { id = "curry-powder", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into bite-sized pieces. Peel and cube the potatoes and cut the onion into wedges.",
+  "Heat the oil in a pan over medium heat. Fry the red curry paste, curry powder and turmeric for 1 to 2 minutes, until fragrant.",
+  "Add a few spoonfuls of the coconut milk and simmer for 2 minutes, until the oil shows.",
+  "Add the chicken and stir for 3 minutes. Add the potatoes, the rest of the coconut milk and the chicken stock.",
+  "Simmer for 15 to 18 minutes, until the potatoes are tender. Add the onion for the last 5 minutes so it keeps a little bite.",
+  "Season with the fish sauce and palm sugar. Taste and adjust, then serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cb9-7a88-bdde-57551b5d091e"
+name = "Tom yum soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "prawns", amount = 400, unit = "g" },
+  { id = "lemongrass", amount = 2, unit = "piece" },
+  { id = "galangal", amount = 1, unit = "piece" },
+  { id = "makrut-lime-leaves", amount = 5, unit = "leaf" },
+  { id = "birds-eye-chillies", amount = 4, unit = "piece" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "cherry-tomatoes", amount = 8, unit = "piece" },
+  { id = "fish-sauce", amount = 3, unit = "tbsp" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "chicken-stock", amount = 5, unit = "cup" },
+]
+steps = [
+  "Peel and devein the prawns, leaving the tails on. Halve the mushrooms and cherry tomatoes.",
+  "Bash the lemongrass with the back of a knife and cut it into lengths about 5 cm. Slice the galangal thinly, tear the makrut lime leaves and lightly crush the bird's eye chillies.",
+  "Bring the chicken stock to a boil with the lemongrass, galangal and makrut lime leaves. Simmer for 5 minutes, until fragrant.",
+  "Add the mushrooms and cherry tomatoes and simmer for 3 minutes.",
+  "Add the prawns and bird's eye chillies and simmer for 2 to 3 minutes, until the prawns are pink. Take the pan off the heat.",
+  "Stir in the fish sauce and lime juice. Taste and balance: it should be sour, salty and hot. Scatter the coriander leaves over and serve. The lemongrass, galangal and lime leaves are for flavour, not for eating.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cbc-706a-93a0-33a01e525cfd"
+name = "Tom kha gai"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 400, unit = "g" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "lemongrass", amount = 2, unit = "piece" },
+  { id = "galangal", amount = 1, unit = "piece" },
+  { id = "makrut-lime-leaves", amount = 5, unit = "leaf" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "birds-eye-chillies", amount = 3, unit = "piece" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 1, unit = "tsp" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Use boneless chicken thighs and slice them thinly. Slice the mushrooms.",
+  "Bash the lemongrass and cut it into lengths about 5 cm. Slice the galangal, tear the makrut lime leaves and crush the bird's eye chillies.",
+  "Bring the chicken stock to a simmer with the lemongrass, galangal and makrut lime leaves for 5 minutes, until fragrant.",
+  "Add the coconut milk and chicken and simmer gently for 6 to 8 minutes, until the chicken is cooked through. Don't let it boil hard.",
+  "Add the mushrooms and bird's eye chillies for 2 minutes.",
+  "Off the heat, stir in the fish sauce, palm sugar and lime juice. Taste and balance so it is salty, sour and sweet. Scatter the coriander leaves over and serve.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cbe-7287-819a-154eb608ae68"
+name = "Pad see ew"
+serves = 2
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "flat-rice-noodles", amount = 250, unit = "g" },
+  { id = "chicken", amount = 200, unit = "g" },
+  { id = "broccoli", amount = 1, unit = "small" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "white-pepper", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Use fresh wide rice noodles if you can. Separate the strands gently. If using dried ones, soak them for 30 minutes, until soft, and drain.",
+  "Slice the chicken thinly, cut the broccoli into small florets and slice the stems, and chop the garlic. Mix the soy sauce, dark soy sauce, oyster sauce and sugar.",
+  "Heat the oil in a wok over high heat. Stir-fry the garlic and chicken for 3 minutes, until cooked through. Add the broccoli and toss for 2 minutes.",
+  "Push everything aside, crack in the eggs and scramble for 30 seconds.",
+  "Add the noodles and sauce. Spread them out and leave for 30 seconds to char slightly, then toss. Repeat for 2 to 3 minutes, until the noodles are coated, dark and lightly charred.",
+  "Sprinkle the white pepper over, taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cc0-7460-a7a7-08a0acc9e782"
+name = "Pad kra pao"
+serves = 2
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "chicken-mince", amount = 300, unit = "g" },
+  { id = "holy-basil", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "birds-eye-chillies", amount = 4, unit = "piece" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "jasmine-rice", amount = 1, unit = "cup" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the jasmine rice and simmer it in most of the water in a covered pan over low heat for 12 to 15 minutes, until tender. Rest covered.",
+  "Pound the garlic and bird's eye chillies to a rough paste. Mix the oyster sauce, soy sauce, fish sauce and sugar.",
+  "Heat most of the oil in a wok over medium-high heat. Fry the eggs one at a time for 2 minutes, spooning hot oil over, until the edges are crisp and the yolks still runny. Lift them out.",
+  "Heat the rest of the oil over high heat. Fry the garlic and chilli paste for 20 seconds, until fragrant.",
+  "Add the chicken mince and stir-fry for 3 to 4 minutes, breaking it up, until cooked and slightly crisp.",
+  "Add the sauce and the rest of the water and toss for 1 minute. Stir in the holy basil until it wilts.",
+  "Taste and serve over the jasmine rice with a fried egg on top.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cc2-7104-888c-5e892330ea95"
+name = "Drunken noodles"
+serves = 2
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "flat-rice-noodles", amount = 250, unit = "g" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "thai-basil", amount = 1, unit = "cup" },
+  { id = "birds-eye-chillies", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "oyster-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tsp" },
+  { id = "fish-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "If using dried wide rice noodles, soak them for 30 minutes, until soft, and drain. Separate fresh ones gently.",
+  "Slice the chicken thinly. Pound the garlic and bird's eye chillies to a rough paste. Slice the bell pepper and onion. Mix the oyster sauce, soy sauce, dark soy sauce, fish sauce and sugar.",
+  "Heat the oil in a wok over high heat. Fry the garlic and chilli paste for 20 seconds, then the chicken for 3 minutes, until cooked.",
+  "Add the onion and bell pepper and toss for 1 minute.",
+  "Add the noodles and the sauce and toss for 2 to 3 minutes, until evenly coated and slightly charred.",
+  "Toss in the Thai basil until wilted. Taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cc5-74d1-9786-4b44e97a4a3d"
+name = "Thai basil fried rice"
+serves = 2
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "jasmine-rice", amount = 1, unit = "cup" },
+  { id = "chicken", amount = 200, unit = "g" },
+  { id = "thai-basil", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "birds-eye-chillies", amount = 3, unit = "piece" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "fish-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Simmer the jasmine rice in the water in a covered pan over low heat for 12 to 15 minutes, until tender. Spread it out and chill until cold, ideally overnight.",
+  "Slice the chicken thinly and the onion into wedges. Pound the garlic and bird's eye chillies to a rough paste.",
+  "Heat the oil in a wok over high heat. Fry the garlic and chilli paste for 20 seconds, then the chicken for 3 minutes, until cooked.",
+  "Push it aside, crack in the eggs and scramble for 30 seconds, until just set.",
+  "Add the jasmine rice and onion and toss for 3 minutes, breaking up clumps, until hot.",
+  "Add the fish sauce, soy sauce and sugar and toss for 1 minute. Toss in the Thai basil until wilted. Taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cc7-7be5-8dad-725bbc89a6d1"
+name = "Pineapple fried rice"
+serves = 3
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "jasmine-rice", amount = 1.5, unit = "cup" },
+  { id = "pineapple", amount = 1, unit = "cup" },
+  { id = "prawns", amount = 200, unit = "g" },
+  { id = "cashews", amount = 0.33, unit = "cup" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "curry-powder", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "fish-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Simmer the jasmine rice in the water in a covered pan over low heat for 12 to 15 minutes, until tender. Spread it out and chill until cold.",
+  "Cut the pineapple into small cubes, peel and devein the prawns, chop the garlic and slice the spring onions.",
+  "Heat a spoonful of the oil in a wok over medium heat. Fry the cashews for 2 minutes, until golden. Lift them out.",
+  "Heat the rest of the oil over high heat. Fry the garlic and prawns for 2 minutes, until pink. Push aside, crack in the eggs and scramble for 30 seconds.",
+  "Add the jasmine rice and curry powder and toss for 3 minutes, until evenly yellow and hot.",
+  "Add the pineapple, raisins, fish sauce and soy sauce and toss for 2 minutes, until the pineapple is warm and slightly caramelised.",
+  "Toss in the cashews and spring onions, taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"
+name = "Som tam"
+serves = 4
+prep_minutes = 20
+cook_minutes = 0
+ingredients = [
+  { id = "raw-papaya", amount = 1, unit = "small" },
+  { id = "cherry-tomatoes", amount = 8, unit = "piece" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "peanuts", amount = 3, unit = "tbsp" },
+  { id = "dried-shrimp", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "birds-eye-chillies", amount = 3, unit = "piece" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "palm-sugar", amount = 1.5, unit = "tbsp" },
+]
+steps = [
+  "Peel the green papaya, halve it and scrape out the seeds. Shred the flesh into long, thin strands with a julienne peeler or the coarse side of a grater.",
+  "Dry-roast the peanuts in a pan for 4 minutes, until golden. Cut the green beans into lengths about 3 cm and halve the cherry tomatoes.",
+  "Pound the garlic and bird's eye chillies in a large mortar to a rough paste. Add the dried shrimp and peanuts and pound lightly.",
+  "Add the palm sugar, fish sauce and lime juice and stir until the palm sugar dissolves.",
+  "Add the green beans and cherry tomatoes and bruise them lightly. Add the green papaya and pound gently while turning with a spoon for 1 minute, until it softens slightly and soaks up the dressing.",
+  "Taste and balance the sour, salty, sweet and hot. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c0c-0ccb-799c-9cbf-2de39f21d098"
+name = "Larb"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "chicken-mince", amount = 500, unit = "g" },
+  { id = "glutinous-rice", amount = 2, unit = "tbsp" },
+  { id = "shallot", amount = 3, unit = "piece" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Dry-roast the glutinous rice in a pan over medium-low heat for 6 to 8 minutes, stirring, until deep golden and nutty. Grind to a coarse powder.",
+  "Thinly slice the shallots and spring onions. Pick the mint and coriander leaves. Separate the lettuce leaves.",
+  "Cook the chicken mince with the water in a pan over medium heat for 5 to 6 minutes, breaking it up, until just cooked through. Take it off the heat.",
+  "Stir in the fish sauce, lime juice and chilli flakes while it is warm.",
+  "Fold in the shallots, spring onions, mint, coriander leaves and most of the ground glutinous rice.",
+  "Taste and balance the sour, salty and hot. Sprinkle the rest of the ground glutinous rice over and serve warm with the lettuce leaves for wrapping.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cce-74bd-9df0-2ca546972ba7"
+name = "Thai cashew chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 12
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "cashews", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "oyster-sauce", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Slice the chicken thinly and toss with the cornflour. Cut the onion and bell pepper into chunks, cut the spring onions into lengths and chop the garlic. Mix the oyster sauce, soy sauce, fish sauce, sugar and the water.",
+  "Heat the oil in a wok over medium heat. Fry the cashews for 2 minutes, until golden, then the dried red chillies for 20 seconds, until they darken. Lift them out.",
+  "Raise the heat to high. Fry the chicken for 4 minutes, until golden and cooked through.",
+  "Add the garlic, onion and bell pepper and toss for 2 minutes.",
+  "Pour in the sauce and toss for 1 minute, until glossy.",
+  "Toss in the cashews, chillies and spring onions. Taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cd0-78c3-8d58-ee561ad4307d"
+name = "Thai peanut noodles"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "flat-rice-noodles", amount = 250, unit = "g" },
+  { id = "peanut-butter", amount = 0.33, unit = "cup" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "sriracha", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "red-cabbage", amount = 1, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "peanuts", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Grate the garlic and ginger. Whisk them with the peanut butter, soy sauce, lime juice, honey and sriracha into a thick sauce.",
+  "Cut the carrots and cucumber into matchsticks and finely shred the red cabbage. Crush the peanuts.",
+  "Bring the water to a boil and cook the rice noodles as the packet says, until tender. Keep a little of the cooking water, then drain and rinse under the cold tap.",
+  "Loosen the sauce with a splash of the cooking water until pourable.",
+  "Toss the noodles with the sauce, carrots, red cabbage and cucumber until well coated.",
+  "Taste and balance so it is salty, sweet and sour. Top with the peanuts and coriander leaves and serve.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cd2-773b-9416-1958680405f1"
+name = "Mango sticky rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "glutinous-rice", amount = 1, unit = "cup" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "mango", amount = 2, unit = "large" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "cornflour", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the glutinous rice well, then soak it for at least 4 hours. Drain.",
+  "Line a steamer basket with a damp cloth, spread the glutinous rice in it and steam for 20 to 25 minutes, until translucent, sticky and tender.",
+  "Meanwhile, warm most of the coconut milk with most of the sugar and a little salt in a pan over low heat for 3 minutes, stirring, until the sugar dissolves.",
+  "Tip the hot glutinous rice into a bowl, pour the warm sweet coconut milk over, stir and cover. Leave for 20 minutes to soak it up.",
+  "Heat the rest of the coconut milk with the rest of the sugar, a little salt and the cornflour for 2 minutes, stirring, until slightly thick. Toast the sesame seeds in a dry pan for 2 minutes.",
+  "Peel the mangoes and slice the flesh off the stones. Serve the sticky rice with the mango, drizzled with the thick coconut milk sauce and sprinkled with the sesame seeds.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"
+name = "Thai fish cakes"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "basa", amount = 400, unit = "g" },
+  { id = "thai-curry-paste", amount = 2, unit = "tbsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "french-beans", amount = 50, unit = "g" },
+  { id = "makrut-lime-leaves", amount = 4, unit = "leaf" },
+  { id = "fish-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "sweet-chilli-sauce", amount = 0.25, unit = "cup" },
+  { id = "cucumber", amount = 0.5, unit = "small" },
+  { id = "oil", amount = 1, unit = "cup" },
+]
+steps = [
+  "Cut the basa into chunks and pat dry. Pulse it in a food processor with the red curry paste, egg, fish sauce and sugar until it forms a smooth, sticky paste.",
+  "Thinly slice the green beans into rounds. Roll the makrut lime leaves tightly and slice them into fine threads. Mix both into the fish paste.",
+  "With wet hands, shape into flat cakes about 6 cm across and 1 cm thick.",
+  "Heat the oil in a frying pan over medium heat. Fry the cakes in batches for 2 to 3 minutes per side, until puffed, golden and cooked through. Drain.",
+  "Finely dice the cucumber and stir it into the sweet chilli sauce.",
+  "Serve the fish cakes hot with the cucumber dipping sauce.",
+]
+
+[[recipe]]
+id = "01a18c0c-0cd7-7285-97cc-18da54cdf186"
+name = "Glass noodle salad"
+serves = 4
+prep_minutes = 20
+cook_minutes = 10
+ingredients = [
+  { id = "glass-noodles", amount = 150, unit = "g" },
+  { id = "prawns", amount = 200, unit = "g" },
+  { id = "pork", amount = 150, unit = "g" },
+  { id = "shallot", amount = 2, unit = "piece" },
+  { id = "cherry-tomatoes", amount = 8, unit = "piece" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Soak the glass noodles in warm tap water for 10 minutes, until soft. Drain and cut them into shorter lengths with scissors.",
+  "Peel and devein the prawns. Thinly slice the shallots and celery, halve the cherry tomatoes and finely chop the bird's eye chillies.",
+  "Whisk the lime juice, fish sauce, sugar and bird's eye chillies until the sugar dissolves.",
+  "Bring the water to a boil. Cook the prawns for 2 minutes, until pink, and lift them out. Cook the minced pork in the same water for 2 minutes, stirring, until just cooked, and lift it out. Blanch the noodles for 30 seconds and drain.",
+  "Toss the warm noodles, prawns and pork with the dressing, then add the shallots, celery, cherry tomatoes and coriander leaves.",
+  "Taste and balance so it is sour, salty, sweet and hot. Top with the crushed peanuts and serve.",
+]

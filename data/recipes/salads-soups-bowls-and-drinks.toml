@@ -55,3 +55,668 @@ steps = [
   "Let it cool for a few minutes, then blend until smooth. Strain it if you like it silky.",
   "Reheat, season with black pepper, taste for salt and serve hot.",
 ]
+
+[[recipe]]
+id = "01a18c22-48a7-7e7c-8eb5-069a3ed8724b"
+name = "Roasted pumpkin soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "pumpkin", amount = 1, unit = "kg" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 3, unit = "cup" },
+  { id = "cream", amount = 0.33, unit = "cup" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "pumpkin-seeds", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Peel the pumpkin, scoop out the seeds and cut the flesh into chunks about 4 cm across. Quarter the onion.",
+  "Toss the pumpkin, onion and unpeeled garlic with the olive oil and salt on a tray. Roast for 30 to 35 minutes, until soft and caramelised at the edges.",
+  "Squeeze the garlic out of its skins. Put everything in a pot with the vegetable stock and simmer for 5 minutes.",
+  "Blend until very smooth.",
+  "Stir in most of the cream and the nutmeg and warm through. Season with salt.",
+  "Toast the pumpkin seeds in a dry pan for 3 minutes, until they pop.",
+  "Taste and adjust. Serve hot with a swirl of the rest of the cream and the pumpkin seeds.",
+]
+
+[[recipe]]
+id = "01a18c22-48a9-7d28-bc67-5de769d392c2"
+name = "Mushroom soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "mushroom", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "thyme", amount = 3, unit = "sprig" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 3, unit = "cup" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Slice the mushrooms, setting a few slices aside for the top. Chop the onion and garlic.",
+  "Melt most of the butter in a pot over medium heat. Fry the onion for 6 minutes, until soft, then the garlic and thyme leaves for 1 minute.",
+  "Turn the heat up, add the mushrooms and cook for 10 minutes, stirring, until they release their liquid and it evaporates and they turn golden.",
+  "Stir in the all-purpose flour for 1 minute, then the vegetable stock. Simmer for 10 minutes.",
+  "Blend until smooth, stir in the cream and season with salt.",
+  "Fry the set-aside mushroom slices in the rest of the butter for 3 minutes, until golden.",
+  "Taste and adjust. Serve hot topped with the fried mushrooms and chopped parsley.",
+]
+
+[[recipe]]
+id = "01a18c22-48ab-719d-99c3-2c1fa7e6b0cd"
+name = "Cream of broccoli soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "broccoli", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 4, unit = "cup" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "cheddar", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the broccoli into florets and peel and slice the stems. Chop the onion, peel and dice the potato and chop the garlic.",
+  "Melt the butter in a pot over medium heat. Fry the onion for 6 minutes, until soft, then the garlic for 1 minute.",
+  "Add the potato, broccoli stems and vegetable stock. Simmer for 10 minutes.",
+  "Add the florets and simmer for 5 to 6 minutes, until just tender and still bright green.",
+  "Blend until smooth. Stir in the cream and season with salt.",
+  "Taste and adjust. Serve hot with the grated cheddar scattered over.",
+]
+
+[[recipe]]
+id = "01a18c22-48ae-7237-aa9d-0567a7439df8"
+name = "Carrot and ginger soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "carrot", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "vegetable-stock", amount = 4, unit = "cup" },
+  { id = "coconut-milk", amount = 0.5, unit = "cup" },
+  { id = "lime", amount = 0.5, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and slice the carrots. Chop the onion and grate the ginger and garlic.",
+  "Heat the olive oil in a pot over medium heat. Fry the onion for 6 minutes, until soft, then the ginger and garlic for 1 minute.",
+  "Add the carrots and vegetable stock. Simmer for 20 to 25 minutes, until the carrots are very soft.",
+  "Blend until smooth. Stir in most of the coconut milk and the lime juice and season with salt.",
+  "Taste and adjust.",
+  "Serve hot with a swirl of the rest of the coconut milk and the coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18c22-48b0-78be-b545-35b868bd64c1"
+name = "Lentil and vegetable soup"
+serves = 6
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "green-lentils", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "spinach", amount = 2, unit = "cup" },
+  { id = "vegetable-stock", amount = 6, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the green lentils. Dice the onion, carrots and celery and chop the garlic.",
+  "Heat the olive oil in a large pot over medium heat. Fry the onion, carrots and celery for 8 minutes, until soft. Add the garlic, cumin powder and dried thyme for 1 minute.",
+  "Add the lentils, canned tomatoes and vegetable stock. Bring to a boil, then simmer for 25 to 30 minutes, until the lentils are tender.",
+  "Stir in the spinach for 2 minutes, until wilted.",
+  "Add the lemon juice and season with salt.",
+  "Taste and adjust. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48b2-74d0-8a43-2df3b2454ab2"
+name = "Quinoa salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "quinoa", amount = 1, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "cherry-tomatoes", amount = 200, unit = "g" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "feta", amount = 100, unit = "g" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the quinoa well. Simmer it in the water with a little salt in a covered pan for 12 to 15 minutes, until the water is absorbed and the grains show little tails. Rest covered for 5 minutes, then spread out to cool.",
+  "Dice the cucumber, halve the cherry tomatoes and finely chop the onion, parsley and mint.",
+  "Whisk the lemon juice, extra-virgin olive oil and salt.",
+  "Toss the quinoa with the vegetables, herbs and dressing.",
+  "Taste and adjust the lemon and salt.",
+  "Crumble the feta over and serve.",
+]
+
+[[recipe]]
+id = "01a18c22-48b4-727a-95b0-bed292ecbfe6"
+name = "Chickpea salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "chickpeas", amount = 2, unit = "can" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "parsley", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "extra-virgin-olive-oil", amount = 3, unit = "tbsp" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Drain and rinse the chickpeas and pat dry.",
+  "Dice the cucumber, tomatoes, onion and bell pepper. Chop the parsley.",
+  "Whisk the lemon juice, extra-virgin olive oil, cumin powder and salt.",
+  "Toss everything together with the dressing.",
+  "Leave for 10 minutes so the chickpeas soak up the dressing.",
+  "Taste and adjust, then serve.",
+]
+
+[[recipe]]
+id = "01a18c22-48b7-7fb2-aa27-8f53e6ffbcfe"
+name = "Pasta salad"
+serves = 6
+prep_minutes = 15
+cook_minutes = 12
+ingredients = [
+  { id = "pasta", amount = 300, unit = "g" },
+  { id = "cherry-tomatoes", amount = 250, unit = "g" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "olives", amount = 0.33, unit = "cup" },
+  { id = "mozzarella", amount = 150, unit = "g" },
+  { id = "basil", amount = 0.33, unit = "cup" },
+  { id = "red-wine-vinegar", amount = 2, unit = "tbsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.33, unit = "cup" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt. Cook the fusilli as the packet says, until just tender. Drain and rinse under the cold tap.",
+  "Halve the cherry tomatoes, dice the cucumber and bell pepper, slice the olives and tear the mozzarella into small pieces.",
+  "Whisk the red wine vinegar, extra-virgin olive oil, dried oregano and salt.",
+  "Toss the pasta with the vegetables, olives and dressing.",
+  "Fold in the mozzarella and torn basil.",
+  "Taste and adjust. Serve cool.",
+]
+
+[[recipe]]
+id = "01a18c22-48b9-7242-bdd6-e9534b8aef82"
+name = "Waldorf salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 5
+ingredients = [
+  { id = "apple", amount = 2, unit = "medium" },
+  { id = "celery", amount = 3, unit = "piece" },
+  { id = "grapes", amount = 1, unit = "cup" },
+  { id = "walnuts", amount = 0.5, unit = "cup" },
+  { id = "mayonnaise", amount = 0.33, unit = "cup" },
+  { id = "curd", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Toast the walnuts in a dry pan for 4 to 5 minutes, until fragrant, and chop them roughly.",
+  "Core the apples and cut them into cubes. Toss with half the lemon juice so they don't brown.",
+  "Slice the celery thinly and halve the grapes.",
+  "Whisk the mayonnaise, yogurt, the rest of the lemon juice and a little salt.",
+  "Fold the apples, celery, grapes and most of the walnuts into the dressing.",
+  "Taste and adjust. Serve on the lettuce leaves with the rest of the walnuts scattered over.",
+]
+
+[[recipe]]
+id = "01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d"
+name = "Roasted vegetable salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "sweet-potato", amount = 1, unit = "large" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "rocket", amount = 3, unit = "cup" },
+  { id = "feta", amount = 100, unit = "g" },
+  { id = "pumpkin-seeds", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "balsamic-vinegar", amount = 1, unit = "tbsp" },
+  { id = "honey", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Cut the sweet potato into cubes about 2 cm across, and the bell peppers, zucchini and onion into chunks.",
+  "Toss with most of the olive oil and salt on a large tray in a single layer.",
+  "Roast for 30 to 35 minutes, turning once, until tender and caramelised at the edges.",
+  "Whisk the balsamic vinegar, honey and the rest of the olive oil. Toast the pumpkin seeds in a dry pan for 3 minutes.",
+  "Toss the warm vegetables and rocket with the dressing.",
+  "Taste and adjust. Crumble the feta and scatter the pumpkin seeds over and serve warm.",
+]
+
+[[recipe]]
+id = "01a18c22-48bd-78ec-a5d7-d5967007911f"
+name = "Buddha bowl"
+serves = 2
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "brown-rice", amount = 0.75, unit = "cup" },
+  { id = "chickpeas", amount = 1, unit = "can" },
+  { id = "sweet-potato", amount = 1, unit = "medium" },
+  { id = "broccoli", amount = 1, unit = "small" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "red-cabbage", amount = 1, unit = "cup" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "tahini", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the brown rice and simmer it in most of the water in a covered pan on low heat for 25 to 30 minutes, until tender.",
+  "Heat the oven to 200°C. Cube the sweet potato and cut the broccoli into florets. Drain the chickpeas and pat dry.",
+  "Toss them with the olive oil, smoked paprika and salt on a tray. Roast for 25 minutes, until the sweet potato is tender and the chickpeas are crisp.",
+  "Whisk the tahini with the lemon juice, the rest of the water and a little salt until smooth and pourable.",
+  "Shred the red cabbage finely and slice the avocado.",
+  "Taste the dressing and adjust. Arrange the brown rice, roasted vegetables, chickpeas, red cabbage and avocado in bowls, drizzle with the dressing and sprinkle the sesame seeds over.",
+]
+
+[[recipe]]
+id = "01a18c22-48c0-7d0a-8ea9-de8935531e63"
+name = "Teriyaki tofu bowl"
+serves = 2
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "sushi-rice", amount = 0.75, unit = "cup" },
+  { id = "tofu", amount = 300, unit = "g" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "teriyaki-sauce", amount = 0.25, unit = "cup" },
+  { id = "broccoli", amount = 1, unit = "small" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "edamame", amount = 0.5, unit = "cup" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the sushi rice and simmer it in the water in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes.",
+  "Press the tofu between kitchen paper for 10 minutes, cut it into cubes about 2 cm across and toss in the cornflour.",
+  "Heat the oil in a frying pan over medium-high heat. Fry the tofu for 8 to 10 minutes, turning, until golden and crisp on all sides.",
+  "Pour in the teriyaki sauce and toss for 1 minute, until sticky.",
+  "Meanwhile, steam the broccoli florets and edamame for 4 minutes, until just tender. Cut the carrot into matchsticks and slice the spring onions.",
+  "Taste and adjust. Spoon the sushi rice into bowls, top with the tofu and vegetables and sprinkle the sesame seeds and spring onions over.",
+]
+
+[[recipe]]
+id = "01a18c22-48c2-7dc2-acc5-fe896a00fc5e"
+name = "Poke bowl"
+serves = 2
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "sushi-rice", amount = 0.75, unit = "cup" },
+  { id = "salmon", amount = 250, unit = "g" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "rice-vinegar", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "cucumber", amount = 0.5, unit = "medium" },
+  { id = "edamame", amount = 0.5, unit = "cup" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "japanese-mayonnaise", amount = 1, unit = "tbsp" },
+  { id = "sriracha", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the sushi rice and simmer it in the water in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes.",
+  "Stir the rice vinegar, sugar and a little salt until dissolved and fold it into the warm sushi rice. Cool to room temperature.",
+  "Use very fresh, sushi-grade salmon. Cut it into cubes about 1.5 cm across and toss with the soy sauce, toasted sesame oil and most of the spring onions, sliced. Chill for 10 minutes.",
+  "Dice the avocado and cucumber. Thaw the edamame in hot tap water and drain.",
+  "Mix the Japanese mayonnaise with the sriracha.",
+  "Taste the salmon and adjust. Spoon the sushi rice into bowls, arrange the salmon, avocado, cucumber and edamame on top, drizzle with the spicy sauce and sprinkle with the sesame seeds and the rest of the spring onions.",
+]
+
+[[recipe]]
+id = "01a18c22-48c4-7635-b56b-077f29a0d33e"
+name = "Vegetable stir-fry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "broccoli", amount = 1, unit = "small" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "cornflour", amount = 1, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Cut the broccoli into small florets, slice the bell pepper, cut the carrot into thin slices on the diagonal and slice the mushrooms.",
+  "Chop the garlic and ginger. Whisk the soy sauce, oyster sauce, cornflour and the water into a sauce.",
+  "Heat the oil in a wok over high heat. Stir-fry the broccoli, carrot and french beans, cut into lengths, for 3 minutes.",
+  "Add the bell pepper and mushrooms and toss for 2 minutes, until just tender but still crisp.",
+  "Add the garlic and ginger for 30 seconds, then pour in the sauce and toss for 1 minute, until glossy.",
+  "Taste and adjust. Drizzle with the toasted sesame oil and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48c6-7ff9-93cf-4d1fe32b816f"
+name = "Garlic butter mushrooms"
+serves = 4
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "mushroom", amount = 500, unit = "g" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "thyme", amount = 3, unit = "sprig" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "small" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wipe the mushrooms clean and halve or quarter any large ones. Chop the garlic and parsley.",
+  "Heat the olive oil in a large frying pan over high heat. Add the mushrooms in a single layer and cook for 4 to 5 minutes, without stirring too much, until golden.",
+  "Lower the heat to medium. Add the butter, garlic and thyme leaves and cook for 2 minutes, stirring, until the garlic is fragrant.",
+  "Season with salt and a squeeze of lemon juice.",
+  "Taste and adjust. Scatter the parsley over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48c9-7cf2-a1d9-362573045180"
+name = "Roast chicken with vegetables"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "chicken", amount = 1.6, unit = "kg" },
+  { id = "potato", amount = 750, unit = "g" },
+  { id = "carrot", amount = 3, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "thyme", amount = 6, unit = "sprig" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Take a whole chicken out of the fridge 30 minutes ahead. Heat the oven to 200°C.",
+  "Peel the potatoes and carrots and cut them into chunks. Cut the onions into wedges. Halve the head of garlic across.",
+  "Toss the vegetables with the olive oil and salt in a large roasting tin.",
+  "Pat the chicken dry. Rub it with the soft butter and season well with salt and the black pepper. Stuff the halved lemon, garlic and half the thyme inside.",
+  "Set the chicken on the vegetables and scatter the rest of the thyme over. Roast for 75 to 90 minutes, turning the vegetables once, until the juices at the thigh run clear.",
+  "Rest the chicken for 15 minutes. Squeeze the roasted garlic over the vegetables.",
+  "Taste the vegetables and adjust. Carve the chicken and serve with the vegetables and the pan juices.",
+]
+
+[[recipe]]
+id = "01a18c22-48cb-7c4a-a884-4d880921c8cd"
+name = "Lemon herb grilled chicken"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "rosemary", amount = 2, unit = "sprig" },
+  { id = "thyme", amount = 4, unit = "sprig" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken breasts. Pound them between sheets of baking paper to an even 2 cm thick.",
+  "Grate the garlic and finely chop the rosemary and thyme leaves. Mix them with the zest and juice of one of the lemons, the olive oil, the black pepper and salt.",
+  "Toss the chicken in the marinade and leave for at least 30 minutes.",
+  "Heat a griddle pan over medium-high heat. Grill the chicken for 5 to 7 minutes a side, until charred and cooked through.",
+  "Rest for 5 minutes, then slice.",
+  "Taste and adjust. Scatter the chopped parsley over and serve with the other lemon cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c22-48cd-7934-b769-cdb5e04cb99d"
+name = "Baked salmon with herbs"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "salmon", amount = 4, unit = "piece" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Line a tray with baking paper.",
+  "Pat the salmon dry and lay it on the tray skin side down. Season with salt.",
+  "Finely chop the dill, parsley and garlic and mix with the olive oil, lemon zest and half the lemon juice.",
+  "Spread the herb mixture over the salmon and dot with the butter.",
+  "Bake for 12 to 15 minutes, until the salmon flakes easily but is still slightly glossy in the centre.",
+  "Taste and adjust. Squeeze the rest of the lemon juice over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48cf-7d5b-9142-9176d2eaf297"
+name = "Garlic butter prawns"
+serves = 4
+prep_minutes = 10
+cook_minutes = 6
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "chilli-flakes", amount = 0.25, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and devein the prawns, leaving the tails on. Pat dry and season with salt.",
+  "Chop the garlic and parsley.",
+  "Heat the olive oil and half the butter in a large frying pan over medium-high heat. Add the prawns in a single layer and cook for 1 to 2 minutes, until pink underneath.",
+  "Turn them, add the rest of the butter, the garlic and chilli flakes and cook for 1 to 2 minutes, until the prawns are just cooked and the garlic is fragrant.",
+  "Squeeze the lemon juice over and toss with the parsley.",
+  "Taste and adjust the salt. Serve hot with the garlic butter spooned over.",
+]
+
+[[recipe]]
+id = "01a18c22-48d2-70bc-8318-07719de80dea"
+name = "Stuffed bell peppers"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "bell-pepper", amount = 4, unit = "large" },
+  { id = "beef-mince", amount = 400, unit = "g" },
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "cheddar", amount = 1, unit = "cup" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and simmer it in the water in a covered pan for 12 minutes, until just tender.",
+  "Heat the oven to 190°C. Cut the bell peppers in half lengthwise and scoop out the seeds. Lay them cut side up in a baking dish.",
+  "Chop the onion and garlic. Heat the olive oil in a pan over medium-high heat and brown the beef mince for 6 minutes. Add the onion for 5 minutes and the garlic, cumin powder and smoked paprika for 1 minute.",
+  "Stir in half the canned tomatoes and the rice and simmer for 5 minutes. Season with salt.",
+  "Taste the filling and adjust. Spoon it into the peppers. Pour the rest of the canned tomatoes round them.",
+  "Cover with foil and bake for 25 minutes. Uncover, scatter the grated cheddar over and bake for 10 to 15 minutes, until the peppers are tender and the cheese is golden.",
+  "Scatter the chopped parsley over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48d4-71fa-ac01-1fc4ecfd3d00"
+name = "Hot chocolate"
+serves = 2
+prep_minutes = 2
+cook_minutes = 6
+ingredients = [
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "dark-chocolate", amount = 75, unit = "g" },
+  { id = "cocoa-powder", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "vanilla-extract", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Chop the dark chocolate finely.",
+  "Whisk a little of the milk with the cocoa powder and sugar in a pan into a smooth paste.",
+  "Whisk in the rest of the milk and heat over medium heat for 3 to 4 minutes, until steaming. Do not let it boil.",
+  "Take off the heat and whisk in the chocolate until melted and frothy.",
+  "Add the vanilla extract and a tiny pinch of salt.",
+  "Taste and add more sugar if needed. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48d6-73e1-ad5e-9405ad8e716c"
+name = "Iced lemon tea"
+serves = 4
+prep_minutes = 5
+cook_minutes = 5
+ingredients = [
+  { id = "black-tea", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "mint", amount = 4, unit = "sprig" },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Bring half the water to a boil. Take it off the heat, add the black tea and steep for 4 minutes. Do not steep longer or it turns bitter.",
+  "Strain, stir in the sugar until dissolved and add the rest of the water, cold.",
+  "Stir in the juice of one of the lemons.",
+  "Chill for at least 1 hour.",
+  "Taste and adjust the sweetness and lemon.",
+  "Serve over ice with slices of the other lemon and the mint.",
+]
+
+[[recipe]]
+id = "01a18c22-48d9-7217-90ea-1e9143c5f867"
+name = "Lemonade"
+serves = 6
+prep_minutes = 10
+cook_minutes = 3
+ingredients = [
+  { id = "lemon", amount = 6, unit = "medium" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "mint", amount = 4, unit = "sprig" },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Heat the sugar with a little of the water in a pan over low heat for 2 to 3 minutes, stirring, until dissolved. Cool.",
+  "Squeeze the lemons and strain out the seeds. Keep a few slices aside.",
+  "Stir the lemon juice and syrup into the rest of the water.",
+  "Chill for at least 1 hour.",
+  "Taste and add more sugar or lemon as needed.",
+  "Serve over ice with the lemon slices and mint.",
+]
+
+[[recipe]]
+id = "01a18c22-48db-7440-890b-94d56a12e027"
+name = "Banana smoothie"
+serves = 2
+prep_minutes = 5
+cook_minutes = 0
+ingredients = [
+  { id = "banana", amount = 2, unit = "large" },
+  { id = "milk", amount = 1.5, unit = "cup" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "rolled-oats", amount = 2, unit = "tbsp" },
+  { id = "ground-cinnamon", amount = 0.25, unit = "tsp" },
+]
+steps = [
+  "Use ripe bananas. For a thicker, colder smoothie, slice and freeze them first.",
+  "Put the bananas, milk, yogurt, honey, rolled oats and ground cinnamon in a blender.",
+  "Blend for 1 minute, until completely smooth.",
+  "Taste and add more honey if needed.",
+  "Pour into glasses and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c22-48dd-7b2f-9eb2-5fb9c0306f0a"
+name = "Strawberry milkshake"
+serves = 2
+prep_minutes = 5
+cook_minutes = 0
+ingredients = [
+  { id = "strawberries", amount = 1.5, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "vanilla-ice-cream", amount = 1.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "vanilla-extract", amount = 0.25, unit = "tsp" },
+]
+steps = [
+  "Hull the strawberries, keeping a couple aside for the top.",
+  "Put the rest of the strawberries, the milk, vanilla ice cream, sugar and vanilla extract in a blender.",
+  "Blend for 30 to 45 seconds, until smooth and thick.",
+  "Taste and add more sugar if the strawberries are tart.",
+  "Pour into tall glasses, top with the set-aside strawberries and serve straight away.",
+]

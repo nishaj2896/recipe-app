@@ -1,0 +1,394 @@
+# More from Italy, Spain and Portugal (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c1a-e27b-7abc-a096-d47ecb92b51e"
+name = "Spaghetti alle vongole"
+serves = 2
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "pasta", amount = 200, unit = "g" },
+  { id = "clams", amount = 750, unit = "g" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "chilli-flakes", amount = 0.25, unit = "tsp" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Scrub the clams and soak them in cold salted tap water for 20 minutes so they spit out any sand. Throw away any that are broken or stay open when tapped.",
+  "Bring the water to a boil with plenty of salt. Cook the spaghetti for 2 minutes less than the packet says.",
+  "Meanwhile, slice the garlic and chop the parsley. Warm most of the extra-virgin olive oil in a large pan over medium heat and fry the garlic and chilli flakes for 1 minute, until pale golden.",
+  "Add the clams and white wine, cover and cook over high heat for 3 to 4 minutes, until the clams open. Throw away any that stay closed.",
+  "Drain the pasta, keeping some of the cooking water. Add the pasta to the clams with a splash of the cooking water and toss for 2 minutes, until the sauce clings.",
+  "Taste and adjust. Toss in the parsley, drizzle with the rest of the extra-virgin olive oil and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1a-e27d-7fe4-943a-9d732b234229"
+name = "Pasta puttanesca"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "olives", amount = 0.5, unit = "cup" },
+  { id = "capers", amount = 2, unit = "tbsp" },
+  { id = "anchovies", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "extra-virgin-olive-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt. Cook the spaghetti as the packet says, until just tender.",
+  "Meanwhile, slice the garlic, halve the olives and rinse the capers.",
+  "Warm the extra-virgin olive oil in a large pan over medium heat. Add the anchovies, garlic and chilli flakes and stir for 2 minutes, until the anchovies melt.",
+  "Add the canned tomatoes, olives and capers and simmer for 10 to 12 minutes, until thick.",
+  "Drain the pasta, keeping some of the cooking water. Toss it into the sauce with a splash of the cooking water for 1 minute.",
+  "Taste and adjust the salt. Scatter the chopped parsley over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1a-e27f-7967-be9d-dbd985fefd84"
+name = "Penne with sausage and peppers"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "sausages", amount = 400, unit = "g" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "chilli-flakes", amount = 0.25, unit = "tsp" },
+  { id = "parmesan", amount = 0.5, unit = "cup" },
+  { id = "basil", amount = 0.25, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Squeeze the sausages out of their skins and break them into small pieces. Slice the bell peppers and onion and chop the garlic.",
+  "Heat the olive oil in a large pan over medium-high heat. Brown the sausage for 5 to 6 minutes, breaking it up.",
+  "Add the peppers and onion and cook for 6 to 8 minutes, until soft. Add the garlic and chilli flakes for 1 minute.",
+  "Add the canned tomatoes and simmer for 10 minutes, until thick.",
+  "Meanwhile, bring the water to a boil with salt and cook the penne as the packet says. Drain, keeping some of the cooking water.",
+  "Toss the penne into the sauce with half the grated parmesan and a splash of the cooking water.",
+  "Taste and adjust. Serve with the rest of the parmesan and the basil torn over.",
+]
+
+[[recipe]]
+id = "01a18c1a-e281-79dd-8d7e-2786c6c49cfa"
+name = "Ravioli with butter and sage"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "cheese-filled-pasta", amount = 400, unit = "g" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "sage", amount = 12, unit = "leaf" },
+  { id = "parmesan", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 0.5, unit = "small" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt.",
+  "Cook the ricotta ravioli as the packet says, until they float and are tender.",
+  "Meanwhile, melt the butter in a wide pan over medium heat. Add the sage leaves and cook for 2 to 3 minutes, until the butter turns nut-brown and the sage is crisp.",
+  "Lift the ravioli straight into the pan with a slotted spoon, with a splash of the cooking water. Toss gently for 30 seconds.",
+  "Add a squeeze of lemon juice and the black pepper.",
+  "Taste and adjust the salt. Serve with the grated parmesan scattered over.",
+]
+
+[[recipe]]
+id = "01a18c1a-e284-7fd8-9e7f-eb8f2d9f72b2"
+name = "Tortellini in brodo"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "meat-filled-pasta", amount = 400, unit = "g" },
+  { id = "chicken-stock", amount = 6, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "parmesan", amount = 0.5, unit = "cup" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the carrot and celery into large chunks and halve the onion.",
+  "Simmer them in the chicken stock for 20 minutes to deepen its flavour, then lift them out.",
+  "Season the broth with salt and bring it back to a gentle boil.",
+  "Add the meat tortellini and cook as the packet says, until tender.",
+  "Taste the broth and adjust.",
+  "Ladle into warm bowls and serve with the grated parmesan and chopped parsley scattered over.",
+]
+
+[[recipe]]
+id = "01a18c1a-e286-7d6c-815e-6910123da47b"
+name = "Arancini"
+serves = 6
+prep_minutes = 40
+cook_minutes = 45
+ingredients = [
+  { id = "arborio-rice", amount = 1.5, unit = "cup" },
+  { id = "chicken-stock", amount = 4, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "parmesan", amount = 0.75, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "mozzarella", amount = 150, unit = "g" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "breadcrumbs", amount = 2, unit = "cup" },
+  { id = "oil", amount = 4, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Warm the chicken stock with the saffron. Finely chop the onion and fry it in the butter over medium heat for 5 minutes, until soft.",
+  "Add the arborio rice and stir for 2 minutes. Add the stock a ladleful at a time, stirring, for 18 to 20 minutes, until it is tender and the risotto is thick.",
+  "Stir in the grated parmesan and season with salt. Spread it on a tray and chill for at least 2 hours, until firm.",
+  "Cut the mozzarella into cubes about 1.5 cm across. Take a handful of risotto, flatten it, put a cube in the centre and close it into a ball about 5 cm across.",
+  "Roll each ball in the all-purpose flour, then the beaten eggs, then the breadcrumbs.",
+  "Heat the oil in a deep pan to 175°C. Fry in batches for 4 to 5 minutes, turning, until deep golden and hot through. Drain.",
+  "Taste one and serve hot, while the cheese is still molten.",
+]
+
+[[recipe]]
+id = "01a18c1a-e288-768d-bc77-b7c37f3da4d9"
+name = "Saltimbocca"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "veal", amount = 500, unit = "g" },
+  { id = "prosciutto", amount = 8, unit = "slice" },
+  { id = "sage", amount = 8, unit = "leaf" },
+  { id = "all-purpose-flour", amount = 0.25, unit = "cup" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use veal escalopes. Pound them between sheets of baking paper to about 5 mm thick. Season lightly with salt and the black pepper.",
+  "Cover each escalope with prosciutto, put the sage leaves on top and pin them in place with a cocktail stick.",
+  "Dust the uncovered side with the all-purpose flour.",
+  "Heat the olive oil and half the butter in a large frying pan over medium-high heat. Fry the veal prosciutto side down for 2 minutes, until crisp, then turn and cook for 1 minute. Lift onto warm plates.",
+  "Pour the white wine into the pan and let it bubble for 2 minutes, scraping up the brown bits. Swirl in the rest of the butter until glossy.",
+  "Taste the sauce, spoon it over the veal and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1a-e28a-74e5-92b6-a1a8ec7dfb8d"
+name = "Osso buco"
+serves = 4
+prep_minutes = 25
+cook_minutes = 135
+ingredients = [
+  { id = "veal", amount = 1.2, unit = "kg" },
+  { id = "all-purpose-flour", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "white-wine", amount = 1, unit = "cup" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "chicken-stock", amount = 1.5, unit = "cup" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "parsley", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use veal shanks about 4 cm thick. Tie string round each so it keeps its shape. Season with salt and dust with the all-purpose flour.",
+  "Heat the olive oil and butter in a heavy casserole over medium-high heat. Brown the shanks for 4 to 5 minutes a side. Lift them out.",
+  "Finely chop the onion, carrot, celery and most of the garlic. Fry them for 8 minutes, until soft.",
+  "Pour in the white wine and let it bubble for 3 minutes. Add the canned tomatoes, chicken stock and bay leaves.",
+  "Return the shanks, cover and simmer on low heat for 1 and a half to 2 hours, turning once, until the meat is falling off the bone.",
+  "For the gremolata, finely chop the parsley with the lemon zest and the rest of the garlic.",
+  "Taste the sauce and adjust. Remove the string, spoon the sauce over and scatter the gremolata over just before serving.",
+]
+
+[[recipe]]
+id = "01a18c1a-e28d-7dc2-a34a-6842aab1524c"
+name = "Pasta alla norma"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "brinjal", amount = 2, unit = "medium" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "chilli-flakes", amount = 0.25, unit = "tsp" },
+  { id = "basil", amount = 0.5, unit = "cup" },
+  { id = "pecorino", amount = 0.75, unit = "cup" },
+  { id = "olive-oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Cut the aubergines into cubes about 2 cm across, toss with salt and leave for 20 minutes. Pat dry.",
+  "Heat most of the olive oil in a large pan over medium-high heat. Fry the aubergine in batches for 6 to 8 minutes, until deep golden and soft. Drain on kitchen paper.",
+  "Slice the garlic. Heat the rest of the olive oil over medium heat and fry the garlic and chilli flakes for 1 minute.",
+  "Add the canned tomatoes and simmer for 15 minutes, until thick. Season with salt and stir in half the basil.",
+  "Meanwhile, bring the water to a boil with salt and cook the rigatoni as the packet says. Drain, keeping a little of the cooking water.",
+  "Toss the pasta with the sauce, most of the aubergine and a splash of the cooking water.",
+  "Taste and adjust. Top with the rest of the aubergine, the grated pecorino and the rest of the basil and serve.",
+]
+
+[[recipe]]
+id = "01a18c1a-e28f-71b2-a822-3142aee883aa"
+name = "Pollo al ajillo"
+serves = 4
+prep_minutes = 10
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "garlic", amount = 12, unit = "clove" },
+  { id = "white-wine", amount = 0.75, unit = "cup" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "bay-leaves", amount = 2, unit = "piece" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs and cut each in half through the bone, or ask the butcher to. Season with salt and the black pepper.",
+  "Lightly crush the garlic in its skin.",
+  "Heat the olive oil in a wide pan over medium heat. Fry the garlic for 3 to 4 minutes, until golden, and lift it out.",
+  "Brown the chicken skin side down for 8 to 10 minutes, then turn for 5 minutes, until golden all over.",
+  "Return the garlic with the bay leaves and pour in the white wine. Simmer uncovered on low heat for 20 to 25 minutes, turning the chicken, until cooked through and the sauce is reduced.",
+  "Taste and adjust. Scatter the chopped parsley over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1a-e291-759c-9761-6b3b3ce9322d"
+name = "Caldo verde"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "potato", amount = 750, unit = "g" },
+  { id = "kale", amount = 200, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "chorizo", amount = 150, unit = "g" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Peel and slice the potatoes. Chop the onion and garlic. Strip the kale from its stems and slice it into very fine ribbons.",
+  "Heat most of the olive oil in a pot over medium heat. Fry the onion for 6 minutes and the garlic for 1 minute.",
+  "Add the potatoes, the water and salt. Bring to a boil and simmer for 20 minutes, until the potatoes are very soft.",
+  "Mash or blend the soup until smooth.",
+  "Slice the chorizo thinly and fry it in a dry pan for 3 minutes, until crisp. Add most of it to the soup.",
+  "Bring the soup back to a simmer, add the kale and cook for 3 to 4 minutes, until bright green and tender.",
+  "Taste and adjust the salt. Serve topped with the rest of the chorizo and a drizzle of the rest of the olive oil.",
+]
+
+[[recipe]]
+id = "01a18c1a-e293-7eed-b511-8d7f40c4a71d"
+name = "Bacalhau a bras"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "salt-cod", amount = 400, unit = "g" },
+  { id = "potato", amount = 500, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "egg", amount = 6, unit = "large" },
+  { id = "olives", amount = 0.33, unit = "cup" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Soak the salt cod in the fridge for 24 to 36 hours, refreshing the soaking bowl 3 times a day.",
+  "Bring the water to a simmer and poach the salt cod for 5 minutes, until it flakes. Drain, remove any skin and bones and shred finely.",
+  "Peel the potatoes and cut them into very thin matchsticks. Rinse and dry well. Fry them in the oil at 180°C for 3 to 4 minutes, until golden and crisp. Drain.",
+  "Slice the onions thinly and chop the garlic. Fry them in the olive oil over medium-low heat for 12 to 15 minutes, until very soft and golden.",
+  "Add the salt cod and stir for 3 minutes. Add the potatoes and toss.",
+  "Pour in the beaten eggs and stir over low heat for 1 to 2 minutes, until just set but still creamy.",
+  "Taste first, as the salt cod may be seasoned enough already. Scatter the olives and chopped parsley over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1a-e295-7c65-a793-e4566d8fd6bc"
+name = "Pastel de nata"
+serves = 12
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "puff-pastry", amount = 320, unit = "g" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "egg", amount = 6, unit = "large" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "water", amount = 0.33, unit = "cup" },
+]
+steps = [
+  "Heat the oven to its highest setting, at least 250°C. Roll the puff pastry into a tight log and cut it into slices about 2 cm thick.",
+  "Press each slice, cut side up, into the cups of a muffin tin with wet thumbs, working it up the sides until thin. Chill while you make the custard.",
+  "Simmer the sugar, the water, the cinnamon sticks and a strip of lemon peel for 3 minutes into a syrup.",
+  "Whisk the all-purpose flour with a little of the milk until smooth, then heat it with the rest of the milk, stirring, for 3 to 4 minutes, until thick. Pour in the syrup through a sieve.",
+  "Separate the eggs and whisk the yolks with the vanilla extract. Whisk in the warm milk mixture.",
+  "Fill the pastry cases three quarters full. Bake for 12 to 15 minutes, until the pastry is crisp and the tops are blistered and dark in spots.",
+  "Cool for 10 minutes, taste one and serve warm.",
+]
+
+[[recipe]]
+id = "01a18c1a-e298-7cea-b851-7e6c82c0089f"
+name = "Albondigas"
+serves = 4
+prep_minutes = 25
+cook_minutes = 35
+ingredients = [
+  { id = "beef-mince", amount = 500, unit = "g" },
+  { id = "breadcrumbs", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "parsley", amount = 0.33, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Soak the breadcrumbs in the milk for 5 minutes. Grate half the garlic and chop the parsley.",
+  "Mix the beef mince with the soaked breadcrumbs, egg, grated garlic, most of the parsley, the black pepper and salt. Shape into balls about 3 cm across.",
+  "Heat the olive oil in a wide pan over medium-high heat. Brown the meatballs in batches for 5 to 6 minutes, turning, and lift them out.",
+  "Chop the onion and the rest of the garlic. Fry them in the same pan over medium heat for 6 minutes, until soft. Stir in the smoked paprika for 30 seconds.",
+  "Pour in the white wine and let it bubble for 2 minutes. Add the canned tomatoes and simmer for 5 minutes.",
+  "Return the meatballs, cover and simmer on low heat for 15 to 20 minutes, until cooked through and the sauce is thick.",
+  "Taste and adjust. Scatter the rest of the parsley over and serve hot.",
+]

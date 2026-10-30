@@ -29,3 +29,978 @@ steps = [
   "Return the pasta to the pot and stir over low heat for 1 minute, until every piece is coated and the sauce is creamy.",
   "Season with salt and black pepper and serve hot.",
 ]
+
+[[recipe]]
+id = "01a18c1e-2c18-7153-810a-f7fcdbe62089"
+name = "Classic cheeseburger"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "beef-mince", amount = 600, unit = "g" },
+  { id = "burger-buns", amount = 4, unit = "piece" },
+  { id = "cheddar", amount = 4, unit = "slice" },
+  { id = "lettuce", amount = 4, unit = "leaf" },
+  { id = "tomato", amount = 1, unit = "large" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "gherkins", amount = 4, unit = "piece" },
+  { id = "ketchup", amount = 2, unit = "tbsp" },
+  { id = "yellow-mustard", amount = 1, unit = "tbsp" },
+  { id = "mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use beef mince with about 20 percent fat. Divide it into 4 and shape loosely into patties about 2 cm thick and a little wider than the burger buns. Press a shallow dip in the centre of each.",
+  "Slice the tomato, onion and gherkins thinly. Wash and dry the lettuce.",
+  "Split the burger buns, spread the cut sides with the butter and toast them in a hot pan for 1 minute, until golden.",
+  "Heat the oil in a heavy frying pan over high heat until very hot. Season the patties well with salt and the black pepper just before cooking.",
+  "Cook for 3 to 4 minutes, without pressing, until a dark crust forms. Flip, lay the cheddar on top and cook for 2 to 3 minutes more, covering the pan for the last minute so the cheese melts.",
+  "Spread the bottom buns with the mayonnaise, and the tops with the ketchup and yellow mustard.",
+  "Taste a corner of a patty for salt. Build the burgers with the lettuce, tomato, patty, onion and gherkins and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c1b-7471-85fe-d890bb9e9534"
+name = "Veggie burger"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "chickpeas", amount = 1, unit = "can" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "rolled-oats", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "burger-buns", amount = 4, unit = "piece" },
+  { id = "lettuce", amount = 4, unit = "leaf" },
+  { id = "tomato", amount = 1, unit = "large" },
+  { id = "mayonnaise", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Drain the chickpeas and pat them dry. Grate the carrot and finely chop the onion and garlic.",
+  "Mash the chickpeas roughly with a fork, leaving some texture.",
+  "Mix in the carrot, onion, garlic, rolled oats, egg, cumin powder, smoked paprika and salt. Leave for 10 minutes so the oats absorb the moisture.",
+  "Shape into 4 patties about 2 cm thick. Chill for 15 minutes so they hold together.",
+  "Heat the oil in a frying pan over medium heat. Cook the patties for 4 to 5 minutes a side, until deep golden and crisp and hot through.",
+  "Toast the split burger buns. Slice the tomato.",
+  "Taste a patty and adjust the salt. Build the burgers with the mayonnaise, lettuce, patty and tomato and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde"
+name = "Grilled cheese sandwich"
+serves = 1
+prep_minutes = 3
+cook_minutes = 8
+ingredients = [
+  { id = "white-bread", amount = 2, unit = "slice" },
+  { id = "cheddar", amount = 0.75, unit = "cup" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Soften the butter and grate the cheddar.",
+  "Spread the butter thinly over one side of each slice of white bread.",
+  "Lay half the bread butter side down in a cold frying pan. Pile the cheddar on and top with the rest of the bread, butter side up.",
+  "Cook over medium-low heat for 3 to 4 minutes, until deep golden underneath.",
+  "Flip carefully and cook for 3 minutes, pressing gently, until the second side is golden and the cheese has completely melted.",
+  "Taste and serve hot, cut in half.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c1f-7a26-a465-c9f9783f9425"
+name = "Club sandwich"
+serves = 2
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "white-bread", amount = 6, unit = "slice" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "bacon", amount = 4, unit = "slice" },
+  { id = "lettuce", amount = 4, unit = "leaf" },
+  { id = "tomato", amount = 1, unit = "large" },
+  { id = "mayonnaise", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use a boneless chicken breast. Season with salt and the black pepper. Heat the oil in a frying pan over medium heat and cook it for 5 to 6 minutes a side, until cooked through. Rest it, then slice.",
+  "Fry the bacon in the same pan for 4 to 5 minutes, until crisp. Drain on kitchen paper.",
+  "Toast the white bread and slice the tomato.",
+  "Spread the mayonnaise on one side of each toast.",
+  "Layer chicken and lettuce on a toast, cover with a second toast, then add bacon, tomato and more lettuce. Top with a third toast, mayonnaise side down. Repeat for the second sandwich.",
+  "Taste the chicken for salt. Pin each sandwich with cocktail sticks, cut into quarters on the diagonal and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c21-7ce1-8dcc-e12e823755ce"
+name = "BLT"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "bacon", amount = 6, unit = "slice" },
+  { id = "lettuce", amount = 4, unit = "leaf" },
+  { id = "tomato", amount = 1, unit = "large" },
+  { id = "sourdough", amount = 4, unit = "slice" },
+  { id = "mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Fry the bacon in a dry frying pan over medium heat for 5 to 7 minutes, turning, until crisp. Drain on kitchen paper.",
+  "Slice the tomato thickly and season with a little salt and the black pepper.",
+  "Toast the sourdough until golden.",
+  "Spread the mayonnaise over the toast.",
+  "Layer the lettuce, tomato and bacon on half the toast and top with the rest.",
+  "Taste and serve straight away, cut in half.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c23-72f6-82d2-c21de41d22ab"
+name = "Buffalo chicken wings"
+serves = 4
+prep_minutes = 15
+cook_minutes = 50
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "baking-powder", amount = 1, unit = "tbsp" },
+  { id = "hot-sauce", amount = 0.33, unit = "cup" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "blue-cheese", amount = 75, unit = "g" },
+  { id = "sour-cream", amount = 0.33, unit = "cup" },
+  { id = "mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "small" },
+  { id = "celery", amount = 3, unit = "piece" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 220°C. Use chicken wings split at the joints and pat them very dry.",
+  "Toss the chicken with the baking powder and salt. This helps the skin crisp.",
+  "Lay them on a rack set over a lined tray. Roast for 45 to 50 minutes, turning once, until deep golden and crisp.",
+  "Meanwhile, crumble the blue cheese and mash it with the sour cream, mayonnaise and lemon juice for a dip.",
+  "Cut the celery and carrots into sticks.",
+  "Melt the butter with the hot sauce in a large bowl. Toss the hot wings in it until coated.",
+  "Taste the dip and adjust. Serve the wings straight away with the dip and vegetable sticks.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c26-7602-b476-32b344331bf7"
+name = "Fried chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "chicken", amount = 1.5, unit = "kg" },
+  { id = "buttermilk", amount = 2, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "paprika", amount = 2, unit = "tsp" },
+  { id = "garlic-powder", amount = 1, unit = "tsp" },
+  { id = "onion-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 6, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs and legs. Stir plenty of salt into the buttermilk, add the chicken and chill for at least 4 hours, or overnight.",
+  "Whisk the all-purpose flour with the paprika, garlic powder, onion powder, cayenne, black pepper and salt.",
+  "Lift the chicken out of the buttermilk, letting the excess drip off. Dredge it in the flour, pressing firmly, then drizzle a few spoonfuls of the buttermilk into the flour and toss so it forms little clumps. Dredge again for a craggy crust.",
+  "Heat the oil in a deep heavy pot to 165°C.",
+  "Fry the chicken in batches for 12 to 15 minutes, turning, until deep golden and the thickest part is cooked through with no pink.",
+  "Drain on a rack and sprinkle with a little salt.",
+  "Rest for 5 minutes, taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c28-7f4b-8261-947820124c97"
+name = "Barbecue pulled chicken"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "barbecue-sauce", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "brown-sugar", amount = 1, unit = "tbsp" },
+  { id = "apple-cider-vinegar", amount = 1, unit = "tbsp" },
+  { id = "burger-buns", amount = 4, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs. Season them with the smoked paprika and salt.",
+  "Slice the onion and chop the garlic. Heat the oil in a heavy pan over medium heat and fry the onion for 6 minutes, until soft, then the garlic for 1 minute.",
+  "Stir in the barbecue sauce, brown sugar, apple cider vinegar and the water.",
+  "Add the chicken, cover and simmer on low heat for 25 minutes, until very tender.",
+  "Shred the chicken with 2 forks in the pan and simmer uncovered for 5 minutes, stirring, until the sauce is thick and clings.",
+  "Taste and adjust the sweetness and sharpness.",
+  "Toast the split burger buns and pile the chicken in. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c2a-7bcb-8d05-73263c3cdc7b"
+name = "Meatloaf"
+serves = 6
+prep_minutes = 15
+cook_minutes = 65
+ingredients = [
+  { id = "beef-mince", amount = 900, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "breadcrumbs", amount = 0.75, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "worcestershire-sauce", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 0.5, unit = "cup" },
+  { id = "brown-sugar", amount = 2, unit = "tbsp" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C. Finely chop the onion and garlic and fry them in the oil over medium heat for 6 minutes, until soft. Cool.",
+  "Soak the breadcrumbs in the milk for 5 minutes.",
+  "Mix the beef mince with the onion, garlic, soaked breadcrumbs, eggs, worcestershire sauce, dried thyme, chopped parsley, the black pepper, salt and a quarter of the ketchup. Mix with your hands until just combined.",
+  "Fry a little of the mixture to taste the seasoning, and adjust.",
+  "Shape into a loaf about 23 by 12 cm on a lined tray.",
+  "Mix the rest of the ketchup with the brown sugar and spread it over the top.",
+  "Bake for 55 to 65 minutes, until the glaze is sticky and the centre is cooked through. Rest for 10 minutes, then slice and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c2c-712e-adff-f0ebcb7aebfe"
+name = "Chicken pot pie"
+serves = 6
+prep_minutes = 25
+cook_minutes = 55
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "puff-pastry", amount = 320, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "peas", amount = 0.75, unit = "cup" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "milk", amount = 0.75, unit = "cup" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Poach the chicken in the chicken stock over low heat for 15 to 18 minutes, until cooked through. Lift it out, cut it into bite-sized pieces and keep the stock.",
+  "Dice the onion, carrots and celery. Melt the butter in a pan over medium heat and cook them for 8 minutes, until soft.",
+  "Stir in the all-purpose flour for 2 minutes. Gradually whisk in the poaching stock and milk and simmer for 5 minutes, stirring, until thick.",
+  "Add the chicken, peas, dried thyme, the black pepper and salt. Taste and adjust, then pour into a baking dish and cool for 10 minutes.",
+  "Heat the oven to 200°C. Lay the puff pastry over the dish, trim and press the edges. Cut a slit in the centre.",
+  "Brush with the beaten egg and bake for 25 to 30 minutes, until the pastry is puffed and deep golden.",
+  "Rest for 10 minutes and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c2e-7fff-847b-aa6cc5b2c8a5"
+name = "Shepherd's pie"
+serves = 6
+prep_minutes = 25
+cook_minutes = 75
+ingredients = [
+  { id = "lamb-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "worcestershire-sauce", amount = 2, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "chicken-stock", amount = 1.5, unit = "cup" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "potato", amount = 1.2, unit = "kg" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Peel the potatoes and cut them into chunks. Boil them in the water, salted, for 18 to 20 minutes, until very soft. Drain, mash with the butter and milk and season with salt.",
+  "Dice the onion and carrots and chop the garlic.",
+  "Heat the oil in a heavy pan over medium-high heat. Brown the lamb mince for 6 to 8 minutes, breaking it up. Add the onion and carrots for 6 minutes, then the garlic for 1 minute.",
+  "Stir in the tomato paste and all-purpose flour for 1 minute. Add the chicken stock, worcestershire sauce, dried thyme and the black pepper.",
+  "Simmer on low heat for 20 to 25 minutes, until thick and rich. Stir in the peas and season with salt.",
+  "Heat the oven to 200°C. Taste the filling and adjust, then spread it in a baking dish and cover with the mash. Rough up the top with a fork.",
+  "Bake for 25 to 30 minutes, until bubbling at the edges and golden on top. Rest for 10 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c31-74d5-827e-b33a2e491e0e"
+name = "Cottage pie"
+serves = 6
+prep_minutes = 25
+cook_minutes = 75
+ingredients = [
+  { id = "beef-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "worcestershire-sauce", amount = 2, unit = "tbsp" },
+  { id = "red-wine", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+  { id = "dried-thyme", amount = 1, unit = "tsp" },
+  { id = "potato", amount = 1.2, unit = "kg" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "cheddar", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Peel the potatoes and cut them into chunks. Boil them in the water, salted, for 18 to 20 minutes, until very soft. Drain, mash with the butter and milk and season with salt.",
+  "Dice the onion, carrots and celery and chop the garlic.",
+  "Heat the oil in a heavy pan over medium-high heat. Brown the beef mince for 6 to 8 minutes, breaking it up. Add the vegetables for 6 minutes, then the garlic for 1 minute.",
+  "Stir in the tomato paste and all-purpose flour for 1 minute. Pour in the red wine and let it bubble for 2 minutes.",
+  "Add the chicken stock, worcestershire sauce and dried thyme. Simmer on low heat for 20 to 25 minutes, until thick. Season with salt.",
+  "Heat the oven to 200°C. Taste the filling and adjust, then spread it in a baking dish, cover with the mash and scatter the grated cheddar over.",
+  "Bake for 25 to 30 minutes, until golden and bubbling. Rest for 10 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c33-789b-8049-74cd10b23778"
+name = "Fish and chips"
+serves = 4
+prep_minutes = 20
+cook_minutes = 35
+ingredients = [
+  { id = "cod", amount = 4, unit = "piece" },
+  { id = "potato", amount = 1, unit = "kg" },
+  { id = "all-purpose-flour", amount = 1.25, unit = "cup" },
+  { id = "baking-powder", amount = 1, unit = "tsp" },
+  { id = "beer", amount = 1, unit = "cup" },
+  { id = "oil", amount = 8, unit = "cup" },
+  { id = "malt-vinegar", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "tartar-sauce", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the potatoes and cut them into thick chips about 1.5 cm across. Rinse and dry well.",
+  "Heat the oil in a deep heavy pot to 150°C. Fry the chips in batches for 6 to 8 minutes, until soft but not coloured. Drain.",
+  "Whisk most of the all-purpose flour with the baking powder and a little salt, then whisk in the cold beer until smooth and just thick enough to coat a spoon.",
+  "Pat the cod dry, season with salt and dust it in the rest of the all-purpose flour.",
+  "Raise the oil to 180°C. Dip the cod in the batter, let the excess drip off and lower it in carefully. Fry for 6 to 8 minutes, until deep golden and crisp. Drain on a rack.",
+  "Fry the chips again at 180°C for 3 to 4 minutes, until golden and crisp. Drain and salt well.",
+  "Taste a chip for salt. Serve the fish and chips hot with the malt vinegar, lemon wedges and tartar sauce.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c35-7b45-ac27-4a7522d2376a"
+name = "Bangers and mash"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "sausages", amount = 8, unit = "piece" },
+  { id = "potato", amount = 1, unit = "kg" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "chicken-stock", amount = 1.5, unit = "cup" },
+  { id = "worcestershire-sauce", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Peel the potatoes and cut them into chunks. Boil them in the water, salted, for 18 to 20 minutes, until very soft.",
+  "Meanwhile, heat the oil in a frying pan over medium-low heat. Cook the sausages for 15 to 20 minutes, turning often, until browned all over and cooked through. Lift them out and keep warm.",
+  "Slice the onions thinly. Cook them in the sausage pan with a third of the butter over medium-low heat for 15 minutes, until soft and golden.",
+  "Stir in the all-purpose flour for 1 minute, then whisk in the chicken stock and worcestershire sauce. Simmer for 5 minutes, until thick. Season with salt and the black pepper.",
+  "Drain the potatoes and mash them with the rest of the butter and the milk until smooth. Season with salt.",
+  "Taste the gravy and the mash and adjust. Serve the sausages on the mash with the onion gravy poured over.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c37-7643-ad0f-a16fdffaaf04"
+name = "Full English breakfast"
+serves = 2
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "sausages", amount = 4, unit = "piece" },
+  { id = "bacon", amount = 4, unit = "slice" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "baked-beans", amount = 1, unit = "can" },
+  { id = "white-bread", amount = 2, unit = "slice" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 100°C to keep things warm as they cook.",
+  "Heat half the oil in a large frying pan over medium-low heat. Cook the sausages for 15 to 18 minutes, turning, until browned and cooked through. Move them to the oven.",
+  "Fry the bacon in the same pan for 4 to 5 minutes, until crisp. Halve the tomatoes and fry them cut side down for 3 minutes. Move them to the oven.",
+  "Add half the butter, then the halved mushrooms, and fry for 5 minutes, until golden. Season with salt and the black pepper.",
+  "Warm the baked beans in a small pan. Toast the white bread and butter it with the rest of the butter.",
+  "Fry the eggs in the rest of the oil for 2 to 3 minutes, until the whites are set and the yolks still runny.",
+  "Taste and season, then serve everything on warm plates.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c39-7c33-ac5f-b66eb4710ee0"
+name = "Beans on toast"
+serves = 2
+prep_minutes = 3
+cook_minutes = 7
+ingredients = [
+  { id = "baked-beans", amount = 1, unit = "can" },
+  { id = "sourdough", amount = 2, unit = "slice" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "cheddar", amount = 0.33, unit = "cup" },
+  { id = "worcestershire-sauce", amount = 0.5, unit = "tsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+]
+steps = [
+  "Warm the baked beans in a small pan over medium-low heat for 4 to 5 minutes, stirring, until bubbling gently.",
+  "Stir in the worcestershire sauce and the black pepper.",
+  "Toast the sourdough until golden and spread with the butter.",
+  "Taste the beans and adjust.",
+  "Spoon them over the toast, grate the cheddar over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c3c-7654-8b7b-2e17dd08e871"
+name = "Jacket potato with beans and cheese"
+serves = 2
+prep_minutes = 5
+cook_minutes = 75
+ingredients = [
+  { id = "potato", amount = 2, unit = "large" },
+  { id = "baked-beans", amount = 1, unit = "can" },
+  { id = "cheddar", amount = 0.75, unit = "cup" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Scrub the potatoes, dry them and prick all over with a fork.",
+  "Rub them with the olive oil and salt.",
+  "Bake directly on the oven rack for 60 to 75 minutes, until the skin is crisp and a knife slides through the centre easily.",
+  "Warm the baked beans in a small pan for 4 to 5 minutes. Grate the cheddar.",
+  "Cut a deep cross in each potato, squeeze the sides to open it up and add the butter, salt and the black pepper.",
+  "Taste the potato for salt. Spoon the beans over, top with the cheddar and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c3e-7307-b37a-a3756c335821"
+name = "Chicken noodle soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "egg-noodles", amount = 150, unit = "g" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "chicken-stock", amount = 8, unit = "cup" },
+  { id = "dried-thyme", amount = 0.5, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "piece" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dice the carrots, celery and onion and chop the garlic.",
+  "Melt the butter in a large pot over medium heat. Cook the vegetables for 8 minutes, until soft, then the garlic for 1 minute.",
+  "Add the chicken stock, chicken, dried thyme and bay leaves. Bring to a boil, then simmer gently for 20 minutes, until the chicken is cooked through.",
+  "Lift out the chicken, shred it and return it to the pot.",
+  "Add the egg noodles and simmer for 6 to 8 minutes, until tender.",
+  "Season with salt and the black pepper and pick out the bay leaves.",
+  "Taste and adjust. Scatter the chopped parsley over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c40-75e0-8eba-f1c31a55564e"
+name = "Clam chowder"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "clams", amount = 1, unit = "kg" },
+  { id = "bacon", amount = 4, unit = "slice" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "potato", amount = 500, unit = "g" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "dried-thyme", amount = 0.5, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "piece" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Scrub the clams. Bring the water to a boil in a large pot, add the clams, cover and steam for 5 to 6 minutes, until they open. Throw away any that stay closed.",
+  "Lift out the clams, pull out the meat and chop it roughly. Strain the cooking liquid through a fine sieve to remove grit.",
+  "Cut the bacon into strips and cook it in the butter in a pot over medium heat for 5 minutes, until crisp. Dice the onion and celery and cook them in the fat for 6 minutes.",
+  "Stir in the all-purpose flour for 1 minute. Whisk in the clam liquid and milk.",
+  "Add the diced potatoes, dried thyme and bay leaves. Simmer on low heat for 15 to 18 minutes, until the potatoes are tender.",
+  "Stir in the clams and cream and warm through for 2 minutes without boiling. Season with salt and the black pepper.",
+  "Taste and adjust, pick out the bay leaves and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c42-74c3-bbf2-53e1786b026a"
+name = "Corn chowder"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "sweetcorn", amount = 3, unit = "cup" },
+  { id = "potato", amount = 400, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "bacon", amount = 3, unit = "slice" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "milk", amount = 1.5, unit = "cup" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "smoked-paprika", amount = 0.25, unit = "tsp" },
+  { id = "chives", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the bacon into strips and cook it in the butter in a pot over medium heat for 5 minutes, until crisp. Lift out a little for the top.",
+  "Dice the onion and celery and cook them in the fat for 6 minutes, until soft.",
+  "Stir in the all-purpose flour and smoked paprika for 1 minute. Whisk in the chicken stock and milk.",
+  "Add the diced potatoes and most of the sweetcorn. Simmer for 15 to 18 minutes, until the potatoes are tender.",
+  "Blend about a third of the chowder and stir it back in so it thickens. Add the rest of the sweetcorn and the cream and warm through.",
+  "Taste and season with salt. Serve hot with the set-aside bacon and the chopped chives scattered over.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c45-70d5-872a-680de59f4bec"
+name = "Caesar salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "lettuce", amount = 2, unit = "small-head" },
+  { id = "parmesan", amount = 0.75, unit = "cup" },
+  { id = "anchovies", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "mayonnaise", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "worcestershire-sauce", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 2, unit = "tbsp" },
+  { id = "baguette", amount = 1, unit = "piece" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Tear the baguette into bite-sized pieces, toss with the olive oil and a little salt and bake for 8 to 10 minutes, until golden and crisp.",
+  "Mash the anchovies and garlic to a paste. Whisk in the mayonnaise, lemon juice, dijon mustard, worcestershire sauce, extra-virgin olive oil, the black pepper and half the grated parmesan.",
+  "Use romaine and tear it into large pieces. Wash and dry it well.",
+  "Toss the lettuce with most of the dressing until every leaf is coated.",
+  "Taste and add more lemon juice or salt if needed.",
+  "Top with the croutons and the rest of the parmesan, drizzle with the rest of the dressing and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c47-7cbd-8480-1d9e29512b63"
+name = "Cobb salad"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "chicken", amount = 400, unit = "g" },
+  { id = "bacon", amount = 6, unit = "slice" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "avocado", amount = 1, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "blue-cheese", amount = 100, unit = "g" },
+  { id = "chives", amount = 2, unit = "tbsp" },
+  { id = "red-wine-vinegar", amount = 2, unit = "tbsp" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.33, unit = "cup" },
+  { id = "oil", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil and cook the eggs for 9 minutes. Cool in cold tap water, peel and chop.",
+  "Use a boneless chicken breast. Season with salt and cook it in the oil in a frying pan over medium heat for 5 to 6 minutes a side, until cooked through. Rest it, then dice.",
+  "Fry the bacon in the same pan for 5 minutes, until crisp, and crumble it.",
+  "Whisk the red wine vinegar, dijon mustard, extra-virgin olive oil and salt.",
+  "Chop the lettuce and lay it on a platter. Dice the avocado and tomatoes and crumble the blue cheese.",
+  "Arrange the chicken, bacon, eggs, avocado, tomatoes and blue cheese in rows over the lettuce.",
+  "Taste the dressing and adjust. Scatter the chopped chives over and serve with the dressing to pour.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c49-7734-b225-6ad66cd5966a"
+name = "Coleslaw"
+serves = 6
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "cabbage", amount = 0.5, unit = "small-head" },
+  { id = "red-cabbage", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "mayonnaise", amount = 0.5, unit = "cup" },
+  { id = "apple-cider-vinegar", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Shred the cabbage and red cabbage very finely. Grate the carrots and grate the onion.",
+  "Toss the vegetables with a little salt and leave for 10 minutes, then squeeze out the liquid.",
+  "Whisk the mayonnaise, apple cider vinegar, sugar and dijon mustard.",
+  "Toss the vegetables with the dressing until evenly coated.",
+  "Chill for 20 minutes so the flavours mingle.",
+  "Taste and adjust the salt and sharpness. Serve cold.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691"
+name = "Potato salad"
+serves = 6
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "potato", amount = 1, unit = "kg" },
+  { id = "mayonnaise", amount = 0.5, unit = "cup" },
+  { id = "dijon-mustard", amount = 1, unit = "tbsp" },
+  { id = "apple-cider-vinegar", amount = 1, unit = "tbsp" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Use waxy potatoes and cut them into chunks about 3 cm across. Bring the water to a boil with salt and cook them for 12 to 15 minutes, until just tender. Cook the eggs in the same water for 9 minutes.",
+  "Drain the potatoes and toss them while hot with the apple cider vinegar and a little salt. Cool.",
+  "Cool the eggs in cold tap water, peel and chop.",
+  "Finely dice the celery and slice the spring onions. Chop the dill.",
+  "Whisk the mayonnaise with the dijon mustard and fold it through the potatoes with the eggs, celery, spring onions and dill.",
+  "Taste and adjust the salt. Serve cool.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c4e-7bdf-9eca-a5a35480b940"
+name = "Sloppy joes"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "beef-mince", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ketchup", amount = 0.5, unit = "cup" },
+  { id = "worcestershire-sauce", amount = 1, unit = "tbsp" },
+  { id = "brown-sugar", amount = 1, unit = "tbsp" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "yellow-mustard", amount = 1, unit = "tsp" },
+  { id = "burger-buns", amount = 4, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Finely chop the onion, bell pepper and garlic.",
+  "Heat the oil in a frying pan over medium-high heat. Brown the beef mince for 6 to 8 minutes, breaking it up.",
+  "Add the onion and bell pepper and cook for 5 minutes, until soft, then the garlic for 1 minute.",
+  "Stir in the ketchup, worcestershire sauce, brown sugar, tomato paste, yellow mustard and the water.",
+  "Simmer for 10 minutes, stirring, until thick. Season with salt.",
+  "Taste and adjust. Toast the split burger buns, pile the filling in and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c50-70ae-b308-15955fa8465d"
+name = "Chicken and waffles"
+serves = 4
+prep_minutes = 25
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "buttermilk", amount = 1, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "garlic-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 4, unit = "cup" },
+  { id = "baking-powder", amount = 2, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "milk", amount = 1.5, unit = "cup" },
+  { id = "butter", amount = 0.33, unit = "cup" },
+  { id = "maple-syrup", amount = 0.33, unit = "cup" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs. Soak them in the buttermilk with salt for at least 2 hours.",
+  "Whisk half the all-purpose flour with the paprika, garlic powder, cayenne and salt. Dredge the chicken in it, pressing firmly.",
+  "Heat the oil in a deep pot to 170°C. Fry the chicken for 7 to 8 minutes, turning, until deep golden and cooked through. Drain on a rack.",
+  "For the waffles, whisk the rest of the all-purpose flour with the baking powder, sugar and a little salt. Whisk the eggs, milk and melted butter and stir into the flour until just combined.",
+  "Heat a waffle iron and grease it. Cook ladlefuls of batter for 4 to 5 minutes each, until golden and crisp.",
+  "Warm the maple syrup with the hot sauce.",
+  "Taste the chicken for salt. Top each waffle with chicken and drizzle with the spicy syrup. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c52-7def-8eef-dd4df039aaf2"
+name = "Biscuits and gravy"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 2.25, unit = "cup" },
+  { id = "baking-powder", amount = 1, unit = "tbsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "butter", amount = 0.5, unit = "cup" },
+  { id = "buttermilk", amount = 0.75, unit = "cup" },
+  { id = "sausages", amount = 300, unit = "g" },
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 220°C. Whisk most of the all-purpose flour with the baking powder, baking soda and salt.",
+  "Grate the cold butter into the flour and rub it in quickly until it looks like coarse crumbs with some larger flakes.",
+  "Stir in the cold buttermilk until just combined. Pat into a rectangle about 2 cm thick, fold in half, pat out again and cut into rounds about 6 cm across.",
+  "Bake on a lined tray for 12 to 15 minutes, until risen and golden.",
+  "For the gravy, squeeze the sausages out of their skins and brown the meat in a frying pan over medium heat for 6 to 8 minutes, breaking it up.",
+  "Sprinkle the rest of the all-purpose flour over and stir for 1 minute. Whisk in the milk and simmer for 5 minutes, until thick. Season with the black pepper and salt.",
+  "Taste the gravy and adjust. Split the warm biscuits and spoon the gravy over.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c54-7f46-8356-de32c07c1a16"
+name = "Cornbread"
+serves = 8
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "cornmeal", amount = 1, unit = "cup" },
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.25, unit = "cup" },
+  { id = "baking-powder", amount = 2, unit = "tsp" },
+  { id = "baking-soda", amount = 0.5, unit = "tsp" },
+  { id = "buttermilk", amount = 1.25, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "butter", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C with a cast-iron pan or baking tin about 23 cm across inside.",
+  "Whisk the cornmeal, all-purpose flour, sugar, baking powder, baking soda and salt.",
+  "Melt the butter. Whisk the buttermilk and eggs, then most of the melted butter.",
+  "Stir the wet mixture into the dry until just combined. A few lumps are fine.",
+  "Brush the hot pan with the rest of the butter and pour in the batter. It should sizzle.",
+  "Bake for 20 to 25 minutes, until golden and a skewer comes out clean.",
+  "Cool for 5 minutes, taste and serve warm in wedges.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c57-7240-8e29-fc1b83b88212"
+name = "Apple pie"
+serves = 8
+prep_minutes = 30
+cook_minutes = 60
+ingredients = [
+  { id = "shortcrust-pastry", amount = 640, unit = "g" },
+  { id = "apple", amount = 6, unit = "medium" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "brown-sugar", amount = 0.25, unit = "cup" },
+  { id = "ground-cinnamon", amount = 1, unit = "tsp" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Line a pie dish about 23 cm across with half the shortcrust pastry. Chill.",
+  "Peel, core and slice the apples about 5 mm thick. Toss them with the lemon juice, most of the sugar, the brown sugar, ground cinnamon, nutmeg, cornflour and a little salt.",
+  "Pile the apples into the pastry and dot with the butter.",
+  "Roll out the rest of the pastry and lay it over. Trim, seal and crimp the edges. Cut a few slits in the top.",
+  "Brush with the beaten egg and sprinkle with the rest of the sugar.",
+  "Bake for 20 minutes, then lower to 180°C and bake for 35 to 40 minutes, until deep golden and the juices bubble through the slits.",
+  "Cool for at least 2 hours so the filling sets. Taste and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c59-7b08-9eaa-6c2b7e7344e9"
+name = "Brownies"
+serves = 12
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "dark-chocolate", amount = 200, unit = "g" },
+  { id = "butter", amount = 0.75, unit = "cup" },
+  { id = "sugar", amount = 1.25, unit = "cup" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "all-purpose-flour", amount = 0.75, unit = "cup" },
+  { id = "cocoa-powder", amount = 0.25, unit = "cup" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C. Line a square tin about 20 cm across with baking paper.",
+  "Melt the dark chocolate and butter together over low heat, stirring until smooth. Cool for 5 minutes.",
+  "Whisk the sugar and eggs for 3 to 4 minutes, until pale and thick. Whisk in the chocolate and vanilla extract.",
+  "Sift in the all-purpose flour, cocoa powder and a little salt and fold until just combined.",
+  "Spread in the tin and bake for 25 to 30 minutes, until the top is shiny and cracked and a skewer comes out with moist crumbs.",
+  "Cool completely in the tin, then cut into squares. Taste one and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c5b-7243-93f9-c58258a88765"
+name = "Chocolate chip cookies"
+serves = 12
+prep_minutes = 15
+cook_minutes = 12
+ingredients = [
+  { id = "butter", amount = 0.75, unit = "cup" },
+  { id = "brown-sugar", amount = 0.75, unit = "cup" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "baking-soda", amount = 0.5, unit = "tsp" },
+  { id = "chocolate-chips", amount = 1.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C and line 2 trays with baking paper.",
+  "Beat the soft butter with the brown sugar and sugar for 2 to 3 minutes, until creamy.",
+  "Beat in the egg and vanilla extract.",
+  "Stir in the all-purpose flour, baking soda and salt until just combined, then the chocolate chips.",
+  "Roll the dough into balls about 4 cm across and space them well apart on the trays.",
+  "Bake for 10 to 12 minutes, until golden at the edges but still soft in the centre.",
+  "Cool on the trays for 5 minutes, then on a rack. Taste one and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c5d-7a15-ad15-224d4e7b6b4a"
+name = "Banana bread"
+serves = 10
+prep_minutes = 15
+cook_minutes = 60
+ingredients = [
+  { id = "banana", amount = 3, unit = "large" },
+  { id = "butter", amount = 0.33, unit = "cup" },
+  { id = "brown-sugar", amount = 0.75, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "all-purpose-flour", amount = 1.5, unit = "cup" },
+  { id = "baking-soda", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "walnuts", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C and line a loaf tin about 23 by 13 cm with baking paper.",
+  "Use very ripe bananas with plenty of brown spots. Mash them well.",
+  "Melt the butter and whisk it with the brown sugar, eggs and vanilla extract. Stir in the mashed banana.",
+  "Fold in the all-purpose flour, baking soda, ground cinnamon and salt until just combined, then the chopped walnuts.",
+  "Pour into the tin and bake for 55 to 60 minutes, until risen and a skewer comes out clean.",
+  "Cool in the tin for 10 minutes, then on a rack. Taste and serve.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c60-7e3c-a1f5-02288ef083eb"
+name = "Scones"
+serves = 8
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "self-raising-flour", amount = 2, unit = "cup" },
+  { id = "baking-powder", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "jam", amount = 0.5, unit = "cup" },
+  { id = "whipping-cream", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 220°C and line a tray with baking paper.",
+  "Rub the cold butter into the self-raising flour, baking powder and a little salt until it looks like fine crumbs. Stir in the sugar.",
+  "Beat the egg, set aside a little for glazing and mix the rest with the milk. Stir it into the flour with a knife until it just comes together into a soft dough.",
+  "Pat out about 3 cm thick and cut rounds about 6 cm across, pushing the cutter straight down without twisting.",
+  "Brush the tops with the set-aside egg and bake for 12 to 15 minutes, until risen and golden.",
+  "Whip the double cream to soft peaks.",
+  "Taste one and serve warm, split, with the jam and the whipped double cream.",
+]
+
+[[recipe]]
+id = "01a18c1e-2c62-7dfa-8781-22ef6d936677"
+name = "Sticky toffee pudding"
+serves = 8
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "dates", amount = 1, unit = "cup" },
+  { id = "baking-soda", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 0.75, unit = "cup" },
+  { id = "muscovado-sugar", amount = 1, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "self-raising-flour", amount = 1.25, unit = "cup" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "whipping-cream", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Heat the oven to 180°C and butter a baking dish about 20 by 20 cm.",
+  "Chop the dates and pour the water, boiling, over them. Stir in the baking soda and leave for 10 minutes.",
+  "Beat a third of the butter with half the muscovado sugar until creamy. Beat in the eggs and vanilla extract.",
+  "Fold in the self-raising flour, then the dates and their liquid, to a loose batter.",
+  "Pour into the dish and bake for 30 to 35 minutes, until risen and a skewer comes out clean.",
+  "For the toffee sauce, melt the rest of the butter with the rest of the muscovado sugar and half the double cream over medium heat. Simmer for 3 minutes, stirring, until glossy. Add a little salt.",
+  "Taste the sauce. Prick the warm pudding all over, pour half the sauce over and serve in squares with the rest of the sauce and the rest of the double cream.",
+]

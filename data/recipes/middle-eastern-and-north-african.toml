@@ -30,3 +30,691 @@ steps = [
   "Cover and cook on low heat for 5 to 7 minutes, until the whites are set and the yolks are still soft.",
   "Serve straight from the pan with crusty bread.",
 ]
+
+[[recipe]]
+id = "01a18c16-b1f7-7efc-a15b-2215d35ab4bd"
+name = "Hummus"
+serves = 6
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "chickpeas", amount = 2, unit = "can" },
+  { id = "tahini", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 2, unit = "tbsp" },
+  { id = "paprika", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Drain the chickpeas. For the smoothest hummus, pinch off the skins.",
+  "Blend the tahini with the lemon juice and garlic for 1 minute, until thick and pale.",
+  "Add the chickpeas, cumin powder and salt and blend for 2 minutes, scraping down the sides.",
+  "With the motor running, add the iced water a splash at a time and blend for 2 to 3 minutes more, until very smooth and fluffy.",
+  "Taste and adjust the lemon, garlic and salt.",
+  "Spread in a shallow bowl, make a swirl with the back of a spoon, drizzle with the extra-virgin olive oil and dust with the paprika.",
+]
+
+[[recipe]]
+id = "01a18c16-b1f9-7734-b05c-1bd32e66ce7e"
+name = "Baba ganoush"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "brinjal", amount = 2, unit = "large" },
+  { id = "tahini", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "extra-virgin-olive-oil", amount = 2, unit = "tbsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "dried-pomegranate-seeds", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Prick the brinjals all over. Char them directly over a gas flame or under a very hot grill for 20 to 30 minutes, turning, until the skin is blackened and the flesh collapses.",
+  "Leave them in a covered bowl for 10 minutes, then peel off the skin and drain the flesh in a sieve for 10 minutes.",
+  "Grate the garlic. Chop the flesh roughly with a knife.",
+  "Mix it with the tahini, lemon juice, garlic and salt until creamy but still a little chunky.",
+  "Taste and adjust the lemon and salt.",
+  "Spread in a bowl, drizzle with the extra-virgin olive oil and scatter the chopped parsley and the dried pomegranate seeds over.",
+]
+
+[[recipe]]
+id = "01a18c16-b1fb-7119-aad6-b093cf759ea7"
+name = "Falafel"
+serves = 4
+prep_minutes = 25
+cook_minutes = 15
+ingredients = [
+  { id = "chickpeas", amount = 1.5, unit = "cup" },
+  { id = "parsley", amount = 1, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 4, unit = "cup" },
+  { id = "tahini", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.33, unit = "cup" },
+]
+steps = [
+  "Use dried chickpeas, never canned. Soak them for at least 12 hours, until doubled in size. Drain and dry well.",
+  "Pulse the chickpeas, parsley, coriander leaves, onion and garlic in a food processor until finely chopped, like coarse sand, but not a paste.",
+  "Mix in the cumin powder, coriander powder, baking soda and salt. Chill for 30 minutes.",
+  "Whisk the tahini with the lemon juice, a little salt and the water until smooth and pourable.",
+  "Shape the mixture into balls about 4 cm across and flatten them slightly.",
+  "Heat the oil in a deep pan to 175°C. Fry in batches for 3 to 4 minutes, until deep brown and crisp outside and green and fluffy inside. Drain.",
+  "Taste one and adjust the sauce. Serve hot with the tahini sauce.",
+]
+
+[[recipe]]
+id = "01a18c16-b1fe-74e7-bca1-bb959369b478"
+name = "Tabbouleh"
+serves = 4
+prep_minutes = 25
+cook_minutes = 0
+ingredients = [
+  { id = "bulgur", amount = 0.25, unit = "cup" },
+  { id = "parsley", amount = 3, unit = "cup" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use fine bulgur. Rinse it, then soak it in the lemon juice for 15 minutes, until softened.",
+  "Pick the parsley and mint leaves and chop them finely with a sharp knife. Don't use a food processor, which bruises them.",
+  "Dice the tomatoes very small and finely slice the spring onions.",
+  "Mix the herbs, tomatoes, spring onions and bulgur with the lemon juice it soaked in.",
+  "Stir in the extra-virgin olive oil and salt.",
+  "Taste and add more lemon or salt. It should be bright and sharp. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c16-b200-746a-9aa1-ae1a0b39d650"
+name = "Fattoush"
+serves = 4
+prep_minutes = 20
+cook_minutes = 10
+ingredients = [
+  { id = "pita-bread", amount = 2, unit = "piece" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "radish", amount = 100, unit = "g" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "sumac", amount = 2, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "pomegranate-molasses", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "extra-virgin-olive-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Tear the pita bread into bite-sized pieces, toss with a little of the extra-virgin olive oil and bake for 8 to 10 minutes, until crisp and golden.",
+  "Chop the lettuce, tomatoes and cucumber into bite-sized pieces. Slice the radish and spring onions thinly. Pick the parsley and mint leaves.",
+  "Grate the garlic and whisk it with the lemon juice, pomegranate molasses, half the sumac, salt and the rest of the extra-virgin olive oil.",
+  "Toss the vegetables and herbs with the dressing.",
+  "Add the pita chips just before serving and toss once more.",
+  "Taste and adjust. Sprinkle the rest of the sumac over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c16-b202-7160-98cc-bea7bf35c726"
+name = "Chicken shawarma"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.25, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "pita-bread", amount = 4, unit = "piece" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs. Grate the garlic. Mix a third of the yogurt, half the lemon juice, three quarters of the garlic, the cumin powder, paprika, coriander powder, ground cinnamon, turmeric, olive oil and salt.",
+  "Toss the chicken in the marinade and leave for at least 1 hour, or overnight in the fridge.",
+  "Heat the oven to 220°C. Spread the chicken on a lined tray and roast for 20 to 25 minutes, until charred at the edges and cooked through.",
+  "Stir the rest of the garlic, the rest of the lemon juice and a little salt into the rest of the yogurt for a garlic sauce.",
+  "Rest the chicken for 5 minutes, then slice it thinly. Slice the tomatoes and onion and chop the parsley.",
+  "Warm the pita bread. Taste the chicken and sauce and adjust.",
+  "Fill the pita with chicken, tomatoes, onion and parsley, drizzle with the garlic sauce, roll up and serve.",
+]
+
+[[recipe]]
+id = "01a18c16-b204-7b41-92fa-be5f2f70a297"
+name = "Chicken kebab with garlic sauce"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 8, unit = "clove" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 0.75, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken breasts and cut them into cubes about 3 cm across.",
+  "Grate a quarter of the garlic and mix it with the yogurt, half the lemon juice, the paprika, olive oil and salt. Toss the chicken in it and leave for at least 1 hour.",
+  "For the garlic sauce, blend the rest of the garlic with a little salt to a paste. With the motor running, add the oil in a thin stream, alternating with the rest of the lemon juice, until thick, white and fluffy.",
+  "Thread the chicken onto skewers. Soak wooden skewers for 30 minutes first.",
+  "Grill on a very hot griddle pan or barbecue for 10 to 12 minutes, turning, until charred and cooked through.",
+  "Taste the garlic sauce and adjust the salt. Serve the kebabs hot with the sauce.",
+]
+
+[[recipe]]
+id = "01a18c16-b207-7c33-9307-ea008a44cf84"
+name = "Lamb kofta"
+serves = 4
+prep_minutes = 20
+cook_minutes = 12
+ingredients = [
+  { id = "lamb-mince", amount = 600, unit = "g" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Grate the onion and squeeze out its juice. Finely chop the parsley and grate the garlic.",
+  "Mix the lamb mince with the onion, parsley, most of the garlic, the cumin powder, coriander powder, ground cinnamon, paprika, black pepper and salt. Knead for 2 minutes, until sticky.",
+  "Shape the mixture into logs about 10 cm long round skewers, or into flat ovals. Chill for 15 minutes.",
+  "Stir the chopped mint, the rest of the garlic, the lemon juice and a little salt into the yogurt.",
+  "Brush the kofta with the olive oil. Grill on a very hot griddle pan or barbecue for 8 to 10 minutes, turning, until charred and cooked through.",
+  "Taste the yogurt sauce and adjust. Serve the kofta hot with the sauce.",
+]
+
+[[recipe]]
+id = "01a18c16-b209-7d99-9c42-bc6502136fb5"
+name = "Mujadara"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "green-lentils", amount = 1, unit = "cup" },
+  { id = "basmati-rice", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the green lentils and simmer them in the water for 15 minutes, until just starting to soften. Rinse and drain the basmati rice.",
+  "Slice the onions thinly into half-moons. Heat the olive oil in a wide pan over medium-high heat and fry the onions for 20 to 25 minutes, stirring often, until deep brown and crisp in places.",
+  "Lift out half the onions and drain them on kitchen paper. Salt them lightly.",
+  "Stir the cumin powder into the onions left in the pan for 30 seconds. Add the basmati rice and stir for 1 minute.",
+  "Add the lentils with their cooking liquid and salt. Cover and cook on the lowest heat for 18 to 20 minutes, until the basmati rice and lentils are tender. Rest covered for 5 minutes.",
+  "Taste and adjust the salt. Fluff with a fork, top with the rest of the onions and serve with the yogurt.",
+]
+
+[[recipe]]
+id = "01a18c16-b20b-7687-a8d0-61a4d7a722dc"
+name = "Lentil soup (Middle Eastern)"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "masoor-dal", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "chilli-flakes", amount = 0.25, unit = "tsp" },
+  { id = "vegetable-stock", amount = 5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the red lentils until the rinsing runs clear. Chop the onion, carrot and garlic.",
+  "Heat the olive oil in a pot over medium heat. Fry the onion and carrot for 8 minutes, until soft.",
+  "Add the garlic and cumin powder and stir for 1 minute.",
+  "Add the lentils and vegetable stock. Bring to a boil, then simmer for 20 to 25 minutes, stirring now and then, until the lentils have broken down.",
+  "Blend until smooth and season with salt.",
+  "Taste and add lemon juice until bright. Serve hot with the chilli flakes sprinkled over and the rest of the lemon cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c16-b20d-7bdf-b3cc-4c68ac0a56b6"
+name = "Fatteh"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chickpeas", amount = 2, unit = "can" },
+  { id = "pita-bread", amount = 2, unit = "piece" },
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "tahini", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "pine-nuts", amount = 3, unit = "tbsp" },
+  { id = "paprika", amount = 0.5, unit = "tsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Tear the pita bread into pieces, toss with the olive oil and bake for 8 to 10 minutes, until crisp.",
+  "Warm the chickpeas in their liquid with the cumin powder and a little salt for 5 minutes. Drain, keeping a little of the liquid.",
+  "Grate the garlic and whisk it with the yogurt, tahini, lemon juice and salt until smooth.",
+  "Melt the butter in a small pan over medium heat and fry the pine nuts for 2 to 3 minutes, until golden. Stir in the paprika off the heat.",
+  "Lay the pita in a dish and spoon over a little of the chickpea liquid. Top with the warm chickpeas, then pour the yogurt sauce over.",
+  "Taste the sauce and adjust. Pour the butter and pine nuts over, scatter the chopped parsley over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c16-b210-724c-8e53-471af8adad98"
+name = "Ful medames"
+serves = 4
+prep_minutes = 10
+cook_minutes = 90
+ingredients = [
+  { id = "dried-fava-beans", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Use small dried fava beans. Soak them for at least 12 hours, then drain.",
+  "Simmer the beans in the water in a covered pot on low heat for 1 to 1 and a half hours, until very tender and starting to fall apart. Top up with hot tap water if needed.",
+  "Crush the garlic with a little salt to a paste.",
+  "Drain the beans, keeping some of the cooking liquid, and mash them roughly with the garlic, lemon juice, cumin powder and a splash of the liquid.",
+  "Dice the tomato and onion and chop the parsley.",
+  "Taste and adjust the salt and lemon. Spoon into a bowl, drizzle generously with the extra-virgin olive oil and top with the tomato, onion and parsley.",
+]
+
+[[recipe]]
+id = "01a18c16-b212-7c32-8007-d7113fc06483"
+name = "Moroccan chicken tagine"
+serves = 4
+prep_minutes = 20
+cook_minutes = 60
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "olives", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "parsley", amount = 0.25, unit = "cup" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs. Grate the garlic and ginger and mix with the turmeric, ground cinnamon, cumin powder, half the olive oil and salt. Rub it into the chicken.",
+  "Slice the onions thinly. Soak the saffron in a spoonful of the chicken stock, warm.",
+  "Heat the rest of the olive oil in a tagine or heavy pan over medium heat. Brown the chicken for 3 to 4 minutes a side and lift it out.",
+  "Fry the onions for 10 minutes, until soft and golden.",
+  "Return the chicken with the saffron, the rest of the chicken stock and half the chopped coriander leaves and parsley. Cover and simmer on low heat for 35 to 40 minutes, until the chicken is tender.",
+  "Grate the lemon zest. Add the olives, lemon zest and a squeeze of lemon juice and simmer uncovered for 10 minutes, until the sauce thickens.",
+  "Taste and adjust the salt and lemon. Scatter the rest of the herbs over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b214-70e4-8fb8-d4a9e2481bd9"
+name = "Vegetable tagine"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "butternut-squash", amount = 500, unit = "g" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "chickpeas", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ras-el-hanout", amount = 2, unit = "tsp" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "dried-apricots", amount = 0.5, unit = "cup" },
+  { id = "vegetable-stock", amount = 1.5, unit = "cup" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the butternut squash and carrots and cut them into chunks about 3 cm across. Cut the zucchini the same size. Chop the onion and garlic and halve the dried apricots.",
+  "Heat the olive oil in a tagine or heavy pan over medium heat. Fry the onion for 8 minutes, until soft, then the garlic and ras el hanout for 1 minute.",
+  "Add the squash and carrots and stir to coat.",
+  "Add the canned tomatoes, vegetable stock, dried apricots, drained chickpeas and honey. Season with salt.",
+  "Cover and simmer on low heat for 20 minutes. Add the zucchini and cook for 10 to 15 minutes, until all the vegetables are tender.",
+  "Taste and balance the sweetness and salt. Scatter the chopped coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b216-752a-ad76-8e7d7e47ed30"
+name = "Chickpea tagine"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chickpeas", amount = 2, unit = "can" },
+  { id = "sweet-potato", amount = 1, unit = "large" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "harissa", amount = 1, unit = "tbsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "spinach", amount = 3, unit = "cup" },
+  { id = "vegetable-stock", amount = 1, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the sweet potato and cut it into cubes about 2 cm across. Chop the onion and grate the garlic and ginger.",
+  "Heat the olive oil in a heavy pan over medium heat. Fry the onion for 8 minutes, until soft.",
+  "Add the garlic, ginger, cumin powder and harissa and stir for 1 minute.",
+  "Add the sweet potato, drained chickpeas, canned tomatoes and vegetable stock. Season with salt. Cover and simmer on low heat for 20 to 25 minutes, until the sweet potato is tender.",
+  "Stir in the spinach for 2 minutes, until wilted. Add the lemon juice.",
+  "Taste and adjust the heat and salt. Scatter the chopped coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b219-77ad-9f5a-e63ffafc19de"
+name = "Couscous with vegetables"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "couscous", amount = 1.5, unit = "cup" },
+  { id = "vegetable-stock", amount = 4, unit = "cup" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "turnip", amount = 1, unit = "medium" },
+  { id = "chickpeas", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "raisins", amount = 0.25, unit = "cup" },
+  { id = "ras-el-hanout", amount = 2, unit = "tsp" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the carrots and turnip and cut them into chunks about 4 cm long. Cut the zucchini the same size and chop the onion.",
+  "Heat the olive oil in a pot over medium heat. Fry the onion for 6 minutes, then stir in the ras el hanout and tomato paste for 1 minute.",
+  "Add the carrots, turnip and most of the vegetable stock. Season with salt and simmer for 15 minutes.",
+  "Add the zucchini, drained chickpeas and raisins and simmer for 10 to 12 minutes, until all the vegetables are tender.",
+  "Bring the rest of the vegetable stock to a boil and pour it over the couscous with the butter and a little salt. Cover for 5 minutes, then fluff with a fork.",
+  "Taste the vegetable broth and adjust. Mound the couscous on a platter, arrange the vegetables on top, spoon over plenty of broth and scatter the chopped coriander leaves over.",
+]
+
+[[recipe]]
+id = "01a18c16-b21b-72d4-8743-b45d91b056e2"
+name = "Harira"
+serves = 6
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "lamb", amount = 300, unit = "g" },
+  { id = "green-lentils", amount = 0.5, unit = "cup" },
+  { id = "chickpeas", amount = 1, unit = "can" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "large" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 8, unit = "cup" },
+]
+steps = [
+  "Cut the lamb into small cubes about 1.5 cm across. Chop the onion and celery and finely chop the coriander leaves and parsley.",
+  "Heat the olive oil in a large pot over medium heat. Brown the lamb for 5 minutes, then add the onion and celery for 5 minutes.",
+  "Stir in the ground ginger, turmeric, ground cinnamon, black pepper and half the herbs for 1 minute.",
+  "Add the rinsed green lentils, canned tomatoes, tomato paste and most of the water. Bring to a boil, then simmer on low heat for 45 minutes, until the lamb and lentils are tender.",
+  "Add the drained chickpeas and season with salt. Simmer for 10 minutes.",
+  "Whisk the all-purpose flour into the rest of the water until smooth. Pour it into the soup in a thin stream, stirring, and simmer for 10 minutes, until silky and slightly thick.",
+  "Stir in the rest of the herbs and the lemon juice. Taste and adjust, then serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b21d-736b-a3e1-eac6fbbffba8"
+name = "Muhammara"
+serves = 6
+prep_minutes = 15
+cook_minutes = 5
+ingredients = [
+  { id = "roasted-red-peppers", amount = 1.5, unit = "cup" },
+  { id = "walnuts", amount = 1, unit = "cup" },
+  { id = "breadcrumbs", amount = 0.33, unit = "cup" },
+  { id = "pomegranate-molasses", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Toast the walnuts in a dry pan over medium heat for 4 to 5 minutes, until fragrant. Set aside a few for the top.",
+  "Drain the roasted red peppers well and pat them dry.",
+  "Pulse the peppers, the rest of the walnuts, the breadcrumbs, garlic, cumin powder, chilli flakes, pomegranate molasses and lemon juice until thick and slightly coarse.",
+  "With the motor running, pour in most of the extra-virgin olive oil. Season with salt.",
+  "Taste and balance the sweet, sour and heat.",
+  "Spread in a bowl, drizzle with the rest of the extra-virgin olive oil and crumble the set-aside walnuts over. Serve at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c16-b21f-7240-a280-85a631ce2371"
+name = "Labneh with za'atar"
+serves = 6
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "hung-curd", amount = 2, unit = "cup" },
+  { id = "zaatar", amount = 1, unit = "tbsp" },
+  { id = "extra-virgin-olive-oil", amount = 3, unit = "tbsp" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "olives", amount = 0.33, unit = "cup" },
+  { id = "pita-bread", amount = 3, unit = "piece" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Stir a little salt into the Greek yogurt.",
+  "Line a sieve with a clean muslin cloth and set it over a bowl. Spoon in the Greek yogurt, fold the cloth over and chill for 12 to 24 hours, until very thick.",
+  "Spread the labneh in a shallow bowl, making swirls with the back of a spoon.",
+  "Drizzle with the extra-virgin olive oil and sprinkle the za'atar over.",
+  "Cut the cucumber into sticks and warm the pita bread.",
+  "Taste and add a little more salt if needed. Serve with the cucumber, olives and pita bread.",
+]
+
+[[recipe]]
+id = "01a18c16-b222-7e60-9fe2-ea84a41abf4b"
+name = "Manakish"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 0.5, unit = "cup" },
+  { id = "zaatar", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Stir the dry yeast and sugar into the warm water and leave for 5 minutes, until foamy.",
+  "Mix the all-purpose flour and salt, add the yeast mixture and a spoonful of the olive oil and knead for 8 minutes into a smooth, soft dough. Cover and leave for 1 hour, until doubled.",
+  "Heat the oven to its highest setting, at least 250°C, with a heavy tray inside.",
+  "Mix the za'atar with the rest of the olive oil into a loose paste.",
+  "Divide the dough into 6 and roll each into a round about 5 mm thick. Make dimples all over with your fingertips and spread the za'atar paste over, leaving a thin rim.",
+  "Bake on the hot tray for 7 to 9 minutes, until the edges are golden and the base is crisp.",
+  "Taste one and serve warm, folded or flat.",
+]
+
+[[recipe]]
+id = "01a18c16-b224-7f04-92ee-74edc53f2d1e"
+name = "Stuffed peppers (dolma)"
+serves = 4
+prep_minutes = 25
+cook_minutes = 55
+ingredients = [
+  { id = "bell-pepper", amount = 6, unit = "medium" },
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "lamb-mince", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "dried-mint", amount = 1, unit = "tsp" },
+  { id = "allspice", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cut the tops off the bell peppers and keep them as lids. Scoop out the seeds.",
+  "Rinse the rice. Finely chop the onion and parsley.",
+  "Heat half the olive oil in a pan over medium heat and fry the onion for 6 minutes, until soft. Stir in half the tomato paste for 1 minute.",
+  "Mix the onion with the lamb mince, rice, parsley, dried mint, allspice and salt.",
+  "Fill the peppers loosely, leaving room for the rice to swell, and put on the lids. Stand them upright in a snug pot.",
+  "Whisk the rest of the tomato paste, the rest of the olive oil, the lemon juice and a little salt into the water and pour it round the peppers.",
+  "Cover and simmer on low heat for 45 to 50 minutes, until the peppers are soft and the rice is tender.",
+  "Taste the sauce and adjust. Serve warm with the sauce spooned over.",
+]
+
+[[recipe]]
+id = "01a18c16-b226-7f9a-b520-d9efd665bed4"
+name = "Lebanese garlic potatoes"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "potato", amount = 750, unit = "g" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the potatoes and cut them into cubes about 2 cm across. Rinse and dry them well.",
+  "Heat the oven to 220°C. Toss the potatoes with most of the olive oil and salt on a large tray in a single layer.",
+  "Roast for 30 to 35 minutes, turning once, until golden and crisp.",
+  "Meanwhile, crush the garlic and chop the coriander leaves.",
+  "Warm the rest of the olive oil in a large pan over medium-low heat. Fry the garlic for 1 minute, until fragrant but not brown, then add the coriander leaves and chilli flakes for 30 seconds.",
+  "Toss the hot potatoes in the pan and squeeze the lemon juice over.",
+  "Taste and adjust the salt and lemon. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b228-79f2-aae6-a01b03825bb0"
+name = "Chicken freekeh"
+serves = 4
+prep_minutes = 15
+cook_minutes = 60
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "freekeh", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "allspice", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "chicken-stock", amount = 4, unit = "cup" },
+  { id = "almond-flakes", amount = 0.33, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs. Season with half the allspice, the ground cinnamon, black pepper and salt.",
+  "Rinse the freekeh well and drain. Chop the onion.",
+  "Heat the olive oil in a heavy pot over medium-high heat. Brown the chicken for 4 minutes a side and lift it out.",
+  "Lower the heat, add half the butter and fry the onion for 8 minutes, until soft and golden. Stir in the freekeh and the rest of the allspice for 2 minutes.",
+  "Add the chicken stock and season with salt. Nestle the chicken back in, bring to a boil, then cover and simmer on low heat for 35 to 40 minutes, until the freekeh is tender and the chicken is cooked through.",
+  "Fry the almond flakes in the rest of the butter for 2 minutes, until golden.",
+  "Taste the freekeh and adjust the salt. Serve with the almond flakes and chopped parsley scattered over.",
+]
+
+[[recipe]]
+id = "01a18c16-b22b-739b-a58e-a4dedab71efc"
+name = "Kunafa"
+serves = 8
+prep_minutes = 25
+cook_minutes = 40
+ingredients = [
+  { id = "kataifi-pastry", amount = 400, unit = "g" },
+  { id = "butter", amount = 0.75, unit = "cup" },
+  { id = "mozzarella", amount = 1.5, unit = "cup" },
+  { id = "ricotta", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "cup" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "orange-blossom-water", amount = 1, unit = "tsp" },
+  { id = "pistachios", amount = 0.25, unit = "cup" },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "For the syrup, simmer the sugar and the water for 8 to 10 minutes, until slightly thick. Stir in the lemon juice and orange blossom water and leave to cool.",
+  "Heat the oven to 190°C. Melt the butter.",
+  "Pull the kataifi pastry apart into short strands and toss with the melted butter until every strand is coated.",
+  "Press half the pastry firmly into a round baking tin about 25 cm across.",
+  "Mix the grated mozzarella and ricotta and spread it over, leaving a thin rim. Cover with the rest of the pastry and press down.",
+  "Bake for 35 to 40 minutes, until deep golden and crisp.",
+  "Pour the cool syrup over the hot kunafa straight away. Leave for 5 minutes, then turn it out.",
+  "Taste and scatter the chopped pistachios over. Serve warm, while the cheese is still stretchy.",
+]
