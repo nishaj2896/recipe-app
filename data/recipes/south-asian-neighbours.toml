@@ -1,0 +1,403 @@
+# South Asian neighbours (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c4a-5f6c-7ce6-a337-75ae717b09c9"
+name = "Sri Lankan chicken curry"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "pandan-leaves", amount = 1, unit = "leaf" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "curry-powder", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "lime", amount = 0.5, unit = "medium" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken pieces. Toss them with the curry powder, red chilli powder, turmeric and salt and leave for 20 minutes.",
+  "Slice the onion, chop the garlic, ginger and tomato, and slit the green chillies.",
+  "Heat the oil in a heavy pot over medium heat. Add the cinnamon sticks, green cardamom, curry leaves and pandan leaves and fry for 30 seconds, until fragrant.",
+  "Add the onion and green chillies and fry for 8 minutes, until golden. Add the garlic and ginger for 1 minute.",
+  "Add the chicken and stir for 5 minutes, until coated and lightly coloured. Add the tomato and cook for 3 minutes, until soft.",
+  "Pour in the coconut milk, cover and simmer on low heat for 25 to 30 minutes, until the chicken is tender and the gravy is thick.",
+  "Squeeze the lime juice in. Taste and adjust the salt, then serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f73-7aea-a8ab-569912f8df1b"
+name = "Kottu roti"
+serves = 2
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "frozen-parathas", amount = 4, unit = "piece" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "leek", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "curry-powder", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cook the frozen parathas in a dry pan as the packet says, then cut them into thin strips about 1 cm wide.",
+  "Cut the chicken into small pieces and toss with half the curry powder and salt. Shred the cabbage, cut the carrot into matchsticks and slice the leek, onion and green chillies. Chop the garlic.",
+  "Heat the oil in a large wok over high heat. Stir-fry the chicken for 4 to 5 minutes, until cooked through.",
+  "Add the onion, garlic, green chillies and curry leaves for 2 minutes, then the carrot, leek and cabbage for 2 to 3 minutes, until just wilted.",
+  "Push everything aside, crack in the eggs and scramble for 1 minute.",
+  "Add the paratha strips, the rest of the curry powder and the soy sauce. Toss and chop through with the edge of a metal spatula for 2 to 3 minutes, until everything is mixed and hot.",
+  "Taste and adjust the salt. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f75-7fe4-84a0-02a2fb076583"
+name = "Pol sambol"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "coconut", amount = 1.5, unit = "cup" },
+  { id = "shallot", amount = 3, unit = "piece" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use freshly grated coconut, or frozen grated coconut that has thawed.",
+  "Chop the shallots very finely.",
+  "Pound the shallots with the red chilli powder, chilli flakes and salt in a mortar for 1 minute, until pasty.",
+  "Add the coconut and rub it together with your fingers for 2 minutes, until it turns evenly pink-red.",
+  "Squeeze in the lime juice and mix well.",
+  "Taste and balance the heat, salt and sourness. Serve fresh.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f78-7d6f-a4fe-8f109cab562f"
+name = "Sri Lankan dhal curry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "masoor-dal", amount = 1, unit = "cup" },
+  { id = "coconut-milk", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "pandan-leaves", amount = 1, unit = "leaf" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the red lentils. Slice the onion and garlic and slit the green chillies.",
+  "Simmer the lentils in the water with half the onion, the green chillies, turmeric and pandan leaves for 15 minutes, until soft.",
+  "Stir in the coconut milk and salt and simmer for 5 minutes, until creamy.",
+  "Heat the oil in a small pan over medium heat. Add the mustard seeds and, when they pop, the cumin seeds, dried red chillies and curry leaves for 20 seconds.",
+  "Add the rest of the onion and the garlic and fry for 4 to 5 minutes, until golden. Pour this over the dhal.",
+  "Taste and adjust the salt. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f7a-7e5c-997b-ef9101e0b2a2"
+name = "Egg hoppers"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "rice-flour", amount = 2, unit = "cup" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 6, unit = "large" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Stir the dry yeast and sugar into the warm water and leave for 5 minutes, until foamy.",
+  "Mix the rice flour with the yeast mixture and most of the coconut milk into a thick batter. Cover and leave for at least 6 hours, or overnight, until bubbly.",
+  "Stir in the rest of the coconut milk and salt until the batter is like thin pancake batter.",
+  "Heat a small round-bottomed pan or wok over medium heat and wipe it with oil.",
+  "Pour in a small ladleful of batter and swirl the pan at once so it coats the sides thinly, leaving a thicker pool in the centre.",
+  "Crack an egg into the centre, cover and cook for 3 to 4 minutes, until the edges are crisp and lacy and the egg white is set.",
+  "Ease out with a spatula and repeat with the rest of the batter and eggs. Sprinkle the eggs with salt, taste one and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f7c-7af2-abda-7824f1b45653"
+name = "Nepali dal bhat"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "masoor-dal", amount = 1, unit = "cup" },
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "sichuan-peppercorns", amount = 0.25, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "spinach", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and simmer it in a third of the water in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes.",
+  "Rinse the red lentils and simmer them in the rest of the water with the turmeric for 20 minutes, until soft. Whisk until smooth and season with salt.",
+  "Slice the onion and garlic, grate the ginger and chop the tomato.",
+  "Heat half the ghee in a small pan over medium heat. Fry the cumin seeds, sichuan peppercorns and dried red chillies for 20 seconds, then the onion for 5 minutes, then the garlic and ginger for 1 minute. Pour into the dal with the tomato and simmer for 5 minutes.",
+  "Wilt the spinach in the rest of the ghee with a little salt for 2 minutes.",
+  "Taste the dal and adjust. Serve the rice with the dal, the spinach on the side and the coriander leaves scattered over.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f7f-7d0b-87d0-8d0a990ec701"
+name = "Chicken sekuwa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "sichuan-peppercorns", amount = 0.25, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into cubes about 3 cm across.",
+  "Grate the garlic and ginger. Toast and grind the sichuan peppercorns.",
+  "Mix the garlic, ginger, cumin powder, coriander powder, red chilli powder, turmeric, sichuan peppercorns, mustard oil, half the lemon juice and salt. Rub it into the chicken and leave for at least 2 hours.",
+  "Thread onto skewers. Grill over high heat on a barbecue or griddle pan for 10 to 12 minutes, turning, until charred at the edges and cooked through.",
+  "Slice the onion into thin rings.",
+  "Squeeze the rest of the lemon juice over, taste and serve hot with the onion.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f81-79c4-af41-905f6eb5afb5"
+name = "Aloo tama"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "bamboo-shoots", amount = 1, unit = "cup" },
+  { id = "black-eyed-peas", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Peel the potatoes and cut them into cubes about 2 cm across. Rinse the bamboo shoots and slice them thinly. Drain the black-eyed peas.",
+  "Chop the onion and tomatoes and grate the garlic and ginger.",
+  "Heat the mustard oil in a pot over medium-high heat until it just smokes, then lower the heat. Fry the fenugreek seeds for 15 seconds, until dark.",
+  "Add the onion and fry for 6 minutes, then the garlic and ginger for 1 minute. Stir in the turmeric, cumin powder and red chilli powder.",
+  "Add the tomatoes and cook for 5 minutes, until soft. Add the potatoes and bamboo shoots and stir for 3 minutes.",
+  "Pour in the water, add the black-eyed peas and salt and simmer for 18 to 20 minutes, until the potatoes are tender and the soup is slightly thick and sour.",
+  "Taste and adjust. Scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f83-760f-8063-e63a6ad405e0"
+name = "Chicken karahi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "tomato", amount = 5, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken cut into small pieces. Quarter the tomatoes, cut half the ginger into fine strips and grate the rest with the garlic. Slit the green chillies.",
+  "Crush the cumin seeds, coriander seeds and black pepper coarsely.",
+  "Heat the oil in a karahi or wok over high heat. Fry the chicken for 6 to 8 minutes, until it turns white and starts to brown.",
+  "Add the grated ginger and garlic for 1 minute, then the tomatoes and salt. Cover and cook on medium heat for 10 minutes, until the tomatoes collapse.",
+  "Pick out the tomato skins. Add the crushed spices and red chilli powder and cook uncovered over high heat for 8 to 10 minutes, stirring, until the oil separates and the masala clings to the chicken.",
+  "Stir in the yogurt and green chillies and cook for 3 minutes. Sprinkle the garam masala over.",
+  "Taste and adjust. Scatter the ginger strips and coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f85-7433-b61b-e5730d852ce7"
+name = "Chapli kebab"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "beef-mince", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "dried-pomegranate-seeds", amount = 1, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion, tomato, green chillies and coriander leaves and grate the ginger. Squeeze the onion and tomato in a cloth to remove excess juice.",
+  "Toast the coriander seeds and cumin seeds in a dry pan for 1 minute and crush them coarsely with the dried pomegranate seeds.",
+  "Mix the beef mince with the vegetables, crushed spices, chilli flakes, egg, cornflour and salt. Knead for 2 minutes.",
+  "Fry a little of the mixture to taste the seasoning, and adjust.",
+  "Shape into thin flat patties about 12 cm across and 1 cm thick, with wet hands.",
+  "Heat the oil in a large frying pan over medium-high heat. Fry the kebabs for 3 to 4 minutes a side, until deep brown, crisp at the edges and cooked through.",
+  "Drain on kitchen paper and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f87-7180-bffa-d6d81231c9e1"
+name = "Kabuli pulao"
+serves = 6
+prep_minutes = 25
+cook_minutes = 105
+ingredients = [
+  { id = "basmati-rice", amount = 2, unit = "cup" },
+  { id = "lamb", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 3, unit = "medium" },
+  { id = "raisins", amount = 0.5, unit = "cup" },
+  { id = "almond-flakes", amount = 0.33, unit = "cup" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice and soak it for 30 minutes. Cut the lamb into chunks about 4 cm across and slice the onions.",
+  "Heat most of the oil in a heavy pot over medium heat. Fry the onions for 12 minutes, until deep brown. Add the lamb and brown for 6 minutes.",
+  "Add the cumin seeds, green cardamom, cinnamon sticks, black pepper, salt and the water. Cover and simmer on low heat for 60 minutes, until the lamb is tender.",
+  "Cut the carrots into thin matchsticks. Fry them in the rest of the oil with the sugar over medium heat for 5 minutes, until soft and glazed. Add the raisins for 1 minute, until plump, and the almond flakes for 1 minute. Set aside.",
+  "Drain the basmati rice and add it to the pot with the broth. Bring to a boil, then cook uncovered on medium heat until the liquid sinks below the surface of the basmati rice.",
+  "Spread the carrot mixture on top. Cover tightly and cook on the lowest heat for 25 minutes, until the basmati rice is tender.",
+  "Taste and adjust the salt. Pile onto a platter with the lamb under the basmati rice and the carrots on top.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f8a-7fd8-af05-9530d10377b7"
+name = "Mantu"
+serves = 4
+prep_minutes = 40
+cook_minutes = 40
+ingredients = [
+  { id = "wonton-wrappers", amount = 30, unit = "piece" },
+  { id = "lamb-mince", amount = 400, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "yellow-split-peas", amount = 0.33, unit = "cup" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "hung-curd", amount = 1, unit = "cup" },
+  { id = "dried-mint", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Simmer the yellow split peas in the water for 25 to 30 minutes, until tender but holding their shape. Keep the cooking liquid.",
+  "Finely chop the onions and grate the garlic. Mix the lamb mince with half the onion, a third of the garlic, the coriander powder, black pepper and salt.",
+  "Lay out some of the dumpling wrappers. Put a spoonful of filling on each, wet the edges, bring opposite corners together and pinch all the edges up to make little bundles. Repeat with the rest.",
+  "Steam the dumplings on an oiled steamer tray for 15 to 18 minutes, until the filling is cooked through.",
+  "Meanwhile, heat the oil in a pan over medium heat. Fry the rest of the onion for 6 minutes, then a third of the garlic for 1 minute. Stir in the tomato paste and red chilli powder, then the yellow split peas with a splash of their liquid. Simmer for 5 minutes. Season with salt.",
+  "Stir the rest of the garlic and a little salt into the Greek yogurt.",
+  "Taste both sauces. Spread the Greek yogurt on a platter, set the dumplings on top, spoon the split pea sauce over and sprinkle with the dried mint.",
+]
+
+[[recipe]]
+id = "01a18c4a-5f8c-7d97-8754-92272b4070ad"
+name = "Bolani"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "coriander-leaves", amount = 0.33, unit = "cup" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the all-purpose flour with a little salt, a spoonful of the oil and the water and knead for 5 minutes into a soft dough. Cover and rest for 30 minutes.",
+  "Boil the potatoes in salted tap water for 18 to 20 minutes, until tender. Peel and mash.",
+  "Finely chop the spring onions, coriander leaves and green chilli. Mix them into the potato with the cumin powder and salt. Taste and adjust.",
+  "Divide the dough into balls about 6 cm across and roll each into a thin round about 20 cm across.",
+  "Spread filling over half of each round, fold over into a half-moon and press the edges to seal. Roll lightly to flatten.",
+  "Heat a little of the rest of the oil in a large frying pan over medium heat. Fry the bolani for 2 to 3 minutes a side, until golden and crisp, adding oil as needed.",
+  "Taste one and serve hot, cut into wedges, with the yogurt.",
+]
