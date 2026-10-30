@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 
 from recipe_app.domain.catalog import IngredientClass
-from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe import Image, Recipe
 from recipe_app.domain.steps import StepMatcher, states_amount
 from recipe_app.domain.units import Unit, on_grid
 
@@ -23,13 +23,6 @@ SHA256 = re.compile(r"[0-9a-f]{64}")
 class Amount:
     value: float
     unit: Unit
-
-
-@dataclass(frozen=True, slots=True)
-class Image:
-    file: str
-    sha256: str
-    alt: str
 
 
 @dataclass(frozen=True, slots=True)

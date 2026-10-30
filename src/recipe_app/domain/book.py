@@ -2,7 +2,7 @@
 
 import tomllib
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from types import MappingProxyType
 from uuid import UUID
 
@@ -146,7 +146,8 @@ def _parse_file(
         if recipe_content is None:
             problems.extend(f"{where} ({recipe.name}): {problem}" for problem in found)
             continue
-        parsed.append((recipe, recipe_content))
+        # The card shows the photo too (ADR-0010), so the recipe carries it.
+        parsed.append((replace(recipe, image=recipe_content.image), recipe_content))
     return parsed
 
 

@@ -11,11 +11,11 @@ from sqlalchemy import insert
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
 
 from recipe_app.domain.catalog import IngredientCatalog, parse_catalog
-from recipe_app.domain.content import Amount, Image, RecipeContent, RecipeWithContent
+from recipe_app.domain.content import Amount, RecipeContent, RecipeWithContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.matching import max_core_weight, resolve_pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters
-from recipe_app.domain.recipe import Recipe, build_recipe
+from recipe_app.domain.recipe import Image, Recipe, build_recipe
 from recipe_app.domain.scoring import score_int
 from recipe_app.domain.units import Unit
 from recipe_app.infra.database import create_engine
@@ -269,9 +269,13 @@ async def test_content_with_a_photo_and_a_to_taste_ingredient_round_trips(
     await sync(empty_engine, one, [recipe], now=NOW, content={recipe.id: content})
     repository = await PostgresRecipeRepository.open(empty_engine, one)
 
+    # The photo is also on the recipe itself, for the swipe card (ADR-0010).
     assert await repository.detail(recipe.id) == RecipeWithContent(
-        recipe=recipe, content=content
+        recipe=replace(recipe, image=content.image), content=content
     )
+    pantry = resolve_pantry(ingredient_ids=["potato"], excluded_staples=[], catalog=one)
+    ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
+    assert [card.recipe.image for card in ranked.scored] == [content.image]
 
 
 async def test_a_plan_ahead_wait_reaches_the_card_and_the_detail(

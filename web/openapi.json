@@ -229,6 +229,16 @@
             "title": "Id",
             "type": "string"
           },
+          "image": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RecipeImage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "match_percentage": {
             "anyOf": [
               {
@@ -295,7 +305,8 @@
           "cook_minutes",
           "total_minutes",
           "diet",
-          "plan_ahead"
+          "plan_ahead",
+          "image"
         ],
         "title": "RecipeCard",
         "type": "object"

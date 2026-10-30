@@ -2,6 +2,7 @@ import { type ReactNode, useState } from "react";
 
 import type { RecipeIngredient } from "../api/client";
 import { useCatalog, useRecipe, useStaples } from "../api/queries";
+import { DishPhoto } from "../art/DishPhoto";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
 import { DIETS } from "../deck/diets";
 import { useDevice } from "../store/device";
@@ -109,7 +110,13 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
     <article className={styles.detail} aria-labelledby="recipe-name">
       <div className={styles.art}>
         {detail.image ? (
-          <DishPhoto key={detail.image.url} {...detail.image} recipeId={detail.id} />
+          <DishPhoto
+            key={detail.image.url}
+            {...detail.image}
+            recipeId={detail.id}
+            className={styles.photo}
+            artSize={220}
+          />
         ) : (
           <DishArt recipeId={detail.id} size={220} />
         )}
@@ -228,30 +235,5 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
         )}
       </div>
     </article>
-  );
-}
-
-interface PhotoProps {
-  recipeId: string;
-  url: string;
-  alt: string;
-}
-
-/** The dish's photo; the drawn bowl stands in if the file doesn't load. */
-function DishPhoto({ recipeId, url, alt }: PhotoProps) {
-  const [failed, setFailed] = useState(false);
-  if (failed) return <DishArt recipeId={recipeId} size={220} />;
-  return (
-    <img
-      className={styles.photo}
-      src={url}
-      alt={alt}
-      width={800}
-      height={800}
-      decoding="async"
-      onError={() => {
-        setFailed(true);
-      }}
-    />
   );
 }

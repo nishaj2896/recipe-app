@@ -7,6 +7,15 @@
   min-height: 220px;
 }
 
+.photo {
+  display: block;
+  width: min(100%, 250px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: var(--radius-l);
+  object-fit: cover;
+}
+
 .garnish {
   position: absolute;
   top: var(--space-4);

@@ -1,4 +1,5 @@
 import type { RecipeCard } from "../api/client";
+import { DishPhoto } from "../art/DishPhoto";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
 import { DIETS } from "./diets";
 import { listNames } from "./names";
@@ -56,7 +57,17 @@ export function RecipeFace({
             />
           ))}
         </span>
-        <DishArt recipeId={card.id} size={230} />
+        {card.image ? (
+          <DishPhoto
+            key={card.image.url}
+            {...card.image}
+            recipeId={card.id}
+            className={styles.photo}
+            artSize={230}
+          />
+        ) : (
+          <DishArt recipeId={card.id} size={230} />
+        )}
         {card.match_percentage === null ? (
           <span className={styles.basics}>Pantry basics</span>
         ) : (

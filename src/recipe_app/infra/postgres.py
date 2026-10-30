@@ -36,7 +36,7 @@ from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
 from sqlalchemy.sql.elements import CollectionAggregate, Grouping
 
 from recipe_app.domain.catalog import Diet, IngredientCatalog
-from recipe_app.domain.content import Amount, Image, RecipeContent, RecipeWithContent
+from recipe_app.domain.content import Amount, RecipeContent, RecipeWithContent
 from recipe_app.domain.cursor import AllStaplesKey, Position, ScoredKey
 from recipe_app.domain.matching import (
     AllStaplesMatch,
@@ -45,7 +45,7 @@ from recipe_app.domain.matching import (
     match_recipe,
 )
 from recipe_app.domain.ranking import Ranking, SearchFilters
-from recipe_app.domain.recipe import PlanAhead, Recipe
+from recipe_app.domain.recipe import Image, PlanAhead, Recipe
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.units import Unit
 from recipe_app.infra.tables import recipe_ingredients, recipe_steps, recipes
@@ -72,6 +72,9 @@ _RECIPE = select(
     recipes.c.cook_minutes,
     recipes.c.wait_minutes,
     recipes.c.wait_note,
+    recipes.c.image_file,
+    recipes.c.image_sha256,
+    recipes.c.image_alt,
     _INGREDIENT_IDS,
 )
 
@@ -172,13 +175,7 @@ class PostgresRecipeRepository:
                 for amount, unit in amounts
             ),
             steps=tuple(steps),
-            image=None
-            if row["image_file"] is None
-            else Image(
-                file=row["image_file"],
-                sha256=row["image_sha256"],
-                alt=row["image_alt"],
-            ),
+            image=_image(row),
         )
 
     async def ranked(
@@ -309,6 +306,7 @@ class PostgresRecipeRepository:
                     else PlanAhead(
                         wait_minutes=row["wait_minutes"], note=row["wait_note"]
                     ),
+                    image=_image(row),
                 )
             )
         if skipped:
@@ -361,6 +359,14 @@ def scored_query(
             > tuple_(*_keyset("after_scored", after))
         )
     return query
+
+
+def _image(row: RowMapping) -> Image | None:
+    if row["image_file"] is None:
+        return None
+    return Image(
+        file=row["image_file"], sha256=row["image_sha256"], alt=row["image_alt"]
+    )
 
 
 def _weights(pantry: Pantry) -> Subquery:
