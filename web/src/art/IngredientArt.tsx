@@ -70,8 +70,8 @@ export function ArtSprite() {
 }
 
 /**
- * A drawn dish for a recipe: the data has no photos, so a bowl in the
- * recipe's own colour stands in for one.
+ * A drawn dish for a recipe: a bowl in the recipe's own colour stands in for
+ * its photo when it has none, or the file doesn't load.
  */
 export function DishArt({ recipeId, size = 200 }: { recipeId: string; size?: number }) {
   return (
