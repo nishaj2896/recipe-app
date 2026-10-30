@@ -24,13 +24,13 @@ ingredients = [
   { id = "water", amount = 1.5, unit = "cup" },
 ]
 steps = [
-  "Peel the potatoes and cut them into 2 cm cubes. Keep them in a bowl of the water so they don't brown.",
+  "Peel the potatoes and cut them into 2 cm cubes. Keep them in a bowl of cold water so they don't brown.",
   "Finely chop the onion and tomato, and slit the green chillies lengthways.",
   "Heat the ghee in a heavy pan over medium heat. Add the cumin seeds and wait until they sizzle and turn a shade darker, about 30 seconds.",
   "Add the onion and cook for 6 to 8 minutes, stirring now and then, until it turns golden.",
   "Add the green chillies, tomato, turmeric and salt. Cook for 5 minutes, pressing the tomato with the spoon, until it is soft and the ghee shines at the edges of the masala.",
-  "Drain the potatoes, reserving their water. Add the potatoes and peas and stir for 2 minutes so they are coated in the masala.",
-  "Pour in the reserved water and bring to a boil. Cover, lower the heat and simmer for 15 minutes, until a knife slides easily through a potato cube.",
+  "Drain the potatoes. Add the potatoes and peas and stir for 2 minutes so they are coated in the masala.",
+  "Pour in the water and bring to a boil. Cover, lower the heat and simmer for 15 minutes, until a knife slides easily through a potato cube.",
   "Mash a few potato cubes against the side of the pan to thicken the gravy. Taste and adjust the salt.",
   "Turn off the heat, scatter the coriander leaves over and serve hot with roti.",
 ]
@@ -115,8 +115,8 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Pick the spinach leaves off the thick stems and wash them well in several changes of the water to remove any grit.",
-  "Bring the rest of the water to a boil, add the spinach and blanch it for 2 minutes, until it wilts and turns bright green.",
+  "Pick the spinach leaves off the thick stems and wash them well in several changes of water to remove any grit.",
+  "Bring the water to a boil, add the spinach and blanch it for 2 minutes, until it wilts and turns bright green.",
   "Drain the spinach and plunge it straight into cold water to keep its colour. Squeeze lightly and blend it with the green chillies to a smooth purée.",
   "Cut the paneer into 2 cm cubes. Finely chop the onion, tomato and garlic, and grate the ginger.",
   "Heat the ghee in a pan over medium heat. Add the onion and cook for 5 minutes, until soft and light golden.",
@@ -210,8 +210,8 @@ ingredients = [
   { id = "water", amount = 750, unit = "ml" },
 ]
 steps = [
-  "Rinse the toor dal in several changes of the water until it runs clear. Chop the tomato.",
-  "Put the dal in a pressure cooker with the rest of the water, the turmeric and the tomato. Cook for 3 whistles, then let the pressure drop on its own.",
+  "Rinse the toor dal in several changes of water until it runs clear. Chop the tomato.",
+  "Put the dal in a pressure cooker with the water, the turmeric and the tomato. Cook for 3 whistles, then let the pressure drop on its own.",
   "Open the cooker and whisk the dal until smooth. Add salt and simmer for 5 minutes on low heat, stirring; add a splash of hot water if it is thicker than you like.",
   "Thinly slice the garlic and finely chop the onion.",
   "For the tadka, heat the ghee in a small pan over medium heat. Add the cumin seeds and dried red chillies and let them sizzle for 20 seconds.",
@@ -237,8 +237,8 @@ ingredients = [
   { id = "water", amount = 750, unit = "ml" },
 ]
 steps = [
-  "Rinse the moong dal in several changes of the water until it runs clear. Grate the ginger and chop the tomato.",
-  "Put the dal in a pan with the rest of the water, the turmeric and the ginger and bring it to a boil, skimming off any foam.",
+  "Rinse the moong dal in several changes of water until it runs clear. Grate the ginger and chop the tomato.",
+  "Put the dal in a pan with the water, the turmeric and the ginger and bring it to a boil, skimming off any foam.",
   "Lower the heat, partly cover and simmer for 20 minutes, stirring now and then, until the dal is soft and creamy.",
   "Add the tomato and salt and simmer for 5 minutes, whisking, until the tomato softens and the dal is smooth.",
   "Heat the ghee in a small pan over medium heat. Add the cumin seeds and let them crackle for 20 seconds, until they turn a shade darker.",
@@ -263,8 +263,8 @@ ingredients = [
   { id = "water", amount = 750, unit = "ml" },
 ]
 steps = [
-  "Rinse the masoor dal in several changes of the water until it runs clear.",
-  "Put the dal in a pan with the rest of the water and the turmeric and bring it to a boil, skimming off any foam.",
+  "Rinse the masoor dal in several changes of water until it runs clear.",
+  "Put the dal in a pan with the water and the turmeric and bring it to a boil, skimming off any foam.",
   "Lower the heat and simmer for 15 minutes, until the dal falls apart.",
   "Meanwhile, finely chop the onion, garlic and tomato.",
   "Heat the oil in another pan over medium heat. Add the cumin seeds and let them crackle for 20 seconds.",
@@ -293,7 +293,7 @@ ingredients = [
   { id = "water", amount = 1.5, unit = "l" },
 ]
 steps = [
-  "Rinse the chickpeas and soak them overnight in plenty of the water.",
+  "Rinse the chickpeas and soak them overnight in plenty of water.",
   "Drain, put them in a pressure cooker with fresh water to cover by 3 cm and cook for 5 to 6 whistles. Let the pressure drop on its own. A chickpea should mash easily between your fingers. Keep the cooking liquid.",
   "Finely chop the onions and tomatoes, and grate the ginger and garlic.",
   "Heat the oil in a pan over medium heat. Add the onions and cook for 8 minutes, stirring often, until deep golden.",
@@ -324,7 +324,7 @@ ingredients = [
   { id = "water", amount = 1.5, unit = "l" },
 ]
 steps = [
-  "Rinse the kidney beans and soak them overnight in plenty of the water.",
+  "Rinse the kidney beans and soak them overnight in plenty of water.",
   "Drain, put them in a pressure cooker with fresh water to cover by 3 cm and cook for 6 to 8 whistles. Let the pressure drop on its own. The beans must be completely soft and creamy inside. Keep the cooking liquid.",
   "Finely chop the onions and purée the tomatoes.",
   "Heat the oil in a pan over medium heat. Add the onions and cook for 10 minutes, stirring often, until browned.",
@@ -684,8 +684,8 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Pick the spinach and fenugreek leaves off their thick stems and wash them well in several changes of the water.",
-  "Bring the rest of the water to a boil, add the greens and blanch for 2 minutes, until wilted and bright green.",
+  "Pick the spinach and fenugreek leaves off their thick stems and wash them well in several changes of water.",
+  "Bring the water to a boil, add the greens and blanch for 2 minutes, until wilted and bright green.",
   "Drain and plunge them into cold water, then squeeze lightly and blend with the green chillies to a coarse purée.",
   "Finely chop the onions and tomatoes.",
   "Heat the oil in a heavy pan over medium heat. Add the cumin seeds and let them sizzle for 20 seconds.",
@@ -1438,8 +1438,8 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Pick the spinach off the thick stems and wash it well in several changes of the water.",
-  "Bring the rest of the water to a boil, blanch the spinach for 2 minutes, then plunge it into cold water. Squeeze lightly and blend to a coarse purée.",
+  "Pick the spinach off the thick stems and wash it well in several changes of water.",
+  "Bring the water to a boil, blanch the spinach for 2 minutes, then plunge it into cold water. Squeeze lightly and blend to a coarse purée.",
   "Peel the potatoes and cut them into 2 cm cubes. Finely chop the onion, tomato, garlic and green chillies, and grate the ginger.",
   "Heat the oil in a pan over medium heat. Add the cumin seeds and let them sizzle for 20 seconds.",
   "Add the onion and cook for 5 minutes, until light golden. Add the garlic, ginger and green chillies and stir for 1 minute.",
@@ -1905,9 +1905,9 @@ ingredients = [
   { id = "water", amount = 3, unit = "cup" },
 ]
 steps = [
-  "Rinse the chana dal and soak it in plenty of the water for 1 hour. Drain.",
+  "Rinse the chana dal and soak it in plenty of water for 1 hour. Drain.",
   "Peel the bottle gourd and cut it into 2 cm cubes. Chop the tomato, grate the ginger and slit the green chillies.",
-  "Pressure cook the chana dal with the turmeric, salt and the rest of the water for 2 whistles, until soft but still whole.",
+  "Pressure cook the chana dal with the turmeric, salt and the water for 2 whistles, until soft but still whole.",
   "Heat the ghee in a pan over medium heat. Add the cumin seeds and asafoetida and let them sizzle for 20 seconds.",
   "Add the ginger and green chillies and stir for 1 minute.",
   "Add the tomato and red chilli powder and cook for 3 minutes, until soft.",
@@ -2178,9 +2178,9 @@ ingredients = [
   { id = "water", amount = 4, unit = "cup" },
 ]
 steps = [
-  "Rinse the chickpeas and soak them overnight in plenty of the water. Drain.",
+  "Rinse the chickpeas and soak them overnight in plenty of water. Drain.",
   "Tie the black tea, black cardamom and bay leaves in a small muslin pouch.",
-  "Put the chickpeas in a pressure cooker with the pouch, baking soda, salt and the rest of the water. Cook for 5 whistles and let the pressure drop on its own. The chickpeas should be very soft and dark from the tea.",
+  "Put the chickpeas in a pressure cooker with the pouch, baking soda, salt and the water. Cook for 5 whistles and let the pressure drop on its own. The chickpeas should be very soft and dark from the tea.",
   "Discard the pouch and drain the chickpeas, keeping their liquid.",
   "Dry roast the dried pomegranate seeds over low heat for 2 minutes, until they darken slightly. Grind them with the chole masala and dry mango powder.",
   "Cut the ginger into thin strips, slit the green chillies and cut the onion into rings.",
@@ -2390,8 +2390,8 @@ ingredients = [
   { id = "water", amount = 4, unit = "cup" },
 ]
 steps = [
-  "Rinse the toor dal, chana dal, moong dal, masoor dal and urad dal together in several changes of the water. Soak them for 1 hour and drain.",
-  "Pressure cook the dals with the turmeric, salt and the rest of the water for 4 whistles. Whisk lightly; some grains should stay whole.",
+  "Rinse the toor dal, chana dal, moong dal, masoor dal and urad dal together in several changes of water. Soak them for 1 hour and drain.",
+  "Pressure cook the dals with the turmeric, salt and the water for 4 whistles. Whisk lightly; some grains should stay whole.",
   "Chop the tomatoes, grate the ginger and slit the green chillies.",
   "Heat the ghee in a pan over medium heat. Add the cumin seeds, cloves, cinnamon and asafoetida and stir for 20 seconds.",
   "Add the ginger and green chillies and stir for 30 seconds.",
