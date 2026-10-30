@@ -682,7 +682,6 @@ name = "Sangri"
 class = "A"
 diet = "vegan"
 category = "vegetables"
-search_terms = ["dried sangri beans"]
 
 [[ingredient]]
 id = "shallot"
@@ -991,6 +990,7 @@ name = "Bombay duck"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+search_terms = ["bummalo"]
 
 [[ingredient]]
 id = "canned-sardines"
@@ -3716,7 +3716,7 @@ class = "S"
 kind = "pantry"
 diet = "vegan"
 category = "spices-and-seasonings"
-search_terms = ["whole red chillies"]
+search_terms = ["whole red chillies", "dried red chilli"]
 
 [[ingredient]]
 id = "dried-rosemary"
