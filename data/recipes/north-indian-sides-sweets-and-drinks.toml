@@ -11,6 +11,7 @@ name = "Rice kheer"
 serves = 4
 prep_minutes = 5
 cook_minutes = 40
+image = { file = "01a15175-3c13-7e43-b346-d7c2279e5e6b.webp", sha256 = "80487b096cbcc278d9733734b2dcc305aa8947e699e2977f6396864a090a68c7", alt = "Rice kheer in a small bowl" }
 ingredients = [
   { id = "rice", amount = 50, unit = "g" },
   { id = "milk", amount = 1, unit = "l" },

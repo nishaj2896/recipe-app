@@ -11,6 +11,7 @@ name = "Chicken teriyaki"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18c12-057c-7595-8e84-0c214eda32e4.webp", sha256 = "41d9151e1234c30818ad86996e3f16f5fcc23816d38ee4637f4014ad7f488353", alt = "Sliced chicken teriyaki glazed, with sesame seeds and spring onion" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "soy-sauce", amount = 4, unit = "tbsp" },
@@ -193,6 +194,7 @@ name = "Miso soup"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18c12-058a-7d1f-979e-239d8d907c5e.webp", sha256 = "3153b99af62aaf49b3cb311a4a42da0549973ded260a50cc9a72c1364494f295", alt = "Miso soup with tofu, wakame and spring onion in a lidded bowl" }
 ingredients = [
   { id = "miso", amount = 3, unit = "tbsp" },
   { id = "tofu", amount = 200, unit = "g" },
@@ -250,6 +252,7 @@ name = "Shoyu ramen"
 serves = 2
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18c12-058f-7662-80eb-6650ca8f7264.webp", sha256 = "9a467a1f2e9eef323ec596c300b828203354cd104ddff23ea0efd09666ebfa44", alt = "Shoyu ramen with chicken, halved eggs, bamboo shoots, spring onions and nori" }
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
@@ -629,6 +632,7 @@ name = "Bulgogi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18c12-05ac-7ede-bdd7-28382fdd8332.webp", sha256 = "60ff17e297580dc818f88cb2bbf09100028a4e5ac33786969d60b44a31a66655", alt = "Bulgogi beef with sesame seeds and spring onion" }
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "pear", amount = 1, unit = "small" },

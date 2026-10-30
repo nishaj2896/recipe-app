@@ -12,6 +12,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18b5a-d309-7a45-94ad-a3bc8b578eae.webp", sha256 = "5c0e9878c7651ca45874a0789f494e8b30c3f4a7b63330fe8360c10411d0900d", alt = "Dhokla squares with mustard seeds, sesame seeds and coriander" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },

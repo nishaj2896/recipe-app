@@ -12,6 +12,7 @@ serves = 4
 prep_minutes = 45
 cook_minutes = 25
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18bb5-de60-7c32-a24f-28041b37426d.webp", sha256 = "2a268f29d86e01ef7663b630bac87f8b6b27219b2b0beacecc0fbfe8d8f84b48", alt = "Pani puri with potato and chickpea filling, beside a glass of spiced water" }
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "tbsp" },

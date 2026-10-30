@@ -91,6 +91,7 @@ name = "French toast"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18c20-05b9-7b7f-aa58-4cb357f2c54c.webp", sha256 = "4ed236111c85c844613de86ebb400ee7960649e1610f7025adacd18e9c0b7da4", alt = "Thick French toast with sliced strawberries and maple syrup" }
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "egg", amount = 3, unit = "large" },
@@ -118,6 +119,7 @@ name = "Waffles"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18c20-05bb-7848-841d-b203183823aa.webp", sha256 = "98f479da68d5f560ac25de52553ac9e92428ea059ecfcd10bded710be29e4f2d", alt = "Golden waffle with maple syrup" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 2, unit = "tbsp" },
@@ -550,6 +552,7 @@ serves = 12
 prep_minutes = 25
 cook_minutes = 60
 plan_ahead = { wait_minutes = 420, note = "chill for 6 hours" }
+image = { file = "01a18c20-05df-76aa-a0a5-be146776e75a.webp", sha256 = "1ef9517579ef449117a9d898d4725b59a56392052bb3e995fa3368ce43079467", alt = "Slice of baked cheesecake on a biscuit base" }
 ingredients = [
   { id = "digestive-biscuits", amount = 250, unit = "g" },
   { id = "butter", amount = 0.5, unit = "cup" },

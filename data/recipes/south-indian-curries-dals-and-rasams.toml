@@ -1049,6 +1049,7 @@ name = "Meen moilee"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a188ea-3cd8-7393-af5e-22e126fec6cf.webp", sha256 = "65e55e2a1575602e0efa0108b99a2f7cd37411feddd33c33ae32003563fc8e64", alt = "Meen moilee: fish steak in coconut gravy with tomato slices and green chilli" }
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },

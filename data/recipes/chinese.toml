@@ -11,6 +11,7 @@ name = "Kung pao chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18bba-785c-7cb8-834d-24e0197260c4.webp", sha256 = "39f3ec2b9fa611f7722f649534e71cef98a2863315cd991ececeb763de8707f9", alt = "Kung pao chicken with peanuts, dried chillies and spring onion" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.5, unit = "cup" },
@@ -327,6 +328,7 @@ name = "Steamed pork dumplings"
 serves = 4
 prep_minutes = 45
 cook_minutes = 15
+image = { file = "01a18c0c-0c89-764f-8418-92103561610f.webp", sha256 = "d5f6e43f23503835e237215a60aa8aed4ccc380b3e5792ab80551cdcb6082515", alt = "Steamed pork dumplings with a black vinegar and chilli oil dip" }
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 300, unit = "g" },

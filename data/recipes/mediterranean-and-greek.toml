@@ -39,6 +39,7 @@ name = "Moussaka"
 serves = 8
 prep_minutes = 45
 cook_minutes = 90
+image = { file = "01a18c1a-e223-7646-ba6f-355a95a97ae1.webp", sha256 = "a876ec45fd98109bf6b20ad311351c39bce21c4e40e34fac16ccc7f403a6afa6", alt = "Square of moussaka with a golden bechamel top" }
 ingredients = [
   { id = "brinjal", amount = 3, unit = "large" },
   { id = "lamb-mince", amount = 750, unit = "g" },
@@ -76,6 +77,7 @@ name = "Spanakopita"
 serves = 8
 prep_minutes = 30
 cook_minutes = 45
+image = { file = "01a18c1a-e225-7218-89eb-d75b3423a537.webp", sha256 = "36cee536574450bf57a30b0c4182fd4c3c9c1d270752476afcda5466224f0cae", alt = "Square of spanakopita with crisp filo and a spinach and feta filling" }
 ingredients = [
   { id = "spinach", amount = 750, unit = "g" },
   { id = "feta", amount = 300, unit = "g" },
@@ -325,6 +327,7 @@ name = "Paella"
 serves = 6
 prep_minutes = 20
 cook_minutes = 45
+image = { file = "01a18c1a-e23a-7163-812e-7d217736420a.webp", sha256 = "afbf239c4fe4c76a05199b001f87e08cf4e3ed358ab3641747ceb896447ec987", alt = "Paella with chicken, prawns, peas and parsley, with lemon wedges" }
 ingredients = [
   { id = "bomba-rice", amount = 2, unit = "cup" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -394,6 +397,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 0
 plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
+image = { file = "01a18c1a-e23e-7160-97b9-408aa2d7c024.webp", sha256 = "9443583379cd09574e864f241ad508b53376f28cbe9883b2c270f4b08b984b8b", alt = "Gazpacho topped with diced vegetables and olive oil" }
 ingredients = [
   { id = "tomato", amount = 1, unit = "kg" },
   { id = "cucumber", amount = 0.5, unit = "medium" },
@@ -474,6 +478,7 @@ name = "Ratatouille"
 serves = 6
 prep_minutes = 25
 cook_minutes = 60
+image = { file = "01a18c1a-e245-7f15-8b1f-0aedd856d372.webp", sha256 = "fd5bef3099a57f360a8dc1d8e36eff8d30daaa0728094bf4cc10b2d6d43b7208", alt = "Ratatouille with aubergine, courgette, peppers and basil" }
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "zucchini", amount = 2, unit = "medium" },

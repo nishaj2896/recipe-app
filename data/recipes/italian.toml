@@ -11,6 +11,7 @@ name = "Pasta aglio e olio"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a15175-3c20-7774-8764-e8cf6dcf654a.webp", sha256 = "57ed7b605b1ff13ea3b7efdd83829fabebfea34da342af165270412900e4ed7c", alt = "Spaghetti aglio e olio with sliced garlic, chilli flakes and parsley" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "garlic", amount = 6, unit = "clove" },
@@ -124,6 +125,7 @@ name = "Cacio e pepe"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18bbd-3cd5-761a-ac0f-c9043cb35d5d.webp", sha256 = "ca51a0e512f96358ae2a6cc7a24ecd1f49be8a3716145cafbea4ef8cb2a2f5e2", alt = "Spaghetti cacio e pepe twirled into a nest with black pepper" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "pecorino", amount = 120, unit = "g" },
@@ -576,6 +578,7 @@ name = "Caprese salad"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+image = { file = "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4.webp", sha256 = "e19629355864821ad67e4e3c3955c9f3a49f6a34be5f99adeed0a3bfafbd6a79", alt = "Caprese salad of tomato, mozzarella and basil with olive oil and black pepper" }
 ingredients = [
   { id = "tomato", amount = 4, unit = "large" },
   { id = "mozzarella", amount = 250, unit = "g" },

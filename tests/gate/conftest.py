@@ -1,5 +1,6 @@
 import asyncio
 from collections.abc import Iterator
+from dataclasses import replace
 
 import pytest
 from sqlalchemy import text
@@ -21,7 +22,8 @@ from tests.gate.searches import gate_recipes
 def gate_seed(
     real_catalog: IngredientCatalog, seed: tuple[Recipe, ...]
 ) -> tuple[Recipe, ...]:
-    return gate_recipes(real_catalog, seed)
+    # The gate syncs recipes without their content, so Postgres holds no photos.
+    return gate_recipes(real_catalog, [replace(recipe, image=None) for recipe in seed])
 
 
 @pytest.fixture(scope="session")

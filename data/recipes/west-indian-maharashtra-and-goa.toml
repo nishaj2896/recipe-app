@@ -11,6 +11,7 @@ name = "Kanda poha"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a15175-3c14-7cfa-a4d1-5f700c77cb53.webp", sha256 = "d2c6ba022fd34a2a2e120417fecd4cf67838813c2c4f48329d1e275cf71b5dc3", alt = "Kanda poha with peanuts, curry leaves and coriander" }
 ingredients = [
   { id = "flattened-rice", amount = 200, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -255,6 +256,7 @@ name = "Vada pav"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+image = { file = "01a18b58-52e6-74e8-8b1a-a939423e0b33.webp", sha256 = "49a5aa10ad6b00464973de6ed85d7c76957650d6d0d261c1047bb67a1892f45a", alt = "Vada pav with green chutney and a fried green chilli" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },

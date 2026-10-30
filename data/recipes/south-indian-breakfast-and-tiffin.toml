@@ -140,6 +140,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+image = { file = "01a188e6-a845-7924-9cb5-dc4f1fd58989.webp", sha256 = "2da6208c02ed92c3ca723bf665d55c060bc7986c49a636bd08a17318da4c301d", alt = "Crisp plain dosa folded in half on a grey plate" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -395,6 +396,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 600, note = "soak, then ferment for 6 hours" }
+image = { file = "01a188e6-a859-75ba-bfec-282fbe3f42b8.webp", sha256 = "7536862bf072a586f861784e5b2bd9a499f2507b5e7f8b465387dd443c868a55", alt = "Appam with a lacy crisp edge and a soft, spongy centre" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "coconut", amount = 0.5, unit = "cup" },

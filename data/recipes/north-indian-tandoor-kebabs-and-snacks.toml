@@ -12,6 +12,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 35
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
+image = { file = "01a188aa-f1bb-7de8-bf53-445fbba68aca.webp", sha256 = "1ce654a4d988e9cee96acb05473240c21072808953e0c19bf229436909d65443", alt = "Charred tandoori chicken with sliced onion rings" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -244,6 +245,7 @@ name = "Paneer tikka"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a188aa-f1cc-7900-a94f-6142775566e4.webp", sha256 = "929c00d18301119ac14ac0539800acadb50ed6ef74251cf6a8012fe8c7c39060", alt = "Charred paneer tikka with bell pepper and onion" }
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -859,6 +861,7 @@ name = "Paneer bhurji"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a188aa-f1f8-7392-b067-b7fa74c30949.webp", sha256 = "f5ece05776404d3c1fbfd0f5f905250a97079847ea4452eaff0ec6e072dfa81a", alt = "Paneer bhurji with crumbled paneer, bell pepper and coriander" }
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },

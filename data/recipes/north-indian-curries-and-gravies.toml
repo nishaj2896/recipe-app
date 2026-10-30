@@ -73,6 +73,7 @@ name = "Bhindi masala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a15175-3c03-7619-8dad-e95a1c70ce7c.webp", sha256 = "b90b0388c2e81c7b0833bfadce4b29f87cbe1397366f9189e5bfa870b88972ec", alt = "Bhindi masala with onion in a dark bowl" }
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -169,6 +170,7 @@ name = "Matar paneer"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a15175-3c06-7d2e-a006-d8be5bd6ccb6.webp", sha256 = "708ce5ae46a4d68e6e460bfa9e1cc94c5197f15ada0bccd94b37cee45861a412", alt = "Matar paneer with paneer cubes and peas in a tomato gravy" }
 ingredients = [
   { id = "paneer", amount = 200, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -284,6 +286,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a15175-3c0a-725c-9c90-73d0fa294994.webp", sha256 = "242cf89a0620fe4bab4b0fd1e96a9cc93bdc672059e9cd6287fa0a23b1417fca", alt = "Chana masala with coriander" }
 ingredients = [
   { id = "chickpeas", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -566,6 +569,7 @@ name = "Kadai chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18812-66e1-7e53-9639-1744613bb000.webp", sha256 = "f07dce28571fb14d1e0ccd7817ba338bb45d0b273cbb22cc380be577c33946ce", alt = "Kadai chicken with bell pepper in a black kadai" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coriander-seeds", amount = 1.5, unit = "tbsp" },
@@ -1262,6 +1266,7 @@ name = "Malai kofta"
 serves = 4
 prep_minutes = 30
 cook_minutes = 40
+image = { file = "01a18813-9168-7124-87f8-728a0e7c0890.webp", sha256 = "9b0861e34bc20561f1dab48de667f4a37404ba99bf84b24fe76ea34ed14a72f1", alt = "Malai kofta: three golden koftas in a creamy tomato gravy" }
 ingredients = [
   { id = "paneer", amount = 200, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -2139,6 +2144,7 @@ name = "Prawn malai curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18814-eeb9-75ab-a2c2-ce5bda60dd82.webp", sha256 = "361752108ef8090800118db6c631718b7576e0a6f51d38ebdfb3a79d1bd6434f", alt = "Prawn malai curry with a bay leaf and green chillies" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 400, unit = "ml" },
