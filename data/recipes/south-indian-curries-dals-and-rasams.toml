@@ -26,8 +26,8 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Rinse the toor dal in several changes of water. Cook it with half the water and the turmeric for 25 minutes, or 3 whistles in a pressure cooker, until very soft. Mash it smooth.",
-  "Soak the tamarind in a little of the rest of the water, warm, for 10 minutes. Squeeze it, then strain the pulp and discard the fibres.",
+  "Rinse the toor dal in several changes of water. Pressure cook it with half the water and the turmeric for 3 whistles, then let the pressure drop on its own. Mash it smooth.",
+  "Warm a little of the rest of the water and soak the tamarind in it for 10 minutes. Squeeze it, then strain the pulp and discard the fibres.",
   "Cut the drumsticks into finger-length pieces and the brinjal into cubes. Chop the onion and tomato.",
   "Put the vegetables in a pan with the tamarind pulp and salt. Simmer for 12 minutes, until the drumsticks are tender.",
   "Stir in the sambar powder and the dal and add the rest of the water to make a pourable sambar. Simmer for 8 minutes.",
