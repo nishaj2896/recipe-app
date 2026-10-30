@@ -525,11 +525,11 @@ ingredients = [
   { id = "curry-leaves", amount = 1, unit = "sprig" },
   { id = "coconut-oil", amount = 3, unit = "tbsp" },
   { id = "salt", to_taste = true },
-  { id = "water", amount = 3, unit = "cup" },
+  { id = "water", amount = 1.5, unit = "cup" },
 ]
 steps = [
-  "Rinse the rice and soak it in half the water for 3 hours. Drain.",
-  "Grind the rice with the coconut, dried red chillies, coriander seeds, cumin seeds, tamarind, jaggery, turmeric, salt and a little of the rest of the water to a thick, smooth paste.",
+  "Rinse the rice and soak it for 3 hours. Drain.",
+  "Grind the rice with the coconut, dried red chillies, coriander seeds, cumin seeds, tamarind, jaggery, turmeric, salt and a little of the water to a thick, smooth paste.",
   "Wash the colocasia leaves and pat them dry. Shave off the thick veins on the back with a knife so the leaves lie flat.",
   "Lay a large leaf shiny side down and spread a thin layer of paste over it. Lay a smaller leaf on top and spread again. Repeat with a few leaves.",
   "Fold in the sides and roll up tightly from the stem end into a log. Repeat with the rest of the leaves and paste.",

@@ -29,7 +29,7 @@ ingredients = [
   { id = "water", amount = 4, unit = "cup" },
 ]
 steps = [
-  "Grind the fennel seeds to a fine powder. Lightly crush the green and black cardamom.",
+  "Grind the fennel seeds to a fine powder. Lightly crush the green cardamom and black cardamom.",
   "Put the mutton in a heavy pan with the water, the black cardamom, cloves, cinnamon, bay leaves and salt. Bring to a boil over medium heat, skim off the foam, then simmer covered on low heat for 55 to 60 minutes, until the mutton is tender.",
   "Whisk the curd in a separate heavy pan until completely smooth, then stir in a ladle of the mutton stock.",
   "Set the curd pan over low heat and bring it slowly to a simmer, stirring constantly in one direction for 8 to 10 minutes, so that it doesn't split, until it thickens slightly and turns glossy.",
@@ -323,7 +323,7 @@ ingredients = [
 ]
 steps = [
   "Cut the chicken into pieces. Grind the fennel seeds to a fine powder. Thinly slice the onions, crush the garlic and whisk the curd smooth.",
-  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the green and black cardamom, cloves, cinnamon and bay leaves for 30 seconds.",
+  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the green cardamom, black cardamom, cloves, cinnamon and bay leaves for 30 seconds.",
   "Add the onions and fry for 10 minutes, until deep golden. Add the garlic and fry for 1 minute.",
   "Add the chicken and fry for 5 minutes, until it is no longer pink outside.",
   "Take the pan off the heat, stir in the Kashmiri chilli powder with a splash of the water, then return to the heat and stir in the curd, a little at a time, for 3 minutes.",
@@ -420,7 +420,7 @@ ingredients = [
 ]
 steps = [
   "Thinly slice the onions. Whisk the buttermilk with the gram flour until no lumps remain.",
-  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the cumin seeds, bay leaves, green and black cardamom and cloves for 30 seconds.",
+  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the cumin seeds, bay leaves, green cardamom, black cardamom and cloves for 30 seconds.",
   "Add the onions and fry for 10 minutes, until golden brown. Add the ginger garlic paste and fry for 1 minute.",
   "Add the mutton, turmeric, red chilli powder, coriander powder and salt and sear for 8 minutes, stirring, until browned.",
   "Add the water, cover and simmer on low heat for 45 to 50 minutes, until the mutton is nearly tender.",

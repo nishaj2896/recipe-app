@@ -398,10 +398,9 @@ ingredients = [
   { id = "coriander-seeds", amount = 1, unit = "tsp" },
   { id = "oil", amount = 2, unit = "cup" },
   { id = "salt", to_taste = true },
-  { id = "water", amount = 3, unit = "cup" },
 ]
 steps = [
-  "Rinse the moong dal and soak it in the water for 3 hours. Drain well.",
+  "Rinse the moong dal and soak it for 3 hours. Drain well.",
   "Grind the dal with the ginger and green chillies to a coarse, thick paste, without adding any liquid.",
   "Beat in the cumin seeds, crushed coriander seeds, asafoetida, chopped coriander leaves and salt for 2 minutes, until the batter is light.",
   "Heat the oil for deep frying over medium heat. Drop small spoonfuls of batter into the oil.",
