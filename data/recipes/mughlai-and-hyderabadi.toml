@@ -11,6 +11,7 @@ name = "Haleem"
 serves = 6
 prep_minutes = 30
 cook_minutes = 150
+plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "broken-wheat", amount = 0.75, unit = "cup" },
@@ -51,6 +52,7 @@ name = "Pathar ka gosht"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 ingredients = [
   { id = "mutton", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -81,6 +83,7 @@ name = "Dum ka chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -281,6 +284,7 @@ name = "Chicken reshmi kebab"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "cream", amount = 0.25, unit = "cup" },
@@ -310,6 +314,7 @@ name = "Mutton raan"
 serves = 6
 prep_minutes = 20
 cook_minutes = 210
+plan_ahead = { wait_minutes = 480, note = "marinate for 8 hours" }
 ingredients = [
   { id = "mutton", amount = 1.5, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -341,6 +346,7 @@ name = "Kacche gosht ki biryani"
 serves = 6
 prep_minutes = 30
 cook_minutes = 90
+plan_ahead = { wait_minutes = 360, note = "marinate for 6 hours" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 2.5, unit = "cup" },

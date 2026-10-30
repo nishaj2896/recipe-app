@@ -77,6 +77,7 @@ name = "Sabudana khichdi"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+plan_ahead = { wait_minutes = 360, note = "soak for 6 hours" }
 ingredients = [
   { id = "sago", amount = 1, unit = "cup" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -108,6 +109,7 @@ name = "Sabudana vada"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 360, note = "soak for 6 hours" }
 ingredients = [
   { id = "sago", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -173,6 +175,7 @@ name = "Misal pav"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 1920, note = "soak overnight, sprout a day" }
 ingredients = [
   { id = "moth-beans", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -456,6 +459,7 @@ name = "Matki usal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 1920, note = "soak overnight, sprout a day" }
 ingredients = [
   { id = "moth-beans", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -905,6 +909,7 @@ name = "Shrikhand"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "icing-sugar", amount = 0.5, unit = "cup" },
@@ -1068,6 +1073,7 @@ name = "Chicken cafreal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coriander-leaves", amount = 1, unit = "bunch" },
@@ -1104,6 +1110,7 @@ name = "Pork vindaloo"
 serves = 6
 prep_minutes = 20
 cook_minutes = 90
+plan_ahead = { wait_minutes = 480, note = "marinate overnight" }
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "dried-red-chillies", amount = 12, unit = "piece" },
@@ -1138,6 +1145,7 @@ name = "Sorpotel"
 serves = 6
 prep_minutes = 30
 cook_minutes = 90
+plan_ahead = { wait_minutes = 1440, note = "rest for 1 day" }
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "pork-belly", amount = 250, unit = "g" },
@@ -1167,7 +1175,7 @@ steps = [
   "Add the onions and green chillies and cook for 8 minutes, until golden.",
   "Add the paste and fry for 5 minutes, until the oil separates.",
   "Add the rest of the meat and enough of the broth to make a thick gravy. Simmer on low heat for 30 to 40 minutes, stirring often, until it is thick and dark.",
-  "Stir in the sugar, taste and balance the salt and sourness. Rest it for a day for the best flavour, and serve with sannas or chapati.",
+  "Stir in the sugar, taste and balance the salt and sourness. Cool, cover and refrigerate for a day so the flavours develop, then reheat gently and serve with sannas or chapati.",
 ]
 
 [[recipe]]

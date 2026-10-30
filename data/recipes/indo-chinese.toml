@@ -42,6 +42,7 @@ name = "Egg fried rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 10
+plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
 ingredients = [
   { id = "egg", amount = 3, unit = "piece" },
   { id = "rice", amount = 250, unit = "g" },
@@ -355,6 +356,7 @@ name = "Chicken 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 3, unit = "tbsp" },

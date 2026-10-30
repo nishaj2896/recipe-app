@@ -340,6 +340,7 @@ name = "Thai basil fried rice"
 serves = 2
 prep_minutes = 10
 cook_minutes = 25
+plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
 ingredients = [
   { id = "jasmine-rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -517,6 +518,7 @@ name = "Mango sticky rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "glutinous-rice", amount = 1, unit = "cup" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },

@@ -199,6 +199,7 @@ name = "Fried chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "buttermilk", amount = 2, unit = "cup" },
@@ -761,6 +762,7 @@ name = "Chicken and waffles"
 serves = 4
 prep_minutes = 25
 cook_minutes = 40
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "buttermilk", amount = 1, unit = "cup" },
@@ -848,6 +850,7 @@ name = "Apple pie"
 serves = 8
 prep_minutes = 30
 cook_minutes = 60
+plan_ahead = { wait_minutes = 120, note = "cool for 2 hours" }
 ingredients = [
   { id = "shortcrust-pastry", amount = 640, unit = "g" },
   { id = "apple", amount = 6, unit = "medium" },

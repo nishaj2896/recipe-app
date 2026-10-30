@@ -641,6 +641,7 @@ name = "Iced lemon tea"
 serves = 4
 prep_minutes = 5
 cook_minutes = 5
+plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
 ingredients = [
   { id = "black-tea", amount = 2, unit = "tbsp" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -663,6 +664,7 @@ name = "Lemonade"
 serves = 6
 prep_minutes = 10
 cook_minutes = 3
+plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
 ingredients = [
   { id = "lemon", amount = 6, unit = "medium" },
   { id = "sugar", amount = 0.75, unit = "cup" },

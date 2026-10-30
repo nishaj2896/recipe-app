@@ -44,6 +44,7 @@ name = "Kashmiri rajma"
 serves = 4
 prep_minutes = 10
 cook_minutes = 70
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "cup" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -337,6 +338,7 @@ name = "Siddu"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -366,6 +368,7 @@ name = "Madra"
 serves = 4
 prep_minutes = 10
 cook_minutes = 60
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "curd", amount = 1.5, unit = "cup" },
@@ -434,6 +437,7 @@ name = "Babru"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+plan_ahead = { wait_minutes = 540, note = "soak overnight" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "whole-urad", amount = 0.5, unit = "cup" },

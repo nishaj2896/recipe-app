@@ -128,6 +128,7 @@ name = "Chicken souvlaki"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -156,6 +157,7 @@ name = "Gyros"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -390,6 +392,7 @@ name = "Gazpacho"
 serves = 4
 prep_minutes = 20
 cook_minutes = 0
+plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
 ingredients = [
   { id = "tomato", amount = 1, unit = "kg" },
   { id = "cucumber", amount = 0.5, unit = "medium" },
@@ -497,6 +500,7 @@ name = "Pan bagnat"
 serves = 4
 prep_minutes = 25
 cook_minutes = 10
+plan_ahead = { wait_minutes = 60, note = "press for 1 hour" }
 ingredients = [
   { id = "baguette", amount = 1, unit = "large" },
   { id = "canned-tuna", amount = 2, unit = "can" },

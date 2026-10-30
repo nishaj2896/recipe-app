@@ -210,6 +210,7 @@ name = "Kosha mangsho"
 serves = 4
 prep_minutes = 20
 cook_minutes = 100
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -248,6 +249,7 @@ name = "Chicken rezala"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -285,6 +287,7 @@ name = "Kolkata chicken biryani"
 serves = 6
 prep_minutes = 40
 cook_minutes = 80
+plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -413,6 +416,7 @@ name = "Cholar dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 45
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -476,6 +480,7 @@ name = "Dhokar dalna"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -549,6 +554,7 @@ name = "Ghugni"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -700,6 +706,7 @@ name = "Kathi roll (chicken)"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -733,6 +740,7 @@ name = "Mishti doi"
 serves = 6
 prep_minutes = 10
 cook_minutes = 30
+plan_ahead = { wait_minutes = 600, note = "set the curd for 8 hours" }
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -859,6 +867,7 @@ name = "Pakhala bhata"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+plan_ahead = { wait_minutes = 480, note = "ferment the rice overnight" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -1059,6 +1068,7 @@ name = "Champaran mutton"
 serves = 4
 prep_minutes = 20
 cook_minutes = 90
+plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1466,6 +1476,7 @@ name = "Chak hao kheer"
 serves = 4
 prep_minutes = 5
 cook_minutes = 60
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "black-rice", amount = 0.33, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -1488,6 +1499,7 @@ name = "Bamboo shoot pickle"
 serves = 8
 prep_minutes = 20
 cook_minutes = 15
+plan_ahead = { wait_minutes = 4500, note = "pickle for 3 days" }
 ingredients = [
   { id = "bamboo-shoots", amount = 2, unit = "cup" },
   { id = "mustard-oil", amount = 0.5, unit = "cup" },
@@ -1500,7 +1512,7 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Rinse the bamboo shoots, slice them thinly and spread them on a cloth to dry completely for a few hours.",
+  "Rinse the bamboo shoots, slice them thinly and spread them on a cloth to dry completely for about 3 hours.",
   "Dry roast the mustard seeds and dried red chillies for 1 minute and grind them coarsely.",
   "Heat the mustard oil in a pan until it just smokes, then turn off the heat and let it cool for 2 minutes.",
   "Add the crushed garlic, turmeric and red chilli powder and stir.",

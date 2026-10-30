@@ -145,6 +145,7 @@ name = "Arancini"
 serves = 6
 prep_minutes = 40
 cook_minutes = 45
+plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
@@ -313,6 +314,7 @@ name = "Bacalhau a bras"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 1440, note = "soak for 1 day" }
 ingredients = [
   { id = "salt-cod", amount = 400, unit = "g" },
   { id = "potato", amount = 500, unit = "g" },

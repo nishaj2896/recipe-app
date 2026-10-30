@@ -11,6 +11,7 @@ name = "Dhokla"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },
@@ -113,6 +114,7 @@ name = "Handvo"
 serves = 6
 prep_minutes = 20
 cook_minutes = 50
+plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -620,6 +622,7 @@ name = "Sev khamani"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "sev", amount = 0.5, unit = "cup" },
@@ -678,6 +681,7 @@ name = "Mohanthal"
 serves = 12
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 120, note = "let it set for 2 hours" }
 ingredients = [
   { id = "gram-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 1, unit = "cup" },
@@ -806,6 +810,7 @@ name = "Ker sangri"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "ker", amount = 0.25, unit = "cup" },
   { id = "sangri", amount = 1, unit = "cup" },
@@ -990,6 +995,7 @@ name = "Panchkuta"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 ingredients = [
   { id = "ker", amount = 2, unit = "tbsp" },
   { id = "sangri", amount = 0.5, unit = "cup" },
@@ -1023,6 +1029,7 @@ name = "Bajra khichdi"
 serves = 4
 prep_minutes = 10
 cook_minutes = 45
+plan_ahead = { wait_minutes = 480, note = "soak for 8 hours" }
 ingredients = [
   { id = "pearl-millet", amount = 0.75, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },

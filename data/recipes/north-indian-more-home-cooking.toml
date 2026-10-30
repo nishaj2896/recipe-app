@@ -279,6 +279,7 @@ name = "Lauki dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 ingredients = [
   { id = "chana-dal", amount = 0.5, unit = "cup" },
   { id = "bottle-gourd", amount = 300, unit = "g" },
@@ -654,6 +655,7 @@ name = "Mutton yakhni pulao"
 serves = 4
 prep_minutes = 15
 cook_minutes = 110
+plan_ahead = { wait_minutes = 75, note = "marinate for 75 minutes" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },

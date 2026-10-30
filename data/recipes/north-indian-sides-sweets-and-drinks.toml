@@ -290,6 +290,7 @@ name = "Moong dal halwa"
 serves = 6
 prep_minutes = 10
 cook_minutes = 50
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ghee", amount = 0.75, unit = "cup" },
@@ -343,6 +344,7 @@ name = "Phirni"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
 ingredients = [
   { id = "basmati-rice", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -368,6 +370,7 @@ name = "Gulab jamun"
 serves = 6
 prep_minutes = 20
 cook_minutes = 30
+plan_ahead = { wait_minutes = 60, note = "soak in syrup for 1 hour" }
 ingredients = [
   { id = "khoa", amount = 200, unit = "g" },
   { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
@@ -395,6 +398,7 @@ name = "Rasmalai"
 serves = 6
 prep_minutes = 30
 cook_minutes = 60
+plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 ingredients = [
   { id = "milk", amount = 2, unit = "l" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -472,6 +476,7 @@ name = "Kulfi"
 serves = 6
 prep_minutes = 15
 cook_minutes = 45
+plan_ahead = { wait_minutes = 360, note = "freeze for 6 hours" }
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "condensed-milk", amount = 0.5, unit = "cup" },
@@ -560,6 +565,7 @@ name = "Thandai"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "almonds", amount = 30, unit = "g" },
