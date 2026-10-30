@@ -37,6 +37,7 @@ name = "Hummus"
 serves = 6
 prep_minutes = 10
 cook_minutes = 0
+image = { file = "01a18c16-b1f7-7efc-a15b-2215d35ab4bd.webp", sha256 = "3e87723a29b79e0b8e1b084802fad96803ed3addb699ca4c4ddd966bdd746a9b", alt = "Hummus with a swirl of olive oil and paprika" }
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "tahini", amount = 0.33, unit = "cup" },
@@ -89,6 +90,7 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 15
 plan_ahead = { wait_minutes = 720, note = "soak for 12 hours" }
+image = { file = "01a18c16-b1fb-7119-aad6-b093cf759ea7.webp", sha256 = "4d4c93f81c71d7012886501bc7f490b4707d49dbe163ec3553c48b4d08f2354f", alt = "Falafel, one broken open to show the green inside, with tahini sauce" }
 ingredients = [
   { id = "chickpeas", amount = 1.5, unit = "cup" },
   { id = "parsley", amount = 1, unit = "cup" },

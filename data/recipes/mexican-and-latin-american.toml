@@ -11,6 +11,7 @@ name = "Guacamole"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+image = { file = "01a15175-3c25-7f40-bf4a-9042230e50c8.webp", sha256 = "b057d29311b8e6c1e6e440c69d9c8869f1e630efcf66e8d2329255654d5af709", alt = "Guacamole with tomato, onion and coriander in a stone bowl" }
 ingredients = [
   { id = "avocado", amount = 2, unit = "large" },
   { id = "lime", amount = 1, unit = "piece" },
@@ -57,6 +58,7 @@ name = "Chicken tacos"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18c16-b1bc-7bbc-91a7-36928f0fe539.webp", sha256 = "d0d597274e0efbd1ca5f66c9460e5f7c9eab8734979375629f7f5ba6ccafd9e1", alt = "Chicken tacos with avocado, sour cream and coriander, with a lime wedge" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "corn-tortillas", amount = 12, unit = "piece" },
@@ -181,6 +183,7 @@ name = "Chicken quesadilla"
 serves = 2
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c16-b1c5-7f4d-8ead-a6d31cb5c333.webp", sha256 = "996a2aebf7874b6818936e7771163b2289745869d8ab0285efd9511e18e0a40e", alt = "Chicken quesadilla cut into wedges, showing cheese, chicken and peppers" }
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "chicken", amount = 250, unit = "g" },

@@ -34,6 +34,7 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 480, note = "ferment the batter overnight" }
+image = { file = "01a18bb7-ff00-77fb-9d41-8f9f889044fe.webp", sha256 = "356bb435eecd1e95a10597b35cbdd0f53860e9f95110700c4b252118b0aa686a", alt = "Stack of golden jalebi" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "cornflour", amount = 1, unit = "tbsp" },

@@ -69,6 +69,7 @@ name = "Chicken hakka noodles"
 serves = 3
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c.webp", sha256 = "bb1cfab9c534e7f39aa6e022a63895b46b1f4a5e943860588215d9e8c2164a08", alt = "Chicken hakka noodles with carrot, bell pepper and spring onion" }
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -222,6 +223,7 @@ name = "Gobi manchurian"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18ba9-fda5-7a51-ae40-a5af6d7795ce.webp", sha256 = "a2a0c779c4362a4fdbb051c2fec253f631c5c0411f5397af1e09b332d4acc98e", alt = "Gobi manchurian glazed in sauce and scattered with spring onions" }
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "cornflour", amount = 0.33, unit = "cup" },
@@ -357,6 +359,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18ba9-fdad-7151-92ab-02f89a09a8f9.webp", sha256 = "0647763de2e4167081f5c45caf8d31901458133321ae6f0776ee3b76743a5dd7", alt = "Chicken 65 with curry leaves and green chillies" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 3, unit = "tbsp" },
@@ -600,6 +603,7 @@ name = "Hot and sour soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18ba9-fdbf-7184-9155-c47cc6706208.webp", sha256 = "206df66ee0aace4b097888da9d17036179f687fc451c9067881e1f554cdc83ae", alt = "Hot and sour soup topped with spring onions" }
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },

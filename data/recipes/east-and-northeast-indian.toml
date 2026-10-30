@@ -11,6 +11,7 @@ name = "Machher jhol"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b6c-22fb-7037-a86e-1fd6c219f189.webp", sha256 = "ac9a6f898abfb1a02707e9eae18c4b05ae833117ca2f92c38c1ec6eb6f6fbdbe", alt = "Machher jhol: rohu steaks and potato in a light turmeric broth with coriander" }
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },

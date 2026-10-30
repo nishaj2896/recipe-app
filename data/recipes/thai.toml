@@ -46,6 +46,7 @@ name = "Green curry with chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18c0c-0cad-740d-8f61-ea9172a571f5.webp", sha256 = "824c986edaa82ebbd71e166a6fff4133f3f6f0f314c71a5f206ccde5db956c2f", alt = "Thai green curry with chicken, aubergine, bamboo shoots and Thai basil" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
@@ -108,6 +109,7 @@ name = "Massaman curry"
 serves = 4
 prep_minutes = 20
 cook_minutes = 120
+image = { file = "01a18c0c-0cb2-7c90-af98-3af5b60de70e.webp", sha256 = "d00c9914b401acb68d69e0d260eabce265664514cefec381fe5996f05c8c16db", alt = "Massaman beef curry with potato, onion and peanuts" }
 ingredients = [
   { id = "beef", amount = 750, unit = "g" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -403,6 +405,7 @@ name = "Som tam"
 serves = 4
 prep_minutes = 20
 cook_minutes = 0
+image = { file = "01a18c0c-0cc9-72e1-a05c-a224cdf481aa.webp", sha256 = "bd4159600460ee2f9e44bfacbb9814fbf4a290fa2a69eda784b6cd2ab91cbf04", alt = "Som tam with green papaya, tomatoes, green beans, peanuts and dried shrimp" }
 ingredients = [
   { id = "raw-papaya", amount = 1, unit = "small" },
   { id = "cherry-tomatoes", amount = 8, unit = "piece" },

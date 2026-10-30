@@ -33,6 +33,7 @@ name = "Croque monsieur"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18c1a-e250-74b1-966c-5ae1ee0ad31c.webp", sha256 = "8b7de92c3bed4a35e526e06d34bade43cbe5b988914236afb23ed83f321a0ccb", alt = "Croque monsieur with ham and a browned cheese sauce top" }
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "ham", amount = 4, unit = "slice" },
@@ -115,6 +116,7 @@ name = "French onion soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 80
+image = { file = "01a18c1a-e257-7ace-9f3e-2795b3093cb1.webp", sha256 = "0c36a4b768f5aee27cdfd8ff9704fff2a63ffda3cd1ca3e5b7352dbc96b86f7e", alt = "French onion soup with a gruyere crouton, in a white pot" }
 ingredients = [
   { id = "onion", amount = 1, unit = "kg" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -145,6 +147,7 @@ name = "Coq au vin"
 serves = 6
 prep_minutes = 30
 cook_minutes = 105
+image = { file = "01a18c1a-e259-7a4a-8d66-0e670d7dceaf.webp", sha256 = "b53280aed2d7846bbce972ad0e668155260e4fcecd557641ac330c4386d11ee7", alt = "Coq au vin with bacon, mushrooms, shallots, carrots and parsley" }
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "red-wine", amount = 3, unit = "cup" },
@@ -455,6 +458,7 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
+image = { file = "01a18c1a-e272-73e1-a7c9-d766e23e8c6c.webp", sha256 = "4671f503081f0be2e05df61c6bef258f3fd4dd67024953a2e3da11916ec53fca", alt = "Crème brûlée in a white ramekin with a caramelised sugar top" }
 ingredients = [
   { id = "whipping-cream", amount = 2, unit = "cup" },
   { id = "egg", amount = 6, unit = "large" },

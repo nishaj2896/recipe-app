@@ -109,6 +109,7 @@ name = "Beef rendang"
 serves = 6
 prep_minutes = 30
 cook_minutes = 180
+image = { file = "01a18c12-05c3-70ea-8643-588ed0682229.webp", sha256 = "853ef77ed7c1ce8386300ded052a28b9d7a9ae19f39833e5d5127d4f3aa4dbb4", alt = "Dark, dry beef rendang" }
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -146,6 +147,7 @@ name = "Laksa"
 serves = 4
 prep_minutes = 25
 cook_minutes = 30
+image = { file = "01a18c12-05c5-7502-b0ef-66f86d8c763d.webp", sha256 = "8a125af872601a8b5d7094af4347607309e69095b9830db52e84cb9df9d9262b", alt = "Laksa with chicken, prawns, tofu, a halved egg, mint and lime" }
 ingredients = [
   { id = "rice-vermicelli", amount = 200, unit = "g" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -289,6 +291,7 @@ name = "Pho bo"
 serves = 4
 prep_minutes = 25
 cook_minutes = 180
+image = { file = "01a18c12-05ce-7e43-9ce5-fdc95ffd4fe0.webp", sha256 = "36dbb13e2f05037168784c30c2e47551b79afb85ba6ccfcac77015a6518a490f", alt = "Pho bo with beef, with bean sprouts, Thai basil, lime and chillies on the side" }
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -399,6 +402,7 @@ name = "Banh mi"
 serves = 4
 prep_minutes = 25
 cook_minutes = 15
+image = { file = "01a18c12-05d5-7522-b0bf-1c1591a91e41.webp", sha256 = "e63396df2b49b7fc8eced91d53aa70449c75bf1f40d8467290dc1bb3d406c84e", alt = "Banh mi with grilled pork, pickled carrot, cucumber, jalapeno and coriander" }
 ingredients = [
   { id = "baguette", amount = 2, unit = "piece" },
   { id = "pork", amount = 400, unit = "g" },
@@ -434,6 +438,7 @@ name = "Vietnamese spring rolls"
 serves = 4
 prep_minutes = 30
 cook_minutes = 10
+image = { file = "01a18c12-05d7-74e6-b16d-95b0ded08ba3.webp", sha256 = "5562a032712fe63c80b55f1f9566850e87b518f8fa183c43722e07d338ed74da", alt = "Vietnamese spring rolls with prawns and herbs, with a peanut dipping sauce" }
 ingredients = [
   { id = "rice-paper", amount = 12, unit = "piece" },
   { id = "rice-vermicelli", amount = 100, unit = "g" },

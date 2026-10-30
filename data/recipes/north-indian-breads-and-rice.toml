@@ -44,6 +44,7 @@ name = "Jeera rice"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+image = { file = "01a15175-3c10-76ca-bf43-23fffb096acd.webp", sha256 = "c517c957ca5101c061eab4768c42e5ec73ca136346f1e8f138e85749ecf3a704", alt = "Jeera rice with cumin seeds" }
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "cumin-seeds", amount = 2, unit = "tsp" },
@@ -67,6 +68,7 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a15175-3c1c-71e8-a493-8702aa35c9e3.webp", sha256 = "2efad93421198c010e4ad682c976f19a05cd5c5b383f0fa13f02b7b44955470b", alt = "Chicken biryani topped with fried onions and mint, with a bowl of raita" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
@@ -369,6 +371,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
+image = { file = "01a188ac-05ad-7540-a452-90d483cf792b.webp", sha256 = "35042958be48dbadd43d5528b4c128a93cb252ebcd3e05141ef009957760d643", alt = "Blistered butter naan" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -574,6 +577,7 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 120
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a188e4-2cc1-7d6c-91e0-de20898e32ce.webp", sha256 = "f97670efde2c03fae3e950dab0477bbf54dfd05a991b3387d1f6977c6c28aacf", alt = "Mutton biryani topped with fried onions, with a piece of mutton" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },

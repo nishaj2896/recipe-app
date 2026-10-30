@@ -219,6 +219,7 @@ serves = 12
 prep_minutes = 40
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "soak in syrup for 4 hours" }
+image = { file = "01a18c4f-8e61-7023-ac97-767e5615f7dc.webp", sha256 = "711575d75fb6bb2969b5c4807e5d8aa4a808293c56257b695af4307acefa7eec", alt = "Three pieces of baklava with a walnut and pistachio filling" }
 ingredients = [
   { id = "filo-pastry", amount = 450, unit = "g" },
   { id = "walnuts", amount = 300, unit = "g" },

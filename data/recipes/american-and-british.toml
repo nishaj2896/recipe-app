@@ -200,6 +200,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
+image = { file = "01a18c1e-2c26-7602-b476-32b344331bf7.webp", sha256 = "c443f86a106bc8ecbd1941d0b154af25147aefa7d34e6567e8f2d67d816cb712", alt = "Two pieces of crisp fried chicken" }
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "buttermilk", amount = 2, unit = "cup" },
@@ -321,6 +322,7 @@ name = "Shepherd's pie"
 serves = 6
 prep_minutes = 25
 cook_minutes = 75
+image = { file = "01a18c1e-2c2e-7fff-847b-aa6cc5b2c8a5.webp", sha256 = "92d3ea696010a5c58334b8c0055aa21db5eeb027a3e3de1bce3e7955710ba2a4", alt = "Shepherd's pie with browned mash over a lamb, carrot and pea filling" }
 ingredients = [
   { id = "lamb-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -853,6 +855,7 @@ serves = 8
 prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 120, note = "cool for 2 hours" }
+image = { file = "01a18c1e-2c57-7240-8e29-fc1b83b88212.webp", sha256 = "326ad003c0237903f2a31b348c621ba6d0c56fc739ef1f0472f3a1f98475387d", alt = "Slice of apple pie with a golden lattice-slit crust" }
 ingredients = [
   { id = "shortcrust-pastry", amount = 640, unit = "g" },
   { id = "apple", amount = 6, unit = "medium" },

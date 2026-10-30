@@ -11,6 +11,7 @@ name = "Lemon rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a15175-3c11-7d06-89b9-1b9f415eeffd.webp", sha256 = "ffb8d3ae116ce92f7ebed08e01c7b19b9114c2e4c692393d1b8880241b07ee53", alt = "Lemon rice with peanuts, curry leaves and green chillies" }
 ingredients = [
   { id = "rice", amount = 250, unit = "g" },
   { id = "peanuts", amount = 30, unit = "g" },
@@ -39,6 +40,7 @@ name = "Curd rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a15175-3c12-7238-998a-d2b358a0c24e.webp", sha256 = "16fdc13dfe7fc3b711e012a6bae3f6e1eb4a90ea0fcaa53c25e5beaed9cc32d9", alt = "Curd rice with a mustard seed and curry leaf tempering" }
 ingredients = [
   { id = "rice", amount = 200, unit = "g" },
   { id = "curd", amount = 1.5, unit = "cup" },
