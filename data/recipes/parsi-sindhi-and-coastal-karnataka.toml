@@ -1,0 +1,538 @@
+# Parsi, Sindhi and coastal Karnataka (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bba-7837-7a19-8c57-dc1766a2eb87"
+name = "Dhansak"
+serves = 6
+prep_minutes = 20
+cook_minutes = 100
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "toor-dal", amount = 0.5, unit = "cup" },
+  { id = "masoor-dal", amount = 0.25, unit = "cup" },
+  { id = "moong-dal", amount = 0.25, unit = "cup" },
+  { id = "pumpkin", amount = 200, unit = "g" },
+  { id = "brinjal", amount = 1, unit = "small" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "fenugreek-leaves", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "tbsp" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 7, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal, masoor dal and moong dal together in several changes of water. Peel and cube the pumpkin, cube the brinjal and chop the tomatoes. Soak the tamarind in a little of the water for 10 minutes, squeeze and strain.",
+  "Simmer the mutton with half the ginger garlic paste, salt and half the rest of the water in a covered pan over low heat for 50 to 60 minutes, until tender.",
+  "Meanwhile, simmer the dals, pumpkin, brinjal, tomatoes, fenugreek leaves, green chillies and turmeric with the rest of the water in a covered pan for 35 to 40 minutes, until everything is very soft. Blend to a smooth purée.",
+  "Thinly slice the onions. Heat the ghee in a heavy pan over medium heat and fry them for 10 minutes, until golden brown.",
+  "Add the rest of the ginger garlic paste, the Kashmiri chilli powder, coriander powder, cumin powder and garam masala and fry for 1 minute, until fragrant.",
+  "Add the blended dal, the mutton with its stock, the tamarind liquid and jaggery. Simmer for 15 minutes, stirring often, until thick and well blended.",
+  "Stir in the mint and coriander leaves. Taste and balance the salt, sweet and sour. Serve hot with caramelised onion pulao and kachumber.",
+]
+
+[[recipe]]
+id = "01a18bba-783a-7f89-9156-96d4c76b0195"
+name = "Sali boti"
+serves = 4
+prep_minutes = 15
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "jaggery", amount = 1.5, unit = "tbsp" },
+  { id = "white-vinegar", amount = 2, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "large" },
+  { id = "oil", amount = 2.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Cut the mutton into small boneless cubes. Thinly slice the onions and chop the tomatoes.",
+  "Heat a few spoonfuls of the oil in a heavy pan over medium heat. Fry the onions for 12 minutes, until deep golden.",
+  "Add the ginger garlic paste for 1 minute, then the mutton, turmeric, Kashmiri chilli powder and salt. Sear for 8 minutes, until browned.",
+  "Add the tomatoes and cook for 5 minutes, until soft. Add the water, cover and simmer on low heat for 50 to 60 minutes, until the mutton is tender.",
+  "Stir in the jaggery, white vinegar, garam masala and cumin powder and simmer for 5 minutes, until the gravy is thick and glossy. Taste and balance the sweet and sour.",
+  "For the sali, peel the potatoes and cut them into very thin matchsticks. Rinse in several changes of water and dry completely on a cloth.",
+  "Heat the rest of the oil for deep frying over medium heat. Fry the potato sticks in batches for 3 to 4 minutes, until golden and crisp. Drain and salt them.",
+  "Serve the mutton hot, piled high with the sali.",
+]
+
+[[recipe]]
+id = "01a18bba-783c-73f4-a5a9-873c119aa650"
+name = "Patra ni machhi"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "pomfret", amount = 2, unit = "medium" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "coriander-leaves", amount = 1, unit = "cup" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "banana-leaves", amount = 4, unit = "piece" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Clean the pomfret and cut each one into thick pieces about 6 cm across. Rub with half the lemon juice and salt.",
+  "Grind the coconut, coriander leaves, mint, green chillies, garlic, cumin seeds, sugar, the rest of the lemon juice and salt to a thick, bright green paste.",
+  "Pass the banana leaves briefly over a flame or hot griddle until they turn glossy and soft.",
+  "Coat each piece of fish thickly with the paste, lay it on the banana leaves and fold them into neat parcels. Tie with string.",
+  "Steam the parcels in a steamer for 15 to 18 minutes, until the fish is opaque and flakes easily.",
+  "Taste a little of the paste for salt and serve the parcels hot, opened at the table.",
+]
+
+[[recipe]]
+id = "01a18bba-783e-776a-a2d5-218668bd63db"
+name = "Akuri"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.25, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "milk", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion, tomato, green chillies, ginger and coriander leaves. Beat the eggs with the milk and salt.",
+  "Melt the butter in a pan over medium heat. Fry the onion for 3 minutes, until soft. Add the ginger and green chillies for 30 seconds.",
+  "Add the tomato, turmeric and red chilli powder and cook for 2 minutes, until the tomato softens.",
+  "Lower the heat, pour in the eggs and stir gently and constantly for 2 to 3 minutes, until they form soft, creamy folds that still look slightly wet.",
+  "Take it off the heat, fold in the coriander leaves and taste for salt. Serve straight away on hot buttered toast.",
+]
+
+[[recipe]]
+id = "01a18bba-7840-7171-ba5c-b69195f417ca"
+name = "Lagan nu custard"
+serves = 6
+prep_minutes = 15
+cook_minutes = 90
+ingredients = [
+  { id = "milk", amount = 4, unit = "cup" },
+  { id = "condensed-milk", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "sugar", amount = 0.25, unit = "cup" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "charoli", amount = 1, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tsp" },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Simmer the milk in a heavy pan over medium heat for 30 to 35 minutes, stirring often, until reduced by about a third. Stir in the condensed milk and sugar and cool until lukewarm.",
+  "Heat the oven to 160°C and grease a baking dish about 20 cm across with the butter.",
+  "Beat the eggs lightly, then whisk them into the milk with the grated nutmeg, crushed cardamom seeds and vanilla extract. Strain into the dish.",
+  "Slice the almonds and scatter them over the top with the charoli.",
+  "Stand the dish in a deep roasting tin and pour the water, hot, into the tin to come halfway up the sides.",
+  "Bake for 45 to 50 minutes, until the top is browned in spots and the custard is set with a slight wobble in the centre.",
+  "Cool, then chill for a few hours before serving.",
+]
+
+[[recipe]]
+id = "01a18bba-7843-7da8-9065-2ad4a677f1b5"
+name = "Sindhi kadhi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "gram-flour", amount = 0.33, unit = "cup" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "drumsticks", amount = 2, unit = "piece" },
+  { id = "okra", amount = 100, unit = "g" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "cluster-beans", amount = 100, unit = "g" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Cut the drumsticks into pieces about 7 cm long. Trim the okra and cluster beans and peel and cube the potato. Chop the tomatoes, grate the ginger and slit the green chillies. Soak the tamarind in a little of the water, squeeze and strain.",
+  "Heat the oil in a heavy pan over medium heat. Fry the cumin seeds, fenugreek seeds and curry leaves for 30 seconds.",
+  "Add the gram flour and stir constantly on low heat for 6 to 8 minutes, until it turns golden brown and smells nutty.",
+  "Take the pan off the heat and whisk in the rest of the water a little at a time until smooth. Return to the heat.",
+  "Add the tomatoes, ginger, green chillies, turmeric, red chilli powder and salt. Bring to a boil, then add the drumsticks, potato and cluster beans and simmer for 15 minutes.",
+  "Add the okra and tamarind liquid and simmer for 8 to 10 minutes, until all the vegetables are tender and the kadhi is thick enough to coat a spoon.",
+  "Taste for salt and sourness. Scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bba-7845-7969-b4db-f2c2bdafa459"
+name = "Sai bhaji"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "spinach", amount = 500, unit = "g" },
+  { id = "chana-dal", amount = 0.33, unit = "cup" },
+  { id = "dill", amount = 0.5, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "brinjal", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it in a little of the water for 1 hour. Roughly chop the spinach and dill, cube the potato and brinjal, and chop the onion and tomatoes.",
+  "Heat half the oil in a heavy pan over medium heat. Fry the onion for 5 minutes, then the ginger garlic paste and green chillies for 1 minute.",
+  "Add the chana dal with its soaking water, the spinach, dill, tomatoes, potato, brinjal, turmeric, red chilli powder, coriander powder, salt and the rest of the water.",
+  "Cover and simmer on low heat for 30 to 35 minutes, until the dal is soft.",
+  "Mash everything together with a wooden masher until thick and rough-textured.",
+  "Thinly slice the garlic. Heat the rest of the oil in a small pan and fry the garlic for 1 minute, until golden. Pour over the bhaji.",
+  "Taste for salt and serve hot with rotis.",
+]
+
+[[recipe]]
+id = "01a18bba-7847-7c0f-80c7-ee24c8f730c7"
+name = "Dal pakwan"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "chana-dal", amount = 1, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "cumin-seeds", amount = 2, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "tamarind-chutney", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it in plenty of water for 2 hours. Drain.",
+  "For the pakwan, rub half the ghee into the all-purpose flour with half the cumin seeds and salt. Knead with as little of the water as needed into a stiff dough. Rest for 15 minutes.",
+  "Simmer the chana dal with the rest of the water, the turmeric and salt in a covered pan for 30 minutes, until soft but whole.",
+  "Roll the dough into thin rounds about 15 cm across and prick them all over with a fork.",
+  "Heat the oil for deep frying over low-medium heat. Fry the pakwan one at a time for 2 to 3 minutes per side, until golden and crisp. Drain and cool.",
+  "Heat the rest of the ghee in a small pan. Fry the rest of the cumin seeds and green chillies for 30 seconds, pour into the dal and stir in the red chilli powder, dry mango powder and garam masala.",
+  "Finely chop the onion, tomato and coriander leaves. Serve the dal topped with the onion, tomato, coriander leaves and tamarind chutney, with the pakwan alongside.",
+]
+
+[[recipe]]
+id = "01a18bba-784a-74d6-b616-bc15656e4519"
+name = "Koki"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "dried-pomegranate-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Finely chop the onion, green chillies and coriander leaves. Crush the dried pomegranate seeds.",
+  "Mix the whole wheat flour with the onion, green chillies, coriander leaves, dried pomegranate seeds, cumin seeds, red chilli powder, salt and half the ghee.",
+  "Knead with as little of the water as needed into a stiff dough. Divide into balls about 6 cm across.",
+  "Roll each ball into a thick round about 12 cm across. Cook it on a griddle over low heat for 1 minute per side, just to set it.",
+  "Take it off, roll it again more thinly to about 16 cm across and prick it all over.",
+  "Cook again over low heat with a little of the rest of the ghee for 3 to 4 minutes per side, pressing, until crisp and golden brown.",
+  "Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bba-784c-7106-a51f-b79ab68de48c"
+name = "Sindhi biryani"
+serves = 6
+prep_minutes = 30
+cook_minutes = 75
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 2.5, unit = "cup" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "prunes", amount = 8, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 5, unit = "piece" },
+  { id = "biryani-masala", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Rinse the basmati rice in several changes of water until the water runs clear, then soak it in plenty of water for 30 minutes. Drain.",
+  "Thinly slice the onions, slice the tomatoes into rounds, peel and halve the potatoes and slit the green chillies.",
+  "Heat the oil in a heavy pan over medium heat. Fry the onions for 15 minutes, until deep brown. Lift out half. Fry the potatoes in the same oil for 6 minutes, until golden. Lift them out.",
+  "Add the ginger garlic paste, chicken, biryani masala, red chilli powder, turmeric and salt and fry for 8 minutes. Add the curd, half the tomatoes, the potatoes, prunes, green chillies and half the mint and coriander leaves. Cover and cook for 15 minutes, until the chicken is nearly done and the gravy is thick.",
+  "Meanwhile, bring the water to a rolling boil with plenty of salt, the bay leaves, cardamom, cloves and cinnamon. Boil the basmati rice for 5 to 6 minutes, until about three-quarters cooked. Drain.",
+  "Lay the rest of the tomatoes over the chicken, then spread the basmati rice on top. Scatter the rest of the fried onions, mint and coriander leaves over, squeeze the lemon over, and drizzle the ghee and saffron soaked in a spoonful of warm water.",
+  "Cover tightly and cook on the lowest heat for 20 to 25 minutes, until the grains are fully tender and steam rises when you lift the lid.",
+  "Rest for 5 minutes, fold gently, taste for salt and serve with raita.",
+]
+
+[[recipe]]
+id = "01a18bba-784e-7e6c-8228-61ed25d38540"
+name = "Kori rotti"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "rice-wafers", amount = 12, unit = "piece" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "dried-red-chillies", amount = 8, unit = "piece" },
+  { id = "coriander-seeds", amount = 1.5, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "tamarind", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into pieces. Thinly slice the onions and chop the tomato.",
+  "Dry-roast the dried red chillies, coriander seeds, cumin seeds, black pepper and fenugreek seeds in a pan over low heat for 2 to 3 minutes, until fragrant. Grind them with the garlic, tamarind, turmeric and a little of the water to a smooth red paste.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the curry leaves for a few seconds, then the onions for 8 minutes, until golden.",
+  "Add the masala paste and fry for 4 to 5 minutes, until the ghee separates. Add the tomato and cook for 3 minutes.",
+  "Add the chicken and salt and fry for 5 minutes. Add the rest of the water, cover and simmer for 15 minutes, until the chicken is nearly cooked.",
+  "Pour in the coconut milk and simmer gently for 8 to 10 minutes, until the chicken is tender and the gravy is thin and silky. Taste for salt.",
+  "To serve, break the rice wafers roughly into bowls and ladle the hot curry over them just before eating, so they soften but keep a little crunch.",
+]
+
+[[recipe]]
+id = "01a18bba-7850-7cb8-bcb0-bded1a99ee6a"
+name = "Mangalorean chicken sukka"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "dried-red-chillies", amount = 8, unit = "piece" },
+  { id = "coriander-seeds", amount = 1.5, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "tamarind", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into small pieces and toss with the turmeric and salt.",
+  "Dry-roast the dried red chillies, coriander seeds, cumin seeds, black pepper and fenugreek seeds in a pan over low heat for 2 to 3 minutes, until fragrant. Grind with the garlic and tamarind to a coarse paste, using a splash of the water.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the curry leaves for a few seconds, then the finely chopped onion for 5 minutes, until golden.",
+  "Add the spice paste and fry for 3 minutes, until it darkens and smells toasty.",
+  "Add the chicken and fry for 5 minutes. Add the rest of the water, cover and cook on low heat for 15 to 18 minutes, until the chicken is cooked through.",
+  "Add the coconut and stir-fry uncovered on medium heat for 6 to 8 minutes, until the masala is dry and clings to the chicken.",
+  "Taste for salt and serve hot with neer dosa or chapatis.",
+]
+
+[[recipe]]
+id = "01a18bba-7853-74cc-8240-1f2f01fdd32c"
+name = "Kundapur chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "dried-red-chillies", amount = 10, unit = "piece" },
+  { id = "coriander-seeds", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "fennel-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "tamarind", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into pieces. Thinly slice the onions.",
+  "Dry-roast the dried red chillies, coriander seeds, cumin seeds, black pepper, fenugreek seeds and fennel seeds in a pan over low heat for 2 to 3 minutes, until fragrant. Cool and grind to a fine powder with the turmeric. This is the Kundapur masala.",
+  "Grind the garlic and tamarind with a little of the water to a paste.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the curry leaves for a few seconds, then the onions for 8 minutes, until golden brown.",
+  "Add the garlic paste and the Kundapur masala and fry for 2 minutes, adding a splash of the water if it catches.",
+  "Add the chicken and salt and fry for 5 minutes. Add the rest of the water, cover and simmer for 15 minutes, until nearly cooked.",
+  "Stir in the coconut milk and simmer gently for 6 to 8 minutes, until the chicken is tender and the gravy is red and glossy. Taste for salt and serve hot with neer dosa.",
+]
+
+[[recipe]]
+id = "01a18bba-7855-73e1-b3e2-b6d27f8a973e"
+name = "Bohri dabba gosht"
+serves = 6
+prep_minutes = 20
+cook_minutes = 100
+ingredients = [
+  { id = "mutton", amount = 500, unit = "g" },
+  { id = "pasta", amount = 150, unit = "g" },
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3.5, unit = "l" },
+]
+steps = [
+  "Cut the mutton into small boneless cubes. Thinly slice the onions and chop the green chillies.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the onions for 10 minutes, until golden. Add the ginger garlic paste and green chillies for 1 minute.",
+  "Add the mutton, black pepper, cumin powder, garam masala and salt and sear for 8 minutes. Add a little of the water, cover and simmer on low heat for 50 to 55 minutes, until tender and the gravy is thick.",
+  "Bring the rest of the water to a boil with salt. Cook the macaroni for 2 minutes less than the packet says. Drain.",
+  "Melt the butter in a pan over medium heat, stir in the all-purpose flour for 1 minute, then whisk in the milk and simmer for 4 minutes, until it thickens. Cool slightly and beat in the eggs.",
+  "Heat the oven to 180°C. Mix the mutton, macaroni and cashews with half the white sauce and spread in a baking dish. Pour the rest of the sauce over.",
+  "Bake for 25 to 30 minutes, until puffed, set and golden on top. Rest for 5 minutes, taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bba-7857-7483-a9b8-9ccc5aea5eb1"
+name = "Goli baje"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coconut", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Finely chop the ginger, green chillies and curry leaves. Cut the coconut into tiny pieces.",
+  "Mix the all-purpose flour, rice flour, curd, sugar, salt and the water into a very thick, sticky batter. Beat hard for 3 minutes, until smooth and stretchy.",
+  "Mix in the ginger, green chillies, curry leaves, coconut and cumin seeds. Rest for 2 hours.",
+  "Just before frying, beat in the baking soda.",
+  "Heat the oil for deep frying over medium heat. With wet fingers, drop small balls of batter about 3 cm across into the oil.",
+  "Fry for 4 to 5 minutes, turning, until they puff, turn deep golden and are cooked through. Drain.",
+  "Taste one for salt and serve hot with coconut chutney.",
+]
+
+[[recipe]]
+id = "01a18bba-7859-7e71-9f86-28de38776ad3"
+name = "Patrode"
+serves = 4
+prep_minutes = 40
+cook_minutes = 50
+ingredients = [
+  { id = "colocasia-leaves", amount = 10, unit = "piece" },
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "dried-red-chillies", amount = 8, unit = "piece" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "jaggery", amount = 2, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coconut-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it for 3 hours. Drain.",
+  "Grind the rice with the coconut, dried red chillies, coriander seeds, cumin seeds, tamarind, jaggery, turmeric, salt and a little of the water to a thick, smooth paste.",
+  "Wash the colocasia leaves and pat them dry. Shave off the thick veins on the back with a knife so the leaves lie flat.",
+  "Lay a large leaf shiny side down and spread a thin layer of paste over it. Lay a smaller leaf on top and spread again. Repeat with a few leaves.",
+  "Fold in the sides and roll up tightly from the stem end into a log. Repeat with the rest of the leaves and paste.",
+  "Steam the rolls over the rest of the water, boiling, for 35 to 40 minutes, until a knife slides through easily. Cool and slice into rounds about 1.5 cm thick.",
+  "Heat the coconut oil in a pan over medium heat. Fry the mustard seeds until they pop, then the curry leaves. Shallow-fry the slices for 2 minutes per side, until crisp. Taste one for salt and serve hot.",
+]

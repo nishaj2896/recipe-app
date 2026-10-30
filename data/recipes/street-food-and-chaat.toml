@@ -1,0 +1,621 @@
+# Street food and chaat (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bb5-de60-7c32-a24f-28041b37426d"
+name = "Pani puri"
+serves = 4
+prep_minutes = 45
+cook_minutes = 25
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "black-chickpeas", amount = 0.33, unit = "cup" },
+  { id = "mint", amount = 1, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "black-salt", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "tamarind-chutney", amount = 0.33, unit = "cup" },
+  { id = "boondi", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Rinse the black chickpeas and soak them overnight in plenty of water. Drain.",
+  "Knead the semolina and all-purpose flour with a little salt and just enough of the water into a stiff dough. Cover with a damp cloth and rest for 20 minutes.",
+  "Roll the dough very thinly, about 1 mm thick, and cut into rounds about 5 cm across. Keep them covered.",
+  "Heat the oil for deep frying over medium-high heat. Fry the rounds a few at a time, pressing each one gently with a slotted spoon until it puffs, then fry for 1 to 2 minutes, until crisp and golden. Drain and cool.",
+  "Boil the potatoes in their skins and the black chickpeas in a separate pan for about 25 minutes, until both are tender. Peel and dice the potatoes and mix with the black chickpeas, red chilli powder, half the chaat masala and salt.",
+  "Soak the tamarind in a little of the water for 10 minutes, squeeze and strain. Blend the mint, coriander leaves, green chillies and ginger with a little more of the water to a smooth paste.",
+  "Stir the paste, tamarind liquid, cumin powder, black salt and the rest of the chaat masala into the rest of the water. Chill and taste; it should be sharp, spicy and tangy. Add the boondi.",
+  "To serve, crack a hole in the top of each puri, fill with a little potato mixture and a dab of tamarind chutney, then dip in the spiced water and eat at once.",
+]
+
+[[recipe]]
+id = "01a18bb5-de62-7321-8c50-e37b9ff38d38"
+name = "Bhel puri"
+serves = 4
+prep_minutes = 20
+cook_minutes = 0
+ingredients = [
+  { id = "puffed-rice", amount = 4, unit = "cup" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "peanuts", amount = 3, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 0.25, unit = "cup" },
+  { id = "green-chutney", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use a boiled potato that's cooled. Peel and dice it, and finely chop the onion, tomato, green chilli and coriander leaves.",
+  "Toast the puffed rice in a dry pan over low heat for 2 minutes if it isn't crisp. Tip it into a large bowl.",
+  "Add the potato, onion, tomato, green chilli, peanuts, chaat masala and salt and toss.",
+  "Add the tamarind chutney and green chutney and toss quickly until everything is lightly coated.",
+  "Squeeze the lemon over, add most of the coriander leaves and toss once more. Taste and adjust the chutneys and salt.",
+  "Pile onto plates, top with the sev and the rest of the coriander leaves and serve straight away, before the puffed rice goes soft.",
+]
+
+[[recipe]]
+id = "01a18bb5-de64-7236-873d-96ef0d79db73"
+name = "Sev puri"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "semolina", amount = 1, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "raw-mango", amount = 0.5, unit = "small" },
+  { id = "sev", amount = 1, unit = "cup" },
+  { id = "tamarind-chutney", amount = 0.33, unit = "cup" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.33, unit = "cup" },
+]
+steps = [
+  "Knead the all-purpose flour, semolina, salt and a spoonful of the oil with the water into a stiff dough. Rest for 15 minutes.",
+  "Roll the dough thinly and cut into rounds about 6 cm across. Prick each one all over with a fork so they stay flat.",
+  "Heat the oil for deep frying over medium heat. Fry the rounds in batches for 2 to 3 minutes, until crisp and light golden. Drain and cool.",
+  "Boil the potatoes in their skins for 15 to 20 minutes, until tender. Peel and mash them with the red chilli powder and salt.",
+  "Finely chop the onion, raw mango and coriander leaves.",
+  "Lay the puris on a plate. Top each with a little potato, onion and raw mango, then drizzle the tamarind chutney and green chutney over.",
+  "Pile the sev on top, sprinkle the chaat masala and coriander leaves over and serve at once.",
+]
+
+[[recipe]]
+id = "01a18bb5-de66-7825-a8a4-ac3b7ec2ee03"
+name = "Dahi puri"
+serves = 4
+prep_minutes = 45
+cook_minutes = 25
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "curd", amount = 1.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 0.33, unit = "cup" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Knead the semolina and all-purpose flour with a little salt and just enough of the water into a stiff dough. Rest for 20 minutes under a damp cloth.",
+  "Roll very thinly and cut into rounds about 5 cm across. Fry in the hot oil over medium-high heat, pressing gently so they puff, for 1 to 2 minutes, until crisp. Drain and cool.",
+  "Boil the potatoes in their skins for 15 to 20 minutes, until tender. Peel and dice them and season with salt and half the chaat masala.",
+  "Whisk the curd with the sugar and a little salt until smooth and pourable. Chill.",
+  "Crack a hole in the top of each puri and fill with a little potato and a dab of green chutney.",
+  "Spoon the curd over generously, then the tamarind chutney. Sprinkle the cumin powder, red chilli powder and the rest of the chaat masala over.",
+  "Top with the sev and coriander leaves and serve at once.",
+]
+
+[[recipe]]
+id = "01a18bb5-de69-776f-86a4-4b86c00f9f3b"
+name = "Ragda pattice"
+serves = 4
+prep_minutes = 20
+cook_minutes = 55
+ingredients = [
+  { id = "dried-white-peas", amount = 1, unit = "cup" },
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "tamarind-chutney", amount = 0.25, unit = "cup" },
+  { id = "green-chutney", amount = 2, unit = "tbsp" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the dried white peas and soak them overnight in plenty of water. Drain.",
+  "Simmer the dried white peas with the water, turmeric and salt in a covered pan over medium-low heat for 40 minutes, until soft. Mash a few to thicken.",
+  "Heat a spoonful of the oil in a pan over medium heat. Fry half the onion, chopped, the ginger garlic paste and green chillies for 3 minutes, then the tomato, chopped, the red chilli powder and garam masala for 3 minutes. Stir into the dried white peas and simmer for 5 minutes. This is the ragda.",
+  "Boil the potatoes in their skins for 15 to 20 minutes, until tender. Peel, mash with the cornflour and salt and shape into patties about 7 cm across.",
+  "Heat the rest of the oil on a griddle over medium heat. Fry the patties for 3 to 4 minutes per side, until golden and crisp.",
+  "Put the patties on plates and ladle the hot ragda over.",
+  "Top with the tamarind chutney, green chutney, the rest of the onion, chopped, the sev, chaat masala and coriander leaves. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bb5-de6b-7afe-812f-bc2c7470b4f4"
+name = "Kanda bhaji"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "gram-flour", amount = 0.75, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Halve the onions and slice them very thinly into half-moons. Finely chop the green chillies and coriander leaves.",
+  "Mix the onions with the salt and leave for 10 minutes, until they soften and release their juices.",
+  "Add the gram flour, rice flour, green chillies, carom seeds, turmeric, red chilli powder and coriander leaves. Mix with your hands, squeezing the onions, until the flours cling to them without any added liquid.",
+  "Heat the oil for deep frying over medium heat. Drop in small, loose clusters of the mixture and fry for 4 to 5 minutes, turning, until deep golden and very crisp.",
+  "Drain on paper towels. Taste one for salt and serve hot with fried green chillies or chutney.",
+]
+
+[[recipe]]
+id = "01a18bb5-de6d-7d05-bbc4-ec4322edc12b"
+name = "Dabeli"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "pav", amount = 8, unit = "piece" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "tamarind-chutney", amount = 0.33, unit = "cup" },
+  { id = "peanuts", amount = 0.25, unit = "cup" },
+  { id = "pomegranate", amount = 0.5, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "fennel-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Boil the potatoes in their skins for 15 to 20 minutes, until tender. Peel and mash them.",
+  "Dry-roast the fennel seeds and dried coconut for 2 minutes, until fragrant, then grind with the garam masala, coriander powder and Kashmiri chilli powder. This is the dabeli masala.",
+  "Heat the oil in a pan over medium heat. Add the dabeli masala, half the tamarind chutney and the water and cook for 1 minute. Add the potatoes and salt and mix for 3 minutes, until thick.",
+  "Spread the potato mixture on a plate and top with the peanuts, pomegranate seeds, chopped coriander leaves and half the chopped onion.",
+  "Slit the pav, spread the rest of the tamarind chutney inside and fill each with a spoonful of the potato mixture and some of the rest of the onion.",
+  "Toast the pav in the butter on a griddle over medium heat for 1 minute per side, until crisp.",
+  "Roll the edges in the sev and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb5-de6f-798b-9d6c-cbdc2a1cc540"
+name = "Vegetable frankie"
+serves = 4
+prep_minutes = 25
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "white-vinegar", amount = 1, unit = "tbsp" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Knead the all-purpose flour, whole wheat flour, salt and a spoonful of the oil with the water into a soft dough. Rest for 20 minutes.",
+  "Boil the potatoes in their skins for 15 to 20 minutes, until tender. Peel and mash them with the red chilli powder, garam masala and salt. Shape into logs about 10 cm long.",
+  "Finely shred the cabbage and carrot. Thinly slice the onion and chop the green chillies, then toss them with the white vinegar and a little salt.",
+  "Shallow-fry the potato logs in a little of the oil over medium heat for 4 to 5 minutes, turning, until golden all over.",
+  "Roll the dough into thin rounds about 20 cm across. Cook them on a hot griddle over medium heat for 1 minute per side, until spotted, brushing with a little oil.",
+  "Spread green chutney over each one, lay a potato log on it and top with the cabbage, carrot and pickled onion mixture. Sprinkle the chaat masala over.",
+  "Roll up tightly, wrap the bottom in paper and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-fec4-7656-a6b2-1e578490c3c9"
+name = "Chole bhature"
+serves = 4
+prep_minutes = 30
+cook_minutes = 80
+ingredients = [
+  { id = "chickpeas", amount = 1, unit = "cup" },
+  { id = "black-tea", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "chole-masala", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "semolina", amount = 2, unit = "tbsp" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 2.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Rinse the chickpeas and soak them overnight in plenty of water. Drain.",
+  "Tie the black tea in a square of muslin. Simmer the chickpeas with most of the water, the tea bundle, bay leaf and salt in a covered pan over medium-low heat for 50 to 60 minutes, until very soft and dark. Discard the tea bundle.",
+  "For the bhature, mix the all-purpose flour, semolina, sugar, baking soda and salt. Add the curd and a spoonful of the oil and knead with as much of the rest of the water as needed into a soft, smooth dough. Cover and rest for 2 hours.",
+  "Finely chop the onions and tomatoes. Heat a few spoonfuls of the oil in a heavy pan over medium heat and fry the onions for 8 minutes, until golden brown.",
+  "Add the ginger garlic paste and green chillies for 1 minute, then the tomatoes, chole masala and red chilli powder and cook for 6 to 8 minutes, until the oil separates.",
+  "Add the chickpeas with their liquid and simmer for 15 minutes, mashing a few, until thick and dark. Stir in the dry mango powder and taste for salt.",
+  "Heat the rest of the oil for deep frying over medium-high heat. Roll balls of dough into ovals about 18 cm long and fry one at a time, pressing gently so it balloons, for 1 minute per side, until puffed and light golden.",
+  "Serve the bhature straight away with the hot chole and sliced onion.",
+]
+
+[[recipe]]
+id = "01a18bb7-fec7-76e4-a122-5bb576888279"
+name = "Chole kulche"
+serves = 4
+prep_minutes = 30
+cook_minutes = 60
+ingredients = [
+  { id = "dried-white-peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "tamarind-chutney", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 0.33, unit = "cup" },
+  { id = "baking-powder", amount = 0.5, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "nigella-seeds", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the dried white peas and soak them overnight in plenty of water. Drain.",
+  "Simmer the dried white peas in most of the water with salt in a covered pan over medium-low heat for 35 to 40 minutes, until soft but whole. Drain and cool slightly.",
+  "For the kulche, mix the all-purpose flour, baking powder, baking soda, sugar and salt. Add the curd and oil and knead with enough of the rest of the water into a soft dough. Cover and rest for 2 hours.",
+  "Finely chop the onion, tomato, green chillies, ginger and coriander leaves. Toss with the dried white peas, cumin powder, red chilli powder, chaat masala, tamarind chutney, lemon juice and salt.",
+  "Roll balls of dough into rounds about 15 cm across. Press the nigella seeds and some coriander leaves on top.",
+  "Cook on a hot griddle over medium heat for 1 to 2 minutes per side, until puffed with golden spots. Brush with the butter.",
+  "Taste the chole for salt and tang and serve with the hot kulche.",
+]
+
+[[recipe]]
+id = "01a18bb7-fec9-71c1-8173-6c62281ee321"
+name = "Kachori sabzi"
+serves = 4
+prep_minutes = 40
+cook_minutes = 50
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "moong-dal", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the moong dal and soak it in plenty of water for 2 hours. Drain and grind coarsely without water.",
+  "Rub the ghee into the all-purpose flour with salt until it holds together when pressed. Knead with as little of the water as needed into a firm dough. Rest for 20 minutes.",
+  "Coarsely crush the fennel seeds and coriander seeds. Heat a spoonful of the oil in a pan over low heat and fry them with the asafoetida for 30 seconds, then add the dal paste, red chilli powder, dry mango powder, garam masala and salt. Stir for 5 minutes, until dry and crumbly. Cool.",
+  "Divide the dough into balls about 4 cm across. Flatten each, fill with a spoonful of dal filling, seal and press gently into a round about 7 cm across.",
+  "Heat the frying oil over low heat. Fry the kachoris slowly for 12 to 15 minutes, turning, until they puff, turn deep golden and sound hollow when tapped. Drain.",
+  "For the sabzi, boil the potatoes in their skins for 15 to 20 minutes, until tender, then peel and break them by hand. Blend the tomatoes, ginger and green chillies.",
+  "Heat a spoonful of the oil in a pan over medium heat. Fry the cumin seeds for 30 seconds, then the tomato mixture, turmeric, coriander powder and salt for 5 minutes. Add the potatoes and the rest of the water and simmer for 8 minutes, until slightly thick.",
+  "Taste for salt, scatter the coriander leaves over and serve the sabzi hot with the kachoris.",
+]
+
+[[recipe]]
+id = "01a18bb7-fecb-7d67-9535-f5add0eb2f4e"
+name = "Moong dal pakoda"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "moong-dal", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "coriander-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the moong dal and soak it for 3 hours. Drain well.",
+  "Grind the dal with the ginger and green chillies to a coarse, thick paste, without adding any liquid.",
+  "Beat in the cumin seeds, crushed coriander seeds, asafoetida, chopped coriander leaves and salt for 2 minutes, until the batter is light.",
+  "Heat the oil for deep frying over medium heat. Drop small spoonfuls of batter into the oil.",
+  "Fry for 4 to 5 minutes, turning, until golden brown and crisp outside and cooked through.",
+  "Drain on paper towels. Taste one for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb7-fecd-716e-82ca-fabe0a4ffb0f"
+name = "Paneer frankie"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "white-vinegar", amount = 1, unit = "tbsp" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Knead the all-purpose flour, whole wheat flour, salt and a spoonful of the oil with the water into a soft dough. Rest for 20 minutes.",
+  "Cut the paneer into strips about 1 cm thick. Slice one onion and the bell pepper.",
+  "Heat a spoonful of the oil in a pan over medium heat. Fry the sliced onion and bell pepper for 3 minutes, then the ginger garlic paste for 1 minute.",
+  "Add the paneer, Kashmiri chilli powder, garam masala and salt and toss gently for 3 minutes, until hot and coated.",
+  "Thinly slice the rest of the onion and toss it with the white vinegar and a little salt.",
+  "Roll the dough into thin rounds about 20 cm across. Cook on a hot griddle over medium heat for 1 minute per side, until spotted, brushing with the rest of the oil.",
+  "Spread green chutney over each one, add the paneer filling and vinegar onions, sprinkle the chaat masala over, roll up tightly and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-fed3-7ae4-892e-961a475bda0d"
+name = "Shakarkandi chaat"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "sweet-potato", amount = 3, unit = "medium" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "chaat-masala", amount = 1.5, unit = "tsp" },
+  { id = "black-salt", amount = 0.25, unit = "tsp" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Heat the oven to 200°C. Scrub the sweet potatoes, rub them with the oil and roast on a tray for 25 to 30 minutes, until a knife slides in easily and the skins are blistered.",
+  "Cool slightly, peel and cut into cubes about 2 cm across.",
+  "Finely chop the green chilli and coriander leaves.",
+  "Toss the sweet potato with the chaat masala, black salt, cumin powder, green chilli and lemon juice.",
+  "Taste and add more lemon or chaat masala. Scatter the coriander leaves over and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-fed5-7569-8fc3-7ba1bb372983"
+name = "Fruit chaat"
+serves = 4
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "apple", amount = 1, unit = "medium" },
+  { id = "banana", amount = 2, unit = "medium" },
+  { id = "papaya", amount = 1, unit = "small" },
+  { id = "guava", amount = 1, unit = "medium" },
+  { id = "pomegranate", amount = 0.5, unit = "medium" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "black-salt", amount = 0.25, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "mint", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Peel and seed the papaya. Core the apple and guava. Cut the apple, papaya and guava into cubes about 2 cm across.",
+  "Peel the bananas and slice them into rounds. Take the seeds out of the pomegranate.",
+  "Put all the fruit in a bowl and squeeze the lemon over straight away, so the apple and banana don't brown.",
+  "Sprinkle the chaat masala and black salt over and toss gently.",
+  "Taste and add more lemon or chaat masala. Tear the mint over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bb7-fed7-78dd-927d-2f84732e5992"
+name = "Corn chaat"
+serves = 4
+prep_minutes = 10
+cook_minutes = 8
+ingredients = [
+  { id = "sweetcorn", amount = 2, unit = "cup" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.25, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion, tomato, green chilli and coriander leaves.",
+  "Melt the butter in a pan over medium heat. Add the sweetcorn and toss for 5 to 6 minutes, until hot and lightly golden in spots.",
+  "Tip it into a bowl and cool for 2 minutes.",
+  "Add the onion, tomato, green chilli, chaat masala, red chilli powder, salt and lemon juice and toss.",
+  "Taste and adjust the lemon and salt. Scatter the coriander leaves over and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-fed9-72bd-9261-fb787605c7cb"
+name = "Sprouts chaat"
+serves = 4
+prep_minutes = 15
+cook_minutes = 5
+ingredients = [
+  { id = "sprouted-mung-beans", amount = 2, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt. Blanch the sprouted mung beans for 2 to 3 minutes, until just tender but still crunchy. Drain and cool under the cold tap.",
+  "Finely chop the onion, tomato, cucumber, green chilli and coriander leaves.",
+  "Toss the sprouted mung beans with the vegetables, chaat masala, cumin powder and salt.",
+  "Squeeze the lemon over and toss again.",
+  "Taste and adjust the salt and lemon. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bb7-fedc-78d9-ab8e-a00b3f31af9d"
+name = "Tawa pulao"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "pav-bhaji-masala", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice in several changes of water. Simmer it in the water with salt in a covered pan on low heat for 12 to 15 minutes, until tender. Spread it on a tray to cool.",
+  "Finely chop the onion, tomatoes, bell pepper and carrot.",
+  "Melt the butter on a large griddle or wide pan over medium-high heat. Fry the onion for 3 minutes, then the ginger garlic paste for 1 minute.",
+  "Add the carrot, peas and bell pepper and stir-fry for 4 minutes, then the tomatoes, pav bhaji masala, red chilli powder and salt for 4 minutes, mashing, until saucy.",
+  "Add the basmati rice and toss for 3 to 4 minutes, until evenly coloured and hot.",
+  "Squeeze the lemon over, taste for salt, scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb7-fede-7b8e-b088-5bb29c77d99d"
+name = "Masala pav"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "pav", amount = 8, unit = "piece" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "pav-bhaji-masala", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion, tomatoes, bell pepper and coriander leaves.",
+  "Melt half the butter on a griddle or wide pan over medium heat. Fry the onion for 3 minutes, then the ginger garlic paste for 1 minute.",
+  "Add the bell pepper for 2 minutes, then the tomatoes, pav bhaji masala, red chilli powder and salt. Cook for 5 minutes, mashing, until thick and jammy. Stir in most of the coriander leaves and the lemon juice.",
+  "Slit the pav, leaving one side joined. Melt the rest of the butter on the griddle and press the pav in it, cut side down, for 1 minute.",
+  "Open each pav, spoon the masala inside and press the outside into the masala left on the griddle. Toast for 1 minute per side, until crisp.",
+  "Taste for salt, scatter the rest of the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb7-fefb-74e1-b2c8-49dfb77e3017"
+name = "Bun maska"
+serves = 4
+prep_minutes = 5
+cook_minutes = 5
+ingredients = [
+  { id = "burger-buns", amount = 4, unit = "piece" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+]
+steps = [
+  "Leave the butter out until soft enough to spread.",
+  "Split the burger buns and spread the butter thickly over the cut sides.",
+  "Sprinkle a little sugar over the butter on each half.",
+  "Toast the halves cut side down on a griddle over medium heat for 1 to 2 minutes, until the butter melts in and the edges are golden.",
+  "Close the buns and serve warm with hot tea.",
+]

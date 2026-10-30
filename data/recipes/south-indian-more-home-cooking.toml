@@ -1,0 +1,1197 @@
+# South Indian: more home cooking (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bb1-05ba-7a1d-a500-a643e4a781db"
+name = "Kozhi varutha curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "shallot", amount = 10, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 2, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coconut-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into pieces. Slice the shallots and chop the tomato.",
+  "Dry-roast the coconut in a heavy pan over medium-low heat for 8 to 10 minutes, stirring constantly, until deep brown and fragrant.",
+  "Add the coriander seeds, dried red chillies, fennel seeds, black pepper, cinnamon and cloves and roast for 2 minutes. Cool, then grind to a smooth paste with a little of the water.",
+  "Heat the coconut oil in a heavy pan over medium heat. Fry half the curry leaves for a few seconds, then the shallots for 6 minutes, until golden.",
+  "Add the ginger garlic paste and fry for 1 minute, then the tomato and turmeric and cook for 3 minutes, until soft.",
+  "Add the chicken and salt and fry for 5 minutes. Add the coconut paste and the rest of the water, cover and simmer for 18 to 20 minutes, until the chicken is cooked through and the gravy is thick and dark.",
+  "Scatter the rest of the curry leaves over, taste for salt and serve hot with appam.",
+]
+
+[[recipe]]
+id = "01a18bb1-05bc-726c-a26b-6de1ffd7076c"
+name = "Kerala beef fry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 85
+ingredients = [
+  { id = "beef", amount = 750, unit = "g" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "shallot", amount = 12, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 8, unit = "clove" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "curry-leaves", amount = 3, unit = "sprig" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 1.5, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "coconut-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cut the beef into cubes about 2 cm across. Thinly slice the shallots, ginger and garlic, slit the green chillies and cut the coconut into thin slivers about 1 cm long.",
+  "Toss the beef with the turmeric, Kashmiri chilli powder, half the coriander powder, half the black pepper and salt.",
+  "Simmer the beef with half the ginger and garlic and the water in a covered heavy pan over low heat for 50 to 60 minutes, until tender and nearly dry.",
+  "Heat the coconut oil in a wide heavy pan over medium heat. Fry the coconut slivers for 3 minutes, until golden brown.",
+  "Add the shallots, the rest of the ginger and garlic, the green chillies and most of the curry leaves and fry for 6 minutes, until the shallots are golden.",
+  "Add the beef with any juices and the fennel seeds, the rest of the coriander powder and black pepper, and the garam masala. Fry on medium heat for 12 to 15 minutes, stirring often, until the beef is dark brown, dry and crisp at the edges.",
+  "Scatter the rest of the curry leaves over, taste for salt and serve hot with parotta.",
+]
+
+[[recipe]]
+id = "01a18bb1-05be-7f65-8d7e-59ff79c0d94f"
+name = "Kerala prawn curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "shallot", amount = 8, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "kokum", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coconut-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Peel and devein the prawns. Slice the shallots, chop the tomato, cut the ginger and garlic into thin strips and slit the green chillies. Rinse the kokum and soak it in the water.",
+  "Heat the coconut oil in a clay pot or heavy pan over medium heat. Fry the mustard seeds until they pop, then the fenugreek seeds and half the curry leaves for 20 seconds.",
+  "Add the shallots, ginger, garlic and green chillies and fry for 5 minutes, until the shallots are golden.",
+  "Lower the heat, stir in the turmeric, Kashmiri chilli powder and coriander powder for 30 seconds, then add the tomato and cook for 3 minutes, until soft.",
+  "Add the kokum with its soaking water and salt and simmer for 3 minutes. Pour in the coconut milk and bring just to a simmer.",
+  "Add the prawns and simmer gently for 4 to 5 minutes, until they curl and turn pink. Don't let the curry boil hard or it may split.",
+  "Scatter the rest of the curry leaves over, taste for salt and sourness and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05c1-7a32-9511-2d06fe5eb8aa"
+name = "Kappa puzhukku"
+serves = 4
+prep_minutes = 20
+cook_minutes = 35
+ingredients = [
+  { id = "cassava", amount = 750, unit = "g" },
+  { id = "coconut", amount = 0.75, unit = "cup" },
+  { id = "shallot", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coconut-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Peel the cassava, removing both the brown skin and the pink layer under it. Cut it into cubes about 3 cm across and pull out the woody string in the centre.",
+  "Bring the water to a boil with salt and the turmeric. Add the cassava and boil for 20 to 25 minutes, until it is soft and starting to break at the edges. Drain well.",
+  "Coarsely grind the coconut with the shallots, garlic, green chillies and cumin seeds, without adding water.",
+  "Return the cassava to the pan over low heat, add the coconut mixture and mash lightly with a spoon for 3 to 4 minutes, until it is evenly mixed and rough-textured.",
+  "Heat the coconut oil in a small pan over medium heat. Fry the mustard seeds until they pop, then the dried red chillies and curry leaves for 20 seconds. Pour it over the cassava.",
+  "Taste for salt and serve warm with a fish curry or chutney.",
+]
+
+[[recipe]]
+id = "01a18bb1-05c3-79ba-b92b-2119c286d751"
+name = "Kerala vegetable stew"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coconut-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Peel the potatoes and carrot and cut them into cubes about 2 cm across. Cut the french beans into pieces about 3 cm long. Thinly slice the onion, cut the ginger into thin strips and slit the green chillies.",
+  "Heat the coconut oil in a pan over medium heat. Fry the cinnamon, cardamom, cloves and black pepper for 30 seconds.",
+  "Add the onion, ginger, green chillies and half the curry leaves and fry for 4 minutes, until soft but not coloured.",
+  "Add the potatoes, carrot, french beans, the water and salt. Cover and simmer for 10 to 12 minutes, until the vegetables are nearly tender.",
+  "Add the peas and half the coconut milk and simmer for 4 minutes, until the vegetables are fully tender.",
+  "Pour in the rest of the coconut milk and heat for 1 minute without boiling, until steaming. Scatter the rest of the curry leaves over.",
+  "Taste for salt and serve hot with appam or idiyappam.",
+]
+
+[[recipe]]
+id = "01a18bb1-05c5-7f08-9a8a-78805b0d5863"
+name = "Kadala curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 70
+ingredients = [
+  { id = "black-chickpeas", amount = 1, unit = "cup" },
+  { id = "coconut", amount = 0.75, unit = "cup" },
+  { id = "shallot", amount = 10, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "fennel-seeds", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coconut-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the black chickpeas and soak them overnight in plenty of water. Drain.",
+  "Simmer the black chickpeas in the water with salt and the turmeric in a covered pan over medium-low heat for 45 to 50 minutes, until tender. Keep the cooking liquid.",
+  "Dry-roast the coconut and fennel seeds in a pan over medium-low heat for 8 minutes, stirring, until deep brown. Add the coriander powder and Kashmiri chilli powder for the last 30 seconds. Cool and grind to a smooth paste with a little of the chickpea liquid.",
+  "Slice the shallots, chop the tomato and crush the ginger and garlic together.",
+  "Heat the coconut oil in a heavy pan over medium heat. Fry the mustard seeds until they pop, then half the curry leaves, then the shallots for 6 minutes, until golden.",
+  "Add the ginger and garlic for 1 minute, then the tomato for 3 minutes, until soft. Add the coconut paste and the black chickpeas with their liquid and simmer for 10 minutes, until the gravy is thick and dark.",
+  "Stir in the garam masala and the rest of the curry leaves. Taste for salt and serve hot with puttu or appam.",
+]
+
+[[recipe]]
+id = "01a18bb3-793b-75c4-8d52-015913570d99"
+name = "Kerala parippu curry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "moong-dal", amount = 0.75, unit = "cup" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "shallot", amount = 3, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Dry-roast the moong dal in a pan over low heat for 3 to 4 minutes, until it smells nutty. Rinse it in several changes of water.",
+  "Simmer the dal with the water, turmeric and green chillies in a covered pan over medium-low heat for 18 to 20 minutes, until completely soft. Mash it lightly.",
+  "Grind the coconut, cumin seeds and garlic to a smooth paste with a splash of the cooked dal.",
+  "Stir the paste and salt into the dal and simmer for 3 minutes, until it just bubbles. Don't let it boil hard.",
+  "Slice the shallots. Heat the ghee in a small pan over medium heat, fry the mustard seeds until they pop, then the shallots, dried red chillies and curry leaves for 2 minutes, until the shallots are golden.",
+  "Pour the tempering over the dal, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-793e-7973-9268-9a1926287bf2"
+name = "Pulissery"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "ash-gourd", amount = 250, unit = "g" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coconut-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Peel the ash gourd, remove the seeds and cut it into cubes about 2 cm across. Whisk the curd until smooth.",
+  "Simmer the ash gourd with the water, turmeric and salt over medium heat for 8 to 10 minutes, until translucent and tender.",
+  "Grind the coconut, cumin seeds and green chillies to a smooth paste.",
+  "Add the paste to the ash gourd and simmer for 3 minutes, until it bubbles.",
+  "Turn the heat to its lowest, stir in the curd and heat for 2 to 3 minutes, stirring constantly, until just warm and frothy at the edges. Don't let it boil or it will split.",
+  "Heat the coconut oil in a small pan over medium heat. Fry the mustard seeds until they pop, then the fenugreek seeds, dried red chillies and curry leaves for 20 seconds. Pour over the pulissery.",
+  "Taste for salt and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-7940-7ff5-9eac-98f33926f854"
+name = "Mambazha pulissery"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "mango", amount = 3, unit = "small" },
+  { id = "curd", amount = 1.5, unit = "cup" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coconut-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Peel the mangoes, keeping the stones with plenty of flesh on, and cut the rest of the flesh into chunks. Whisk the curd until smooth.",
+  "Simmer the mangoes and stones with the water, turmeric, red chilli powder, jaggery and salt over medium heat for 8 to 10 minutes, until soft and the liquid is syrupy.",
+  "Grind the coconut, cumin seeds and green chillies to a smooth paste. Stir it in and simmer for 3 minutes.",
+  "Turn the heat to its lowest and stir in the curd for 2 minutes, until just warm. Don't let it boil.",
+  "Heat the coconut oil in a small pan over medium heat. Fry the mustard seeds until they pop, then the fenugreek seeds, dried red chillies and curry leaves for 20 seconds. Pour it over.",
+  "Taste and balance the sweet, sour and heat. Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-7942-70c6-8df8-49a3881de224"
+name = "Ulli theeyal"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "shallot", amount = 20, unit = "piece" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "coriander-seeds", amount = 1.5, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 5, unit = "piece" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coconut-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Peel the shallots and halve any large ones. Soak the tamarind in half the water for 10 minutes, squeeze it and strain, keeping the liquid.",
+  "Dry-roast the coconut in a heavy pan over medium-low heat for 10 to 12 minutes, stirring constantly, until it is evenly dark brown but not burnt.",
+  "Add the coriander seeds, dried red chillies and fenugreek seeds and roast for 2 minutes. Cool, then grind with a little of the rest of the water to a very smooth, dark paste.",
+  "Heat the coconut oil in a clay pot or heavy pan over medium heat. Fry the mustard seeds until they pop, then the curry leaves for a few seconds.",
+  "Add the shallots and fry for 8 minutes, until soft and golden.",
+  "Add the tamarind liquid, turmeric and salt and simmer for 5 minutes. Add the coconut paste, the rest of the water and the jaggery and simmer for 8 to 10 minutes, until thick and the coconut oil floats on top.",
+  "Taste and balance the sour, salt and sweet. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7944-7d4c-9de4-2e51067a846f"
+name = "Beans mezhukkupuratti"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "french-beans", amount = 400, unit = "g" },
+  { id = "shallot", amount = 5, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coconut-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Trim the french beans and cut them into pieces about 2 cm long. Thinly slice the shallots and garlic.",
+  "Heat the coconut oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the curry leaves for a few seconds.",
+  "Add the shallots and garlic and fry for 3 minutes, until soft and golden at the edges.",
+  "Add the french beans, turmeric and salt. Cover and cook on low heat for 6 to 8 minutes, stirring now and then, until the beans are tender.",
+  "Uncover, sprinkle the chilli flakes over and stir-fry on medium heat for 3 minutes, until the beans are glossy and lightly browned.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7947-78e6-9c83-9d7a21edd445"
+name = "Cabbage poriyal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 12
+ingredients = [
+  { id = "cabbage", amount = 400, unit = "g" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Very finely shred the cabbage and slit the green chillies.",
+  "Heat the oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the urad dal for 1 minute, until golden.",
+  "Add the dried red chilli, curry leaves, green chillies and asafoetida and fry for 20 seconds.",
+  "Add the cabbage, turmeric and salt. Stir-fry for 6 to 8 minutes, until the cabbage is tender but still has a little bite.",
+  "Stir in the coconut and cook for 1 minute. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7949-7c9d-8955-209ea24d904d"
+name = "Keerai masiyal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "amaranth-leaves", amount = 300, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 1, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Pick the amaranth leaves and tender stems, wash them in several changes of water and chop them roughly.",
+  "Simmer the leaves with the water, garlic, green chillies and cumin seeds in a covered pan over medium heat for 6 to 8 minutes, until soft and dark green.",
+  "Mash everything with a wooden masher or pulse briefly in a blender, until coarse and creamy. Add salt.",
+  "Heat the oil in a small pan over medium heat. Fry the mustard seeds until they pop, then the urad dal for 1 minute, then the dried red chilli and asafoetida for 20 seconds.",
+  "Pour the tempering over the greens, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-794b-7383-92b7-f7ab5bda72f3"
+name = "Keerai kootu"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "amaranth-leaves", amount = 250, unit = "g" },
+  { id = "moong-dal", amount = 0.5, unit = "cup" },
+  { id = "coconut", amount = 0.33, unit = "cup" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the moong dal in several changes of water. Pick the amaranth leaves, wash them and chop them roughly.",
+  "Simmer the moong dal with the water and turmeric in a covered pan over medium-low heat for 15 minutes, until soft.",
+  "Add the amaranth leaves and salt and cook for 5 minutes, until wilted.",
+  "Grind the coconut, half the cumin seeds and the green chillies to a smooth paste. Stir it in and simmer for 3 minutes, until thick.",
+  "Heat the oil in a small pan over medium heat. Fry the mustard seeds until they pop, then the urad dal, the rest of the cumin seeds, the dried red chilli and curry leaves for 1 minute. Pour over the kootu.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-794d-76e7-950d-bbc8eae7d228"
+name = "Chickpea sundal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 50
+ingredients = [
+  { id = "chickpeas", amount = 1, unit = "cup" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the chickpeas and soak them overnight in plenty of water. Drain.",
+  "Simmer the chickpeas in the water with salt in a covered pan over medium-low heat for 40 to 45 minutes, until tender but whole. Drain well.",
+  "Heat the oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the urad dal for 1 minute, until golden.",
+  "Add the dried red chillies, slit green chilli, curry leaves and asafoetida and fry for 20 seconds.",
+  "Add the chickpeas and toss for 2 minutes. Add the coconut and toss for 1 minute.",
+  "Taste for salt and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-7950-7488-968b-2e5846ec89e7"
+name = "Rava kichadi"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "semolina", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "french-beans", amount = 50, unit = "g" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Dry-roast the semolina in a pan over low heat for 5 minutes, stirring, until it smells toasty but is still pale. Tip it out.",
+  "Finely chop the onion, tomato, carrot, french beans, ginger and green chillies.",
+  "Heat the ghee in a pan over medium heat. Fry the cashews for 1 minute, until golden, then the mustard seeds until they pop and the urad dal until golden.",
+  "Add the curry leaves, onion, ginger and green chillies and fry for 3 minutes, until soft. Add the carrot, french beans, peas and tomato and cook for 4 minutes.",
+  "Add the water, turmeric and salt and bring to a boil.",
+  "Lower the heat and pour in the semolina in a thin stream, stirring constantly so no lumps form. Cover and cook on low heat for 3 to 4 minutes, until soft and thick.",
+  "Taste for salt and serve hot with chutney.",
+]
+
+[[recipe]]
+id = "01a18bb3-7952-7271-a184-2d2dfd98531f"
+name = "Tomato bath"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "semolina", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Dry-roast the semolina in a pan over low heat for 5 minutes, stirring, until fragrant. Tip it out.",
+  "Finely chop the tomatoes, onion, green chillies and ginger.",
+  "Heat the ghee in a pan over medium heat. Fry the mustard seeds until they pop, then the chana dal and urad dal for 1 minute, until golden.",
+  "Add the curry leaves, onion, ginger and green chillies and fry for 3 minutes. Add the tomatoes, turmeric, red chilli powder and salt and cook for 5 minutes, until pulpy.",
+  "Add the water and bring to a boil. Lower the heat and pour in the semolina in a thin stream, stirring constantly.",
+  "Cover and cook on low heat for 3 to 4 minutes, until thick and soft. Taste for salt, scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7954-763c-a83a-726c712c5422"
+name = "Dondakaya fry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "ivy-gourd", amount = 400, unit = "g" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wash and dry the ivy gourd, trim the ends and cut each one lengthwise into quarters.",
+  "Dry-roast the peanuts in a pan for 3 to 4 minutes, until browned. Pound them coarsely with the garlic, cumin seeds and red chilli powder.",
+  "Heat the oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the urad dal for 1 minute and the curry leaves for a few seconds.",
+  "Add the ivy gourd, turmeric and salt. Cover and cook on low heat for 8 minutes, until it softens.",
+  "Uncover and stir-fry on medium heat for 6 to 8 minutes, until the ivy gourd is browned and slightly crisp.",
+  "Add the peanut mixture and toss for 2 minutes. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7956-7430-9253-1e115ae45157"
+name = "Bendakaya fry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "okra", amount = 400, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wash the okra and dry it completely with a cloth. Trim it and cut it into rounds about 1 cm thick. Thinly slice the onion.",
+  "Heat the oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the cumin seeds and curry leaves for 20 seconds.",
+  "Add the okra and turmeric and stir-fry uncovered for 10 to 12 minutes, stirring gently, until no longer sticky and browned in places.",
+  "Add the onion and fry for 3 minutes, until soft.",
+  "Sprinkle the red chilli powder, coriander powder and salt over and toss for 2 minutes. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7959-75a1-a207-927b44d38346"
+name = "Andhra aloo fry"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the potatoes and cut them into cubes about 2 cm across. Rinse and pat dry. Crush the garlic coarsely.",
+  "Heat the oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the urad dal, chana dal and cumin seeds for 1 minute, until golden.",
+  "Add the curry leaves and garlic and fry for 30 seconds, until the garlic is golden.",
+  "Add the potatoes, turmeric and salt. Cover and cook on low heat for 10 minutes, stirring now and then, until nearly tender.",
+  "Uncover and fry on medium heat for 6 to 8 minutes, until golden and crisp at the edges.",
+  "Sprinkle the red chilli powder and coriander powder over and toss for 1 minute. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-795b-7a85-a6f2-5b5f40cf60c8"
+name = "Natu kodi pulusu"
+serves = 4
+prep_minutes = 15
+cook_minutes = 60
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "poppy-seeds", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Cut the country chicken into small pieces. Thinly slice the onions and chop the tomatoes. Soak the tamarind in a little of the water for 10 minutes, squeeze it and strain.",
+  "Grind the coconut and poppy seeds to a smooth paste with a little more of the water.",
+  "Heat the oil in a heavy pan over medium heat. Fry the curry leaves for a few seconds, then the onions for 8 minutes, until golden.",
+  "Add the ginger garlic paste and fry for 1 minute. Add the chicken, turmeric and salt and fry for 8 minutes, until browned.",
+  "Add the tomatoes, red chilli powder and coriander powder and cook for 5 minutes. Add the rest of the water, cover and simmer for 30 minutes, until the chicken is tender. Country chicken is firm, so give it longer if needed.",
+  "Stir in the coconut paste and tamarind liquid and simmer for 6 to 8 minutes, until the gravy is thick and tangy.",
+  "Stir in the garam masala, taste for salt and sourness and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-795d-7233-8840-ae154cfab9a6"
+name = "Royyala iguru"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and devein the prawns and toss them with half the turmeric and salt. Finely chop the onions and tomato and slit the green chillies.",
+  "Heat the oil in a pan over medium heat. Fry the curry leaves and green chillies for 20 seconds, then the onions for 8 minutes, until golden brown.",
+  "Add the ginger garlic paste and fry for 1 minute. Add the tomato, red chilli powder, coriander powder, the rest of the turmeric and salt and cook for 5 minutes, until thick and the oil separates.",
+  "Add the prawns and cook on medium heat for 5 to 6 minutes, stirring, until they curl, turn pink and the masala clings to them thickly.",
+  "Sprinkle the garam masala over. Taste for salt, scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-795f-7852-a32c-d6a15adbcf7a"
+name = "Chepala pulusu"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "rohu", amount = 600, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "tamarind", amount = 1.5, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "jaggery", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cut the rohu into steaks about 3 cm thick, rinse and rub with half the turmeric and salt. Soak the tamarind in half the water for 10 minutes, squeeze it and strain.",
+  "Thinly slice the onions, chop the tomatoes and slit the green chillies.",
+  "Heat the oil in a wide pan over medium heat. Fry the mustard seeds until they pop, then the fenugreek seeds, cumin seeds and curry leaves for 20 seconds.",
+  "Add the onions and green chillies and fry for 6 minutes, until soft. Add the ginger garlic paste for 1 minute, then the tomatoes, red chilli powder, coriander powder and the rest of the turmeric and cook for 5 minutes.",
+  "Add the tamarind liquid, the rest of the water, the jaggery and salt and simmer for 8 minutes, until slightly thick.",
+  "Slide in the fish in a single layer and simmer gently for 8 to 10 minutes without stirring, swirling the pan instead, until the fish flakes easily.",
+  "Taste for salt and sourness and serve. It tastes even better after resting for a few hours.",
+]
+
+[[recipe]]
+id = "01a18bb3-7962-7cd3-a04e-4d407a7b4c41"
+name = "Kodi vepudu"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "red-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 3, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the chicken into small pieces and toss with the ginger garlic paste, turmeric, half the red chilli powder and salt.",
+  "Finely chop the onion and slit the green chillies.",
+  "Heat the oil in a wide heavy pan over medium heat. Fry the cashews for 1 minute, until golden. Lift them out.",
+  "Fry the curry leaves and green chillies for 30 seconds, then the onion for 5 minutes, until golden.",
+  "Add the chicken, cover and cook on medium-low heat for 15 minutes, stirring now and then, until cooked through.",
+  "Uncover, add the rest of the red chilli powder, the coriander powder, garam masala and black pepper and fry on medium-high heat for 8 to 10 minutes, stirring often, until dry, dark and crisp at the edges.",
+  "Toss in the cashews and coriander leaves. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7964-711c-893d-195e91176c93"
+name = "Mutton pepper fry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 85
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "shallot", amount = 15, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "black-pepper", amount = 1, unit = "tbsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 3, unit = "sprig" },
+  { id = "coconut-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cut the mutton into small pieces. Slice the shallots. Coarsely grind the black pepper, fennel seeds and cumin seeds.",
+  "Simmer the mutton with the ginger garlic paste, turmeric, red chilli powder, salt and the water in a covered heavy pan over low heat for 55 to 60 minutes, until tender.",
+  "Heat the coconut oil in a wide heavy pan over medium heat. Fry the curry leaves for a few seconds, then the shallots for 8 minutes, until golden brown.",
+  "Add the mutton with its juices and the coriander powder and cook on medium-high heat for 10 minutes, stirring, until the liquid evaporates.",
+  "Add the ground pepper mixture and fry for 5 to 8 minutes, stirring often, until the mutton is dark and coated in a dry, glossy masala.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7966-79f8-9538-81de32bfa3bd"
+name = "Chicken chukka"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "shallot", amount = 12, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 3, unit = "sprig" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the chicken into small pieces and toss with the turmeric and salt. Slice the shallots and chop the tomato.",
+  "Dry-roast the dried red chillies, coriander seeds, black pepper, fennel seeds and cumin seeds in a pan over medium-low heat for 2 minutes, until fragrant. Grind to a coarse powder.",
+  "Heat the oil in a heavy pan over medium heat. Fry the curry leaves for a few seconds, then the shallots for 6 minutes, until golden.",
+  "Add the ginger garlic paste for 1 minute, then the tomato for 3 minutes, until soft.",
+  "Add the chicken and fry for 5 minutes. Cover and cook on low heat for 12 to 15 minutes, until cooked through.",
+  "Add the ground spices and fry uncovered on medium heat for 6 to 8 minutes, stirring, until the chicken is dry and coated in a dark masala.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb3-7968-79db-bca2-93f0ee1bac8f"
+name = "Mysore masala dosa"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 2, unit = "tbsp" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "flattened-rice", amount = 0.25, unit = "cup" },
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "shallot", amount = 4, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice, urad dal, chana dal and fenugreek seeds in several changes of water and soak them in plenty of water for 5 hours. Rinse and soak the flattened rice for the last 15 minutes.",
+  "Grind everything with as much of the water as needed to a smooth, thick batter. Stir in salt and leave in a warm place overnight, until risen and bubbly.",
+  "Boil the potatoes in their skins for 15 to 20 minutes, until tender. Peel and crumble them. Thinly slice the onions and slit the green chillies.",
+  "Heat the oil in a pan over medium heat. Fry the mustard seeds until they pop, then the curry leaves, green chillies and onions for 5 minutes, until soft. Add the turmeric, potatoes, salt and a splash of the water and mix well.",
+  "Soak the dried red chillies in a little hot water for 10 minutes, drain and grind with the garlic, shallots and salt to a thick red paste.",
+  "Heat a griddle over medium-high heat. Pour a ladle of batter in the middle and spread it in circles into a thin round about 22 cm across. Drizzle ghee round the edge.",
+  "When the underside is golden, after 2 to 3 minutes, spread a thin layer of the red paste over and put a spoonful of potato filling in the middle.",
+  "Fold the dosa over and serve hot with chutney. Repeat with the rest of the batter.",
+]
+
+[[recipe]]
+id = "01a18bb3-796b-752d-9ae0-8c28725c5a12"
+name = "Benne dosa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "flattened-rice", amount = 0.25, unit = "cup" },
+  { id = "semolina", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "butter", amount = 6, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice, urad dal, chana dal and fenugreek seeds in several changes of water and soak them in plenty of water for 5 hours. Rinse and soak the flattened rice for the last 15 minutes.",
+  "Grind everything with as much of the water as needed to a smooth, thick batter. Stir in salt and leave in a warm place overnight, until risen and bubbly.",
+  "Stir the semolina and sugar into the batter. It should be thicker than regular dosa batter.",
+  "Heat a heavy griddle over medium heat. Pour a ladle of batter and spread it gently into a thick round about 15 cm across.",
+  "Dot a generous spoonful of butter over the top and round the edge. Cook for 3 to 4 minutes, until the base is deep golden and crisp.",
+  "Fold in half and serve hot with chutney. Repeat with the rest of the batter and butter.",
+]
+
+[[recipe]]
+id = "01a18bb3-796d-7732-9e69-86d64a1571ee"
+name = "Ghee roast dosa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice, urad dal and fenugreek seeds in several changes of water and soak them in plenty of water for 5 hours.",
+  "Grind with as much of the water as needed to a smooth batter. Stir in salt and leave in a warm place overnight, until risen and bubbly.",
+  "Heat a griddle over medium-high heat and wipe it with a little ghee. Pour a ladle of batter in the middle and spread it in quick circles into a very thin round about 25 cm across.",
+  "Drizzle a spoonful of ghee all over the top and round the edge. Cook for 3 to 4 minutes on medium heat, until the dosa is deep golden all over and crisp as glass.",
+  "Roll it into a cone or a long roll and serve straight away with chutney. Repeat with the rest of the batter.",
+]
+
+[[recipe]]
+id = "01a18bb3-796f-7dc7-a3c7-064702929c17"
+name = "Paper dosa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice, urad dal, chana dal and fenugreek seeds in several changes of water and soak them in plenty of water for 5 hours.",
+  "Grind with most of the water to a very smooth batter. Stir in salt and leave in a warm place overnight, until bubbly.",
+  "Stir in enough of the rest of the water to make a thin batter that flows easily off a ladle.",
+  "Heat a large griddle over medium-high heat and wipe it with a little of the oil. Pour a ladle of batter in the middle and spread it quickly in circles into the thinnest round you can, about 35 cm across.",
+  "Drizzle a little oil over and cook for 3 to 4 minutes, until golden, crisp and lifting at the edges. Don't flip it.",
+  "Roll it loosely and serve straight away with sambar and chutney. Repeat with the rest of the batter.",
+]
+
+[[recipe]]
+id = "01a18bb3-7971-73de-9842-b0031efeb536"
+name = "Ragi idli"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "finger-millet-flour", amount = 1, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "idli-rice", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the urad dal, idli rice and fenugreek seeds in several changes of water and soak them in plenty of water for 5 hours.",
+  "Grind the urad dal and fenugreek seeds with a little of the water until light and fluffy, then grind the idli rice coarsely with a little more of the water.",
+  "Mix both batters with the finger millet flour, salt and enough of the rest of the water to make a thick pouring batter. Leave in a warm place overnight, until risen and bubbly.",
+  "Grease the idli moulds with the oil and fill each one three-quarters full.",
+  "Steam over boiling water for 12 to 15 minutes, until a skewer comes out clean.",
+  "Rest for 2 minutes, then scoop them out with a wet spoon. Serve hot with sambar and chutney.",
+]
+
+[[recipe]]
+id = "01a18bb3-7974-7f68-876c-1e6657e9d590"
+name = "Kanchipuram idli"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "idli-rice", amount = 1, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 0.5, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the idli rice and urad dal in several changes of water and soak them in plenty of water for 5 hours.",
+  "Grind the urad dal until light and fluffy, then the idli rice to a fine, gritty texture, using as much of the water as needed. Mix with salt and leave overnight, until bubbly.",
+  "Coarsely crush the black pepper and cumin seeds. Grate the ginger and break the cashews in half.",
+  "Heat the ghee in a small pan over medium heat. Fry the cashews for 1 minute, until golden, then the pepper, cumin, ginger, curry leaves, dry ginger powder and asafoetida for 30 seconds.",
+  "Stir the tempering into the batter.",
+  "Grease a deep steel tumbler or small bowls with ghee and fill them three-quarters full. Steam over boiling water for 20 to 25 minutes, until a skewer comes out clean.",
+  "Unmould, slice into thick rounds and serve hot with chutney.",
+]
+
+[[recipe]]
+id = "01a18bb3-7976-781f-a1d7-e11aae04a6bb"
+name = "Thayir vadai"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "urad-dal", amount = 1, unit = "cup" },
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coconut", amount = 2, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Rinse the urad dal and soak it in plenty of water for 4 hours. Drain and grind with as little of the water as possible to a thick, fluffy batter. Beat in salt.",
+  "Grind the coconut, half the ginger and half the green chillies to a fine paste. Whisk it with the curd, milk and salt until smooth.",
+  "Heat the oil for deep frying over medium heat. With wet hands, shape balls of batter into flat rounds about 6 cm across with a hole in the middle and slide them into the oil.",
+  "Fry for 3 to 4 minutes, turning, until golden and crisp. Drain.",
+  "Dip the hot vadas in the rest of the water, warmed, for 2 minutes, then squeeze gently between your palms and drop them into the curd mixture. Leave for 30 minutes to soften.",
+  "Heat a spoonful of the oil in a small pan. Fry the mustard seeds until they pop, then the curry leaves, the rest of the ginger and green chillies, chopped, and the asafoetida for 20 seconds. Pour over the curd.",
+  "Scatter the coriander leaves over, taste for salt and serve cool.",
+]
+
+[[recipe]]
+id = "01a18bb3-7978-7d27-a27e-398f906de5a3"
+name = "Rasam vada"
+serves = 4
+prep_minutes = 20
+cook_minutes = 35
+ingredients = [
+  { id = "urad-dal", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "tamarind", amount = 1, unit = "tsp" },
+  { id = "rasam-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the urad dal and soak it in plenty of water for 4 hours. Drain and grind with as little of the water as possible to a thick, fluffy batter. Beat in salt.",
+  "Soak the tamarind in a little more of the water for 10 minutes, squeeze it and strain. Chop the tomatoes.",
+  "Simmer the tomatoes, tamarind liquid, rasam powder, turmeric, salt and the rest of the water for 10 minutes, until the raw smell of the tamarind goes.",
+  "Heat the ghee in a small pan. Fry the mustard seeds until they pop, then the cumin seeds, curry leaves and asafoetida for 20 seconds. Pour into the rasam and add the coriander leaves.",
+  "Heat the oil for deep frying over medium heat. With wet hands, shape the batter into flat rounds about 6 cm across with a hole in the middle and fry for 3 to 4 minutes, until golden. Drain.",
+  "Drop the hot vadas into the warm rasam and leave for 10 minutes to soak.",
+  "Taste the rasam for salt and serve the vadas in bowls with plenty of rasam.",
+]
+
+[[recipe]]
+id = "01a18bb3-797b-749a-92fd-a67184d93f9e"
+name = "Unniyappam"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "rice-flour", amount = 1, unit = "cup" },
+  { id = "jaggery", amount = 0.75, unit = "cup" },
+  { id = "banana", amount = 2, unit = "small" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "ghee", amount = 0.5, unit = "cup" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Melt the jaggery in the water over low heat for 3 minutes, until dissolved. Strain and cool.",
+  "Mash the bananas smoothly. Crush the cardamom seeds. Cut the coconut into tiny pieces and fry them in a spoonful of the ghee for 2 minutes, until golden.",
+  "Mix the rice flour, bananas, jaggery syrup, cardamom, fried coconut and sesame seeds into a thick batter that drops off a spoon. Rest it for 30 minutes, then stir in the baking soda.",
+  "Heat an appam pan over medium heat and put a little ghee in each hollow.",
+  "Fill each hollow three-quarters full with batter. Cook for 2 to 3 minutes, until the underside is deep brown.",
+  "Turn each one with a skewer and cook for 2 minutes more, until brown all over and cooked inside. Repeat with the rest of the batter and ghee.",
+  "Drain and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-797d-78c6-9d5c-0d275f394e61"
+name = "Palada payasam"
+serves = 4
+prep_minutes = 30
+cook_minutes = 60
+ingredients = [
+  { id = "rice-flour", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 5, unit = "cup" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "banana-leaves", amount = 2, unit = "piece" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Mix the rice flour, ghee and enough of the water into a thin, smooth, pourable batter.",
+  "Spread a thin layer of batter over the banana leaves, then roll each one up and tie it loosely. Steam for 12 to 15 minutes, until the batter is set and translucent.",
+  "Peel the set ada sheets off the leaves, cool them, and cut into small flakes about 1 cm across. Rinse in cold water so they don't stick together.",
+  "Simmer the milk in a heavy pan over medium heat, stirring often, for 25 to 30 minutes, until reduced by a third.",
+  "Add the ada flakes and sugar and simmer on low heat for 15 minutes, stirring often, until the flakes are soft and the payasam turns pale pink and creamy.",
+  "Stir in the crushed cardamom seeds. Taste for sweetness and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-797f-7fc7-aa75-207f7a5d34db"
+name = "Elaneer payasam"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "tender-coconut", amount = 2, unit = "piece" },
+  { id = "milk", amount = 3, unit = "cup" },
+  { id = "condensed-milk", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Open the tender coconuts, pour off the coconut water and scoop out the soft flesh. Chop half the flesh finely and blend the rest with a little of the coconut water until smooth.",
+  "Simmer the milk in a heavy pan over medium heat for 12 to 15 minutes, stirring often, until reduced by about a quarter.",
+  "Stir in the condensed milk and crushed cardamom seeds and simmer for 3 minutes. Take it off the heat and cool until just warm.",
+  "Stir in the blended and chopped tender coconut and enough of the coconut water to make it pourable. Don't heat it again or it may split.",
+  "Fry the cashews in the ghee for 1 minute, until golden, and scatter them over.",
+  "Taste for sweetness and serve chilled.",
+]
+
+[[recipe]]
+id = "01a18bb3-7981-759b-9e35-fc64c0f8af56"
+name = "Ada pradhaman"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "rice-flour", amount = 0.5, unit = "cup" },
+  { id = "jaggery", amount = 1, unit = "cup" },
+  { id = "coconut-milk", amount = 3, unit = "cup" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "dry-ginger-powder", amount = 0.25, unit = "tsp" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "coconut", amount = 2, unit = "tbsp" },
+  { id = "banana-leaves", amount = 2, unit = "piece" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Mix the rice flour with a spoonful of the ghee and half the water into a thin, smooth batter.",
+  "Spread a thin layer over the banana leaves, roll each one up and steam for 12 to 15 minutes, until set. Peel off, cool and cut into small flakes. Rinse in cold water.",
+  "Melt the jaggery in the rest of the water over low heat for 4 minutes. Strain.",
+  "Heat a spoonful of the ghee in a heavy pan over medium heat. Add the ada flakes and jaggery syrup and cook for 10 minutes, stirring, until the syrup thickens and coats the flakes.",
+  "Pour in most of the coconut milk and simmer for 10 minutes, stirring, until thick.",
+  "Add the rest of the coconut milk, the crushed cardamom seeds and dry ginger powder, and heat for 2 minutes without boiling.",
+  "Fry the cashews and coconut in the rest of the ghee for 2 minutes, until golden, and pour over. Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-7984-7e1f-9956-1d62f0074009"
+name = "Kozhukattai"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "rice-flour", amount = 1, unit = "cup" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "jaggery", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.25, unit = "cup" },
+]
+steps = [
+  "For the filling, melt the jaggery with a splash of the water over low heat. Strain, return to the pan and add the coconut. Cook for 6 to 8 minutes, stirring, until thick and sticky. Stir in the crushed cardamom seeds and cool.",
+  "Bring the rest of the water to a boil with salt and the ghee. Lower the heat and stir in the rice flour until it forms a lump. Cover and leave for 5 minutes.",
+  "Knead the warm dough for 2 to 3 minutes with greased hands, until smooth and soft.",
+  "Pinch off balls about 4 cm across. Press each one into a thin cup with your thumbs, fill with a spoonful of the coconut filling and pleat the edges together to seal into a pouch.",
+  "Steam over boiling water for 10 to 12 minutes, until the outside turns glossy and no longer sticky.",
+  "Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb3-7986-7c7f-a619-c2637a81aebe"
+name = "Masala puri"
+serves = 4
+prep_minutes = 25
+cook_minutes = 50
+ingredients = [
+  { id = "dried-white-peas", amount = 0.75, unit = "cup" },
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "semolina", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "sev", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the dried white peas and soak them overnight in plenty of water. Drain.",
+  "Simmer the dried white peas in most of the water with salt in a covered pan over medium-low heat for 35 to 40 minutes, until very soft.",
+  "Knead the all-purpose flour, semolina, salt and a spoonful of the oil with enough of the rest of the water to make a stiff dough. Rest for 15 minutes, roll it out thinly and cut into rounds about 6 cm across. Prick each one with a fork.",
+  "Heat the oil for deep frying over medium heat. Fry the rounds in batches for 2 to 3 minutes, until crisp and golden. Drain.",
+  "Heat a spoonful of the frying oil in a pan over medium heat. Fry half the onions, finely chopped, for 4 minutes, then the ginger garlic paste, green chillies, half the tomatoes, chopped, the red chilli powder, coriander powder and garam masala for 4 minutes.",
+  "Add the dried white peas with their liquid, mash half of them and simmer for 5 minutes, until thin and soupy.",
+  "Crush the crisp rounds onto plates. Ladle the hot gravy over, then top with the rest of the onions and tomatoes, finely chopped, the grated carrot, chaat masala, lemon juice, sev and coriander leaves. Taste for salt and serve straight away.",
+]

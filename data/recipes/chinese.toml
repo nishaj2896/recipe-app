@@ -1,0 +1,235 @@
+# Chinese (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bba-785c-7cb8-834d-24e0197260c4"
+name = "Kung pao chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "peanuts", amount = 0.5, unit = "cup" },
+  { id = "dried-red-chillies", amount = 10, unit = "piece" },
+  { id = "sichuan-peppercorns", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tsp" },
+  { id = "black-vinegar", amount = 1.5, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Use boneless chicken thighs. Cut them into cubes about 1.5 cm across and toss with the shaoxing wine, half the soy sauce, half the cornflour and a little salt.",
+  "Whisk the rest of the soy sauce, the dark soy sauce, black vinegar, sugar, the rest of the cornflour and the water into a sauce.",
+  "Snip the dried red chillies into pieces and shake out most of the seeds. Slice the garlic and ginger and cut the spring onions into pieces about 2 cm long.",
+  "Heat the oil in a wok over medium heat. Fry the peanuts for 1 to 2 minutes, until golden, and lift them out. Fry the dried red chillies and sichuan peppercorns for 20 to 30 seconds, until the chillies darken but don't burn.",
+  "Raise the heat to high, add the chicken and stir-fry for 3 to 4 minutes, until cooked through. Add the garlic, ginger and spring onions and toss for 30 seconds.",
+  "Stir the sauce, pour it in and toss for 1 minute, until thick and glossy. Toss in the peanuts.",
+  "Taste for salt and balance and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bba-785e-7793-8335-d5dc9b148364"
+name = "Mapo tofu"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "silken-tofu", amount = 400, unit = "g" },
+  { id = "beef-mince", amount = 150, unit = "g" },
+  { id = "doubanjiang", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "sichuan-peppercorns", amount = 1, unit = "tsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Toast the sichuan peppercorns in a dry wok over low heat for 2 minutes, until fragrant, then grind them to a powder.",
+  "Cut the silken tofu into cubes about 2 cm across. Finely chop the garlic and ginger and slice the spring onions.",
+  "Bring the water to a simmer in a small pan with a little salt. Slide in the silken tofu for 2 minutes to firm it up, then lift it out gently with a slotted spoon. Keep the water.",
+  "Heat the oil in the wok over medium-high heat. Fry the beef mince for 3 minutes, until browned and crisp in places.",
+  "Lower the heat to medium. Add the doubanjiang and chilli flakes and fry for 1 minute, until the oil turns red. Add the garlic and ginger for 30 seconds.",
+  "Pour in most of the water and the soy sauce and bring to a simmer. Slide in the silken tofu and simmer for 4 to 5 minutes, nudging gently so it doesn't break.",
+  "Mix the cornflour with the rest of the water, stir it in gently and simmer for 1 minute, until glossy. Taste for salt, sprinkle the ground sichuan peppercorns and spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bba-7860-7ecc-b429-d4ea871652b1"
+name = "Sweet and sour chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "pineapple", amount = 1, unit = "cup" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ketchup", amount = 3, unit = "tbsp" },
+  { id = "rice-vinegar", amount = 3, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into cubes about 2.5 cm across and toss with the egg and salt. Mix most of the cornflour with the all-purpose flour and toss the chicken in it until coated.",
+  "Cut the pineapple, bell pepper and onion into chunks about 2.5 cm across. Chop the garlic.",
+  "Whisk the ketchup, rice vinegar, sugar, soy sauce, the rest of the cornflour and the water into a sauce.",
+  "Heat the oil for deep frying over medium-high heat. Fry the chicken in batches for 4 to 5 minutes, until golden, crisp and cooked through. Drain.",
+  "Pour off all but a spoonful of the oil into a heatproof bowl. Stir-fry the garlic for 20 seconds, then the onion and bell pepper on high heat for 2 minutes, until just tender.",
+  "Add the pineapple and the sauce and stir for 1 minute, until thick and glossy.",
+  "Toss in the chicken just before serving. Taste and balance the sweet and sour. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18bba-7862-7210-821e-6abaa08ba499"
+name = "Sweet and sour pork"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "pork", amount = 500, unit = "g" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "pineapple", amount = 1, unit = "cup" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ketchup", amount = 3, unit = "tbsp" },
+  { id = "rice-vinegar", amount = 3, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use pork shoulder. Cut it into cubes about 2.5 cm across and toss with the shaoxing wine, egg and salt. Mix most of the cornflour with the all-purpose flour and toss the pork in it until coated.",
+  "Cut the pineapple, bell pepper and onion into chunks about 2.5 cm across. Chop the garlic.",
+  "Whisk the ketchup, rice vinegar, sugar, soy sauce, the rest of the cornflour and the water into a sauce.",
+  "Heat the oil for deep frying over medium heat. Fry the pork in batches for 5 minutes, until cooked through. Drain, then raise the heat to high and fry it again for 1 minute, until deep golden and very crisp.",
+  "Pour off all but a spoonful of the oil. Stir-fry the garlic for 20 seconds, then the onion and bell pepper on high heat for 2 minutes.",
+  "Add the pineapple and the sauce and stir for 1 minute, until thick and glossy.",
+  "Toss in the pork just before serving. Taste and balance the sweet and sour. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18bba-7864-7566-a0af-e8db965d1e38"
+name = "Beef and broccoli"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "beef", amount = 400, unit = "g" },
+  { id = "broccoli", amount = 1, unit = "medium" },
+  { id = "oyster-sauce", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "cornflour", amount = 1.5, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Use flank or sirloin steak. Slice it thinly against the grain and toss with the baking soda, half the cornflour, half the soy sauce and a splash of the water. Leave for 15 minutes.",
+  "Cut the broccoli into small florets. Finely chop the garlic and ginger.",
+  "Whisk the oyster sauce, dark soy sauce, the rest of the soy sauce and cornflour, the sugar and a little of the water into a sauce.",
+  "Bring the rest of the water to a boil with salt and blanch the broccoli for 1 minute, until bright green. Drain.",
+  "Heat the oil in a wok over high heat until smoking. Sear the beef in a single layer for 1 minute per side, until browned. Lift it out.",
+  "Stir-fry the garlic and ginger for 20 seconds, then add the broccoli, beef and sauce and toss for 1 minute, until glossy.",
+  "Drizzle the toasted sesame oil over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bba-7867-75c3-afd9-3f677a5b2c4b"
+name = "Chow mein"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "egg-noodles", amount = 250, unit = "g" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tsp" },
+  { id = "cornflour", amount = 1, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil and cook the egg noodles in it for 1 minute less than the packet says. Drain, rinse under the cold tap and toss with the toasted sesame oil.",
+  "Slice the chicken thinly and toss with the cornflour, a little of the soy sauce and salt. Shred the cabbage, cut the carrot into matchsticks, slice the spring onions and chop the garlic.",
+  "Heat half the oil in a wok over high heat. Spread the noodles out and fry without stirring for 2 minutes, until crisp underneath. Turn and fry for 1 minute more. Tip them out.",
+  "Heat the rest of the oil. Stir-fry the chicken for 3 minutes, until cooked through. Add the garlic, cabbage and carrot and toss for 2 minutes.",
+  "Add the noodles, bean sprouts, the rest of the soy sauce, the oyster sauce and dark soy sauce and toss for 2 minutes, until evenly coloured and hot.",
+  "Toss in the spring onions, taste for salt and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bba-7869-772a-9277-d52a3e914da2"
+name = "Lo mein"
+serves = 4
+prep_minutes = 15
+cook_minutes = 12
+ingredients = [
+  { id = "egg-noodles", amount = 250, unit = "g" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "bok-choy", amount = 2, unit = "piece" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 2, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil and cook the egg noodles in it as the packet says, until just tender. Keep a little of the cooking water, then drain.",
+  "Whisk the soy sauce, oyster sauce, dark soy sauce, sugar and toasted sesame oil into a sauce.",
+  "Slice the mushrooms, cut the bok choy into quarters lengthwise, cut the carrot into thin strips and slice the spring onions. Chop the garlic and ginger.",
+  "Heat the oil in a wok over high heat. Stir-fry the garlic and ginger for 20 seconds, then the mushrooms and carrot for 2 minutes, until the mushrooms brown.",
+  "Add the bok choy and toss for 1 minute, until the leaves wilt.",
+  "Add the noodles and sauce and toss for 2 minutes, adding a splash of the saved noodle water so the noodles stay silky and coated.",
+  "Toss in the spring onions, taste for salt and serve hot.",
+]

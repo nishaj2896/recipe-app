@@ -56,3 +56,890 @@ steps = [
   "Drain the pasta and toss it into the sauce for 1 minute, until coated.",
   "Tear the basil over and serve hot.",
 ]
+
+[[recipe]]
+id = "01a18bbd-3cd0-7bec-8c09-6e9f33e2d4d6"
+name = "Spaghetti carbonara"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "bacon", amount = 150, unit = "g" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "pecorino", amount = 50, unit = "g" },
+  { id = "parmesan", amount = 30, unit = "g" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Bring the water to a rolling boil and add plenty of salt.",
+  "Cut the bacon into strips about 1 cm wide. Finely grate the pecorino and parmesan. Whisk the eggs with most of the cheese and plenty of the black pepper.",
+  "Cook the spaghetti in the water until al dente, still slightly firm in the centre.",
+  "Meanwhile, fry the bacon in a large dry pan over medium heat for 6 to 8 minutes, until the fat runs and the edges are crisp. Take the pan off the heat.",
+  "Scoop out a mugful of the pasta cooking water, then drain the spaghetti and toss it in the bacon pan.",
+  "Let it cool for 1 minute, then pour in the egg mixture with a splash of the cooking water and toss fast and constantly, until the sauce turns creamy and coats the spaghetti. If it's too thick, add more water; it must not scramble.",
+  "Taste for salt, top with the rest of the cheese and black pepper and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cd2-7037-a970-caa33cd9c967"
+name = "Spaghetti bolognese"
+serves = 6
+prep_minutes = 15
+cook_minutes = 135
+ingredients = [
+  { id = "pasta", amount = 500, unit = "g" },
+  { id = "beef-mince", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "red-wine", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "water", amount = 5, unit = "l" },
+]
+steps = [
+  "Very finely chop the onion, carrot, celery and garlic.",
+  "Heat the olive oil in a heavy pan over medium-low heat. Cook the vegetables for 10 minutes, stirring, until soft and sweet but not browned.",
+  "Raise the heat to medium-high, add the beef mince and cook for 8 to 10 minutes, breaking it up, until it loses its pink colour and starts to brown.",
+  "Pour in the red wine and simmer for 3 minutes, until mostly evaporated. Stir in the milk and simmer for 3 minutes more.",
+  "Add the canned tomatoes, tomato paste, bay leaf, salt, black pepper and a little of the water. Cover with the lid ajar and simmer very gently for 1 hour 30 minutes, stirring now and then and adding a splash more water if it gets dry, until thick and rich.",
+  "Bring the rest of the water to a rolling boil with plenty of salt and cook the spaghetti until al dente. Drain, keeping a splash of the cooking water.",
+  "Toss the spaghetti with the sauce and the splash of cooking water. Taste for salt and serve with the parmesan grated over.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cd5-761a-ac0f-c9043cb35d5d"
+name = "Cacio e pepe"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "pecorino", amount = 120, unit = "g" },
+  { id = "black-pepper", amount = 2, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with a little salt. Use less salt than usual, as the cheese is salty.",
+  "Grate the pecorino very finely. Coarsely crush the black pepper.",
+  "Cook the spaghetti until a minute short of al dente. Scoop out plenty of the cooking water and let it cool for 2 minutes.",
+  "Toast the black pepper in a large dry pan over medium heat for 1 minute, until fragrant. Add a ladle of the cooking water.",
+  "Mix the pecorino with a little of the cooled cooking water into a thick, smooth paste.",
+  "Drain the spaghetti, toss it into the pepper pan and cook for 1 minute, until the water reduces. Take it off the heat.",
+  "Add the cheese paste and toss hard, adding cooking water a splash at a time, until a glossy, creamy sauce coats the spaghetti. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cd7-7e67-9e8d-726ac0015cb9"
+name = "Fettuccine alfredo"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "butter", amount = 6, unit = "tbsp" },
+  { id = "parmesan", amount = 120, unit = "g" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Bring the water to a rolling boil and add plenty of salt.",
+  "Finely grate the parmesan. Cut the butter into small cubes and put them in a large warm bowl.",
+  "Cook the fettuccine until al dente. Scoop out a mugful of the cooking water, then drain.",
+  "Tip the hot fettuccine onto the butter with a splash of the cooking water and toss until the butter melts.",
+  "Add the parmesan in handfuls, tossing constantly and adding more cooking water as needed, until the sauce is smooth, glossy and clings to every strand.",
+  "Taste for salt, grind the black pepper over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cd9-7a10-8b53-edda3e236417"
+name = "Pasta pomodoro"
+serves = 4
+prep_minutes = 5
+cook_minutes = 25
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "basil", amount = 12, unit = "leaf" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "parmesan", amount = 40, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Crush the whole peeled tomatoes by hand in a bowl. Lightly crush the garlic.",
+  "Warm the olive oil and garlic in a wide pan over medium-low heat for 2 minutes, until fragrant and pale golden. Remove the garlic.",
+  "Add the canned tomatoes and salt and simmer for 15 to 20 minutes, stirring now and then, until thick, glossy and sweet.",
+  "Meanwhile, bring the water to a rolling boil with plenty of salt and cook the spaghetti until al dente.",
+  "Drain the spaghetti, keeping a splash of the cooking water, and toss it in the sauce with the splash of water for 1 minute.",
+  "Tear in most of the basil. Taste for salt and serve with the parmesan grated over and the rest of the basil.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cdb-7309-a9be-fcf6f5a03463"
+name = "Pesto pasta"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "basil", amount = 2, unit = "cup" },
+  { id = "pine-nuts", amount = 3, unit = "tbsp" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "extra-virgin-olive-oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Toast the pine nuts in a dry pan over low heat for 3 minutes, until golden. Cool.",
+  "Finely grate the parmesan. Pick the basil leaves.",
+  "Pound or blend the garlic, pine nuts and a little salt to a paste. Add the basil and pound or pulse until finely chopped, then stir in the parmesan and the extra-virgin olive oil to make a thick, bright green sauce.",
+  "Bring the water to a rolling boil with plenty of salt and cook the pasta until al dente.",
+  "Scoop out a mugful of the cooking water, then drain the pasta.",
+  "Toss the pasta off the heat with the basil sauce and a splash of the cooking water, until glossy. Taste for salt and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cde-7f52-99dc-6201096ec71f"
+name = "Pasta primavera"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "asparagus", amount = 200, unit = "g" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "peas", amount = 0.75, unit = "cup" },
+  { id = "cherry-tomatoes", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "basil", amount = 10, unit = "leaf" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Snap the woody ends off the asparagus and cut it into pieces about 4 cm long. Halve the zucchini lengthwise and slice it. Halve the cherry tomatoes and slice the garlic.",
+  "Bring the water to a rolling boil with plenty of salt and cook the penne until al dente. Add the asparagus and peas for the last 2 minutes.",
+  "Meanwhile, heat the olive oil in a wide pan over medium heat. Fry the zucchini for 4 minutes, until golden at the edges. Add the garlic for 1 minute.",
+  "Add the cherry tomatoes and cook for 2 minutes, until they just soften.",
+  "Scoop out a mugful of the cooking water, then drain the penne and vegetables and add them to the pan with the butter and a splash of the cooking water.",
+  "Toss for 1 minute, until glossy. Grate in the lemon zest and squeeze in a little juice.",
+  "Taste for salt, tear the basil over and serve with the parmesan grated on top.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ce0-7ea7-a66a-07ac2fb69a49"
+name = "Penne alla vodka"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "vodka", amount = 0.25, unit = "cup" },
+  { id = "tomato-paste", amount = 3, unit = "tbsp" },
+  { id = "cream", amount = 0.75, unit = "cup" },
+  { id = "shallot", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "basil", amount = 8, unit = "leaf" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Finely chop the shallots and garlic. Grate the parmesan.",
+  "Melt the butter in a wide pan over medium heat. Cook the shallots for 3 minutes, until soft, then the garlic and chilli flakes for 1 minute.",
+  "Add the tomato paste and cook for 3 to 4 minutes, stirring, until it darkens to a brick red.",
+  "Take the pan off the heat, add the vodka, then return to the heat and simmer for 2 minutes, until it no longer smells sharp.",
+  "Stir in the cream and simmer on low heat for 2 minutes, until smooth and pink.",
+  "Meanwhile, bring the water to a rolling boil with plenty of salt and cook the penne until al dente. Scoop out a mugful of the cooking water and drain.",
+  "Toss the penne in the sauce with most of the parmesan and a splash of the cooking water for 1 minute, until glossy. Taste for salt and serve with the rest of the parmesan and torn basil.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ce2-7a5b-b957-059ee79f0139"
+name = "Lasagne"
+serves = 8
+prep_minutes = 40
+cook_minutes = 165
+ingredients = [
+  { id = "lasagne-sheets", amount = 250, unit = "g" },
+  { id = "beef-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "canned-tomatoes", amount = 2, unit = "can" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "red-wine", amount = 0.5, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "milk", amount = 4, unit = "cup" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "parmesan", amount = 100, unit = "g" },
+  { id = "mozzarella", amount = 200, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Very finely chop the onion, carrot, celery and garlic.",
+  "Heat the olive oil in a heavy pan over medium-low heat. Cook the vegetables for 10 minutes, until soft. Raise the heat, add the beef mince and cook for 8 to 10 minutes, breaking it up, until browned.",
+  "Add the red wine and simmer for 3 minutes. Add the canned tomatoes, tomato paste, the water, salt and black pepper. Simmer gently with the lid ajar for 1 hour, stirring now and then, until thick.",
+  "For the white sauce, melt the butter in a pan over medium heat, stir in the all-purpose flour for 1 minute, then whisk in the milk a little at a time. Simmer for 5 minutes, whisking, until it coats a spoon. Season with salt and grated nutmeg.",
+  "Heat the oven to 190°C. Grate the parmesan and tear the mozzarella.",
+  "Spread a thin layer of meat sauce in a baking dish about 30 by 20 cm. Add a layer of lasagne sheets, then meat sauce, white sauce and a little parmesan. Repeat, finishing with white sauce, the mozzarella and the rest of the parmesan.",
+  "Bake for 40 to 45 minutes, until bubbling and deep golden on top and a knife slides easily through the sheets.",
+  "Rest for 15 minutes before cutting, so the layers hold. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ce4-7e5d-a984-8f04acc6917f"
+name = "Vegetable lasagne"
+serves = 8
+prep_minutes = 40
+cook_minutes = 75
+ingredients = [
+  { id = "lasagne-sheets", amount = 250, unit = "g" },
+  { id = "zucchini", amount = 2, unit = "medium" },
+  { id = "brinjal", amount = 1, unit = "large" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "spinach", amount = 200, unit = "g" },
+  { id = "ricotta", amount = 250, unit = "g" },
+  { id = "passata", amount = 3, unit = "cup" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "basil", amount = 15, unit = "leaf" },
+  { id = "olive-oil", amount = 4, unit = "tbsp" },
+  { id = "mozzarella", amount = 200, unit = "g" },
+  { id = "parmesan", amount = 80, unit = "g" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Heat the oven to 200°C. Slice the zucchini and brinjal into rounds about 5 mm thick and cut the bell peppers into strips. Toss with half the olive oil and salt and roast on trays for 20 to 25 minutes, until soft and browned at the edges.",
+  "Meanwhile, chop the garlic. Warm the rest of the olive oil in a pan over medium heat, add the garlic for 1 minute, then the passata, most of the basil and salt. Simmer for 10 minutes, until slightly thick.",
+  "Wilt the spinach in a dry pan over medium heat for 2 minutes. Squeeze it dry and chop it. Mix with the ricotta, egg, half the parmesan, grated nutmeg, black pepper and salt.",
+  "Lower the oven to 190°C. Spread a little sauce in a baking dish about 30 by 20 cm. Layer the lasagne sheets, sauce, roasted vegetables and spoonfuls of the ricotta mixture. Repeat, finishing with sheets and sauce.",
+  "Tear the mozzarella over the top and scatter the rest of the parmesan over.",
+  "Bake for 35 to 40 minutes, until bubbling and golden and a knife slides through the sheets easily.",
+  "Rest for 10 minutes, scatter the rest of the basil over and serve.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ce7-7d46-90ac-a57807796cd0"
+name = "Baked ziti"
+serves = 6
+prep_minutes = 15
+cook_minutes = 50
+ingredients = [
+  { id = "pasta", amount = 450, unit = "g" },
+  { id = "sausages", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "passata", amount = 3, unit = "cup" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "ricotta", amount = 250, unit = "g" },
+  { id = "mozzarella", amount = 250, unit = "g" },
+  { id = "parmesan", amount = 60, unit = "g" },
+  { id = "basil", amount = 10, unit = "leaf" },
+  { id = "olive-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Squeeze the sausages out of their skins and break the meat into small pieces. Chop the onion and garlic.",
+  "Heat the olive oil in a pan over medium-high heat. Fry the sausage meat for 6 to 8 minutes, breaking it up, until browned. Add the onion and garlic for 4 minutes.",
+  "Add the passata, dried oregano and salt and simmer for 10 minutes, until slightly thick. Tear in most of the basil.",
+  "Bring the water to a rolling boil with plenty of salt and cook the ziti pasta for 2 minutes less than the packet says. Drain.",
+  "Heat the oven to 200°C. Mix the pasta with most of the sauce. Spread half in a baking dish, dot with the ricotta and some of the mozzarella, then add the rest of the pasta and sauce.",
+  "Top with the rest of the mozzarella, torn, and the grated parmesan. Bake for 20 to 25 minutes, until bubbling and golden in patches.",
+  "Rest for 5 minutes, scatter the rest of the basil over and serve.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ce9-71d9-a100-997abd112da6"
+name = "Mushroom risotto"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "arborio-rice", amount = 1.5, unit = "cup" },
+  { id = "mushroom", amount = 400, unit = "g" },
+  { id = "dried-mushrooms", amount = 15, unit = "g" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "vegetable-stock", amount = 5, unit = "cup" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "parmesan", amount = 60, unit = "g" },
+  { id = "thyme", amount = 3, unit = "sprig" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Soak the dried mushrooms in a little of the stock, warmed, for 20 minutes. Lift them out, chop them and strain the liquid back into the rest of the vegetable stock. Keep the stock hot in a pan.",
+  "Slice the fresh mushrooms. Finely chop the onion and garlic and grate the parmesan.",
+  "Heat the olive oil and half the butter in a wide pan over medium-high heat. Fry the fresh mushrooms for 6 to 8 minutes, until golden. Add the garlic, soaked mushrooms and thyme leaves for 1 minute. Lift them out.",
+  "Lower the heat to medium. Cook the onion in the pan for 4 minutes, until soft. Add the arborio rice and stir for 2 minutes, until the edges turn translucent.",
+  "Pour in the white wine and stir until absorbed. Add the hot stock a ladle at a time, stirring often and waiting until each ladle is almost absorbed, for 18 to 20 minutes, until the arborio rice is creamy and just tender with a slight bite.",
+  "Stir in most of the mushrooms, then take it off the heat and beat in the rest of the butter and the parmesan until glossy. Rest for 2 minutes.",
+  "Taste for salt and black pepper and serve topped with the rest of the mushrooms.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ceb-71d3-8aef-e0474ed06755"
+name = "Risotto alla milanese"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "arborio-rice", amount = 1.5, unit = "cup" },
+  { id = "saffron", amount = 2, unit = "pinch" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "chicken-stock", amount = 5, unit = "cup" },
+  { id = "butter", amount = 5, unit = "tbsp" },
+  { id = "parmesan", amount = 70, unit = "g" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Bring the chicken stock to a simmer and keep it hot. Soak the saffron in a ladle of the hot stock.",
+  "Finely chop the onion and grate the parmesan.",
+  "Melt half the butter in a wide pan over medium heat. Cook the onion for 4 minutes, until soft and translucent.",
+  "Add the arborio rice and stir for 2 minutes, until the edges turn translucent. Pour in the white wine and stir until absorbed.",
+  "Add the hot stock a ladle at a time, stirring often, for 18 to 20 minutes, until the arborio rice is creamy and just tender. Stir in the saffron stock halfway through.",
+  "Take it off the heat and beat in the rest of the butter and the parmesan until glossy and golden. Rest for 2 minutes.",
+  "Taste for salt and serve straight away. It should flow gently when spooned onto a plate.",
+]
+
+[[recipe]]
+id = "01a18bbd-3ced-73d8-81c8-2c0d851d4356"
+name = "Pea and lemon risotto"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "arborio-rice", amount = 1.5, unit = "cup" },
+  { id = "peas", amount = 1.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "vegetable-stock", amount = 5, unit = "cup" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "parmesan", amount = 60, unit = "g" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Bring the vegetable stock to a simmer and keep it hot. Finely chop the onion and garlic, grate the parmesan and zest the lemon.",
+  "Blanch half the peas in a ladle of the stock for 2 minutes, then blend to a smooth purée.",
+  "Melt half the butter in a wide pan over medium heat. Cook the onion for 4 minutes, until soft, then the garlic for 30 seconds.",
+  "Add the arborio rice and stir for 2 minutes. Pour in the white wine and stir until absorbed.",
+  "Add the hot stock a ladle at a time, stirring often, for 16 minutes. Add the rest of the peas and keep going for 3 to 4 minutes, until the arborio rice is creamy and just tender.",
+  "Take it off the heat and beat in the pea purée, the rest of the butter, the parmesan, the lemon zest and a squeeze of the juice.",
+  "Taste for salt and lemon, scatter the torn mint over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cf0-701a-9203-0517f62b7cb5"
+name = "Gnocchi with butter and sage"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "gnocchi", amount = 500, unit = "g" },
+  { id = "butter", amount = 6, unit = "tbsp" },
+  { id = "sage", amount = 16, unit = "leaf" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a rolling boil with plenty of salt. Grate the parmesan.",
+  "Melt the butter in a wide pan over medium heat. Add the sage leaves and cook for 3 to 4 minutes, until the butter foams, turns nutty brown and the leaves are crisp. Take it off the heat.",
+  "Drop the gnocchi into the boiling water and cook for 2 to 3 minutes, until they float to the surface. Lift them out with a slotted spoon.",
+  "Toss the gnocchi in the sage butter over medium heat for 1 to 2 minutes, until lightly golden in spots. Add a splash of the cooking water to make it glossy.",
+  "Squeeze in a little lemon juice, grind the black pepper over and taste for salt. Serve with the parmesan.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cf2-72f3-97ac-b70d056785cb"
+name = "Margherita pizza"
+serves = 4
+prep_minutes = 25
+cook_minutes = 20
+ingredients = [
+  { id = "00-flour", amount = 3, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "mozzarella", amount = 250, unit = "g" },
+  { id = "basil", amount = 12, unit = "leaf" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Warm the water until it feels just warm on your wrist. Stir in the sugar and dry yeast and leave for 10 minutes, until foamy.",
+  "Mix the 00 flour with salt, add the yeast water and a spoonful of the olive oil, and knead for 10 minutes into a smooth, springy dough. Cover and leave in a warm place for 1 to 2 hours, until doubled.",
+  "Crush the whole peeled tomatoes by hand with a little salt and a spoonful of the olive oil. Tear the mozzarella and leave it to drain.",
+  "Heat the oven as high as it goes, at least 250°C, with a heavy baking tray inside, for 30 minutes.",
+  "Divide the dough in half. Stretch each piece by hand into a round about 28 cm across, keeping the edge thicker.",
+  "Lay one round on floured baking paper, spread half the canned tomatoes thinly over it, leaving the edge clear, and scatter half the mozzarella. Slide it on the hot tray.",
+  "Bake for 8 to 10 minutes, until the crust is puffed and charred in spots and the cheese bubbles. Repeat with the rest.",
+  "Scatter the basil over, drizzle with the rest of the olive oil and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cf4-7b08-aac8-c4525d83a226"
+name = "Pizza bianca"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "00-flour", amount = 3, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "olive-oil", amount = 0.25, unit = "cup" },
+  { id = "rosemary", amount = 3, unit = "sprig" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Warm the water until it feels just warm on your wrist. Stir in the sugar and dry yeast and leave for 10 minutes, until foamy.",
+  "Mix the 00 flour with salt, add the yeast water and a spoonful of the olive oil, and knead for 10 minutes into a smooth, soft dough. Cover and leave in a warm place for 1 to 2 hours, until doubled.",
+  "Heat the oven as high as it goes, at least 250°C, with a heavy baking tray inside, for 30 minutes.",
+  "Pick the rosemary needles and thinly slice the garlic. Mix them with the rest of the olive oil.",
+  "Divide the dough in half and stretch each piece into a long oval about 5 mm thick on floured baking paper. Press dimples all over with your fingertips.",
+  "Brush with the rosemary and olive oil mixture, scatter flaky salt over and slide onto the hot tray.",
+  "Bake for 8 to 10 minutes, until puffed and golden with charred spots. Serve warm, torn into pieces.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"
+name = "Bruschetta"
+serves = 4
+prep_minutes = 15
+cook_minutes = 5
+ingredients = [
+  { id = "baguette", amount = 1, unit = "piece" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "basil", amount = 10, unit = "leaf" },
+  { id = "extra-virgin-olive-oil", amount = 4, unit = "tbsp" },
+  { id = "balsamic-vinegar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+]
+steps = [
+  "Seed the tomatoes and cut them into small dice. Tear the basil.",
+  "Mix the tomatoes with most of the extra-virgin olive oil, the balsamic vinegar, basil, salt and black pepper. Leave for 10 minutes so the juices run.",
+  "Cut the baguette on the slant into slices about 1.5 cm thick. Toast them under a hot grill or on a griddle pan for 1 to 2 minutes per side, until golden and crisp.",
+  "Halve the garlic and rub the cut side over the warm toasts.",
+  "Drizzle the rest of the extra-virgin olive oil over the toasts. Taste the tomatoes for salt, pile them on and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"
+name = "Caprese salad"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "tomato", amount = 4, unit = "large" },
+  { id = "mozzarella", amount = 250, unit = "g" },
+  { id = "basil", amount = 16, unit = "leaf" },
+  { id = "extra-virgin-olive-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+]
+steps = [
+  "Use ripe tomatoes at room temperature. Slice them into rounds about 1 cm thick.",
+  "Drain the mozzarella and slice it to the same thickness.",
+  "Arrange the tomatoes and mozzarella on a plate, overlapping, with a basil leaf between each.",
+  "Sprinkle salt and black pepper over and drizzle the extra-virgin olive oil on top.",
+  "Taste a tomato slice for salt and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cfb-7ae2-8e94-3abb35af35c9"
+name = "Minestrone"
+serves = 6
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "cannellini-beans", amount = 1, unit = "can" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "pasta", amount = 100, unit = "g" },
+  { id = "vegetable-stock", amount = 6, unit = "cup" },
+  { id = "spinach", amount = 100, unit = "g" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "parmesan", amount = 40, unit = "g" },
+  { id = "basil", amount = 10, unit = "leaf" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Dice the onion, carrots, celery, zucchini and potato into pieces about 1 cm across. Chop the garlic and cut the french beans into short lengths. Drain and rinse the cannellini beans.",
+  "Heat the olive oil in a large pan over medium heat. Cook the onion, carrots and celery for 8 to 10 minutes, until soft.",
+  "Add the garlic for 1 minute, then the potato, zucchini, french beans and canned tomatoes. Cook for 3 minutes.",
+  "Pour in the vegetable stock, add salt and simmer for 15 minutes, until the vegetables are nearly tender.",
+  "Add the cannellini beans and small pasta and simmer for 8 to 10 minutes, until the ditalini is tender.",
+  "Stir in the spinach for 1 minute, until wilted. Taste for salt and black pepper.",
+  "Serve hot with the parmesan grated over and the basil torn on top.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cfd-730f-9137-674584b35d79"
+name = "Ribollita"
+serves = 6
+prep_minutes = 20
+cook_minutes = 50
+ingredients = [
+  { id = "cannellini-beans", amount = 2, unit = "can" },
+  { id = "kale", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 2, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "sourdough", amount = 4, unit = "slice" },
+  { id = "vegetable-stock", amount = 5, unit = "cup" },
+  { id = "thyme", amount = 3, unit = "sprig" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "parmesan", amount = 40, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Dice the onion, carrots and celery. Chop the garlic. Strip the kale leaves off the stems and shred them. Drain and rinse the cannellini beans.",
+  "Heat half the extra-virgin olive oil in a large pan over medium heat. Cook the onion, carrots and celery for 10 minutes, until soft. Add the garlic and thyme for 1 minute.",
+  "Add the canned tomatoes and cook for 5 minutes. Mash half the beans and add them with the whole beans, the kale, vegetable stock and salt.",
+  "Simmer for 25 minutes, until the kale is very tender.",
+  "Tear the stale sourdough into pieces and stir it in. Simmer for 5 to 8 minutes more, stirring, until the bread breaks down and the soup is thick enough for a spoon to stand up.",
+  "Taste for salt and black pepper. Serve in bowls with the rest of the extra-virgin olive oil drizzled over and the parmesan grated on top.",
+]
+
+[[recipe]]
+id = "01a18bbd-3cff-765f-a129-766fae6c5621"
+name = "Chicken parmigiana"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 4, unit = "piece" },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "breadcrumbs", amount = 1, unit = "cup" },
+  { id = "parmesan", amount = 60, unit = "g" },
+  { id = "passata", amount = 2, unit = "cup" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "basil", amount = 10, unit = "leaf" },
+  { id = "mozzarella", amount = 200, unit = "g" },
+  { id = "olive-oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Use chicken breasts. Slice each one in half horizontally and pound between sheets of cling film to an even 1 cm thick. Season with salt and black pepper.",
+  "Chop the garlic. Warm a spoonful of the olive oil in a pan, cook the garlic for 1 minute, then add the passata, half the basil and salt and simmer for 10 minutes, until slightly thick.",
+  "Grate the parmesan and mix half of it with the breadcrumbs. Put the all-purpose flour, beaten eggs and breadcrumbs in separate shallow dishes.",
+  "Coat each piece of chicken in flour, then egg, then the crumb mixture, pressing firmly.",
+  "Heat the rest of the olive oil in a wide pan over medium heat. Fry the chicken for 3 to 4 minutes per side, until golden and crisp. Drain.",
+  "Heat the oven to 220°C. Lay the chicken in a baking dish, spoon the sauce over the middle of each piece and top with the mozzarella, torn, and the rest of the parmesan.",
+  "Bake for 12 to 15 minutes, until the cheese is melted and bubbling and the chicken is cooked through. Scatter the rest of the basil over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d02-7f00-92c1-0cf2e4b0b53c"
+name = "Chicken piccata"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 4, unit = "piece" },
+  { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "capers", amount = 2, unit = "tbsp" },
+  { id = "white-wine", amount = 0.33, unit = "cup" },
+  { id = "chicken-stock", amount = 0.75, unit = "cup" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Use chicken breasts. Slice each one in half horizontally and pound between sheets of cling film to an even 1 cm thick. Season with salt and black pepper and dust with the all-purpose flour.",
+  "Heat the olive oil and a spoonful of the butter in a wide pan over medium-high heat. Fry the chicken for 3 minutes per side, until golden and cooked through. Lift it out.",
+  "Pour the white wine into the pan and scrape up the browned bits. Simmer for 1 minute.",
+  "Add the chicken stock, the juice of half the lemons and the capers and simmer for 3 to 4 minutes, until reduced by half.",
+  "Take the pan off the heat and swirl in the rest of the butter until the sauce is glossy. Thinly slice the rest of the lemons and add a few slices.",
+  "Return the chicken to the pan for 1 minute, spooning the sauce over. Taste for salt, scatter the chopped parsley over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d04-78cf-ba7a-3a5d367d9a2e"
+name = "Eggplant parmigiana"
+serves = 6
+prep_minutes = 30
+cook_minutes = 70
+ingredients = [
+  { id = "brinjal", amount = 3, unit = "medium" },
+  { id = "passata", amount = 3, unit = "cup" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "basil", amount = 15, unit = "leaf" },
+  { id = "mozzarella", amount = 250, unit = "g" },
+  { id = "parmesan", amount = 80, unit = "g" },
+  { id = "olive-oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Slice the eggplants lengthwise about 1 cm thick. Salt them and leave in a colander for 30 minutes, then pat dry.",
+  "Chop the garlic. Warm a spoonful of the olive oil in a pan, cook the garlic for 1 minute, add the passata, half the basil and salt and simmer for 15 minutes, until thick.",
+  "Heat the rest of the olive oil in a wide pan over medium-high heat. Fry the eggplant slices in batches for 2 to 3 minutes per side, until golden and soft. Drain on paper towels.",
+  "Heat the oven to 190°C. Grate the parmesan and tear the mozzarella.",
+  "Spread a little sauce in a baking dish. Layer the eggplant, sauce, mozzarella, parmesan and some of the rest of the basil leaves. Repeat until everything is used, finishing with sauce and parmesan.",
+  "Bake for 30 to 35 minutes, until bubbling and browned on top.",
+  "Rest for 15 minutes so it sets, then slice and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d06-7d8a-9d6f-63841fb0acc3"
+name = "Frittata"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "egg", amount = 8, unit = "large" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "spinach", amount = 100, unit = "g" },
+  { id = "parmesan", amount = 50, unit = "g" },
+  { id = "milk", amount = 3, unit = "tbsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Peel the potatoes and slice them thinly. Thinly slice the onion. Grate the parmesan.",
+  "Heat the olive oil in an ovenproof frying pan about 25 cm across over medium heat. Cook the potatoes and onion for 12 to 15 minutes, turning now and then, until tender and golden.",
+  "Add the spinach and stir for 1 minute, until wilted.",
+  "Heat the oven grill to high. Whisk the eggs with the milk, most of the parmesan, salt and black pepper.",
+  "Pour the eggs over the vegetables and cook on low heat for 6 to 8 minutes, without stirring, until the edges are set but the top is still runny.",
+  "Scatter the rest of the parmesan over and grill for 2 to 3 minutes, until puffed, golden and just set in the centre.",
+  "Rest for 5 minutes, then slice into wedges and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d08-74ec-bacd-7d6722e788df"
+name = "Focaccia"
+serves = 8
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "bread-flour", amount = 4, unit = "cup" },
+  { id = "active-dry-yeast", amount = 2, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.5, unit = "cup" },
+  { id = "rosemary", amount = 3, unit = "sprig" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.75, unit = "cup" },
+]
+steps = [
+  "Warm the water until it feels just warm on your wrist. Stir in the sugar and dry yeast and leave for 10 minutes, until foamy.",
+  "Mix the bread flour with salt, add the yeast water and a spoonful of the extra-virgin olive oil and stir into a wet, sticky dough. Cover and leave for 30 minutes.",
+  "With wet hands, stretch and fold the dough over itself a few times in the bowl. Cover and leave in a warm place for 1 to 2 hours, until doubled and bubbly.",
+  "Pour half the rest of the extra-virgin olive oil into a tin about 30 by 20 cm. Tip in the dough and stretch it gently to the corners. Leave for 30 minutes, until puffy.",
+  "Heat the oven to 220°C. Pour the rest of the extra-virgin olive oil over, press deep dimples all over with your fingertips, scatter the rosemary needles and plenty of flaky salt over.",
+  "Bake for 20 to 25 minutes, until deep golden on top and crisp underneath.",
+  "Cool in the tin for 5 minutes, then on a rack. Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d0b-7ac3-b229-7b08b4010644"
+name = "Panzanella"
+serves = 4
+prep_minutes = 20
+cook_minutes = 10
+ingredients = [
+  { id = "sourdough", amount = 6, unit = "slice" },
+  { id = "tomato", amount = 5, unit = "medium" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "basil", amount = 15, unit = "leaf" },
+  { id = "capers", amount = 1, unit = "tbsp" },
+  { id = "red-wine-vinegar", amount = 2, unit = "tbsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+]
+steps = [
+  "Heat the oven to 200°C. Tear the sourdough into pieces about 3 cm across, toss with a little of the extra-virgin olive oil and bake for 8 to 10 minutes, until crisp outside but still slightly chewy.",
+  "Cut the tomatoes into chunks, toss them with salt in a large bowl and leave for 15 minutes to release their juices.",
+  "Halve the cucumber lengthwise and slice it. Very thinly slice the red onion.",
+  "Whisk the red wine vinegar and the rest of the extra-virgin olive oil into the tomato juices.",
+  "Add the bread, cucumber, onion and capers and toss well. Leave for 15 minutes so the bread soaks up the dressing.",
+  "Tear the basil over, add black pepper, taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d0d-77cc-8ec9-0e772f02c3e7"
+name = "Tiramisu"
+serves = 8
+prep_minutes = 30
+cook_minutes = 0
+ingredients = [
+  { id = "ladyfingers", amount = 250, unit = "g" },
+  { id = "mascarpone", amount = 500, unit = "g" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "instant-coffee", amount = 2, unit = "tbsp" },
+  { id = "cocoa-powder", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Bring the water to a boil, stir in the instant coffee and leave it to cool completely.",
+  "Separate the eggs. Whisk the yolks with the sugar for 3 to 4 minutes, until pale and thick. Beat in the mascarpone until smooth.",
+  "Whisk the whites in a clean bowl until they hold stiff peaks. Fold them gently into the mascarpone mixture in batches.",
+  "Dip each ladyfinger very briefly in the coffee, a second on each side, and lay them in a single layer in a dish about 25 by 20 cm.",
+  "Spread half the mascarpone mixture over. Repeat with the rest of the ladyfingers and the rest of the mascarpone mixture.",
+  "Cover and chill for at least 6 hours, ideally overnight, until set.",
+  "Sift the cocoa powder over just before serving. Cut into squares and serve cold.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d0f-719d-adfe-4066b95cc763"
+name = "Panna cotta"
+serves = 6
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "whipping-cream", amount = 2, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "gelatin", amount = 2, unit = "tsp" },
+  { id = "vanilla-extract", amount = 1, unit = "tsp" },
+  { id = "strawberries", amount = 1, unit = "cup" },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Sprinkle the gelatin over the water in a small bowl and leave for 5 minutes, until spongy.",
+  "Heat the whipping cream, milk and half the sugar in a pan over medium heat for 4 to 5 minutes, stirring, until steaming and the sugar dissolves. Don't let it boil.",
+  "Take it off the heat and stir in the gelatin until fully dissolved. Stir in the vanilla extract.",
+  "Pour into small glasses or moulds and cool, then chill for at least 4 hours, until set with a gentle wobble.",
+  "Hull and slice the strawberries and toss them with the rest of the sugar. Leave for 15 minutes, until juicy.",
+  "Serve the panna cotta cold, topped with the strawberries and their juice.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d11-7068-bfd5-1b504df6f1d5"
+name = "Affogato"
+serves = 4
+prep_minutes = 5
+cook_minutes = 3
+ingredients = [
+  { id = "vanilla-ice-cream", amount = 4, unit = "cup" },
+  { id = "espresso-powder", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Chill small glasses or cups in the freezer for 10 minutes.",
+  "Bring the water to a boil and stir in the espresso powder until dissolved.",
+  "Put a large scoop of the vanilla ice cream in each cold glass.",
+  "Pour the hot espresso over the ice cream at the table and serve straight away, while it melts.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d13-795f-9d7c-3923bf77eb23"
+name = "Pasta e fagioli"
+serves = 6
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "borlotti-beans", amount = 2, unit = "can" },
+  { id = "pasta", amount = 200, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "rosemary", amount = 2, unit = "sprig" },
+  { id = "vegetable-stock", amount = 5, unit = "cup" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "parmesan", amount = 40, unit = "g" },
+  { id = "chilli-flakes", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+]
+steps = [
+  "Finely chop the onion, carrot, celery and garlic. Drain and rinse the borlotti beans.",
+  "Heat the olive oil in a large pan over medium heat. Cook the onion, carrot and celery for 8 to 10 minutes, until soft. Add the garlic, rosemary and chilli flakes for 1 minute.",
+  "Add the canned tomatoes and cook for 3 minutes. Add the beans and vegetable stock and simmer for 10 minutes.",
+  "Lift out the rosemary sprigs. Blend about a third of the soup until smooth and stir it back in.",
+  "Add the ditalini and simmer for 10 to 12 minutes, stirring often so it doesn't stick, until the pasta is tender and the soup is thick.",
+  "Taste for salt and black pepper. Serve hot with the parmesan grated over.",
+]
+
+[[recipe]]
+id = "01a18bbd-3d16-72e1-a27e-155012bb9ff1"
+name = "Shrimp scampi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "pasta", amount = 400, unit = "g" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "butter", amount = 4, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "white-wine", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "parsley", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Peel and devein the prawns, pat them dry and season with salt and black pepper. Thinly slice the garlic and chop the parsley.",
+  "Bring the water to a rolling boil with plenty of salt and cook the linguine until al dente. Scoop out a mugful of the cooking water and drain.",
+  "Meanwhile, heat the olive oil and half the butter in a wide pan over medium-high heat. Cook the prawns for 1 minute per side, until just pink. Lift them out.",
+  "Lower the heat to medium. Cook the garlic and chilli flakes for 1 minute, until fragrant and pale golden.",
+  "Add the white wine and lemon juice and simmer for 2 minutes, until reduced by half. Swirl in the rest of the butter.",
+  "Add the linguine, prawns and a splash of the cooking water and toss for 1 minute, until glossy.",
+  "Taste for salt, toss in the parsley and serve straight away.",
+]

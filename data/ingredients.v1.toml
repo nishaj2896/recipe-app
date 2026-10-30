@@ -326,12 +326,28 @@ diet = "vegan"
 category = "vegetables"
 
 [[ingredient]]
+id = "collard-greens"
+name = "Collard greens"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["collards"]
+
+[[ingredient]]
 id = "colocasia"
 name = "Colocasia"
 class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["taro root", "taro"]
+
+[[ingredient]]
+id = "colocasia-leaves"
+name = "Colocasia leaves"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["taro leaves"]
 
 [[ingredient]]
 id = "corn-on-the-cob"
@@ -976,6 +992,14 @@ name = "Anchovies"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+
+[[ingredient]]
+id = "barramundi"
+name = "Barramundi"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["asian sea bass"]
 
 [[ingredient]]
 id = "basa"
@@ -1781,6 +1805,14 @@ diet = "vegetarian"
 category = "dairy-and-eggs"
 
 [[ingredient]]
+id = "vanilla-ice-cream"
+name = "Vanilla ice cream"
+class = "A"
+diet = "vegetarian"
+category = "dairy-and-eggs"
+search_terms = ["ice cream"]
+
+[[ingredient]]
 id = "whipping-cream"
 name = "Whipping cream"
 class = "B"
@@ -2225,6 +2257,13 @@ category = "pasta-and-noodles"
 search_terms = ["roasted vermicelli"]
 
 [[ingredient]]
+id = "instant-noodles"
+name = "Instant noodles"
+class = "A"
+diet = "vegetarian"
+category = "pasta-and-noodles"
+
+[[ingredient]]
 id = "lasagne-sheets"
 name = "Lasagne sheets"
 class = "A"
@@ -2545,6 +2584,14 @@ name = "Puff pastry"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "rice-wafers"
+name = "Rice wafers"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["dried rice wafers"]
 
 [[ingredient]]
 id = "rusk"
@@ -5433,6 +5480,14 @@ diet = "vegan"
 category = "flours-and-baking"
 
 [[ingredient]]
+id = "sattu"
+name = "Sattu"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["roasted chickpea flour"]
+
+[[ingredient]]
 id = "self-raising-flour"
 name = "Self-raising flour"
 class = "A"
@@ -5643,6 +5698,13 @@ category = "drinks-and-water"
 [[ingredient]]
 id = "rum"
 name = "Rum"
+class = "B"
+diet = "vegan"
+category = "drinks-and-water"
+
+[[ingredient]]
+id = "vodka"
+name = "Vodka"
 class = "B"
 diet = "vegan"
 category = "drinks-and-water"

@@ -24,7 +24,7 @@ Ingredient lists are facts. The method text and photos are creative work, which 
 
 ## Decision
 
-**1. Recipe text is written for this project.** No step is copied or paraphrased line by line from a book, site or dataset. Recipes are written in batches of about 100, one pull request per batch, and Nisha reads a sample of each batch before merging.
+**1. Recipe text is written for this project.** No step is copied or paraphrased line by line from a book, site or dataset. Recipes are written in batches of about 300 (about 100 for the first three), one pull request per batch, and Nisha reads a sample of each batch before merging.
 
 **2. Each recipe gains servings, quantities and steps.**
 

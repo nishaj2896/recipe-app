@@ -1,0 +1,458 @@
+# Kashmiri and Himalayan (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bb1-0599-7033-996a-0c33915b7e19"
+name = "Mutton yakhni"
+serves = 4
+prep_minutes = 15
+cook_minutes = 85
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "dried-mint", amount = 1, unit = "tsp" },
+  { id = "black-cumin", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Grind the fennel seeds to a fine powder. Lightly crush the green cardamom and black cardamom.",
+  "Put the mutton in a heavy pan with the water, the black cardamom, cloves, cinnamon, bay leaves and salt. Bring to a boil over medium heat, skim off the foam, then simmer covered on low heat for 55 to 60 minutes, until the mutton is tender.",
+  "Whisk the curd in a separate heavy pan until completely smooth, then stir in a ladle of the mutton stock.",
+  "Set the curd pan over low heat and bring it slowly to a simmer, stirring constantly in one direction for 8 to 10 minutes, so that it doesn't split, until it thickens slightly and turns glossy.",
+  "Stir the ground fennel seeds and dry ginger powder into the curd, then add the mutton and as much stock as you need for a pouring gravy. Simmer for 10 minutes, until the gravy coats the mutton.",
+  "Heat the mustard oil in a small pan over medium heat until it just smokes. Lower the heat, add the green cardamom, black cumin and asafoetida and fry for 20 seconds. Pour it over the yakhni.",
+  "Crumble the dried mint over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-059b-75c8-9915-6cfb22b09272"
+name = "Kashmiri rajma"
+serves = 4
+prep_minutes = 10
+cook_minutes = 70
+ingredients = [
+  { id = "kidney-beans", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1.5, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Rinse the kidney beans and soak them overnight in plenty of water. Drain.",
+  "Simmer the kidney beans in the water with salt in a covered pan over medium-low heat for 50 to 60 minutes, until they crush easily between your fingers. Keep the cooking liquid.",
+  "Grind the fennel seeds to a fine powder. Blend the tomatoes smooth.",
+  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the cumin seeds, cloves, cinnamon and asafoetida for 30 seconds.",
+  "Take the pan off the heat, stir in the Kashmiri chilli powder and turmeric with a splash of the bean liquid so the chilli doesn't burn, then return to the heat and add the blended tomatoes. Cook for 6 minutes, until thick and the mustard oil separates.",
+  "Add the kidney beans with their liquid, the ground fennel seeds and dry ginger powder. Simmer for 10 minutes, mashing a few beans against the pan, until the gravy is thick and deep red.",
+  "Stir in the garam masala. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-059d-74f9-b761-6e010a3b1ddb"
+name = "Nadru yakhni"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "lotus-root", amount = 400, unit = "g" },
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "dried-mint", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Scrub and peel the lotus root, then cut it on the slant into slices about 1 cm thick. Rinse the slices in several changes of water to wash out any mud from the holes.",
+  "Simmer the lotus root in the water with the cloves, bay leaves and salt over medium heat for 15 to 20 minutes, until a knife slides in easily. Keep the cooking liquid.",
+  "Grind the fennel seeds to a fine powder. Lightly crush the cardamom.",
+  "Whisk the curd until completely smooth in a heavy pan, then set it over low heat and bring it slowly to a simmer, stirring constantly for 8 minutes so it doesn't split, until it thickens slightly.",
+  "Stir in the ground fennel seeds, dry ginger powder and cardamom, then the lotus root with enough of its liquid for a pouring gravy. Simmer for 5 minutes.",
+  "Heat the mustard oil in a small pan over medium heat until it just smokes. Fry the cumin seeds and asafoetida for 20 seconds and pour over the yakhni.",
+  "Crumble the dried mint over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-059f-7a58-b2aa-0261131c9251"
+name = "Haak saag"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "collard-greens", amount = 500, unit = "g" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Wash the collard greens well. Cut out the thickest part of each stem and leave the leaves whole or halve the largest ones.",
+  "Heat the mustard oil in a wide pan over medium-high heat until it just smokes, then lower the heat to medium and let it cool for 1 minute.",
+  "Add the asafoetida and dried red chillies and fry for 20 seconds, until the chillies darken.",
+  "Add the water and salt and bring to a boil, then add the collard greens.",
+  "Cover and simmer over medium-low heat for 15 to 20 minutes, turning once, until the leaves are tender but still deep green and most of the water has gone.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05a1-73ca-961f-164794f6a53a"
+name = "Modur pulao"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "almonds", amount = 12, unit = "piece" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice in several changes of water until the water runs clear, then soak it in plenty of water for 20 minutes. Drain.",
+  "Warm a spoonful of the milk and soak the saffron in it. Slice the almonds.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the cashews, almonds and raisins for 1 to 2 minutes, until the nuts are golden and the raisins puff. Lift them out.",
+  "Fry the cardamom, cloves and cinnamon in the ghee for 30 seconds, then add the basmati rice and stir gently for 2 minutes, until the grains turn opaque.",
+  "Add the water, the rest of the milk and salt and bring to a boil. Cover and cook on the lowest heat for 10 minutes, until most of the liquid is absorbed.",
+  "Scatter the sugar and saffron milk over without stirring. Cover again and cook for 8 to 10 minutes, until the sugar melts into the grains and they are tender.",
+  "Fold in the nuts and raisins gently. Taste and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb1-05a4-7444-aa2a-a0032794431b"
+name = "Kahwa"
+serves = 4
+prep_minutes = 5
+cook_minutes = 8
+ingredients = [
+  { id = "water", amount = 4, unit = "cup" },
+  { id = "green-tea", amount = 2, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "honey", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Lightly crush the cardamom and finely slice the almonds.",
+  "Bring the water to a boil in a pan over medium-high heat with the cardamom, cinnamon and saffron, then simmer for 4 to 5 minutes, until golden and fragrant.",
+  "Take the pan off the heat, add the green tea and steep for 2 minutes. Don't steep longer or it turns bitter.",
+  "Strain into cups and stir in the honey.",
+  "Scatter the almonds over, taste for sweetness and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05a6-7840-bb37-3b8210e9410c"
+name = "Gushtaba"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "lamb-mince", amount = 600, unit = "g" },
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "black-cardamom", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "dried-mint", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Grind the fennel seeds to a fine powder. Peel the green cardamom and crush the seeds.",
+  "Pound the lamb mince in a mortar or pulse it in a food processor with half the ghee, a little of the crushed cardamom and salt for 8 to 10 minutes, until it turns into a smooth, sticky paste.",
+  "With wet hands, roll the paste into smooth balls about 5 cm across.",
+  "Bring the water to a boil with the black cardamom, cloves, bay leaves and salt. Lower in the balls and simmer gently for 20 minutes, until firm and cooked through. Keep the stock.",
+  "Whisk the curd smooth in a heavy pan and set it over low heat. Bring it slowly to a simmer, stirring constantly for 8 minutes so it doesn't split, until it thickens slightly.",
+  "Stir in the ground fennel seeds, dry ginger powder, the rest of the cardamom and enough stock for a pouring gravy. Add the balls and simmer for 10 minutes.",
+  "Heat the rest of the ghee until hot, pour it over, crumble the dried mint on top, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05a8-7a89-992d-7ce51e64a3e0"
+name = "Rista"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "lamb-mince", amount = 600, unit = "g" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 3, unit = "tsp" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "black-cardamom", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "shallot", amount = 4, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Grind the fennel seeds to a fine powder. Peel the green cardamom and crush the seeds. Peel and blend the shallots to a smooth paste.",
+  "Pound the lamb mince in a mortar or pulse it in a food processor with the ghee, a little of the crushed cardamom and salt for 8 to 10 minutes, until it is a smooth, sticky paste.",
+  "With wet hands, roll it into smooth balls about 4 cm across.",
+  "Heat the mustard oil in a wide pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the black cardamom, cloves and cinnamon for 30 seconds.",
+  "Add the shallot paste and fry for 3 minutes, until it loses its raw smell. Take the pan off the heat, stir in the Kashmiri chilli powder with a splash of the water, then return to the heat.",
+  "Add the rest of the water, the ground fennel seeds, dry ginger powder, the rest of the cardamom and salt. Bring to a boil, lower in the balls and simmer uncovered for 30 to 35 minutes, until they are firm and the gravy is deep red and slightly thick.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05aa-7929-a5d8-a9666f0669c5"
+name = "Tabak maaz"
+serves = 4
+prep_minutes = 10
+cook_minutes = 75
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "fennel-seeds", amount = 1.5, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "ghee", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Ask for mutton ribs cut into pieces about 8 cm long, with the fat left on. Grind the fennel seeds to a fine powder.",
+  "Put the ribs in a wide pan with the milk, water, ground fennel seeds, dry ginger powder, cardamom, cloves, cinnamon, bay leaves and salt.",
+  "Bring to a boil over medium heat, then simmer uncovered on low heat for 50 to 60 minutes, turning now and then, until the ribs are tender and almost all the liquid has evaporated.",
+  "Lift out the ribs carefully so they keep their shape.",
+  "Heat the ghee in a frying pan over medium heat. Fry the ribs in batches for 3 to 4 minutes per side, until deep golden and crisp at the edges.",
+  "Drain, sprinkle with a little salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05ad-75ec-b930-539fe274a355"
+name = "Chaman kaliya"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "paneer", amount = 400, unit = "g" },
+  { id = "milk", amount = 1.5, unit = "cup" },
+  { id = "fennel-seeds", amount = 1.5, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Cut the paneer into slabs about 5 cm by 3 cm and 1.5 cm thick. Grind the fennel seeds to a fine powder and crush the cardamom.",
+  "Heat the mustard oil in a wide pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the paneer for 1 to 2 minutes per side, until golden. Lift it out.",
+  "Fry the cloves, bay leaf and cinnamon in the same mustard oil for 30 seconds.",
+  "Take the pan off the heat and stir in the turmeric with the water. Return it to the heat, add the ground fennel seeds, dry ginger powder and salt and simmer for 3 minutes.",
+  "Add the paneer and simmer for 5 minutes, until it softens and turns yellow.",
+  "Pour in the milk and the crushed cardamom and simmer on low heat for 8 to 10 minutes, stirring gently, until the gravy is creamy and lightly thick.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05af-7689-9a69-93152b5454a4"
+name = "Kashmiri chicken masala"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "kashmiri-chilli-powder", amount = 3, unit = "tsp" },
+  { id = "fennel-seeds", amount = 2, unit = "tsp" },
+  { id = "dry-ginger-powder", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "black-cardamom", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into pieces. Grind the fennel seeds to a fine powder. Thinly slice the onions, crush the garlic and whisk the curd smooth.",
+  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the green cardamom, black cardamom, cloves, cinnamon and bay leaves for 30 seconds.",
+  "Add the onions and fry for 10 minutes, until deep golden. Add the garlic and fry for 1 minute.",
+  "Add the chicken and fry for 5 minutes, until it is no longer pink outside.",
+  "Take the pan off the heat, stir in the Kashmiri chilli powder with a splash of the water, then return to the heat and stir in the curd, a little at a time, for 3 minutes.",
+  "Add the rest of the water, the ground fennel seeds, dry ginger powder and salt. Cover and simmer for 15 to 18 minutes, until the chicken is cooked through and the gravy is deep red.",
+  "Stir in the garam masala, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05b1-7199-8baa-c57efd50eb5f"
+name = "Siddu"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "walnuts", amount = 0.5, unit = "cup" },
+  { id = "poppy-seeds", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Warm the water until it feels just warm on your wrist. Stir in the sugar and dry yeast and leave for 10 minutes, until foamy.",
+  "Knead the whole wheat flour with salt and the yeast water for 8 minutes into a soft, smooth dough. Cover and leave in a warm place for 1 hour, until doubled.",
+  "Dry-roast the walnuts and poppy seeds in a pan over low heat for 3 minutes, until fragrant. Grind them coarsely with the green chillies and salt, then mix in the finely chopped onion and coriander leaves.",
+  "Divide the dough into balls about 6 cm across. Flatten each into a round about 12 cm across, put a spoonful of filling in the middle, gather the edges and seal. Flatten gently into an oval.",
+  "Rest the shaped siddu for 15 minutes, until slightly puffy.",
+  "Steam them on a greased plate over boiling water for 18 to 20 minutes, until they spring back when pressed and no longer feel sticky.",
+  "Brush each one with the ghee and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05b3-7b1d-9b2c-1aac51d99625"
+name = "Madra"
+serves = 4
+prep_minutes = 10
+cook_minutes = 60
+ingredients = [
+  { id = "chickpeas", amount = 1, unit = "cup" },
+  { id = "curd", amount = 1.5, unit = "cup" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the chickpeas and soak them overnight in plenty of water. Drain.",
+  "Simmer the chickpeas in the water with salt in a covered pan over medium-low heat for 40 to 45 minutes, until tender. Drain, keeping a little of the liquid.",
+  "Whisk the curd with the coriander powder and turmeric until smooth.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the cashews and raisins for 1 minute, until the cashews are golden. Lift them out.",
+  "Fry the cumin seeds, cardamom, cloves, cinnamon, bay leaf and asafoetida in the ghee for 30 seconds.",
+  "Lower the heat and pour in the curd, stirring constantly for 5 minutes, until it thickens and the ghee starts to show at the edges.",
+  "Add the chickpeas with a splash of their liquid and simmer for 8 to 10 minutes, until the gravy is thick and clings to them. Stir in the cashews and raisins, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05b5-723b-a26c-80807806dc9b"
+name = "Chha gosht"
+serves = 4
+prep_minutes = 15
+cook_minutes = 80
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "buttermilk", amount = 2, unit = "cup" },
+  { id = "gram-flour", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "black-cardamom", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Thinly slice the onions. Whisk the buttermilk with the gram flour until no lumps remain.",
+  "Heat the mustard oil in a heavy pan over medium-high heat until it just smokes, then lower the heat to medium. Fry the cumin seeds, bay leaves, green cardamom, black cardamom and cloves for 30 seconds.",
+  "Add the onions and fry for 10 minutes, until golden brown. Add the ginger garlic paste and fry for 1 minute.",
+  "Add the mutton, turmeric, red chilli powder, coriander powder and salt and sear for 8 minutes, stirring, until browned.",
+  "Add the water, cover and simmer on low heat for 45 to 50 minutes, until the mutton is nearly tender.",
+  "Lower the heat to its lowest and pour in the buttermilk mixture slowly, stirring constantly. Simmer for 8 to 10 minutes, stirring, until the gravy thickens and turns smooth.",
+  "Stir in the garam masala, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb1-05b8-798b-b1d6-b0df8a8844c7"
+name = "Babru"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "whole-urad", amount = 0.5, unit = "cup" },
+  { id = "active-dry-yeast", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Rinse the whole urad and soak it in plenty of water overnight. Drain, rub off as many skins as come away and grind coarsely with the ginger and green chillies, without adding water.",
+  "Warm the water until it feels just warm on your wrist. Stir in the sugar and dry yeast and leave for 10 minutes, until foamy.",
+  "Knead the whole wheat flour with salt and the yeast water for 6 to 8 minutes into a soft dough. Cover and leave for 1 hour, until puffy.",
+  "Mix the urad paste with the cumin seeds, red chilli powder and salt.",
+  "Divide the dough into balls about 5 cm across. Flatten each one, put a spoonful of the urad filling in the middle, seal and roll gently into a round about 12 cm across.",
+  "Heat the oil for deep frying over medium heat. Fry each babru for 1 to 2 minutes per side, pressing gently so it puffs, until golden brown. Drain.",
+  "Serve hot.",
+]

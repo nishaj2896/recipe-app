@@ -920,3 +920,207 @@ steps = [
   "Fry the kachoris a few at a time on low heat for 12 to 15 minutes, turning, until they puff, turn golden and sound crisp when tapped.",
   "Drain on paper and serve warm with a tangy chutney.",
 ]
+
+[[recipe]]
+id = "01a18b6c-22eb-7724-bab0-860096ffe397"
+name = "Mirchi vada"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "green-chillies", amount = 8, unit = "piece" },
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "rice-flour", amount = 1, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use long, fat, mild green chillies. Slit each one down one side and scrape out the seeds.",
+  "Boil the potatoes until tender, then peel and mash them.",
+  "Mix the potatoes with the chopped coriander leaves, dry mango powder, half the red chilli powder, the fennel seeds, coriander powder and salt.",
+  "Stuff each green chilli with the potato filling and press the slit closed.",
+  "Whisk the gram flour, rice flour, turmeric, baking soda, the rest of the red chilli powder and salt with the water into a thick batter that coats a spoon.",
+  "Heat the oil for deep frying over medium heat. A drop of batter should rise at once.",
+  "Dip each chilli in the batter to coat it completely and fry for 4 to 5 minutes, turning, until golden and crisp.",
+  "Drain on paper and serve hot with a chutney.",
+]
+
+[[recipe]]
+id = "01a18b6c-22ee-78fe-a0d5-b0792dc53b5e"
+name = "Rajasthani kadhi"
+serves = 4
+prep_minutes = 5
+cook_minutes = 25
+ingredients = [
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "gram-flour", amount = 3, unit = "tbsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Whisk the curd, gram flour, turmeric, half the red chilli powder, salt and the water until completely smooth.",
+  "Crush the garlic.",
+  "Heat the ghee in a deep pan over medium heat. Add the cumin seeds and fenugreek seeds and let them sizzle, then the dried red chillies, asafoetida and garlic, and stir for 1 minute until the garlic is golden.",
+  "Turn the heat to low and pour in the curd mixture, stirring constantly.",
+  "Bring it to a boil, still stirring so it doesn't split, then simmer on low heat for 15 to 18 minutes, until it thickens slightly and the raw gram flour taste is gone. It should be spicier and thicker than Gujarati kadhi, and not sweet.",
+  "Sprinkle the rest of the red chilli powder over and scatter the coriander leaves over. Taste for salt and serve hot with bajra khichdi or roti.",
+]
+
+[[recipe]]
+id = "01a18b6c-22f0-7e80-ab0f-a1d83b9f1ab4"
+name = "Panchkuta"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "ker", amount = 2, unit = "tbsp" },
+  { id = "sangri", amount = 0.5, unit = "cup" },
+  { id = "dried-mango", amount = 4, unit = "piece" },
+  { id = "dried-red-chillies", amount = 4, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "dry-mango-powder", amount = 1, unit = "tsp" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the ker, sangri and dried mango in several changes of water and soak them in plenty of water overnight.",
+  "Drain, then boil them in the water for 10 to 12 minutes, until the sangri are tender. Drain well.",
+  "Heat the oil in a heavy pan over medium heat. Add the cumin seeds, fennel seeds, dried red chillies and asafoetida and let them sizzle for 20 seconds.",
+  "Add the soaked vegetables with the turmeric, red chilli powder, coriander powder and salt. Fry for 5 minutes, stirring.",
+  "Stir in the curd and raisins and cook for 5 to 6 minutes, until the curd is absorbed and the mix looks glossy.",
+  "Sprinkle the dry mango powder over, taste for salt and serve with puri or bajre ki roti.",
+]
+
+[[recipe]]
+id = "01a18b6c-22f2-71d8-9af1-0c9535065367"
+name = "Bajra khichdi"
+serves = 4
+prep_minutes = 10
+cook_minutes = 45
+ingredients = [
+  { id = "pearl-millet", amount = 0.75, unit = "cup" },
+  { id = "moong-dal", amount = 0.5, unit = "cup" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 5, unit = "cup" },
+]
+steps = [
+  "Rinse the pearl millet and soak it in plenty of water for 8 hours. Drain.",
+  "Pound or pulse the pearl millet briefly to crack it, so it cooks faster.",
+  "Rinse the moong dal.",
+  "Heat half the ghee in a pressure cooker over medium heat. Add the cumin seeds and let them sizzle, then the asafoetida and grated ginger.",
+  "Add the pearl millet and moong dal and stir for 2 minutes.",
+  "Pour in the water, add the turmeric and salt, and pressure cook for 6 to 7 whistles, until the pearl millet is soft and the khichdi is thick and porridge-like.",
+  "Stir well, taste for salt, and serve hot with the rest of the ghee on top and Rajasthani kadhi.",
+]
+
+[[recipe]]
+id = "01a18b6c-22f5-7142-805d-728be34ed8bc"
+name = "Malpua"
+serves = 6
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "khoa", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "cup" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Whisk the all-purpose flour with the crumbled khoa and the milk into a smooth batter that falls in a thick ribbon. Stir in the fennel seeds and rest for 30 minutes.",
+  "Heat the sugar with the water and saffron over medium heat, stirring until dissolved. Boil for 4 minutes, until slightly sticky. Crush the cardamom, grind the seeds and stir them in. Keep the syrup warm.",
+  "Heat the ghee in a wide, shallow pan over medium heat, about 2 cm deep.",
+  "Pour a ladle of batter into the ghee. It will spread into a round about 10 cm across.",
+  "Fry for 2 to 3 minutes per side, spooning hot ghee over the top, until the edges are crisp and lacy and the centre is golden.",
+  "Lift it out, drain briefly, and dip it in the warm syrup for 1 minute.",
+  "Serve warm, topped with the sliced pistachios, on their own or with rabri.",
+]
+
+[[recipe]]
+id = "01a18b6c-22f7-7757-9b55-f7d984bd4268"
+name = "Ghevar"
+serves = 8
+prep_minutes = 30
+cook_minutes = 45
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "ghee", amount = 1.5, unit = "cup" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "khoa", amount = 0.5, unit = "cup" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Chill a small amount of the ghee in a bowl until solid but soft. Rub it with your hand for 3 to 4 minutes, until it turns white and creamy.",
+  "Add a few ice cubes made from part of the water and rub until the ghee is fluffy. Add the milk, then the all-purpose flour, then most of the rest of the water little by little, whisking into a very thin, smooth batter, like thin milk. Keep it cold.",
+  "Heat the rest of the ghee in a deep, narrow pan about 15 cm across, at least 10 cm deep, until hot.",
+  "Pour the batter from a height in a thin stream into the centre. It will froth. Wait until the froth settles, then pour another stream into the centre. Repeat, keeping a hole open in the middle with a skewer, until a honeycombed disc forms.",
+  "Fry on medium heat for 6 to 8 minutes, pouring hot ghee into the centre, until crisp and light golden. Lift it out carefully with a skewer through the hole. Drain.",
+  "Heat the sugar with the last of the water over medium heat, stirring until dissolved. Boil for 6 minutes, until it reaches one-thread consistency. Add the saffron and the ground cardamom seeds.",
+  "Pour the syrup over the ghevar while it is warm and let it soak in.",
+  "Top with the crumbled khoa, and the almonds and pistachios, sliced. Serve at room temperature.",
+]
+
+[[recipe]]
+id = "01a18b6c-22f9-7a57-91ea-b67fd75e931c"
+name = "Masala chaas"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "black-salt", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Dry roast the cumin seeds in a small pan over medium heat for 1 minute, until they darken a shade. Crush them to a powder.",
+  "Blend the curd with the ginger, green chilli, mint, coriander leaves and a little of the water until smooth.",
+  "Add the rest of the water, most of the roasted cumin, black salt and salt and blend for a few seconds, until frothy.",
+  "Taste and adjust the salt. Serve chilled, with the rest of the roasted cumin on top.",
+]

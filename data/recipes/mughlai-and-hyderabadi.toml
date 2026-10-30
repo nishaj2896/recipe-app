@@ -1,0 +1,477 @@
+# Mughlai and Hyderabadi (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bb5-de40-7910-9565-67c1cca06b59"
+name = "Haleem"
+serves = 6
+prep_minutes = 30
+cook_minutes = 150
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "broken-wheat", amount = 0.75, unit = "cup" },
+  { id = "chana-dal", amount = 2, unit = "tbsp" },
+  { id = "masoor-dal", amount = 2, unit = "tbsp" },
+  { id = "moong-dal", amount = 2, unit = "tbsp" },
+  { id = "urad-dal", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 4, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "garam-masala", amount = 1.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "lemon", amount = 2, unit = "small" },
+  { id = "ghee", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 10, unit = "cup" },
+]
+steps = [
+  "Rinse the broken wheat, chana dal, masoor dal, moong dal and urad dal together in several changes of water and soak them in plenty of water for 3 hours. Drain.",
+  "Thinly slice the onions. Heat the oil in a heavy pan over medium heat and fry them for 15 to 18 minutes, stirring often, until deep brown and crisp. Lift them out and drain. Fry the cashews in the same oil for 1 minute, until golden.",
+  "In the same oil, fry the ginger garlic paste and green chillies for 1 minute. Add the mutton, turmeric, red chilli powder and salt and sear for 8 minutes.",
+  "Stir in the curd, half the fried onions, half the garam masala and half the mint and coriander leaves. Add half the water, cover and simmer on low heat for 60 minutes, until the mutton falls off the bone.",
+  "Meanwhile, simmer the soaked wheat and dals with the rest of the water and salt in a covered pan over low heat for 45 to 50 minutes, until completely soft. Blend or mash to a smooth paste.",
+  "Lift the bones out of the mutton and shred the meat finely. Stir the meat and its gravy into the wheat paste.",
+  "Cook on low heat for 25 to 30 minutes, beating hard with a wooden spoon or masher every few minutes, until the haleem turns sticky, stretchy and smooth.",
+  "Stir in the ghee and the rest of the garam masala. Taste for salt and serve hot, topped with the rest of the fried onions, mint and coriander leaves, the cashews and lemon wedges.",
+]
+
+[[recipe]]
+id = "01a18bb5-de42-716b-bded-2a9c5cd4e7ae"
+name = "Pathar ka gosht"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "mutton", amount = 500, unit = "g" },
+  { id = "raw-papaya", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "black-pepper", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless mutton from the leg. Slice it against the grain into thin strips about 1 cm thick and pound each one between sheets of cling film until about 5 mm thick.",
+  "Peel the raw papaya and grate it to a paste. Finely chop the green chillies.",
+  "Rub the mutton with the raw papaya, ginger garlic paste, black pepper, garam masala, red chilli powder, green chillies, lemon juice, salt and a spoonful of the ghee. Marinate in the fridge for 4 hours.",
+  "Heat a heavy cast-iron griddle over medium-high heat for 5 minutes, until very hot. Brush it with ghee.",
+  "Lay the mutton strips on it in a single layer and cook for 3 to 4 minutes per side, brushing with more ghee, until browned with charred spots and cooked through. Work in batches.",
+  "Slice the onion into thin rings and fry them on the griddle for 2 minutes, until lightly charred.",
+  "Pile the mutton with the onion on a plate, scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb5-de44-75ae-a292-eacaadbb0d01"
+name = "Dum ka chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "cashews", amount = 15, unit = "piece" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cream", amount = 0.25, unit = "cup" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the chicken into large pieces. Thinly slice the onions.",
+  "Heat the oil in a heavy pan over medium heat and fry the onions for 15 minutes, until deep brown and crisp. Drain, keeping the oil.",
+  "Dry-roast the cashews and almonds for 3 minutes, until lightly golden, then grind them with the fried onions and a little of the curd to a smooth paste.",
+  "Mix the chicken with the nut and onion paste, the rest of the curd, the ginger garlic paste, slit green chillies, garam masala, red chilli powder, mint, coriander leaves, lemon juice and salt. Marinate for 2 hours.",
+  "Heat a spoonful of the onion oil and the ghee in a heavy pan with a tight lid over medium heat. Add the chicken and its marinade and cook for 5 minutes, stirring, until it starts to bubble.",
+  "Cover tightly, sealing the edge with foil, and cook on the lowest heat for 30 to 35 minutes without opening, until the chicken is tender and the ghee rises to the top.",
+  "Stir in the cream gently and heat for 2 minutes. Taste for salt and serve hot with rotis or bagara khana.",
+]
+
+[[recipe]]
+id = "01a18bb5-de47-78dd-bb0e-531c1d8ba79c"
+name = "Shikampuri kebab"
+serves = 4
+prep_minutes = 30
+cook_minutes = 60
+ingredients = [
+  { id = "lamb-mince", amount = 500, unit = "g" },
+  { id = "chana-dal", amount = 0.25, unit = "cup" },
+  { id = "hung-curd", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 2, unit = "small" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it in plenty of water for 30 minutes. Drain.",
+  "Simmer the lamb mince with the chana dal, ginger garlic paste, cardamom, cloves, cinnamon, red chilli powder, salt and the water in a covered pan over medium-low heat for 30 minutes, until the dal is soft and the liquid has evaporated.",
+  "Cool, then grind to a smooth, firm paste. Mix in the egg and garam masala.",
+  "For the filling, finely chop one onion, the green chillies, mint and coriander leaves and mix them with the hung curd and a little salt.",
+  "Divide the mince into balls about 5 cm across. Flatten one in your palm, put a spoonful of filling in the middle, close it up and press into a patty about 7 cm across.",
+  "Heat the ghee on a griddle over medium heat. Fry the kebabs in batches for 3 to 4 minutes per side, until deep brown and crusty.",
+  "Slice the rest of the onion into rings and serve with the hot kebabs.",
+]
+
+[[recipe]]
+id = "01a18bb5-de49-7c13-82f5-879fa67b3e53"
+name = "Hyderabadi marag"
+serves = 4
+prep_minutes = 15
+cook_minutes = 100
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "cashews", amount = 20, unit = "piece" },
+  { id = "almonds", amount = 15, unit = "piece" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "black-pepper", amount = 1.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Use bone-in mutton pieces, ideally with some ribs and shoulder. Soak the cashews and almonds in a little of the milk, warmed, for 15 minutes, then peel the almonds and grind both with the rest of the milk to a smooth paste.",
+  "Thinly slice the onion and slit the green chillies. Coarsely crush the black pepper.",
+  "Put the mutton in a large pan with the water, ginger garlic paste, cardamom, cloves, cinnamon, bay leaves, black pepper and salt. Bring to a boil, skim, then simmer covered over low heat for 70 to 80 minutes, until the meat is very tender and the broth is rich.",
+  "Heat the ghee in a small pan over medium heat and fry the onion for 6 minutes, until golden. Add the green chillies for 30 seconds.",
+  "Add the fried onion to the broth with the curd, whisked smooth, and the nut paste. Simmer for 10 minutes, stirring, until the broth is creamy and lightly thick.",
+  "Stir in the mint and coriander leaves and squeeze in the lemon juice.",
+  "Taste for salt and pepper and serve hot in bowls.",
+]
+
+[[recipe]]
+id = "01a18bb5-de4b-7a71-b8ad-29efc0aec3a4"
+name = "Khatti dal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "toor-dal", amount = 1, unit = "cup" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal in several changes of water. Soak the tamarind in a little of the water for 10 minutes, squeeze it and strain.",
+  "Simmer the dal with most of the rest of the water, the turmeric, the tomatoes, chopped, and the slit green chillies in a covered pan over medium-low heat for 25 minutes, until completely soft. Whisk smooth.",
+  "Stir in the tamarind liquid, red chilli powder, salt and the rest of the water and simmer for 5 minutes, until the raw tamarind smell goes.",
+  "Lightly crush the garlic. Heat the ghee in a small pan over medium heat and fry the garlic for 1 minute, until golden.",
+  "Add the mustard seeds, cumin seeds, dried red chillies and curry leaves and fry for 20 seconds, until they crackle. Pour into the dal.",
+  "Taste and balance the salt and sourness. Scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb5-de4e-7363-aa58-26f9cf296cb5"
+name = "Tamatar ka kut"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "tomato", amount = 6, unit = "medium" },
+  { id = "sesame-seeds", amount = 2, unit = "tbsp" },
+  { id = "dried-coconut", amount = 2, unit = "tbsp" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Roughly chop the tomatoes and simmer them with the water in a covered pan over medium heat for 10 minutes, until very soft. Blend smooth and strain.",
+  "Dry-roast the sesame seeds, dried coconut and peanuts in a pan over low heat for 4 minutes, until golden. Grind to a fine powder.",
+  "Return the tomatoes to the pan with the ground mixture, ginger garlic paste, red chilli powder, turmeric and salt. Simmer for 10 minutes, stirring, until it thickens to a pouring consistency.",
+  "Thinly slice the garlic. Heat the oil in a small pan over medium heat and fry the garlic for 1 minute, until golden.",
+  "Add the mustard seeds, cumin seeds, dried red chillies and curry leaves and fry for 20 seconds. Pour into the kut.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb5-de50-7373-9e6b-7e673c767eed"
+name = "Bagara khana"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "basmati-rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "black-cumin", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the basmati rice in several changes of water until the water runs clear, then soak it in plenty of water for 20 minutes. Drain.",
+  "Thinly slice the onion and slit the green chillies.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the bay leaf, cardamom, cloves, cinnamon and black cumin for 30 seconds.",
+  "Add the onion and fry for 6 minutes, until golden. Add the ginger garlic paste and green chillies and fry for 1 minute.",
+  "Add the basmati rice and mint and stir gently for 1 minute. Pour in the water with salt and bring to a boil.",
+  "Cover and cook on the lowest heat for 12 to 15 minutes, until the water is absorbed and the grains are tender. Rest covered for 5 minutes, fluff with a fork and serve hot with a rich curry.",
+]
+
+[[recipe]]
+id = "01a18bb5-de52-7ea5-9f96-adaf8702c34e"
+name = "Chicken reshmi kebab"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "cream", amount = 0.25, unit = "cup" },
+  { id = "hung-curd", amount = 0.25, unit = "cup" },
+  { id = "cashews", amount = 15, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into cubes about 4 cm across. Rub with the ginger garlic paste, lemon juice and salt and leave for 20 minutes.",
+  "Grind the cashews and green chillies with the cream to a smooth paste. Crush the cardamom seeds.",
+  "Mix the paste with the hung curd, white pepper, garam masala and cardamom, then coat the chicken. Marinate in the fridge for 2 hours.",
+  "Heat the oven grill to high. Thread the chicken onto skewers and lay them on a rack over a tray.",
+  "Grill for 8 minutes, turn, brush with the melted butter and grill for 6 to 8 minutes more, until cooked through with light golden spots. They should stay pale and silky.",
+  "Rest for 2 minutes, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18bb5-de54-70ae-bb88-1ca8b9c1874b"
+name = "Mutton raan"
+serves = 6
+prep_minutes = 20
+cook_minutes = 210
+ingredients = [
+  { id = "mutton", amount = 1.5, unit = "kg" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "raw-papaya", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 3, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 2, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 2, unit = "small" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use a whole leg of mutton. Trim off the outer membrane and make deep cuts all over, down to the bone, about 3 cm apart.",
+  "Rub it with the lemon juice and salt and leave for 30 minutes.",
+  "Peel and grate the raw papaya. Mix it with the curd, ginger garlic paste, Kashmiri chilli powder, garam masala and cumin powder. Rub it all over and into the cuts. Marinate in the fridge for at least 8 hours.",
+  "Heat the oven to 160°C. Put the leg in a deep roasting tin with the water and the sliced onion around it. Drizzle half the ghee over.",
+  "Cover the tin tightly with foil and roast for 3 hours, basting every hour, until the meat is meltingly tender and pulls away from the bone.",
+  "Uncover, brush with the rest of the ghee and the saffron soaked in a spoonful of the pan juices, and roast at 220°C for 15 to 20 minutes, until browned and glazed.",
+  "Rest for 10 minutes. Taste the pan juices for salt, spoon them over and serve.",
+]
+
+[[recipe]]
+id = "01a18bb5-de57-7110-86a3-ee7f153ace2d"
+name = "Kacche gosht ki biryani"
+serves = 6
+prep_minutes = 30
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 2.5, unit = "cup" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 4, unit = "medium" },
+  { id = "raw-papaya", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 5, unit = "piece" },
+  { id = "biryani-masala", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 2, unit = "small" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "cloves", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "black-cumin", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 0.33, unit = "cup" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Thinly slice the onions. Heat the oil in a pan over medium heat and fry them for 15 to 18 minutes, until deep brown and crisp. Drain, keeping the oil.",
+  "Mix the mutton with the curd, grated raw papaya, ginger garlic paste, slit green chillies, biryani masala, red chilli powder, turmeric, half the mint and coriander leaves, the lemon juice, salt, two-thirds of the fried onions and a few spoonfuls of the onion oil. Marinate in the fridge for at least 6 hours.",
+  "Rinse the basmati rice in several changes of water until the water runs clear, then soak it in plenty of water for 30 minutes. Drain. Warm the milk and soak the saffron in it.",
+  "Bring most of the water to a rolling boil with plenty of salt, the bay leaves, cardamom, cloves, cinnamon and black cumin. Add the basmati rice and boil for 4 to 5 minutes, until the grains are about three-quarters cooked and still firm in the centre. Drain.",
+  "Spread the mutton and its marinade in a heavy, wide pan. Cover with the basmati rice in an even layer. Scatter the rest of the fried onions, mint and coriander leaves over, then drizzle the saffron milk and ghee on top.",
+  "Knead the whole wheat flour with a little of the rest of the water into a soft dough and use it to seal the lid onto the pan.",
+  "Cook on medium-high heat for 10 minutes, until you hear the juices bubbling, then on the lowest heat for 60 minutes, ideally on a griddle under the pan, until the mutton is tender.",
+  "Rest for 10 minutes before breaking the seal. Fold gently from the bottom, taste for salt and serve with raita and mirchi ka salan.",
+]
+
+[[recipe]]
+id = "01a18bb5-de59-7c48-b8d3-38a0e1651d9b"
+name = "Sheer khurma"
+serves = 6
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 6, unit = "cup" },
+  { id = "dates", amount = 8, unit = "piece" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "almonds", amount = 15, unit = "piece" },
+  { id = "pistachios", amount = 15, unit = "piece" },
+  { id = "cashews", amount = 15, unit = "piece" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+]
+steps = [
+  "Pit the dates and cut them into thin slivers. Slice the almonds, pistachios and cashews.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the nuts, dates and raisins for 2 minutes, until the nuts are golden. Lift them out.",
+  "Fry the Indian vermicelli in the same ghee for 2 to 3 minutes, until golden brown.",
+  "Pour in the milk and bring it to a boil, stirring. Simmer on low heat for 15 minutes, stirring often, until the milk thickens slightly.",
+  "Add the sugar, the crushed cardamom seeds, the saffron and most of the fried nuts and dates and simmer for 5 minutes.",
+  "Taste for sweetness. Serve warm, topped with the rest of the nuts. It thickens as it cools, so thin it with a little warm milk if needed.",
+]
+
+[[recipe]]
+id = "01a18bb5-de5b-797a-97c6-04313ac35d9e"
+name = "Chicken shahi korma"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "cashews", amount = 15, unit = "piece" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "cream", amount = 0.25, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1.5, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "kewra-water", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Thinly slice the onions. Heat the ghee in a heavy pan over medium heat and fry them for 12 to 15 minutes, until golden brown. Lift them out.",
+  "Grind the fried onions, cashews and almonds with the curd and a little of the water to a very smooth paste.",
+  "Fry the cardamom, cloves, cinnamon and bay leaves in the same ghee for 30 seconds. Add the ginger garlic paste and fry for 1 minute.",
+  "Add the chicken and fry for 6 minutes, until it turns opaque.",
+  "Add the onion paste, Kashmiri chilli powder, coriander powder, white pepper and salt and cook on medium-low heat for 6 to 8 minutes, stirring, until the ghee starts to separate.",
+  "Add the rest of the water, cover and simmer for 18 to 20 minutes, until the chicken is tender and the gravy is thick and creamy.",
+  "Stir in the cream, garam masala and kewra water and simmer for 2 minutes. Taste for salt and serve hot with sheermal or rotis.",
+]
+
+[[recipe]]
+id = "01a18bb5-de5d-742b-be6a-c8b6652134ac"
+name = "Murgh zafrani"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "saffron", amount = 2, unit = "pinch" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "cashews", amount = 20, unit = "piece" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "cream", amount = 0.33, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1.5, unit = "tbsp" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Warm the milk and soak the saffron in it for 15 minutes. Roughly chop the onions.",
+  "Simmer the onions and cashews with half the water for 10 minutes, until soft. Blend to a very smooth, pale paste.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the cardamom for 30 seconds, then the ginger garlic paste for 1 minute.",
+  "Add the chicken and fry for 6 minutes, until opaque but not browned.",
+  "Stir in the onion paste, the curd, whisked smooth, the white pepper and salt and cook on low heat for 5 minutes, stirring.",
+  "Add the rest of the water, cover and simmer for 18 to 20 minutes, until the chicken is tender.",
+  "Stir in the saffron milk, cream and garam masala and simmer for 3 minutes, until golden and silky. Taste for salt and serve hot.",
+]
