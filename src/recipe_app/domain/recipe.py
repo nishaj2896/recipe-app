@@ -16,6 +16,22 @@ from recipe_app.domain.catalog import (
 
 MAX_TOTAL_MINUTES = 24 * 60
 
+# A wait shorter than an hour fits around the cooking; a week covers any pickle.
+MIN_WAIT_MINUTES, MAX_WAIT_MINUTES = 60, 7 * 24 * 60
+MAX_WAIT_NOTE_LENGTH = 40
+PLAN_AHEAD_FIELDS = frozenset({"wait_minutes", "note"})
+
+
+@dataclass(frozen=True, slots=True)
+class PlanAhead:
+    """A hands-off wait of an hour or more that the times leave out (ADR-0009).
+
+    `note` finishes "Plan ahead: ", so it starts in lower case: "soak overnight".
+    """
+
+    wait_minutes: int
+    note: str
+
 
 @dataclass(frozen=True, slots=True)
 class Recipe:
@@ -30,6 +46,7 @@ class Recipe:
     prep_minutes: int
     cook_minutes: int
     ingredients: tuple[Ingredient, ...]
+    plan_ahead: PlanAhead | None = None
 
     @property
     def total_minutes(self) -> int:
@@ -69,6 +86,7 @@ def build_recipe(
     cook_minutes: int,
     ingredient_ids: Sequence[str],
     catalog: IngredientCatalog,
+    plan_ahead: object = None,
 ) -> Recipe:
     """Resolve every ingredient id against the catalog and check every rule.
 
@@ -82,6 +100,7 @@ def build_recipe(
         ingredient_ids=ingredient_ids,
         catalog=catalog,
     )
+    wait = check_plan_ahead(plan_ahead, problems)
     if problems:
         raise RecipeError(
             [f"recipe {name!r} ({id}): {problem}" for problem in problems]
@@ -93,7 +112,49 @@ def build_recipe(
         prep_minutes=prep_minutes,
         cook_minutes=cook_minutes,
         ingredients=tuple(ingredients),
+        plan_ahead=wait,
     )
+
+
+def check_plan_ahead(value: object, problems: list[str]) -> PlanAhead | None:
+    """The `plan_ahead` table as written in a recipe file, or None when absent.
+
+    Adds every problem to `problems`, without naming the recipe.
+    """
+    if value is None:
+        return None
+    if not isinstance(value, dict):
+        problems.append("plan_ahead must be a table")
+        return None
+    before = len(problems)
+    problems.extend(
+        f"plan_ahead: unknown field {field!r}"
+        for field in sorted(set(value) - PLAN_AHEAD_FIELDS)
+    )
+    minutes, note = value.get("wait_minutes"), value.get("note")
+    # type(...) is int, not isinstance: True is an int too, and means nothing here.
+    if type(minutes) is not int or not (
+        MIN_WAIT_MINUTES <= minutes <= MAX_WAIT_MINUTES
+    ):
+        problems.append(
+            "plan_ahead wait_minutes must be a whole number from "
+            f"{MIN_WAIT_MINUTES} to {MAX_WAIT_MINUTES}"
+        )
+    if (
+        not isinstance(note, str)
+        or not note
+        or len(note) > MAX_WAIT_NOTE_LENGTH
+        or note != " ".join(note.split())
+        or not note[0].islower()
+        or note.endswith(".")
+    ):
+        problems.append(
+            f"plan_ahead note must be 1 to {MAX_WAIT_NOTE_LENGTH} characters, "
+            "single-spaced, start in lower case and not end with a full stop"
+        )
+    if len(problems) > before:
+        return None
+    return PlanAhead(wait_minutes=minutes, note=note)  # type: ignore[arg-type]  # checked
 
 
 def check_recipe(

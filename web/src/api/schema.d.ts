@@ -176,6 +176,19 @@ export interface components {
       ingredients: components["schemas"]["CatalogIngredient"][];
     };
     /**
+     * PlanAhead
+     * @description A hands-off wait of an hour or more that the times leave out (ADR-0009).
+     */
+    PlanAhead: {
+      /**
+       * Note
+       * @description Finishes "Plan ahead: ", so it starts in lower case, such as "soak overnight".
+       */
+      note: string;
+      /** Wait Minutes */
+      wait_minutes: number;
+    };
+    /**
      * Problem
      * @description RFC 9457 problem details; every error response uses this body.
      */
@@ -217,6 +230,7 @@ export interface components {
       missing_ingredients: components["schemas"]["IngredientRef"][];
       /** Name */
       name: string;
+      plan_ahead: components["schemas"]["PlanAhead"] | null;
       /** Prep Minutes */
       prep_minutes: number;
       tier: components["schemas"]["Tier"];
@@ -238,6 +252,7 @@ export interface components {
       ingredients: components["schemas"]["RecipeIngredient"][];
       /** Name */
       name: string;
+      plan_ahead: components["schemas"]["PlanAhead"] | null;
       /** Prep Minutes */
       prep_minutes: number;
       /**

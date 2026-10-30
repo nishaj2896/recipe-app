@@ -112,6 +112,7 @@ async def sync(
                     "diet": recipe.diet.value,
                     "all_staples": recipe.all_staples,
                     "core_weight": sum(match_weight(i) for i in recipe.ingredients),
+                    **_wait_columns(recipe),
                     **_content_columns(content.get(recipe.id)),
                 }
                 for recipe in recipes
@@ -160,6 +161,14 @@ async def sync(
         recipes=len(recipes),
         content_hash=catalog.content_hash,
     )
+
+
+def _wait_columns(recipe: Recipe) -> dict[str, Any]:
+    wait = recipe.plan_ahead
+    return {
+        "wait_minutes": wait.wait_minutes if wait else None,
+        "wait_note": wait.note if wait else None,
+    }
 
 
 def _content_columns(content: RecipeContent | None) -> dict[str, Any]:

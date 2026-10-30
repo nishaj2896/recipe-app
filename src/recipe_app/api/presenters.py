@@ -6,6 +6,7 @@ from recipe_app.api.schemas import (
     IgnoredIngredient,
     IngredientRef,
     IngredientsResponse,
+    PlanAhead,
     RecipeCard,
     RecipeDetail,
     RecipeImage,
@@ -54,6 +55,7 @@ def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
         cook_minutes=recipe.cook_minutes,
         total_minutes=recipe.total_minutes,
         diet=recipe.diet,
+        plan_ahead=_plan_ahead(recipe),
         serves=content.serves if content else None,
         ingredients=[
             RecipeIngredient(
@@ -156,7 +158,15 @@ def _card(
         cook_minutes=recipe.cook_minutes,
         total_minutes=recipe.total_minutes,
         diet=recipe.diet,
+        plan_ahead=_plan_ahead(recipe),
     )
+
+
+def _plan_ahead(recipe: Recipe) -> PlanAhead | None:
+    wait = recipe.plan_ahead
+    if wait is None:
+        return None
+    return PlanAhead(wait_minutes=wait.wait_minutes, note=wait.note)
 
 
 def _refs(items: tuple[Ingredient, ...]) -> list[IngredientRef]:

@@ -129,3 +129,24 @@ test("a recipe synced before amounts existed shows no stepper or amounts", async
   expect(screen.queryByRole("region", { name: "Method" })).toBeNull();
   expect(amounts()).toEqual(["Paneer", "Potato", "Cream", "Salt"]);
 });
+
+test("a recipe with a long wait says to plan ahead, and one without says nothing", async () => {
+  stubApi(undefined, (card) => ({
+    ...detailOf(card),
+    plan_ahead: { wait_minutes: 480, note: "soak overnight" },
+  }));
+  open();
+
+  const note = await screen.findByText(/Plan ahead: soak overnight\./);
+  expect(note.closest("p")).toHaveTextContent(
+    "Plan ahead: soak overnight. About 8 h hands-off, not counted in the times above.",
+  );
+});
+
+test("a recipe without a wait shows no plan ahead note", async () => {
+  written(false);
+  open();
+
+  await screen.findByRole("heading", { name: matar.name });
+  expect(screen.queryByText(/Plan ahead/)).toBeNull();
+});

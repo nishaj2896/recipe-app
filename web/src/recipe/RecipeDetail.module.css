@@ -41,6 +41,15 @@
   white-space: nowrap;
 }
 
+.planAhead {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  font-size: 14px;
+}
+
 .groupTitle {
   margin-bottom: var(--space-2);
   font-family: var(--font-body);

@@ -45,7 +45,7 @@ from recipe_app.domain.matching import (
     match_recipe,
 )
 from recipe_app.domain.ranking import Ranking, SearchFilters
-from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe import PlanAhead, Recipe
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.units import Unit
 from recipe_app.infra.tables import recipe_ingredients, recipe_steps, recipes
@@ -70,6 +70,8 @@ _RECIPE = select(
     recipes.c.name,
     recipes.c.prep_minutes,
     recipes.c.cook_minutes,
+    recipes.c.wait_minutes,
+    recipes.c.wait_note,
     _INGREDIENT_IDS,
 )
 
@@ -302,6 +304,11 @@ class PostgresRecipeRepository:
                     prep_minutes=row["prep_minutes"],
                     cook_minutes=row["cook_minutes"],
                     ingredients=tuple(self._catalog.by_id[i] for i in ingredient_ids),
+                    plan_ahead=None
+                    if row["wait_minutes"] is None
+                    else PlanAhead(
+                        wait_minutes=row["wait_minutes"], note=row["wait_note"]
+                    ),
                 )
             )
         if skipped:

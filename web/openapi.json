@@ -145,6 +145,23 @@
         "title": "IngredientsResponse",
         "type": "object"
       },
+      "PlanAhead": {
+        "description": "A hands-off wait of an hour or more that the times leave out (ADR-0009).",
+        "properties": {
+          "note": {
+            "description": "Finishes \"Plan ahead: \", so it starts in lower case, such as \"soak overnight\".",
+            "title": "Note",
+            "type": "string"
+          },
+          "wait_minutes": {
+            "title": "Wait Minutes",
+            "type": "integer"
+          }
+        },
+        "required": ["wait_minutes", "note"],
+        "title": "PlanAhead",
+        "type": "object"
+      },
       "Problem": {
         "description": "RFC 9457 problem details; every error response uses this body.",
         "properties": {
@@ -244,6 +261,16 @@
             "title": "Name",
             "type": "string"
           },
+          "plan_ahead": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlanAhead"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "prep_minutes": {
             "title": "Prep Minutes",
             "type": "integer"
@@ -267,7 +294,8 @@
           "prep_minutes",
           "cook_minutes",
           "total_minutes",
-          "diet"
+          "diet",
+          "plan_ahead"
         ],
         "title": "RecipeCard",
         "type": "object"
@@ -307,6 +335,16 @@
             "title": "Name",
             "type": "string"
           },
+          "plan_ahead": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlanAhead"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "prep_minutes": {
             "title": "Prep Minutes",
             "type": "integer"
@@ -342,6 +380,7 @@
           "cook_minutes",
           "total_minutes",
           "diet",
+          "plan_ahead",
           "serves",
           "ingredients",
           "steps",

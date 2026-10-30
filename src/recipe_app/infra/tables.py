@@ -40,7 +40,12 @@ from recipe_app.domain.content import (
     MAX_STEP_LENGTH,
     MIN_SERVES,
 )
-from recipe_app.domain.recipe import MAX_TOTAL_MINUTES
+from recipe_app.domain.recipe import (
+    MAX_TOTAL_MINUTES,
+    MAX_WAIT_MINUTES,
+    MAX_WAIT_NOTE_LENGTH,
+    MIN_WAIT_MINUTES,
+)
 from recipe_app.domain.units import Unit
 
 # Every constraint gets a predictable name, so a later migration can drop it by name.
@@ -146,6 +151,9 @@ recipes = Table(
     Column("image_file", Text),
     Column("image_sha256", String(64)),
     Column("image_alt", Text),
+    # A long hands-off wait the times leave out (ADR-0009); both NULL for most.
+    Column("wait_minutes", SmallInteger),
+    Column("wait_note", Text),
     CheckConstraint("prep_minutes >= 0", name="prep_not_negative"),
     CheckConstraint("core_weight >= 0", name="core_weight_not_negative"),
     CheckConstraint("cook_minutes >= 0", name="cook_not_negative"),
@@ -160,6 +168,17 @@ recipes = Table(
         "(image_file IS NULL) = (image_sha256 IS NULL)"
         " AND (image_file IS NULL) = (image_alt IS NULL)",
         name="image_all_or_none",
+    ),
+    CheckConstraint(
+        f"wait_minutes BETWEEN {MIN_WAIT_MINUTES} AND {MAX_WAIT_MINUTES}",
+        name="wait_in_range",
+    ),
+    CheckConstraint(
+        f"length(wait_note) BETWEEN 1 AND {MAX_WAIT_NOTE_LENGTH}",
+        name="wait_note_length",
+    ),
+    CheckConstraint(
+        "(wait_minutes IS NULL) = (wait_note IS NULL)", name="wait_has_note"
     ),
     _name_not_blank(),
     # The search's other way in: the few recipes any pantry can cook.
