@@ -1,9 +1,11 @@
+from dataclasses import replace
 from uuid import UUID
 
-from recipe_app.api.presenters import recipe_detail
+from recipe_app.api.presenters import _scored_card, recipe_detail
 from recipe_app.domain.catalog import parse_catalog
-from recipe_app.domain.content import Amount, Image, RecipeContent, RecipeWithContent
-from recipe_app.domain.recipe import build_recipe
+from recipe_app.domain.content import Amount, RecipeContent, RecipeWithContent
+from recipe_app.domain.matching import ScoredMatch
+from recipe_app.domain.recipe import Image, build_recipe
 from recipe_app.domain.units import Unit
 from tests.domain.factories import catalog, category, ingredient
 
@@ -38,6 +40,34 @@ def test_photo_url_is_versioned_by_its_hash() -> None:
         4,
         Unit.MEDIUM,
     )
+
+
+def test_the_card_carries_the_photo_with_the_same_versioned_url() -> None:
+    """ADR-0010: the swipe card shows the photo, so the card has its URL."""
+    photo = Image(file=f"{RECIPE.id}.webp", sha256="0123456789ab" + "f" * 52, alt="x")
+    match = ScoredMatch(
+        recipe=replace(RECIPE, image=photo),
+        score_int=1,
+        match_tenths=1000,
+        matched=RECIPE.ingredients,
+        missing=(),
+        assumed=(),
+    )
+    plain = ScoredMatch(
+        recipe=RECIPE,
+        score_int=1,
+        match_tenths=1000,
+        matched=RECIPE.ingredients,
+        missing=(),
+        assumed=(),
+    )
+
+    card, bare = _scored_card(match), _scored_card(plain)
+
+    assert card.image is not None
+    assert card.image.url == f"/dishes/{RECIPE.id}.webp?v=0123456789ab"
+    assert card.image.alt == "x"
+    assert bare.image is None
 
 
 def test_a_recipe_without_content_still_lists_its_ingredients() -> None:

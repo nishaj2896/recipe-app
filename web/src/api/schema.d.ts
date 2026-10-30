@@ -219,6 +219,7 @@ export interface components {
        * Format: uuid
        */
       id: string;
+      image: components["schemas"]["RecipeImage"] | null;
       /**
        * Match Percentage
        * @description Share of core weight matched; null on all-staples cards.

@@ -98,6 +98,11 @@ class PlanAhead(BaseModel):
     )
 
 
+class RecipeImage(BaseModel):
+    url: str = Field(description="A path on the web origin, versioned by content.")
+    alt: str
+
+
 class RecipeCard(BaseModel):
     id: UUID
     name: str
@@ -113,6 +118,7 @@ class RecipeCard(BaseModel):
     total_minutes: int
     diet: Diet
     plan_ahead: PlanAhead | None
+    image: RecipeImage | None
 
 
 class SearchResponse(BaseModel):
@@ -126,11 +132,6 @@ class RecipeIngredient(IngredientRef):
         description="For the recipe's `serves`; null with `unit` when to taste."
     )
     unit: Unit | None
-
-
-class RecipeImage(BaseModel):
-    url: str = Field(description="A path on the web origin, versioned by content.")
-    alt: str
 
 
 class RecipeDetail(BaseModel):

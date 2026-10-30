@@ -91,6 +91,7 @@ export function recipe(
     total_minutes: 30,
     diet: "vegetarian",
     plan_ahead: null,
+    image: null,
   };
 }
 

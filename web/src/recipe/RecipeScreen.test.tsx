@@ -109,6 +109,7 @@ test("the drawn bowl stands in when the photo doesn't load", async () => {
   fireEvent.error(await screen.findByRole("img", { name: "Matar paneer in a bowl" }));
 
   expect(screen.queryByRole("img", { name: "Matar paneer in a bowl" })).toBeNull();
+  expect(document.querySelector('use[href="#art-bowl"]')).not.toBeNull();
 });
 
 test("a recipe synced before amounts existed shows no stepper or amounts", async () => {

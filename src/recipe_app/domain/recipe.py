@@ -35,6 +35,15 @@ class PlanAhead:
 
 
 @dataclass(frozen=True, slots=True)
+class Image:
+    """A recipe's photo: a file in web/public/dishes/, its hash, and its alt text."""
+
+    file: str
+    sha256: str
+    alt: str
+
+
+@dataclass(frozen=True, slots=True)
 class Recipe:
     """A recipe made only of real catalog ingredients; build it with build_recipe.
 
@@ -48,6 +57,8 @@ class Recipe:
     cook_minutes: int
     ingredients: tuple[Ingredient, ...]
     plan_ahead: PlanAhead | None = None
+    # Copied from the recipe's content so the swipe card can show it (ADR-0010).
+    image: Image | None = None
 
     @property
     def total_minutes(self) -> int:

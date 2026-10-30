@@ -20,7 +20,7 @@ from recipe_app.api.schemas import (
 from recipe_app.domain.catalog import Ingredient, IngredientCatalog
 from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch
-from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe import Image, Recipe
 from recipe_app.services.catalog import listed_ingredients, staple_groups
 from recipe_app.services.search import SearchResult
 
@@ -47,7 +47,6 @@ IMAGE_VERSION_LENGTH = 12
 def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
     recipe, content = detail.recipe, detail.content
     amounts = content.amounts if content else (None,) * len(recipe.ingredients)
-    image = content.image if content else None
     return RecipeDetail(
         id=recipe.id,
         name=recipe.name,
@@ -67,12 +66,16 @@ def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
             for item, amount in zip(recipe.ingredients, amounts, strict=True)
         ],
         steps=list(content.steps) if content else [],
-        image=None
-        if image is None
-        else RecipeImage(
-            url=f"{DISHES_PATH}/{image.file}?v={image.sha256[:IMAGE_VERSION_LENGTH]}",
-            alt=image.alt,
-        ),
+        image=_image(content.image if content else None),
+    )
+
+
+def _image(image: Image | None) -> RecipeImage | None:
+    if image is None:
+        return None
+    return RecipeImage(
+        url=f"{DISHES_PATH}/{image.file}?v={image.sha256[:IMAGE_VERSION_LENGTH]}",
+        alt=image.alt,
     )
 
 
@@ -159,6 +162,7 @@ def _card(
         total_minutes=recipe.total_minutes,
         diet=recipe.diet,
         plan_ahead=_plan_ahead(recipe),
+        image=_image(recipe.image),
     )
 
 
