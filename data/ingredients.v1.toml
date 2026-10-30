@@ -449,7 +449,7 @@ name = "Gongura"
 class = "A"
 diet = "vegan"
 category = "vegetables"
-search_terms = ["sorrel leaves", "roselle leaves", "ambadi leaves"]
+search_terms = ["roselle leaves", "red sorrel leaves"]
 
 [[ingredient]]
 id = "green-chillies"

@@ -340,7 +340,7 @@ steps = [
 id = "01a188e4-2ce7-716c-a39c-43b7362fb938"
 name = "Phirni"
 serves = 4
-prep_minutes = 30
+prep_minutes = 150
 cook_minutes = 30
 ingredients = [
   { id = "basmati-rice", amount = 0.25, unit = "cup" },
@@ -365,7 +365,7 @@ steps = [
 id = "01a188e4-2ce9-7b4e-b35a-8e2b508762c7"
 name = "Gulab jamun"
 serves = 6
-prep_minutes = 20
+prep_minutes = 80
 cook_minutes = 30
 ingredients = [
   { id = "khoa", amount = 200, unit = "g" },
@@ -392,7 +392,7 @@ steps = [
 id = "01a188e4-2ceb-7bac-ac78-07969f759c5d"
 name = "Rasmalai"
 serves = 6
-prep_minutes = 30
+prep_minutes = 300
 cook_minutes = 60
 ingredients = [
   { id = "milk", amount = 2, unit = "l" },
@@ -469,7 +469,7 @@ steps = [
 id = "01a188e4-2cf2-76e3-83a6-1b56e3117e9a"
 name = "Kulfi"
 serves = 6
-prep_minutes = 15
+prep_minutes = 375
 cook_minutes = 45
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },

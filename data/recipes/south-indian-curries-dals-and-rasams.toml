@@ -162,7 +162,7 @@ steps = [
   "Soak the tamarind in a little of the rest of the water for 10 minutes. Squeeze it and strain the pulp.",
   "Heat a few drops of the oil in a pan over medium-low heat. Roast the coriander seeds, chana dal, most of the dried red chillies and a few of the fenugreek seeds for 3 minutes, until the dal is golden.",
   "Add the grated coconut and roast for 1 minute more, until it smells toasty.",
-  "Let it cool, then grind to a smooth paste with a splash of water. Arachuvitta means freshly ground, and this paste is what makes the dish.",
+  "Let it cool, then grind to a smooth paste with a splash of the water. Arachuvitta means freshly ground, and this paste is what makes the dish.",
   "Quarter the small brinjals and peel the shallots. Simmer them in the tamarind pulp with salt and the rest of the water for 10 minutes, until tender.",
   "Add the dal and the paste and simmer for 8 minutes, stirring so it doesn't catch.",
   "Heat the rest of the oil in a small pan. Add the mustard seeds and the rest of the fenugreek seeds and wait until they pop. Add the rest of the dried red chillies, the curry leaves and the asafoetida.",
@@ -332,7 +332,7 @@ steps = [
   "Rinse the toor dal. Pressure cook it with the turmeric and a little of the water for 4 whistles and mash it smooth.",
   "Soak the tamarind in a little of the water for 10 minutes. Squeeze it and strain the pulp.",
   "Heat a few drops of the ghee in a pan over medium-low heat. Roast the coriander seeds, chana dal, black pepper, half the cumin seeds and the dried red chillies for 3 minutes, until fragrant.",
-  "Grind them with the grated coconut and a splash of water to a smooth paste.",
+  "Grind them with the grated coconut and a splash of the water to a smooth paste.",
   "Simmer the tamarind pulp with the chopped tomato, jaggery and salt for 8 minutes.",
   "Add the dal, the paste and the rest of the water. Heat until it froths up, without boiling.",
   "Heat the rest of the ghee in a small pan. Add the mustard seeds and the rest of the cumin seeds and wait until they pop.",
@@ -396,7 +396,7 @@ steps = [
   "Rinse the moong dal. Pressure cook it with the turmeric and half the water for 2 whistles.",
   "String the broad beans and cut them into short pieces. Cook them with salt and the rest of the water for 10 minutes, until tender.",
   "Heat a few drops of the coconut oil in a pan over medium-low heat. Fry most of the urad dal, the black pepper, half the cumin seeds and the dried red chillies for 2 to 3 minutes, until the dal is golden.",
-  "Grind them with the grated coconut and a splash of water to a paste. Poricha means fried, and the pepper makes this kootu warmer than the plain one.",
+  "Grind them with the grated coconut and a splash of the water to a paste. Poricha means fried, and the pepper makes this kootu warmer than the plain one.",
   "Stir the dal and the paste into the broad beans and simmer for 5 minutes.",
   "Heat the rest of the coconut oil in a small pan. Add the mustard seeds and the rest of the urad dal and cumin seeds and fry until golden.",
   "Add the curry leaves and asafoetida, pour over, taste for salt and serve.",
@@ -1337,7 +1337,7 @@ steps = [
   "Add the shallots and garlic and fry for 5 minutes, until golden.",
   "Lower the heat, add the sambar powder and turmeric and stir for 30 seconds.",
   "Add the tamarind pulp, the rest of the water and salt. Simmer for 15 minutes, until thick and glossy.",
-  "Mix the rice flour with a splash of water, stir it in with the jaggery and simmer for 2 minutes. It is sharp and concentrated, eaten in small amounts.",
+  "Mix the rice flour with a splash of the water, stir it in with the jaggery and simmer for 2 minutes. It is sharp and concentrated, eaten in small amounts.",
 ]
 
 [[recipe]]
@@ -1405,6 +1405,6 @@ steps = [
   "Add the dried red chillies, curry leaves and asafoetida and stir for 10 seconds.",
   "Add the shallots and fry for 3 minutes, until lightly golden. Add the tomato and drumsticks and stir for 2 minutes.",
   "Add the sambar powder, turmeric, tamarind pulp, the rest of the water and salt. Simmer for 20 minutes, until the drumsticks are tender.",
-  "Grind the grated coconut with a splash of water and stir it in with the jaggery.",
+  "Grind the grated coconut with a splash of the water and stir it in with the jaggery.",
   "Simmer for 3 minutes, taste for salt and serve.",
 ]
