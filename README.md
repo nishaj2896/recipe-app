@@ -165,6 +165,7 @@ Decisions that would be expensive to reverse are recorded as ADRs in [`docs/adr/
 - [ADR-0008](docs/adr/0008-recipe-content-and-photos.md): recipes carry quantities, steps and a photo, written for this project
 - [ADR-0009](docs/adr/0009-plan-ahead-label.md): recipes that need a long wait say "Plan ahead"
 - [ADR-0010](docs/adr/0010-photos-on-the-swipe-cards.md): the swipe card shows the dish photo
+- [ADR-0011](docs/adr/0011-dish-photos-stay-in-git.md): dish photos stay in Git (no LFS or object storage yet)
 
 To change one of these decisions, add a new ADR that supersedes it rather than rewriting the old one.
 
