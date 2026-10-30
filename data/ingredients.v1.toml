@@ -443,6 +443,13 @@ category = "vegetables"
 search_terms = ["mixed veg"]
 
 [[ingredient]]
+id = "galangal"
+name = "Galangal"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
 id = "garlic"
 name = "Garlic"
 class = "S"
@@ -515,6 +522,14 @@ category = "vegetables"
 search_terms = ["dried wild caper berries"]
 
 [[ingredient]]
+id = "kombu"
+name = "Kombu"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["dried kelp"]
+
+[[ingredient]]
 id = "leek"
 name = "Leek"
 class = "B"
@@ -551,6 +566,14 @@ name = "Mustard greens"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+
+[[ingredient]]
+id = "nori"
+name = "Nori"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["seaweed sheets"]
 
 [[ingredient]]
 id = "okra"
@@ -723,6 +746,13 @@ diet = "vegan"
 category = "vegetables"
 
 [[ingredient]]
+id = "soybean-sprouts"
+name = "Soybean sprouts"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+
+[[ingredient]]
 id = "spinach"
 name = "Spinach"
 class = "A"
@@ -812,6 +842,14 @@ name = "Turnip"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+
+[[ingredient]]
+id = "wakame"
+name = "Wakame"
+class = "B"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["dried wakame"]
 
 [[ingredient]]
 id = "water-chestnuts"
@@ -987,6 +1025,14 @@ category = "meat-and-poultry"
 # Fish & seafood
 
 [[ingredient]]
+id = "veal"
+name = "Veal"
+class = "A"
+diet = "non_veg"
+category = "meat-and-poultry"
+search_terms = ["veal shanks"]
+
+[[ingredient]]
 id = "anchovies"
 name = "Anchovies"
 class = "A"
@@ -1015,6 +1061,14 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["bummalo"]
+
+[[ingredient]]
+id = "bonito-flakes"
+name = "Bonito flakes"
+class = "B"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["dried bonito flakes"]
 
 [[ingredient]]
 id = "canned-sardines"
@@ -1148,6 +1202,14 @@ diet = "non_veg"
 category = "fish-and-seafood"
 
 [[ingredient]]
+id = "salt-cod"
+name = "Salt cod"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+search_terms = ["dried salt cod"]
+
+[[ingredient]]
 id = "sardines"
 name = "Sardines"
 class = "A"
@@ -1165,6 +1227,13 @@ category = "fish-and-seafood"
 [[ingredient]]
 id = "smoked-salmon"
 name = "Smoked salmon"
+class = "A"
+diet = "non_veg"
+category = "fish-and-seafood"
+
+[[ingredient]]
+id = "sole"
+name = "Sole"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
@@ -1256,6 +1325,14 @@ class = "A"
 diet = "vegan"
 category = "dals-and-pulses"
 search_terms = ["azuki beans"]
+
+[[ingredient]]
+id = "baked-beans"
+name = "Baked beans"
+class = "A"
+diet = "vegan"
+category = "dals-and-pulses"
+search_terms = ["canned baked beans"]
 
 [[ingredient]]
 id = "beluga-lentils"
@@ -2012,6 +2089,14 @@ diet = "vegan"
 category = "rice-and-grains"
 
 [[ingredient]]
+id = "hominy"
+name = "Hominy"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["canned hominy"]
+
+[[ingredient]]
 id = "idli-rice"
 name = "Idli rice"
 class = "A"
@@ -2032,6 +2117,14 @@ name = "Kodo millet"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+
+[[ingredient]]
+id = "korean-rice-cakes"
+name = "Korean rice cakes"
+class = "A"
+diet = "vegan"
+category = "rice-and-grains"
+search_terms = ["rice cake sticks"]
 
 [[ingredient]]
 id = "little-millet"
@@ -2508,6 +2601,14 @@ name = "Hot dog buns"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "kataifi-pastry"
+name = "Kataifi pastry"
+class = "A"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["shredded filo"]
 
 [[ingredient]]
 id = "ladyfingers"
@@ -3878,6 +3979,14 @@ diet = "vegan"
 category = "spices-and-seasonings"
 
 [[ingredient]]
+id = "gochugaru"
+name = "Gochugaru"
+class = "B"
+diet = "vegan"
+category = "spices-and-seasonings"
+search_terms = ["korean chilli flakes"]
+
+[[ingredient]]
 id = "goda-masala"
 name = "Goda masala"
 class = "B"
@@ -4476,6 +4585,14 @@ diet = "vegan"
 category = "sauces-and-condiments"
 
 [[ingredient]]
+id = "doenjang"
+name = "Doenjang"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["korean soybean paste"]
+
+[[ingredient]]
 id = "doubanjiang"
 name = "Doubanjiang"
 class = "B"
@@ -4556,6 +4673,14 @@ name = "Japanese mayonnaise"
 class = "B"
 diet = "egg"
 category = "sauces-and-condiments"
+
+[[ingredient]]
+id = "kecap-manis"
+name = "Kecap manis"
+class = "B"
+diet = "vegan"
+category = "sauces-and-condiments"
+search_terms = ["sweet soy sauce"]
 
 [[ingredient]]
 id = "ketchup"
@@ -5450,6 +5575,14 @@ name = "Potato starch"
 class = "B"
 diet = "vegan"
 category = "flours-and-baking"
+
+[[ingredient]]
+id = "precooked-cornmeal"
+name = "Precooked cornmeal"
+class = "A"
+diet = "vegan"
+category = "flours-and-baking"
+search_terms = ["arepa flour"]
 
 [[ingredient]]
 id = "rennet"

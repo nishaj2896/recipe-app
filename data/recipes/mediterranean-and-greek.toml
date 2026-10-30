@@ -1,0 +1,581 @@
+# Mediterranean and Greek (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c1a-e21f-7a45-9042-2fc871e11814"
+name = "Greek salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "olives", amount = 0.5, unit = "cup" },
+  { id = "feta", amount = 200, unit = "g" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "red-wine-vinegar", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use ripe tomatoes and cut them into large wedges. Halve the cucumber lengthwise and cut it into thick half-moons.",
+  "Slice the onion into thin rings and the green bell pepper into thin rounds.",
+  "Put the tomatoes, cucumber, onion, bell pepper and olives in a wide bowl. Season with salt and toss gently.",
+  "Drizzle the red wine vinegar and most of the extra-virgin olive oil over.",
+  "Lay the feta on top in a single slab, sprinkle the dried oregano over and drizzle with the rest of the extra-virgin olive oil.",
+  "Taste a tomato for salt and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1a-e223-7646-ba6f-355a95a97ae1"
+name = "Moussaka"
+serves = 8
+prep_minutes = 45
+cook_minutes = 90
+ingredients = [
+  { id = "brinjal", amount = 3, unit = "large" },
+  { id = "lamb-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "red-wine", amount = 0.5, unit = "cup" },
+  { id = "ground-cinnamon", amount = 0.5, unit = "tsp" },
+  { id = "allspice", amount = 0.25, unit = "tsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 0.5, unit = "cup" },
+  { id = "butter", amount = 0.33, unit = "cup" },
+  { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
+  { id = "milk", amount = 3, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "parmesan", amount = 0.75, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 220°C. Slice the aubergines into rounds about 1 cm thick, brush both sides with most of the olive oil and season with salt. Roast on trays for 20 to 25 minutes, turning once, until soft and golden.",
+  "Chop the onion and garlic. Heat the rest of the olive oil in a pan over medium-high heat and brown the lamb mince for 6 to 8 minutes. Add the onion and garlic and cook for 5 minutes.",
+  "Stir in the tomato paste, ground cinnamon, allspice and dried oregano for 1 minute. Add the red wine and let it bubble for 2 minutes.",
+  "Add the canned tomatoes, season with salt and simmer on low heat for 25 to 30 minutes, until thick.",
+  "For the sauce, melt the butter over medium heat, stir in the all-purpose flour for 2 minutes, then whisk in the milk gradually. Simmer for 5 minutes, stirring, until thick. Off the heat, whisk in the beaten eggs, the nutmeg, half the parmesan and salt.",
+  "Lower the oven to 180°C. Layer half the aubergine in a deep baking dish, spread the lamb mince over, then the rest of the aubergine. Pour the sauce over and scatter the rest of the parmesan on top.",
+  "Bake for 45 minutes, until deep golden. Rest for at least 20 minutes so it slices cleanly.",
+  "Taste a corner and serve warm in squares.",
+]
+
+[[recipe]]
+id = "01a18c1a-e225-7218-89eb-d75b3423a537"
+name = "Spanakopita"
+serves = 8
+prep_minutes = 30
+cook_minutes = 45
+ingredients = [
+  { id = "spinach", amount = 750, unit = "g" },
+  { id = "feta", amount = 300, unit = "g" },
+  { id = "ricotta", amount = 0.5, unit = "cup" },
+  { id = "spring-onions", amount = 6, unit = "piece" },
+  { id = "dill", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "nutmeg", amount = 0.25, unit = "tsp" },
+  { id = "filo-pastry", amount = 250, unit = "g" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "butter", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Wilt the spinach in batches in a dry pan over medium heat for 2 to 3 minutes. Cool, squeeze out every drop of liquid and chop it.",
+  "Slice the spring onions and chop the dill. Mix them with the spinach, crumbled feta, ricotta, beaten eggs, nutmeg and a little salt.",
+  "Heat the oven to 180°C. Melt the butter with the olive oil.",
+  "Brush a baking dish about 23 by 33 cm with the butter mixture. Lay in half the filo pastry sheets, brushing each with the butter mixture.",
+  "Spread the filling evenly, then cover with the rest of the filo, brushing each sheet. Tuck in the edges and brush the top well.",
+  "Score the top into squares with a sharp knife. Bake for 40 to 45 minutes, until deep golden and crisp.",
+  "Rest for 10 minutes, taste and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c1a-e227-7ec3-9d05-d16f1fce345b"
+name = "Tzatziki"
+serves = 6
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "hung-curd", amount = 2, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "extra-virgin-olive-oil", amount = 2, unit = "tbsp" },
+  { id = "red-wine-vinegar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Grate the cucumber, toss with a little salt and leave for 10 minutes.",
+  "Squeeze the cucumber hard in a clean cloth to get rid of as much liquid as possible.",
+  "Grate the garlic and finely chop the dill.",
+  "Stir the cucumber, garlic, dill, red wine vinegar and most of the extra-virgin olive oil into the Greek yogurt.",
+  "Taste and add more salt or garlic if needed. Chill for at least 30 minutes.",
+  "Drizzle with the rest of the extra-virgin olive oil and serve cold.",
+]
+
+[[recipe]]
+id = "01a18c1a-e22a-7100-a285-c7d4fa9f5e28"
+name = "Chicken souvlaki"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "dried-oregano", amount = 2, unit = "tsp" },
+  { id = "olive-oil", amount = 0.25, unit = "cup" },
+  { id = "pita-bread", amount = 4, unit = "piece" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "hung-curd", amount = 1, unit = "cup" },
+  { id = "cucumber", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into cubes about 3 cm across.",
+  "Grate the garlic. Mix most of it with the olive oil, the juice of one of the lemons, the dried oregano and salt. Toss the chicken in it and leave for at least 1 hour.",
+  "Grate the cucumber, squeeze it dry and stir it into the Greek yogurt with the rest of the garlic and a little salt.",
+  "Thread the chicken onto skewers. Grill on a very hot griddle pan or barbecue for 10 to 12 minutes, turning, until charred and cooked through.",
+  "Warm the pita bread on the griddle. Slice the tomatoes and onion.",
+  "Taste the sauce and adjust. Serve the souvlaki on the pita with the tomatoes, onion and sauce, and the other lemon cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c1a-e22c-7197-ad6f-3d68e86f807f"
+name = "Gyros"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "pork", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "dried-oregano", amount = 2, unit = "tsp" },
+  { id = "paprika", amount = 2, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "olive-oil", amount = 3, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "pita-bread", amount = 4, unit = "piece" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "hung-curd", amount = 1, unit = "cup" },
+  { id = "cucumber", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use pork shoulder and slice it very thinly. Grate one of the onions and half the garlic.",
+  "Mix the grated onion and garlic with the dried oregano, paprika, cumin powder, olive oil, lemon juice and salt. Toss the pork in it and leave for at least 2 hours, or overnight in the fridge.",
+  "Grate the cucumber, squeeze it dry and stir it into the Greek yogurt with the rest of the garlic and a little salt.",
+  "Heat a large heavy frying pan over high heat. Cook the pork in batches for 3 to 4 minutes, turning, until charred at the edges and cooked through.",
+  "Slice the other onion thinly and the tomatoes into wedges. Warm the pita bread.",
+  "Taste the pork and sauce and adjust. Fill the pita with pork, onion, tomatoes and sauce, roll up and serve.",
+]
+
+[[recipe]]
+id = "01a18c1a-e22e-7a61-82a7-b31104f560e9"
+name = "Greek lemon chicken and potatoes"
+serves = 4
+prep_minutes = 15
+cook_minutes = 70
+ingredients = [
+  { id = "chicken", amount = 1.2, unit = "kg" },
+  { id = "potato", amount = 1, unit = "kg" },
+  { id = "lemon", amount = 3, unit = "medium" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "dried-oregano", amount = 2, unit = "tsp" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 200°C. Use bone-in chicken thighs and legs.",
+  "Peel the potatoes and cut them into long wedges. Crush the garlic.",
+  "Whisk the lemon juice, olive oil, garlic, dried oregano, black pepper and salt.",
+  "Toss the chicken and potatoes in the dressing in a large roasting tin, chicken skin side up, in a single layer.",
+  "Pour the chicken stock round the potatoes. Roast for 45 minutes.",
+  "Turn the potatoes and roast for 20 to 25 minutes more, until the chicken is golden and the potatoes are soft inside and crisp at the edges, with most of the liquid absorbed.",
+  "Taste and add more salt or lemon juice. Spoon the pan juices over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1a-e231-7ea1-ac8a-52453ef1bdf0"
+name = "Avgolemono soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "chicken-stock", amount = 6, unit = "cup" },
+  { id = "chicken", amount = 300, unit = "g" },
+  { id = "orzo", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "lemon", amount = 2, unit = "medium" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Bring the chicken stock to a simmer and poach the chicken in it for 15 to 18 minutes, until cooked through. Lift it out and shred it.",
+  "Add the orzo to the stock and simmer for 8 to 10 minutes, until tender. Lower the heat so it stops simmering.",
+  "Whisk the eggs in a bowl for 1 minute, until frothy, then whisk in the lemon juice.",
+  "Slowly whisk 2 ladlefuls of the hot stock into the eggs, a little at a time, to warm them without scrambling.",
+  "Pour the egg mixture back into the pot, stirring, and heat gently for 2 to 3 minutes, until it thickens slightly. Do not let it boil.",
+  "Return the chicken and season with salt.",
+  "Taste and add more lemon juice if needed. Scatter the chopped dill over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1a-e233-73f7-85d6-68f83129f860"
+name = "Gigantes plaki"
+serves = 4
+prep_minutes = 15
+cook_minutes = 55
+ingredients = [
+  { id = "butter-beans", amount = 2, unit = "can" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "tomato-paste", amount = 1, unit = "tbsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "parsley", amount = 0.33, unit = "cup" },
+  { id = "extra-virgin-olive-oil", amount = 0.33, unit = "cup" },
+  { id = "feta", amount = 100, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Heat the oven to 180°C. Drain and rinse the butter beans.",
+  "Chop the onion, garlic, carrot and celery.",
+  "Heat half the extra-virgin olive oil in an ovenproof pan over medium heat. Fry the onion, carrot and celery for 10 minutes, until soft, then the garlic for 1 minute.",
+  "Stir in the tomato paste and dried oregano for 1 minute. Add the canned tomatoes and the water and simmer for 10 minutes. Season with salt.",
+  "Stir in the beans and most of the chopped parsley. Drizzle with the rest of the extra-virgin olive oil.",
+  "Bake uncovered for 30 to 35 minutes, until the sauce is thick and the top is lightly caramelised.",
+  "Taste and adjust. Crumble the feta and the rest of the parsley over and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c1a-e235-71c2-b9fb-57ad32eb3d58"
+name = "Briam"
+serves = 6
+prep_minutes = 25
+cook_minutes = 75
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "zucchini", amount = 2, unit = "medium" },
+  { id = "brinjal", amount = 1, unit = "large" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "parsley", amount = 0.33, unit = "cup" },
+  { id = "extra-virgin-olive-oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Heat the oven to 190°C. Peel the potatoes. Cut the potatoes, zucchini and aubergine into slices about 1 cm thick.",
+  "Cut the bell peppers into strips, slice the onions and garlic, and grate the tomatoes, discarding the skins.",
+  "Toss all the vegetables with the grated tomatoes, dried oregano, chopped parsley, salt and most of the extra-virgin olive oil in a large roasting tin.",
+  "Spread them out evenly, pour the water round and drizzle with the rest of the extra-virgin olive oil.",
+  "Cover with foil and bake for 40 minutes.",
+  "Uncover, stir gently and bake for 30 to 35 minutes more, until all the vegetables are soft and caramelised at the edges.",
+  "Taste and adjust the salt. Rest for 15 minutes and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c1a-e237-7e9e-8a9e-8419d18ce300"
+name = "Spanish tortilla"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "potato", amount = 750, unit = "g" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "egg", amount = 6, unit = "large" },
+  { id = "olive-oil", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the potatoes and slice them thinly, about 3 mm. Slice the onion thinly.",
+  "Heat the olive oil in a deep frying pan about 24 cm across over medium-low heat. Add the potatoes and onion and cook gently for 20 to 25 minutes, turning now and then, until soft but not browned.",
+  "Drain them in a sieve over a bowl, keeping the olive oil.",
+  "Beat the eggs with salt in a large bowl. Stir in the warm potatoes and onion and leave for 10 minutes.",
+  "Heat a spoonful of the kept olive oil in the pan over medium heat. Pour in the mixture and cook for 5 to 6 minutes, shaking the pan, until the base is set and golden.",
+  "Put a large plate over the pan and flip the tortilla onto it. Slide it back in and cook for 3 to 4 minutes, until just set in the middle.",
+  "Taste for salt. Slide onto a plate, rest for 10 minutes and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c1a-e23a-7163-812e-7d217736420a"
+name = "Paella"
+serves = 6
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "bomba-rice", amount = 2, unit = "cup" },
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "prawns", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "chicken-stock", amount = 5, unit = "cup" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "olive-oil", amount = 0.25, unit = "cup" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into pieces about 4 cm across. Season with salt. Peel and devein the prawns, leaving the tails on.",
+  "Chop the onion, bell pepper and garlic. Grate the tomatoes and discard the skins. Warm the chicken stock with the saffron.",
+  "Heat the olive oil in a paella pan or wide frying pan over medium-high heat. Brown the chicken for 6 to 8 minutes. Add the prawns for 2 minutes, until pink, then lift them out.",
+  "Add the onion and bell pepper for 6 minutes, then the garlic for 1 minute. Stir in the grated tomatoes and smoked paprika and cook for 5 minutes, until jammy.",
+  "Stir in the bomba rice for 1 minute, then pour in the hot stock and season with salt. Spread it evenly and do not stir again.",
+  "Simmer on medium heat for 10 minutes, then lower the heat and cook for 8 minutes more. Tuck the prawns and peas in on top.",
+  "Turn the heat up for the last 1 to 2 minutes until you hear crackling and smell toasting, so a crust forms on the base.",
+  "Rest off the heat, covered with a cloth, for 5 minutes. Taste, scatter the chopped parsley over and serve with the lemon cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c1a-e23c-70c8-a6e4-4dcbb7ff6477"
+name = "Vegetable paella"
+serves = 6
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "bomba-rice", amount = 2, unit = "cup" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "french-beans", amount = 150, unit = "g" },
+  { id = "artichoke", amount = 1, unit = "can" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "vegetable-stock", amount = 5, unit = "cup" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "olive-oil", amount = 0.25, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the bell peppers into strips and the french beans into lengths. Drain and quarter the artichoke hearts. Chop the onion and garlic and grate the tomatoes, discarding the skins.",
+  "Warm the vegetable stock with the saffron.",
+  "Heat the olive oil in a paella pan or wide frying pan over medium-high heat. Fry the bell peppers and french beans for 5 minutes, until lightly charred, then lift out half the peppers for the top.",
+  "Add the onion for 5 minutes and the garlic for 1 minute. Stir in the tomatoes and smoked paprika and cook for 5 minutes, until jammy.",
+  "Stir in the bomba rice for 1 minute, then pour in the hot stock and season with salt. Spread evenly and do not stir again.",
+  "Simmer on medium heat for 10 minutes, then lower the heat for 8 minutes. Scatter the peas, artichokes and the set-aside peppers on top.",
+  "Turn the heat up for the last 1 to 2 minutes until it crackles, so a crust forms on the base.",
+  "Rest covered with a cloth for 5 minutes. Taste, scatter the chopped parsley over and serve with the lemon cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c1a-e23e-7160-97b9-408aa2d7c024"
+name = "Gazpacho"
+serves = 4
+prep_minutes = 20
+cook_minutes = 0
+ingredients = [
+  { id = "tomato", amount = 1, unit = "kg" },
+  { id = "cucumber", amount = 0.5, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "shallot", amount = 1, unit = "piece" },
+  { id = "white-bread", amount = 1, unit = "slice" },
+  { id = "sherry-vinegar", amount = 2, unit = "tbsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use very ripe tomatoes and chop them roughly. Peel and chop the cucumber, and chop the bell pepper, garlic and shallot. Set aside a little of each vegetable, finely diced, for the top.",
+  "Tear the white bread, crusts removed, into the vegetables. Add the sherry vinegar and salt and leave for 10 minutes.",
+  "Blend everything until very smooth.",
+  "With the motor running, pour in most of the extra-virgin olive oil until the soup turns pale and creamy.",
+  "Push through a sieve for a silky texture. Chill for at least 2 hours.",
+  "Taste and adjust the salt and vinegar. Serve very cold, topped with the diced vegetables and a drizzle of the rest of the extra-virgin olive oil.",
+]
+
+[[recipe]]
+id = "01a18c1a-e240-7717-ba70-99578e6fe513"
+name = "Patatas bravas"
+serves = 4
+prep_minutes = 15
+cook_minutes = 40
+ingredients = [
+  { id = "potato", amount = 750, unit = "g" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.25, unit = "tsp" },
+  { id = "all-purpose-flour", amount = 1, unit = "tsp" },
+  { id = "passata", amount = 0.75, unit = "cup" },
+  { id = "mayonnaise", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Heat the oven to 220°C. Peel the potatoes and cut them into rough cubes about 3 cm across. Boil them in the water, salted, for 5 minutes and drain well, shaking to rough up the edges.",
+  "Toss with most of the olive oil and salt on a tray. Roast for 30 to 35 minutes, turning once, until deep golden and crisp.",
+  "For the bravas sauce, finely chop the onion and grate the garlic. Fry the onion in the rest of the olive oil over medium heat for 5 minutes, until soft. Add half the garlic for 1 minute.",
+  "Stir in the smoked paprika, cayenne and all-purpose flour for 30 seconds. Add the tomato passata and simmer for 8 minutes, until thick. Blend smooth and season with salt.",
+  "Stir the rest of the garlic into the mayonnaise for a quick aioli.",
+  "Taste both sauces and adjust. Pile the potatoes on a plate, spoon the bravas sauce over and dot with the aioli. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c1a-e243-751a-8dca-550ee3ea79c7"
+name = "Garlic prawns (gambas al ajillo)"
+serves = 4
+prep_minutes = 10
+cook_minutes = 8
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "garlic", amount = 8, unit = "clove" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "extra-virgin-olive-oil", amount = 0.5, unit = "cup" },
+  { id = "smoked-paprika", amount = 0.5, unit = "tsp" },
+  { id = "parsley", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "baguette", amount = 1, unit = "piece" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and devein the prawns, pat them dry and season with salt.",
+  "Slice the garlic thinly and break the dried red chillies into pieces.",
+  "Warm the extra-virgin olive oil in a shallow clay dish or frying pan over medium-low heat. Add the garlic and chillies and cook for 2 to 3 minutes, until the garlic is pale golden.",
+  "Turn the heat to medium-high. Add the prawns and cook for 2 to 3 minutes, turning once, until pink and just cooked.",
+  "Stir in the smoked paprika and a squeeze of lemon juice.",
+  "Taste and adjust the salt. Scatter the chopped parsley over and serve sizzling with the baguette, sliced, to mop up the extra-virgin olive oil.",
+]
+
+[[recipe]]
+id = "01a18c1a-e245-7f15-8b1f-0aedd856d372"
+name = "Ratatouille"
+serves = 6
+prep_minutes = 25
+cook_minutes = 60
+ingredients = [
+  { id = "brinjal", amount = 1, unit = "large" },
+  { id = "zucchini", amount = 2, unit = "medium" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "tomato", amount = 5, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "thyme", amount = 4, unit = "sprig" },
+  { id = "basil", amount = 0.33, unit = "cup" },
+  { id = "olive-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the aubergine, zucchini and bell peppers into cubes about 2 cm across. Chop the onion, slice the garlic and chop the tomatoes.",
+  "Heat a little of the olive oil in a large heavy pan over medium-high heat. Fry the aubergine for 6 to 8 minutes, until golden. Lift it out. Do the same with the zucchini for 4 to 5 minutes, then the bell peppers for 5 minutes.",
+  "Lower the heat to medium. Add the rest of the olive oil and fry the onion for 8 minutes, until soft, then the garlic for 1 minute.",
+  "Add the tomatoes and thyme and simmer for 10 minutes, until saucy.",
+  "Return all the vegetables, season with salt, cover and simmer on low heat for 25 to 30 minutes, stirring gently now and then, until everything is soft but holding its shape.",
+  "Taste and adjust. Pick out the thyme stalks, tear the basil over and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c1a-e247-73ff-8449-dbce5a6efaca"
+name = "Pan bagnat"
+serves = 4
+prep_minutes = 25
+cook_minutes = 10
+ingredients = [
+  { id = "baguette", amount = 1, unit = "large" },
+  { id = "canned-tuna", amount = 2, unit = "can" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "roasted-red-peppers", amount = 0.5, unit = "cup" },
+  { id = "olives", amount = 0.25, unit = "cup" },
+  { id = "anchovies", amount = 6, unit = "piece" },
+  { id = "basil", amount = 0.25, unit = "cup" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "red-wine-vinegar", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Hard-boil the eggs in the water, boiling, for 9 minutes, cool and slice.",
+  "Slice the tomatoes and onion thinly, cut the roasted red peppers into strips and chop the olives. Drain the canned tuna.",
+  "Split the baguette lengthwise and pull out some of the soft crumb.",
+  "Whisk the extra-virgin olive oil, red wine vinegar and salt and brush it generously over the cut sides of the bread.",
+  "Layer the canned tuna, tomatoes, onion, peppers, eggs, anchovies, olives and basil on the bottom half. Press the top on firmly.",
+  "Wrap tightly in baking paper, put a heavy board on top and leave for at least 1 hour so the juices soak in.",
+  "Taste a corner and adjust, then cut into lengths and serve.",
+]
+
+[[recipe]]
+id = "01a18c1a-e249-7758-befc-cf8b638283d0"
+name = "Grilled halloumi salad"
+serves = 4
+prep_minutes = 15
+cook_minutes = 8
+ingredients = [
+  { id = "halloumi", amount = 250, unit = "g" },
+  { id = "rocket", amount = 3, unit = "cup" },
+  { id = "cherry-tomatoes", amount = 250, unit = "g" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "olives", amount = 0.33, unit = "cup" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "honey", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Halve the cherry tomatoes, slice the cucumber and onion thinly and pick the mint leaves.",
+  "Whisk the lemon juice, honey, a little salt and most of the extra-virgin olive oil into a dressing.",
+  "Cut the halloumi into slices about 1 cm thick and pat dry.",
+  "Heat a griddle pan over medium-high heat and brush the halloumi with the rest of the extra-virgin olive oil. Grill for 2 to 3 minutes a side, until golden with dark stripes.",
+  "Toss the rocket, cherry tomatoes, cucumber, onion and olives with most of the dressing.",
+  "Taste and adjust. Top with the hot halloumi, drizzle with the rest of the dressing, scatter the mint over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c1a-e24b-7049-9abc-36ca76194a3d"
+name = "Lentil salad with feta"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "puy-lentils", amount = 1, unit = "cup" },
+  { id = "feta", amount = 150, unit = "g" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "cherry-tomatoes", amount = 200, unit = "g" },
+  { id = "parsley", amount = 0.5, unit = "cup" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "bay-leaves", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "dijon-mustard", amount = 1, unit = "tsp" },
+  { id = "extra-virgin-olive-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the puy lentils and simmer them in the water with the bay leaves and the garlic, peeled, for 20 to 25 minutes, until tender but holding their shape. Drain and pick out the bay leaves and garlic.",
+  "Whisk the lemon juice, dijon mustard, extra-virgin olive oil and salt.",
+  "Toss the warm lentils with the dressing so they soak it up.",
+  "Finely chop the onion, halve the cherry tomatoes and chop the parsley and mint.",
+  "Fold the onion, cherry tomatoes and herbs into the lentils.",
+  "Taste and adjust the salt and lemon. Crumble the feta over and serve warm or at room temperature.",
+]

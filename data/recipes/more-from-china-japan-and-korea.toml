@@ -1,0 +1,416 @@
+# More from China, Japan and Korea (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c22-48df-729b-a291-7629aa4f0dec"
+name = "General Tso's chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "cornflour", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tsp" },
+  { id = "rice-vinegar", amount = 2, unit = "tbsp" },
+  { id = "hoisin-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "chicken-stock", amount = 0.5, unit = "cup" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into pieces about 3 cm across. Toss with the egg, a spoonful of the soy sauce and a little salt, then coat in most of the cornflour.",
+  "Whisk the rest of the soy sauce, the dark soy sauce, rice vinegar, hoisin sauce, sugar, chicken stock and the rest of the cornflour into a sauce.",
+  "Heat the oil in a wok or deep pan to 175°C. Fry the chicken in batches for 5 to 6 minutes, until golden and crisp. Drain.",
+  "Pour off all but a spoonful of the oil. Fry the dried red chillies, chopped garlic and grated ginger over medium heat for 30 seconds, until fragrant.",
+  "Stir the sauce and pour it in. Simmer for 1 minute, until thick and glossy.",
+  "Toss in the chicken until coated. Taste and adjust, then scatter the sliced spring onions and sesame seeds over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48e1-7de2-85f2-63ffd36590aa"
+name = "Yu xiang eggplant"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "brinjal", amount = 2, unit = "medium" },
+  { id = "pork", amount = 150, unit = "g" },
+  { id = "doubanjiang", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-vinegar", amount = 1.5, unit = "tbsp" },
+  { id = "sugar", amount = 1.5, unit = "tbsp" },
+  { id = "cornflour", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use long Chinese eggplants and cut them into batons about 8 cm long. Toss with a little salt and leave for 15 minutes, then pat dry.",
+  "Chop the garlic and ginger and slice the spring onions, keeping the green parts separate. Whisk the soy sauce, black vinegar, sugar, cornflour and the water into a sauce.",
+  "Heat most of the oil in a wok over medium-high heat. Fry the eggplant in batches for 5 to 6 minutes, until golden and soft. Drain.",
+  "Add the rest of the oil and the minced pork and stir-fry for 2 minutes, until it turns pale.",
+  "Add the doubanjiang and fry for 1 minute, until the oil turns red. Add the garlic, ginger and white parts of the spring onions for 30 seconds.",
+  "Pour in the sauce and return the eggplant. Toss for 1 to 2 minutes, until the sauce is thick and glossy.",
+  "Taste and balance the sweet, sour and heat. Scatter the green parts of the spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48e3-7bb4-aa6a-fac7cb727a29"
+name = "Twice-cooked pork"
+serves = 4
+prep_minutes = 10
+cook_minutes = 40
+ingredients = [
+  { id = "pork-belly", amount = 500, unit = "g" },
+  { id = "doubanjiang", amount = 1.5, unit = "tbsp" },
+  { id = "black-bean-sauce", amount = 1, unit = "tbsp" },
+  { id = "leek", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Put the pork belly in a pot with the water and some of the ginger. Bring to a boil, then simmer for 25 minutes, until cooked through. Cool, then chill for 30 minutes so it slices neatly.",
+  "Slice the pork belly as thinly as you can. Slice the leek on the diagonal, the green chillies into rounds and the garlic and the rest of the ginger thinly.",
+  "Heat the oil in a wok over medium heat. Fry the pork belly for 4 to 5 minutes, until the fat renders and the slices curl and turn golden.",
+  "Push the pork belly aside. Fry the doubanjiang and black bean sauce in the fat for 1 minute, until the oil turns red.",
+  "Add the garlic and ginger for 30 seconds, then the shaoxing wine, sugar and soy sauce and toss with the pork belly.",
+  "Add the leek and green chillies and toss for 1 to 2 minutes, until just wilted.",
+  "Taste and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48e6-7bf2-b748-f4f37b90bbf6"
+name = "Cantonese steamed fish"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "barramundi", amount = 1, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Use a whole barramundi, cleaned and scaled. Pat dry, make 2 deep cuts on each side and rub with a little salt and the shaoxing wine.",
+  "Cut half the ginger into slices and the rest into very fine strips. Cut the spring onions into fine strips about 6 cm long.",
+  "Lay the ginger slices on a heatproof plate and set the fish on them.",
+  "Steam over high heat for 10 to 12 minutes, until the flesh at the thickest part flakes away from the bone. Pour off the liquid on the plate.",
+  "Warm the soy sauce, sugar and the water for 1 minute, until the sugar dissolves. Pour it round the fish.",
+  "Pile the ginger strips, spring onions and coriander leaves on top. Heat the oil until smoking and pour it over so it sizzles.",
+  "Taste the sauce and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c22-48e8-70c1-acce-651beee65d3f"
+name = "Chinese chicken corn soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "sweetcorn", amount = 2, unit = "cup" },
+  { id = "chicken-stock", amount = 5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "white-pepper", amount = 0.25, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Finely chop the chicken. Blend half the sweetcorn with a little of the chicken stock until creamy.",
+  "Bring the rest of the chicken stock to a simmer with the sliced ginger. Add the chicken, stirring to separate, and simmer for 5 minutes.",
+  "Add the blended sweetcorn and the rest of the sweetcorn and simmer for 5 minutes. Lift out the ginger.",
+  "Mix the cornflour with the water, stir it in and simmer for 1 minute, until slightly thick.",
+  "Beat the eggs. Stir the soup in a circle and pour the eggs in slowly, so they set in thin ribbons.",
+  "Season with salt and the white pepper. Taste and adjust, then drizzle with the toasted sesame oil, scatter the sliced spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48ea-7255-85d9-b0e209375471"
+name = "Xinjiang lamb skewers"
+serves = 4
+prep_minutes = 20
+cook_minutes = 10
+ingredients = [
+  { id = "lamb", amount = 750, unit = "g" },
+  { id = "cumin-seeds", amount = 2, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 2, unit = "tsp" },
+  { id = "sichuan-peppercorns", amount = 0.5, unit = "tsp" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use lamb shoulder or leg with some fat. Cut it into cubes about 2 cm across.",
+  "Grate the onion and squeeze its juice over the lamb with the oil and salt. Leave for 30 minutes.",
+  "Toast the cumin seeds and sichuan peppercorns in a dry pan for 1 to 2 minutes, until fragrant. Grind them coarsely and mix with the chilli flakes and sesame seeds.",
+  "Thread the lamb onto skewers, alternating lean and fatty pieces.",
+  "Grill over high heat on a barbecue or griddle pan for 6 to 8 minutes, turning, sprinkling generously with the spice mix as they cook, until charred outside and still juicy inside.",
+  "Taste one and add more salt or spice. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c22-48ec-795d-ade5-e799ee17b297"
+name = "Scallion oil noodles"
+serves = 2
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "egg-noodles", amount = 200, unit = "g" },
+  { id = "spring-onions", amount = 8, unit = "piece" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Cut the spring onions into lengths about 6 cm, keeping the white and green parts separate. Pat them dry.",
+  "Heat the oil in a small pan over medium-low heat. Fry the white parts for 3 minutes, then the green parts for 6 to 8 minutes, stirring, until dark brown and crisp but not burnt.",
+  "Lift out the spring onions. Add the soy sauce, dark soy sauce and sugar to the oil and simmer for 1 minute, until it bubbles and thickens slightly.",
+  "Bring the water to a boil and cook the egg noodles as the packet says. Drain well.",
+  "Toss the noodles with the scallion oil sauce until every strand is glossy.",
+  "Taste and adjust. Top with the crisp spring onions and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c22-48ef-7fe4-ac78-0212b5b74231"
+name = "Chicken karaage"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "sake", amount = 1, unit = "tbsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "potato-starch", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "japanese-mayonnaise", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs with the skin on. Cut them into pieces about 4 cm across.",
+  "Grate the ginger and garlic and mix with the soy sauce, sake and a little salt. Toss the chicken in it and leave for 30 minutes.",
+  "Drain the chicken and coat it in the potato starch, pressing it on and shaking off the excess.",
+  "Heat the oil in a deep pan to 165°C. Fry in batches for 3 to 4 minutes, until pale golden. Drain on a rack and rest for 4 minutes.",
+  "Raise the heat to 185°C and fry again for 1 minute, until deep golden and very crisp.",
+  "Taste one and serve hot with the lemon cut into wedges and the Japanese mayonnaise.",
+]
+
+[[recipe]]
+id = "01a18c22-48f1-7d28-9510-10fa5d26b58e"
+name = "Chawanmushi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "mirin", amount = 1, unit = "tsp" },
+  { id = "prawns", amount = 4, unit = "piece" },
+  { id = "mushroom", amount = 4, unit = "piece" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Warm the kombu in the water over low heat for 8 minutes, until small bubbles form. Lift it out, add the bonito flakes, simmer for 1 minute and strain. Cool the dashi completely.",
+  "Beat the eggs gently without making foam. Stir in the cool dashi, soy sauce, mirin and a little salt, then strain through a fine sieve.",
+  "Peel and devein the prawns and slice the mushrooms. Divide them between small heatproof cups.",
+  "Pour the egg mixture over and skim off any bubbles. Cover each cup with foil.",
+  "Steam over low heat for 15 to 18 minutes, until just set with a slight wobble, like silken custard. Keep the heat gentle so it stays smooth.",
+  "Taste one and serve hot with the sliced spring onions on top.",
+]
+
+[[recipe]]
+id = "01a18c22-48f3-7f62-9b64-c108b0578897"
+name = "Zaru soba"
+serves = 2
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "soba", amount = 200, unit = "g" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "mirin", amount = 3, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "nori", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "radish", amount = 50, unit = "g" },
+  { id = "water", amount = 2.5, unit = "l" },
+]
+steps = [
+  "Warm the kombu in a little of the water over low heat for 8 minutes. Lift it out, add the bonito flakes, simmer for 1 minute and strain.",
+  "Stir in the soy sauce, mirin and sugar and simmer for 1 minute. Chill the dipping sauce until cold.",
+  "Bring the rest of the water to a boil and cook the soba as the packet says, stirring so it doesn't stick.",
+  "Drain and rinse well under the cold tap, rubbing the noodles to remove the starch. Drain again.",
+  "Slice the spring onions thinly, grate the radish and cut the nori into thin strips.",
+  "Taste the dipping sauce. Pile the soba on plates, top with the nori and serve with the cold sauce, spring onions and radish to stir in.",
+]
+
+[[recipe]]
+id = "01a18c22-48f6-7627-a079-c1dbf711d029"
+name = "Japanese curry rice"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "large" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "apple", amount = 0.5, unit = "medium" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
+  { id = "curry-powder", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "chicken-stock", amount = 3, unit = "cup" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and simmer it in the water in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes.",
+  "Use boneless chicken thighs and cut them into bite-sized pieces. Slice the onions, and peel and cut the carrot and potatoes into chunks. Grate the apple.",
+  "Heat the oil in a pot over medium heat. Fry the onions for 10 minutes, until golden. Add the chicken for 4 minutes.",
+  "Add the carrot, potatoes, apple and chicken stock. Simmer for 15 to 20 minutes, until the vegetables are tender.",
+  "Meanwhile, melt the butter in a small pan over low heat. Stir in the all-purpose flour for 4 to 5 minutes, until light brown, then the curry powder and garam masala for 30 seconds. This is the roux.",
+  "Whisk a ladleful of the hot liquid into the roux until smooth, then stir it into the pot. Simmer for 5 minutes, until thick. Stir in the soy sauce, honey and ketchup and season with salt.",
+  "Taste and adjust. Serve the curry beside the rice.",
+]
+
+[[recipe]]
+id = "01a18c22-48f8-7d4d-97bb-64b178da2c90"
+name = "Dakgalbi"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "gochujang", amount = 3, unit = "tbsp" },
+  { id = "gochugaru", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "cabbage", amount = 3, unit = "cup" },
+  { id = "sweet-potato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "korean-rice-cakes", amount = 200, unit = "g" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into pieces about 4 cm across.",
+  "Grate the garlic and ginger and mix with the gochujang, gochugaru, soy sauce, sugar and toasted sesame oil. Toss the chicken in it and leave for 20 minutes.",
+  "Cut the cabbage into squares, the sweet potato into thin slices and the onion into wedges. Cut the spring onions into lengths. Soak the Korean rice cakes if hard.",
+  "Heat the oil in a large wide pan over medium-high heat. Add the chicken and its marinade, the cabbage, sweet potato, onion and Korean rice cakes and the water.",
+  "Cook for 12 to 15 minutes, stirring often, until the chicken is cooked through, the sweet potato is tender and the sauce is thick.",
+  "Add the spring onions for 1 minute. Taste and adjust, then serve hot from the pan.",
+]
+
+[[recipe]]
+id = "01a18c22-48fa-76a3-8887-e143c758b99b"
+name = "Haemul pajeon"
+serves = 2
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "all-purpose-flour", amount = 0.75, unit = "cup" },
+  { id = "potato-starch", amount = 2, unit = "tbsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "spring-onions", amount = 8, unit = "piece" },
+  { id = "prawns", amount = 100, unit = "g" },
+  { id = "squid", amount = 100, unit = "g" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "rice-vinegar", amount = 1, unit = "tbsp" },
+  { id = "gochugaru", amount = 0.5, unit = "tsp" },
+  { id = "sesame-seeds", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Whisk the all-purpose flour, potato starch, a little salt, the egg and the ice-cold water into a thin batter.",
+  "Cut the spring onions into lengths to fit your pan. Peel and chop the prawns and slice the squid into thin rings.",
+  "Heat half the oil in a large frying pan over medium-high heat. Lay half the spring onions in the pan in a single layer.",
+  "Scatter half the seafood over and pour half the batter evenly over everything.",
+  "Cook for 4 minutes, until the base is crisp and golden. Flip and cook for 3 to 4 minutes, pressing down, until crisp and cooked through. Repeat with the rest of the oil, spring onions, seafood and batter.",
+  "Mix the soy sauce, rice vinegar, gochugaru and sesame seeds into a dipping sauce.",
+  "Taste and serve the pancakes hot, cut into squares, with the sauce.",
+]
+
+[[recipe]]
+id = "01a18c22-48fc-725d-b53c-0812a4a82db8"
+name = "Sundubu jjigae"
+serves = 2
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "silken-tofu", amount = 350, unit = "g" },
+  { id = "clams", amount = 200, unit = "g" },
+  { id = "pork", amount = 100, unit = "g" },
+  { id = "gochugaru", amount = 1.5, unit = "tbsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "zucchini", amount = 0.5, unit = "small" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 1, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Simmer the kombu in the water for 10 minutes, then lift it out. Scrub the clams.",
+  "Chop the garlic, dice the onion and zucchini and slice the spring onions. Slice the pork thinly.",
+  "Heat the toasted sesame oil in a small heavy pot over medium-low heat. Fry the pork for 2 minutes, then add the garlic and gochugaru and stir for 1 minute, until it turns red. Don't let the gochugaru burn.",
+  "Add the onion and zucchini, then pour in the kombu broth. Bring to a boil.",
+  "Spoon in the silken tofu in large chunks. Add the clams, soy sauce and fish sauce and simmer for 4 to 5 minutes, until the clams open.",
+  "Crack the eggs into the stew and simmer for 1 minute, until the whites start to set.",
+  "Taste and adjust. Scatter the spring onions over and serve bubbling hot.",
+]

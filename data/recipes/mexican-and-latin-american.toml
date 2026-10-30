@@ -27,3 +27,798 @@ steps = [
   "Squeeze in the lime juice and season with salt.",
   "Taste, adjust the lime and salt, and serve straight away with tortilla chips.",
 ]
+
+[[recipe]]
+id = "01a18c16-b1ba-71d5-a397-f131b301bc3c"
+name = "Pico de gallo"
+serves = 4
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "jalapeno", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 0.33, unit = "cup" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use ripe but firm tomatoes. Halve them, scoop out the watery seeds and cut the flesh into small dice about 5 mm across.",
+  "Finely dice the onion, rinse it under the cold tap and pat dry so it is less sharp.",
+  "Remove the seeds from the jalapeno for less heat and chop it very finely. Chop the coriander leaves.",
+  "Mix the tomatoes, onion, jalapeno and coriander leaves with the lime juice and salt.",
+  "Leave for 10 minutes so the flavours mingle.",
+  "Taste and add more salt or lime juice if needed. Serve fresh, the same day.",
+]
+
+[[recipe]]
+id = "01a18c16-b1bc-7bbc-91a7-36928f0fe539"
+name = "Chicken tacos"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "corn-tortillas", amount = 12, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "avocado", amount = 2, unit = "medium" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs. Grate the garlic and mix it with the cumin powder, smoked paprika, red chilli powder, the juice of one of the limes, half the olive oil and salt. Toss the chicken in it and leave for 20 minutes.",
+  "Finely dice the onion and chop the coriander leaves. Mash the avocados with a little salt and a squeeze of the other lime.",
+  "Heat the rest of the olive oil in a frying pan or griddle over medium-high heat. Cook the chicken for 5 to 6 minutes a side, until charred and cooked through. Rest for 5 minutes, then chop into small pieces.",
+  "Warm the corn tortillas in a dry pan over high heat for 20 to 30 seconds a side, until soft and spotted. Keep them wrapped in a cloth.",
+  "Taste the chicken and add salt or lime juice if needed.",
+  "Fill each tortilla with chicken, avocado, onion, coriander leaves and a spoonful of sour cream. Serve with the rest of the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c16-b1bf-7519-9fd0-abe8820a9743"
+name = "Fish tacos"
+serves = 4
+prep_minutes = 20
+cook_minutes = 10
+ingredients = [
+  { id = "cod", amount = 500, unit = "g" },
+  { id = "corn-tortillas", amount = 12, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "red-cabbage", amount = 2, unit = "cup" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "avocado", amount = 1, unit = "large" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Shred the red cabbage very finely and toss it with a squeeze of lime and a little salt.",
+  "Whisk the sour cream, mayonnaise and a squeeze of lime into a sauce. Slice the avocado and chop the coriander leaves.",
+  "Pat the cod dry and cut it into pieces about 4 cm long. Rub with the cumin powder, paprika, red chilli powder and salt.",
+  "Heat the oil in a frying pan over medium-high heat. Fry the cod for 2 to 3 minutes a side, until golden and it flakes easily.",
+  "Warm the corn tortillas in a dry pan over high heat for 20 to 30 seconds a side, until soft. Keep them wrapped in a cloth.",
+  "Taste the red cabbage and sauce and adjust.",
+  "Fill each tortilla with red cabbage, cod and avocado. Drizzle with the sauce, scatter the coriander leaves over and serve with the rest of the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c16-b1c1-7e5b-9ac6-e79c9ffcfbf1"
+name = "Bean and cheese burrito"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "flour-tortillas", amount = 4, unit = "large" },
+  { id = "pinto-beans", amount = 2, unit = "can" },
+  { id = "cheddar", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "salsa", amount = 0.5, unit = "cup" },
+  { id = "sour-cream", amount = 0.33, unit = "cup" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion and garlic. Drain the pinto beans, keeping a little of their liquid. Grate the cheddar.",
+  "Heat half the oil in a pan over medium heat. Fry the onion for 5 minutes, until soft, then the garlic and cumin powder for 1 minute.",
+  "Add the pinto beans and a splash of their liquid and mash roughly with a fork. Cook for 3 to 4 minutes, stirring, until thick. Season with salt.",
+  "Warm the flour tortillas in a dry pan for 20 seconds a side so they fold without cracking.",
+  "Spread a line of beans down the centre of each, top with the cheddar, salsa and sour cream, fold in the sides and roll up tightly.",
+  "Heat the rest of the oil in the pan over medium heat. Toast the burritos seam side down for 2 minutes a side, until golden and the cheese has melted.",
+  "Taste a little of the filling for salt and serve hot, cut in half.",
+]
+
+[[recipe]]
+id = "01a18c16-b1c3-7473-926a-f06b64ca54fa"
+name = "Chicken burrito bowl"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "sweetcorn", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "avocado", amount = 2, unit = "medium" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "cheddar", amount = 0.5, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and simmer it in the water with a little salt in a covered pan on low heat for 15 minutes. Rest covered for 10 minutes, then stir in the juice of one of the limes and half the chopped coriander leaves.",
+  "Use boneless chicken thighs. Grate the garlic and mix it with the cumin powder, smoked paprika, half the olive oil and salt. Toss the chicken in it.",
+  "Heat the rest of the olive oil in a frying pan over medium-high heat. Cook the chicken for 5 to 6 minutes a side, until charred and cooked through. Rest it, then slice.",
+  "Warm the drained black beans in a small pan for 3 minutes with a little salt. Char the sweetcorn in a dry pan over high heat for 3 to 4 minutes.",
+  "Dice the tomatoes and onion and mix with the rest of the coriander leaves and a squeeze of the other lime. Slice the avocados and grate the cheddar.",
+  "Taste everything and adjust the salt and lime.",
+  "Spoon the rice into bowls and arrange the chicken, beans, sweetcorn, tomatoes and avocado on top. Finish with sour cream and cheddar and serve.",
+]
+
+[[recipe]]
+id = "01a18c16-b1c5-7f4d-8ead-a6d31cb5c333"
+name = "Chicken quesadilla"
+serves = 2
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "flour-tortillas", amount = 4, unit = "medium" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "cheddar", amount = 1.5, unit = "cup" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "onion", amount = 0.5, unit = "small" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "smoked-paprika", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "sour-cream", amount = 0.25, unit = "cup" },
+  { id = "salsa", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Slice the chicken thinly and toss with the cumin powder, smoked paprika and salt. Slice the bell pepper and onion thinly and grate the cheddar.",
+  "Heat half the oil in a frying pan over medium-high heat. Cook the chicken for 4 to 5 minutes, until cooked through. Add the bell pepper and onion for 3 minutes, until soft.",
+  "Taste the filling and adjust the salt.",
+  "Wipe the pan and brush it with a little of the rest of the oil. Lay in a flour tortilla, scatter over a quarter of the cheddar, half the filling and another quarter of the cheddar, then top with a second tortilla.",
+  "Cook over medium heat for 2 to 3 minutes, until golden underneath. Flip with a plate and cook for 2 minutes, until the cheese has melted. Repeat with the rest of the flour tortillas, filling and cheddar.",
+  "Cut into wedges and serve hot with the sour cream and salsa.",
+]
+
+[[recipe]]
+id = "01a18c16-b1c8-7dc9-abcd-f837e31826be"
+name = "Cheese quesadilla"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "flour-tortillas", amount = 4, unit = "medium" },
+  { id = "cheddar", amount = 1, unit = "cup" },
+  { id = "mozzarella", amount = 1, unit = "cup" },
+  { id = "pickled-jalapenos", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "sour-cream", amount = 0.25, unit = "cup" },
+  { id = "salsa", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Grate the cheddar and mozzarella and mix them. Chop the pickled jalapenos.",
+  "Melt a little of the butter in a frying pan over medium heat. Lay in a flour tortilla and scatter half the cheese and half the pickled jalapenos over it. Top with a second tortilla.",
+  "Cook for 2 to 3 minutes, until golden underneath. Flip with a plate and cook for 2 minutes, until the cheese has melted and stretches.",
+  "Repeat with the rest of the butter, flour tortillas, cheese and pickled jalapenos.",
+  "Rest for 1 minute so the cheese sets slightly, then cut into wedges.",
+  "Taste and serve hot with the sour cream and salsa.",
+]
+
+[[recipe]]
+id = "01a18c16-b1ca-78fe-b3fe-a064097e22c9"
+name = "Chicken enchiladas"
+serves = 4
+prep_minutes = 25
+cook_minutes = 45
+ingredients = [
+  { id = "corn-tortillas", amount = 8, unit = "piece" },
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "passata", amount = 1.5, unit = "cup" },
+  { id = "chicken-stock", amount = 1, unit = "cup" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "cheddar", amount = 1.5, unit = "cup" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Poach the chicken in the chicken stock in a covered pan over low heat for 15 to 18 minutes, until cooked through. Lift it out, shred it with forks and keep the stock.",
+  "Chop the onion and garlic. Heat half the oil in a pan over medium heat and fry the onion for 6 minutes, until soft, then the garlic for 1 minute.",
+  "Take out half the onion for the filling. Stir the red chilli powder, cumin powder and dried oregano into the pan for 30 seconds, then add the passata and the poaching stock. Simmer for 10 minutes, until slightly thick. Season with salt.",
+  "Heat the oven to 200°C. Mix the chicken with the set-aside onion, a third of the sauce and half the grated cheddar.",
+  "Warm the corn tortillas in the rest of the oil in a frying pan for 10 seconds a side, so they are soft and won't crack.",
+  "Spread a little sauce in a baking dish. Fill each tortilla with chicken, roll up and lay seam side down. Pour the rest of the sauce over and scatter the rest of the cheddar on top.",
+  "Bake for 15 to 20 minutes, until bubbling and the cheese is golden.",
+  "Taste the sauce and adjust. Top with sour cream and chopped coriander leaves and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1cc-7b35-81e9-492fe634f2dc"
+name = "Vegetable enchiladas"
+serves = 4
+prep_minutes = 25
+cook_minutes = 40
+ingredients = [
+  { id = "corn-tortillas", amount = 8, unit = "piece" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "sweetcorn", amount = 1, unit = "cup" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "passata", amount = 1.5, unit = "cup" },
+  { id = "vegetable-stock", amount = 0.75, unit = "cup" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "cheddar", amount = 1.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dice the zucchini and bell pepper, chop the onion and garlic and drain the black beans.",
+  "Heat a third of the oil in a pan over medium heat. Fry half the onion and half the garlic for 5 minutes, then stir in the red chilli powder and half the cumin powder for 30 seconds. Add the passata and vegetable stock and simmer for 10 minutes. Season with salt.",
+  "Heat another third of the oil in a frying pan over medium-high heat. Fry the rest of the onion, the zucchini and bell pepper for 6 to 8 minutes, until tender, then the rest of the garlic and cumin powder for 1 minute.",
+  "Stir in the sweetcorn and black beans and season with salt. Take off the heat and mix in half the grated cheddar.",
+  "Heat the oven to 200°C. Warm the corn tortillas in the rest of the oil for 10 seconds a side.",
+  "Spread a little sauce in a baking dish. Fill each tortilla, roll up and lay seam side down. Pour the rest of the sauce over and scatter the rest of the cheddar on top.",
+  "Bake for 15 to 20 minutes, until bubbling and golden.",
+  "Taste and adjust, then scatter the chopped coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1ce-7752-8497-5857d5c9fcb1"
+name = "Chilaquiles"
+serves = 2
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "corn-tortillas", amount = 8, unit = "piece" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "feta", amount = 0.33, unit = "cup" },
+  { id = "sour-cream", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the corn tortillas into wedges. Heat most of the oil in a frying pan over medium-high heat and fry them in batches for 2 to 3 minutes, until crisp and golden. Drain and salt lightly.",
+  "Toast the dried red chillies in a dry pan for 1 minute, then simmer them with the tomatoes, half the onion and the garlic in the water for 8 minutes, until soft.",
+  "Blend to a smooth sauce. Pour off all but a little of the oil from the frying pan and fry the sauce over medium heat for 5 minutes, until it darkens. Season with salt.",
+  "Fry the eggs in the rest of the oil in a separate pan for 2 to 3 minutes, until the whites are set and the yolks runny.",
+  "Toss the tortilla chips in the sauce for 1 minute, just until coated but still a little crisp.",
+  "Taste and adjust. Pile onto plates and top with the eggs, crumbled feta, sour cream, the rest of the onion thinly sliced and the coriander leaves. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c16-b1d1-7a28-b9cf-eeaa18d43c95"
+name = "Huevos rancheros"
+serves = 2
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "corn-tortillas", amount = 4, unit = "piece" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "jalapeno", amount = 1, unit = "piece" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "feta", amount = 0.25, unit = "cup" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Chop the tomatoes, onion, garlic and jalapeno.",
+  "Heat a third of the oil in a pan over medium heat. Fry the onion, garlic and jalapeno for 4 minutes, then add the tomatoes and simmer for 8 to 10 minutes, until thick. Season with salt.",
+  "Warm the drained black beans with the cumin powder and a little salt in a small pan for 3 minutes, mashing some of them.",
+  "Fry the corn tortillas in another third of the oil for 30 seconds a side, until lightly crisp. Drain.",
+  "Fry the eggs in the rest of the oil for 2 to 3 minutes, until the whites are set and the yolks still runny.",
+  "Taste the sauce and adjust. Lay the tortillas on plates, spread with the beans, top with the eggs and spoon the sauce round.",
+  "Scatter the crumbled feta, sliced avocado and coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1d3-7e3e-863a-992cc0c6d5c8"
+name = "Chicken fajitas"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "bell-pepper", amount = 3, unit = "medium" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "flour-tortillas", amount = 8, unit = "medium" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "avocado", amount = 1, unit = "large" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Slice the chicken into strips about 1 cm thick. Grate the garlic and toss it with the chicken, cumin powder, smoked paprika, red chilli powder, half the lime juice, a spoonful of the oil and salt.",
+  "Slice the bell peppers and onion into strips.",
+  "Heat half the rest of the oil in a large frying pan over high heat. Cook the chicken for 5 to 6 minutes, until charred and cooked through. Lift it out.",
+  "Add the rest of the oil and the peppers and onion and cook for 5 to 6 minutes, stirring, until charred at the edges but still a little crisp.",
+  "Return the chicken, squeeze the rest of the lime juice over and toss. Taste and adjust the salt.",
+  "Warm the flour tortillas in a dry pan for 20 seconds a side. Slice the avocado and chop the coriander leaves.",
+  "Serve the fajitas sizzling in the pan with the tortillas, sour cream, avocado and coriander leaves to wrap at the table.",
+]
+
+[[recipe]]
+id = "01a18c16-b1d5-7f04-9135-65abc9fff371"
+name = "Chilli con carne"
+serves = 6
+prep_minutes = 15
+cook_minutes = 75
+ingredients = [
+  { id = "beef-mince", amount = 750, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "kidney-beans", amount = 1, unit = "can" },
+  { id = "canned-tomatoes", amount = 2, unit = "can" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "cumin-powder", amount = 2, unit = "tsp" },
+  { id = "smoked-paprika", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "sour-cream", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Chop the onions, garlic and bell pepper.",
+  "Heat the oil in a heavy pot over medium-high heat. Brown the beef mince in batches for 5 to 6 minutes, breaking it up, until well browned. Lift it out.",
+  "Lower the heat to medium. Fry the onions and bell pepper for 8 minutes, until soft, then the garlic for 1 minute.",
+  "Stir in the cumin powder, smoked paprika, red chilli powder, dried oregano, ground cinnamon and tomato paste for 1 minute, until dark and fragrant.",
+  "Return the beef mince. Add the canned tomatoes and the water, bring to a boil, then cover and simmer on low heat for 45 minutes, stirring now and then.",
+  "Add the drained kidney beans and simmer uncovered for 15 minutes, until thick. Season with salt.",
+  "Taste and adjust the heat and salt. Serve hot with the sour cream.",
+]
+
+[[recipe]]
+id = "01a18c16-b1d7-7a3a-a3c6-acade1bb6015"
+name = "Vegetarian chilli"
+serves = 6
+prep_minutes = 15
+cook_minutes = 50
+ingredients = [
+  { id = "kidney-beans", amount = 1, unit = "can" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "sweet-potato", amount = 1, unit = "large" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "bell-pepper", amount = 2, unit = "medium" },
+  { id = "canned-tomatoes", amount = 2, unit = "can" },
+  { id = "tomato-paste", amount = 2, unit = "tbsp" },
+  { id = "cumin-powder", amount = 2, unit = "tsp" },
+  { id = "smoked-paprika", amount = 2, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "vegetable-stock", amount = 1, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the sweet potato and cut it into cubes about 2 cm across. Chop the onion, garlic and bell peppers.",
+  "Heat the olive oil in a heavy pot over medium heat. Fry the onion and bell peppers for 8 minutes, until soft, then the garlic for 1 minute.",
+  "Stir in the cumin powder, smoked paprika, red chilli powder and tomato paste for 1 minute.",
+  "Add the sweet potato, canned tomatoes and vegetable stock. Bring to a boil, then cover and simmer on low heat for 20 minutes.",
+  "Add the drained kidney beans and black beans and simmer uncovered for 15 to 20 minutes, until the sweet potato is tender and the chilli is thick.",
+  "Stir in the lime juice and season with salt.",
+  "Taste and adjust, then scatter the chopped coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1da-75e9-9ce3-dc405ae494ae"
+name = "Mexican rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the rice and drain well. Blend the tomatoes, onion and garlic until smooth. Dice the carrot small.",
+  "Heat the oil in a wide pan over medium heat. Fry the rice for 5 to 6 minutes, stirring, until the grains turn opaque and golden in places.",
+  "Pour in the tomato mixture and cumin powder and stir for 2 minutes, until most of the liquid is absorbed.",
+  "Add the chicken stock, carrot and salt. Bring to a boil, then cover and cook on the lowest heat for 15 minutes.",
+  "Scatter the peas on top, cover again and cook for 3 minutes. Take off the heat and rest covered for 10 minutes.",
+  "Fluff with a fork, taste and adjust the salt, scatter the chopped coriander leaves over and serve.",
+]
+
+[[recipe]]
+id = "01a18c16-b1dc-7661-b3c5-f26b7b54eaab"
+name = "Refried beans"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "pinto-beans", amount = 2, unit = "can" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "feta", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion and garlic. Drain the pinto beans, keeping their liquid.",
+  "Heat the oil in a frying pan over medium heat. Fry the onion for 5 minutes, until soft and golden, then the garlic and cumin powder for 1 minute.",
+  "Add the beans and a splash of their liquid and mash with a masher.",
+  "Cook for 5 to 6 minutes, stirring and adding more liquid as needed, until thick and creamy and pulling away from the pan.",
+  "Taste and season with salt. Crumble the feta over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1de-73bd-83d6-265b83a49fbb"
+name = "Black bean soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "black-beans", amount = 2, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "celery", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "cumin-powder", amount = 1.5, unit = "tsp" },
+  { id = "smoked-paprika", amount = 1, unit = "tsp" },
+  { id = "vegetable-stock", amount = 3, unit = "cup" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "sour-cream", amount = 0.33, unit = "cup" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Chop the onion, carrot, celery and garlic.",
+  "Heat the olive oil in a pot over medium heat. Fry the onion, carrot and celery for 8 to 10 minutes, until soft.",
+  "Add the garlic, cumin powder and smoked paprika and stir for 1 minute, until fragrant.",
+  "Add the black beans with their liquid and the vegetable stock. Bring to a boil, then simmer for 20 minutes.",
+  "Blend about half the soup until smooth and stir it back in, so the soup is thick but still has whole beans.",
+  "Stir in the lime juice and season with salt.",
+  "Taste and adjust. Serve hot with a spoonful of sour cream and the chopped coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18c16-b1e0-7d3b-b9f3-01fe6b89235a"
+name = "Elote"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "corn-on-the-cob", amount = 4, unit = "piece" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "mayonnaise", amount = 3, unit = "tbsp" },
+  { id = "feta", amount = 0.5, unit = "cup" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Pull back or remove the husks from the corn on the cob.",
+  "Grill on a very hot griddle pan or barbecue for 10 to 12 minutes, turning every few minutes, until charred in spots and tender.",
+  "Brush the hot corn with the butter and season lightly with salt.",
+  "Spread a thin layer of mayonnaise over each cob.",
+  "Roll the cobs in the finely crumbled feta and dust with the red chilli powder.",
+  "Taste and add a squeeze of lime. Scatter the chopped coriander leaves over and serve hot with the rest of the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c16-b1e3-7190-97eb-a925b88fbe38"
+name = "Tortilla soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "chicken", amount = 400, unit = "g" },
+  { id = "chicken-stock", amount = 5, unit = "cup" },
+  { id = "canned-tomatoes", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "jalapeno", amount = 1, unit = "piece" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "corn-tortillas", amount = 6, unit = "piece" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "avocado", amount = 1, unit = "large" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "sour-cream", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the corn tortillas into thin strips. Fry them in most of the oil over medium-high heat for 2 minutes, until crisp. Drain and salt lightly.",
+  "Chop the onion, garlic and jalapeno. Heat the rest of the oil in a pot over medium heat and fry them for 6 minutes, until soft. Add the cumin powder for 30 seconds.",
+  "Add the canned tomatoes and cook for 5 minutes. Blend with a little of the chicken stock until smooth and return to the pot.",
+  "Add the rest of the chicken stock and the chicken. Simmer for 15 to 18 minutes, until the chicken is cooked through. Lift it out and shred it.",
+  "Return the chicken, stir in the lime juice and season with salt.",
+  "Dice the avocado. Taste the soup and adjust.",
+  "Ladle into bowls and top with the tortilla strips, avocado, sour cream and coriander leaves. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1e5-70a7-884d-0d74f1dec8e1"
+name = "Pozole"
+serves = 6
+prep_minutes = 20
+cook_minutes = 120
+ingredients = [
+  { id = "pork", amount = 1, unit = "kg" },
+  { id = "hominy", amount = 2, unit = "can" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "radish", amount = 150, unit = "g" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 10, unit = "cup" },
+]
+steps = [
+  "Use pork shoulder and cut it into chunks about 5 cm across. Put it in a pot with half the onion, half the garlic left whole, salt and most of the water.",
+  "Bring to a boil, skim, then simmer on low heat for 1 and a half hours, until the pork is tender.",
+  "Meanwhile, toast the dried red chillies in a dry pan for 1 minute. Soak them in the rest of the water, hot, for 15 minutes, then blend with the rest of the garlic, the dried oregano and cumin powder until smooth.",
+  "Strain the chilli paste into the pot and add the drained hominy. Simmer for 25 to 30 minutes, until the broth is red and flavourful.",
+  "Lift out the pork, shred it into large pieces and return it. Season with salt.",
+  "Shred the cabbage finely, slice the radish thinly and finely chop the rest of the onion.",
+  "Taste and adjust. Serve in deep bowls with the cabbage, radish, onion and lime wedges at the table.",
+]
+
+[[recipe]]
+id = "01a18c16-b1e7-7713-875c-4155c7f744eb"
+name = "Arroz con pollo"
+serves = 4
+prep_minutes = 15
+cook_minutes = 50
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "passata", amount = 0.5, unit = "cup" },
+  { id = "chicken-stock", amount = 3, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "olives", amount = 0.33, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use bone-in chicken thighs. Season them with the cumin powder, paprika and salt.",
+  "Heat the olive oil in a wide heavy pan over medium-high heat. Brown the chicken skin side down for 6 to 8 minutes, then turn for 2 minutes. Lift it out.",
+  "Chop the onion, bell pepper and garlic. Fry them in the same pan over medium heat for 6 minutes, until soft.",
+  "Rinse the rice, add it with the turmeric and stir for 2 minutes. Add the passata and chicken stock and season with salt.",
+  "Nestle the chicken back in skin side up. Bring to a boil, then cover and cook on low heat for 25 minutes, until the rice is tender and the chicken is cooked through.",
+  "Scatter the peas and olives over, cover again and rest off the heat for 10 minutes.",
+  "Taste the rice and adjust the salt. Scatter the chopped coriander leaves over and serve.",
+]
+
+[[recipe]]
+id = "01a18c16-b1e9-7a48-ba14-1a3179ba3f75"
+name = "Black beans and rice"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "dried-oregano", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "piece" },
+  { id = "olive-oil", amount = 2, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Chop the onion, bell pepper and garlic. Drain the black beans, keeping their liquid. Rinse the rice.",
+  "Heat the olive oil in a heavy pan over medium heat. Fry the onion and bell pepper for 6 to 8 minutes, until soft, then the garlic, cumin powder and dried oregano for 1 minute.",
+  "Add the rice and stir for 2 minutes, until coated.",
+  "Add the black beans, their liquid, the water, the bay leaves and salt. Bring to a boil, then cover and cook on the lowest heat for 18 minutes.",
+  "Rest covered off the heat for 10 minutes. Fluff with a fork and sprinkle the white vinegar over.",
+  "Taste and adjust the salt, pick out the bay leaves and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1ec-76ee-b4de-eb918ca0f587"
+name = "Empanadas"
+serves = 6
+prep_minutes = 40
+cook_minutes = 45
+ingredients = [
+  { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
+  { id = "butter", amount = 0.5, unit = "cup" },
+  { id = "beef-mince", amount = 400, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "paprika", amount = 1, unit = "tsp" },
+  { id = "olives", amount = 0.25, unit = "cup" },
+  { id = "raisins", amount = 2, unit = "tbsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Rub the cold diced butter into the all-purpose flour and a little salt until it looks like coarse sand. Stir in the cold water and press into a dough. Wrap and chill for 30 minutes.",
+  "Finely chop the onion, bell pepper and garlic and chop the olives. Heat the oil in a pan over medium heat and fry the onion and bell pepper for 6 minutes, until soft.",
+  "Add the beef mince and garlic and cook for 6 to 8 minutes, breaking it up, until browned. Stir in the cumin powder and paprika for 1 minute.",
+  "Stir in the olives and raisins and season with salt. Taste the filling, adjust, and leave to cool.",
+  "Heat the oven to 200°C. Roll the dough out about 3 mm thick and cut rounds about 12 cm across.",
+  "Put a spoonful of filling on each round, wet the edges, fold over and press to seal. Crimp the edges with a fork.",
+  "Lay them on a lined tray, brush with the beaten egg and bake for 20 to 25 minutes, until deep golden. Serve warm.",
+]
+
+[[recipe]]
+id = "01a18c16-b1ee-7a20-bdbe-2d2099505519"
+name = "Arepas"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "precooked-cornmeal", amount = 2, unit = "cup" },
+  { id = "black-beans", amount = 1, unit = "can" },
+  { id = "mozzarella", amount = 1, unit = "cup" },
+  { id = "avocado", amount = 1, unit = "large" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Stir a little salt into the warm water. Gradually mix in the precooked cornmeal and knead for 2 minutes into a soft dough that doesn't crack at the edges. Rest for 5 minutes.",
+  "Divide the dough into balls about 6 cm across and flatten each into a disc about 1.5 cm thick, smoothing any cracks with wet hands.",
+  "Heat a little of the oil in a heavy frying pan over medium heat. Cook the arepas for 5 to 6 minutes a side, until a crust forms and they sound hollow when tapped.",
+  "Meanwhile, warm the drained black beans in a small pan with the rest of the oil and a little salt, mashing a few. Grate the mozzarella and slice the avocado.",
+  "Split each arepa open with a knife while hot, leaving a hinge.",
+  "Fill with the beans, mozzarella and avocado. Taste a little filling for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c16-b1f0-7193-a3c6-cca15f0397f5"
+name = "Ceviche"
+serves = 4
+prep_minutes = 25
+cook_minutes = 0
+ingredients = [
+  { id = "cod", amount = 500, unit = "g" },
+  { id = "lime", amount = 6, unit = "medium" },
+  { id = "onion", amount = 0.5, unit = "medium" },
+  { id = "jalapeno", amount = 1, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 0.33, unit = "cup" },
+  { id = "avocado", amount = 1, unit = "medium" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use very fresh, skinless cod. Cut it into cubes about 1.5 cm across and keep it cold.",
+  "Slice the onion paper-thin, rinse under the cold tap and drain. Finely chop the jalapeno.",
+  "Toss the cod with salt, then pour over enough lime juice to cover. Add the onion and jalapeno.",
+  "Chill for 15 to 20 minutes, until the outside of the fish turns opaque but the centre is still slightly translucent.",
+  "Dice the tomato and avocado and chop the coriander leaves. Fold them in gently.",
+  "Taste and adjust the salt and lime. Serve straight away, very cold.",
+]
+
+[[recipe]]
+id = "01a18c16-b1f2-74a5-b7e7-d9ff01095978"
+name = "Churros"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "ground-cinnamon", amount = 1, unit = "tsp" },
+  { id = "dark-chocolate", amount = 100, unit = "g" },
+  { id = "cream", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 4, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Bring the water, butter, a spoonful of the sugar and a little salt to a boil in a pan.",
+  "Take it off the heat, add the all-purpose flour all at once and beat with a wooden spoon for 1 minute, until a smooth ball forms. Cool for 5 minutes, then beat in the egg until glossy.",
+  "Spoon the dough into a piping bag fitted with a large star nozzle.",
+  "Heat the oil in a deep pan to 180°C. Pipe lengths of dough about 12 cm long straight into the oil, snipping with scissors. Fry for 3 to 4 minutes, turning, until deep golden and crisp. Drain.",
+  "Mix the rest of the sugar with the ground cinnamon and roll the hot churros in it.",
+  "Heat the cream until steaming, pour it over the chopped dark chocolate and stir until smooth.",
+  "Taste the chocolate sauce and serve the churros hot for dipping.",
+]
+
+[[recipe]]
+id = "01a18c16-b1f5-73bb-948e-00616bf14b39"
+name = "Tres leches cake"
+serves = 10
+prep_minutes = 20
+cook_minutes = 35
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "baking-powder", amount = 1.5, unit = "tsp" },
+  { id = "egg", amount = 5, unit = "large" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "vanilla-extract", amount = 2, unit = "tsp" },
+  { id = "condensed-milk", amount = 1, unit = "can" },
+  { id = "evaporated-milk", amount = 1, unit = "can" },
+  { id = "whipping-cream", amount = 1.5, unit = "cup" },
+  { id = "ground-cinnamon", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Heat the oven to 180°C and grease a baking dish about 23 by 33 cm.",
+  "Whisk the all-purpose flour, baking powder and a little salt together.",
+  "Whisk the eggs with the sugar for 5 to 6 minutes, until pale and thick. Fold in a quarter of the milk and half the vanilla extract, then fold in the flour gently.",
+  "Pour into the dish and bake for 25 to 30 minutes, until golden and a skewer comes out clean. Cool for 15 minutes, then prick all over with a fork.",
+  "Whisk the condensed milk, evaporated milk, the rest of the milk and a third of the whipping cream. Pour slowly over the cake until it is all absorbed. Chill for at least 4 hours.",
+  "Whip the rest of the whipping cream with the rest of the vanilla extract to soft peaks and spread it over the cake.",
+  "Taste and dust with the ground cinnamon. Serve cold, cut into squares.",
+]

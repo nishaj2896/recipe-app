@@ -1,0 +1,821 @@
+# Japanese and Korean (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c12-057c-7595-8e84-0c214eda32e4"
+name = "Chicken teriyaki"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "soy-sauce", amount = 4, unit = "tbsp" },
+  { id = "mirin", amount = 3, unit = "tbsp" },
+  { id = "sake", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs with the skin on. Pat them dry and season lightly with salt. Grate the ginger.",
+  "Whisk the soy sauce, mirin, sake, sugar and ginger into a glaze until the sugar dissolves.",
+  "Heat the oil in a frying pan over medium heat. Lay the chicken in skin side down and fry for 7 to 8 minutes, pressing gently, until the skin is deep golden and crisp.",
+  "Turn the chicken and cook for 4 to 5 minutes, until cooked through with no pink at the centre. Wipe the fat out of the pan with kitchen paper.",
+  "Pour in the glaze and let it bubble over medium heat for 2 to 3 minutes, turning the chicken often, until the glaze is thick and shiny and coats each piece.",
+  "Toast the sesame seeds in a dry pan for 2 minutes and slice the spring onions.",
+  "Slice the chicken, spoon the glaze from the pan over, taste and scatter the sesame seeds and spring onions over. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-057e-7570-9122-4d5aa8119343"
+name = "Salmon teriyaki"
+serves = 2
+prep_minutes = 5
+cook_minutes = 12
+ingredients = [
+  { id = "salmon", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "mirin", amount = 2, unit = "tbsp" },
+  { id = "sake", amount = 1, unit = "tbsp" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use salmon fillets about 2.5 cm thick. Pat them dry and season lightly with salt.",
+  "Whisk the soy sauce, mirin, sake and honey into a glaze.",
+  "Heat the oil in a frying pan over medium-high heat. Fry the salmon skin side down for 4 to 5 minutes, until the skin is crisp.",
+  "Turn the salmon and cook for 2 to 3 minutes, until the sides turn pale pink but the centre is still slightly glossy.",
+  "Lower the heat to medium, pour in the glaze and spoon it over the salmon for 1 to 2 minutes, until thick and shiny.",
+  "Toast the sesame seeds in a dry pan for 2 minutes and slice the spring onions thinly.",
+  "Taste the glaze, spoon it over the salmon, scatter the sesame seeds and spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-0581-7b81-9a6b-9632b57e5a6b"
+name = "Chicken katsu"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "panko", amount = 2, unit = "cup" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "ketchup", amount = 3, unit = "tbsp" },
+  { id = "worcestershire-sauce", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken breasts. Slice each in half horizontally into thin cutlets about 1.5 cm thick. Season with salt and the black pepper.",
+  "Shred the cabbage as finely as you can and keep it covered in the fridge until serving, so it stays crisp.",
+  "Whisk the ketchup, worcestershire sauce, soy sauce and sugar into a thick sauce.",
+  "Set out the all-purpose flour, the beaten eggs and the panko in three dishes. Coat each cutlet in flour, then egg, then press firmly into the panko.",
+  "Heat the oil in a deep pan to 170°C. Fry the cutlets in batches for 5 to 6 minutes, turning once, until deep golden and cooked through. Drain on a rack.",
+  "Rest the chicken for 2 minutes, then slice it into strips about 2 cm wide.",
+  "Taste the sauce and adjust. Serve the katsu with the cabbage and the sauce drizzled over.",
+]
+
+[[recipe]]
+id = "01a18c12-0583-7039-8ac5-f83074f83c43"
+name = "Katsu curry"
+serves = 4
+prep_minutes = 25
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "panko", amount = 2, unit = "cup" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "butter", amount = 3, unit = "tbsp" },
+  { id = "curry-powder", amount = 2, unit = "tbsp" },
+  { id = "chicken-stock", amount = 3, unit = "cup" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dice the onion. Peel the carrot and potato and cut them into chunks about 2 cm across. Grate the garlic and ginger.",
+  "Melt the butter in a pan over medium heat. Fry the onion for 8 to 10 minutes, until soft and golden.",
+  "Add the garlic and ginger for 1 minute. Stir in a quarter of the all-purpose flour and the curry powder and cook for 2 minutes, stirring, until it smells toasty.",
+  "Whisk in the chicken stock a little at a time until smooth. Add the carrot and potato, cover and simmer on low heat for 20 to 25 minutes, until the vegetables are tender and the sauce is thick.",
+  "Stir in the soy sauce, honey and ketchup and season with salt. Keep warm.",
+  "Meanwhile, use boneless chicken breasts and slice each in half horizontally into cutlets about 1.5 cm thick. Season with salt.",
+  "Coat the cutlets in the rest of the all-purpose flour, then the beaten eggs, then the panko, pressing it on firmly.",
+  "Heat the oil in a deep pan to 170°C. Fry the cutlets in batches for 5 to 6 minutes, turning once, until deep golden and cooked through. Drain on a rack and slice.",
+  "Taste the curry sauce and adjust. Spoon it beside the sliced katsu and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-0586-728d-9647-bf6d6d816931"
+name = "Oyakodon"
+serves = 2
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "chicken", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "mirin", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice until the rinsing runs clear. Simmer it in half the water in a covered pan on low heat for 15 minutes, then rest covered for 10 minutes.",
+  "Meanwhile, put the kombu in the rest of the water and warm it over low heat for 8 to 10 minutes, until small bubbles form. Lift out the kombu, add the bonito flakes, simmer for 1 minute, then strain. This is the dashi.",
+  "Use boneless chicken thighs and cut them into pieces about 2 cm across. Slice the onion thinly. Beat the eggs lightly, leaving some streaks of white.",
+  "Put the dashi, soy sauce, mirin and sugar in a small frying pan and bring to a simmer over medium heat.",
+  "Add the onion and simmer for 3 minutes, until soft. Add the chicken and simmer for 5 to 6 minutes, turning once, until cooked through.",
+  "Pour the eggs over in a slow circle. Cover and cook on low heat for 1 to 2 minutes, until the egg is just set but still a little runny.",
+  "Spoon the rice into bowls. Taste the sauce, slide the chicken and egg on top with the sauce, scatter the sliced spring onions over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c12-0588-7c01-a328-a226413aa80d"
+name = "Gyudon"
+serves = 2
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "beef", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "mirin", amount = 2, unit = "tbsp" },
+  { id = "sake", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice until the rinsing runs clear. Simmer it in half the water in a covered pan on low heat for 15 minutes, then rest covered for 10 minutes.",
+  "Meanwhile, warm the kombu in the rest of the water over low heat for 8 to 10 minutes, until small bubbles form. Lift out the kombu, add the bonito flakes, simmer for 1 minute and strain. This is the dashi.",
+  "Use beef with some marbling, such as ribeye, and slice it paper-thin across the grain. Partly freezing it first makes this easier. Slice the onion and cut the ginger into fine strips.",
+  "Bring the dashi, soy sauce, mirin, sake and sugar to a simmer in a frying pan over medium heat.",
+  "Add the onion and ginger and simmer for 5 minutes, until the onion is soft.",
+  "Add the beef, separating the slices, and simmer for 2 minutes, skimming any foam, until just cooked.",
+  "Spoon the rice into bowls. Taste the sauce, top the rice with the beef, onion and plenty of sauce, scatter the sliced spring onions over and serve.",
+]
+
+[[recipe]]
+id = "01a18c12-058a-7d1f-979e-239d8d907c5e"
+name = "Miso soup"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "miso", amount = 3, unit = "tbsp" },
+  { id = "tofu", amount = 200, unit = "g" },
+  { id = "wakame", amount = 1, unit = "tbsp" },
+  { id = "kombu", amount = 10, unit = "g" },
+  { id = "bonito-flakes", amount = 10, unit = "g" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Put the kombu in the water and warm it over low heat for 8 to 10 minutes, until small bubbles form at the edge. Lift out the kombu before it boils.",
+  "Add the bonito flakes, simmer for 1 minute, then take off the heat and leave for 3 minutes, until they sink. Strain the dashi back into the pan.",
+  "Soak the wakame for 5 minutes, until it swells, and drain. Cut the tofu into cubes about 1.5 cm across and slice the spring onions.",
+  "Bring the dashi to a gentle simmer over low heat. Add the tofu and wakame for 2 minutes, until warmed through.",
+  "Put the miso in a ladle, lower it into the soup and whisk with chopsticks until fully dissolved. Do not let the soup boil after this.",
+  "Taste and add a little more miso if needed. Scatter the spring onions over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c12-058c-79a2-bbdb-2322eab198b0"
+name = "Vegetable ramen"
+serves = 2
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "ramen-noodles", amount = 200, unit = "g" },
+  { id = "vegetable-stock", amount = 4, unit = "cup" },
+  { id = "miso", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "bok-choy", amount = 2, unit = "piece" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "sweetcorn", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "nori", amount = 1, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil. Lower in the eggs and boil for 6 and a half minutes, then cool them in cold tap water for 3 minutes and peel.",
+  "Grate the garlic and ginger. Slice the mushrooms, halve the bok choy lengthwise, slice the spring onions and cut the nori into strips.",
+  "Heat the oil in a pan over medium heat. Fry the mushrooms for 4 to 5 minutes, until golden. Add the garlic and ginger for 30 seconds.",
+  "Pour in the vegetable stock and bring to a simmer. Whisk in the miso and soy sauce until dissolved and keep it just below a boil.",
+  "Cook the ramen noodles in the same boiling water as the packet says, adding the bok choy for the last minute. Drain well.",
+  "Warm the sweetcorn in the broth for 1 minute. Taste the broth and adjust with more soy sauce.",
+  "Divide the noodles and bok choy between bowls and ladle the broth and mushrooms over. Top with the halved eggs, sweetcorn, spring onions and nori, drizzle with the toasted sesame oil and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-058f-7662-80eb-6650ca8f7264"
+name = "Shoyu ramen"
+serves = 2
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "ramen-noodles", amount = 200, unit = "g" },
+  { id = "chicken-stock", amount = 4, unit = "cup" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "mirin", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "bamboo-shoots", amount = 0.33, unit = "cup" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "nori", amount = 1, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil. Lower in the eggs and boil for 6 and a half minutes, then cool them in cold tap water for 3 minutes and peel.",
+  "Slice the garlic and ginger thinly. Put them in a pan with the chicken stock and simmer over low heat for 10 minutes to flavour the broth, then strain.",
+  "Use a boneless chicken breast. Season it with salt. Heat the oil in a frying pan over medium heat and cook it for 5 to 6 minutes a side, until cooked through. Rest it, then slice.",
+  "Stir the soy sauce and mirin into the hot broth and keep it just below a boil.",
+  "Cook the ramen noodles in the boiling water as the packet says, until just tender. Drain well.",
+  "Slice the spring onions and cut the nori into rectangles. Taste the broth and adjust.",
+  "Divide the noodles between bowls and ladle the broth over. Top with the chicken, halved eggs, bamboo shoots and spring onions, tuck the nori in at the side, drizzle with the toasted sesame oil and serve.",
+]
+
+[[recipe]]
+id = "01a18c12-0591-7b34-916c-e6776ebf5ec3"
+name = "Yaki udon"
+serves = 2
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "udon", amount = 400, unit = "g" },
+  { id = "chicken", amount = 200, unit = "g" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "mushroom", amount = 100, unit = "g" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "mirin", amount = 1, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Loosen the udon in a colander under the hot tap, then separate the strands gently and drain.",
+  "Slice the chicken thinly. Cut the cabbage into squares about 3 cm across, the carrot into matchsticks and the onion and mushrooms into slices. Mix the soy sauce, mirin and oyster sauce.",
+  "Heat the oil in a wok over high heat. Stir-fry the chicken for 3 minutes, until cooked through.",
+  "Add the onion, carrot and mushrooms and toss for 2 minutes, then the cabbage for 1 to 2 minutes, until just wilted.",
+  "Add the udon and the sauce and toss for 2 minutes, until the noodles are hot and evenly coated.",
+  "Taste and add a splash more soy sauce if needed. Scatter the sliced spring onions and bonito flakes over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-0593-7edb-9e3a-2be2b90671f6"
+name = "Yakisoba"
+serves = 2
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "ramen-noodles", amount = 200, unit = "g" },
+  { id = "pork-belly", amount = 150, unit = "g" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "worcestershire-sauce", amount = 2, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Cook the ramen noodles as the packet says until just tender, rinse under the cold tap and drain well.",
+  "Slice the pork belly into thin strips. Cut the cabbage into squares, the carrot into matchsticks and the onion into slices.",
+  "Whisk the worcestershire sauce, ketchup, oyster sauce, soy sauce and sugar into a sauce.",
+  "Heat the oil in a wok over high heat. Fry the pork belly for 3 to 4 minutes, until browned.",
+  "Add the onion and carrot for 2 minutes, then the cabbage for 1 to 2 minutes, until just wilted.",
+  "Add the noodles and sauce and toss for 2 minutes, until the noodles are hot and glossy and a little charred in places.",
+  "Taste, scatter the sliced spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-0595-7f2b-a0f4-666ace0866ec"
+name = "Okonomiyaki"
+serves = 2
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "all-purpose-flour", amount = 0.75, unit = "cup" },
+  { id = "baking-powder", amount = 0.5, unit = "tsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "cabbage", amount = 3, unit = "cup" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "bacon", amount = 4, unit = "slice" },
+  { id = "worcestershire-sauce", amount = 2, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "japanese-mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Shred the cabbage finely and slice the spring onions, keeping the green parts separate.",
+  "Whisk the all-purpose flour, baking powder, salt, eggs and the water into a smooth batter. Fold in the cabbage and the white parts of the spring onions until every shred is coated.",
+  "Whisk the worcestershire sauce, ketchup, soy sauce and sugar into a thick sauce.",
+  "Heat the oil in a frying pan over medium heat. Spoon in half the batter and shape it into a round about 2 cm thick. Lay half the bacon on top.",
+  "Cook for 5 to 6 minutes, until the base is golden. Flip and cook for 5 to 6 minutes, until the bacon is crisp and the centre is set. Flip again and cook the rest of the batter and bacon the same way.",
+  "Brush the sauce over the top and drizzle with the Japanese mayonnaise in thin lines.",
+  "Taste the sauce and adjust. Scatter the bonito flakes and the green parts of the spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-0597-7e5e-ac40-cfb172a0404a"
+name = "Tamagoyaki"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "mirin", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Beat the eggs with the sugar, soy sauce, mirin, salt and the water until the sugar dissolves, without making foam. Strain for a smoother roll.",
+  "Heat a rectangular or small frying pan over medium-low heat and wipe it with oil on folded kitchen paper.",
+  "Pour in a thin layer of egg and tilt to cover the base. When it is mostly set but still a little wet on top, after about 1 minute, roll it towards you with chopsticks.",
+  "Push the roll back to the far end, wipe the pan with oil again and pour in another thin layer, lifting the roll so the egg runs underneath.",
+  "When it is just set, roll the first roll back up over it. Repeat with the rest of the egg, 1 minute per layer.",
+  "Tip the roll onto a bamboo mat or a sheet of baking paper, wrap it tightly and leave for 5 minutes to set its shape.",
+  "Taste the end, then cut the roll into slices about 2 cm thick and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c12-059a-7721-81dd-7131e81407a3"
+name = "Onigiri"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "sushi-rice", amount = 1.5, unit = "cup" },
+  { id = "canned-tuna", amount = 1, unit = "can" },
+  { id = "japanese-mayonnaise", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "nori", amount = 2, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the sushi rice until the rinsing runs clear. Simmer it in most of the water in a covered pan on low heat for 15 minutes, then rest covered for 10 minutes.",
+  "Drain the canned tuna well and mix it with the Japanese mayonnaise and soy sauce.",
+  "Toast the sesame seeds in a dry pan for 2 minutes. Cut the nori into strips about 4 cm wide.",
+  "Put the rest of the water in a bowl with a little salt. Wet your hands in it and rub a little salt on your palms.",
+  "Take a handful of the warm sushi rice, flatten it in your palm and put a spoonful of the filling in the centre. Cover with a little more sushi rice and press firmly into a triangle about 3 cm thick, turning it as you press.",
+  "Repeat with the rest of the sushi rice and filling, wetting your hands between each.",
+  "Taste one for salt, then wrap a strip of nori round the base of each, sprinkle with the sesame seeds and serve, or wrap and keep for lunch.",
+]
+
+[[recipe]]
+id = "01a18c12-059c-795e-86e7-3cf49987770d"
+name = "Edamame with sea salt"
+serves = 4
+prep_minutes = 2
+cook_minutes = 6
+ingredients = [
+  { id = "edamame", amount = 400, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Use frozen edamame in their pods. Rub them with a little salt and leave for 2 minutes.",
+  "Bring the water to a rolling boil with plenty of salt.",
+  "Add the edamame and boil for 4 to 5 minutes, until the beans inside are tender but still bright green.",
+  "Drain well and toss while hot with more salt.",
+  "Taste a bean and add more salt if needed. Serve warm with a bowl for the empty pods.",
+]
+
+[[recipe]]
+id = "01a18c12-059e-722d-a067-310f47137a7d"
+name = "Vegetable tempura"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "sweet-potato", amount = 1, unit = "medium" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "broccoli", amount = 1, unit = "small" },
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "mirin", amount = 2, unit = "tbsp" },
+  { id = "radish", amount = 100, unit = "g" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Simmer the soy sauce, mirin and a third of the water for 1 minute for a dipping sauce. Grate the radish and squeeze out the liquid.",
+  "Peel the sweet potato and cut it into slices about 5 mm thick. Cut the zucchini into slices on the diagonal, halve the mushrooms and cut the broccoli into small florets. Pat everything dry.",
+  "Heat the oil in a deep pan to 175°C.",
+  "Chill the rest of the water with ice until very cold. Beat the egg into it, then add the all-purpose flour and cornflour and stir with chopsticks for a few seconds only. The batter should stay lumpy.",
+  "Dip the vegetables in the batter a few at a time, let the excess drip off and fry for 2 to 3 minutes, turning once, until crisp and pale golden. The sweet potato needs 3 to 4 minutes, until tender.",
+  "Drain on a rack and sprinkle with a little salt.",
+  "Taste the dipping sauce and adjust. Serve the tempura straight away with the sauce and a little mound of grated radish to stir into it.",
+]
+
+[[recipe]]
+id = "01a18c12-05a0-73a8-a766-96806251dc80"
+name = "Agedashi tofu"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "tofu", amount = 400, unit = "g" },
+  { id = "potato-starch", amount = 0.33, unit = "cup" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "bonito-flakes", amount = 5, unit = "g" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "mirin", amount = 2, unit = "tbsp" },
+  { id = "radish", amount = 100, unit = "g" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Wrap the tofu in kitchen paper, put a plate on top and press for 15 minutes. Cut it into cubes about 4 cm across.",
+  "Warm the kombu in the water over low heat for 8 minutes, until small bubbles form. Lift it out, add the bonito flakes, simmer for 1 minute and strain. Stir the soy sauce and mirin into this dashi and keep it warm.",
+  "Grate the radish and ginger and squeeze out the liquid. Slice the spring onions thinly.",
+  "Heat the oil in a deep pan to 175°C. Pat the tofu dry and roll it in the potato starch, shaking off the excess.",
+  "Fry the tofu in batches for 3 to 4 minutes, turning, until crisp and pale golden. Drain on a rack.",
+  "Taste the warm sauce and adjust. Set the tofu in shallow bowls and pour the sauce round it.",
+  "Top with the radish, ginger and spring onions and serve straight away, while the coating is still crisp.",
+]
+
+[[recipe]]
+id = "01a18c12-05a3-729e-b778-26e6d8ef394a"
+name = "Cucumber sunomono"
+serves = 4
+prep_minutes = 15
+cook_minutes = 0
+ingredients = [
+  { id = "cucumber", amount = 2, unit = "medium" },
+  { id = "wakame", amount = 1, unit = "tbsp" },
+  { id = "rice-vinegar", amount = 4, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Slice the cucumbers paper-thin. Toss with a little salt and leave for 10 minutes, then squeeze out as much liquid as you can.",
+  "Soak the wakame for 5 minutes, until it swells. Drain and squeeze dry.",
+  "Whisk the rice vinegar, sugar and soy sauce until the sugar dissolves.",
+  "Toss the cucumber and wakame with the dressing.",
+  "Toast the sesame seeds in a dry pan for 2 minutes, until golden.",
+  "Taste and add a little more sugar or salt if needed. Pile into small bowls, sprinkle with the sesame seeds and serve cold.",
+]
+
+[[recipe]]
+id = "01a18c12-05a5-7159-8e6a-b67889e637dd"
+name = "Bibimbap"
+serves = 4
+prep_minutes = 30
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "beef", amount = 250, unit = "g" },
+  { id = "spinach", amount = 200, unit = "g" },
+  { id = "carrot", amount = 1, unit = "large" },
+  { id = "soybean-sprouts", amount = 150, unit = "g" },
+  { id = "zucchini", amount = 1, unit = "medium" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "gochujang", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tbsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and simmer it in most of the water in a covered pan on low heat for 15 minutes, then rest covered for 10 minutes.",
+  "Slice the beef into thin strips and toss with half the soy sauce, half the sugar and a third of the garlic, grated. Mix the gochujang with the rest of the sugar, a spoonful of the toasted sesame oil and a splash of the rest of the water into a sauce.",
+  "Blanch the soybean sprouts in a pan of boiling tap water for 4 minutes and drain. Blanch the spinach for 30 seconds, cool under the cold tap and squeeze dry. Season each with a little salt, the rest of the garlic and a little of the toasted sesame oil.",
+  "Cut the carrot and zucchini into matchsticks and slice the mushrooms. Heat a little of the oil in a frying pan over medium-high heat and stir-fry each separately for 1 to 2 minutes with a little salt, until just tender.",
+  "Stir-fry the mushrooms with the rest of the soy sauce for 3 minutes. Then stir-fry the beef for 2 to 3 minutes, until browned.",
+  "Fry the eggs in the rest of the oil for 2 to 3 minutes, until the whites are set and the yolks still runny.",
+  "Spoon the rice into bowls and arrange the vegetables and beef on top in sections. Add an egg to each, sprinkle with the sesame seeds and drizzle with the rest of the toasted sesame oil.",
+  "Taste the sauce and adjust. Serve with the sauce to mix in at the table.",
+]
+
+[[recipe]]
+id = "01a18c12-05a7-7b68-9f25-51ce04f8a789"
+name = "Kimchi fried rice"
+serves = 2
+prep_minutes = 10
+cook_minutes = 12
+ingredients = [
+  { id = "rice", amount = 2, unit = "cup" },
+  { id = "kimchi", amount = 1, unit = "cup" },
+  { id = "pork-belly", amount = 150, unit = "g" },
+  { id = "gochujang", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "nori", amount = 1, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Use cold cooked rice from the day before. Chop the kimchi, keeping its juice. Cut the pork belly into small strips and slice the spring onions.",
+  "Heat half the oil in a wok over medium-high heat. Fry the pork belly for 3 to 4 minutes, until browned and crisp at the edges.",
+  "Add the kimchi and fry for 3 minutes, until it softens and starts to caramelise.",
+  "Add the rice, gochujang, soy sauce and kimchi juice and toss for 3 to 4 minutes, pressing out clumps, until every grain is red and hot.",
+  "Meanwhile, fry the eggs in the rest of the oil for 2 to 3 minutes, until the whites are set and the yolks still runny.",
+  "Stir the toasted sesame oil and most of the spring onions into the rice and taste.",
+  "Spoon into bowls, top with the eggs, the rest of the spring onions and the nori crumbled over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05aa-7b8d-a68f-39e8fa1979a6"
+name = "Japchae"
+serves = 4
+prep_minutes = 25
+cook_minutes = 20
+ingredients = [
+  { id = "sweet-potato-noodles", amount = 200, unit = "g" },
+  { id = "beef", amount = 200, unit = "g" },
+  { id = "spinach", amount = 200, unit = "g" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "mushroom", amount = 150, unit = "g" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "soy-sauce", amount = 4, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tbsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Slice the beef into thin strips and toss with a spoonful of the soy sauce, a little of the sugar and a third of the grated garlic.",
+  "Cut the carrot into matchsticks, slice the onion and mushrooms, and cut the spring onions into lengths about 5 cm.",
+  "Bring the water to a boil. Blanch the spinach for 30 seconds, lift it out, cool under the cold tap and squeeze dry. Season with a little salt and toasted sesame oil.",
+  "Cook the sweet potato noodles in the same water for 6 to 7 minutes, until chewy and clear. Drain, rinse and cut into shorter lengths with scissors.",
+  "Beat the egg with a little salt and fry it in a little of the oil as a thin omelette for 1 minute a side. Roll it up and slice into thin strips.",
+  "Heat the rest of the oil in a wok over medium-high heat. Stir-fry the onion and carrot for 2 minutes, then the mushrooms for 2 minutes, then the beef for 2 minutes, until browned.",
+  "Add the noodles, spinach, spring onions, the rest of the garlic, the rest of the soy sauce, the rest of the sugar and the rest of the toasted sesame oil. Toss for 2 minutes, until glossy.",
+  "Taste and adjust the sweetness and soy sauce. Top with the egg strips and sesame seeds and serve warm or at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c12-05ac-7ede-bdd7-28382fdd8332"
+name = "Bulgogi"
+serves = 4
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "beef", amount = 600, unit = "g" },
+  { id = "pear", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "soy-sauce", amount = 5, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Use ribeye or sirloin and slice it paper-thin across the grain. Partly freezing it first makes this easier.",
+  "Grate the pear, garlic and ginger. Mix them with the soy sauce, sugar, toasted sesame oil and black pepper until the sugar dissolves.",
+  "Slice the onion thinly and cut the spring onions into lengths. Toss the beef and onion with the marinade and leave for at least 30 minutes, or overnight in the fridge.",
+  "Heat a little of the oil in a large frying pan over high heat. Spread out a single layer of the beef and onion and cook for 2 to 3 minutes, turning once, until browned at the edges and just cooked.",
+  "Repeat with the rest of the oil and beef, adding the spring onions to the last batch for 30 seconds.",
+  "Toast the sesame seeds in a dry pan for 2 minutes. Taste the beef and add a splash more soy sauce if needed.",
+  "Pile onto a plate, sprinkle with the sesame seeds and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05ae-78d5-bd9b-c8a6cf79f983"
+name = "Kimchi jjigae"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "kimchi", amount = 2, unit = "cup" },
+  { id = "pork-belly", amount = 250, unit = "g" },
+  { id = "tofu", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "gochugaru", amount = 1, unit = "tbsp" },
+  { id = "gochujang", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Use well-fermented, sour kimchi. Chop it and keep its juice. Slice the pork belly into thin strips and the onion into slices. Chop the garlic and slice the spring onions.",
+  "Heat the toasted sesame oil in a pot over medium heat. Fry the pork belly for 4 to 5 minutes, until lightly browned.",
+  "Add the kimchi and onion and fry for 5 minutes, stirring, until the kimchi softens.",
+  "Stir in the garlic, gochugaru, gochujang and sugar for 1 minute.",
+  "Pour in the water and the kimchi juice, bring to a boil, then simmer on medium-low heat for 15 minutes, until the broth is rich and red.",
+  "Cut the tofu into slices about 1.5 cm thick and lay them in the stew. Simmer for 4 to 5 minutes, until hot through.",
+  "Taste and adjust with more gochugaru for heat. Scatter the spring onions over and serve bubbling hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05b0-7c66-ab75-c9c955089d41"
+name = "Tteokbokki"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "korean-rice-cakes", amount = 500, unit = "g" },
+  { id = "gochujang", amount = 3, unit = "tbsp" },
+  { id = "gochugaru", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Hard-boil the eggs in a pan of boiling tap water for 9 minutes, cool and peel. If the Korean rice cakes are hard, soak them for 20 minutes and drain.",
+  "Put the kombu in the water and simmer on low heat for 10 minutes, then lift it out.",
+  "Grate the garlic. Whisk the gochujang, gochugaru, sugar, soy sauce and garlic into the kombu broth until smooth.",
+  "Cut the cabbage into squares and the spring onions into lengths about 5 cm.",
+  "Bring the sauce to a boil over medium heat. Add the Korean rice cakes and cabbage and simmer for 8 to 10 minutes, stirring often so nothing sticks, until the Korean rice cakes are soft and chewy and the sauce is thick and glossy.",
+  "Add the spring onions and the eggs and simmer for 1 minute.",
+  "Taste and adjust the sweetness and heat. Sprinkle with the sesame seeds and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05b2-739b-9fe9-2cafc76f1bc3"
+name = "Korean fried chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "potato-starch", amount = 0.75, unit = "cup" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "gochujang", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "honey", amount = 3, unit = "tbsp" },
+  { id = "rice-vinegar", amount = 1, unit = "tbsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 4, unit = "cup" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Use chicken wings, split at the joints, and pat them very dry. Grate the garlic and ginger and toss half of each with the chicken, the black pepper and salt.",
+  "Toss the chicken in the potato starch until every piece is evenly coated, then shake off the excess.",
+  "Heat the oil in a deep pan to 170°C. Fry the chicken in batches for 8 to 10 minutes, until pale golden and cooked through. Drain on a rack and rest for 5 minutes.",
+  "Raise the heat to 185°C and fry the chicken again for 2 to 3 minutes, until deep golden and very crisp. Drain on the rack.",
+  "Meanwhile, simmer the gochujang, soy sauce, honey, rice vinegar, the water and the rest of the garlic and ginger in a wide pan over medium heat for 3 minutes, until thick and glossy.",
+  "Toss the hot chicken in the sauce until coated.",
+  "Taste the sauce and adjust. Sprinkle with the sesame seeds and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c12-05b6-76f0-b1d1-fa24c33911e9"
+name = "Gyeran mari"
+serves = 2
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "egg", amount = 5, unit = "large" },
+  { id = "carrot", amount = 0.5, unit = "small" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Finely chop the carrot and spring onions.",
+  "Beat the eggs with the salt and the water, then stir in the carrot and spring onions.",
+  "Heat a frying pan over medium-low heat and wipe it with oil on folded kitchen paper.",
+  "Pour in a thin layer of the egg mixture. When it is almost set on top, after about 1 minute, roll it from the far side towards you with a spatula.",
+  "Push the roll to the far side, wipe the pan with oil and pour in more egg, lifting the roll so it runs underneath. When almost set, roll the roll back over it. Repeat with the rest of the egg mixture.",
+  "Leave the roll in the pan off the heat for 2 minutes to firm up.",
+  "Taste the end, then cut into slices about 2 cm thick and serve warm.",
+]
+
+[[recipe]]
+id = "01a18c12-05b8-7ce9-be22-d87e34acc693"
+name = "Doenjang jjigae"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "doenjang", amount = 3, unit = "tbsp" },
+  { id = "tofu", amount = 300, unit = "g" },
+  { id = "zucchini", amount = 1, unit = "small" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "mushroom", amount = 100, unit = "g" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "kombu", amount = 5, unit = "g" },
+  { id = "gochugaru", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Put the kombu in the water and simmer on low heat for 10 minutes, then lift it out.",
+  "Peel the potato and cut it into cubes about 1.5 cm across. Cut the zucchini, onion and tofu into cubes the same size. Slice the mushrooms, green chillies and spring onions and chop the garlic.",
+  "Whisk the doenjang into the kombu broth through a sieve until dissolved.",
+  "Add the potato and onion and simmer for 8 minutes, until the potato is nearly tender.",
+  "Add the zucchini, mushrooms, garlic and gochugaru and simmer for 5 minutes.",
+  "Add the tofu and green chillies and simmer for 3 minutes, until hot through.",
+  "Taste and add a little more doenjang if needed. Scatter the spring onions over and serve bubbling hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05ba-797e-a429-511c8aa7595c"
+name = "Kongnamul muchim"
+serves = 4
+prep_minutes = 5
+cook_minutes = 6
+ingredients = [
+  { id = "soybean-sprouts", amount = 300, unit = "g" },
+  { id = "garlic", amount = 1, unit = "clove" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "gochugaru", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "l" },
+]
+steps = [
+  "Rinse the soybean sprouts and pick out any loose skins.",
+  "Bring the water to a boil with a little salt. Add the sprouts, cover and cook for 5 minutes without lifting the lid, until tender but still crunchy.",
+  "Drain and spread them out to cool for a few minutes.",
+  "Grate the garlic and finely slice the spring onions. Crush the sesame seeds lightly between your fingers.",
+  "Toss the sprouts with the garlic, spring onions, toasted sesame oil, sesame seeds, gochugaru and salt.",
+  "Taste and add more salt if needed. Serve at room temperature or cold.",
+]

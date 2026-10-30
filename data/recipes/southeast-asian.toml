@@ -1,0 +1,673 @@
+# Southeast Asian (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18c12-05bc-7ee2-a97d-f619d0729c98"
+name = "Nasi goreng"
+serves = 2
+prep_minutes = 10
+cook_minutes = 12
+ingredients = [
+  { id = "rice", amount = 2, unit = "cup" },
+  { id = "chicken", amount = 200, unit = "g" },
+  { id = "shallot", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "kecap-manis", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "cucumber", amount = 0.5, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use cold cooked rice from the day before. Slice the chicken thinly.",
+  "Pound or blend the shallots, garlic and bird's eye chillies to a rough paste.",
+  "Heat most of the oil in a wok over medium-high heat. Fry the paste for 2 minutes, until fragrant and starting to colour.",
+  "Add the chicken and stir-fry for 3 minutes, until cooked through.",
+  "Add the rice, kecap manis and soy sauce and toss for 3 to 4 minutes, pressing out clumps, until every grain is coated and hot.",
+  "Fry the eggs in the rest of the oil for 2 to 3 minutes, until the edges are crisp and the yolks still runny. Slice the cucumber and tomato.",
+  "Taste the rice for salt. Serve topped with the eggs, with the cucumber and tomato on the side.",
+]
+
+[[recipe]]
+id = "01a18c12-05be-7940-8353-deed67958a02"
+name = "Mee goreng"
+serves = 2
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "egg-noodles", amount = 200, unit = "g" },
+  { id = "prawns", amount = 150, unit = "g" },
+  { id = "tofu", amount = 100, unit = "g" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "shallot", amount = 2, unit = "piece" },
+  { id = "kecap-manis", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "chilli-garlic-sauce", amount = 1, unit = "tbsp" },
+  { id = "lime", amount = 1, unit = "small" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil and cook the egg noodles as the packet says, until just tender. Drain and rinse under the cold tap.",
+  "Peel and devein the prawns. Cut the tofu into cubes, shred the cabbage and slice the garlic and shallots. Mix the kecap manis, soy sauce, ketchup and chilli garlic sauce.",
+  "Heat the oil in a wok over medium-high heat. Fry the tofu for 4 minutes, until golden, and lift it out.",
+  "Fry the garlic and shallots for 1 minute, then the prawns for 2 minutes, until pink.",
+  "Push everything aside, crack in the eggs and scramble for 1 minute, until just set.",
+  "Add the noodles, cabbage, tofu and sauce and toss for 2 to 3 minutes, until hot and glossy. Add the bean sprouts for the last 30 seconds.",
+  "Taste and adjust. Serve with the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c12-05c1-7817-a7a0-c3bcf90f7c81"
+name = "Chicken satay (Malaysian)"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "lemongrass", amount = 2, unit = "piece" },
+  { id = "shallot", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "peanuts", amount = 1, unit = "cup" },
+  { id = "dried-red-chillies", amount = 4, unit = "piece" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "palm-sugar", amount = 2, unit = "tbsp" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into strips about 2 cm wide. Soak bamboo skewers for 30 minutes.",
+  "Blend the tender inner part of the lemongrass with half the shallots, the garlic, turmeric, coriander powder, cumin powder, sugar, salt and a spoonful of the oil to a paste. Rub it into the chicken and leave for at least 1 hour, or overnight in the fridge.",
+  "For the sauce, toast the peanuts in a dry pan over medium heat for 5 minutes, until golden, then grind coarsely. Soak the dried red chillies and tamarind in a little of the water, hot, for 10 minutes, then strain the tamarind and blend the chillies with the rest of the shallots.",
+  "Heat the rest of the oil in a pan over medium heat. Fry the chilli paste for 5 minutes, until it darkens and the oil separates.",
+  "Add the peanuts, the tamarind liquid, the palm sugar and the rest of the water and simmer for 8 to 10 minutes, stirring, until thick. Season with salt.",
+  "Thread the chicken onto the skewers. Grill on a very hot griddle pan or barbecue for 8 to 10 minutes, turning and brushing with a little oil, until charred at the edges and cooked through.",
+  "Cut the cucumber into chunks. Taste the sauce and adjust, then serve the satay hot with the sauce and cucumber.",
+]
+
+[[recipe]]
+id = "01a18c12-05c3-70ea-8643-588ed0682229"
+name = "Beef rendang"
+serves = 6
+prep_minutes = 30
+cook_minutes = 180
+ingredients = [
+  { id = "beef", amount = 1, unit = "kg" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "desiccated-coconut", amount = 0.5, unit = "cup" },
+  { id = "lemongrass", amount = 3, unit = "piece" },
+  { id = "galangal", amount = 1, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "shallot", amount = 8, unit = "piece" },
+  { id = "dried-red-chillies", amount = 10, unit = "piece" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "makrut-lime-leaves", amount = 5, unit = "leaf" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "star-anise", amount = 2, unit = "piece" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "palm-sugar", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Use beef chuck and cut it into chunks about 4 cm across. Soak the dried red chillies and tamarind in a little of the water, hot, for 15 minutes. Strain the tamarind.",
+  "Blend the chillies, shallots, garlic, ginger, galangal, turmeric and the tender part of 2 lemongrass stalks with a splash of the water to a smooth paste. Bash the last stalk.",
+  "Toast the desiccated coconut in a dry pan over medium-low heat for 6 to 8 minutes, stirring, until deep brown. Pound or grind it to an oily paste.",
+  "Heat the oil in a heavy pot over medium heat. Fry the paste with the bashed lemongrass, cinnamon sticks and star anise for 8 to 10 minutes, stirring, until dark and fragrant and the oil separates.",
+  "Add the beef and stir for 5 minutes to coat. Pour in the coconut milk, the rest of the water and the torn makrut lime leaves and bring to a boil.",
+  "Simmer uncovered on low heat for 2 and a half hours, stirring every 15 minutes, until the beef is tender and the liquid has almost gone.",
+  "Stir in the toasted desiccated coconut, tamarind liquid, palm sugar and salt. Keep cooking for 15 to 20 minutes, stirring often, until the sauce is thick and dark and clings to the beef.",
+  "Taste and balance the salt and sweetness. Pick out the whole spices and serve.",
+]
+
+[[recipe]]
+id = "01a18c12-05c5-7502-b0ef-66f86d8c763d"
+name = "Laksa"
+serves = 4
+prep_minutes = 25
+cook_minutes = 30
+ingredients = [
+  { id = "rice-vermicelli", amount = 200, unit = "g" },
+  { id = "chicken", amount = 300, unit = "g" },
+  { id = "prawns", amount = 200, unit = "g" },
+  { id = "tofu", amount = 150, unit = "g" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "chicken-stock", amount = 3, unit = "cup" },
+  { id = "shallot", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "lemongrass", amount = 2, unit = "piece" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "dried-shrimp", amount = 2, unit = "tbsp" },
+  { id = "cashews", amount = 0.25, unit = "cup" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "mint", amount = 0.25, unit = "cup" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "fish-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Soak the dried red chillies and dried shrimp in the water, hot, for 15 minutes. Drain, keeping the water.",
+  "Blend the chillies, dried shrimp, shallots, garlic, ginger, the tender part of the lemongrass, cashews, coriander powder and turmeric with a splash of the soaking water to a smooth paste.",
+  "Hard-boil the eggs in a pan of boiling tap water for 9 minutes, cool and halve. Soak the rice vermicelli for 10 minutes, until soft, and drain. Slice the chicken thinly and cut the tofu into cubes. Peel and devein the prawns.",
+  "Heat the oil in a pot over medium heat. Fry the paste for 6 to 8 minutes, stirring, until dark and fragrant and the oil separates.",
+  "Pour in the chicken stock and the rest of the soaking water and simmer for 5 minutes. Stir in the coconut milk and bring back to a gentle simmer.",
+  "Add the chicken and tofu and simmer for 5 minutes, then the prawns for 2 to 3 minutes, until pink. Season with the fish sauce and sugar.",
+  "Pour boiling tap water over the noodles to warm them, drain and divide between bowls. Add the bean sprouts.",
+  "Taste the broth and adjust. Ladle it over the noodles with the chicken, prawns and tofu. Top with the eggs and mint and serve with the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c12-05c8-719e-9bef-f6d5dd1971d9"
+name = "Hainanese chicken rice"
+serves = 4
+prep_minutes = 20
+cook_minutes = 60
+ingredients = [
+  { id = "chicken", amount = 1.5, unit = "kg" },
+  { id = "jasmine-rice", amount = 1.5, unit = "cup" },
+  { id = "ginger", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "pandan-leaves", amount = 2, unit = "leaf" },
+  { id = "birds-eye-chillies", amount = 4, unit = "piece" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Rub a whole chicken all over with salt, rinse and pat dry. Slice half the ginger and cut the spring onions into lengths, then stuff them inside the chicken.",
+  "Bring the water to a boil in a large pot with a little salt. Lower in the chicken, bring back to a bare simmer, then cover and poach on the lowest heat for 35 to 40 minutes, until the juices at the thigh run clear.",
+  "Lift the chicken into a bowl of iced tap water for 10 minutes so the skin turns firm and silky. Drain, rub with the toasted sesame oil and keep the poaching liquid.",
+  "Rinse the jasmine rice and drain. Chop half the garlic and grate a little of the rest of the ginger. Heat the oil in a pan and fry them over medium heat for 1 minute, then add the jasmine rice and stir for 2 minutes, until glossy.",
+  "Add enough of the poaching liquid to cover the jasmine rice by about 1 cm, the pandan leaves knotted, and salt. Cover and cook on low heat for 15 minutes, then rest covered for 10 minutes.",
+  "For the dipping sauce, blend the bird's eye chillies with the rest of the garlic, a little of the rest of the ginger, the lime juice, sugar and a spoonful of the poaching liquid. Pound the rest of the ginger with a little salt for a ginger sauce.",
+  "Season the rest of the poaching liquid with salt to drink as a soup. Slice the cucumber.",
+  "Carve the chicken into pieces and drizzle with the soy sauce. Taste the sauces and adjust, then serve with the jasmine rice, cucumber, both sauces and a small bowl of the soup.",
+]
+
+[[recipe]]
+id = "01a18c12-05ca-7255-a495-c8a66a5e3891"
+name = "Char kway teow"
+serves = 2
+prep_minutes = 15
+cook_minutes = 8
+ingredients = [
+  { id = "flat-rice-noodles", amount = 300, unit = "g" },
+  { id = "prawns", amount = 150, unit = "g" },
+  { id = "sausages", amount = 1, unit = "piece" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "chives", amount = 0.5, unit = "cup" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "chilli-garlic-sauce", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Use fresh wide rice noodles and separate the strands gently. If using dried ones, soak them for 30 minutes, until soft, and drain.",
+  "Use Chinese-style sweet sausages if you can and slice them thinly on the diagonal. Peel and devein the prawns, chop the garlic and cut the chives into lengths about 5 cm.",
+  "Mix the dark soy sauce, soy sauce, oyster sauce, sugar and chilli garlic sauce.",
+  "Heat the oil in a wok over the highest heat until smoking. Fry the garlic for 15 seconds, then the sausages and prawns for 1 minute, until the prawns turn pink.",
+  "Add the noodles and sauce and toss for 1 to 2 minutes, letting them catch and char slightly.",
+  "Push the noodles aside, crack in the eggs, scramble them for 30 seconds and toss through.",
+  "Add the bean sprouts and chives for 30 seconds, until just wilted. Taste and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c12-05cc-7f07-8dd1-2c174ad6bd82"
+name = "Gado-gado"
+serves = 4
+prep_minutes = 25
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "french-beans", amount = 150, unit = "g" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "tofu", amount = 200, unit = "g" },
+  { id = "tempeh", amount = 150, unit = "g" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "peanuts", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "palm-sugar", amount = 2, unit = "tbsp" },
+  { id = "kecap-manis", amount = 1, unit = "tbsp" },
+  { id = "tamarind", amount = 1, unit = "tbsp" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Hard-boil the eggs in a pan of boiling tap water for 9 minutes, cool and halve. Boil the potatoes in their skins for 15 to 20 minutes, until tender, then peel and slice.",
+  "Blanch the french beans for 3 minutes and the cabbage and bean sprouts for 1 minute, until just tender, then cool under the cold tap.",
+  "Cut the tofu and tempeh into slices about 1 cm thick and pat dry. Fry them in the oil over medium heat for 3 to 4 minutes a side, until golden. Drain.",
+  "Fry the peanuts in the same oil for 3 to 4 minutes, until golden. Lift out and blend with the garlic, bird's eye chillies, palm sugar and salt to a coarse paste.",
+  "Soak the tamarind in a little of the water, hot, then squeeze and strain. Simmer the peanut paste with the tamarind liquid, kecap manis and the rest of the water for 5 minutes, stirring, until thick. Stir in the lime juice.",
+  "Slice the cucumber. Arrange the vegetables, eggs, tofu and tempeh on a platter.",
+  "Taste the peanut sauce and adjust, loosening with a splash of tap water if thick. Pour it over and serve at room temperature.",
+]
+
+[[recipe]]
+id = "01a18c12-05ce-7e43-9ce5-fdc95ffd4fe0"
+name = "Pho bo"
+serves = 4
+prep_minutes = 25
+cook_minutes = 180
+ingredients = [
+  { id = "beef", amount = 1, unit = "kg" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "star-anise", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 3, unit = "tbsp" },
+  { id = "rock-sugar", amount = 1, unit = "tbsp" },
+  { id = "flat-rice-noodles", amount = 400, unit = "g" },
+  { id = "bean-sprouts", amount = 2, unit = "cup" },
+  { id = "thai-basil", amount = 1, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "hoisin-sauce", amount = 3, unit = "tbsp" },
+  { id = "sriracha", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "l" },
+]
+steps = [
+  "Use beef brisket or shin, left whole, plus a small sirloin steak for slicing. Put the brisket in a pot of cold tap water, boil for 5 minutes, then drain and rinse.",
+  "Char the unpeeled onions and ginger directly over a gas flame or under a hot grill for 8 to 10 minutes, turning, until blackened in places. Rinse off the burnt skin.",
+  "Toast the star anise, cinnamon sticks, cloves and coriander seeds in a dry pan for 2 minutes, until fragrant.",
+  "Put the brisket, onions, ginger, spices and the water in a large pot. Bring to a boil, then simmer uncovered on the lowest heat for 2 and a half hours, skimming often, until the brisket is tender.",
+  "Lift out the brisket and slice it thinly. Strain the broth and season with the fish sauce, rock sugar and salt.",
+  "Freeze the sirloin for 20 minutes, then slice it paper-thin. Soak the flat rice noodles as the packet says and blanch them for 30 seconds in boiling tap water.",
+  "Divide the noodles between bowls and top with the brisket and raw sirloin. Ladle the boiling broth over so it cooks the sirloin.",
+  "Taste the broth and adjust. Serve with the bean sprouts, thai basil, coriander leaves, lime wedges, sliced bird's eye chillies, sliced spring onions, hoisin sauce and sriracha at the table.",
+]
+
+[[recipe]]
+id = "01a18c12-05d1-7c88-bf63-87aac9ac94bb"
+name = "Pho ga"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "chicken", amount = 1.5, unit = "kg" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "star-anise", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "coriander-seeds", amount = 1, unit = "tbsp" },
+  { id = "fish-sauce", amount = 3, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "flat-rice-noodles", amount = 400, unit = "g" },
+  { id = "bean-sprouts", amount = 2, unit = "cup" },
+  { id = "thai-basil", amount = 1, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Char the unpeeled onion and ginger directly over a gas flame or under a hot grill for 8 to 10 minutes, turning, until blackened in places. Rinse off the burnt skin.",
+  "Toast the star anise, cinnamon sticks, cloves and coriander seeds in a dry pan for 2 minutes, until fragrant.",
+  "Put a whole chicken, the onion, ginger, spices and the water in a large pot. Bring to a boil, skim, then simmer gently for 40 minutes, until the chicken is cooked through.",
+  "Lift out the chicken, pull the meat off in shreds and return the bones to the pot. Simmer for 40 minutes more.",
+  "Strain the broth and season with the fish sauce, sugar and salt.",
+  "Soak the flat rice noodles as the packet says and blanch them for 30 seconds in boiling tap water. Slice the spring onions and bird's eye chillies.",
+  "Taste the broth and adjust. Divide the noodles and chicken between bowls and ladle the hot broth over.",
+  "Serve with the bean sprouts, thai basil, coriander leaves, lime wedges, spring onions and bird's eye chillies at the table.",
+]
+
+[[recipe]]
+id = "01a18c12-05d3-7a8e-8f70-738e1d4d1faa"
+name = "Bun cha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "pork", amount = 400, unit = "g" },
+  { id = "pork-belly", amount = 300, unit = "g" },
+  { id = "fish-sauce", amount = 5, unit = "tbsp" },
+  { id = "sugar", amount = 4, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "shallot", amount = 2, unit = "piece" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "rice-vermicelli", amount = 300, unit = "g" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "birds-eye-chillies", amount = 2, unit = "piece" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Finely chop the shallots and half the garlic. Mix them with a third of the fish sauce, a third of the sugar and the black pepper.",
+  "Use minced pork and shape it into small flat patties about 5 cm across. Slice the pork belly thinly. Toss both with the marinade and leave for at least 30 minutes.",
+  "For the dipping sauce, stir the rest of the sugar into the water until dissolved. Add the rest of the fish sauce, the lime juice, the rest of the garlic chopped and the bird's eye chillies sliced.",
+  "Peel the carrot, slice it thinly and add it to the dipping sauce.",
+  "Cook the rice vermicelli in boiling tap water as the packet says, rinse under the cold tap and drain well.",
+  "Brush a griddle pan with the oil and heat until very hot. Grill the patties and pork belly for 3 to 4 minutes a side, until charred and cooked through.",
+  "Taste the dipping sauce and adjust. Drop the hot pork into bowls of the sauce and serve with the noodles, lettuce, mint and coriander leaves to dip and wrap.",
+]
+
+[[recipe]]
+id = "01a18c12-05d5-7522-b0bf-1c1591a91e41"
+name = "Banh mi"
+serves = 4
+prep_minutes = 25
+cook_minutes = 15
+ingredients = [
+  { id = "baguette", amount = 2, unit = "piece" },
+  { id = "pork", amount = 400, unit = "g" },
+  { id = "lemongrass", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "fish-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "radish", amount = 150, unit = "g" },
+  { id = "white-vinegar", amount = 0.33, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "jalapeno", amount = 1, unit = "piece" },
+  { id = "mayonnaise", amount = 4, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.33, unit = "cup" },
+]
+steps = [
+  "Cut the carrot and radish into thin matchsticks. Stir most of the sugar and a little salt into the white vinegar and the water until dissolved, add the vegetables and leave for at least 30 minutes.",
+  "Use pork shoulder and slice it thinly. Finely chop the tender part of the lemongrass and the garlic and mix with the fish sauce, soy sauce and the rest of the sugar. Toss the pork in it and leave for 20 minutes.",
+  "Heat the oil in a frying pan over high heat. Fry the pork in batches for 2 to 3 minutes a side, until caramelised and cooked through.",
+  "Cut the baguettes into lengths about 15 cm and warm them in a hot oven for 3 to 4 minutes, until crisp. Split them down the side.",
+  "Slice the cucumber into long strips and the jalapeno into thin rounds. Drain the pickles.",
+  "Spread the mayonnaise inside the bread. Fill with the pork, pickles, cucumber, jalapeno and coriander leaves.",
+  "Taste the pork and the pickles and adjust the seasoning, then serve straight away while the bread is crisp.",
+]
+
+[[recipe]]
+id = "01a18c12-05d7-74e6-b16d-95b0ded08ba3"
+name = "Vietnamese spring rolls"
+serves = 4
+prep_minutes = 30
+cook_minutes = 10
+ingredients = [
+  { id = "rice-paper", amount = 12, unit = "piece" },
+  { id = "rice-vermicelli", amount = 100, unit = "g" },
+  { id = "prawns", amount = 250, unit = "g" },
+  { id = "lettuce", amount = 1, unit = "small-head" },
+  { id = "mint", amount = 0.5, unit = "cup" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "hoisin-sauce", amount = 3, unit = "tbsp" },
+  { id = "peanut-butter", amount = 1, unit = "tbsp" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil. Cook the prawns for 2 minutes, until pink, then lift them out, peel and halve them lengthwise.",
+  "Cook the rice vermicelli in the same water as the packet says, rinse under the cold tap and drain well.",
+  "Cut the cucumber and carrot into thin matchsticks and tear the lettuce into pieces.",
+  "Pour some of the water, cooled to lukewarm, into a wide dish. Dip the rice paper sheets one at a time for 5 seconds, until just soft, and lay them on a damp board.",
+  "Lay 3 prawn halves cut side up across the lower third. Top with lettuce, a little vermicelli, cucumber, carrot, mint and coriander leaves. Fold the sides in and roll up tightly.",
+  "Whisk the hoisin sauce, peanut butter and a splash of the rest of the water into a dipping sauce. Crush the peanuts and scatter them over it.",
+  "Taste the sauce and adjust. Serve the rolls straight away with the sauce.",
+]
+
+[[recipe]]
+id = "01a18c12-05da-7eee-8b37-581661776ea3"
+name = "Lemongrass chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "lemongrass", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "shallot", amount = 2, unit = "piece" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "birds-eye-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Use boneless chicken thighs and cut them into pieces about 3 cm across.",
+  "Finely chop the tender part of the lemongrass, the garlic, shallots and bird's eye chillies.",
+  "Mix them with the fish sauce, half the sugar, the soy sauce and the black pepper. Toss the chicken in it and leave for at least 30 minutes.",
+  "Heat the oil in a wok or frying pan over medium-high heat. Add the chicken in a single layer and cook for 3 minutes without moving it, until browned.",
+  "Turn and cook for 4 to 5 minutes, until cooked through. Sprinkle the rest of the sugar over and toss for 1 minute, until caramelised and sticky.",
+  "Taste and add a dash more fish sauce if needed. Scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05dc-7d43-8bbb-a8f70519d3c3"
+name = "Chicken adobo"
+serves = 4
+prep_minutes = 10
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "cane-vinegar", amount = 0.5, unit = "cup" },
+  { id = "soy-sauce", amount = 0.33, unit = "cup" },
+  { id = "garlic", amount = 8, unit = "clove" },
+  { id = "bay-leaves", amount = 3, unit = "piece" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Use bone-in chicken thighs and legs. Crush the garlic and lightly crack the black peppercorns.",
+  "Heat the oil in a wide pan over medium-high heat. Brown the chicken skin side down for 5 to 6 minutes, until golden. Turn and brown for 2 minutes.",
+  "Add the garlic for 1 minute, until fragrant.",
+  "Pour in the soy sauce, cane vinegar and the water, add the bay leaves and black peppercorns and bring to a boil. Don't stir for the first few minutes, so the sharpness of the vinegar cooks off.",
+  "Cover and simmer on low heat for 25 to 30 minutes, until the chicken is tender.",
+  "Uncover, add the sugar and simmer for 8 to 10 minutes, turning the chicken, until the sauce is reduced and glossy.",
+  "Taste and balance so it is sour and salty. Serve hot with the sauce spooned over.",
+]
+
+[[recipe]]
+id = "01a18c12-05de-731f-9838-1f50081d2e6a"
+name = "Pancit canton"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "egg-noodles", amount = 250, unit = "g" },
+  { id = "chicken", amount = 200, unit = "g" },
+  { id = "prawns", amount = 150, unit = "g" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "oyster-sauce", amount = 2, unit = "tbsp" },
+  { id = "chicken-stock", amount = 1.5, unit = "cup" },
+  { id = "lime", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Slice the chicken thinly, peel and devein the prawns, shred the cabbage, cut the carrot into matchsticks and the french beans into lengths. Slice the onion and chop the garlic.",
+  "Heat the oil in a wok over medium-high heat. Fry the onion and garlic for 2 minutes, until soft.",
+  "Add the chicken and stir-fry for 3 minutes, then the prawns for 2 minutes, until pink.",
+  "Add the carrot and french beans and toss for 2 minutes, then the cabbage for 1 minute.",
+  "Pour in the chicken stock, soy sauce and oyster sauce and bring to a boil.",
+  "Add the dry egg noodles and toss for 3 to 4 minutes, until they absorb the liquid and turn tender.",
+  "Taste and adjust. Scatter the sliced spring onions over and serve with the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c12-05e1-798c-bdae-9314d8658870"
+name = "Sinigang"
+serves = 4
+prep_minutes = 15
+cook_minutes = 75
+ingredients = [
+  { id = "pork", amount = 750, unit = "g" },
+  { id = "tamarind", amount = 3, unit = "tbsp" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "radish", amount = 200, unit = "g" },
+  { id = "okra", amount = 8, unit = "piece" },
+  { id = "french-beans", amount = 100, unit = "g" },
+  { id = "spinach", amount = 2, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "fish-sauce", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 8, unit = "cup" },
+]
+steps = [
+  "Use pork ribs or shoulder and cut into chunks about 4 cm across. Soak the tamarind in a little of the water, hot, for 10 minutes, then squeeze and strain.",
+  "Quarter the tomatoes and onion. Peel the radish and cut it into rounds about 1 cm thick. Trim the okra and cut the french beans into lengths.",
+  "Put the pork, tomatoes, onion and the rest of the water in a pot. Bring to a boil, skim, then simmer on low heat for 50 to 60 minutes, until the pork is tender.",
+  "Add the radish and simmer for 8 minutes, until nearly tender.",
+  "Add the okra, french beans and green chillies and simmer for 4 minutes.",
+  "Stir in the tamarind liquid and fish sauce, then the spinach for 1 minute, until wilted.",
+  "Taste and balance: it should be clearly sour and savoury. Add salt if needed and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c12-05e3-70a4-aabc-de4de389c7ef"
+name = "Lumpia"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "spring-roll-wrappers", amount = 20, unit = "piece" },
+  { id = "pork", amount = 400, unit = "g" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "sweet-chilli-sauce", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely grate the carrot and finely chop the onion and garlic.",
+  "Use minced pork. Mix it with the carrot, onion, garlic, egg, soy sauce, black pepper and salt until sticky.",
+  "Fry a little of the filling to taste the seasoning and adjust.",
+  "Lay out some of the spring roll wrappers. Spread a line of filling about 1.5 cm thick along the near edge of each, fold in the sides and roll up tightly. Seal the edge with a wet fingertip.",
+  "Heat the oil in a deep pan to 170°C. Fry the rolls in batches for 5 to 6 minutes, turning, until deep golden and the filling is cooked through.",
+  "Drain on a rack and cut each roll in half on the diagonal.",
+  "Serve hot with the sweet chilli sauce for dipping.",
+]
+
+[[recipe]]
+id = "01a18c12-05e5-7b2f-9314-b48c9c3302af"
+name = "Burmese khow suey"
+serves = 4
+prep_minutes = 25
+cook_minutes = 40
+ingredients = [
+  { id = "egg-noodles", amount = 400, unit = "g" },
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "coconut-milk", amount = 2, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "gram-flour", amount = 2, unit = "tbsp" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "chicken-stock", amount = 2, unit = "cup" },
+  { id = "fish-sauce", amount = 1, unit = "tbsp" },
+  { id = "lime", amount = 2, unit = "medium" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "coriander-leaves", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil. Hard-boil the eggs for 9 minutes, cool and halve. Keep the water for the egg noodles.",
+  "Set aside a third of the garlic for the paste and thinly slice the rest. Fry the sliced garlic in the oil over low heat for 3 to 4 minutes, until golden and crisp. Lift out and keep the oil.",
+  "Blend one of the onions with the set-aside garlic and the ginger to a paste. Slice the other onion finely for garnish.",
+  "Use boneless chicken thighs and cut them into pieces about 2 cm across.",
+  "Heat most of the garlic oil in a pot over medium heat. Fry the paste for 6 to 8 minutes, until golden. Stir in the turmeric and red chilli powder for 30 seconds, then the chicken for 4 minutes.",
+  "Whisk the gram flour into the chicken stock until smooth and pour it in with the coconut milk. Simmer on low heat for 15 to 20 minutes, stirring, until the chicken is tender and the curry is thick. Season with the fish sauce and salt.",
+  "Cook the egg noodles in the boiling water as the packet says and drain. Toss with the rest of the garlic oil.",
+  "Taste the curry and adjust. Serve the noodles in bowls with the curry ladled over, topped with the eggs, crispy garlic, raw onion, sliced spring onions and coriander leaves, with the lime cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18c12-05e7-7b4c-b63a-f2318ce7bd53"
+name = "Singapore noodles"
+serves = 2
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "rice-vermicelli", amount = 150, unit = "g" },
+  { id = "prawns", amount = 150, unit = "g" },
+  { id = "chicken", amount = 150, unit = "g" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "bean-sprouts", amount = 1, unit = "cup" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "curry-powder", amount = 2, unit = "tsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Soak the rice vermicelli for 10 minutes, until just soft. Drain well and snip into shorter lengths.",
+  "Peel and devein the prawns, slice the chicken thinly, and slice the bell pepper, onion, spring onions and garlic.",
+  "Heat a little of the oil in a wok over high heat. Scramble the eggs for 1 minute, until just set, and lift them out.",
+  "Add the rest of the oil and stir-fry the chicken for 2 minutes, then the prawns for 2 minutes, until pink.",
+  "Add the garlic, onion and bell pepper and toss for 1 minute. Sprinkle the curry powder over and toss for 30 seconds, until fragrant.",
+  "Add the noodles, soy sauce and sugar and toss for 2 minutes, until evenly yellow and hot. Toss in the bean sprouts, spring onions, eggs and toasted sesame oil.",
+  "Taste and add a splash more soy sauce if needed. Serve hot.",
+]

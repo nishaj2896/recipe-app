@@ -233,3 +233,501 @@ steps = [
   "Add the noodles and sauce and toss for 2 minutes, adding a splash of the saved noodle water so the noodles stay silky and coated.",
   "Toss in the spring onions, taste for salt and serve hot.",
 ]
+
+[[recipe]]
+id = "01a18c0c-0c7e-7648-8def-906c51a046e5"
+name = "Yangzhou fried rice"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "prawns", amount = 200, unit = "g" },
+  { id = "ham", amount = 100, unit = "g" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "peas", amount = 0.5, unit = "cup" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "white-pepper", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the rice in several changes of water. Simmer it in the water in a covered pan over low heat for 15 minutes, until tender, then spread it on a tray and chill until cold, ideally overnight.",
+  "Peel and devein the prawns and cut them into pieces about 1.5 cm across. Dice the ham and slice the spring onions, keeping the green parts separate. Beat the eggs with a little salt.",
+  "Heat a spoonful of the oil in a wok over high heat. Stir-fry the prawns for 1 to 2 minutes, until pink. Lift them out.",
+  "Heat another spoonful of the oil, pour in the eggs and scramble for 30 seconds, until just set in large soft pieces. Lift them out.",
+  "Heat the rest of the oil. Stir-fry the white parts of the spring onions for 20 seconds, then add the rice and toss for 3 minutes, pressing out any clumps, until every grain is hot and separate.",
+  "Add the ham, peas, prawns and eggs, then splash the shaoxing wine and soy sauce round the edge of the wok. Toss for 2 minutes, until evenly coloured.",
+  "Season with the white pepper, taste for salt, toss in the green parts of the spring onions and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399"
+name = "Egg drop soup"
+serves = 4
+prep_minutes = 5
+cook_minutes = 12
+ingredients = [
+  { id = "chicken-stock", amount = 5, unit = "cup" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "white-pepper", amount = 0.25, unit = "tsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "tbsp" },
+]
+steps = [
+  "Slice the ginger into thin coins and the spring onions into thin rounds. Beat the eggs well. Mix the cornflour with the water until smooth.",
+  "Simmer the chicken stock with the ginger in a pan over medium heat for 5 minutes, until fragrant. Lift out the ginger.",
+  "Season with the soy sauce, white pepper and salt. Stir in the cornflour mixture and simmer for 1 minute, until the soup thickens slightly.",
+  "Stir the soup in one direction to make a slow whirlpool. Pour the eggs in a thin stream from a height as it swirls.",
+  "Leave it untouched for 10 seconds, until the egg sets in silky ribbons, then stir gently once.",
+  "Drizzle the toasted sesame oil over, scatter the spring onions over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c86-76cd-838f-e85d444f482c"
+name = "Wonton soup"
+serves = 4
+prep_minutes = 40
+cook_minutes = 15
+ingredients = [
+  { id = "wonton-wrappers", amount = 30, unit = "piece" },
+  { id = "pork", amount = 250, unit = "g" },
+  { id = "prawns", amount = 150, unit = "g" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "chicken-stock", amount = 6, unit = "cup" },
+  { id = "bok-choy", amount = 4, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Use minced pork with some fat. Peel, devein and finely chop the prawns. Grate the ginger and finely chop the spring onions.",
+  "Mix the pork, prawns, ginger, half the spring onions, half the soy sauce, the shaoxing wine, half the toasted sesame oil, half the white pepper and salt. Stir hard in one direction for 2 minutes, until sticky.",
+  "Lay out some of the wonton wrappers and put a small spoonful of filling in the middle of each. Wet the edges, fold into triangles and press out the air. Bring the side corners together and press to seal. Repeat with the rest.",
+  "Bring the chicken stock to a simmer with the rest of the soy sauce, white pepper and salt. Halve the bok choy lengthwise and add it for 2 minutes, until just tender.",
+  "Meanwhile, bring the water to a boil. Cook the wontons in batches for 3 to 4 minutes, until they float and the filling is cooked through. Lift them into bowls.",
+  "Ladle the hot stock and bok choy over the wontons. Drizzle the rest of the toasted sesame oil over, scatter the rest of the spring onions over and serve.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c89-764f-8418-92103561610f"
+name = "Steamed pork dumplings"
+serves = 4
+prep_minutes = 45
+cook_minutes = 15
+ingredients = [
+  { id = "wonton-wrappers", amount = 30, unit = "piece" },
+  { id = "pork", amount = 300, unit = "g" },
+  { id = "chinese-cabbage", amount = 200, unit = "g" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "white-pepper", amount = 0.25, unit = "tsp" },
+  { id = "black-vinegar", amount = 2, unit = "tbsp" },
+  { id = "chilli-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the Chinese cabbage, toss it with a little salt and leave for 10 minutes. Squeeze out as much liquid as you can.",
+  "Use minced pork with some fat. Grate the ginger and finely chop the spring onions.",
+  "Mix the pork, Chinese cabbage, ginger, spring onions, half the soy sauce, the shaoxing wine, toasted sesame oil, white pepper and salt. Stir hard in one direction for 2 minutes, until sticky.",
+  "Lay out some of the round dumpling wrappers and put a spoonful of filling in the middle of each. Wet the edges, fold them in half and pleat the sides together to seal into crescents. Repeat with the rest.",
+  "Line a steamer basket with baking paper with a few holes poked in it. Steam the dumplings in batches for 8 to 10 minutes, until the wrappers are translucent and the filling is firm.",
+  "Mix the black vinegar, chilli oil and the rest of the soy sauce for dipping and serve with the hot dumplings.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c8b-7ec8-ace2-6083872a7596"
+name = "Pan-fried potstickers"
+serves = 4
+prep_minutes = 45
+cook_minutes = 20
+ingredients = [
+  { id = "wonton-wrappers", amount = 30, unit = "piece" },
+  { id = "pork", amount = 300, unit = "g" },
+  { id = "chinese-cabbage", amount = 200, unit = "g" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "black-vinegar", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Finely chop the Chinese cabbage, toss it with a little salt and leave for 10 minutes. Squeeze out as much liquid as you can.",
+  "Use minced pork with some fat. Grate the ginger and garlic and finely chop the spring onions.",
+  "Mix the pork, Chinese cabbage, ginger, garlic, spring onions, half the soy sauce, the shaoxing wine, toasted sesame oil and salt. Stir hard in one direction for 2 minutes, until sticky.",
+  "Lay out some of the round dumpling wrappers and put a spoonful of filling on each. Wet the edges, fold and pleat to seal into crescents. Press each down so it sits flat.",
+  "Heat a spoonful of the oil in a non-stick frying pan with a lid over medium-high heat. Add a batch of potstickers, flat side down, and fry for 2 minutes, until the bases are golden.",
+  "Pour in a third of the water, cover at once and steam for 5 to 6 minutes, until the water is gone and the wrappers are translucent. Uncover and fry for 1 minute more, until the bases are crisp. Repeat with the rest.",
+  "Mix the black vinegar with the rest of the soy sauce and serve with the hot potstickers, crisp side up.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c8d-7a83-a7e3-2c0d7c110e37"
+name = "Char siu pork"
+serves = 4
+prep_minutes = 15
+cook_minutes = 60
+ingredients = [
+  { id = "pork", amount = 750, unit = "g" },
+  { id = "hoisin-sauce", amount = 3, unit = "tbsp" },
+  { id = "honey", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "chinese-five-spice", amount = 0.5, unit = "tsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use pork shoulder or neck. Cut it along the grain into strips about 5 cm thick.",
+  "Grate the garlic and mix it with the hoisin sauce, half the honey, the soy sauce, dark soy sauce, shaoxing wine and five spice.",
+  "Coat the pork in most of the marinade and leave in the fridge for at least 4 hours, ideally overnight. Keep the rest of the marinade.",
+  "Heat the oven to 200°C. Pour the water into a roasting tin and set a rack over it. Lay the pork on the rack.",
+  "Roast for 25 minutes, then turn and roast for 15 minutes more.",
+  "Mix the rest of the marinade with the rest of the honey. Brush it over the pork and roast for 10 to 15 minutes, until sticky, deeply glazed and charred at the edges, and the centre reaches 70°C.",
+  "Rest for 10 minutes, then slice thinly and serve with any pan juices spooned over.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c90-7f6e-b008-450543d82631"
+name = "Dan dan noodles"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "egg-noodles", amount = 400, unit = "g" },
+  { id = "pork", amount = 200, unit = "g" },
+  { id = "tahini", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "black-vinegar", amount = 1, unit = "tbsp" },
+  { id = "chilli-oil", amount = 3, unit = "tbsp" },
+  { id = "sichuan-peppercorns", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "bok-choy", amount = 4, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Toast the sichuan peppercorns in a dry pan over low heat for 2 minutes, until fragrant. Grind to a powder. Crush the peanuts and grate the garlic.",
+  "Whisk the tahini, most of the soy sauce, the black vinegar, chilli oil, sugar, garlic and half the ground sichuan peppercorns into a sauce. Divide it between bowls.",
+  "Heat the oil in a wok over medium-high heat. Fry the minced pork for 5 minutes, breaking it up, until browned and crisp. Add the shaoxing wine and the rest of the soy sauce and fry for 1 minute, until dry.",
+  "Bring the water to a boil. Blanch the bok choy for 1 minute and lift it out. Cook the egg noodles in the same water as the packet says, until just tender.",
+  "Add a spoonful of the hot noodle water to each bowl and stir into the sauce.",
+  "Add the noodles and bok choy to the bowls and top with the pork, peanuts, sliced spring onions and the rest of the ground sichuan peppercorns. Toss at the table and serve.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c92-7cb2-8e19-527eff504a2f"
+name = "Scallion pancakes"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "spring-onions", amount = 6, unit = "piece" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Bring the water to a boil. Pour it over the all-purpose flour, stir with chopsticks into shaggy clumps, then knead for 5 minutes into a smooth, soft dough. Cover and rest for 30 minutes.",
+  "Thinly slice the spring onions. Mix a spoonful of the all-purpose flour with the toasted sesame oil into a paste.",
+  "Divide the dough into quarters. Roll a portion into a thin rectangle about 30 by 20 cm. Spread with the flour paste, sprinkle with salt and a quarter of the spring onions.",
+  "Roll it up tightly from the long side into a rope, then coil the rope into a snail and tuck the end under. Rest for 10 minutes, then roll it out gently into a round about 18 cm across.",
+  "Heat a spoonful of the oil in a frying pan over medium heat. Fry the pancake for 2 to 3 minutes per side, until golden, crisp and flaky.",
+  "Repeat with the rest of the dough. Cut into wedges and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c94-7245-8103-1e8150106026"
+name = "Tomato and egg stir-fry"
+serves = 2
+prep_minutes = 5
+cook_minutes = 8
+ingredients = [
+  { id = "tomato", amount = 3, unit = "medium" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Cut the tomatoes into wedges. Slice the spring onions. Beat the eggs with a little salt.",
+  "Heat most of the oil in a wok over medium-high heat. Pour in the eggs and stir gently for 30 to 40 seconds, until just set in large soft folds. Lift them out.",
+  "Heat the rest of the oil and stir-fry the tomatoes for 2 to 3 minutes, until they soften and release their juice.",
+  "Add the sugar, salt and the water and cook for 1 minute, until saucy.",
+  "Return the eggs and fold gently for 30 seconds, until coated.",
+  "Taste for salt and sweetness, scatter the spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"
+name = "Garlic bok choy"
+serves = 4
+prep_minutes = 5
+cook_minutes = 5
+ingredients = [
+  { id = "bok-choy", amount = 6, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "oyster-sauce", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Halve the bok choy lengthwise and rinse out any grit. Shake dry. Finely chop the garlic.",
+  "Heat the oil in a wok over medium heat. Fry the garlic for 30 seconds, until pale golden.",
+  "Raise the heat to high. Add the bok choy and toss for 1 minute.",
+  "Add the water, cover and steam for 1 to 2 minutes, until the stems are just tender.",
+  "Uncover, add the oyster sauce and soy sauce and toss for 30 seconds, until glossy. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c98-78ec-b4e3-bf80061baee4"
+name = "Dry-fried green beans"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "french-beans", amount = 400, unit = "g" },
+  { id = "pork", amount = 100, unit = "g" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "dried-red-chillies", amount = 4, unit = "piece" },
+  { id = "sichuan-peppercorns", amount = 0.5, unit = "tsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Trim the green beans and dry them completely. Finely chop the garlic and ginger and snip the dried red chillies into pieces.",
+  "Heat the oil in a wok over medium-high heat. Fry the green beans in two batches for 5 to 6 minutes, turning, until blistered, wrinkled and tender. Lift them out.",
+  "Pour off all but a spoonful of the oil. Fry the minced pork for 3 minutes, breaking it up, until browned and crisp.",
+  "Add the garlic, ginger, dried red chillies and sichuan peppercorns and stir-fry for 30 seconds, until fragrant.",
+  "Return the green beans, add the shaoxing wine, soy sauce and sugar and toss for 1 minute, until coated.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c9b-7fd2-a681-080da440ba0a"
+name = "Hong shao rou"
+serves = 4
+prep_minutes = 15
+cook_minutes = 90
+ingredients = [
+  { id = "pork-belly", amount = 750, unit = "g" },
+  { id = "rock-sugar", amount = 2, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "dark-soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "star-anise", amount = 2, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Cut the pork belly into cubes about 3 cm across. Slice the ginger and cut the spring onions into lengths.",
+  "Put the pork belly in a pan of cold tap water, bring to a boil and blanch for 3 minutes. Drain and rinse.",
+  "Heat the oil and rock sugar in a wok over low heat for 3 to 4 minutes, stirring, until the rock sugar melts and turns amber.",
+  "Add the pork belly and toss for 2 minutes, until coated in the caramel.",
+  "Add the ginger, star anise, cinnamon, spring onions, shaoxing wine, soy sauce, dark soy sauce and the water. Bring to a boil, then cover and simmer on low heat for 60 to 70 minutes, until the pork belly is very tender.",
+  "Uncover, raise the heat and simmer for 8 to 10 minutes, stirring, until the sauce reduces to a thick, glossy glaze.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c9d-704d-9c75-895ccf99a70e"
+name = "Ginger scallion fish"
+serves = 2
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "barramundi", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Use barramundi fillets with the skin on. Pat them dry and season with salt.",
+  "Cut the ginger and spring onions into very fine strips about 6 cm long.",
+  "Put the fish on a heatproof plate, scatter half the ginger over and drizzle the shaoxing wine over.",
+  "Steam over boiling water for 8 to 10 minutes, until the flesh is opaque and flakes easily. Pour off the liquid on the plate.",
+  "Warm the soy sauce, sugar and the water in a small pan for 1 minute, until the sugar dissolves. Pour it round the fish.",
+  "Pile the rest of the ginger and the spring onions on top. Heat the oil in a small pan until smoking and pour it over so it sizzles. Serve straight away.",
+]
+
+[[recipe]]
+id = "01a18c0c-0c9f-7f13-9754-6d27f3c0efaf"
+name = "Cashew chicken"
+serves = 4
+prep_minutes = 15
+cook_minutes = 12
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "cashews", amount = 0.75, unit = "cup" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "oyster-sauce", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "shaoxing-wine", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Use boneless chicken thighs. Cut them into cubes about 2 cm across and toss with half the cornflour, the shaoxing wine and salt.",
+  "Cut the bell pepper and onion into squares about 2 cm across. Chop the garlic and ginger. Whisk the oyster sauce, soy sauce, sugar, the rest of the cornflour and the water into a sauce.",
+  "Heat a spoonful of the oil in a wok over medium heat. Fry the cashews for 2 minutes, until golden. Lift them out.",
+  "Heat the rest of the oil over high heat. Stir-fry the chicken for 4 minutes, until browned and cooked through. Lift it out.",
+  "Stir-fry the garlic and ginger for 20 seconds, then the onion and bell pepper for 2 minutes, until just tender.",
+  "Return the chicken, stir the sauce and pour it in. Toss for 1 minute, until thick and glossy. Toss in the cashews, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0ca2-792e-ab38-ebe31ee3733b"
+name = "Orange chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 600, unit = "g" },
+  { id = "orange", amount = 2, unit = "medium" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "rice-vinegar", amount = 2, unit = "tbsp" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use boneless chicken thighs. Cut them into pieces about 3 cm across and toss with the egg and salt. Mix most of the cornflour with the all-purpose flour and coat the chicken in it.",
+  "Grate the zest of one orange and squeeze the juice from both. Grate the garlic and ginger. Whisk the orange juice and zest with the soy sauce, rice vinegar, sugar, chilli flakes and the rest of the cornflour.",
+  "Heat the oil for deep frying over medium-high heat. Fry the chicken in batches for 4 to 5 minutes, until golden, crisp and cooked through. Drain.",
+  "Pour off all but a spoonful of the oil. Fry the garlic and ginger for 30 seconds.",
+  "Pour in the orange sauce and simmer for 2 minutes, stirring, until thick and glossy.",
+  "Toss in the chicken until coated. Taste for salt and sweetness, scatter the sliced spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0ca4-723c-b4e4-813d4740db1c"
+name = "Congee"
+serves = 4
+prep_minutes = 10
+cook_minutes = 75
+ingredients = [
+  { id = "rice", amount = 0.75, unit = "cup" },
+  { id = "chicken", amount = 300, unit = "g" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 2, unit = "tsp" },
+  { id = "white-pepper", amount = 0.25, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 9, unit = "cup" },
+]
+steps = [
+  "Rinse the rice in several changes of water. Toss it with a little salt and a few drops of the toasted sesame oil and leave for 15 minutes.",
+  "Bring the water to a boil in a large pot with the chicken and half the ginger, sliced. Add the rice and stir.",
+  "Simmer, partly covered, on low heat for 60 to 70 minutes, stirring now and then to stop it sticking, until the grains have broken down into a thick, silky porridge.",
+  "Lift out the chicken after 20 minutes, when it is cooked through. Shred it and set it aside.",
+  "Cut the rest of the ginger into fine strips and slice the spring onions.",
+  "Season the congee with salt and the white pepper. Ladle into bowls and top with the chicken, ginger strips, spring onions, soy sauce and the rest of the toasted sesame oil. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0ca6-7663-a3b1-a9bc14bfc4c5"
+name = "Chinese steamed egg"
+serves = 2
+prep_minutes = 5
+cook_minutes = 12
+ingredients = [
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tsp" },
+  { id = "spring-onions", amount = 1, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Beat the eggs gently with a little salt, without making foam. Warm the water until just lukewarm and stir it into the eggs.",
+  "Strain the mixture through a sieve into a shallow heatproof bowl and skim off any bubbles.",
+  "Cover the bowl with a plate or foil so water can't drip onto the surface.",
+  "Steam over gently simmering water on low heat for 10 to 12 minutes, until set with a slight wobble in the centre, like a soft custard.",
+  "Drizzle the soy sauce and toasted sesame oil over, scatter the sliced spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18c0c-0ca9-74fa-beb4-cbc350dbbeda"
+name = "Sesame noodles"
+serves = 4
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "egg-noodles", amount = 400, unit = "g" },
+  { id = "tahini", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 3, unit = "tbsp" },
+  { id = "black-vinegar", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "chilli-oil", amount = 1, unit = "tbsp" },
+  { id = "toasted-sesame-oil", amount = 1, unit = "tbsp" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "cucumber", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Grate the garlic. Whisk it with the tahini, soy sauce, black vinegar, sugar, chilli oil and toasted sesame oil into a smooth sauce.",
+  "Cut the cucumber into matchsticks and slice the spring onions. Toast the sesame seeds in a dry pan for 2 minutes, until golden.",
+  "Bring the water to a boil and cook the egg noodles as the packet says, until just tender. Keep a little of the cooking water, then drain and rinse under the cold tap.",
+  "Toss the noodles with the sauce, adding a splash of the cooking water to loosen it until it coats every strand.",
+  "Taste and balance so it is salty and sour. Top with the cucumber, spring onions and sesame seeds and serve cool or at room temperature.",
+]
