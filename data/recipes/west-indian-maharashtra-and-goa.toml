@@ -43,6 +43,7 @@ name = "Batata poha"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18b58-52d9-784b-a83d-96f5a66e32ef.webp", sha256 = "5f168a64e2013560a1397fc9956c1b8dfe594e506e3f48067ce2237a0fabaa06", alt = "Batata poha with potato, peanuts, coriander and grated coconut" }
 ingredients = [
   { id = "flattened-rice", amount = 2, unit = "cup" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -177,6 +178,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 1920, note = "soak overnight, sprout a day" }
+image = { file = "01a18b58-52e2-7802-a752-2c0ea84e584c.webp", sha256 = "8977b160b2e9ad586e8c9c8b5e6a82525cd5b0c24c23f79f0ac9f16b7fe1923c", alt = "Misal pav with sev, onion and coriander, with pav and lemon wedges" }
 ingredients = [
   { id = "moth-beans", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -296,6 +298,7 @@ name = "Batata vada"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+image = { file = "01a18b58-52e9-7d25-bb8c-9e37f438b093.webp", sha256 = "345ac1497207e657a04daf209e26b3db789c64cc7e474435701398d567cc0146", alt = "Batata vada, one broken open to show the spiced potato filling" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -1114,6 +1117,7 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 90
 plan_ahead = { wait_minutes = 480, note = "marinate overnight" }
+image = { file = "01a18b58-5320-7ed0-bf3c-df2ffd3cbd68.webp", sha256 = "c44631f4f300c24ef9f7234e862e2c9666c7a796825cdd53529cf347fced29f7", alt = "Pork vindaloo in a thick red gravy" }
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "dried-red-chillies", amount = 12, unit = "piece" },

@@ -11,6 +11,7 @@ name = "Macaroni and cheese"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+image = { file = "01a15175-3c22-7b07-abf6-87ad9705c184.webp", sha256 = "49a9a64f79180cdc1c58fe33f104a9fc3fd6ca33ad82c8f105d77b59f37b68fb", alt = "Macaroni and cheese in a dark bowl" }
 ingredients = [
   { id = "pasta", amount = 300, unit = "g" },
   { id = "cheddar", amount = 200, unit = "g" },

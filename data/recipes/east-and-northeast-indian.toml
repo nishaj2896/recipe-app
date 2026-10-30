@@ -708,6 +708,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18b6e-6485-7005-bfca-5c9f8d7f87c6.webp", sha256 = "1a34e75f019fc2d4b2d8d331bd3ee102217b9625d5ae4db7b727eae0b0a7fe52", alt = "Chicken kathi roll wrapped in paper, cut in half" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -1297,6 +1298,7 @@ name = "Momos (vegetable)"
 serves = 4
 prep_minutes = 40
 cook_minutes = 15
+image = { file = "01a18b6e-64b7-7b9a-b499-16796ab1c345.webp", sha256 = "3b42a281b3b089960650f82ee18e3558532e795a65a94817208dd47993769ef7", alt = "Steamed vegetable momos, one opened to show the filling" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "cabbage", amount = 2, unit = "cup" },

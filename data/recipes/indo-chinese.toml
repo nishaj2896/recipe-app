@@ -324,6 +324,7 @@ name = "Chilli chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18ba9-fdab-7f88-b7ce-d7c9ec4c2f29.webp", sha256 = "8e8f7d6878e5d661961776439c8e8d57b542ba21603f43d60d8c3b9122f7ea0e", alt = "Chilli chicken with bell pepper, onion and spring onion" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },

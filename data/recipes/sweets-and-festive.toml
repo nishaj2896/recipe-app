@@ -132,6 +132,7 @@ name = "Coconut barfi"
 serves = 8
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bb7-ff09-7067-926b-c53771dab39b.webp", sha256 = "7020fa0b2706c385653ae32c73b5cfb46c649cba606feae769b502ec18dde3d1", alt = "Squares of coconut barfi" }
 ingredients = [
   { id = "coconut", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },

@@ -334,6 +334,7 @@ name = "Crepes"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+image = { file = "01a18c1a-e267-73ed-b982-a8f8d5e90ab5.webp", sha256 = "75d9f0770727a50d358e699fce6f2a26d5ef91b4c401cd9f62f1ce3f1af80972", alt = "Folded crepes with sugar and lemon wedges" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 2, unit = "large" },

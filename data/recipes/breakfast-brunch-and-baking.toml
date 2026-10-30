@@ -170,6 +170,7 @@ name = "Eggs Benedict"
 serves = 2
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c20-05c0-7d72-b117-e84ec404ce1f.webp", sha256 = "eba33bee19ee32e57419be3c8aa9bf55447404f82d9c53049e58062834d84e19", alt = "Eggs Benedict with ham, poached eggs, hollandaise and chives" }
 ingredients = [
   { id = "egg", amount = 6, unit = "large" },
   { id = "english-muffins", amount = 2, unit = "piece" },

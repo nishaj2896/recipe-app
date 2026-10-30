@@ -11,6 +11,7 @@ name = "Vegetable pulao"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a15175-3c0f-7496-91c1-4e90dc98797e.webp", sha256 = "0384274b90e12834ceee009e081debe14dbca05879c1189024353b9efa6d0e05", alt = "Vegetable pulao with carrot, beans, peas and whole spices" }
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -400,6 +401,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
+image = { file = "01a188ac-05af-7758-b298-8c9999377ec6.webp", sha256 = "9966aad0b0dee7204bd30c97c88fbb668b321f7192d09cdbeafd205c7c0fcc96", alt = "Two garlic naans with coriander and nigella seeds" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },

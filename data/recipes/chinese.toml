@@ -46,6 +46,7 @@ name = "Mapo tofu"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bba-785e-7793-8335-d5dc9b148364.webp", sha256 = "42a24861351b31d95da17589f6db19424817e7bb0d2df009617925ccd7263fa3", alt = "Mapo tofu with beef mince and spring onions in a chilli sauce" }
 ingredients = [
   { id = "silken-tofu", amount = 400, unit = "g" },
   { id = "beef-mince", amount = 150, unit = "g" },
@@ -77,6 +78,7 @@ name = "Sweet and sour chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18bba-7860-7ecc-b429-d4ea871652b1.webp", sha256 = "ea2ce788a20672be99dbb9ba9d65281ef29af4801d18af07471889c1e3f1a6ed", alt = "Sweet and sour chicken with pineapple, bell pepper and onion" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -144,6 +146,7 @@ name = "Beef and broccoli"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18bba-7864-7566-a0af-e8db965d1e38.webp", sha256 = "e02902539efd24bc61c8002c7cd6c54eccfb8c6357839b74bc7da290bfae8248", alt = "Beef and broccoli in a glossy sauce" }
 ingredients = [
   { id = "beef", amount = 400, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -417,6 +420,7 @@ name = "Dan dan noodles"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c0c-0c90-7f6e-b008-450543d82631.webp", sha256 = "bf47c35945181cebe383f39e11f5a695a25bfe42646f98389312fb49f624a5cc", alt = "Dan dan noodles with pork, bok choy, peanuts and spring onions" }
 ingredients = [
   { id = "egg-noodles", amount = 400, unit = "g" },
   { id = "pork", amount = 200, unit = "g" },

@@ -77,6 +77,7 @@ name = "Prawn masala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a15175-3c1e-730e-b9ba-d7d3a63e5dac.webp", sha256 = "3df8eb83def5d54a8dbc13df84a52f36fa5cf2eda85a7c06aaa9cada5cc9ed5b", alt = "Prawn masala in a dark onion and tomato masala" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -178,6 +179,7 @@ name = "Rasam"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a188ea-3c9a-72ea-8684-721851036d44.webp", sha256 = "9d4626b1ca6c1a986c2d5b29c46fd3cbecbd067229d086ae76982f56e5435baa", alt = "Rasam in a glass bowl with coriander" }
 ingredients = [
   { id = "tamarind", amount = 1, unit = "tbsp" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -411,6 +413,7 @@ name = "Avial"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+image = { file = "01a188ea-3caa-7220-9faf-98ccabab40da.webp", sha256 = "155080a4af2c602237b4fbc5aad3f86ca4463d560580db2b153386b0935e8b84", alt = "Avial with mixed vegetable batons in a coconut and curd gravy" }
 ingredients = [
   { id = "raw-banana", amount = 1, unit = "medium" },
   { id = "elephant-foot-yam", amount = 150, unit = "g" },
@@ -733,6 +736,7 @@ name = "Chettinad chicken"
 serves = 4
 prep_minutes = 30
 cook_minutes = 40
+image = { file = "01a188ea-3cc3-70fd-b2c5-17178ffc8504.webp", sha256 = "7a9a2e1b6da44a99beee8a38917978ffa58dffe4d767861239b32963e9fb4f1d", alt = "Chettinad chicken in a dark spiced gravy with curry leaves" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -835,6 +839,7 @@ name = "Kerala chicken stew"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+image = { file = "01a188ea-3cca-76f8-9ac0-90fb54d62175.webp", sha256 = "8ce8e48926c2773d895a0fe684ccf91669125beb50b495965af8755659107c80", alt = "Kerala chicken stew in white coconut gravy with potato, carrot, ginger and curry leaves" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -1669,6 +1674,7 @@ name = "Bisi bele bath"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+image = { file = "01a18b54-81c3-7ff4-9f69-c14cf198bfb0.webp", sha256 = "024fcadb6a3a09073ef6fa28ab54c777115026bb6d20b8f27bc28a7b0440eff5", alt = "Bisi bele bath with vegetables, shallots, curry leaves and fried cashews" }
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },

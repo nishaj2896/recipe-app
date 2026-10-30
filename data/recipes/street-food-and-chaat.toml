@@ -50,6 +50,7 @@ name = "Bhel puri"
 serves = 4
 prep_minutes = 20
 cook_minutes = 0
+image = { file = "01a18bb5-de62-7321-8c50-e37b9ff38d38.webp", sha256 = "3c02ccf471cd606f65b15e431c21427aedcdb4c5eb3fc937381f75c00e567c14", alt = "Bhel puri with sev, peanuts, onion and coriander" }
 ingredients = [
   { id = "puffed-rice", amount = 4, unit = "cup" },
   { id = "sev", amount = 0.5, unit = "cup" },
