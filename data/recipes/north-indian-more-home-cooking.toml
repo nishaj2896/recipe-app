@@ -22,9 +22,10 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Boil the potato in the water for 12 to 15 minutes until just tender, then drain, cool, peel and cut it into bite-sized cubes.",
-  "Heat the oil in a wide pan over medium heat. Add the cumin seeds and let them crackle and darken slightly.",
-  "Add the slit green chillies, then the turmeric and red chilli powder, and stir for a few seconds so the spices don't burn.",
-  "Tip in the potato and the salt and toss over medium-high heat for 5 minutes, until the cubes are coated and crisp at the edges.",
-  "Scatter over the coriander leaves and serve with puri or roti.",
+  "Boil the potatoes in the water for 12 to 15 minutes, until a knife goes in easily. Drain and let them cool, so they hold their shape.",
+  "Peel the potatoes and cut them into bite-sized cubes. Slit the green chillies.",
+  "Heat the oil in a wide pan over medium heat. Add the cumin seeds and let them crackle for 20 to 30 seconds, until a shade darker.",
+  "Add the green chillies, then the turmeric and red chilli powder. Stir for 5 seconds only, so the spices don't burn.",
+  "Add the potatoes and salt and toss over medium-high heat for 5 minutes, until coated and crisp at the edges.",
+  "Taste for salt, scatter the coriander leaves over and serve with puri or roti.",
 ]

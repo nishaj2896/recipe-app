@@ -26,11 +26,13 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Rinse the toor dal and cook it with half of the water and the turmeric until very soft, then mash it smooth.",
-  "Soak the tamarind in warm water from the rest of the water for 10 minutes, then squeeze out the pulp and discard the fibres.",
-  "Cut the drumsticks into finger-length pieces and the brinjal into cubes, and chop the onion and tomato. Simmer them in the tamarind water with salt for 12 minutes, until tender.",
-  "Stir in the sambar powder and the mashed dal and simmer for 8 minutes, adding the remaining water to make a pourable sambar.",
-  "Heat the oil in a small pan, add the mustard seeds and, when they pop, the curry leaves. Pour this over the sambar and serve hot.",
+  "Rinse the toor dal in several changes of water. Cook it with half the water and the turmeric for 25 minutes, or 3 whistles in a pressure cooker, until very soft. Mash it smooth.",
+  "Soak the tamarind in a little of the rest of the water, warm, for 10 minutes. Squeeze it, then strain the pulp and discard the fibres.",
+  "Cut the drumsticks into finger-length pieces and the brinjal into cubes. Chop the onion and tomato.",
+  "Put the vegetables in a pan with the tamarind pulp and salt. Simmer for 12 minutes, until the drumsticks are tender.",
+  "Stir in the sambar powder and the dal and add the rest of the water to make a pourable sambar. Simmer for 8 minutes.",
+  "Heat the oil in a small pan. Add the mustard seeds and, when they pop, the curry leaves.",
+  "Pour this over the sambar, taste for salt and serve hot.",
 ]
 
 [[recipe]]
@@ -55,11 +57,15 @@ ingredients = [
   { id = "water", amount = 0.5, unit = "cup" },
 ]
 steps = [
-  "Cut the kingfish into thick steaks and rub them with a little of the turmeric and salt. Soak the tamarind in the water and squeeze out the pulp.",
-  "Heat the coconut oil in a clay pot or heavy pan and add half of the curry leaves, then the sliced onion, ginger and garlic. Cook for 5 minutes until soft.",
-  "Add the rest of the turmeric and the red chilli powder, then the chopped tomato, and cook until it breaks down.",
-  "Pour in the tamarind water and the coconut milk, season with salt and bring to a gentle simmer. Do not let it boil hard or the coconut milk will split.",
-  "Slide in the kingfish and simmer for 10 to 12 minutes, shaking the pan rather than stirring. Finish with the remaining curry leaves and serve.",
+  "Cut the kingfish into thick steaks and rub them with a little of the turmeric and salt.",
+  "Soak the tamarind in the water for 10 minutes, then squeeze it and strain the pulp.",
+  "Thinly slice the onion, ginger and garlic, and chop the tomato.",
+  "Heat the coconut oil in a clay pot or heavy pan over medium heat. Add half the curry leaves, then the onion, ginger and garlic. Cook for 5 minutes, until soft.",
+  "Lower the heat, add the rest of the turmeric and the red chilli powder and stir for 10 seconds.",
+  "Add the tomato and cook for 4 minutes, until it breaks down.",
+  "Pour in the tamarind pulp and coconut milk and add salt. Bring to a gentle simmer; don't let it boil hard, or the coconut milk will split.",
+  "Slide in the kingfish and simmer for 10 to 12 minutes, shaking the pan rather than stirring so the fish stays whole, until it flakes easily.",
+  "Scatter the rest of the curry leaves over and serve.",
 ]
 
 [[recipe]]
@@ -80,9 +86,11 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Peel and devein the prawns, then toss them with a little of the turmeric and salt.",
-  "Heat the oil in a pan and cook the finely chopped onion for 8 minutes until golden. Add the ginger garlic paste and cook for 1 minute.",
-  "Add the rest of the turmeric, the red chilli powder and the chopped tomato and cook for 6 minutes until thick.",
+  "Peel and devein the prawns. Toss them with a little of the turmeric and salt.",
+  "Finely chop the onions and tomatoes.",
+  "Heat the oil in a pan over medium heat. Add the onions and cook for 8 minutes, until golden.",
+  "Add the ginger garlic paste and stir for 1 minute, until the raw smell goes.",
+  "Lower the heat, add the rest of the turmeric and the red chilli powder, then the tomatoes. Cook for 6 minutes, until thick and the oil separates.",
   "Add the prawns and cook for 4 to 5 minutes, just until they curl and turn pink. Overcooked prawns turn rubbery.",
-  "Stir in the garam masala and serve with roti.",
+  "Stir in the garam masala, taste for salt and serve with roti.",
 ]

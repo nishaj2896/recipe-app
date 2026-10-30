@@ -26,11 +26,15 @@ ingredients = [
   { id = "water", amount = 600, unit = "ml" },
 ]
 steps = [
-  "Rinse the basmati rice three times and soak it for 20 minutes, then drain. Dice the carrot and french beans and slice the onion.",
-  "Heat the ghee in a heavy pot and add the cumin seeds, bay leaves, green cardamom, cloves and cinnamon sticks. Fry for 30 seconds until fragrant.",
-  "Add the onion and cook for 5 minutes until golden, then add the carrot, french beans and peas and stir for 2 minutes.",
-  "Add the basmati rice and stir gently to coat it in the ghee. Pour in the water, add salt and bring to a boil.",
-  "Cover tightly and cook on the lowest heat for 12 minutes. Turn off the heat and leave it covered for 5 minutes before fluffing with a fork.",
+  "Rinse the basmati rice in 3 changes of water, until it runs almost clear. Soak it in fresh water for 20 minutes, then drain.",
+  "Peel and dice the carrot, cut the french beans into short lengths and thinly slice the onion.",
+  "Heat the ghee in a heavy pot over medium heat. Add the cumin seeds, bay leaf, green cardamom, cloves and cinnamon and stir for 30 seconds, until fragrant.",
+  "Add the onion and cook for 5 minutes, until golden.",
+  "Add the carrot, french beans and peas and stir for 2 minutes.",
+  "Add the basmati rice and stir gently for 1 minute, so every grain is coated in ghee. Don't stir hard, or the grains break.",
+  "Pour in the water, add salt and bring to a boil. Taste the water; it should be slightly saltier than soup.",
+  "Cover tightly and cook on the lowest heat for 12 minutes, without lifting the lid.",
+  "Turn off the heat and leave it covered for 5 minutes. Fluff gently with a fork and serve.",
 ]
 
 [[recipe]]
@@ -47,10 +51,12 @@ ingredients = [
   { id = "water", amount = 600, unit = "ml" },
 ]
 steps = [
-  "Rinse the basmati rice until the water runs clear, soak it for 20 minutes, then drain.",
-  "Heat the ghee in a heavy pot and add the cumin seeds. Let them crackle and turn a shade darker.",
-  "Add the basmati rice and stir gently for 1 minute, then pour in the water, add salt and bring to a boil.",
-  "Cover and cook on the lowest heat for 12 minutes, then rest for 5 minutes off the heat and fluff with a fork.",
+  "Rinse the basmati rice in 3 changes of water, until it runs almost clear. Soak it in fresh water for 20 minutes, then drain.",
+  "Heat the ghee in a heavy pot over medium heat. Add the cumin seeds and let them crackle for 20 to 30 seconds, until a shade darker.",
+  "Add the basmati rice and stir gently for 1 minute, until the grains look glossy.",
+  "Pour in the water, add salt and bring to a boil.",
+  "Cover tightly and cook on the lowest heat for 12 minutes, without lifting the lid.",
+  "Turn off the heat and leave it covered for 5 minutes. Fluff gently with a fork and serve.",
 ]
 
 [[recipe]]
@@ -73,11 +79,16 @@ ingredients = [
   { id = "water", amount = 2.5, unit = "l" },
 ]
 steps = [
-  "Marinate the chicken with the curd, ginger garlic paste, biryani masala, half of the mint and salt for at least 1 hour.",
-  "Slice the onion thinly and fry it in the ghee for 15 minutes until deep golden and crisp. Lift out the onion and keep the ghee.",
-  "Rinse and soak the basmati rice for 30 minutes. Boil it in the salted water for 5 to 6 minutes until three-quarters cooked, then drain.",
-  "Soak the saffron in a little warm water. Cook the chicken in a heavy pot with some of the ghee for 10 minutes, then layer over the basmati rice, the fried onion, the rest of the mint, the saffron and the remaining ghee.",
-  "Seal the pot with a lid and cook on the lowest heat for 25 minutes. Rest for 10 minutes, then mix gently from the sides and serve with raita.",
+  "Mix the chicken with the curd, ginger garlic paste, biryani masala, half the mint leaves and salt. Marinate for at least 1 hour.",
+  "Rinse the basmati rice in 3 changes of water and soak it for 30 minutes.",
+  "Thinly slice the onions. Fry them in the ghee in a heavy pot over medium heat for 15 minutes, stirring often, until deep golden and crisp. Lift them out and keep the ghee.",
+  "Soak the saffron in a spoonful of warm water.",
+  "Bring the water to a rolling boil with plenty of salt. Drain the basmati rice, add it and boil for 5 to 6 minutes, until a grain breaks easily but still has a firm core. Drain.",
+  "Put the chicken with its marinade in the pot with a spoonful of the ghee. Cook on medium heat for 10 minutes, stirring, until it is half cooked and the masala thickens.",
+  "Spread the basmati rice evenly over the chicken. Scatter over the fried onions and the rest of the mint, drizzle with the saffron water and the rest of the ghee.",
+  "Cover tightly, sealing the lid with foil if it isn't snug, and cook on the lowest heat for 25 minutes.",
+  "Turn off the heat and rest for 10 minutes without opening.",
+  "Mix gently from the sides with a wide spoon, bringing up the chicken, and serve with raita.",
 ]
 
 [[recipe]]
@@ -93,10 +104,14 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Mix the whole wheat flour with the salt and a spoon of the ghee, then add the water a little at a time and knead to a soft dough. Cover and rest for 20 minutes.",
-  "Divide into balls. Roll one into a round, brush it with ghee, fold it in half and in half again into a triangle, and roll it out gently into a thin triangle.",
-  "Cook on a hot griddle for 1 minute until spots appear, flip, brush with ghee and press with a spatula until it puffs. Flip again, brush and cook until golden and flaky on both sides.",
-  "Repeat with the rest of the dough and keep the cooked ones wrapped in a cloth.",
+  "Mix the whole wheat flour with the salt and a spoonful of the ghee. Add the water a little at a time and knead for 5 minutes, into a soft, smooth dough. Cover and rest for 20 minutes.",
+  "Divide the dough into golf-ball-sized balls. Roll one into a 12 cm round.",
+  "Brush the round with ghee, fold it in half, brush again and fold in half again into a triangle.",
+  "Roll the triangle out gently, dusting with flour, until it is thin and about 18 cm across.",
+  "Put it on a hot griddle over medium heat and cook for 1 minute, until small bubbles and pale spots appear.",
+  "Flip, brush with ghee and press with a spatula; the layers should puff.",
+  "Flip again, brush and cook for 1 more minute, until both sides are golden and flaky.",
+  "Keep the cooked parathas wrapped in a cloth while you make the rest.",
 ]
 
 [[recipe]]
@@ -121,10 +136,14 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with some of the salt and the water into a soft dough and rest it for 20 minutes.",
-  "Boil, peel and mash the potato until there are no lumps. Mix in the chopped green chillies, grated ginger, coriander leaves, roasted and crushed cumin seeds, garam masala, dry mango powder, red chilli powder and salt.",
-  "Roll a ball of dough into a small round, put a ball of filling in the centre, gather the edges over it and pinch to seal. Flatten and roll it gently into a round, dusting with flour so the filling stays inside.",
-  "Cook on a hot griddle until spots appear, flip, and cook with ghee on both sides, pressing the edges, until crisp and golden.",
+  "Mix the whole wheat flour with a little salt and add the water gradually, kneading into a soft dough. Cover and rest for 20 minutes.",
+  "Boil the potatoes until tender. Peel and mash them until completely smooth, with no lumps that could tear the dough.",
+  "Dry roast the cumin seeds for 30 seconds and crush them. Finely chop the green chillies and grate the ginger.",
+  "Mix the potatoes with the cumin, green chillies, ginger, coriander leaves, garam masala, dry mango powder, red chilli powder and salt. Divide the dough into golf-ball-sized balls.",
+  "Roll a ball of dough into a 10 cm round. Put a ball of filling in the centre, gather the edges over it and pinch to seal.",
+  "Flatten it, dust with flour and roll gently into an 18 cm round, so the filling stays inside.",
+  "Cook on a hot griddle over medium heat for 1 minute, until pale spots appear, then flip.",
+  "Spread ghee over the top, flip and cook, pressing the edges with a spatula, until both sides are crisp and golden brown.",
   "Serve hot with a little butter on top.",
 ]
 
@@ -148,11 +167,14 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with the water into a soft dough and rest it for 20 minutes.",
-  "Grate the cauliflower finely, add salt and leave for 10 minutes, then squeeze out all the water. A dry filling keeps the bread from tearing.",
-  "Mix the cauliflower with the chopped green chillies, grated ginger, coriander leaves, carom seeds, garam masala and red chilli powder.",
-  "Stuff a ball of dough with the filling, seal and roll it out gently.",
-  "Cook on a hot griddle with ghee on both sides until crisp and golden brown.",
+  "Knead the whole wheat flour with the water into a soft dough. Cover and rest for 20 minutes.",
+  "Grate the cauliflower finely. Mix in a little salt and leave for 10 minutes, then squeeze out all the liquid. A dry filling keeps the paratha from tearing.",
+  "Finely chop the green chillies and grate the ginger.",
+  "Mix the cauliflower with the green chillies, ginger, coriander leaves, carom seeds, garam masala and red chilli powder. Add salt only now, just before stuffing.",
+  "Roll a ball of dough into a 10 cm round, put some filling in the centre, gather the edges and pinch to seal.",
+  "Flatten and roll it gently into an 18 cm round.",
+  "Cook on a hot griddle over medium heat for 1 minute, then flip.",
+  "Spread ghee on both sides and cook, pressing with a spatula, until crisp and golden brown. Serve hot.",
 ]
 
 [[recipe]]
@@ -174,10 +196,13 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with the water into a soft dough and rest it for 20 minutes.",
-  "Grate the paneer and mix it with the very finely chopped onion, green chillies and coriander leaves, the chaat masala, red chilli powder and salt.",
-  "Stuff a ball of dough with the filling, seal and roll it out gently into a round.",
-  "Cook on a hot griddle with ghee on both sides until golden spots cover the surface.",
+  "Knead the whole wheat flour with the water into a soft dough. Cover and rest for 20 minutes.",
+  "Grate the paneer. Very finely chop the onion, green chillies and coriander leaves.",
+  "Mix the paneer with the onion, green chillies, coriander leaves, chaat masala, red chilli powder and salt.",
+  "Roll a ball of dough into a 10 cm round, put some filling in the centre, gather the edges and pinch to seal.",
+  "Flatten and roll it gently into an 18 cm round.",
+  "Cook on a hot griddle over medium heat for 1 minute, then flip.",
+  "Spread ghee on both sides and cook until golden spots cover the surface. Serve hot.",
 ]
 
 [[recipe]]
@@ -200,10 +225,12 @@ ingredients = [
   { id = "water", amount = 0.5, unit = "cup" },
 ]
 steps = [
-  "Pick, wash and finely chop the fenugreek leaves.",
-  "Mix them into the whole wheat flour with the curd, chopped green chillies, grated ginger, carom seeds, turmeric, red chilli powder and salt, and knead with the water into a soft dough. Rest for 15 minutes.",
-  "Roll balls of dough into thin rounds.",
-  "Cook on a hot griddle with ghee on both sides until golden spots appear.",
+  "Pick the fenugreek leaves off their stems, wash them well and chop finely. Finely chop the green chillies and grate the ginger.",
+  "Mix the whole wheat flour with the fenugreek leaves, curd, green chillies, ginger, carom seeds, turmeric, red chilli powder and salt.",
+  "Add the water a little at a time and knead into a soft dough. Cover and rest for 15 minutes.",
+  "Divide the dough into golf-ball-sized balls and roll each into a thin round, dusting with flour.",
+  "Cook on a hot griddle over medium heat for 1 minute, until pale spots appear, then flip.",
+  "Spread ghee on both sides and cook until golden spots appear. Serve hot.",
 ]
 
 [[recipe]]
@@ -225,11 +252,14 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with the water into a soft dough and rest it for 20 minutes.",
-  "Peel and grate the radish, add salt and leave it for 10 minutes, then squeeze it dry. Use the juice in place of some of the water if you knead a second batch.",
-  "Mix the radish with the chopped green chillies, grated ginger, coriander leaves, carom seeds and red chilli powder. Add it only when you are ready to roll, or it will weep.",
-  "Stuff a ball of dough with the filling, seal and roll it out gently.",
-  "Cook on a hot griddle with ghee on both sides until crisp.",
+  "Knead the whole wheat flour with the water into a soft dough. Cover and rest for 20 minutes.",
+  "Peel and grate the radish. Mix in a little salt and leave for 10 minutes, then squeeze out all the juice.",
+  "Finely chop the green chillies and grate the ginger.",
+  "Just before rolling, mix the radish with the green chillies, ginger, coriander leaves, carom seeds and red chilli powder. If it sits, it weeps and the paratha tears.",
+  "Roll a ball of dough into a 10 cm round, put some filling in the centre, gather the edges and pinch to seal.",
+  "Flatten and roll it gently into an 18 cm round.",
+  "Cook on a hot griddle over medium heat for 1 minute, then flip.",
+  "Spread ghee on both sides and cook until crisp and golden. Serve hot.",
 ]
 
 [[recipe]]
@@ -245,11 +275,14 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with the salt and water into a soft dough and rest it for 20 minutes.",
-  "Roll a ball into a large thin round, spread it with ghee and dust it lightly with more of the whole wheat flour.",
-  "Pleat it like a paper fan, then coil the pleated strip into a spiral and tuck the end under. Rest for 5 minutes.",
-  "Roll the spiral gently into a round so the layers stay intact.",
-  "Cook on a hot griddle with ghee on both sides until crisp, then crush it lightly between your palms to open the layers.",
+  "Knead the whole wheat flour with the salt and water into a soft dough. Cover and rest for 20 minutes.",
+  "Roll a ball of dough into a large, very thin round.",
+  "Spread it with ghee and dust lightly with more of the whole wheat flour.",
+  "Pleat it back and forth like a paper fan, then coil the pleated strip into a tight spiral and tuck the end underneath. Rest for 5 minutes.",
+  "Roll the spiral gently into a 16 cm round, pressing lightly so the layers stay intact.",
+  "Cook on a hot griddle over medium heat for 1 minute, then flip and spread with ghee.",
+  "Cook both sides with ghee until crisp and golden.",
+  "Take it off the griddle and crush it lightly between your palms to open up the layers. Serve hot.",
 ]
 
 [[recipe]]
@@ -265,10 +298,12 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with the salt and water into a soft, smooth dough. Cover and rest for 30 minutes.",
-  "Divide into small balls and roll each into a thin, even round, dusting with flour as needed.",
-  "Cook on a hot griddle for 30 seconds until small bubbles appear, flip and cook for 30 seconds more.",
-  "Lift it with tongs and hold it directly over an open flame; it should puff up like a balloon in a few seconds. Brush with ghee if you like.",
+  "Knead the whole wheat flour with the salt and water for 5 minutes into a soft, smooth dough. Cover and rest for 30 minutes.",
+  "Divide the dough into small balls the size of a large marble. Roll each into a thin, even round about 15 cm across, dusting with flour.",
+  "Put a round on a hot griddle over medium heat. Cook for 30 seconds, until small bubbles appear.",
+  "Flip and cook for 30 seconds more, until light brown spots appear underneath.",
+  "Lift it with tongs and hold it directly over an open flame, first-cooked side down. It should puff like a balloon within seconds.",
+  "Brush with the ghee if you like and keep wrapped in a cloth while you make the rest.",
 ]
 
 [[recipe]]
@@ -286,10 +321,13 @@ ingredients = [
   { id = "water", amount = 0.75, unit = "cup" },
 ]
 steps = [
-  "Knead the whole wheat flour with the curd, baking soda, salt and water into a soft dough. Rest for 30 minutes.",
-  "Roll balls into rounds slightly thicker than a chapati.",
-  "Wet the back of each round with water and stick it, wet side down, to a very hot heavy iron griddle turned upside down over the flame, or to the wall of a tandoor.",
-  "Cook for 1 minute, then turn the griddle over the flame so the top side chars and puffs. Pry it off and brush with butter.",
+  "Knead the whole wheat flour with the curd, baking soda, salt and water into a soft dough. Cover and rest for 30 minutes.",
+  "Divide the dough into golf-ball-sized balls and roll each into a round slightly thicker than a chapati.",
+  "Heat a heavy iron griddle over high heat until very hot.",
+  "Wet the back of a roti with your fingers dipped in water and press it, wet side down, onto the griddle. It should stick.",
+  "Cook for 1 minute, until bubbles form on top.",
+  "Turn the griddle upside down over the flame, with the roti still stuck to it, and cook for 30 to 60 seconds, until the top chars in spots and puffs.",
+  "Pry the roti off with a spatula, brush with the butter and serve hot.",
 ]
 
 [[recipe]]
@@ -313,10 +351,12 @@ ingredients = [
   { id = "water", amount = 0.5, unit = "cup" },
 ]
 steps = [
-  "Mix the gram flour and whole wheat flour with the finely chopped onion, green chillies and coriander leaves, the carom seeds, crushed dried fenugreek leaves, turmeric, red chilli powder, salt and a spoon of the ghee.",
-  "Knead with the water into a firm dough and rest for 15 minutes.",
-  "Roll balls into thick rounds, pressing them between dampened palms if they crack.",
-  "Cook on a hot griddle with ghee on both sides until golden spots appear.",
+  "Finely chop the onion, green chillies and coriander leaves. Crush the dried fenugreek leaves between your palms.",
+  "Mix the gram flour and whole wheat flour with the onion, green chillies, coriander leaves, carom seeds, dried fenugreek leaves, turmeric, red chilli powder, salt and a spoonful of the ghee.",
+  "Add the water gradually and knead into a firm dough. Cover and rest for 15 minutes.",
+  "Divide the dough into golf-ball-sized balls and roll each into a thick round. If the edges crack, press them together with damp fingers.",
+  "Cook on a hot griddle over medium heat for 1 to 2 minutes, then flip.",
+  "Spread ghee on both sides and cook until golden spots appear. Serve hot.",
 ]
 
 [[recipe]]
@@ -337,11 +377,13 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt. Add the curd, oil and enough of the warm milk to knead a very soft, slightly sticky dough.",
+  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt.",
+  "Add the curd and oil, then enough of the warm milk to knead a very soft, slightly sticky dough. Knead for 5 minutes.",
   "Cover and rest in a warm place for 2 hours.",
-  "Divide into balls, roll each into a long oval and brush the back with a little of the milk.",
-  "Stick the damp side onto a hot iron griddle and cook until bubbles appear, then turn the griddle upside down over the flame to char the top. Or bake on a hot tray at 260 °C for 3 to 4 minutes.",
-  "Brush generously with the melted butter while hot.",
+  "Divide the dough into golf-ball-sized balls and roll each into a long oval about 5 mm thick. Brush the back with a little of the milk.",
+  "Heat a heavy iron griddle over high heat. Press one oval, damp side down, onto the griddle and cook for 1 minute, until bubbles appear on top.",
+  "Turn the griddle upside down over the flame for 30 to 60 seconds, until the top chars in spots. Or bake them on a hot tray at 260 °C for 3 to 4 minutes.",
+  "Brush generously with the melted butter while hot and serve.",
 ]
 
 [[recipe]]
@@ -364,11 +406,14 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt. Add the curd and enough of the warm milk to knead a soft dough, and rest it for 2 hours.",
+  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt.",
+  "Add the curd and enough of the warm milk to knead a soft, slightly sticky dough. Cover and rest in a warm place for 2 hours.",
   "Finely chop the garlic and coriander leaves.",
-  "Roll each ball into an oval, press some garlic, coriander leaves and nigella seeds into the top, and brush the back with a little of the milk.",
-  "Cook the damp side on a hot iron griddle, then turn it over the flame to char the top.",
-  "Brush with the melted butter while hot.",
+  "Divide the dough into golf-ball-sized balls and roll each into a long oval. Press some garlic, coriander leaves and nigella seeds into the top.",
+  "Brush the back with a little of the milk.",
+  "Heat a heavy iron griddle over high heat. Press one oval, damp side down, onto the griddle and cook for 1 minute, until bubbles appear.",
+  "Turn the griddle upside down over the flame for 30 to 60 seconds, until the garlic turns golden and the top chars in spots.",
+  "Brush with the melted butter while hot and serve.",
 ]
 
 [[recipe]]
@@ -390,9 +435,12 @@ ingredients = [
 ]
 steps = [
   "Soak the semolina in the water for 10 minutes.",
-  "Mix the all-purpose flour with the semolina, baking soda, baking powder, sugar and salt, add the curd and a spoon of the oil and knead to a soft, smooth dough. Cover and rest for 2 hours.",
-  "Roll balls into large ovals about 3 mm thick, without dusting too much.",
-  "Slide one at a time into very hot oil and press gently with a slotted spoon so it puffs up. Fry for about 30 seconds on each side until pale golden. Serve at once.",
+  "Mix the all-purpose flour with the semolina, baking soda, baking powder, sugar and salt.",
+  "Add the curd and a spoonful of the oil and knead for 5 minutes into a soft, smooth dough. Cover and rest for 2 hours.",
+  "Divide the dough into golf-ball-sized balls and roll each into an oval about 3 mm thick, using a few drops of oil rather than dry flour.",
+  "Heat the oil for deep frying over high heat. A small piece of dough should rise to the top at once.",
+  "Slide in one bhatura at a time and press gently with a slotted spoon until it puffs up fully.",
+  "Fry for about 30 seconds on each side, until pale golden. Drain and serve at once.",
 ]
 
 [[recipe]]
@@ -409,9 +457,12 @@ ingredients = [
   { id = "water", amount = 0.5, unit = "cup" },
 ]
 steps = [
-  "Mix the whole wheat flour with the semolina, salt and a spoon of the oil, and knead with the water into a stiff dough. Rest for 15 minutes.",
-  "Divide into small balls and roll each into a round about 10 cm across, using a few drops of oil instead of dry flour.",
-  "Slide each round into the very hot oil and press it gently with a slotted spoon until it puffs. Flip and fry for a few seconds until golden.",
+  "Mix the whole wheat flour with the semolina, salt and a spoonful of the oil.",
+  "Add the water gradually and knead into a stiff dough. Cover and rest for 15 minutes.",
+  "Divide the dough into small balls the size of a large marble and roll each into a round about 10 cm across, using a few drops of oil rather than dry flour.",
+  "Heat the oil for deep frying over high heat. A small piece of dough should rise to the top at once.",
+  "Slide in one puri at a time and press it gently with a slotted spoon until it puffs.",
+  "Flip and fry for a few seconds more, until golden.",
   "Drain on paper and serve hot.",
 ]
 
@@ -434,9 +485,11 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt. Add the curd and enough of the milk to knead a soft dough. Rest for 2 hours.",
-  "Roll balls into rounds about 5 mm thick and press the nigella seeds and chopped coriander leaves into the top.",
-  "Cook on a hot griddle until golden spots appear on both sides and the kulcha is cooked through.",
+  "Mix the all-purpose flour with the baking powder, baking soda, sugar and salt.",
+  "Add the curd and enough of the milk to knead a soft dough. Cover and rest in a warm place for 2 hours.",
+  "Divide the dough into golf-ball-sized balls and roll each into a round about 5 mm thick.",
+  "Chop the coriander leaves and press them and the nigella seeds into the top of each kulcha.",
+  "Cook on a hot griddle over medium heat for 1 to 2 minutes per side, until golden spots appear and it is cooked through.",
   "Brush with the butter and serve warm.",
 ]
 
@@ -461,9 +514,12 @@ ingredients = [
   { id = "water", amount = 2.75, unit = "cup" },
 ]
 steps = [
-  "Rinse the basmati rice until the water runs clear and soak it for 20 minutes. Drain.",
-  "Heat the ghee, add the cumin seeds, bay leaves, cardamom, cloves and cinnamon, then the sliced onion and slit green chillies, and cook until the onion is light golden.",
-  "Add the peas and the basmati rice and stir gently for 2 minutes so the grains are coated.",
-  "Pour in the water, add salt and bring to a boil. Cover tightly and cook on the lowest heat for 12 minutes.",
-  "Turn off the heat and rest for 10 minutes before fluffing with a fork.",
+  "Rinse the basmati rice in 3 changes of water, until it runs almost clear. Soak it in fresh water for 20 minutes, then drain.",
+  "Thinly slice the onion and slit the green chilli.",
+  "Heat the ghee in a heavy pot over medium heat. Add the cumin seeds, bay leaves, green cardamom, cloves and cinnamon and stir for 30 seconds.",
+  "Add the onion and green chilli and cook for 5 minutes, until the onion is light golden.",
+  "Add the peas and the basmati rice and stir gently for 2 minutes, so every grain is coated.",
+  "Pour in the water, add salt and bring to a boil.",
+  "Cover tightly and cook on the lowest heat for 12 minutes, without lifting the lid.",
+  "Turn off the heat and rest for 10 minutes. Fluff gently with a fork and serve.",
 ]

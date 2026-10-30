@@ -20,7 +20,9 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Halve the avocado, remove the stone and scoop the flesh into a bowl. Mash it with a fork, leaving some texture.",
-  "Finely chop the onion, tomato, green chillies and coriander leaves and stir them in.",
-  "Squeeze in the juice of the lime, season with salt and taste. Serve straight away with tortilla chips.",
+  "Halve the avocados, remove the stones and scoop the flesh into a bowl.",
+  "Mash with a fork, leaving some chunks for texture.",
+  "Finely chop the onion, tomato, green chilli and coriander leaves and stir them in.",
+  "Squeeze in the lime juice and season with salt.",
+  "Taste, adjust the lime and salt, and serve straight away with tortilla chips.",
 ]

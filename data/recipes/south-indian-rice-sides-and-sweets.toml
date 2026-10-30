@@ -23,11 +23,13 @@ ingredients = [
   { id = "water", amount = 500, unit = "ml" },
 ]
 steps = [
-  "Cook the rice in the water until tender, then spread it out on a plate to cool so the grains stay separate.",
-  "Heat the oil in a wide pan and fry the peanuts until golden. Add the mustard seeds and, when they pop, the curry leaves and slit green chillies.",
-  "Turn the heat down, add the turmeric and stir for a few seconds.",
-  "Add the rice and salt and toss gently until every grain is yellow.",
-  "Squeeze over the juice of the lemon, toss again and serve warm or at room temperature.",
+  "Rinse the rice and cook it in the water until tender. Spread it on a plate and let it cool, so the grains stay separate.",
+  "Slit the green chillies.",
+  "Heat the oil in a wide pan over medium heat. Fry the peanuts for 2 minutes, until golden and crunchy.",
+  "Add the mustard seeds and wait until they pop. Add the curry leaves and green chillies.",
+  "Lower the heat, add the turmeric and stir for 5 seconds.",
+  "Add the rice and salt and toss gently, until every grain is evenly yellow.",
+  "Turn off the heat, squeeze over the lemon juice and toss again. Serve warm or at room temperature.",
 ]
 
 [[recipe]]
@@ -49,10 +51,12 @@ ingredients = [
   { id = "water", amount = 600, unit = "ml" },
 ]
 steps = [
-  "Cook the rice in the water until very soft, then mash it lightly and let it cool to room temperature.",
-  "Stir in the curd, the milk and salt until creamy. The milk keeps it from turning sour as it sits.",
-  "Heat the oil in a small pan, add the mustard seeds and, when they pop, the curry leaves, grated ginger and chopped green chillies.",
-  "Pour this tempering over the curd rice, mix well and serve cool.",
+  "Rinse the rice and cook it in the water until very soft.",
+  "Mash it lightly with the back of a spoon and let it cool to room temperature. Hot rice would curdle the curd.",
+  "Stir in the curd, milk and salt until creamy. The milk keeps it from turning sour as it sits.",
+  "Grate the ginger and finely chop the green chilli.",
+  "Heat the oil in a small pan. Add the mustard seeds and wait until they pop, then add the curry leaves, ginger and green chilli and stir for 10 seconds.",
+  "Pour this over the curd rice, mix well and serve cool.",
 ]
 
 [[recipe]]
@@ -72,9 +76,13 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Heat half of the oil in a pan and fry the dried red chillies for 30 seconds. Add the chopped onion and garlic and cook for 6 minutes until soft and golden.",
-  "Add the chopped tomato and salt and cook for 6 minutes until mushy. Let it cool, then blend to a coarse paste.",
-  "Heat the rest of the oil, add the mustard seeds and, when they pop, the curry leaves. Pour this over the chutney and serve with idli or dosa.",
+  "Roughly chop the onions, tomatoes and garlic.",
+  "Heat half the oil in a pan over medium heat. Fry the dried red chillies for 30 seconds, until they darken slightly.",
+  "Add the onions and garlic and cook for 6 minutes, until soft and golden.",
+  "Add the tomatoes and salt and cook for 6 minutes, until mushy and the oil starts to separate.",
+  "Let it cool, then blend to a coarse paste.",
+  "Heat the rest of the oil in a small pan. Add the mustard seeds and, when they pop, the curry leaves.",
+  "Pour this over the chutney and serve with idli or dosa.",
 ]
 
 [[recipe]]
@@ -91,7 +99,9 @@ ingredients = [
   { id = "water", amount = 0.5, unit = "cup" },
 ]
 steps = [
-  "Soak the dried red chillies in the hot water for 10 minutes, then drain.",
-  "Heat the oil in a small pan and fry the peeled garlic for 3 to 4 minutes until golden.",
-  "Grind the garlic and dried red chillies with salt to a coarse paste. It keeps in the fridge for a week.",
+  "Heat the water until steaming. Soak the dried red chillies in it for 10 minutes, then drain.",
+  "Peel the garlic.",
+  "Heat the oil in a small pan over medium-low heat. Fry the garlic for 3 to 4 minutes, stirring, until golden all over.",
+  "Grind the garlic and dried red chillies with salt to a coarse paste.",
+  "Taste for salt. It keeps in the fridge for a week.",
 ]

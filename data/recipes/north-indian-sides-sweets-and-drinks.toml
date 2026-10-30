@@ -18,9 +18,11 @@ ingredients = [
 ]
 steps = [
   "Rinse the rice and soak it for 15 minutes, then drain.",
-  "Bring the milk to a boil in a heavy pan, add the rice and simmer on low heat for 30 to 35 minutes, stirring often so it doesn't catch, until the rice is soft and the milk has thickened.",
-  "Stir in the sugar and the crushed seeds of the green cardamom and simmer for 5 minutes more.",
-  "Serve warm, or chill it for a few hours and serve cold.",
+  "Bring the milk to a boil in a heavy pan over medium heat, stirring so it doesn't catch.",
+  "Add the rice and lower the heat. Simmer for 30 to 35 minutes, stirring every few minutes and scraping the bottom, until the rice is very soft and the milk has thickened and turned creamy.",
+  "Crush the green cardamom and take out the seeds. Grind them to a powder.",
+  "Stir in the sugar and cardamom and simmer for 5 minutes, until the sugar dissolves.",
+  "Serve warm, or chill for a few hours and serve cold. It thickens as it cools.",
 ]
 
 [[recipe]]
@@ -37,9 +39,11 @@ ingredients = [
   { id = "coriander-leaves", amount = 1, unit = "tbsp" },
 ]
 steps = [
-  "Grate the cucumber and squeeze it well in your hands to drain it.",
-  "Whisk the curd until smooth, then stir in the cucumber, cumin powder and salt.",
-  "Scatter with chopped coriander leaves and chill until you serve it.",
+  "Grate the cucumber and squeeze it well in your hands to drain off the liquid.",
+  "Whisk the curd until smooth.",
+  "Stir in the cucumber, cumin powder and salt.",
+  "Chop the coriander leaves and scatter them over.",
+  "Chill until you serve it.",
 ]
 
 [[recipe]]
@@ -57,9 +61,11 @@ ingredients = [
   { id = "water", amount = 1, unit = "cup" },
 ]
 steps = [
-  "Bring the water to a boil with the crushed ginger and green cardamom and simmer for 2 minutes.",
-  "Add the black tea and simmer for 1 minute until the colour deepens.",
-  "Pour in the milk and sugar and bring it back to a rolling boil, letting it rise twice.",
+  "Crush the ginger and green cardamom lightly.",
+  "Bring the water to a boil in a small pan with the ginger and cardamom, and simmer for 2 minutes.",
+  "Add the black tea and simmer for 1 minute, until the colour deepens to a dark amber.",
+  "Pour in the milk and add the sugar.",
+  "Bring it back to a rolling boil and let it rise up the pan, then lower the heat. Let it rise once more.",
   "Strain into cups and serve hot.",
 ]
 
@@ -76,9 +82,10 @@ ingredients = [
   { id = "water", amount = 1, unit = "l" },
 ]
 steps = [
-  "Squeeze the juice of the lemon into a jug.",
-  "Stir in the sugar and salt until dissolved, then pour in the chilled water.",
-  "Taste and balance the sweet and sour, then serve over ice.",
+  "Roll the lemons on the counter, pressing firmly, so they give more juice. Squeeze them into a jug.",
+  "Stir in the sugar and salt until fully dissolved.",
+  "Pour in the chilled water and stir.",
+  "Taste and balance the sweet, sour and salty, then serve over ice.",
 ]
 
 [[recipe]]
@@ -96,7 +103,8 @@ ingredients = [
   { id = "coriander-leaves", amount = 2, unit = "tbsp" },
 ]
 steps = [
-  "Finely dice the tomato and onion and chop the green chillies and coriander leaves.",
-  "Toss everything in a bowl with salt and the juice of the lemon.",
+  "Finely dice the tomatoes and onion. Finely chop the green chilli and coriander leaves.",
+  "Put everything in a bowl.",
+  "Just before serving, add the salt and the lemon juice and toss.",
   "Serve straight away, before the salt draws out too much juice.",
 ]

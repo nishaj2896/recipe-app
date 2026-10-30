@@ -21,10 +21,13 @@ ingredients = [
   { id = "salt", to_taste = true },
 ]
 steps = [
-  "Finely chop the onion, tomato, green chillies and coriander leaves.",
-  "Beat the egg in a bowl with the red chilli powder and salt, then stir in the chopped vegetables and herbs.",
-  "Heat the oil in a frying pan over medium heat and pour in half of the mixture, tilting the pan to spread it.",
-  "Cook for 2 minutes until set underneath, flip and cook for 1 minute more. Repeat with the rest and serve with toast.",
+  "Finely chop the onion, tomato, green chilli and coriander leaves.",
+  "Beat the eggs in a bowl with the red chilli powder and salt until frothy.",
+  "Stir in the chopped vegetables and herbs.",
+  "Heat half the oil in a frying pan over medium heat. Pour in half the egg mixture and tilt the pan to spread it evenly.",
+  "Cook for 2 minutes, until the underside is golden and the top is almost set.",
+  "Flip and cook for 1 minute more.",
+  "Repeat with the rest of the oil and egg mixture. Serve hot with toast.",
 ]
 
 [[recipe]]
@@ -44,8 +47,11 @@ ingredients = [
   { id = "coriander-leaves", amount = 1, unit = "tbsp" },
 ]
 steps = [
-  "Finely chop the onion, tomato and green chillies.",
-  "Melt the butter in a pan and cook the onion and green chillies for 3 minutes until soft. Add the tomato, turmeric and salt and cook for 2 minutes.",
-  "Beat the egg and pour it into the pan. Stir slowly over low heat for 2 to 3 minutes until softly scrambled.",
-  "Take it off the heat while still moist, scatter with coriander leaves and serve with toast.",
+  "Finely chop the onion, tomato and green chilli.",
+  "Melt the butter in a pan over medium heat. Add the onion and green chilli and cook for 3 minutes, until soft.",
+  "Add the tomato, turmeric and salt and cook for 2 minutes, until the tomato softens.",
+  "Beat the eggs and pour them into the pan.",
+  "Lower the heat and stir slowly for 2 to 3 minutes, until the eggs set into soft, creamy lumps.",
+  "Take the pan off the heat while the eggs still look slightly moist; they keep cooking.",
+  "Scatter the coriander leaves over and serve with toast.",
 ]

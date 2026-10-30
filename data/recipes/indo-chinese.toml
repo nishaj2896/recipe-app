@@ -25,11 +25,14 @@ ingredients = [
   { id = "water", amount = 2, unit = "l" },
 ]
 steps = [
-  "Boil the hakka noodles in the water until just cooked, drain, rinse under cold water and toss with a little of the oil so they don't stick.",
-  "Shred the cabbage, cut the carrot and bell pepper into thin strips, and slice the spring onions, keeping the greens apart.",
-  "Heat the rest of the oil in a wok over the highest heat. Stir-fry the chopped garlic and ginger for 30 seconds, then the white parts of the spring onions, the cabbage, carrot and bell pepper for 2 minutes.",
-  "Add the hakka noodles, the soy sauce, the white vinegar and salt, and toss over high heat for 2 minutes.",
-  "Scatter over the green tops of the spring onions and serve hot.",
+  "Bring the water to a boil. Cook the hakka noodles until just tender, about 1 minute less than the packet says.",
+  "Drain, rinse under cold water and toss with a spoonful of the oil so they don't stick.",
+  "Shred the cabbage. Cut the carrot and bell pepper into thin strips. Slice the spring onions, keeping the white and green parts apart. Finely chop the garlic and ginger.",
+  "Heat the rest of the oil in a wok over the highest heat until it shimmers.",
+  "Add the garlic and ginger and stir-fry for 30 seconds, until fragrant.",
+  "Add the white parts of the spring onions, the cabbage, carrot and bell pepper and stir-fry for 2 minutes, until just tender but still crunchy.",
+  "Add the hakka noodles, soy sauce, white vinegar and salt and toss over high heat for 2 minutes, until hot and evenly coloured.",
+  "Scatter the green tops of the spring onions over and serve hot.",
 ]
 
 [[recipe]]
@@ -49,9 +52,11 @@ ingredients = [
   { id = "water", amount = 500, unit = "ml" },
 ]
 steps = [
-  "Cook the rice in the water, then spread it out and let it cool completely, ideally overnight in the fridge.",
-  "Heat half of the oil in a wok over high heat. Beat the egg, pour it in and scramble until just set, then lift it out.",
-  "Heat the rest of the oil and stir-fry the chopped garlic and the white parts of the spring onions for 30 seconds.",
-  "Add the rice and stir-fry for 3 minutes, pressing it against the wok, then add the soy sauce, salt and the egg.",
+  "Cook the rice in the water until just tender. Spread it on a tray and let it cool completely, ideally overnight in the fridge. Warm rice turns mushy.",
+  "Finely chop the garlic. Slice the spring onions, keeping the white and green parts apart.",
+  "Heat half the oil in a wok over high heat. Beat the eggs, pour them in and scramble for 1 minute, until just set. Lift them out.",
+  "Heat the rest of the oil. Stir-fry the garlic and the white parts of the spring onions for 30 seconds.",
+  "Add the rice and stir-fry for 3 minutes, pressing it against the wok to break up clumps, until hot and lightly toasted.",
+  "Add the soy sauce, salt and eggs and toss for 1 minute.",
   "Toss through the green tops of the spring onions and serve hot.",
 ]
