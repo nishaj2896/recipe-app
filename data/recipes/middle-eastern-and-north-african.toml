@@ -11,6 +11,7 @@ name = "Shakshuka"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a15175-3c2d-7620-b329-81eec06563fc.webp", sha256 = "0e685601bb1564fa0625e4fb45345442dc462e52b1e0b6d03c26275b4e325546", alt = "Shakshuka with three eggs in a cast-iron pan, topped with feta and herbs" }
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -236,6 +237,7 @@ name = "Lamb kofta"
 serves = 4
 prep_minutes = 20
 cook_minutes = 12
+image = { file = "01a18c16-b207-7c33-9307-ea008a44cf84.webp", sha256 = "12aecf7ef57b78493e787f410781977b579f0e36a9e1bc7ae2f62410eea93ef3", alt = "Grilled lamb kofta on a yogurt sauce with a lemon wedge and mint" }
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "small" },

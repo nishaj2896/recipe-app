@@ -216,6 +216,7 @@ name = "Pav bhaji"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+image = { file = "01a18b58-52e4-7e9c-9422-7b1a9cb624e3.webp", sha256 = "84bf5c3a8f0e240f8d71a409e81d5a48c3a244260ba0ab3f71a7a5dcac02a66e", alt = "Pav bhaji: spiced vegetable mash with butter and onion, with two toasted pav buns" }
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "cauliflower", amount = 200, unit = "g" },

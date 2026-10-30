@@ -11,6 +11,7 @@ name = "Greek salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+image = { file = "01a18c1a-e21f-7a45-9042-2fc871e11814.webp", sha256 = "ca32efdd0aee3aae2e1c7fa16ba5c35ad65ce22611ebd3f520e09d9bce1e61a7", alt = "Greek salad with tomato, cucumber, olives and a slab of feta" }
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "cucumber", amount = 1, unit = "medium" },

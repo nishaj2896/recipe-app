@@ -67,6 +67,7 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a15175-3c1c-71e8-a493-8702aa35c9e3.webp", sha256 = "7f7ce4de0efaff510efc1613b4d077093abbcd1eb7c0bcf164e985a3f3c7dbf7", alt = "Dome of chicken biryani with fried onions, cashews and mint, beside a bowl of raita" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
@@ -122,6 +123,7 @@ name = "Aloo paratha"
 serves = 4
 prep_minutes = 25
 cook_minutes = 35
+image = { file = "01a188ac-0599-7b01-a8c0-c7e57b87d415.webp", sha256 = "bebeb0d90bb85e1a5852d0f03d239130780cadb8ccb13021b6619fff060faf75", alt = "Stack of aloo parathas with a pat of butter and fresh coriander" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },

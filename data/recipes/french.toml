@@ -212,6 +212,7 @@ name = "Beef bourguignon"
 serves = 6
 prep_minutes = 30
 cook_minutes = 180
+image = { file = "01a18c1a-e25e-743c-b81e-5a37d3b511fb.webp", sha256 = "e83ddad8bce7c024b85a2bcef8d011e57b9bf30a513599b15df1431621c20bda", alt = "Beef bourguignon with bacon, mushrooms, pearl onions and carrots in a stoneware bowl" }
 ingredients = [
   { id = "beef", amount = 1.2, unit = "kg" },
   { id = "red-wine", amount = 3, unit = "cup" },

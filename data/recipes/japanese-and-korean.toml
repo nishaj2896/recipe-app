@@ -66,6 +66,7 @@ name = "Chicken katsu"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18c12-0581-7b81-9a6b-9632b57e5a6b.webp", sha256 = "998a05bad1cd668b51b8170a59bba4b6dabeadbe44b7b8a927fe35fae5b7a399", alt = "Sliced crumbed chicken katsu with tonkatsu sauce and shredded cabbage" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -528,6 +529,7 @@ name = "Bibimbap"
 serves = 4
 prep_minutes = 30
 cook_minutes = 30
+image = { file = "01a18c12-05a5-7159-8e6a-b67889e637dd.webp", sha256 = "48a2359f7798c9c90223b1161fdc8da2dd9e93e03febf6ec570603d7e1762bb0", alt = "Bibimbap in a stone bowl with a fried egg, vegetables and gochujang" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "beef", amount = 250, unit = "g" },
