@@ -1,0 +1,442 @@
+# Sweets and festive (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18bb7-fefd-7ae2-9008-269b5bb6fddc"
+name = "Kaju katli"
+serves = 6
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "cashews", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 2, unit = "piece" },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Grind the cashews in short pulses to a fine powder, stopping before it turns oily. Sift it.",
+  "Heat the sugar and the water in a non-stick pan over medium heat for 3 to 4 minutes, until it bubbles and a drop pulled between finger and thumb forms a single thread.",
+  "Lower the heat, add the cashew powder and crushed cardamom seeds and stir constantly for 5 to 6 minutes, until it forms a soft dough that leaves the sides of the pan.",
+  "Tip it onto a sheet of baking paper, add the ghee and knead while warm for 1 minute, until smooth.",
+  "Roll out between sheets of baking paper to about 5 mm thick. Cool for 10 minutes.",
+  "Cut into diamonds about 4 cm across and serve, or store in an airtight box.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff00-77fb-9d41-8f9f889044fe"
+name = "Jalebi"
+serves = 6
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "sugar", amount = 1.5, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "ghee", amount = 2, unit = "cup" },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Whisk the all-purpose flour, cornflour, curd and half the water into a smooth, thick batter. Cover and leave in a warm place overnight, until slightly sour and bubbly.",
+  "Simmer the sugar and the rest of the water with the saffron and crushed cardamom seeds for 6 to 8 minutes, until slightly sticky. Stir in a squeeze of lemon juice and keep the syrup warm.",
+  "Beat the baking soda into the batter. It should flow in a thick, steady ribbon. Pour it into a squeeze bottle or a cloth with a small hole.",
+  "Heat the ghee in a wide, shallow pan over medium heat. Squeeze the batter into the ghee in spirals about 8 cm across, starting from the centre.",
+  "Fry for 1 to 2 minutes per side, until crisp and light golden.",
+  "Lift them out, drain for a moment and drop into the warm syrup for 30 seconds. Lift out and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff02-7143-92a7-8df3cd8f5ced"
+name = "Rabri"
+serves = 4
+prep_minutes = 5
+cook_minutes = 70
+ingredients = [
+  { id = "milk", amount = 6, unit = "cup" },
+  { id = "sugar", amount = 0.25, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "pistachios", amount = 12, unit = "piece" },
+  { id = "almonds", amount = 8, unit = "piece" },
+]
+steps = [
+  "Bring the milk to a boil in a wide, heavy pan over medium heat, then lower the heat so it barely simmers.",
+  "As a skin forms on top, push it to the side of the pan with a spatula. Keep doing this every few minutes for 50 to 60 minutes, until the milk has reduced to about a third and the sides are lined with thick layers of skin.",
+  "Stir in the sugar, saffron and crushed cardamom seeds and simmer for 5 minutes.",
+  "Scrape the layers from the sides back into the milk and stir gently so it stays in layers and shreds.",
+  "Finely slice the pistachios and almonds. Taste the rabri for sweetness, chill and serve topped with the nuts.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff05-7efb-b645-f032c1bdaf98"
+name = "Motichoor ladoo"
+serves = 8
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "cup" },
+  { id = "ghee", amount = 2, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "melon-seeds", amount = 1, unit = "tbsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 1, unit = "tbsp" },
+  { id = "water", amount = 1.25, unit = "cup" },
+]
+steps = [
+  "Whisk the gram flour with most of the water into a smooth, thin, pourable batter.",
+  "Simmer the sugar with the rest of the water, the saffron and the milk for 6 to 8 minutes, skimming any scum, until it is sticky and forms a single thread between finger and thumb. Keep it warm.",
+  "Heat the ghee in a wide pan over medium heat. Hold a slotted spoon with small round holes over the ghee and pour batter through it, tapping, so tiny drops fall into the ghee.",
+  "Fry the drops for 30 to 40 seconds, until set but still soft and pale. Lift them out and drop straight into the warm syrup. Repeat with the rest of the batter.",
+  "Stir in the crushed cardamom seeds and melon seeds and leave for 20 minutes, until the syrup is absorbed.",
+  "Mash lightly, then with greased hands press into balls about 4 cm across. Cool and serve.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff07-7524-a36d-0d372e22a9a2"
+name = "Sabudana kheer"
+serves = 4
+prep_minutes = 5
+cook_minutes = 30
+ingredients = [
+  { id = "sago", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 4, unit = "cup" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the sago and soak it in the water for 1 hour, until the pearls swell. Drain.",
+  "Bring the milk to a boil in a heavy pan over medium heat.",
+  "Add the sago and simmer on low heat for 15 to 20 minutes, stirring often, until the pearls turn completely translucent.",
+  "Add the sugar and crushed cardamom seeds and simmer for 3 minutes.",
+  "Fry the cashews in the ghee for 1 minute, until golden, and stir them in. Taste for sweetness and serve warm or chilled. It thickens as it cools.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff09-7067-926b-c53771dab39b"
+name = "Coconut barfi"
+serves = 8
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "coconut", amount = 2, unit = "cup" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+]
+steps = [
+  "Grease a tray about 15 cm square with a little of the ghee.",
+  "Cook the coconut and milk in a heavy pan over medium-low heat for 8 minutes, stirring, until the milk is absorbed.",
+  "Add the sugar and stir constantly for 10 to 12 minutes, until the mixture thickens, turns glossy and starts to leave the sides of the pan in one mass.",
+  "Stir in the rest of the ghee and the crushed cardamom seeds.",
+  "Spread it in the tray, press flat and scatter the chopped pistachios over. Cool for 30 minutes, then cut into squares and serve.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff0c-77c7-844e-a2eaf2e92046"
+name = "Doodh peda"
+serves = 8
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "khoa", amount = 250, unit = "g" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+]
+steps = [
+  "Crumble the khoa into a heavy non-stick pan.",
+  "Cook over low heat for 8 to 10 minutes, stirring constantly, until it melts and turns a shade darker.",
+  "Take it off the heat and cool for 5 minutes, until warm but not hot.",
+  "Grind the sugar fine and mix it in with the crushed cardamom seeds and saffron. Knead with the ghee until smooth.",
+  "Shape into balls about 3 cm across and flatten slightly. Press a sliver of the pistachios into the top of each.",
+  "Cool completely before serving.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff0e-741e-98a0-557bd95e7246"
+name = "Kalakand"
+serves = 8
+prep_minutes = 10
+cook_minutes = 45
+ingredients = [
+  { id = "milk", amount = 6, unit = "cup" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "pistachios", amount = 12, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+]
+steps = [
+  "Grease a tray about 15 cm square with the ghee.",
+  "Bring a third of the milk to a boil. Stir in the lemon juice and keep stirring for 1 minute, until it splits into soft white solids and greenish whey. Strain through a cloth and rinse the soft solids under the tap.",
+  "Simmer the rest of the milk in a wide, heavy pan over medium heat for 25 to 30 minutes, stirring often, until reduced by half.",
+  "Add the soft solids and cook for 8 to 10 minutes, stirring, until the mixture thickens and turns grainy.",
+  "Add the sugar and crushed cardamom seeds and stir for 4 to 5 minutes, until it leaves the sides of the pan.",
+  "Spread in the tray and scatter the chopped pistachios over. Cool for 2 hours, until set, then cut into squares.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff11-77ec-aed2-7f15cdbeb2a7"
+name = "Shakarpara"
+serves = 6
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Warm the milk with the sugar and ghee over low heat for 2 minutes, until the sugar dissolves. Cool until lukewarm.",
+  "Knead the all-purpose flour and a little salt with the milk mixture for 5 minutes into a firm, smooth dough. Rest for 15 minutes.",
+  "Roll out to about 5 mm thick and cut into diamonds about 2 cm across.",
+  "Heat the oil for deep frying over low-medium heat. Fry the diamonds in batches for 6 to 8 minutes, stirring, until golden and crisp right through.",
+  "Drain and cool completely. They crisp up more as they cool. Store in an airtight jar.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff13-772a-9bcf-17ba2491d770"
+name = "Gujiya"
+serves = 8
+prep_minutes = 40
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "khoa", amount = 200, unit = "g" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "desiccated-coconut", amount = 2, unit = "tbsp" },
+  { id = "almonds", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Rub the ghee into the all-purpose flour until it holds together when pressed. Knead with as much of the water as needed into a firm dough. Rest for 20 minutes.",
+  "Crumble the khoa and roast it in a dry pan over low heat for 5 to 6 minutes, stirring, until pale golden. Cool.",
+  "Grind the sugar fine. Mix it into the khoa with the desiccated coconut, chopped almonds, raisins and crushed cardamom seeds.",
+  "Roll balls of dough into thin rounds about 10 cm across. Put a spoonful of filling on one half, wet the edge, fold over and press to seal. Crimp the edge with a fork.",
+  "Heat the oil for deep frying over low-medium heat. Fry a few gujiyas at a time for 5 to 6 minutes, turning, until golden and crisp.",
+  "Drain and cool before serving.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff15-71f2-92ac-36e7999438b4"
+name = "Patishapta"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "semolina", amount = 0.25, unit = "cup" },
+  { id = "rice-flour", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 1.25, unit = "cup" },
+  { id = "coconut", amount = 1.5, unit = "cup" },
+  { id = "jaggery", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Cook the coconut and jaggery in a pan over low heat for 8 to 10 minutes, stirring, until the jaggery melts and the mixture is sticky and golden. Stir in the crushed cardamom seeds and cool.",
+  "Whisk the all-purpose flour, semolina, rice flour and milk into a smooth, thin batter. Rest for 15 minutes.",
+  "Heat a non-stick pan over medium-low heat and brush it with ghee. Pour a ladle of batter and swirl it into a thin round about 15 cm across.",
+  "When the top looks set, after about 1 minute, put a line of filling near one edge and roll it up.",
+  "Cook for 30 seconds more, until pale golden, and lift it out. Repeat with the rest of the batter and filling.",
+  "Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff18-783a-a6f8-6e0cd8f233e6"
+name = "Narkel naru"
+serves = 8
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "coconut", amount = 2, unit = "cup" },
+  { id = "jaggery", amount = 0.75, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+]
+steps = [
+  "Crush the jaggery and the cardamom seeds.",
+  "Cook the coconut and jaggery in a heavy pan over low heat for 12 to 15 minutes, stirring constantly, until the jaggery melts and the mixture turns sticky and comes together in one mass.",
+  "Stir in the cardamom and take it off the heat. Cool for 5 minutes, until you can handle it.",
+  "Grease your palms with the ghee and roll the warm mixture into balls about 3 cm across.",
+  "Cool completely before serving.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff1a-7300-9ab2-90a0e2f9f85f"
+name = "Anarsa"
+serves = 8
+prep_minutes = 40
+cook_minutes = 25
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "jaggery", amount = 0.5, unit = "cup" },
+  { id = "poppy-seeds", amount = 3, unit = "tbsp" },
+  { id = "ghee", amount = 2, unit = "cup" },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it in a third of the water for 3 days, draining it and adding another third of the water each day. Drain and spread it on a cloth for 1 hour, until damp but not wet.",
+  "Grind the rice to a fine powder and sift it.",
+  "Grate the jaggery and knead it into the ground rice with a spoonful of the ghee into a stiff dough. Cover and rest overnight.",
+  "Roll balls of dough about 3 cm across in the poppy seeds and flatten them into rounds about 5 mm thick, poppy seeds facing out.",
+  "Heat the ghee over low heat. Fry the anarsa poppy-seed side up, spooning ghee over, for 3 to 4 minutes, until they puff and the edges are golden. Don't turn them.",
+  "Drain upright so the extra ghee runs off, and cool before serving.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff1c-7ef7-ba69-b20292551f62"
+name = "Peanut chikki"
+serves = 8
+prep_minutes = 5
+cook_minutes = 20
+ingredients = [
+  { id = "peanuts", amount = 1, unit = "cup" },
+  { id = "jaggery", amount = 0.75, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Grease a tray and a rolling pin with a little of the ghee.",
+  "Dry-roast the peanuts in a pan over medium-low heat for 6 to 8 minutes, until browned in spots. Rub off the skins and split them.",
+  "Melt the jaggery with the rest of the ghee in a heavy pan over low heat for 6 to 8 minutes, stirring, until it froths and a drop on a cold plate sets hard and snaps.",
+  "Stir in the peanuts quickly until coated.",
+  "Tip onto the tray and roll out to about 5 mm thick while hot. Mark into squares with a knife.",
+  "Cool for 10 minutes, then break along the marks and serve.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff1e-795a-9938-ae4706cc68d7"
+name = "Til ladoo"
+serves = 8
+prep_minutes = 5
+cook_minutes = 20
+ingredients = [
+  { id = "sesame-seeds", amount = 1, unit = "cup" },
+  { id = "jaggery", amount = 0.75, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Dry-roast the sesame seeds in a pan over low heat for 4 to 5 minutes, stirring, until they pop and turn golden. Tip them out. Roast the peanuts for 4 minutes, rub off the skins and crush them coarsely.",
+  "Melt the jaggery with the ghee in a heavy pan over low heat for 5 to 6 minutes, stirring, until it froths and a drop on a cold plate sets into a soft ball.",
+  "Stir in the sesame seeds, peanuts and crushed cardamom seeds and mix well. Take it off the heat.",
+  "When cool enough to handle but still warm, grease your palms and roll into balls about 3 cm across.",
+  "Cool completely before serving.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff21-7e33-8325-71b9ed7e7c6d"
+name = "Lauki halwa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "bottle-gourd", amount = 500, unit = "g" },
+  { id = "milk", amount = 1.5, unit = "cup" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+]
+steps = [
+  "Peel the bottle gourd, scoop out any seeds and grate it. Squeeze lightly.",
+  "Heat the ghee in a heavy pan over medium heat. Fry the cashews for 1 minute, until golden. Lift them out.",
+  "Fry the bottle gourd in the ghee for 6 to 8 minutes, stirring, until it softens and the raw smell goes.",
+  "Add the milk and cook on medium-low heat for 25 minutes, stirring often, until it is absorbed and the mixture is thick.",
+  "Add the sugar and stir for 8 to 10 minutes, until the halwa turns glossy and leaves the sides of the pan.",
+  "Stir in the crushed cardamom seeds and cashews. Serve warm, topped with the chopped pistachios.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff23-78c6-aada-c5eb9d3d3266"
+name = "Badam halwa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "almonds", amount = 1, unit = "cup" },
+  { id = "sugar", amount = 0.75, unit = "cup" },
+  { id = "ghee", amount = 0.33, unit = "cup" },
+  { id = "milk", amount = 0.75, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Bring the water to a boil, pour it over the almonds and leave for 20 minutes. Slip off the skins.",
+  "Grind the almonds with the milk to a slightly coarse paste.",
+  "Cook the paste with the sugar and saffron in a heavy non-stick pan over medium-low heat for 10 minutes, stirring constantly.",
+  "Add the ghee a spoonful at a time, stirring, for 12 to 15 minutes, until the halwa turns golden, glossy and leaves the sides of the pan.",
+  "Stir in the crushed cardamom seeds. Serve warm.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff26-7412-ba53-aca6ac018260"
+name = "Mango kulfi"
+serves = 6
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "mango", amount = 2, unit = "large" },
+  { id = "milk", amount = 3, unit = "cup" },
+  { id = "condensed-milk", amount = 0.5, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "pistachios", amount = 15, unit = "piece" },
+]
+steps = [
+  "Simmer the milk in a heavy pan over medium heat for 25 to 30 minutes, stirring often, until reduced by half.",
+  "Stir in the condensed milk and crushed cardamom seeds and simmer for 3 minutes. Cool completely.",
+  "Peel the mangoes, cut the flesh off the stones and blend it smooth.",
+  "Stir the mango pulp and most of the chopped pistachios into the cooled milk.",
+  "Pour into kulfi moulds or small cups, cover and freeze for at least 8 hours, until solid.",
+  "Hold the moulds under the warm tap for a few seconds to unmould. Scatter the rest of the pistachios over and serve.",
+]
+
+[[recipe]]
+id = "01a18bb7-ff28-73bb-801b-781947b78900"
+name = "Aval payasam"
+serves = 4
+prep_minutes = 5
+cook_minutes = 25
+ingredients = [
+  { id = "flattened-rice", amount = 0.5, unit = "cup" },
+  { id = "milk", amount = 4, unit = "cup" },
+  { id = "jaggery", amount = 0.5, unit = "cup" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Heat the ghee in a heavy pan over medium heat. Fry the cashews and raisins for 1 minute, until golden. Lift them out.",
+  "Fry the flattened rice in the same ghee for 2 to 3 minutes, until crisp and fragrant.",
+  "Add the milk and simmer on low heat for 12 to 15 minutes, stirring often, until the flattened rice is soft and the milk has thickened.",
+  "Take it off the heat for 2 minutes, then stir in the grated jaggery until it melts. Adding it off the heat stops the milk splitting.",
+  "Stir in the crushed cardamom seeds, cashews and raisins. Taste for sweetness and serve warm.",
+]

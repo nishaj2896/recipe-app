@@ -61,3 +61,720 @@ steps = [
   "Add the soy sauce, salt and eggs and toss for 1 minute.",
   "Toss through the green tops of the spring onions and serve hot.",
 ]
+
+[[recipe]]
+id = "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c"
+name = "Chicken hakka noodles"
+serves = 3
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "hakka-noodles", amount = 200, unit = "g" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt and cook the hakka noodles in it as the packet says, until just tender. Drain, rinse under the cold tap and toss with a spoonful of the oil so they don't stick.",
+  "Cut the chicken into thin strips and toss with the cornflour, a little of the soy sauce and salt.",
+  "Shred the cabbage, cut the carrot and bell pepper into thin strips, finely chop the garlic and slice the spring onions, keeping the greens separate.",
+  "Heat the rest of the oil in a wok over high heat until it shimmers. Stir-fry the chicken for 3 to 4 minutes, until cooked and lightly browned.",
+  "Add the garlic and the white parts of the spring onions and toss for 30 seconds.",
+  "Add the cabbage, carrot and bell pepper and toss for 2 minutes on high heat, so they stay crunchy.",
+  "Add the noodles, the rest of the soy sauce, the white vinegar and black pepper. Toss for 2 minutes with two spatulas, until everything is hot and evenly coloured.",
+  "Taste for salt, scatter the green parts of the spring onions over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18ba9-fd9c-7f81-8dcc-96e4d31e45e9"
+name = "Schezwan noodles"
+serves = 3
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "hakka-noodles", amount = 200, unit = "g" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "schezwan-sauce", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt and cook the hakka noodles in it until just tender. Drain, rinse under the cold tap and toss with a spoonful of the oil.",
+  "Shred the cabbage, cut the carrot and bell pepper into thin strips, chop the garlic and slice the spring onions.",
+  "Heat the rest of the oil in a wok over high heat. Stir-fry the garlic and the white parts of the spring onions for 30 seconds.",
+  "Add the vegetables and toss for 2 minutes on high heat.",
+  "Add the Schezwan sauce and stir for 30 seconds, until it sizzles.",
+  "Add the noodles, soy sauce, white vinegar and sugar and toss for 2 minutes, until evenly red.",
+  "Taste for salt, scatter the green parts of the spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7"
+name = "Vegetable fried rice"
+serves = 3
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 8, unit = "piece" },
+  { id = "cabbage", amount = 0.5, unit = "cup" },
+  { id = "bell-pepper", amount = 0.5, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "soy-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cook the rice in the water until just tender, then spread it on a tray and cool completely, ideally for a few hours in the fridge. Cold rice fries without clumping.",
+  "Finely dice the carrot, french beans, cabbage and bell pepper. Chop the garlic and slice the spring onions.",
+  "Heat the oil in a wok over high heat until it shimmers. Stir-fry the garlic for 20 seconds.",
+  "Add the carrot and french beans and toss for 2 minutes. Add the cabbage, bell pepper and the white parts of the spring onions and toss for 1 minute.",
+  "Add the rice and break up any clumps. Toss on high heat for 2 to 3 minutes, until hot and slightly toasty.",
+  "Add the soy sauce, white vinegar, black pepper and salt and toss for 1 minute more.",
+  "Taste for salt, scatter the green parts of the spring onions over and serve hot with a manchurian.",
+]
+
+[[recipe]]
+id = "01a18ba9-fda0-7088-9d35-66b6ea197a87"
+name = "Schezwan fried rice"
+serves = 3
+prep_minutes = 15
+cook_minutes = 10
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 8, unit = "piece" },
+  { id = "bell-pepper", amount = 0.5, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "schezwan-sauce", amount = 3, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cook the rice in the water until just tender, then spread it out and cool completely.",
+  "Finely dice the carrot, french beans and bell pepper. Chop the garlic and slice the spring onions.",
+  "Heat the oil in a wok over high heat. Stir-fry the garlic for 20 seconds, then the vegetables for 2 minutes.",
+  "Add the Schezwan sauce and stir for 30 seconds, until it sizzles.",
+  "Add the rice and toss on high heat for 3 minutes, breaking up clumps, until evenly red and hot.",
+  "Add the soy sauce, taste for salt, scatter the green parts of the spring onions over and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fda2-7f0b-a091-d063bc307813"
+name = "Chicken fried rice"
+serves = 3
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "chicken", amount = 250, unit = "g" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cook the rice in the water until just tender, then spread it out and cool completely.",
+  "Cut the chicken into small cubes and toss with the cornflour, a little of the soy sauce and salt. Dice the carrot, chop the garlic and slice the spring onions.",
+  "Heat a spoonful of the oil in a wok over high heat. Scramble the eggs for 1 minute, until just set. Lift them out.",
+  "Add the rest of the oil and stir-fry the chicken for 4 minutes, until cooked through.",
+  "Add the garlic and carrot and toss for 2 minutes.",
+  "Add the rice and toss on high heat for 3 minutes, breaking up clumps.",
+  "Add the rest of the soy sauce, the black pepper, the eggs and the spring onions and toss for 1 minute. Taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fda5-7a51-ae40-a5af6d7795ce"
+name = "Gobi manchurian"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "cauliflower", amount = 1, unit = "small-head" },
+  { id = "cornflour", amount = 0.33, unit = "cup" },
+  { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "small" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Cut the cauliflower into florets about 4 cm across. Rinse them and pat completely dry.",
+  "Whisk most of the cornflour with the all-purpose flour, ginger garlic paste, salt and enough of the water to make a thick batter that coats the florets.",
+  "Heat the oil for deep frying over medium-high heat. Fry the coated florets for 4 to 5 minutes, until crisp and golden. Drain.",
+  "Finely chop the garlic and green chillies, cube the onion and bell pepper, and slice the spring onions.",
+  "Heat a spoonful of the frying oil in a wok over high heat. Stir-fry the garlic and green chillies for 30 seconds, then the onion and bell pepper for 2 minutes.",
+  "Add the soy sauce, hot sauce, ketchup and white vinegar. Mix the rest of the cornflour with the rest of the water, pour it in and stir until it thickens and turns glossy, about 1 minute.",
+  "Toss in the fried cauliflower and coat it well. Taste for salt, scatter the spring onions over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18ba9-fda7-7085-993c-3f33685f2bd0"
+name = "Vegetable manchurian"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 8, unit = "piece" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "cornflour", amount = 0.33, unit = "cup" },
+  { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Very finely chop the cabbage, carrot, french beans, half the garlic, the ginger and the green chillies. Slice the spring onions.",
+  "Mix the vegetables with most of the cornflour, the all-purpose flour and salt. Squeeze; the moisture from the vegetables should bind it. Shape into balls about 3 cm across.",
+  "Heat the oil for deep frying over medium heat. Fry the balls for 4 to 5 minutes, until golden and crisp. Drain.",
+  "Heat a spoonful of the frying oil in a wok over high heat. Stir-fry the rest of the garlic and the white parts of the spring onions for 30 seconds.",
+  "Add the soy sauce, hot sauce and white vinegar and most of the water and bring to a boil.",
+  "Mix the rest of the cornflour with the rest of the water, stir it in and simmer for 1 minute, until the sauce is glossy and lightly thick.",
+  "Add the fried balls just before serving and simmer for 1 minute. Taste for salt, scatter the green parts of the spring onions over and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fda9-743f-9389-d41d9343ddd3"
+name = "Chilli paneer"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "cornflour", amount = 3, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the paneer into cubes about 2 cm across. Toss with most of the cornflour, the all-purpose flour, salt and a splash of the water until lightly coated.",
+  "Heat the oil in a wok over medium-high heat and shallow fry the paneer for 3 to 4 minutes, turning, until golden and crisp. Lift it out.",
+  "Cube the onion and bell pepper, chop the garlic, slit the green chillies and slice the spring onions.",
+  "Pour off all but a spoonful of the oil. Stir-fry the garlic and green chillies on high heat for 30 seconds, then the onion and bell pepper for 2 minutes, until slightly charred.",
+  "Add the soy sauce, hot sauce, white vinegar and sugar and toss.",
+  "Mix the rest of the cornflour with the rest of the water, pour it in and stir until glossy, about 1 minute.",
+  "Toss in the paneer, taste for salt and serve with the spring onions scattered over.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdab-7f88-b7ce-d7c9ec4c2f29"
+name = "Chilli chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 4, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into pieces about 3 cm across. Mix with the egg, most of the cornflour, the all-purpose flour, ginger garlic paste, a little of the soy sauce and salt. Leave for 20 minutes.",
+  "Heat the oil for deep frying over medium-high heat. Fry the chicken for 5 to 6 minutes, until crisp and cooked through. Drain.",
+  "Cube the onion and bell pepper, chop the garlic, slit the green chillies and slice the spring onions.",
+  "Heat a spoonful of the frying oil in a wok over high heat. Stir-fry the garlic and green chillies for 30 seconds, then the onion and bell pepper for 2 minutes.",
+  "Add the rest of the soy sauce, the hot sauce and white vinegar.",
+  "Mix the rest of the cornflour with the water, pour it in and stir until glossy, about 1 minute.",
+  "Toss in the chicken, taste for salt and serve hot, scattered with the spring onions.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdad-7151-92ab-02f89a09a8f9"
+name = "Chicken 65"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "curd", amount = 3, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 3, unit = "tbsp" },
+  { id = "rice-flour", amount = 1, unit = "tbsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "curry-leaves", amount = 2, unit = "sprig" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut boneless chicken into pieces about 3 cm across. Mix with the curd, ginger garlic paste, Kashmiri chilli powder, turmeric, garam masala, lemon juice and salt. Marinate for at least 1 hour.",
+  "Mix in the cornflour and rice flour so each piece is coated.",
+  "Heat the oil for deep frying over medium-high heat. Fry the chicken in batches for 5 to 6 minutes, until deep red, crisp and cooked through. Drain.",
+  "Heat a spoonful of the frying oil in a wok over high heat. Add the chopped garlic, slit green chillies and curry leaves and fry for 30 seconds, until the leaves crackle.",
+  "Toss in the chicken for 1 minute. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdb0-710a-86f5-d04c90f88899"
+name = "Gobi 65"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "cauliflower", amount = 1, unit = "small-head" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 3, unit = "tbsp" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Cut the cauliflower into florets about 4 cm across. Bring the water to a boil with salt and blanch the florets in it for 2 minutes and drain well.",
+  "Toss with the curd, ginger garlic paste, Kashmiri chilli powder, turmeric, garam masala and salt, then the cornflour and rice flour, until coated.",
+  "Heat the oil for deep frying over medium-high heat. Fry the florets in batches for 4 to 5 minutes, until crisp and red. Drain.",
+  "Heat a spoonful of the frying oil in a pan and fry the curry leaves and slit green chillies for 30 seconds. Toss with the cauliflower.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdb2-7b32-80d4-c95bb06bd71d"
+name = "Dragon chicken"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 4, unit = "tbsp" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "schezwan-sauce", amount = 2, unit = "tbsp" },
+  { id = "ketchup", amount = 1, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "honey", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the chicken into thin strips. Mix with the egg, the cornflour and salt.",
+  "Heat the oil for deep frying over medium-high heat and fry the chicken for 4 to 5 minutes, until crisp. Drain. Fry the cashews for 1 minute, until golden.",
+  "Slice the onion and bell pepper into strips, chop the garlic and break the dried red chillies.",
+  "Heat a spoonful of the frying oil in a wok over high heat. Stir-fry the garlic and dried red chillies for 30 seconds, then the onion and bell pepper for 2 minutes.",
+  "Add the Schezwan sauce, ketchup, soy sauce and honey and stir for 1 minute, until bubbling and glossy.",
+  "Toss in the chicken and cashews. Taste for salt, scatter the sliced spring onions over and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdb4-70f4-b745-a6f112b1e9d1"
+name = "Honey chilli potato"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "cornflour", amount = 4, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "sesame-seeds", amount = 1, unit = "tbsp" },
+  { id = "chilli-flakes", amount = 1, unit = "tsp" },
+  { id = "honey", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Peel the potatoes and cut them into fingers about 1 cm thick. Bring the water to a boil with salt and cook the potatoes in it for 3 minutes, until just soft at the edges. Drain and dry.",
+  "Toss the potatoes with most of the cornflour and salt.",
+  "Heat the oil for deep frying over medium-high heat. Fry the potatoes for 6 to 8 minutes, until very crisp and golden. Drain.",
+  "Toast the sesame seeds in a dry pan for 1 minute, until golden.",
+  "Heat a spoonful of the frying oil in a wok over medium heat. Stir-fry the chopped garlic and chilli flakes for 30 seconds.",
+  "Add the soy sauce, hot sauce, white vinegar and the rest of the cornflour mixed with a splash of the frying pan's sauce, and stir until glossy. Take it off the heat and stir in the honey.",
+  "Toss in the potatoes, sprinkle the sesame seeds and spring onions over, taste for salt and serve at once.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdb6-7f73-ac42-3bcb45916094"
+name = "Chilli mushroom"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "mushroom", amount = 300, unit = "g" },
+  { id = "cornflour", amount = 4, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "soy-sauce", amount = 1.5, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Wipe the mushrooms clean and halve the large ones. Toss them with most of the cornflour, the all-purpose flour, salt and a splash of the water.",
+  "Heat the oil in a wok over medium-high heat and fry the mushrooms for 4 to 5 minutes, until crisp. Lift them out.",
+  "Cube the onion and bell pepper, chop the garlic, slit the green chillies and slice the spring onions.",
+  "Pour off all but a spoonful of the oil. Stir-fry the garlic and green chillies for 30 seconds, then the onion and bell pepper for 2 minutes.",
+  "Add the soy sauce, hot sauce and white vinegar. Mix the rest of the cornflour with the rest of the water, stir it in and cook until glossy.",
+  "Toss in the mushrooms, taste for salt and serve with the spring onions scattered over.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdb8-7816-80d3-f8db752846db"
+name = "Paneer 65"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "rice-flour", amount = 1, unit = "tbsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "oil", amount = 1.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the paneer into cubes about 2 cm across.",
+  "Mix the curd, ginger garlic paste, Kashmiri chilli powder, garam masala, cornflour, rice flour and salt into a thick paste. Coat the paneer gently.",
+  "Heat the oil for deep frying over medium-high heat. Fry the paneer for 2 to 3 minutes, until crisp and red. Drain.",
+  "Fry the curry leaves and slit green chillies in a spoonful of the oil for 30 seconds and toss with the paneer.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdbb-7ec7-93b4-bb61edf302aa"
+name = "American chop suey"
+serves = 3
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "hakka-noodles", amount = 150, unit = "g" },
+  { id = "chicken", amount = 200, unit = "g" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ketchup", amount = 4, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tsp" },
+  { id = "white-vinegar", amount = 1, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+  { id = "cornflour", amount = 1.5, unit = "tbsp" },
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Cook the hakka noodles as the packet says, until just tender. Drain, cool and toss with a spoonful of the oil.",
+  "Heat the oil for deep frying over medium-high heat. Fry the noodles in small nests for 2 to 3 minutes, until crisp and golden. Drain.",
+  "Cut the chicken into thin strips and slice the cabbage, carrot, bell pepper and onion. Chop the garlic.",
+  "Heat a spoonful of the oil in a wok over high heat. Stir-fry the chicken for 3 minutes, then the garlic and vegetables for 2 minutes.",
+  "Add the ketchup, soy sauce, hot sauce, white vinegar, sugar and most of the water and bring to a boil.",
+  "Mix the cornflour with the rest of the water, stir it in and simmer for 1 minute, until thick and glossy. Taste for salt.",
+  "Fry the eggs sunny side up in a little oil.",
+  "Pile the crisp noodles on plates, pour the sauce over and top each with a fried egg. Serve at once.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdbd-7cb8-a034-c8d022f8c3d9"
+name = "Chicken lollipop"
+serves = 4
+prep_minutes = 30
+cook_minutes = 25
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "egg", amount = 1, unit = "large" },
+  { id = "cornflour", amount = 4, unit = "tbsp" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "hot-sauce", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Use chicken wings. Cut each wing at the joints and keep the meaty drumette and middle parts.",
+  "Hold the thin end of each piece and push the meat down to the thick end with a knife, scraping the bone clean, so it forms a ball of meat on a stick.",
+  "Mix the chicken with the egg, cornflour, all-purpose flour, ginger garlic paste, Kashmiri chilli powder, soy sauce, hot sauce, white vinegar and salt. Marinate for 30 minutes.",
+  "Heat the oil for deep frying over medium heat. Fry the lollipops in batches for 7 to 8 minutes, until deep red, crisp and cooked through to the bone.",
+  "Drain, taste for salt and serve hot with Schezwan dip.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdbf-7184-9155-c47cc6706208"
+name = "Hot and sour soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "cabbage", amount = 0.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "mushroom", amount = 6, unit = "piece" },
+  { id = "tofu", amount = 100, unit = "g" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "white-vinegar", amount = 2, unit = "tbsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Finely chop the cabbage, carrot, mushrooms, garlic, ginger and green chillies. Cut the tofu into thin strips and slice the spring onions.",
+  "Heat the oil in a pot over high heat. Stir-fry the garlic, ginger and green chillies for 30 seconds.",
+  "Add the vegetables and mushrooms and toss for 2 minutes.",
+  "Pour in most of the water and bring to a boil. Add the tofu, soy sauce and salt and simmer for 3 minutes.",
+  "Mix the cornflour with the rest of the water, stir it in and simmer for 2 minutes, until the soup thickens slightly.",
+  "Stir in the white vinegar and plenty of black pepper off the heat. Taste and balance the heat and sourness. Serve hot, topped with the spring onions.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e"
+name = "Manchow soup"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "cabbage", amount = 0.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "french-beans", amount = 6, unit = "piece" },
+  { id = "bell-pepper", amount = 0.5, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "hakka-noodles", amount = 50, unit = "g" },
+  { id = "oil", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Boil the hakka noodles until soft, drain and dry well. Fry them in the oil over medium heat for 2 minutes, until crisp. Drain and break them up.",
+  "Very finely chop the cabbage, carrot, french beans, bell pepper, garlic, ginger, green chillies and coriander leaves. Slice the spring onions.",
+  "Heat a spoonful of the oil in a pot over high heat. Stir-fry the garlic, ginger, green chillies and coriander leaves for 30 seconds.",
+  "Add the vegetables and toss for 2 minutes.",
+  "Pour in most of the water, add the soy sauce, black pepper and salt, and bring to a boil.",
+  "Mix the cornflour with the rest of the water, stir it in and simmer for 2 minutes, until slightly thick. Add the white vinegar.",
+  "Taste for salt. Serve hot, topped with the spring onions and a handful of crisp noodles.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdc4-7a74-802c-e97f486d751a"
+name = "Sweetcorn soup"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "sweetcorn", amount = 1.5, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "french-beans", amount = 6, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "garlic", amount = 2, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "cornflour", amount = 2, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tsp" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Blend half the sweetcorn with a little of the water into a coarse paste.",
+  "Finely chop the carrot, french beans, garlic and ginger, and slice the spring onions.",
+  "Melt the butter in a pot over medium heat. Cook the garlic and ginger for 30 seconds, then the carrot and french beans for 2 minutes.",
+  "Add the corn paste, the rest of the sweetcorn, some of the rest of the water, the sugar and salt. Simmer for 8 minutes.",
+  "Mix the cornflour with the last of the water, stir it in and simmer for 2 minutes, until silky.",
+  "Season with the soy sauce and white pepper, taste for salt and serve with the spring onions on top.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdc6-7d5c-9f31-7a852bf6482c"
+name = "Chilli garlic noodles"
+serves = 3
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "hakka-noodles", amount = 200, unit = "g" },
+  { id = "garlic", amount = 10, unit = "clove" },
+  { id = "chilli-flakes", amount = 1.5, unit = "tsp" },
+  { id = "spring-onions", amount = 4, unit = "piece" },
+  { id = "soy-sauce", amount = 2, unit = "tbsp" },
+  { id = "white-vinegar", amount = 1, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil with salt and cook the hakka noodles in it until just tender. Drain, rinse under the cold tap and toss with a spoonful of the oil.",
+  "Finely chop the garlic and slice the spring onions.",
+  "Heat the rest of the oil in a wok over medium heat. Fry the garlic for 1 to 2 minutes, until golden and fragrant. Don't let it burn.",
+  "Add the chilli flakes and the white parts of the spring onions and stir for 20 seconds.",
+  "Turn the heat to high, add the noodles, soy sauce, white vinegar and sugar and toss for 2 minutes.",
+  "Taste for salt, scatter the green parts of the spring onions over and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdc8-7466-afa0-8148214eb406"
+name = "Crispy corn"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "sweetcorn", amount = 2, unit = "cup" },
+  { id = "cornflour", amount = 3, unit = "tbsp" },
+  { id = "rice-flour", amount = 1, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "bell-pepper", amount = 0.5, unit = "medium" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Boil the sweetcorn for 3 minutes, drain and pat it completely dry.",
+  "Toss the corn with the cornflour, rice flour and a little salt until each kernel is coated.",
+  "Heat the oil for deep frying over medium-high heat. Fry the corn in batches for 3 to 4 minutes, until crisp. Drain on paper.",
+  "Finely chop the onion, bell pepper, green chilli and coriander leaves.",
+  "Toss the corn with the vegetables, chaat masala, red chilli powder, lemon juice and salt.",
+  "Taste and serve at once, while crisp.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdca-7c7c-926d-f05ec4b04b3a"
+name = "Triple Schezwan rice"
+serves = 3
+prep_minutes = 25
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "hakka-noodles", amount = 100, unit = "g" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 5, unit = "clove" },
+  { id = "schezwan-sauce", amount = 4, unit = "tbsp" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 2, unit = "tbsp" },
+  { id = "cornflour", amount = 1, unit = "tbsp" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "oil", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Cook the rice in most of the water until just tender, then spread it out and cool.",
+  "Boil the hakka noodles, drain and dry well. Fry half of them in the oil until crisp. Keep the rest soft.",
+  "Shred the cabbage, cut the carrot and bell pepper into strips, chop the garlic and slice the spring onions.",
+  "Heat a spoonful of the oil in a wok over high heat. Stir-fry half the garlic and vegetables for 2 minutes. Add the rice, half the Schezwan sauce and the soy sauce and toss for 3 minutes. Lift it out.",
+  "Stir-fry the soft noodles with a little more of the Schezwan sauce for 2 minutes. Lift them out.",
+  "For the gravy, stir-fry the rest of the garlic and vegetables, add the rest of the Schezwan sauce, the ketchup and some of the rest of the water, and bring to a boil. Thicken with the cornflour mixed into the last of the water.",
+  "Fry the eggs in a little of the oil.",
+  "Pile the rice and noodles on plates, pour the gravy over, top with the crisp noodles and a fried egg, and serve. Taste for salt as you go.",
+]

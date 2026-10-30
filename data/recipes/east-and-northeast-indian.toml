@@ -1,0 +1,1509 @@
+# East and Northeast Indian (data/recipes, ADR-0008 rules 2 and 3).
+#
+# Recipe ids are published: never change or reuse one. Prep and cook time count
+# hands-on work only; waiting such as soaking, fermenting, marinating, resting,
+# chilling or freezing is left out (ADR-0003 rule 10). Steps never state an
+# amount; the screen scales the ingredient amounts and the steps don't.
+
+[[recipe]]
+id = "01a18b6c-22fb-7037-a86e-1fd6c219f189"
+name = "Machher jhol"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "rohu", amount = 500, unit = "g" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "panch-phoron", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cut the rohu into steaks about 2 cm thick. Rub them with half the turmeric and salt and leave for 10 minutes.",
+  "Peel the potatoes and cut them into long wedges. Chop the tomato, grind the ginger to a paste and slit the green chillies.",
+  "Heat the mustard oil in a wide pan over high heat until it just smokes, then lower the heat to medium.",
+  "Fry the fish for 2 to 3 minutes per side, until golden. Lift it out.",
+  "Fry the potatoes in the same mustard oil for 5 minutes, until golden at the edges. Lift them out.",
+  "Add the panch phoron and green chillies and let them crackle. Add the ginger paste and tomato and cook for 3 minutes, until soft.",
+  "Mix the cumin powder, coriander powder, red chilli powder and the rest of the turmeric with a splash of the water, add the paste to the pan and fry for 2 minutes, until the mustard oil separates.",
+  "Add the rest of the water, the potatoes and salt. Simmer for 10 minutes, until the potatoes are tender.",
+  "Slide in the fish and simmer for 5 minutes, until cooked through. The jhol should be thin and light.",
+  "Scatter the coriander leaves over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6c-22fe-7801-9a85-873df71cd0c8"
+name = "Shorshe ilish"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "hilsa", amount = 500, unit = "g" },
+  { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Cut the hilsa into steaks about 2 cm thick. Rub them with half the turmeric and salt.",
+  "Soak the yellow mustard seeds and mustard seeds in a little of the water for 15 minutes.",
+  "Grind them with two of the green chillies, some of the salt and a splash of the water into a smooth paste. Grind briefly, as over-grinding turns mustard bitter.",
+  "Heat the mustard oil in a wide pan over high heat until it just smokes, then lower the heat to medium. Add the nigella seeds and the other green chillies, slit.",
+  "Mix the mustard paste with the rest of the water and the rest of the turmeric and pour it into the pan. Bring to a gentle simmer.",
+  "Lay the hilsa in the sauce in one layer. Cover and cook on low heat for 8 to 10 minutes, without stirring, until the fish is cooked through.",
+  "Drizzle a little more mustard oil over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6c-2300-7327-91a9-05d6034fc8e1"
+name = "Doi maach"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "rohu", amount = 500, unit = "g" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Rub the rohu steaks with half the turmeric and salt.",
+  "Heat the mustard oil in a wide pan over high heat until it just smokes, then lower to medium. Fry the fish for 2 to 3 minutes per side, until golden. Lift it out.",
+  "Grind one onion to a paste and slice the other thinly.",
+  "Add the cardamom, cloves, cinnamon and bay leaves to the mustard oil and stir for 30 seconds.",
+  "Add the sliced onion and cook for 6 minutes, until golden. Add the onion paste and ginger garlic paste and cook for 5 minutes, until the raw smell goes.",
+  "Whisk the curd with the Kashmiri chilli powder, the rest of the turmeric and the sugar. Turn the heat to low and stir it in, stirring constantly so it doesn't split. Cook for 4 minutes, until the mustard oil separates.",
+  "Add the water and slit green chillies and bring to a simmer.",
+  "Slide in the fish and simmer for 5 to 6 minutes, spooning the gravy over.",
+  "Sprinkle the garam masala over, taste for salt and sweetness, and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6c-2302-77d3-95fa-1e2f06696c89"
+name = "Chingri malai curry"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "prawns", amount = 500, unit = "g" },
+  { id = "coconut-milk", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel and devein the prawns, leaving the heads on if you have them. Rub with half the turmeric and salt.",
+  "Heat the mustard oil in a wide pan over medium-high heat. Fry the prawns for 1 minute per side, until they just turn pink. Lift them out.",
+  "Grind the onions to a paste.",
+  "Add the ghee to the pan, then the cardamom, cloves, cinnamon and bay leaf, and stir for 30 seconds.",
+  "Add the onion paste and cook for 8 minutes, stirring, until it turns light golden. Add the ginger garlic paste and cook for 2 minutes.",
+  "Add the rest of the turmeric, the red chilli powder and the sugar and stir for 1 minute.",
+  "Pour in the coconut milk with the slit green chillies and bring to a gentle simmer.",
+  "Add the prawns and simmer for 3 to 4 minutes, until cooked and the sauce is creamy.",
+  "Sprinkle the garam masala over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6c-2304-726f-9e39-ef2de510ae47"
+name = "Bhetki paturi"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "barramundi", amount = 500, unit = "g" },
+  { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "banana-leaves", amount = 2, unit = "piece" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Bhetki is the Bengali name for barramundi. Cut the fillets into pieces about 6 cm across. Rub with half the turmeric and salt.",
+  "Soak the yellow mustard seeds in the water for 15 minutes. Grind them with the grated coconut, two of the green chillies, the rest of the turmeric and salt into a smooth paste.",
+  "Mix the paste with half the mustard oil and coat the fish thickly with it.",
+  "Cut the banana leaves into squares about 20 cm across and pass them over a flame for a few seconds to soften them.",
+  "Put each piece of fish in the centre of a square, top with a slit green chilli and a drizzle of the rest of the mustard oil, and fold into a parcel. Tie with string.",
+  "Cook the parcels on a griddle over medium heat for 6 to 8 minutes per side, until the leaves are charred and the fish is cooked through.",
+  "Serve in the leaves, opened at the table.",
+]
+
+[[recipe]]
+id = "01a18b6c-2307-7f62-8244-d19b5f6f2f0e"
+name = "Fish kalia"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "rohu", amount = 500, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rub the rohu steaks with half the turmeric and salt.",
+  "Heat the mustard oil in a wide pan over high heat until it just smokes, then lower to medium. Fry the fish for 3 minutes per side, until deep golden. Lift it out.",
+  "Grind the onions to a paste and chop the tomato.",
+  "Add the bay leaves, cardamom, cloves and cinnamon to the mustard oil and stir for 30 seconds.",
+  "Add the onion paste and cook for 10 minutes, stirring, until it turns golden brown. Add the ginger garlic paste and cook for 2 minutes.",
+  "Add the tomato, the rest of the turmeric, the Kashmiri chilli powder, cumin powder, coriander powder and sugar. Cook for 6 minutes, until the mustard oil separates.",
+  "Turn the heat to low and stir in the whisked curd. Cook for 3 minutes, stirring.",
+  "Add the water and salt and simmer for 5 minutes, until the gravy is thick and rich.",
+  "Slide in the fish and simmer for 5 minutes. Sprinkle the garam masala over, taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18b6c-2309-7c0e-a805-0e6fbbaf3fd7"
+name = "Kosha mangsho"
+serves = 4
+prep_minutes = 20
+cook_minutes = 100
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 2, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "mustard-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Mix the mutton with the curd, half the ginger garlic paste, the turmeric, Kashmiri chilli powder and salt. Marinate for at least 2 hours.",
+  "Peel the potatoes and halve them. Slice the onions thinly.",
+  "Heat the mustard oil in a heavy pot over high heat until it just smokes, then lower to medium. Fry the potatoes for 5 minutes, until golden. Lift them out.",
+  "Add the sugar to the mustard oil and let it caramelise for 30 seconds, then add the cardamom, cloves, cinnamon and bay leaves.",
+  "Add the onions and cook for 12 to 15 minutes, until deep brown. Add the rest of the ginger garlic paste and cook for 2 minutes.",
+  "Add the mutton with its marinade, the cumin powder and coriander powder. This is the kosha: cook on medium-low heat for 30 to 40 minutes, stirring often and scraping the bottom, until the masala turns dark brown and clings to the meat and the mustard oil separates.",
+  "Add the water and potatoes, cover and simmer on low heat for 30 to 40 minutes, until the mutton is very tender and the gravy is thick.",
+  "Stir in the garam masala and ghee. Taste for salt and serve with luchi or paratha.",
+]
+
+[[recipe]]
+id = "01a18b6c-230b-7d8e-a2b9-3bc8dc74d927"
+name = "Chicken rezala"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chicken", amount = 750, unit = "g" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "cashews", amount = 15, unit = "piece" },
+  { id = "poppy-seeds", amount = 1, unit = "tbsp" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "white-pepper", amount = 0.5, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cloves", amount = 3, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "kewra-water", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the chicken with the curd, ginger garlic paste, white pepper and salt. Marinate for at least 1 hour.",
+  "Soak the cashews and poppy seeds in a little of the water, warmed, for 15 minutes. Grind them into a smooth white paste.",
+  "Grind the onions to a paste.",
+  "Heat the ghee in a heavy pot over medium heat. Add the cardamom, cloves, cinnamon, bay leaves and dried red chillies and stir for 30 seconds.",
+  "Add the onion paste and cook for 6 to 8 minutes on medium-low heat, stirring, until the raw smell goes. Keep it pale; rezala should be white.",
+  "Add the chicken with its marinade and cook for 10 minutes, stirring now and then.",
+  "Stir in the cashew paste, the rest of the water, slit green chillies and the sugar. Cover and cook on low heat for 20 minutes, until the chicken is tender and the gravy is creamy.",
+  "Stir in the kewra water. Taste for salt and serve with paratha or pulao.",
+]
+
+[[recipe]]
+id = "01a18b6c-230d-791c-8495-74a7000a8fd9"
+name = "Kolkata chicken biryani"
+serves = 6
+prep_minutes = 40
+cook_minutes = 80
+ingredients = [
+  { id = "chicken", amount = 1, unit = "kg" },
+  { id = "basmati-rice", amount = 3, unit = "cup" },
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "egg", amount = 6, unit = "large" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "onion", amount = 3, unit = "large" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "biryani-masala", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "milk", amount = 0.25, unit = "cup" },
+  { id = "kewra-water", amount = 1, unit = "tsp" },
+  { id = "rose-water", amount = 1, unit = "tsp" },
+  { id = "nutmeg", amount = 1, unit = "pinch" },
+  { id = "mace", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 5, unit = "piece" },
+  { id = "cloves", amount = 5, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "ghee", amount = 0.33, unit = "cup" },
+  { id = "oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "l" },
+]
+steps = [
+  "Mix the chicken with the curd, ginger garlic paste, biryani masala, red chilli powder and salt. Marinate for at least 2 hours.",
+  "Hard-boil the eggs for 10 minutes, then cool and peel them. Peel the potatoes and halve them.",
+  "Slice the onions thinly and fry them in the oil over medium heat for 15 to 20 minutes, until deep brown and crisp. Lift them out.",
+  "Rub the potatoes with salt and fry them in the same oil for 8 minutes, until golden all over. Lift them out. Fry the eggs for 2 minutes, until lightly blistered.",
+  "Cook the chicken with its marinade and half the fried onion in a heavy pot over medium heat for 20 minutes, until nearly done. Add the potatoes for the last 10 minutes.",
+  "Rinse the basmati rice until the water runs clear and soak it for 30 minutes. Warm the milk and soak the saffron in it.",
+  "Bring the water to a boil with the cardamom, cloves, cinnamon, bay leaves and plenty of salt. Boil the basmati rice for 5 to 6 minutes, until 70 percent done. Drain.",
+  "Layer the basmati rice over the chicken, potatoes and eggs. Drizzle with the saffron milk, kewra water, rose water and ghee, and sprinkle the nutmeg, mace and the rest of the fried onion over.",
+  "Seal the pot and cook on the lowest heat on a griddle for 25 to 30 minutes, until the basmati rice is fluffy and the potatoes are soft.",
+  "Rest for 10 minutes and serve so each plate gets a potato and an egg.",
+]
+
+[[recipe]]
+id = "01a18b6c-230f-778c-af4b-21c7e55dd3ec"
+name = "Aloo posto"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "poppy-seeds", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Soak the poppy seeds in a little of the water for 30 minutes. Grind them with two of the green chillies into a smooth paste.",
+  "Peel the potatoes and cut them into cubes about 2 cm across.",
+  "Heat the mustard oil in a pan over high heat until it just smokes, then lower to medium. Add the nigella seeds and the other green chilli, slit.",
+  "Add the potatoes, turmeric and salt and fry for 5 minutes, stirring.",
+  "Add the rest of the water, cover and cook on low heat for 10 to 12 minutes, until the potatoes are tender.",
+  "Stir in the poppy seed paste and cook uncovered for 3 to 4 minutes, stirring, until it coats the potatoes and the dish is nearly dry.",
+  "Drizzle a little more mustard oil over, taste for salt and serve with dal.",
+]
+
+[[recipe]]
+id = "01a18b6c-2312-71f3-9a20-bd2fa3610ad1"
+name = "Shukto"
+serves = 4
+prep_minutes = 25
+cook_minutes = 30
+ingredients = [
+  { id = "bitter-gourd", amount = 1, unit = "small" },
+  { id = "raw-banana", amount = 1, unit = "medium" },
+  { id = "sweet-potato", amount = 1, unit = "small" },
+  { id = "small-brinjal", amount = 2, unit = "piece" },
+  { id = "drumsticks", amount = 1, unit = "piece" },
+  { id = "potato", amount = 1, unit = "small" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "yellow-mustard-seeds", amount = 1, unit = "tbsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "panch-phoron", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Soak the yellow mustard seeds in a little of the water for 15 minutes and grind them with the ginger into a paste.",
+  "Cut the bitter gourd into thin rounds. Peel the raw banana, sweet potato and potato and cut them into sticks. Cut the small brinjals into sticks and the drumsticks into 6 cm lengths.",
+  "Heat the mustard oil in a wide pan over medium heat. Fry the bitter gourd for 4 minutes, until crisp. Lift it out.",
+  "Add the panch phoron and bay leaf to the mustard oil and let them crackle.",
+  "Add the raw banana, sweet potato, potato and drumsticks and fry for 5 minutes.",
+  "Add the small brinjals, the mustard-ginger paste and salt and stir for 2 minutes.",
+  "Pour in the rest of the water, cover and cook on low heat for 10 minutes, until the vegetables are tender.",
+  "Add the milk, sugar and fried bitter gourd and simmer for 3 minutes. The dish should be mildly bitter, sweet and gently creamy.",
+  "Stir in the ghee, taste for salt and serve as the first course of a Bengali meal.",
+]
+
+[[recipe]]
+id = "01a18b6c-2314-7050-bfd8-e8715f0078ad"
+name = "Begun bhaja"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "brinjal", amount = 1, unit = "large" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cut the brinjal into rounds about 1 cm thick.",
+  "Rub the slices on both sides with the turmeric, red chilli powder, sugar and salt. Leave for 10 minutes.",
+  "Heat the mustard oil in a frying pan over medium-high heat until it just smokes, then lower to medium.",
+  "Fry the slices in one layer for 3 to 4 minutes per side, until deep golden outside and creamy inside. Press one with a spatula; it should give easily.",
+  "Drain on paper and serve hot with dal.",
+]
+
+[[recipe]]
+id = "01a18b6c-2316-7333-944f-c7fb46467420"
+name = "Cholar dal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 45
+ingredients = [
+  { id = "chana-dal", amount = 1, unit = "cup" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "green-cardamom", amount = 2, unit = "piece" },
+  { id = "cloves", amount = 2, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 2, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it for 1 hour. Drain.",
+  "Pressure cook the dal with most of the water and the turmeric for 3 whistles, until soft but holding its shape.",
+  "Cut the coconut into small bits and grate the ginger.",
+  "Heat the ghee in a pot over medium heat. Fry the coconut bits for 2 minutes, until golden. Add the raisins for 20 seconds, until they puff.",
+  "Add the cumin seeds, dried red chillies, bay leaves, cardamom, cloves and cinnamon and stir for 30 seconds.",
+  "Add the ginger, then the dal, the rest of the water, the sugar and salt. Simmer for 8 to 10 minutes, until thick.",
+  "Sprinkle the garam masala over, taste and balance the salt and sweetness, and serve with luchi.",
+]
+
+[[recipe]]
+id = "01a18b6c-2318-7ce3-bf93-e93158d24747"
+name = "Moong dal (Bengali)"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "moong-dal", amount = 1, unit = "cup" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "dried-red-chillies", amount = 1, unit = "piece" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Dry roast the moong dal in a pan over medium heat for 5 to 6 minutes, stirring, until golden and fragrant. This gives the dal its nutty flavour.",
+  "Rinse the dal and boil it in the water with the turmeric for 20 minutes, until soft. Skim off any froth.",
+  "Chop the tomato, grate the ginger and slit the green chillies.",
+  "Heat the ghee in a small pan. Add the cumin seeds, bay leaf and dried red chilli and let them sizzle.",
+  "Add the ginger, green chillies and tomato and cook for 2 minutes.",
+  "Pour the tempering into the dal with the sugar and salt and simmer for 5 minutes. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6c-231b-7ab1-bf8c-b0dea015ec9f"
+name = "Dhokar dalna"
+serves = 4
+prep_minutes = 20
+cook_minutes = 45
+ingredients = [
+  { id = "chana-dal", amount = 1, unit = "cup" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "mustard-oil", amount = 0.33, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the chana dal and soak it for 4 hours. Drain well.",
+  "Grind it with the ginger, two of the green chillies and salt into a thick, coarse paste, without adding liquid.",
+  "Heat a spoonful of the mustard oil in a pan over medium heat. Add the asafoetida and cumin seeds, then the dal paste, and cook for 5 minutes, stirring, until it comes together as a dry dough.",
+  "Spread it on a greased plate about 1.5 cm thick. Cool, then cut into diamonds.",
+  "Heat the rest of the mustard oil over medium heat and fry the diamonds for 2 minutes per side, until golden. Lift them out.",
+  "Peel and cube the potatoes and fry them for 5 minutes in the same mustard oil. Add the bay leaves, the tomatoes, chopped, the turmeric, cumin powder, coriander powder, red chilli powder and sugar and cook for 5 minutes, until the mustard oil separates.",
+  "Add the water and salt and simmer for 10 minutes, until the potatoes are tender.",
+  "Slide in the dhoka and simmer for 3 minutes, just to soak up some gravy.",
+  "Stir in the garam masala and ghee. Taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18b6c-231d-77cc-b585-be73dc4b4092"
+name = "Chhanar dalna"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "chhena", amount = 250, unit = "g" },
+  { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Knead the chhena with the all-purpose flour and some of the salt for 3 minutes, until smooth and soft. Shape into small balls about 3 cm across and flatten them slightly.",
+  "Heat the mustard oil in a pan over medium heat. Fry the chhena for 2 to 3 minutes, turning, until golden. Lift them out.",
+  "Peel and cube the potatoes. Fry them in the same mustard oil for 5 minutes, until golden at the edges.",
+  "Grind the tomatoes, ginger and green chillies to a paste.",
+  "Add the cumin seeds and bay leaves to the mustard oil, then the ground tomato mixture, turmeric, cumin powder, red chilli powder and sugar. Cook for 6 minutes, until the mustard oil separates.",
+  "Add the water and salt, return the potatoes and simmer for 10 minutes, until tender.",
+  "Add the chhena and simmer for 3 minutes. Stir in the garam masala and ghee, taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18b6e-6479-7735-bc32-92b2aa946a9e"
+name = "Ghugni"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "dried-white-peas", amount = 1, unit = "cup" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "tamarind", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the dried white peas and soak them in plenty of water overnight. Drain.",
+  "Pressure cook the dried white peas with most of the water, half the turmeric and salt for 3 whistles, until soft but holding their shape.",
+  "Soak the tamarind in a spoonful of the rest of the water for 10 minutes and squeeze out the pulp.",
+  "Chop the onions, tomato and green chillies, and peel and dice the potato. Keep a little raw onion for the top.",
+  "Heat the mustard oil in a pan over medium heat. Add the bay leaf, then the onion, and cook for 6 minutes, until golden.",
+  "Add the ginger garlic paste and potato and cook for 3 minutes. Add the tomato, the rest of the turmeric, the cumin powder, coriander powder and red chilli powder and cook for 5 minutes, until the mustard oil separates.",
+  "Add the dried white peas with their liquid and the rest of the water and simmer for 10 to 12 minutes, until the potato is tender and the ghugni is thick.",
+  "Stir in the tamarind pulp and garam masala. Taste for salt and serve topped with the raw onion, green chillies and coriander leaves.",
+]
+
+[[recipe]]
+id = "01a18b6e-647b-7878-a77e-44bf0f676105"
+name = "Jhalmuri"
+serves = 2
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "puffed-rice", amount = 3, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "cucumber", amount = 0.5, unit = "medium" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "peanuts", amount = 3, unit = "tbsp" },
+  { id = "sev", amount = 0.25, unit = "cup" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Dry roast the peanuts in a pan over medium heat for 4 minutes, until crisp. Cool.",
+  "Finely chop the onion, tomato, cucumber, green chilli and coriander leaves.",
+  "Put the puffed rice in a large bowl with the vegetables, peanuts, chaat masala and salt.",
+  "Drizzle the raw mustard oil and lemon juice over and toss quickly with your hands until everything is coated.",
+  "Taste and adjust the salt and lemon. Top with the sev and eat straight away, before it goes soft.",
+]
+
+[[recipe]]
+id = "01a18b6e-647d-7e64-8d07-9f5e19ad4398"
+name = "Luchi"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Rub the ghee into the all-purpose flour with some of the salt until it looks like coarse sand.",
+  "Add the water a little at a time and knead for 5 minutes into a soft, smooth dough. Cover and rest for 20 minutes.",
+  "Divide into balls about 3 cm across. Dip each in a little oil and roll into a thin round about 10 cm across. Use oil, not flour, so the oil stays clean.",
+  "Heat the oil for deep frying over medium-high heat. A small piece of dough should rise at once.",
+  "Slide in one luchi. Press it gently with a slotted spoon until it puffs up like a balloon, about 20 seconds.",
+  "Flip and fry for 10 seconds more. It should stay pale white with no brown spots. Drain and serve hot with aloo dum or cholar dal.",
+]
+
+[[recipe]]
+id = "01a18b6e-6480-775f-b12f-a5658bb366ac"
+name = "Aloo dum (Bengali)"
+serves = 4
+prep_minutes = 15
+cook_minutes = 35
+ingredients = [
+  { id = "potato", amount = 500, unit = "g" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use small potatoes. Boil them until just tender, then peel them.",
+  "Grind the tomatoes, ginger and green chillies into a paste.",
+  "Heat the mustard oil in a pan over medium heat. Fry the potatoes for 5 minutes, until golden. Lift them out.",
+  "Add the cumin seeds and bay leaves to the mustard oil, then the ground tomato mixture, turmeric, cumin powder, coriander powder, Kashmiri chilli powder and sugar. Cook for 6 minutes, until the mustard oil separates.",
+  "Turn the heat to low and stir in the whisked curd.",
+  "Add the potatoes, the water and salt. Cover and simmer for 10 minutes, until the gravy thickens and clings to the potatoes.",
+  "Stir in the garam masala and ghee. Taste for salt and serve with luchi.",
+]
+
+[[recipe]]
+id = "01a18b6e-6482-79e4-9f51-d47fa2b22864"
+name = "Kolkata egg roll"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "ketchup", amount = 4, unit = "tbsp" },
+  { id = "hot-sauce", amount = 2, unit = "tsp" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the all-purpose flour with a spoonful of the oil and salt, add the water little by little and knead into a soft dough. Rest for 30 minutes.",
+  "Slice the onion and cucumber thinly and chop the green chillies.",
+  "Divide the dough into balls about 5 cm across and roll each into a thin round about 20 cm across.",
+  "Cook a round on a hot griddle over medium heat for 1 minute per side, until spotted, with a little oil.",
+  "Beat one egg with some of the salt and pour it onto the griddle. Lay the paratha on top straight away and press. Cook for 1 minute, until the egg sets and sticks, then flip and cook for 30 seconds.",
+  "Lay the paratha egg side up. Put a line of onion, cucumber and green chillies down the middle, squeeze over lemon juice, sprinkle chaat masala and drizzle the ketchup and hot sauce.",
+  "Roll it up tightly and wrap the bottom half in paper. Repeat with the rest and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6e-6485-7005-bfca-5c9f8d7f87c6"
+name = "Kathi roll (chicken)"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "chicken", amount = 500, unit = "g" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "green-chutney", amount = 4, unit = "tbsp" },
+  { id = "oil", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Cut the chicken into thin strips and mix with the curd, ginger garlic paste, Kashmiri chilli powder, garam masala, half the lemon juice and salt. Marinate for at least 1 hour.",
+  "Mix the all-purpose flour with a spoonful of the oil and salt, add the water little by little and knead into a soft dough. Rest for 30 minutes.",
+  "Heat a spoonful of the oil in a pan over high heat and cook the chicken for 8 to 10 minutes, stirring, until charred at the edges and cooked through.",
+  "Slice the onion thinly and toss with the chaat masala and the rest of the lemon juice. Chop the green chillies.",
+  "Roll the dough into thin rounds about 20 cm across and cook each on a hot griddle with a little oil for 1 minute per side.",
+  "Beat an egg, pour it on the griddle and lay a paratha on top. Cook for 1 minute, flip and cook for 30 seconds.",
+  "Spread the egg side with green chutney, add a line of chicken, onion and green chillies, and roll up tightly. Wrap the bottom in paper and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6e-6487-70ca-b8aa-f171aefdac39"
+name = "Mishti doi"
+serves = 6
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "milk", amount = 1, unit = "l" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Boil the milk in a heavy pan and simmer on low heat for 20 minutes, stirring often, until reduced by about a third.",
+  "Meanwhile, heat a third of the sugar with the water in a small pan over medium heat, without stirring, until it turns a deep amber caramel.",
+  "Pour the caramel carefully into the hot milk with the rest of the sugar. It will hiss. Stir until it all dissolves.",
+  "Cool the milk until it feels just warm on your finger, about 40°C.",
+  "Whisk the curd smooth and stir it in. Pour into clay pots or small bowls.",
+  "Cover and leave in a warm place for 8 to 10 hours, until set.",
+  "Chill for 2 hours before serving.",
+]
+
+[[recipe]]
+id = "01a18b6e-6489-7a5b-af0c-fb5a0bfccff6"
+name = "Rosogolla"
+serves = 6
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "milk", amount = 1, unit = "l" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "sugar", amount = 1.5, unit = "cup" },
+  { id = "green-cardamom", amount = 2, unit = "piece" },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Bring the milk to a boil. Turn off the heat, wait 1 minute, then add the lemon juice mixed with a little of the water, stirring gently, until the milk splits into soft white lumps and pale green whey.",
+  "Pour through a muslin cloth, rinse under the cold tap to remove the lemon taste, and squeeze. Hang for 30 minutes, until the soft cheese is moist but not dripping.",
+  "Knead the soft cheese on a plate with the heel of your palm for 8 to 10 minutes, until completely smooth and slightly greasy.",
+  "Roll it into smooth balls about 2.5 cm across, with no cracks.",
+  "Bring the sugar, crushed cardamom and the rest of the water to a rolling boil in a wide pan.",
+  "Drop in the balls. Cover and boil on high heat for 15 minutes, without opening the lid. They will double in size.",
+  "Cool in the syrup, then chill. Serve cold with some of the syrup.",
+]
+
+[[recipe]]
+id = "01a18b6e-648b-7dd2-a446-dc613b1b9aa3"
+name = "Sandesh"
+serves = 10
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "milk", amount = 1, unit = "l" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "pistachios", amount = 10, unit = "piece" },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Bring the milk to a boil. Turn off the heat and add the lemon juice mixed with the water, stirring gently, until the milk splits.",
+  "Strain through muslin, rinse under the cold tap and squeeze. Hang for 30 minutes.",
+  "Knead the soft cheese with the sugar for 5 minutes, until smooth.",
+  "Cook it in a non-stick pan over low heat for 6 to 8 minutes, stirring constantly, until it thickens and just starts to leave the sides of the pan. Don't overcook, or it turns hard.",
+  "Crush the cardamom, grind the seeds and mix them in with the saffron. Cool until you can handle it.",
+  "Shape into small discs about 4 cm across and press a sliver of the pistachios into the top of each.",
+  "Chill for 30 minutes and serve.",
+]
+
+[[recipe]]
+id = "01a18b6e-648d-73e0-b3f4-3b777048a339"
+name = "Payesh"
+serves = 6
+prep_minutes = 5
+cook_minutes = 60
+ingredients = [
+  { id = "gobindobhog-rice", amount = 0.25, unit = "cup" },
+  { id = "milk", amount = 1.5, unit = "l" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+]
+steps = [
+  "Rinse the gobindobhog rice, drain it and toss it with the ghee.",
+  "Bring the milk to a boil in a heavy pan with the bay leaf and crushed cardamom.",
+  "Add the gobindobhog rice and simmer on low heat for 45 to 50 minutes, stirring often and scraping the bottom, until the gobindobhog rice is very soft and the milk is thick and creamy.",
+  "Add the sugar, cashews and raisins and simmer for 5 minutes.",
+  "Taste for sweetness. Serve warm or chilled.",
+]
+
+[[recipe]]
+id = "01a18b6e-6490-7cba-afad-65572d8f90dc"
+name = "Dalma (Odisha)"
+serves = 4
+prep_minutes = 20
+cook_minutes = 40
+ingredients = [
+  { id = "toor-dal", amount = 0.75, unit = "cup" },
+  { id = "raw-banana", amount = 1, unit = "small" },
+  { id = "pumpkin", amount = 150, unit = "g" },
+  { id = "small-brinjal", amount = 2, unit = "piece" },
+  { id = "potato", amount = 1, unit = "small" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "panch-phoron", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "bay-leaves", amount = 1, unit = "leaf" },
+  { id = "coconut", amount = 2, unit = "tbsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Rinse the toor dal. Peel and cube the raw banana, pumpkin and potato. Cube the small brinjals and grate the ginger.",
+  "Dry roast the cumin seeds and one dried red chilli for 1 minute and grind them to a powder.",
+  "Boil the dal with the water, turmeric and ginger for 15 minutes, until half cooked.",
+  "Add the vegetables and salt and simmer for 15 minutes, until the dal and vegetables are soft.",
+  "Heat the ghee in a small pan. Add the panch phoron, the other dried red chilli and the bay leaf and let them crackle.",
+  "Pour the tempering into the dalma with the roasted spice powder and the grated coconut. Simmer for 2 minutes. Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6e-6492-7b61-aed4-3332d9ef6f29"
+name = "Pakhala bhata"
+serves = 4
+prep_minutes = 10
+cook_minutes = 0
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Cook the rice in half the water until soft, then cool it completely.",
+  "Add the rest of the water to the cold rice and leave it covered at room temperature overnight, until it smells lightly sour.",
+  "Whisk in the curd and salt.",
+  "Heat the oil in a small pan. Add the mustard seeds and cumin seeds and let them pop, then the dried red chillies and curry leaves.",
+  "Pour the tempering over the rice. Stir in the grated ginger, torn mint and lemon juice.",
+  "Taste for salt and serve cool, with fried vegetables or fish on the side.",
+]
+
+[[recipe]]
+id = "01a18b6e-6494-74e3-8ab4-4d77bf0588a3"
+name = "Chhena poda"
+serves = 8
+prep_minutes = 20
+cook_minutes = 60
+ingredients = [
+  { id = "chhena", amount = 500, unit = "g" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "semolina", amount = 2, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Knead the chhena with the sugar for 5 minutes, until smooth.",
+  "Crush the cardamom and grind the seeds. Mix them in with the semolina, cashews and raisins.",
+  "Grease a round cake tin about 18 cm across with the ghee and press the mixture in evenly.",
+  "Bake at 180°C for 50 to 60 minutes, until the top and edges are deep caramel brown and a skewer comes out clean.",
+  "Cool in the tin, then turn out and cut into wedges.",
+]
+
+[[recipe]]
+id = "01a18b6e-6496-7e21-90e9-1cd2659819ba"
+name = "Machha besara"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "rohu", amount = 500, unit = "g" },
+  { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "panch-phoron", amount = 1, unit = "tsp" },
+  { id = "dried-red-chillies", amount = 1, unit = "piece" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rub the rohu steaks with half the turmeric and salt.",
+  "Soak the yellow mustard seeds in a little of the water for 15 minutes. Grind with the garlic and two of the green chillies into a paste.",
+  "Heat the mustard oil in a wide pan over high heat until it just smokes, then lower to medium. Fry the fish for 3 minutes per side. Lift it out.",
+  "Add the panch phoron and dried red chilli to the mustard oil and let them crackle.",
+  "Add the chopped tomato and cook for 3 minutes. Add the mustard paste, the rest of the turmeric and the rest of the water.",
+  "Simmer for 5 minutes, add the fish and the other green chilli, and simmer for 5 minutes more.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6e-6499-77e1-a914-d4c9a399db81"
+name = "Santula"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "raw-banana", amount = 1, unit = "small" },
+  { id = "pumpkin", amount = 150, unit = "g" },
+  { id = "papaya", amount = 1, unit = "small" },
+  { id = "small-brinjal", amount = 2, unit = "piece" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "panch-phoron", amount = 1, unit = "tsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Use unripe papaya. Peel and cube the potato, raw banana, pumpkin and papaya. Cube the small brinjals.",
+  "Boil the vegetables in the water with the turmeric and salt for 10 to 12 minutes, until just tender.",
+  "Heat the ghee in a pan over medium heat. Add the panch phoron, crushed garlic and slit green chillies and stir for 30 seconds.",
+  "Add the vegetables with their cooking liquid and the milk. Simmer for 4 minutes, until lightly creamy.",
+  "Taste for salt and serve. It is meant to be mild and light.",
+]
+
+[[recipe]]
+id = "01a18b6e-649b-7949-a6c1-be44149c2c9e"
+name = "Litti chokha"
+serves = 4
+prep_minutes = 30
+cook_minutes = 50
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "sattu", amount = 1, unit = "cup" },
+  { id = "brinjal", amount = 1, unit = "large" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 0.25, unit = "cup" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "For the dough, mix the whole wheat flour with a spoonful of the ghee and salt, add the water little by little and knead into a firm dough. Rest for 15 minutes.",
+  "For the filling, mix the sattu with chopped onion, half the garlic and green chillies, the grated ginger, carom seeds, nigella seeds, half the coriander leaves, half the lemon juice, half the mustard oil and salt. It should hold together when pressed.",
+  "Divide the dough into balls about 5 cm across. Flatten each into a small bowl shape, fill with the sattu mixture, seal and roll back into a ball.",
+  "Bake at 200°C for 30 to 35 minutes, turning halfway, until golden and cracked in places.",
+  "Meanwhile, roast the brinjal, tomatoes and boiled potatoes over a flame for 10 to 12 minutes, until charred. Peel them.",
+  "Mash them together with the rest of the garlic, green chillies, coriander leaves, lemon juice, mustard oil and salt. This is the chokha.",
+  "Warm the rest of the ghee. Crack each litti and dip it in the ghee. Serve with the chokha.",
+]
+
+[[recipe]]
+id = "01a18b6e-649e-7e36-907d-c3796584d6af"
+name = "Sattu paratha"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "sattu", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "carom-seeds", amount = 0.5, unit = "tsp" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the whole wheat flour with salt, add the water little by little and knead into a soft dough. Rest for 15 minutes.",
+  "Finely chop the onion, green chillies, ginger, garlic and coriander leaves.",
+  "Mix the sattu with them, the carom seeds, nigella seeds, lemon juice, mustard oil and salt into a crumbly filling that holds when pressed.",
+  "Roll a ball of dough about 5 cm across into a small round, fill with a spoonful of the mixture, seal and roll gently into a round about 15 cm across.",
+  "Cook on a hot griddle over medium heat for 1 minute per side, then brush with ghee and cook until golden spots appear on both sides.",
+  "Serve hot with a pickle.",
+]
+
+[[recipe]]
+id = "01a18b6e-64a1-776c-93f9-48d0d50e9f96"
+name = "Aloo bhujia (Bihar)"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "nigella-seeds", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Peel the potatoes and cut them into thin matchsticks. Rinse and pat them dry.",
+  "Heat the mustard oil in a wide pan over high heat until it just smokes, then lower to medium.",
+  "Add the nigella seeds, cumin seeds and slit green chillies and let them crackle.",
+  "Add the potatoes, turmeric and salt and toss well.",
+  "Cook uncovered for 12 to 15 minutes, tossing every few minutes, until the potatoes are tender and crisp at the edges.",
+  "Taste for salt and serve with dal and roti.",
+]
+
+[[recipe]]
+id = "01a18b6e-64a3-7b87-a420-836caa7f67fd"
+name = "Champaran mutton"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "mutton", amount = 750, unit = "g" },
+  { id = "onion", amount = 3, unit = "medium" },
+  { id = "garlic", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "dried-red-chillies", amount = 4, unit = "piece" },
+  { id = "black-cardamom", amount = 2, unit = "piece" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cloves", amount = 4, unit = "piece" },
+  { id = "cinnamon-sticks", amount = 1, unit = "piece" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "mustard-oil", amount = 0.33, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Use whole heads of garlic. Slice the onions and grind the ginger to a paste.",
+  "Mix the mutton with the sliced onions, the ginger paste, curd, turmeric, red chilli powder, coriander powder, garam masala, black cardamom, green cardamom, cloves, cinnamon, bay leaves, dried red chillies, the mustard oil, ghee and salt. Marinate for at least 1 hour.",
+  "Cut the tops off the garlic heads and push them into the meat.",
+  "Put everything in a clay pot or heavy pot with a tight lid.",
+  "Knead the all-purpose flour with the water into a soft dough and press it round the lid to seal it.",
+  "Cook on low heat for 80 to 90 minutes, shaking the pot now and then instead of opening it, until the mutton is very tender.",
+  "Break the seal, stir gently, taste for salt and serve with the soft garlic squeezed out of its skins.",
+]
+
+[[recipe]]
+id = "01a18b6e-64a6-7067-ae8d-558056a807fc"
+name = "Thekua"
+serves = 12
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "jaggery", amount = 0.5, unit = "cup" },
+  { id = "desiccated-coconut", amount = 0.25, unit = "cup" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "ghee", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "water", amount = 0.33, unit = "cup" },
+]
+steps = [
+  "Melt the jaggery in the warm water over low heat and strain it.",
+  "Rub the ghee into the whole wheat flour until it looks like coarse sand. Mix in the desiccated coconut, fennel seeds and ground cardamom seeds.",
+  "Add the jaggery syrup and knead into a stiff dough.",
+  "Shape into flat discs about 6 cm across and press a pattern into each with a mould or fork.",
+  "Heat the oil for deep frying over low to medium heat.",
+  "Fry a few at a time for 5 to 6 minutes, turning, until deep golden and crisp.",
+  "Drain and cool. They harden as they cool and keep for weeks in an airtight jar.",
+]
+
+[[recipe]]
+id = "01a18b6e-64a8-71cd-a507-dcb7db5575c4"
+name = "Assamese fish tenga"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "catla", amount = 500, unit = "g" },
+  { id = "tomato", amount = 4, unit = "medium" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rub the catla steaks with half the turmeric and salt.",
+  "Heat the mustard oil in a pan over high heat until it just smokes, then lower to medium. Fry the fish for 2 minutes per side, until lightly golden. Lift it out.",
+  "Add the fenugreek seeds to the mustard oil and let them darken for 10 seconds.",
+  "Add the tomatoes, chopped, with the rest of the turmeric and salt and cook for 6 to 8 minutes, mashing, until pulpy.",
+  "Add the water and slit green chillies and bring to a boil.",
+  "Add the fish and simmer for 6 minutes. Squeeze in the lemon juice off the heat.",
+  "Taste for salt and sourness; tenga should be light and tangy. Scatter the coriander leaves over and serve.",
+]
+
+[[recipe]]
+id = "01a18b6e-64aa-79f6-9493-be17189d679d"
+name = "Masor tenga"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "rohu", amount = 500, unit = "g" },
+  { id = "raw-mango", amount = 1, unit = "small" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "fenugreek-seeds", amount = 0.25, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rub the rohu steaks with half the turmeric and salt. Peel the raw mango and cut it into thin slices.",
+  "Heat the mustard oil in a pan over high heat until it just smokes, then lower to medium. Fry the fish for 2 minutes per side. Lift it out.",
+  "Add the fenugreek seeds and let them darken. Add the raw mango and fry for 2 minutes.",
+  "Add the tomatoes, chopped, with the rest of the turmeric and salt and cook for 5 minutes, until soft.",
+  "Add the water and slit green chillies and simmer for 5 minutes, until the raw mango is soft and the broth is sour.",
+  "Add the fish and simmer for 6 minutes. Taste for salt, scatter the coriander leaves over and serve.",
+]
+
+[[recipe]]
+id = "01a18b6e-64ac-7fa1-a48f-95312700f1b0"
+name = "Aloo pitika"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Boil the potatoes until completely tender. Peel them while warm.",
+  "Finely chop the onion, green chillies and coriander leaves.",
+  "Mash the potatoes with the onion, green chillies, coriander leaves, raw mustard oil and salt.",
+  "Taste; it should be sharp from the mustard oil. Serve warm with dal.",
+]
+
+[[recipe]]
+id = "01a18b6e-64af-7f81-b561-631c3610580d"
+name = "Khar"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "raw-papaya", amount = 1, unit = "small" },
+  { id = "moong-dal", amount = 0.25, unit = "cup" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "panch-phoron", amount = 0.5, unit = "tsp" },
+  { id = "mustard-oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Khar is traditionally made with a homemade alkaline liquid; baking soda gives a similar effect. Peel and cube the raw papaya.",
+  "Rinse the moong dal.",
+  "Heat the mustard oil in a pan over medium heat. Add the panch phoron, crushed garlic and slit green chillies and stir for 30 seconds.",
+  "Add the raw papaya and dal and stir for 2 minutes.",
+  "Add the water, baking soda and salt and simmer for 15 to 20 minutes, until the raw papaya and dal are soft.",
+  "Mash lightly, taste for salt and serve as the first course.",
+]
+
+[[recipe]]
+id = "01a18b6e-64b1-7a0b-9f3c-66585ce83261"
+name = "Duck curry (Assamese)"
+serves = 4
+prep_minutes = 20
+cook_minutes = 90
+ingredients = [
+  { id = "duck", amount = 1, unit = "kg" },
+  { id = "ash-gourd", amount = 300, unit = "g" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 2, unit = "tbsp" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "mustard-oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Cut the duck into pieces, trimming off loose fat. Rub with the turmeric and salt.",
+  "Peel the ash gourd and cut it into cubes about 4 cm across.",
+  "Heat the mustard oil in a heavy pot over high heat until it just smokes, then lower to medium. Add the bay leaves and sliced onions and cook for 8 minutes, until golden.",
+  "Add the ginger garlic paste and cook for 2 minutes. Add the chopped tomato, red chilli powder, cumin powder and coriander powder and cook for 5 minutes, until the mustard oil separates.",
+  "Add the duck and cook on medium-high heat for 10 minutes, stirring, until browned.",
+  "Add the water, cover and simmer on low heat for 50 to 60 minutes, until the duck is nearly tender.",
+  "Add the ash gourd and cook for 15 minutes, until soft and translucent.",
+  "Stir in the garam masala and crushed black pepper. Taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18b6e-64b3-7a24-ae04-35d68f9de996"
+name = "Pork with bamboo shoot"
+serves = 4
+prep_minutes = 15
+cook_minutes = 70
+ingredients = [
+  { id = "pork-belly", amount = 500, unit = "g" },
+  { id = "bamboo-shoots", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "green-chillies", amount = 4, unit = "piece" },
+  { id = "dried-red-chillies", amount = 3, unit = "piece" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Cut the pork belly into cubes about 3 cm across. Rinse the bamboo shoots and slice them.",
+  "Crush the ginger, garlic and green chillies into a coarse paste.",
+  "Put the pork belly in a heavy pot over medium heat, without adding any fat. Cook for 10 to 12 minutes, stirring, until the fat renders and the pork belly browns.",
+  "Add the paste, dried red chillies and turmeric and stir for 2 minutes.",
+  "Add the bamboo shoots and stir for 3 minutes.",
+  "Pour in the water, add salt, cover and simmer on low heat for 40 to 45 minutes, until the pork belly is tender and the liquid has reduced to a thick sauce.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6e-64b7-7b9a-b499-16796ab1c345"
+name = "Momos (vegetable)"
+serves = 4
+prep_minutes = 40
+cook_minutes = 15
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "cabbage", amount = 2, unit = "cup" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the all-purpose flour with some of the salt, add the water little by little and knead into a smooth, firm dough. Cover and rest for 30 minutes.",
+  "Very finely chop the cabbage, carrot, onion, spring onions, garlic and ginger.",
+  "Heat the oil in a wide pan over high heat. Stir-fry the garlic and ginger for 30 seconds, then the vegetables for 3 minutes, until just wilted. Add the soy sauce, black pepper and salt. Cool completely.",
+  "Roll the dough into a log and cut it into pieces about 2.5 cm across. Roll each into a thin round about 8 cm across, thinner at the edges.",
+  "Put a spoonful of filling in the centre. Pleat the edge all the way round and twist to seal at the top.",
+  "Steam on a greased steamer plate for 10 to 12 minutes, until the wrappers look translucent and are no longer sticky.",
+  "Serve hot with a red chutney.",
+]
+
+[[recipe]]
+id = "01a18b6e-64b9-7eef-8b71-5fb5ba7878aa"
+name = "Momos (chicken)"
+serves = 4
+prep_minutes = 40
+cook_minutes = 15
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "chicken-mince", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the all-purpose flour with some of the salt, add most of the water little by little and knead into a smooth, firm dough. Cover and rest for 30 minutes.",
+  "Very finely chop the onion, spring onions, garlic and ginger.",
+  "Mix the chicken mince with them, the soy sauce, black pepper, oil, salt and the rest of the water. Beat with your hand for 2 minutes, until sticky and juicy.",
+  "Roll the dough into a log and cut it into pieces about 2.5 cm across. Roll each into a thin round about 8 cm across.",
+  "Put a spoonful of filling in the centre, pleat the edge round and twist to seal.",
+  "Steam on a greased steamer plate for 12 to 15 minutes, until the filling is cooked through and firm.",
+  "Serve hot with a red chutney and clear soup.",
+]
+
+[[recipe]]
+id = "01a18b6e-64bb-7068-87da-4caaa0829038"
+name = "Thukpa"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "egg-noodles", amount = 200, unit = "g" },
+  { id = "chicken", amount = 300, unit = "g" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "spinach", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 6, unit = "cup" },
+]
+steps = [
+  "Simmer the chicken in the water with salt for 20 minutes, until cooked. Lift it out, shred it and keep the broth.",
+  "Cook the egg noodles in boiling salted water as the packet says, then drain.",
+  "Slice the onion, carrot and cabbage, chop the tomato, garlic, ginger and green chillies, and chop the spinach and spring onions.",
+  "Heat the oil in a pot over medium heat. Cook the onion, garlic, ginger and green chillies for 3 minutes, until soft.",
+  "Add the tomato and cook for 2 minutes. Add the carrot and cabbage and stir for 2 minutes.",
+  "Pour in the broth, add the soy sauce and black pepper and simmer for 5 minutes. Add the spinach and shredded chicken for the last minute.",
+  "Divide the noodles between bowls and ladle the soup over. Taste for salt, top with the spring onions and serve.",
+]
+
+[[recipe]]
+id = "01a18b6e-64be-789f-b77d-282653368b70"
+name = "Shapale"
+serves = 4
+prep_minutes = 30
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "beef-mince", amount = 300, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "cabbage", amount = 1, unit = "cup" },
+  { id = "garlic", amount = 3, unit = "clove" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "spring-onions", amount = 2, unit = "piece" },
+  { id = "soy-sauce", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 2, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the all-purpose flour with salt, add the water little by little and knead into a firm dough. Rest for 20 minutes.",
+  "Finely chop the onion, cabbage, garlic, ginger and spring onions.",
+  "Mix the beef mince with the vegetables, soy sauce, black pepper and salt.",
+  "Roll the dough into thin rounds about 12 cm across. Spread a thin layer of filling on one round, cover with another and press and crimp the edges to seal.",
+  "Heat the oil for deep frying over medium heat.",
+  "Fry the shapale for 4 to 5 minutes per side, until deep golden and the meat inside is cooked.",
+  "Drain, cut into wedges and serve hot with a chilli dip.",
+]
+
+[[recipe]]
+id = "01a18b6e-64c0-7c14-9e8e-8bddf2c10f9c"
+name = "Eromba"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "french-beans", amount = 10, unit = "piece" },
+  { id = "pumpkin", amount = 150, unit = "g" },
+  { id = "dried-fish", amount = 2, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "spring-onions", amount = 3, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Eromba is traditionally made with ngari, a fermented fish from Manipur; dried fish gives a similar depth.",
+  "Peel and cube the potatoes and pumpkin and cut the french beans into short lengths.",
+  "Boil the vegetables in the water with salt for 12 to 15 minutes, until very soft. Drain, keeping a little of the liquid.",
+  "Roast the dried red chillies in a dry pan for 1 minute, until they darken. Toast the dried fish for 1 minute, until fragrant.",
+  "Pound the chillies and dried fish to a coarse paste.",
+  "Mash the vegetables with the paste and a splash of the cooking liquid.",
+  "Stir in the chopped spring onions and coriander leaves. Taste for salt and serve as a side.",
+]
+
+[[recipe]]
+id = "01a18b6e-64c2-73ae-9479-2970b1b60659"
+name = "Jadoh"
+serves = 4
+prep_minutes = 15
+cook_minutes = 45
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "pork", amount = 400, unit = "g" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garlic", amount = 4, unit = "clove" },
+  { id = "turmeric", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "bay-leaves", amount = 2, unit = "leaf" },
+  { id = "mustard-oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it for 20 minutes.",
+  "Cut the pork into small cubes. Chop the onion and crush the ginger and garlic.",
+  "Heat the mustard oil in a heavy pot over medium heat. Fry the pork for 10 minutes, until browned and its fat has rendered.",
+  "Add the onion, ginger, garlic and bay leaves and cook for 5 minutes, until soft.",
+  "Add the turmeric and black pepper and stir for 1 minute.",
+  "Add the drained rice and stir for 2 minutes, until coated and yellow.",
+  "Add the water and salt, bring to a boil, then cover and cook on low heat for 20 minutes, until the rice is tender and the water absorbed.",
+  "Taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18b6e-64c4-7f03-969d-49b315c2a6d2"
+name = "Chak hao kheer"
+serves = 4
+prep_minutes = 5
+cook_minutes = 60
+ingredients = [
+  { id = "black-rice", amount = 0.33, unit = "cup" },
+  { id = "milk", amount = 1, unit = "l" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the black rice and soak it in the water for 4 hours.",
+  "Simmer the black rice with its soaking water for 20 minutes, until soft.",
+  "Add the milk and simmer on low heat for 30 minutes, stirring often, until the black rice is very soft and the kheer turns a deep purple and thickens.",
+  "Add the sugar and crushed cardamom seeds and simmer for 5 minutes.",
+  "Stir in the cashews. Serve warm or chilled.",
+]
+
+[[recipe]]
+id = "01a18b6e-64c7-7a18-b299-a240be93a862"
+name = "Bamboo shoot pickle"
+serves = 8
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "bamboo-shoots", amount = 2, unit = "cup" },
+  { id = "mustard-oil", amount = 0.5, unit = "cup" },
+  { id = "mustard-seeds", amount = 1, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 6, unit = "piece" },
+  { id = "garlic", amount = 6, unit = "clove" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tbsp" },
+  { id = "white-vinegar", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the bamboo shoots, slice them thinly and spread them on a cloth to dry completely for a few hours.",
+  "Dry roast the mustard seeds and dried red chillies for 1 minute and grind them coarsely.",
+  "Heat the mustard oil in a pan until it just smokes, then turn off the heat and let it cool for 2 minutes.",
+  "Add the crushed garlic, turmeric and red chilli powder and stir.",
+  "Add the bamboo shoots, ground spices and salt and stir on low heat for 5 minutes.",
+  "Stir in the white vinegar off the heat. Cool, then pack into a clean, dry jar. Leave for 3 days before eating, and keep it in the fridge.",
+]

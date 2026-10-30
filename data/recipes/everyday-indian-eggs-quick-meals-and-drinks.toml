@@ -56,3 +56,658 @@ steps = [
   "Take the pan off the heat while the eggs still look slightly moist; they keep cooking.",
   "Scatter the coriander leaves over and serve with toast.",
 ]
+
+[[recipe]]
+id = "01a18ba9-fdcd-791b-b47d-acf3aa474d11"
+name = "Boiled egg masala"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "egg", amount = 6, unit = "large" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "coriander-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Boil the eggs for 10 minutes, cool them in cold water and peel. Make a few shallow slits in each.",
+  "Finely chop the onions, tomatoes and green chillies.",
+  "Heat the oil in a pan over medium heat. Fry the eggs with a little of the turmeric for 2 minutes, until lightly blistered. Lift them out.",
+  "Add the cumin seeds, then the onions, and cook for 6 minutes, until golden. Stir in the ginger garlic paste and green chillies for 1 minute.",
+  "Add the tomatoes, the rest of the turmeric, the red chilli powder, coriander powder and salt. Cook for 6 minutes, until the masala leaves the sides of the pan.",
+  "Add the water and simmer for 2 minutes. Add the eggs and toss to coat.",
+  "Sprinkle the garam masala and coriander leaves over, taste for salt and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdcf-7494-8971-ff09fa0f75b5"
+name = "Anda paratha"
+serves = 4
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "whole-wheat-flour", amount = 2, unit = "cup" },
+  { id = "egg", amount = 4, unit = "large" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 0.25, unit = "tsp" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the whole wheat flour with salt and the water into a soft dough. Rest for 15 minutes.",
+  "Finely chop the onion, green chillies and coriander leaves. Beat the eggs with them, the red chilli powder and salt.",
+  "Roll a ball of dough about 5 cm across into a round about 18 cm across.",
+  "Cook it on a hot griddle over medium heat for 1 minute per side, until it puffs. Slit one edge to open a pocket.",
+  "Pour a ladle of the egg mixture into the pocket and press the edge closed.",
+  "Brush with ghee and cook for 2 minutes per side, pressing gently, until the egg is set and the paratha is golden.",
+  "Serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdd1-7e8b-ae7b-2179246d5302"
+name = "Egg dosa"
+serves = 2
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "egg", amount = 2, unit = "large" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "urad-dal", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and urad dal and soak them for 5 hours. Grind with the water into a smooth batter, add salt and leave overnight to ferment.",
+  "Finely chop the onion, green chilli and coriander leaves.",
+  "Heat a griddle over medium-high heat. Pour a ladle of batter and spread it into a round about 20 cm across.",
+  "Crack an egg onto the dosa, break the yolk and spread it over. Scatter the onion, chilli, coriander leaves, black pepper and salt over.",
+  "Drizzle the oil round the edge and cook for 2 to 3 minutes, until the egg sets and the base is crisp.",
+  "Fold and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdd3-7c0d-8ab1-2cddceacd4ed"
+name = "Egg kothu parotta"
+serves = 3
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "frozen-parathas", amount = 4, unit = "piece" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "onion", amount = 1, unit = "large" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cook the frozen parathas as the packet says. Shred them into small pieces.",
+  "Slice the onion, chop the tomato and slit the green chillies.",
+  "Heat the oil on a griddle or wide pan over medium heat. Fry the curry leaves, onion and green chillies for 5 minutes, until soft.",
+  "Add the ginger garlic paste for 1 minute, then the tomato, turmeric, red chilli powder and salt, and cook for 4 minutes.",
+  "Push the masala aside, crack in the eggs and scramble for 1 minute.",
+  "Add the shredded parathas and chop and toss everything together with two spatulas for 4 minutes, until well mixed.",
+  "Sprinkle the garam masala and coriander leaves over, taste for salt and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdd5-77e4-b9b3-6274a577f4fe"
+name = "Bread omelette"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "white-bread", amount = 4, unit = "slice" },
+  { id = "egg", amount = 3, unit = "large" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "butter", amount = 1, unit = "tbsp" },
+  { id = "ketchup", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Finely chop the onion, green chilli and coriander leaves. Beat the eggs with them, the black pepper and salt.",
+  "Melt half the butter on a griddle over medium heat. Pour in half the egg mixture and tilt to spread it into a rectangle about 25 cm by 12 cm.",
+  "Dip both sides of half the white bread in the wet egg and lay them side by side on top.",
+  "Cook for 1 to 2 minutes, until the egg sets underneath, then flip the whole thing.",
+  "Fold the overhanging egg over the bread, then fold it in half like a sandwich. Toast for 1 minute per side, until golden.",
+  "Repeat with the rest of the butter, egg and white bread. Serve hot with the ketchup.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdd8-7039-8578-97176286baee"
+name = "Masala toast"
+serves = 2
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "white-bread", amount = 4, unit = "slice" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "green-chutney", amount = 2, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Boil the potatoes until tender, then peel and mash them.",
+  "Heat the oil in a pan, fry the mustard seeds until they pop, then add the chopped onion and green chilli and cook for 3 minutes.",
+  "Add the turmeric, potatoes, coriander leaves and salt and mix well.",
+  "Spread the white bread with butter and green chutney. Spread the potato filling over half the slices and top with the rest of the white bread.",
+  "Toast on a griddle with the rest of the butter over medium heat for 2 to 3 minutes per side, pressing, until golden and crisp.",
+  "Cut in half and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdda-7598-be6a-18a91c093cfb"
+name = "Vegetable sandwich (Bombay)"
+serves = 2
+prep_minutes = 15
+cook_minutes = 25
+ingredients = [
+  { id = "white-bread", amount = 6, unit = "slice" },
+  { id = "potato", amount = 1, unit = "medium" },
+  { id = "cucumber", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "beetroot", amount = 1, unit = "small" },
+  { id = "green-chutney", amount = 3, unit = "tbsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Boil the potato and beetroot until tender, then peel and slice them thinly.",
+  "Slice the cucumber, tomato and onion into thin rounds.",
+  "Spread each slice of white bread with butter, then green chutney.",
+  "Layer the potato, beetroot, cucumber, tomato and onion on a third of the slices, sprinkling chaat masala and salt between the layers.",
+  "Add another third of the slices, more vegetables and the rest of the white bread on top. Press down gently.",
+  "Cut into quarters and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fddc-79b7-af5d-a34b3e70e16e"
+name = "Cheese chilli toast"
+serves = 2
+prep_minutes = 10
+cook_minutes = 10
+ingredients = [
+  { id = "white-bread", amount = 4, unit = "slice" },
+  { id = "processed-cheese", amount = 1, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "bell-pepper", amount = 0.5, unit = "small" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "chilli-flakes", amount = 0.5, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Grate the processed cheese. Finely chop the green chillies, bell pepper and onion.",
+  "Mix the cheese with the vegetables and chilli flakes.",
+  "Butter the white bread and spread the cheese mixture thickly on the buttered side.",
+  "Toast under a hot grill or in a covered pan over medium heat for 4 to 5 minutes, until the cheese melts and bubbles and the base is crisp.",
+  "Cut into triangles and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdde-7758-a877-11da4a8efe71"
+name = "Maggi masala noodles"
+serves = 2
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "instant-noodles", amount = 2, unit = "piece" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "peas", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "butter", amount = 1, unit = "tsp" },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Use instant noodles that come with a masala seasoning sachet. Finely chop the onion, tomato and green chilli.",
+  "Melt the butter in a small pan over medium heat. Cook the onion, green chilli and peas for 2 minutes. Add the tomato for 1 minute.",
+  "Add the water and the seasoning sachets and bring to a boil.",
+  "Break in the instant noodles and cook for 2 to 3 minutes, stirring, until soft and most of the liquid is absorbed.",
+  "Taste and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18ba9-fde1-74aa-8a02-5e0d20609c87"
+name = "Vermicelli upma"
+serves = 3
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "indian-vermicelli", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Roast the Indian vermicelli in a dry pan over medium heat for 3 minutes, until golden. Set aside.",
+  "Chop the onion, carrot, green chillies and ginger.",
+  "Heat the oil in the pan. Fry the mustard seeds and urad dal until the seeds pop, then the curry leaves, onion, green chillies and ginger for 3 minutes.",
+  "Add the carrot and peas and cook for 2 minutes. Add the water and salt and bring to a boil.",
+  "Add the vermicelli, stir once, cover and cook on low heat for 5 minutes, until soft and dry.",
+  "Squeeze over the lemon juice, scatter the coriander leaves over, fluff and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fde3-7bec-bfdf-d6bf0e802090"
+name = "Oats upma"
+serves = 2
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "rolled-oats", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "peas", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Dry roast the rolled oats in a pan over medium heat for 3 minutes, until lightly toasted. Tip them out.",
+  "Chop the onion, carrot and green chilli.",
+  "Heat the oil, fry the mustard seeds and urad dal until the seeds pop, then add the curry leaves, onion and green chilli and cook for 3 minutes.",
+  "Add the carrot and peas and cook for 2 minutes. Add the water and salt and bring to a boil.",
+  "Stir in the oats, cover and cook on low heat for 2 to 3 minutes, until the water is absorbed.",
+  "Add the lemon juice and coriander leaves, fluff and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fde5-78d9-9d59-cb9916d25062"
+name = "Oats chilla"
+serves = 2
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "rolled-oats", amount = 1, unit = "cup" },
+  { id = "gram-flour", amount = 2, unit = "tbsp" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "tomato", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 1, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Grind the rolled oats to a coarse powder.",
+  "Mix with the gram flour, curd, finely chopped onion, tomato, green chilli and coriander leaves, cumin seeds, salt and the water into a thick, pourable batter. Rest for 10 minutes.",
+  "Heat a griddle over medium heat and grease it with a little of the oil.",
+  "Pour a ladle of batter and spread it into a round about 15 cm across. Drizzle oil round the edge.",
+  "Cook for 2 to 3 minutes per side, until golden and cooked through. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fde7-700d-907b-733f5b8e95ad"
+name = "Poha cutlet"
+serves = 4
+prep_minutes = 15
+cook_minutes = 20
+ingredients = [
+  { id = "flattened-rice", amount = 1, unit = "cup" },
+  { id = "potato", amount = 2, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the flattened rice in a sieve under the tap for 20 seconds, until soft. Drain well.",
+  "Boil the potatoes until tender, then peel and mash them. Grate the carrot and chop the green chillies, ginger and coriander leaves.",
+  "Mix everything with the peas, garam masala, chaat masala and salt into a firm dough.",
+  "Shape into flat patties about 6 cm across.",
+  "Heat the oil in a frying pan over medium heat and shallow fry the cutlets for 3 to 4 minutes per side, until golden and crisp.",
+  "Drain and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fde9-73b3-96e7-44e6e783f628"
+name = "Vegetable cutlet"
+serves = 4
+prep_minutes = 20
+cook_minutes = 20
+ingredients = [
+  { id = "potato", amount = 3, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "medium" },
+  { id = "french-beans", amount = 8, unit = "piece" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "beetroot", amount = 1, unit = "small" },
+  { id = "breadcrumbs", amount = 0.75, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Boil the potatoes until tender, then peel and mash them. Finely chop the carrot and french beans and boil them with the peas for 5 minutes. Drain well. Grate the beetroot.",
+  "Mix the vegetables with the chopped green chillies, ginger and coriander leaves, the garam masala, chaat masala, a few spoonfuls of the breadcrumbs and salt.",
+  "Shape into oval patties about 7 cm long.",
+  "Whisk the all-purpose flour with the water into a thin paste. Dip each cutlet in it, then roll in the rest of the breadcrumbs.",
+  "Shallow fry in the oil over medium heat for 3 minutes per side, until crisp and golden.",
+  "Drain and serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdec-7e3c-aa03-7e6a7c198a40"
+name = "Paneer kathi roll"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "paneer", amount = 250, unit = "g" },
+  { id = "curd", amount = 2, unit = "tbsp" },
+  { id = "kashmiri-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "bell-pepper", amount = 1, unit = "medium" },
+  { id = "chaat-masala", amount = 1, unit = "tsp" },
+  { id = "green-chutney", amount = 4, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Knead the all-purpose flour with a spoonful of the oil, salt and the water into a soft dough. Rest for 20 minutes.",
+  "Cut the paneer into strips and toss with the curd, Kashmiri chilli powder, garam masala, half the lemon juice and salt.",
+  "Slice the onion and bell pepper.",
+  "Heat a spoonful of the oil in a pan over high heat. Cook the paneer, onion and bell pepper for 4 minutes, until charred at the edges.",
+  "Roll the dough into thin rounds and cook on a hot griddle with a little oil for 1 minute per side.",
+  "Spread with green chutney, add the paneer filling, sprinkle chaat masala and the rest of the lemon juice, and roll up. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdee-7581-95ec-b06f1bf9bfde"
+name = "Rava dhokla"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "semolina", amount = 1, unit = "cup" },
+  { id = "curd", amount = 0.75, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "fruit-salt", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "sesame-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 1, unit = "sprig" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Mix the semolina with the curd, the water, grated ginger, chopped green chillies and salt into a thick batter. Rest for 15 minutes.",
+  "Bring a steamer to a boil and grease a tin about 20 cm across.",
+  "Stir the fruit salt into the batter and pour it into the tin at once.",
+  "Steam for 12 to 15 minutes, until a knife comes out clean. Cut into squares.",
+  "Heat the oil, fry the mustard seeds until they pop, then the sesame seeds and curry leaves. Pour over the dhokla, scatter the coriander leaves over and serve.",
+]
+
+[[recipe]]
+id = "01a18ba9-fdf0-7460-a0c1-bcf8941e1638"
+name = "Banana sheera"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "banana", amount = 1, unit = "medium" },
+  { id = "sugar", amount = 0.33, unit = "cup" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "cashews", amount = 8, unit = "piece" },
+]
+steps = [
+  "Heat the ghee in a pan over medium heat. Fry the cashews for 1 minute, until golden. Lift them out.",
+  "Roast the semolina in the ghee on low heat for 5 minutes, until fragrant.",
+  "Warm the milk and add it slowly, stirring. Cook for 2 minutes, until thick.",
+  "Add the sugar and the banana, mashed with a fork, and stir for 3 minutes, until glossy.",
+  "Crush the cardamom seeds, stir them in with the cashews, and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bae-8f3d-714c-aeef-3a819014d2ed"
+name = "Sweet lassi"
+serves = 2
+prep_minutes = 5
+cook_minutes = 0
+ingredients = [
+  { id = "curd", amount = 2, unit = "cup" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "green-cardamom", amount = 2, unit = "piece" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Peel the cardamom pods and crush the seeds finely.",
+  "Whisk the curd, sugar and crushed cardamom in a jug for 1 to 2 minutes, until the sugar dissolves and the curd is smooth and frothy.",
+  "Whisk in the water a little at a time, until the lassi is thick but pourable.",
+  "Taste and add more sugar if you like. Serve cold in tall glasses.",
+]
+
+[[recipe]]
+id = "01a18bae-8f40-7662-8237-31e6885aeeff"
+name = "Ginger lemon tea"
+serves = 2
+prep_minutes = 5
+cook_minutes = 6
+ingredients = [
+  { id = "water", amount = 2, unit = "cup" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "black-tea", amount = 1.5, unit = "tsp" },
+  { id = "lemon", amount = 1, unit = "small" },
+  { id = "honey", amount = 2, unit = "tsp" },
+]
+steps = [
+  "Peel the ginger and crush it lightly with the flat of a knife.",
+  "Bring the water and ginger to a boil in a small pan over medium-high heat, then simmer for 3 to 4 minutes, until the water smells strongly of ginger.",
+  "Add the black tea, take the pan off the heat and steep for 2 minutes, until amber.",
+  "Strain into cups. Squeeze in the lemon juice and stir in the honey.",
+  "Taste and add more honey or lemon. Serve hot.",
+]
+
+[[recipe]]
+id = "01a18bae-8f42-72fb-a65a-1d1bbd822900"
+name = "Haldi doodh"
+serves = 2
+prep_minutes = 5
+cook_minutes = 8
+ingredients = [
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "ginger", amount = 1, unit = "piece" },
+  { id = "black-pepper", amount = 0.25, unit = "tsp" },
+  { id = "ground-cinnamon", amount = 0.25, unit = "tsp" },
+  { id = "jaggery", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Peel and finely grate the ginger.",
+  "Warm the milk in a small pan over medium heat for 3 to 4 minutes, until it steams.",
+  "Whisk in the turmeric, ginger, black pepper and ground cinnamon and simmer gently for 3 minutes, stirring, until golden and fragrant. Do not let it boil over.",
+  "Take it off the heat and stir in the jaggery until it melts.",
+  "Taste for sweetness, strain into mugs and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bae-8f44-7c2a-a430-1b91b02ba245"
+name = "Kokum sharbat"
+serves = 4
+prep_minutes = 5
+cook_minutes = 10
+ingredients = [
+  { id = "kokum", amount = 12, unit = "piece" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "cumin-powder", amount = 0.5, unit = "tsp" },
+  { id = "black-salt", amount = 0.25, unit = "tsp" },
+  { id = "water", amount = 3, unit = "cup" },
+]
+steps = [
+  "Rinse the kokum under the tap.",
+  "Simmer the kokum with the sugar and a third of the water in a pan over medium heat for 8 to 10 minutes, until the liquid is deep purple and syrupy.",
+  "Leave it to cool, then press the kokum hard against a sieve to squeeze out its juice, and discard the kokum.",
+  "Stir in the rest of the water, the cumin powder and black salt.",
+  "Taste and balance the sweetness and sourness. Serve chilled.",
+]
+
+[[recipe]]
+id = "01a18bae-8f46-7c2c-aa69-2bad3cac75d8"
+name = "Aam panna"
+serves = 4
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "raw-mango", amount = 2, unit = "medium" },
+  { id = "sugar", amount = 0.5, unit = "cup" },
+  { id = "cumin-powder", amount = 1, unit = "tsp" },
+  { id = "black-salt", amount = 0.5, unit = "tsp" },
+  { id = "mint", amount = 2, unit = "tbsp" },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Wash the raw mangoes and put them in a pan with half the water.",
+  "Boil over medium heat for 12 to 15 minutes, until the skins turn pale and the flesh is completely soft when pressed.",
+  "Lift the raw mangoes out and let them cool, then peel them and scrape all the raw mango pulp off the stones.",
+  "Blend the raw mango pulp with the sugar, cumin powder, black salt, mint and the rest of the water until smooth.",
+  "Taste and balance the sweet and sour. Strain and serve chilled.",
+]
+
+[[recipe]]
+id = "01a18bae-8f48-771d-ba43-a7befdb8f067"
+name = "Rose milk"
+serves = 3
+prep_minutes = 5
+cook_minutes = 0
+ingredients = [
+  { id = "milk", amount = 3, unit = "cup" },
+  { id = "rose-syrup", amount = 4, unit = "tbsp" },
+  { id = "sugar", amount = 1, unit = "tbsp" },
+]
+steps = [
+  "Chill the milk well.",
+  "Stir the rose syrup and sugar into the cold milk for about 1 minute, until the sugar dissolves and the milk is evenly pink.",
+  "Taste and add more rose syrup if you like. Serve cold.",
+]
+
+[[recipe]]
+id = "01a18bae-8f4b-7469-a05d-6c23cca2edf1"
+name = "Badam milk"
+serves = 3
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "almonds", amount = 20, unit = "piece" },
+  { id = "milk", amount = 3, unit = "cup" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Bring the water to a boil, pour it over the almonds and leave for 20 minutes, until the skins wrinkle. Slip off the skins.",
+  "Grind the almonds with a little of the milk to a fine paste.",
+  "Simmer the rest of the milk in a heavy pan over medium heat for 8 minutes, stirring often, until slightly reduced.",
+  "Stir in the blended almond mixture, sugar, saffron and the cardamom seeds, crushed, and simmer for 5 minutes, until creamy and pale gold.",
+  "Taste for sweetness and serve warm.",
+]
+
+[[recipe]]
+id = "01a18bae-8f4d-7d22-8881-78f6ecd7afee"
+name = "Cold coffee"
+serves = 2
+prep_minutes = 5
+cook_minutes = 0
+ingredients = [
+  { id = "instant-coffee", amount = 2, unit = "tsp" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "milk", amount = 2, unit = "cup" },
+  { id = "water", amount = 2, unit = "tbsp" },
+]
+steps = [
+  "Stir the instant coffee and sugar into the water until dissolved.",
+  "Blend with the cold milk for 1 minute, until thick and foamy.",
+  "Taste and add more sugar or coffee. Pour into tall glasses and serve straight away.",
+]
+
+[[recipe]]
+id = "01a18bae-8f4f-7453-8b00-7f116896f065"
+name = "Kesar pista milk"
+serves = 3
+prep_minutes = 10
+cook_minutes = 15
+ingredients = [
+  { id = "milk", amount = 3, unit = "cup" },
+  { id = "saffron", amount = 1, unit = "pinch" },
+  { id = "pistachios", amount = 20, unit = "piece" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "green-cardamom", amount = 3, unit = "piece" },
+]
+steps = [
+  "Soak the saffron in a spoonful of the milk, warmed. Finely chop the pistachios and crush the cardamom seeds.",
+  "Bring the rest of the milk to a boil in a heavy pan over medium heat, then simmer for 10 minutes, stirring often, until slightly thick.",
+  "Stir in the saffron milk, sugar, cardamom and most of the pistachios and simmer for 3 minutes, until pale yellow.",
+  "Taste for sweetness, pour into glasses and scatter the rest of the pistachios over. Serve warm or chilled.",
+]
