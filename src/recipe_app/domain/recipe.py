@@ -57,7 +57,7 @@ class Recipe:
     cook_minutes: int
     ingredients: tuple[Ingredient, ...]
     plan_ahead: PlanAhead | None = None
-    # Only set when read from the database; the swipe card shows it (ADR-0010).
+    # The swipe card shows it (ADR-0010); the recipe files and the database both set it.
     image: Image | None = None
 
     @property

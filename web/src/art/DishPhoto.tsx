@@ -23,6 +23,7 @@ export function DishPhoto({ recipeId, url, alt, className, artSize }: Props) {
       width={800}
       height={800}
       decoding="async"
+      draggable={false}
       onError={() => {
         setFailed(true);
       }}
