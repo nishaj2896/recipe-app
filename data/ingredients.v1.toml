@@ -444,6 +444,14 @@ category = "vegetables"
 search_terms = ["fresh ginger"]
 
 [[ingredient]]
+id = "gongura"
+name = "Gongura"
+class = "A"
+diet = "vegan"
+category = "vegetables"
+search_terms = ["sorrel leaves", "roselle leaves", "ambadi leaves"]
+
+[[ingredient]]
 id = "green-chillies"
 name = "Green chillies"
 class = "S"
@@ -2319,6 +2327,14 @@ name = "Baguette"
 class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
+
+[[ingredient]]
+id = "boondi"
+name = "Boondi"
+class = "B"
+diet = "vegan"
+category = "bread-bakery-and-snacks"
+search_terms = ["fried gram flour pearls"]
 
 [[ingredient]]
 id = "breadcrumbs"

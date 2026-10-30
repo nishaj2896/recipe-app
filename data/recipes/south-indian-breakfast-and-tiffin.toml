@@ -31,3 +31,917 @@ steps = [
   "Lower the heat and pour in the semolina in a thin stream with one hand, stirring constantly with the other so no lumps form.",
   "Cover and cook on low heat for 2 minutes, until the semolina has absorbed the water and looks fluffy. Fluff with a fork and serve hot.",
 ]
+
+[[recipe]]
+id = "01a188e6-a83e-78f1-a1ee-2349f5e25707"
+name = "Idli"
+serves = 6
+prep_minutes = 840
+cook_minutes = 15
+ingredients = [
+  { id = "idli-rice", amount = 2, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 1, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the idli rice and soak it in plenty of water for 6 hours. In another bowl, rinse and soak the urad dal with the fenugreek seeds.",
+  "Drain the urad dal and grind it, adding the water a little at a time, for 10 minutes, until light, fluffy and doubled in volume. A drop should float in a bowl of water.",
+  "Drain the idli rice and grind it with the rest of the water to a batter that feels slightly grainy between your fingers.",
+  "Mix both batters with the salt in a large bowl, stirring by hand for 1 minute.",
+  "Cover and leave in a warm place for 8 to 12 hours, until it has risen, looks bubbly and smells pleasantly sour.",
+  "Grease the idli moulds with the oil and bring water to a boil in the steamer.",
+  "Without stirring the batter much, fill the moulds three-quarters full.",
+  "Steam for 10 to 12 minutes, until a knife pushed into an idli comes out clean.",
+  "Rest for 2 minutes, then lift them out with a wet spoon. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a840-7af6-83f9-144f64aa1b2a"
+name = "Rava idli"
+serves = 4
+prep_minutes = 25
+cook_minutes = 15
+ingredients = [
+  { id = "semolina", amount = 1, unit = "cup" },
+  { id = "curd", amount = 1, unit = "cup" },
+  { id = "cashews", amount = 10, unit = "piece" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 0.5, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Chop the ginger and green chillies and grate the carrot.",
+  "Heat the ghee in a pan over medium heat. Add the mustard seeds and chana dal and fry until the seeds pop and the dal turns golden.",
+  "Add the cashews, curry leaves, ginger and green chillies and stir for 30 seconds.",
+  "Add the semolina and roast for 5 minutes, stirring, until fragrant but still pale. Let it cool.",
+  "Mix in the curd, carrot, coriander leaves, salt and the water into a thick batter. Rest for 20 minutes.",
+  "Grease the idli moulds and bring water to a boil in the steamer.",
+  "Just before steaming, stir in the baking soda. Add a splash of water if the batter has become too thick to pour.",
+  "Fill the moulds and steam for 12 minutes, until a knife comes out clean. Rest for 2 minutes before unmoulding.",
+]
+
+[[recipe]]
+id = "01a188e6-a842-793c-b480-e9e5cbe1d5f2"
+name = "Masala dosa"
+serves = 4
+prep_minutes = 840
+cook_minutes = 40
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 2, unit = "tbsp" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 12, unit = "leaf" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it in plenty of water for 6 hours. In another bowl, soak the urad dal with half the chana dal and the fenugreek seeds.",
+  "Grind each smooth with some of the water, mix them with salt and leave overnight in a warm place, until risen and bubbly.",
+  "For the filling, boil the potatoes until tender. Peel and crush them roughly.",
+  "Thinly slice the onions, slit the green chillies and grate the ginger.",
+  "Heat the oil in a pan over medium heat. Add the mustard seeds and the rest of the chana dal and fry until the seeds pop and the dal turns golden.",
+  "Add the curry leaves, onions, green chillies and ginger and cook for 5 minutes, until the onions are soft.",
+  "Add the turmeric, potatoes, salt and a splash of the water and mix into a soft masala. Keep it warm.",
+  "Heat a cast-iron griddle over medium-high heat. A sprinkle of water should sizzle away at once. Wipe it with a little oil.",
+  "Pour a ladle of batter in the centre and spread it outward in a quick spiral with the back of the ladle into a thin round.",
+  "Drizzle ghee around the edge and cook for 2 to 3 minutes, until golden and crisp underneath.",
+  "Spoon some potato masala into the middle, fold the dosa over and serve straight away.",
+]
+
+[[recipe]]
+id = "01a188e6-a845-7924-9cb5-dc4f1fd58989"
+name = "Plain dosa"
+serves = 4
+prep_minutes = 840
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "chana-dal", amount = 1, unit = "tbsp" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it in plenty of water for 6 hours. In another bowl, soak the urad dal with the chana dal and fenugreek seeds.",
+  "Grind each smooth with some of the water.",
+  "Mix them with salt and leave overnight in a warm place, until risen and bubbly.",
+  "Heat a cast-iron griddle over medium-high heat. A sprinkle of water should sizzle away at once. Wipe it with a little oil.",
+  "Pour a ladle of batter in the centre and spread it outward in a quick spiral with the back of the ladle into a thin round.",
+  "Drizzle oil around the edge and cook for 2 to 3 minutes, until golden and crisp underneath.",
+  "Fold and serve straight away.",
+]
+
+[[recipe]]
+id = "01a188e6-a847-798f-86de-7eb83bd2dc75"
+name = "Rava dosa"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "rice-flour", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Chop the green chillies, ginger, curry leaves and coriander leaves. Crush the black pepper.",
+  "Mix the semolina, rice flour and all-purpose flour with the cumin seeds, black pepper, green chillies, ginger, curry leaves, coriander leaves and salt.",
+  "Whisk in the water to a very thin, watery batter. Rest for 20 minutes.",
+  "Heat a griddle over high heat until very hot.",
+  "Stir the batter well, as the semolina sinks. Pour it from a height over the griddle, starting at the edge and working in, so it forms a lacy net. Don't spread it.",
+  "Drizzle oil over and cook on medium heat for 3 to 4 minutes, until golden and crisp.",
+  "Fold and serve straight away.",
+]
+
+[[recipe]]
+id = "01a188e6-a849-7a9d-b57f-17583d1c5f72"
+name = "Onion rava dosa"
+serves = 4
+prep_minutes = 20
+cook_minutes = 30
+ingredients = [
+  { id = "semolina", amount = 0.5, unit = "cup" },
+  { id = "rice-flour", amount = 0.5, unit = "cup" },
+  { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Chop the green chillies, ginger and curry leaves, and crush the black pepper. Very finely chop the onions and coriander leaves.",
+  "Mix the semolina, rice flour and all-purpose flour with the cumin seeds, black pepper, green chillies, ginger, curry leaves and salt.",
+  "Whisk in the water to a very thin, watery batter. Rest for 20 minutes.",
+  "Heat a griddle over high heat until very hot. Scatter some of the onions and coriander leaves over it.",
+  "Stir the batter well and pour it from a height over the onions, so it forms a lacy net.",
+  "Drizzle oil over and cook on medium heat for 3 to 4 minutes, until golden and crisp.",
+  "Fold and serve straight away.",
+]
+
+[[recipe]]
+id = "01a188e6-a84b-7914-b381-264e15b4ee18"
+name = "Set dosa"
+serves = 4
+prep_minutes = 840
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.25, unit = "cup" },
+  { id = "flattened-rice", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "butter", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the rice, urad dal and fenugreek seeds together and soak them for 6 hours. Rinse the flattened rice and add it for the last 30 minutes.",
+  "Grind everything with the water to a smooth, thick batter.",
+  "Mix in the salt and leave overnight in a warm place, until risen and bubbly.",
+  "Heat a griddle over medium heat. Pour a ladle of batter in the centre and spread it only a little, into a thick, small round.",
+  "Dot with the butter, cover and cook for 2 to 3 minutes, until the top is spongy and full of holes and the underside is golden. Don't flip.",
+  "Serve in sets of three.",
+]
+
+[[recipe]]
+id = "01a188e6-a84e-70a4-8c8d-c3da512978e1"
+name = "Neer dosa"
+serves = 4
+prep_minutes = 240
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 1, unit = "cup" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it in plenty of water for 4 hours.",
+  "Grind it with the grated coconut and some of the water to a very smooth paste.",
+  "Thin it with the rest of the water and add salt. The batter should be very thin and runny; it needs no fermenting.",
+  "Heat a non-stick griddle over medium heat and grease it lightly.",
+  "Stir the batter. Pour a ladleful from the edge inward in a circle, tilting the griddle so it spreads into a thin, lacy round.",
+  "Cover and cook for 1 minute, until the edges lift and the top is set and white. Don't flip or brown it.",
+  "Fold into quarters and serve warm.",
+]
+
+[[recipe]]
+id = "01a188e6-a850-7e21-876b-7a364dca12e0"
+name = "Pesarattu"
+serves = 4
+prep_minutes = 300
+cook_minutes = 25
+ingredients = [
+  { id = "mung-beans", amount = 1, unit = "cup" },
+  { id = "rice", amount = 2, unit = "tbsp" },
+  { id = "ginger", amount = 15, unit = "g" },
+  { id = "green-chillies", amount = 3, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the whole green mung beans and the rice and soak them together for 5 hours.",
+  "Drain and grind them with the ginger, green chillies, cumin seeds, salt and the water into a smooth, pourable batter. It needs no fermenting.",
+  "Finely chop the onion and coriander leaves.",
+  "Heat a griddle over medium-high heat and wipe it with a little oil.",
+  "Pour a ladle of batter in the centre and spread it thin with the back of the ladle.",
+  "Scatter some onion and coriander leaves over and drizzle oil around the edge.",
+  "Cook for 2 to 3 minutes, until crisp and golden underneath. Fold and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a852-7c61-8e2e-397362b11e41"
+name = "Adai"
+serves = 4
+prep_minutes = 240
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 0.75, unit = "cup" },
+  { id = "toor-dal", amount = 0.25, unit = "cup" },
+  { id = "chana-dal", amount = 0.25, unit = "cup" },
+  { id = "urad-dal", amount = 2, unit = "tbsp" },
+  { id = "moong-dal", amount = 2, unit = "tbsp" },
+  { id = "dried-red-chillies", amount = 4, unit = "piece" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the rice, toor dal, chana dal, urad dal and moong dal together and soak them with the dried red chillies for 4 hours.",
+  "Drain and grind them coarsely with the ginger, asafoetida, salt and the water. The batter should be thick and slightly grainy.",
+  "Finely chop the curry leaves and onion and stir them in.",
+  "Heat a griddle over medium heat. Spread a ladle of batter into a thick round and make a small hole in the centre.",
+  "Drizzle oil into the hole and around the edge.",
+  "Cook for 3 minutes, until crisp and golden underneath.",
+  "Flip and cook for 3 minutes more. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a855-71ed-9bfc-0c9d642f82e1"
+name = "Uttapam"
+serves = 4
+prep_minutes = 840
+cook_minutes = 30
+ingredients = [
+  { id = "idli-rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the idli rice and soak it in plenty of water for 6 hours. In another bowl, soak the urad dal with the fenugreek seeds.",
+  "Grind each with some of the water, mix with salt and leave overnight in a warm place, until risen. Day-old batter works best.",
+  "Finely chop the onion, green chillies and coriander leaves.",
+  "Heat a griddle over medium heat. Pour a ladle of batter and spread it into a thick round.",
+  "Scatter the onion, green chillies and coriander leaves over and press them in lightly.",
+  "Drizzle oil around the edge, cover and cook for 3 minutes, until golden underneath.",
+  "Flip and cook the topping side for 2 minutes, until the onion browns lightly. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a857-74b4-8d83-ccabe430c05c"
+name = "Onion tomato uttapam"
+serves = 4
+prep_minutes = 840
+cook_minutes = 30
+ingredients = [
+  { id = "idli-rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "tomato", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "idli-podi", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the idli rice and soak it in plenty of water for 6 hours. In another bowl, soak the urad dal with the fenugreek seeds.",
+  "Grind each with some of the water, mix with salt and leave overnight in a warm place, until risen.",
+  "Finely chop the onion, tomato, green chillies and coriander leaves.",
+  "Heat a griddle over medium heat. Pour a ladle of batter and spread it into a thick round.",
+  "Top with the onion, tomato, green chillies, coriander leaves and a sprinkle of idli podi, and press lightly.",
+  "Drizzle oil around the edge, cover and cook for 3 minutes, until golden underneath.",
+  "Flip and cook the topping side for 2 minutes. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a859-75ba-bfec-282fbe3f42b8"
+name = "Appam"
+serves = 4
+prep_minutes = 600
+cook_minutes = 25
+ingredients = [
+  { id = "rice", amount = 1.5, unit = "cup" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "sugar", amount = 2, unit = "tbsp" },
+  { id = "active-dry-yeast", amount = 0.5, unit = "tsp" },
+  { id = "coconut-milk", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1, unit = "cup" },
+]
+steps = [
+  "Rinse the rice and soak it in plenty of water for 4 hours. Drain.",
+  "Take a small handful of the soaked rice and cook it in a little of the water for 10 minutes, until mushy. This gives the appam its lacy edge.",
+  "Grind the soaked rice, the cooked rice and the grated coconut with most of the rest of the water to a smooth batter.",
+  "Warm the last of the water and dissolve the active dry yeast and sugar in it. Stir it into the batter.",
+  "Cover and leave in a warm place for 6 to 8 hours, until bubbly and doubled.",
+  "Stir in the coconut milk and salt until the batter pours easily.",
+  "Heat an appachatti over medium heat. Pour in a ladle of batter and swirl the pan at once, so the batter coats the sides thinly.",
+  "Cover and cook for 2 minutes, until the centre is soft and spongy and the edges are crisp and golden. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a85b-7547-9e70-1b8b55331ede"
+name = "Idiyappam"
+serves = 4
+prep_minutes = 10
+cook_minutes = 25
+ingredients = [
+  { id = "rice-flour", amount = 2, unit = "cup" },
+  { id = "coconut", amount = 0.5, unit = "cup" },
+  { id = "oil", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Dry roast the rice flour in a pan over low heat for 5 minutes, stirring, until it feels light. Don't let it colour.",
+  "Bring the water to a boil with the salt and oil.",
+  "Pour the water over the rice flour while stirring with a spoon, until it comes together.",
+  "When cool enough to handle, knead it for 2 minutes into a smooth, soft dough.",
+  "Grease idli plates. Press the dough through an idiyappam press with the finest disc onto the plates in loose circles.",
+  "Sprinkle a little grated coconut on each.",
+  "Steam for 8 to 10 minutes, until the strands look glossy. Serve warm.",
+]
+
+[[recipe]]
+id = "01a188e6-a85e-7a81-95c3-da336c547c81"
+name = "Puttu"
+serves = 4
+prep_minutes = 20
+cook_minutes = 15
+ingredients = [
+  { id = "rice-flour", amount = 2, unit = "cup" },
+  { id = "coconut", amount = 1, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.75, unit = "cup" },
+]
+steps = [
+  "Mix the salt into the water.",
+  "Sprinkle the water over the rice flour a little at a time, rubbing it in with your fingertips, until the flour is damp, holds a shape when pressed but stays crumbly.",
+  "Rest for 15 minutes, then pulse it briefly in a mixer to break up any lumps.",
+  "Fill a puttu maker in layers: a layer of grated coconut, then rice flour mixture, repeating to the top and finishing with coconut.",
+  "Steam for 7 to 8 minutes, until steam comes out of the top.",
+  "Push the cylinder out onto a plate and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a860-7ddd-8d31-de266d80a111"
+name = "Medu vada"
+serves = 4
+prep_minutes = 240
+cook_minutes = 30
+ingredients = [
+  { id = "urad-dal", amount = 1, unit = "cup" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.25, unit = "cup" },
+]
+steps = [
+  "Rinse the urad dal and soak it for 4 hours. Drain very well.",
+  "Grind it, adding the water a spoonful at a time only if needed, to a thick, fluffy batter.",
+  "Beat the batter with your hand for 3 to 4 minutes to trap air. A drop should float in a bowl of water.",
+  "Finely chop the ginger, green chillies, curry leaves and onion and crush the black pepper. Mix them into the batter with the salt.",
+  "Heat the oil for deep frying over medium heat.",
+  "Wet your hands. Take a ball of batter, flatten it on your palm and poke a hole in the centre with your thumb.",
+  "Slide it gently into the oil. Fry for 4 to 5 minutes, turning, until golden and crisp outside and soft inside.",
+  "Drain on paper and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a862-77f5-8644-a458d0be7b23"
+name = "Masala vada"
+serves = 4
+prep_minutes = 180
+cook_minutes = 25
+ingredients = [
+  { id = "chana-dal", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "dried-red-chillies", amount = 2, unit = "piece" },
+  { id = "fennel-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Rinse the chana dal and soak it for 3 hours. Drain it very well in a sieve; wet dal makes the vadas soak up oil.",
+  "Keep a handful of the dal aside. Grind the rest with the dried red chillies, ginger and fennel seeds into a dry, coarse paste, pulsing rather than running the grinder.",
+  "Finely chop the onion, green chillies, curry leaves and coriander leaves.",
+  "Mix the paste with the whole dal, the chopped onion and herbs, the green chillies and salt.",
+  "Heat the oil for deep frying over medium heat.",
+  "Take a portion about the size of a golf ball, press it into a flat patty and slide it into the oil.",
+  "Fry for 5 to 6 minutes, turning, until deep golden and crunchy. Drain on paper and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a864-7350-92f2-cb841fdb02cd"
+name = "Vegetable upma"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "semolina", amount = 1, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "french-beans", amount = 50, unit = "g" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "ghee", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Dry roast the semolina in a pan over medium heat for 5 minutes, stirring, until fragrant but not coloured. Tip it onto a plate.",
+  "Finely chop the onion, green chillies and ginger. Dice the carrot and french beans. Bring the water to a boil in another pan.",
+  "Heat the ghee in the first pan over medium heat. Add the mustard seeds, urad dal and chana dal and fry until the seeds pop and the dals turn golden.",
+  "Add the curry leaves, green chillies, ginger and onion and cook for 3 minutes, until soft.",
+  "Add the carrot, french beans and peas and cook for 3 minutes.",
+  "Pour in the hot water, add salt and bring back to a boil.",
+  "Lower the heat and pour in the semolina in a thin stream with one hand, stirring constantly with the other so no lumps form.",
+  "Cover and cook on low heat for 3 minutes, until the semolina has absorbed the water.",
+  "Squeeze over the lemon juice, fluff with a fork and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a867-779b-9610-0c10d12f8ae2"
+name = "Semiya upma"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "indian-vermicelli", amount = 1.5, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "peas", amount = 0.25, unit = "cup" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "lemon", amount = 0.5, unit = "medium" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "If the Indian vermicelli isn't pre-roasted, roast it in a dry pan over medium heat for 3 to 4 minutes, stirring, until golden. Set aside.",
+  "Finely chop the onion, green chillies and ginger, and dice the carrot.",
+  "Heat the oil in a pan over medium heat. Add the mustard seeds, urad dal and chana dal and fry until the seeds pop and the dals turn golden.",
+  "Add the curry leaves, green chillies, ginger and onion and cook for 3 minutes, until soft.",
+  "Add the carrot and peas and stir for 2 minutes.",
+  "Pour in the water, add salt and bring to a boil.",
+  "Add the vermicelli and stir once. Cover and cook on low heat for 5 minutes, until the water is absorbed and the strands are soft.",
+  "Fluff with a fork, squeeze over the lemon juice and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a869-79bd-883f-ce5dd2b6e770"
+name = "Ven pongal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 30
+ingredients = [
+  { id = "rice", amount = 0.75, unit = "cup" },
+  { id = "moong-dal", amount = 0.25, unit = "cup" },
+  { id = "black-pepper", amount = 1, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 4, unit = "cup" },
+]
+steps = [
+  "Dry roast the moong dal in a pan over medium heat for 3 minutes, until fragrant and lightly golden.",
+  "Rinse the dal and rice together.",
+  "Pressure cook them with the water and salt for 4 whistles, until very soft. Mash lightly with the back of a spoon.",
+  "Crush the black pepper coarsely and grate the ginger.",
+  "Heat the ghee in a small pan over medium heat. Fry the cashews for 1 minute, until golden.",
+  "Add the cumin seeds, black pepper, ginger, curry leaves and asafoetida and stir for 20 seconds.",
+  "Pour this over the pongal and mix well. Add a splash of hot water if it is too thick; it should be soft and spoonable. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a86b-7d90-8a1f-e806b4e7d3d7"
+name = "Sakkarai pongal"
+serves = 4
+prep_minutes = 10
+cook_minutes = 35
+ingredients = [
+  { id = "rice", amount = 0.5, unit = "cup" },
+  { id = "moong-dal", amount = 2, unit = "tbsp" },
+  { id = "jaggery", amount = 1, unit = "cup" },
+  { id = "milk", amount = 1, unit = "cup" },
+  { id = "ghee", amount = 4, unit = "tbsp" },
+  { id = "cashews", amount = 12, unit = "piece" },
+  { id = "raisins", amount = 1, unit = "tbsp" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "nutmeg", amount = 1, unit = "pinch" },
+  { id = "water", amount = 2.5, unit = "cup" },
+]
+steps = [
+  "Dry roast the moong dal in a pan over medium heat for 3 minutes, until fragrant.",
+  "Rinse the dal with the rice and pressure cook both with the milk and most of the water for 4 whistles, until very soft. Mash well.",
+  "Melt the jaggery in the rest of the water over low heat, then strain out any grit.",
+  "Pour the jaggery syrup into the rice and simmer for 5 minutes, stirring constantly, until thick.",
+  "Stir in half the ghee.",
+  "Fry the cashews and raisins in the rest of the ghee for 1 to 2 minutes, until the cashews are golden and the raisins puff.",
+  "Crush the green cardamom and grind the seeds. Add them to the pongal with the nutmeg, cashews and raisins and serve warm.",
+]
+
+[[recipe]]
+id = "01a188e6-a86d-78bc-a885-2ff9d76c5aef"
+name = "Lemon sevai"
+serves = 4
+prep_minutes = 15
+cook_minutes = 15
+ingredients = [
+  { id = "rice-vermicelli", amount = 200, unit = "g" },
+  { id = "lemon", amount = 1, unit = "medium" },
+  { id = "peanuts", amount = 2, unit = "tbsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "asafoetida", amount = 1, unit = "pinch" },
+  { id = "oil", amount = 2, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "l" },
+]
+steps = [
+  "Bring the water to a boil. Add the rice vermicelli and boil for 3 to 4 minutes, until just soft.",
+  "Drain, rinse in cold water and spread it out to dry for 10 minutes.",
+  "Slit the green chillies and grate the ginger.",
+  "Heat the oil in a wide pan over medium heat. Fry the peanuts for 2 minutes, until crisp.",
+  "Add the mustard seeds, chana dal and urad dal and fry until the seeds pop and the dals turn golden.",
+  "Add the curry leaves, green chillies, ginger, asafoetida and turmeric and stir for 10 seconds.",
+  "Add the vermicelli and salt and toss gently, until evenly yellow.",
+  "Take off the heat, squeeze over the lemon juice, toss and serve.",
+]
+
+[[recipe]]
+id = "01a188e6-a870-77c2-b879-2d807d10a1c0"
+name = "Akki roti"
+serves = 4
+prep_minutes = 15
+cook_minutes = 30
+ingredients = [
+  { id = "rice-flour", amount = 2, unit = "cup" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "carrot", amount = 1, unit = "small" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "dill", amount = 2, unit = "tbsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.25, unit = "cup" },
+]
+steps = [
+  "Finely chop the onion, green chillies, dill and coriander leaves. Grate the carrot and coconut.",
+  "Mix the rice flour with the vegetables, coconut, herbs, cumin seeds and salt.",
+  "Warm the water and add it a little at a time, kneading, until you have a soft dough that doesn't stick.",
+  "Grease a cold griddle. With wet fingers, pat a ball of dough directly on the griddle into a thin round, and poke a few holes in it.",
+  "Drizzle oil into the holes and around the edge.",
+  "Put the griddle over medium heat, cover and cook for 3 to 4 minutes, until crisp and golden underneath.",
+  "Flip and cook the other side for 2 minutes. Let the griddle cool slightly, or run it under cold water, before patting the next one.",
+]
+
+[[recipe]]
+id = "01a188e6-a872-74aa-b2be-107dfab24f90"
+name = "Ragi dosa"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "finger-millet-flour", amount = 1, unit = "cup" },
+  { id = "rice-flour", amount = 0.25, unit = "cup" },
+  { id = "semolina", amount = 0.25, unit = "cup" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "onion", amount = 1, unit = "small" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 8, unit = "leaf" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Mix the finger millet flour, rice flour and semolina with the curd, salt and the water into a thin batter. Rest for 15 minutes.",
+  "Finely chop the onion, green chillies and curry leaves.",
+  "Stir them into the batter with the cumin seeds.",
+  "Heat a griddle over high heat until very hot.",
+  "Stir the batter and pour it from a height onto the griddle, starting at the edge, so it forms a lacy net. Fill any large gaps with a little more batter.",
+  "Drizzle oil over and cook on medium heat for 3 minutes, until crisp.",
+  "Fold and serve straight away.",
+]
+
+[[recipe]]
+id = "01a188e6-a874-7436-afac-bc19d73fa001"
+name = "Ragi mudde"
+serves = 4
+prep_minutes = 5
+cook_minutes = 15
+ingredients = [
+  { id = "finger-millet-flour", amount = 1, unit = "cup" },
+  { id = "ghee", amount = 1, unit = "tsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Bring the water to a boil in a heavy pan with the salt and ghee.",
+  "Add the finger millet flour in a heap in the centre. Don't stir.",
+  "Lower the heat, cover and cook for 3 minutes, so the flour steams.",
+  "Uncover and stir hard with a thick wooden spoon or stick for 5 minutes, breaking up lumps, until it forms a smooth, glossy mass that pulls away from the pan.",
+  "Wet your hands and shape it into balls while hot. Serve with a curry or sambar.",
+]
+
+[[recipe]]
+id = "01a188e6-a876-76dc-8d69-967f75dfca00"
+name = "Bonda"
+serves = 4
+prep_minutes = 20
+cook_minutes = 25
+ingredients = [
+  { id = "potato", amount = 4, unit = "medium" },
+  { id = "gram-flour", amount = 1, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "urad-dal", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "turmeric", amount = 0.5, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "red-chilli-powder", amount = 0.5, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Boil the potatoes until tender, then peel and mash them.",
+  "Finely chop the green chillies and ginger.",
+  "Heat a spoonful of the oil in a pan over medium heat. Add the mustard seeds and urad dal and fry until the seeds pop.",
+  "Add the curry leaves, green chillies, ginger and half the turmeric and stir for 20 seconds.",
+  "Add the potatoes, salt and coriander leaves and mix well. Let it cool, then shape into balls about 4 cm across.",
+  "Whisk the gram flour, rice flour, red chilli powder, the rest of the turmeric and salt with the water into a thick batter that coats a spoon.",
+  "Heat the rest of the oil for deep frying over medium-high heat. A drop of batter should rise at once.",
+  "Dip each ball in the batter to coat it completely and fry for 3 to 4 minutes, turning, until golden.",
+  "Drain on paper and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a879-7572-93a6-548c198fab8f"
+name = "Mysore bonda"
+serves = 4
+prep_minutes = 150
+cook_minutes = 20
+ingredients = [
+  { id = "all-purpose-flour", amount = 1, unit = "cup" },
+  { id = "curd", amount = 0.5, unit = "cup" },
+  { id = "rice-flour", amount = 2, unit = "tbsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "coconut", amount = 2, unit = "tbsp" },
+  { id = "ginger", amount = 10, unit = "g" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 8, unit = "leaf" },
+  { id = "black-pepper", amount = 0.5, unit = "tsp" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Mix the all-purpose flour, rice flour, baking soda, sugar and salt with the sour curd into a thick, sticky batter.",
+  "Beat it with your hand for 5 minutes, until smooth and elastic. Cover and rest for 2 hours.",
+  "Cut the coconut into tiny bits. Finely chop the ginger, green chillies and curry leaves, and crush the black pepper.",
+  "Mix them into the batter.",
+  "Heat the oil for deep frying over medium heat.",
+  "Wet your fingers and drop small balls of batter into the oil.",
+  "Fry for 4 to 5 minutes, turning, until golden and puffed, crisp outside and soft inside. Drain and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a87b-739b-9758-734584d165da"
+name = "Mangalore buns"
+serves = 4
+prep_minutes = 480
+cook_minutes = 20
+ingredients = [
+  { id = "banana", amount = 2, unit = "medium" },
+  { id = "all-purpose-flour", amount = 2, unit = "cup" },
+  { id = "curd", amount = 0.25, unit = "cup" },
+  { id = "sugar", amount = 3, unit = "tbsp" },
+  { id = "baking-soda", amount = 0.25, unit = "tsp" },
+  { id = "cumin-seeds", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 3, unit = "cup" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Mash the very ripe bananas with the sugar until smooth.",
+  "Add the curd, cumin seeds, baking soda, salt and a spoonful of the oil and mix well.",
+  "Add the all-purpose flour and knead into a soft, slightly sticky dough. Cover and rest for 8 hours or overnight.",
+  "Divide the dough into balls about 4 cm across. Roll each into a round about 5 mm thick, using a little oil rather than flour.",
+  "Heat the oil for deep frying over medium heat.",
+  "Slide in one bun at a time and press it gently with a slotted spoon until it puffs.",
+  "Fry for 1 to 2 minutes per side, until golden. Drain and serve warm.",
+]
+
+[[recipe]]
+id = "01a188e6-a87d-7334-8571-e2e0502c93a3"
+name = "Paniyaram"
+serves = 4
+prep_minutes = 840
+cook_minutes = 25
+ingredients = [
+  { id = "idli-rice", amount = 1.5, unit = "cup" },
+  { id = "urad-dal", amount = 0.5, unit = "cup" },
+  { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
+  { id = "onion", amount = 1, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "mustard-seeds", amount = 1, unit = "tsp" },
+  { id = "chana-dal", amount = 1, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 2, unit = "cup" },
+]
+steps = [
+  "Rinse the idli rice and soak it for 6 hours. In another bowl, soak the urad dal with the fenugreek seeds.",
+  "Grind each with some of the water, mix with salt and leave overnight in a warm place, until risen.",
+  "Finely chop the onion and green chillies.",
+  "Heat a spoonful of the oil in a pan over medium heat. Add the mustard seeds and chana dal and fry until the seeds pop.",
+  "Add the curry leaves, green chillies and onion and cook for 3 minutes, until soft. Stir this and the coriander leaves into the batter.",
+  "Heat a paniyaram pan over medium heat and add a few drops of oil to each cup.",
+  "Fill the cups three-quarters full. Cover and cook for 2 to 3 minutes, until golden underneath.",
+  "Turn each one with a skewer and cook the other side for 2 minutes. Serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a87f-7230-95d3-ef1e5b516a29"
+name = "Kuzhi paniyaram sweet"
+serves = 4
+prep_minutes = 840
+cook_minutes = 25
+ingredients = [
+  { id = "idli-rice", amount = 1, unit = "cup" },
+  { id = "urad-dal", amount = 0.25, unit = "cup" },
+  { id = "jaggery", amount = 0.75, unit = "cup" },
+  { id = "banana", amount = 1, unit = "medium" },
+  { id = "coconut", amount = 0.25, unit = "cup" },
+  { id = "green-cardamom", amount = 4, unit = "piece" },
+  { id = "ghee", amount = 3, unit = "tbsp" },
+  { id = "baking-soda", amount = 1, unit = "pinch" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 1.5, unit = "cup" },
+]
+steps = [
+  "Rinse the idli rice and urad dal and soak them together for 6 hours.",
+  "Grind them with most of the water to a smooth batter, add a little salt and leave overnight in a warm place, until risen.",
+  "Melt the jaggery in the rest of the water over low heat. Strain and let it cool.",
+  "Mash the banana. Crush the green cardamom and grind the seeds.",
+  "Mix the jaggery syrup, banana, grated coconut, cardamom and baking soda into the batter.",
+  "Heat a paniyaram pan over low heat and add a little ghee to each cup.",
+  "Fill the cups three-quarters full and cook for 3 minutes, until golden underneath.",
+  "Turn each one with a skewer and cook for 2 to 3 minutes more. Serve warm.",
+]
+
+[[recipe]]
+id = "01a188e6-a882-7190-a8eb-a97911b36be6"
+name = "Kothu parotta"
+serves = 4
+prep_minutes = 10
+cook_minutes = 20
+ingredients = [
+  { id = "frozen-parathas", amount = 4, unit = "piece" },
+  { id = "egg", amount = 3, unit = "piece" },
+  { id = "onion", amount = 2, unit = "medium" },
+  { id = "tomato", amount = 2, unit = "medium" },
+  { id = "green-chillies", amount = 2, unit = "piece" },
+  { id = "ginger-garlic-paste", amount = 1, unit = "tsp" },
+  { id = "curry-leaves", amount = 10, unit = "leaf" },
+  { id = "fennel-seeds", amount = 0.5, unit = "tsp" },
+  { id = "red-chilli-powder", amount = 1, unit = "tsp" },
+  { id = "garam-masala", amount = 0.5, unit = "tsp" },
+  { id = "turmeric", amount = 0.25, unit = "tsp" },
+  { id = "coriander-leaves", amount = 2, unit = "tbsp" },
+  { id = "oil", amount = 3, unit = "tbsp" },
+  { id = "salt", to_taste = true },
+]
+steps = [
+  "Cook the frozen parathas as the packet says. Cool slightly, then tear or chop them into small shreds.",
+  "Thinly slice the onions, chop the tomatoes and slit the green chillies.",
+  "Heat the oil on a griddle or wide pan over medium heat. Add the fennel seeds and curry leaves and let them sizzle.",
+  "Add the onions and green chillies and cook for 5 minutes, until soft. Add the ginger garlic paste and stir for 1 minute.",
+  "Add the tomatoes, turmeric, red chilli powder, garam masala and salt and cook for 4 minutes, until soft.",
+  "Push the masala to one side, crack in the eggs and scramble them for 1 minute.",
+  "Add the shredded parathas. Chop and toss everything together with 2 flat spatulas for 4 to 5 minutes, until well mixed and hot.",
+  "Scatter the coriander leaves over and serve hot.",
+]
+
+[[recipe]]
+id = "01a188e6-a884-71cb-8e87-cdbd3d356c9e"
+name = "Malabar parotta"
+serves = 4
+prep_minutes = 150
+cook_minutes = 30
+ingredients = [
+  { id = "all-purpose-flour", amount = 3, unit = "cup" },
+  { id = "milk", amount = 0.5, unit = "cup" },
+  { id = "sugar", amount = 1, unit = "tsp" },
+  { id = "oil", amount = 0.5, unit = "cup" },
+  { id = "salt", to_taste = true },
+  { id = "water", amount = 0.5, unit = "cup" },
+]
+steps = [
+  "Mix the all-purpose flour with the sugar and salt. Add the milk and water and knead for 10 minutes into a very soft, smooth dough.",
+  "Coat the dough with a little of the oil, cover and rest for 2 hours.",
+  "Divide it into balls about 5 cm across. Coat each in oil and rest for 15 minutes more.",
+  "On an oiled counter, flatten a ball and stretch it with oiled hands into a paper-thin sheet. Small tears are fine.",
+  "Gather the sheet into pleats like a fan, then coil the pleated strip into a spiral and tuck the end underneath.",
+  "Flatten each spiral with your palm into a round about 5 mm thick.",
+  "Cook on a hot griddle over medium heat with a little oil for 2 minutes per side, until golden and flaky.",
+  "While hot, stack a few and clap them between your palms to open the layers. Serve hot.",
+]
