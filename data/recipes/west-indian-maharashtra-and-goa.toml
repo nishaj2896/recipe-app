@@ -970,6 +970,7 @@ name = "Goan fish curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b58-5318-7ff6-81cc-b527f9ba6e9c.webp", sha256 = "cf2ea836706c96aec54f19777ee1339a8ee26434589a2d6d45eea9181a666817", alt = "Goan fish curry with kingfish and onion in a red gravy" }
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut", amount = 1.5, unit = "cup" },

@@ -234,7 +234,6 @@ name = "Moong dal"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
-image = { file = "01a15175-3c08-7c89-b35a-70fd46ca1dcd.webp", sha256 = "a315127ff79f1a3c5455879d0074d93044611b9eb827c39366805eaa3c2c6fb7", alt = "Moong dal with cumin seeds and tomato" }
 ingredients = [
   { id = "moong-dal", amount = 200, unit = "g" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -260,6 +259,7 @@ name = "Masoor dal"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+image = { file = "01a15175-3c09-7ca6-ad61-f6dc043fd0dc.webp", sha256 = "a315127ff79f1a3c5455879d0074d93044611b9eb827c39366805eaa3c2c6fb7", alt = "Masoor dal with onion, tomato and cumin seeds" }
 ingredients = [
   { id = "masoor-dal", amount = 200, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -440,6 +440,7 @@ name = "Chicken curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a15175-3c1a-7713-b024-befd853a33b0.webp", sha256 = "6e1d88b6ae8b365d59228c01d2a35122c3dc79c379a207912dd6054c3a6cfc9a", alt = "Chicken curry on the bone in a red gravy with coriander" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "large" },
@@ -1096,6 +1097,7 @@ name = "Kadai paneer"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18813-915d-78a8-a3da-6f5f2edc97ba.webp", sha256 = "a2c246aadebd54ea25b669847bb47a169057022da752f505d8f28eab73481d1a", alt = "Kadai paneer with bell pepper and coriander in a thick masala" }
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -2189,6 +2191,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 60
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a188a8-fe99-7464-a603-5cf6a0b60ff9.webp", sha256 = "2c04ddd8a1a3b5782d09f4209410805770f9953a9fa1d9c8f0e16408c83eba06", alt = "Pindi chole with fried ginger strips and green chillies, topped with raw onion rings" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 2, unit = "tsp" },

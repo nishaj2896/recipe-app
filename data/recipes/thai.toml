@@ -257,6 +257,7 @@ name = "Pad see ew"
 serves = 2
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18c0c-0cbe-7287-819a-154eb608ae68.webp", sha256 = "e02902539efd24bc61c8002c7cd6c54eccfb8c6357839b74bc7da290bfae8248", alt = "Pad see ew with flat rice noodles, chicken and broccoli" }
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },

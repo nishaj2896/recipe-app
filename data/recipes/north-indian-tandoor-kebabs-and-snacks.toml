@@ -77,6 +77,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a188aa-f1c1-73fb-9543-fd72dee5304c.webp", sha256 = "7217db1f890f1a48ba8a664ac728addccae05811b8a134f3dfb600a47ce18814", alt = "Pale, creamy chicken malai tikka pieces" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },

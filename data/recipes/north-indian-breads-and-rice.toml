@@ -668,6 +668,7 @@ name = "Vegetable biryani"
 serves = 4
 prep_minutes = 25
 cook_minutes = 45
+image = { file = "01a188e4-2cc5-7d1d-8441-6a87ddb91dee.webp", sha256 = "b27b5872e07b7be1ab92348794b69497087fa8b7d12c513ba9e3842474fb3e89", alt = "Vegetable biryani with cauliflower, carrot, beans and peas, topped with fried onions and mint" }
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
