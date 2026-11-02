@@ -190,7 +190,6 @@ name = "Paneer paratha"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
-image = { file = "01a188ac-059e-7270-b094-d245c12dcf0b.webp", sha256 = "cc674b9f7954be7753419f25ab58d08f7eae69214f59f5fee373d48cda3d50dd", alt = "Paneer paratha, one cut open to show the filling" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "paneer", amount = 200, unit = "g" },

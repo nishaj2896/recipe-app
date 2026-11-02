@@ -1044,7 +1044,6 @@ name = "Chicken xacuti"
 serves = 4
 prep_minutes = 20
 cook_minutes = 50
-image = { file = "01a18b58-531c-7592-8afa-f136dcd1b977.webp", sha256 = "2c892cc4ebe9befcecf497d3784e05fbd41975891352b0c5f87c4fd33eecd79a", alt = "Chicken xacuti in a dark Goan coconut and spice gravy" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },

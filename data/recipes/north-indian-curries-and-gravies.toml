@@ -323,7 +323,6 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
-image = { file = "01a15175-3c0b-7b09-ba59-3db099c27b86.webp", sha256 = "625af93b18f7d4857a08d96b88c7d00cb186120ec113f248850687dcabceb3e3", alt = "Rajma, a thick kidney bean curry" }
 ingredients = [
   { id = "kidney-beans", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1182,7 +1181,6 @@ name = "Paneer do pyaza"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
-image = { file = "01a18813-9162-7201-a15a-3fde8b150f67.webp", sha256 = "ef377ad224d771c870ed104355e4dd34914e167fb178f07e4430257e53a5e703", alt = "Paneer do pyaza with bell pepper and onion in a tomato masala" }
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -2432,7 +2430,6 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
-image = { file = "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe.webp", sha256 = "e842321d33a90cc6948e062be5828c570a557bfbbccce349dc7bedf9b02951b6", alt = "Panchmel dal, five lentils with tomato" }
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
