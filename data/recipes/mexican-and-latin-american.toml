@@ -89,6 +89,7 @@ name = "Fish tacos"
 serves = 4
 prep_minutes = 20
 cook_minutes = 10
+image = { file = "01a18c16-b1bf-7519-9fd0-abe8820a9743.webp", sha256 = "7c2c3239516fbca6f7dc5c183d618630f9cf7acb7a08b9eb8633189848c5d525", alt = "Three fish tacos with red cabbage, avocado, sauce and coriander, with lime wedges" }
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "corn-tortillas", amount = 12, unit = "piece" },
@@ -236,6 +237,7 @@ name = "Chicken enchiladas"
 serves = 4
 prep_minutes = 25
 cook_minutes = 45
+image = { file = "01a18c16-b1ca-78fe-b3fe-a064097e22c9.webp", sha256 = "75d362482066b077f59f8e6ab0e9fbbc1abb777acfa54399a22c4965d54968f1", alt = "Chicken enchiladas baked with cheddar, topped with sour cream and coriander" }
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -332,6 +334,7 @@ name = "Huevos rancheros"
 serves = 2
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18c16-b1d1-7a28-b9cf-eeaa18d43c95.webp", sha256 = "98e2b841bf81279b22c29858138bbc02e78821459950d3877ffbd1698adaeac9", alt = "Huevos rancheros, fried eggs on tortilla with black beans, tomato sauce, feta, avocado and coriander" }
 ingredients = [
   { id = "corn-tortillas", amount = 4, unit = "piece" },
   { id = "egg", amount = 4, unit = "large" },
@@ -396,6 +399,7 @@ name = "Chilli con carne"
 serves = 6
 prep_minutes = 15
 cook_minutes = 75
+image = { file = "01a18c16-b1d5-7f04-9135-65abc9fff371.webp", sha256 = "c00118f9017f8d3e63c8e556e2688259667014ef896af8e1b98b2c719a079ab0", alt = "Chilli con carne with kidney beans, bell pepper and sour cream" }
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -695,6 +699,7 @@ name = "Empanadas"
 serves = 6
 prep_minutes = 40
 cook_minutes = 45
+image = { file = "01a18c16-b1ec-76ee-b4de-eb918ca0f587.webp", sha256 = "36b710ed5fa776bd22e3219ec59007051378e39b4bac062cade8e9bccb949008", alt = "Baked beef empanadas, one broken open to show the filling" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "butter", amount = 0.5, unit = "cup" },
@@ -751,6 +756,7 @@ name = "Ceviche"
 serves = 4
 prep_minutes = 25
 cook_minutes = 0
+image = { file = "01a18c16-b1f0-7193-a3c6-cca15f0397f5.webp", sha256 = "eaecfef2c650b48aed0978b807325079bc54ae22865cb745a44f0274c1fed3f6", alt = "Ceviche of cod with red onion, tomato, jalapeno, avocado and coriander" }
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "lime", amount = 6, unit = "medium" },
@@ -776,6 +782,7 @@ name = "Churros"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18c16-b1f2-74a5-b7e7-d9ff01095978.webp", sha256 = "474a5ebf4a38e2a48621ffa18dd42b353b11ee9cf01a024f5ba261a49f2787c5", alt = "Cinnamon sugar churros with a bowl of chocolate sauce" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "butter", amount = 2, unit = "tbsp" },
@@ -805,6 +812,7 @@ serves = 10
 prep_minutes = 20
 cook_minutes = 35
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
+image = { file = "01a18c16-b1f5-73bb-948e-00616bf14b39.webp", sha256 = "62354441551220928d2a9ba2ce2e30f0368c19fd24e38642f1a4afde632c594c", alt = "A square of tres leches cake with whipped cream and cinnamon, in a pool of milk" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "baking-powder", amount = 1.5, unit = "tsp" },

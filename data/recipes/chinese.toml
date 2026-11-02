@@ -146,6 +146,7 @@ name = "Beef and broccoli"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18bba-7864-7566-a0af-e8db965d1e38.webp", sha256 = "dcdee7154c127585ee9e4b2d67de4d8f2cce6d3a5c7da57f2dbc301407b58522", alt = "Beef and broccoli in a glossy dark sauce" }
 ingredients = [
   { id = "beef", amount = 400, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -178,6 +179,7 @@ name = "Chow mein"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18bba-7867-75c3-afd9-3f677a5b2c4b.webp", sha256 = "fa1f2bae0d29b69990b512cc8fe969ef23869f8d9c92c4955e13a2bbb7f79559", alt = "Chicken chow mein with cabbage, carrot, bean sprouts and spring onions" }
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -300,6 +302,7 @@ name = "Wonton soup"
 serves = 4
 prep_minutes = 40
 cook_minutes = 15
+image = { file = "01a18c0c-0c86-76cd-838f-e85d444f482c.webp", sha256 = "4bd56f5f9d1943c0edf36834ff3dc9cbed456332d2e3c33aff27b2c28c2931b9", alt = "Wonton soup with prawn and pork wontons, bok choy and spring onions" }
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 250, unit = "g" },
@@ -392,6 +395,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
+image = { file = "01a18c0c-0c8d-7a83-a7e3-2c0d7c110e37.webp", sha256 = "2314339530e2199a012120ab4161ccb5c53f3f8a8bce9f7c840eba7340173997", alt = "Sliced char siu pork with a sticky red glaze" }
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "hoisin-sauce", amount = 3, unit = "tbsp" },

@@ -12,6 +12,7 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 150
 plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
+image = { file = "01a18bb5-de40-7910-9565-67c1cca06b59.webp", sha256 = "63fd2d2a633230f2bf5956fab44e61be544f6a0bf438d70323adf680489b1db0", alt = "Haleem topped with fried onions, mint, coriander, cashews and lemon wedges" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "broken-wheat", amount = 0.75, unit = "cup" },
@@ -84,6 +85,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 45
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18bb5-de44-75ae-a292-eacaadbb0d01.webp", sha256 = "f3cc6f65f653f1f05734f95a67a3b6ae2376ccd557ac529a2fa7db2a5b1dd1b3", alt = "Dum ka chicken in a creamy gravy with green chillies and coriander" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },

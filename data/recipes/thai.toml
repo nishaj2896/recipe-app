@@ -142,6 +142,7 @@ name = "Panang curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18c0c-0cb4-703b-9866-c2132dd12c68.webp", sha256 = "4f1e76205ff63011ac808b466113adfd7495cc9638e5d3ea977ebf3dea97ce22", alt = "Panang curry with chicken, bell pepper and Thai basil" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
@@ -286,6 +287,7 @@ name = "Pad kra pao"
 serves = 2
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18c0c-0cc0-7460-a7a7-08a0acc9e782.webp", sha256 = "fdf4c5f5baa57085d25b7c02ba6c4afe5474594d658b41362fc2a2532d93b7b3", alt = "Pad kra pao with minced chicken and holy basil over jasmine rice with a fried egg" }
 ingredients = [
   { id = "chicken-mince", amount = 300, unit = "g" },
   { id = "holy-basil", amount = 1, unit = "cup" },
@@ -551,6 +553,7 @@ name = "Thai fish cakes"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d.webp", sha256 = "bd21b165a75872aad6f28617c76752eb3d74dafedee82eb7764344d108aa540a", alt = "Thai fish cakes with a cucumber dipping sauce" }
 ingredients = [
   { id = "basa", amount = 400, unit = "g" },
   { id = "thai-curry-paste", amount = 2, unit = "tbsp" },

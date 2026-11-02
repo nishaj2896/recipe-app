@@ -343,6 +343,7 @@ name = "Pastel de nata"
 serves = 12
 prep_minutes = 30
 cook_minutes = 25
+image = { file = "01a18c1a-e295-7c65-a793-e4566d8fd6bc.webp", sha256 = "f362ca4abba19ecea5bc44284a1e77121d27083b41fe54e9880dc11d8b5cf4a1", alt = "Three Portuguese custard tarts with blistered tops" }
 ingredients = [
   { id = "puff-pastry", amount = 320, unit = "g" },
   { id = "milk", amount = 1, unit = "cup" },

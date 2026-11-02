@@ -80,6 +80,7 @@ serves = 3
 prep_minutes = 10
 cook_minutes = 15
 plan_ahead = { wait_minutes = 360, note = "soak for 6 hours" }
+image = { file = "01a18b58-52db-7585-b481-44042529cb38.webp", sha256 = "24a02f20e4ef83e07f3edf2bcf574270d2a593d71e3c157f54557558decceb7f", alt = "Sabudana khichdi with potato, peanuts, curry leaves and coriander" }
 ingredients = [
   { id = "sago", amount = 1, unit = "cup" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -594,6 +595,7 @@ name = "Kolhapuri chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 60
+image = { file = "01a18b58-52fd-7d0b-b5e8-354771ba26e2.webp", sha256 = "8e700f8677835a1b07a9920fe96e3910e4721826a2c0c6bad310a6f89a9cbe8d", alt = "Kolhapuri chicken in a fiery red gravy with coriander" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -884,6 +886,7 @@ name = "Puran poli"
 serves = 8
 prep_minutes = 30
 cook_minutes = 60
+image = { file = "01a18b58-5311-7987-a318-a0a7e201d8e8.webp", sha256 = "75ccc4629a573a74e7ba5416960d76b1cceb1284d28b908cee3698501acd8f38", alt = "Puran poli, one broken open to show the sweet filling, with ghee on top" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 1, unit = "cup" },
@@ -916,6 +919,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 0
 plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
+image = { file = "01a18b58-5313-7540-adcf-351582aaba38.webp", sha256 = "f83ff789fff00f87cfb74e662fee5d018cd43a45b77ac2d9225a4bdecf808af0", alt = "Shrikhand with sliced pistachios and almonds" }
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "icing-sugar", amount = 0.5, unit = "cup" },
@@ -1040,6 +1044,7 @@ name = "Chicken xacuti"
 serves = 4
 prep_minutes = 20
 cook_minutes = 50
+image = { file = "01a18b58-531c-7592-8afa-f136dcd1b977.webp", sha256 = "2c892cc4ebe9befcecf497d3784e05fbd41975891352b0c5f87c4fd33eecd79a", alt = "Chicken xacuti in a dark Goan coconut and spice gravy" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },

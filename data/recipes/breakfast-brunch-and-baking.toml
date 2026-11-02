@@ -38,6 +38,7 @@ name = "Buttermilk pancakes"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18c20-05b5-7a1a-9a87-cb218f0dd9f0.webp", sha256 = "294530d3f2c582aff86317e55eaf4dd34a1464d1b7ca772ff62448a06a804c87", alt = "A stack of buttermilk pancakes with maple syrup poured over" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 2, unit = "tbsp" },
@@ -199,6 +200,7 @@ name = "Avocado toast"
 serves = 2
 prep_minutes = 10
 cook_minutes = 3
+image = { file = "01a18c20-05c2-759a-863d-cb88348f2f92.webp", sha256 = "061bc6b4fed339bcc5b540f9821c14a53420b5abc9c8d5d00792bac7691fb636", alt = "Two slices of sourdough avocado toast with olive oil and chilli flakes" }
 ingredients = [
   { id = "avocado", amount = 2, unit = "medium" },
   { id = "sourdough", amount = 2, unit = "slice" },
@@ -375,6 +377,7 @@ serves = 12
 prep_minutes = 30
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+image = { file = "01a18c20-05d2-7d4d-bae0-43afae128a22.webp", sha256 = "82eeaf08f265b583ba20737fd3e1ff4942b154b5f5a42dba1d7a3db3a3685064", alt = "Two iced cinnamon rolls" }
 ingredients = [
   { id = "all-purpose-flour", amount = 3.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },
@@ -434,6 +437,7 @@ name = "Carrot cake"
 serves = 12
 prep_minutes = 25
 cook_minutes = 40
+image = { file = "01a18c20-05d6-78eb-9d0b-f5ab40a1f49f.webp", sha256 = "34094a720eb3e7ab07fbffa8453e7918f4238971ee142d201294cea09bd9193c", alt = "A slice of carrot cake with cream cheese frosting and walnuts" }
 ingredients = [
   { id = "carrot", amount = 3, unit = "medium" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },

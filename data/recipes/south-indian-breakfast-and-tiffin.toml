@@ -167,6 +167,7 @@ name = "Rava dosa"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a188e6-a847-798f-86de-7eb83bd2dc75.webp", sha256 = "c1ef84689a1fe8400ea7b8e19ec5d8f629dce80ac61320cfa33f005478e4437c", alt = "Rava dosa with curry leaves and coriander, folded" }
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "rice-flour", amount = 0.5, unit = "cup" },
@@ -254,6 +255,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a188e6-a84e-70a4-8c8d-c3da512978e1.webp", sha256 = "b3d6f8e98dcfcb92cd20d7d87e984b3df3bddd4ec11d5463f37d161b9c43cfec", alt = "Three folded neer dosas" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -278,6 +280,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 300, note = "soak for 5 hours" }
+image = { file = "01a188e6-a850-7e21-876b-7a364dca12e0.webp", sha256 = "5df60f7c06d5644aa912ff92d3feace855b3cb1bcaaacd863be4652f245fd053", alt = "Pesarattu, green gram dosa with onion and coriander, folded" }
 ingredients = [
   { id = "mung-beans", amount = 1, unit = "cup" },
   { id = "rice", amount = 2, unit = "tbsp" },
@@ -368,6 +371,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+image = { file = "01a188e6-a857-74b4-8d83-ccabe430c05c.webp", sha256 = "145de0cd0202bf7d224cdd2ef7411ee05fffba6dc057318ac9b0438689bdd75f", alt = "Onion tomato uttapam with green chillies and idli podi" }
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -500,6 +504,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
+image = { file = "01a188e6-a862-77f5-8644-a458d0be7b23.webp", sha256 = "152571d82e6cdeebc4d5ecc9627d92d93ce99b62506c03b0259833cae737c08d", alt = "A stack of crisp masala vada" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -596,6 +601,7 @@ name = "Ven pongal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a188e6-a869-79bd-883f-ce5dd2b6e770.webp", sha256 = "c1abb33cebe454266f5f2f4b7274009a8424692581ccf7b25536b7385d49baf3", alt = "Ven pongal with cashews, curry leaves and black pepper" }
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "moong-dal", amount = 0.25, unit = "cup" },

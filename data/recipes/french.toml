@@ -61,6 +61,7 @@ name = "Quiche Lorraine"
 serves = 8
 prep_minutes = 20
 cook_minutes = 55
+image = { file = "01a18c1a-e252-7f62-a590-359eefff3fae.webp", sha256 = "f473d49795e0acd371584d68b80e62d2148c7804ef1a31cd3de068f88d9a471a", alt = "A slice of quiche Lorraine with bacon" }
 ingredients = [
   { id = "shortcrust-pastry", amount = 320, unit = "g" },
   { id = "bacon", amount = 200, unit = "g" },
@@ -435,6 +436,7 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 5
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
+image = { file = "01a18c1a-e26f-7acd-8683-24e7da24f6d1.webp", sha256 = "7e8a2ee1aaf34d124b4814cc159d57e5846a58473579a74c23bbc6a8d7ce2afa", alt = "Two glasses of chocolate mousse" }
 ingredients = [
   { id = "dark-chocolate", amount = 200, unit = "g" },
   { id = "egg", amount = 6, unit = "large" },

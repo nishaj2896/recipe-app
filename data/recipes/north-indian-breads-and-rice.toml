@@ -159,6 +159,7 @@ name = "Gobi paratha"
 serves = 4
 prep_minutes = 25
 cook_minutes = 35
+image = { file = "01a188ac-059c-7117-b956-95db3c58e90f.webp", sha256 = "c32f62446073c68e90e80d142c5b34baad4aaf510837091c5da8cdadeba79f76", alt = "Gobi paratha, one cut open to show the cauliflower filling" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "cauliflower", amount = 0.5, unit = "small-head" },
@@ -189,6 +190,7 @@ name = "Paneer paratha"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+image = { file = "01a188ac-059e-7270-b094-d245c12dcf0b.webp", sha256 = "cc674b9f7954be7753419f25ab58d08f7eae69214f59f5fee373d48cda3d50dd", alt = "Paneer paratha, one cut open to show the filling" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "paneer", amount = 200, unit = "g" },
@@ -484,6 +486,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
+image = { file = "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2.webp", sha256 = "c0863c4f49dafef35915a62d8a25121c75d45b66959a11668873796a46a4d023", alt = "Kulcha with nigella seeds and coriander, one cut open" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -624,6 +627,7 @@ name = "Lucknowi biryani"
 serves = 6
 prep_minutes = 30
 cook_minutes = 150
+image = { file = "01a188e4-2cc3-741b-b1ec-d5dc88859668.webp", sha256 = "e608ce0c3e06c8dfeeb3119d258def6ce65e2286d3ad249c7bbf16288d46a6b4", alt = "Lucknowi biryani with mutton and basmati rice" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -712,6 +716,7 @@ name = "Egg biryani"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+image = { file = "01a188e4-2cc7-76a3-9aa0-27fb2fe4dd84.webp", sha256 = "a6bb511c596dc8a01f2cfd9f700f096925353cb38237baa420dad350b4c42c02", alt = "Egg biryani with masala coated eggs, basmati rice, mint and coriander" }
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -824,6 +829,7 @@ name = "Khichdi"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+image = { file = "01a188e4-2cce-7282-8ab9-28675b97891a.webp", sha256 = "93d197d5806a47df82384ed705a879a1542a03f589d4ad6f61824cf86668a9b4", alt = "Khichdi with a little ghee on top" }
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },

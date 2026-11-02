@@ -92,6 +92,7 @@ name = "Spaghetti bolognese"
 serves = 6
 prep_minutes = 15
 cook_minutes = 135
+image = { file = "01a18bbd-3cd2-7037-a970-caa33cd9c967.webp", sha256 = "53cc923d94a52cea555529b01b89c653134389a51f31a630e26c11f8d502501e", alt = "Spaghetti bolognese with grated parmesan" }
 ingredients = [
   { id = "pasta", amount = 500, unit = "g" },
   { id = "beef-mince", amount = 500, unit = "g" },
@@ -199,6 +200,7 @@ name = "Pesto pasta"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18bbd-3cdb-7309-a9be-fcf6f5a03463.webp", sha256 = "82b1eb0fbe32a52d3f532e00e301990b7b5e5e43eb201823c1f1da894cc2b201", alt = "Pesto pasta in a basil sauce" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "basil", amount = 2, unit = "cup" },
@@ -285,6 +287,7 @@ name = "Lasagne"
 serves = 8
 prep_minutes = 40
 cook_minutes = 165
+image = { file = "01a18bbd-3ce2-7a5b-b957-059ee79f0139.webp", sha256 = "757af77f3fd7e8c38ab9ad99128c361fe8ab5d062271f27fb53b803b8aef6965", alt = "A square of baked meat lasagne" }
 ingredients = [
   { id = "lasagne-sheets", amount = 250, unit = "g" },
   { id = "beef-mince", amount = 750, unit = "g" },
@@ -420,6 +423,7 @@ name = "Risotto alla milanese"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18bbd-3ceb-71d3-8aef-e0474ed06755.webp", sha256 = "2caeb680b4712dca86d17b69ce1190b735edd0342987f4f0e20bf64fd2854055", alt = "Risotto alla milanese, golden with saffron" }
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "saffron", amount = 2, unit = "pinch" },
@@ -475,6 +479,7 @@ name = "Gnocchi with butter and sage"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18bbd-3cf0-701a-9203-0517f62b7cb5.webp", sha256 = "213ea490e5a4d54cf2862dcb6263fa69eff47804fe6fe980375ad8028b0f1efb", alt = "Gnocchi with brown butter and crisp sage leaves" }
 ingredients = [
   { id = "gnocchi", amount = 500, unit = "g" },
   { id = "butter", amount = 6, unit = "tbsp" },
@@ -728,6 +733,7 @@ name = "Eggplant parmigiana"
 serves = 6
 prep_minutes = 30
 cook_minutes = 70
+image = { file = "01a18bbd-3d04-78cf-ba7a-3a5d367d9a2e.webp", sha256 = "311aa32321757dae99f8377ffb92f9c21c7ffb07691da661138fcc83019b0bb8", alt = "A square of baked eggplant parmigiana with melted mozzarella" }
 ingredients = [
   { id = "brinjal", amount = 3, unit = "medium" },
   { id = "passata", amount = 3, unit = "cup" },
