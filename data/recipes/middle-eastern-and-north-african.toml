@@ -383,6 +383,7 @@ name = "Moroccan chicken tagine"
 serves = 4
 prep_minutes = 20
 cook_minutes = 60
+image = { file = "01a18c16-b212-7c32-8007-d7113fc06483.webp", sha256 = "8eff079045f9cab3766ee41e48462ef1545717395c725a7a92b24b2bc3cdfee2", alt = "Moroccan chicken tagine with olives and preserved lemon" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -509,6 +510,7 @@ name = "Harira"
 serves = 6
 prep_minutes = 20
 cook_minutes = 90
+image = { file = "01a18c16-b21b-72d4-8743-b45d91b056e2.webp", sha256 = "14f6e28b5915abaa951b74d802f451e8b61779a48c02a50af96d14a14031cd73", alt = "Harira, Moroccan soup with lamb, lentils, chickpeas and herbs" }
 ingredients = [
   { id = "lamb", amount = 300, unit = "g" },
   { id = "green-lentils", amount = 0.5, unit = "cup" },

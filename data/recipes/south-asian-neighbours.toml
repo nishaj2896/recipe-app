@@ -46,6 +46,7 @@ name = "Kottu roti"
 serves = 2
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18c4a-5f73-7aea-a8ab-569912f8df1b.webp", sha256 = "9c54e2cff5516c33ddb6c98c0c001cb178b40e6c67e9a3384d7083415e48a374", alt = "Kottu roti with chopped paratha, chicken, egg, cabbage, carrot and leek" }
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "chicken", amount = 250, unit = "g" },

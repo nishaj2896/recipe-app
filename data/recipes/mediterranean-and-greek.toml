@@ -132,6 +132,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18c1a-e22a-7100-a285-c7d4fa9f5e28.webp", sha256 = "4b28031f754439b59b2a541fab06fcfc9e10fb78e22d39b89bf164fefba0644f", alt = "Chicken souvlaki skewers on pita with tomato, onion, tzatziki and lemon" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -304,6 +305,7 @@ name = "Spanish tortilla"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c1a-e237-7e9e-8a9e-8419d18ce300.webp", sha256 = "c56ba0967733e733e801c68fb627fe8a009bf841388536a94561c4d0e4db0102", alt = "Spanish tortilla with a slice cut out" }
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -424,6 +426,7 @@ name = "Patatas bravas"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c1a-e240-7717-ba70-99578e6fe513.webp", sha256 = "3c3cf1a49b71f405cd9e4bc0ee5a986fe8f1535f0ae8d47cfcab3521bb943205", alt = "Patatas bravas with spicy tomato sauce and dots of aioli" }
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "olive-oil", amount = 0.33, unit = "cup" },

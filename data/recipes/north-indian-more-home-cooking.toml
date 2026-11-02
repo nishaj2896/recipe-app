@@ -829,6 +829,7 @@ name = "Achari paneer"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bae-8f89-7ce0-b537-23fa8d97c511.webp", sha256 = "acf7dc44cc33870287f0b32505ae8d7976c34de3850397a852aaa6f85080179a", alt = "Achari paneer cubes in a tomato gravy with nigella seeds" }
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -931,6 +932,7 @@ name = "Keema pav"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18bae-8f90-7426-b41c-c1c665edbb33.webp", sha256 = "f3de21f8ab79315ec8f4fc4e1df4538efaefecfa81a7a3a24edc10aea70afa4a", alt = "Keema pav, spiced mince topped with raw onion and coriander, served with two pav" }
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "pav", amount = 8, unit = "piece" },

@@ -81,6 +81,7 @@ name = "Sev puri"
 serves = 4
 prep_minutes = 30
 cook_minutes = 20
+image = { file = "01a18bb5-de64-7236-873d-96ef0d79db73.webp", sha256 = "0e1714934b1b8a45c06cfe5adad81dfcc291f27e6e04d4587a0459fc066bb60f", alt = "Sev puri with potato, onion, chutneys and sev" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },
@@ -209,6 +210,7 @@ name = "Dabeli"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18bb5-de6d-7d05-bbc4-ec4322edc12b.webp", sha256 = "a284498fda986d3629bf5e101011c42c010682cb264c2914b31822334d99a408", alt = "Two dabeli pav filled with spiced potato, rolled in sev with peanuts and pomegranate" }
 ingredients = [
   { id = "pav", amount = 8, unit = "piece" },
   { id = "potato", amount = 3, unit = "medium" },

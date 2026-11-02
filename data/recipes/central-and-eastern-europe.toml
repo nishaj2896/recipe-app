@@ -45,6 +45,7 @@ name = "Chicken paprikash"
 serves = 4
 prep_minutes = 15
 cook_minutes = 55
+image = { file = "01a18c4f-8e3a-7063-b073-a7536c40ab46.webp", sha256 = "1f07477169582b737d0d19b7cae60c2825ae83e65a1b414fbbf85373eb775e63", alt = "Chicken paprikash, chicken thighs in a creamy paprika sauce" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -107,6 +108,7 @@ name = "Borscht"
 serves = 6
 prep_minutes = 25
 cook_minutes = 50
+image = { file = "01a18c4f-8e3f-75c2-bb6a-2fea6fbd422c.webp", sha256 = "74257aba2ae88aae00f83c794a605b4656e034e8aa8d8d32c25d9c0c164f676d", alt = "Borscht, beetroot soup with sour cream and dill" }
 ingredients = [
   { id = "beetroot", amount = 4, unit = "medium" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -199,6 +201,7 @@ name = "Latkes"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18c4f-8e46-7171-8c13-0f42282cc945.webp", sha256 = "2445e4b8700b7d1e33b188dd6f1dc021a3170693345d25443928d716e602db24", alt = "Crisp potato latkes with a dollop of sour cream" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -225,6 +228,7 @@ name = "Swedish meatballs"
 serves = 4
 prep_minutes = 25
 cook_minutes = 30
+image = { file = "01a18c4f-8e48-703e-851e-ecff58525a98.webp", sha256 = "2d0bde7348cdb628ef39d24ff71cc1f06b5e1011a2802dd02e52f7b7e6b17c14", alt = "Swedish meatballs in a cream gravy with cranberry sauce" }
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "breadcrumbs", amount = 0.5, unit = "cup" },
@@ -320,6 +324,7 @@ name = "Apple strudel"
 serves = 8
 prep_minutes = 40
 cook_minutes = 45
+image = { file = "01a18c4f-8e4f-7cd9-b9c2-69653c3ea757.webp", sha256 = "7c462cccdd07eb7392f1bf346d22ff8d65487292acc1815da26f7ccf43d11091", alt = "Apple strudel cut open to show the apple, raisin and walnut filling, dusted with icing sugar" }
 ingredients = [
   { id = "filo-pastry", amount = 250, unit = "g" },
   { id = "apple", amount = 5, unit = "medium" },

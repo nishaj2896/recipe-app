@@ -213,6 +213,7 @@ name = "Tomato rasam"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a188ea-3c9c-7c7f-aa71-7e8a79791cf3.webp", sha256 = "6f98ce210e0646f5e8e9aec6b25965f0d88f944f71da34834088cbdcc12c4489", alt = "Tomato rasam with a tempering of mustard seeds and curry leaves and coriander" }
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "tamarind", amount = 1, unit = "tsp" },
@@ -810,6 +811,7 @@ name = "Pepper chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a188ea-3cc8-7da1-93a4-f4117af4edcd.webp", sha256 = "84430f8cb74ebf7845194f748258626f473b19db9e2bd78dd902d3eb27b724a4", alt = "Pepper chicken with curry leaves, onion and green chillies" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "black-pepper", amount = 1, unit = "tbsp" },
@@ -946,6 +948,7 @@ name = "Gongura mutton"
 serves = 4
 prep_minutes = 20
 cook_minutes = 60
+image = { file = "01a188ea-3cd1-7f7f-80af-7681e7a27bc1.webp", sha256 = "d7bcf85b948f640866df375eba7adace8399bfb9ffd4f4cb177273a65b91d65a", alt = "Gongura mutton in a dark green gravy with dried red chillies and fried garlic" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "gongura", amount = 2, unit = "bunch" },
@@ -1114,6 +1117,7 @@ name = "Prawn ghee roast"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a188ea-3cdc-72fb-9f3a-876114a5e690.webp", sha256 = "441b2961e196df6fbea04293077d468dd3017fba4eb76fbf4fc4dade74ab710e", alt = "Prawn ghee roast, prawns in a glossy dark red masala with curry leaves" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "dried-red-chillies", amount = 10, unit = "piece" },
@@ -1183,6 +1187,7 @@ name = "Kerala egg roast"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a188ea-3ce1-7124-af6c-a6af4494637a.webp", sha256 = "165e156edce082766b6d8c8d6651023f0bff732ef193925f7cc2272136a75f26", alt = "Kerala egg roast with curry leaves in a dark onion masala" }
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1535,6 +1540,7 @@ name = "Mirchi ka salan"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18b54-81ba-79c9-9638-10695d0dc5d7.webp", sha256 = "c14bc769481513542d9b8b7a7ca2e92e006a18a20ea62ff7f9d7f26f933b3c24", alt = "Mirchi ka salan, green chillies in a peanut sesame gravy with curry leaves" }
 ingredients = [
   { id = "green-chillies", amount = 10, unit = "piece" },
   { id = "peanuts", amount = 0.25, unit = "cup" },

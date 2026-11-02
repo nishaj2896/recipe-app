@@ -210,6 +210,7 @@ name = "Chicken karaage"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c22-48ef-7fe4-ac78-0212b5b74231.webp", sha256 = "c37a7054dd13b814fb6bf4b23bd9c08131c438d047133746517038e071a19547", alt = "Chicken karaage with lemon wedges and Japanese mayonnaise" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "soy-sauce", amount = 2, unit = "tbsp" },
@@ -389,6 +390,7 @@ name = "Sundubu jjigae"
 serves = 2
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18c22-48fc-725d-b53c-0812a4a82db8.webp", sha256 = "a171eafbc85e18ffc7bd08422cd9bb75f078a7e14a8cf00e667f0169c52d7e61", alt = "Sundubu jjigae, bubbling soft tofu stew with clams, pork, egg and spring onions" }
 ingredients = [
   { id = "silken-tofu", amount = 350, unit = "g" },
   { id = "clams", amount = 200, unit = "g" },

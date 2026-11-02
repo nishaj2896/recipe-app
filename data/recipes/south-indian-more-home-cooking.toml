@@ -79,6 +79,7 @@ name = "Kerala prawn curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18bb1-05be-7f65-8d7e-59ff79c0d94f.webp", sha256 = "83c116026c16ea577bea848ec467b79196a6494311efc8321d3eab55292bb5ae", alt = "Kerala prawn curry in a coconut milk gravy with green chillies and curry leaves" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -179,6 +180,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 70
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18bb1-05c5-7f08-9a8a-78805b0d5863.webp", sha256 = "2e8fcd090012297171063268a1a48d5c7663c200190d2baa6405e7d754241cb4", alt = "Kadala curry, black chickpeas in a coconut gravy with fried shallots and curry leaves" }
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.75, unit = "cup" },
@@ -784,6 +786,7 @@ name = "Chicken chukka"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18bb3-7966-79f8-9538-81de32bfa3bd.webp", sha256 = "55d3d3a74866547d2b81166e2ee50c955c266725d27794e948fcffbf7e1e9fd8", alt = "Chicken chukka, dry roasted chicken with shallots and curry leaves" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "shallot", amount = 12, unit = "piece" },
@@ -816,6 +819,7 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 50
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18bb3-7968-79db-bca2-93f0ee1bac8f.webp", sha256 = "46c8e09c15ef2bf5086bd5fe3c96656ef2abe5c8499e1cdeb200765ba0efc273", alt = "Mysore masala dosa folded over a potato filling with a red chutney layer" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },

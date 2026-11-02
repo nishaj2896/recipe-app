@@ -115,6 +115,7 @@ name = "Tamarind rice"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b54-81c5-7e25-a61a-8625f39be958.webp", sha256 = "dba6bd525667ebef7220c19edbedc5d8f7b2449a6c1c2d472264377f6cdc60af", alt = "Tamarind rice with peanuts, curry leaves and dried red chillies" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tamarind", amount = 2, unit = "tbsp" },
@@ -150,6 +151,7 @@ name = "Coconut rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18b54-81c7-70ee-be9d-ec402bc962fd.webp", sha256 = "08915eabc7b6baba22817311351785f0e477df47d6c1428e423e240d99af32b3", alt = "Coconut rice with cashews, curry leaves and dried red chillies" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -508,6 +510,7 @@ name = "Coconut chutney"
 serves = 4
 prep_minutes = 10
 cook_minutes = 5
+image = { file = "01a18b54-81db-76fb-8c2c-f4f8a4475b55.webp", sha256 = "414caaac6fa99aea271389aad8a99ac822c29d8d4c1fb06a992623c450f39a6e", alt = "Coconut chutney with a mustard seed, curry leaf and dried chilli tempering" }
 ingredients = [
   { id = "coconut", amount = 1, unit = "cup" },
   { id = "chana-dal", amount = 2, unit = "tbsp" },
@@ -721,6 +724,7 @@ name = "Mysore pak"
 serves = 12
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18b54-81ed-7b59-8c51-f262d91a2e78.webp", sha256 = "646f03ca7d10a4de25fd034e09096bbb09a494c8963c876582fd5d26ac7ac888", alt = "Four pieces of Mysore pak" }
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "sugar", amount = 2, unit = "cup" },
@@ -822,6 +826,7 @@ name = "Double ka meetha"
 serves = 6
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b54-81f6-7fd7-a5ee-6bc05b5d3a98.webp", sha256 = "3a304e6c354e4bbe61dcdb7ad9902db2ba1f9d1f21dcdec5af9b1faa0eb86b84", alt = "Double ka meetha, fried bread triangles in saffron milk with sliced almonds and pistachios" }
 ingredients = [
   { id = "white-bread", amount = 8, unit = "slice" },
   { id = "milk", amount = 750, unit = "ml" },
@@ -873,6 +878,7 @@ name = "Filter coffee"
 serves = 2
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18b54-81fb-7b02-a01b-8336a10cf2c5.webp", sha256 = "d2de81962db154203c3162da8b8ad72e5da6527cb0c3e94bd63507a203bb73eb", alt = "South Indian filter coffee in a steel tumbler and davara" }
 ingredients = [
   { id = "ground-coffee", amount = 4, unit = "tbsp" },
   { id = "milk", amount = 1, unit = "cup" },

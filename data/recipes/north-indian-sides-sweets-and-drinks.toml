@@ -33,6 +33,7 @@ name = "Cucumber raita"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+image = { file = "01a15175-3c26-7418-8595-c4174264ab0c.webp", sha256 = "b9eb7c17953582364e9b2421e08d2f806310b11e0f0b65716bf0845784ab723a", alt = "Cucumber raita with coriander" }
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -294,6 +295,7 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 50
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a188e4-2ce2-77ff-91f5-6fed7d3942ac.webp", sha256 = "279f0fa34f9fc025e6ccd16e47983d4d38d9202c4f0f333fdb878a7095a81aae", alt = "Moong dal halwa with chopped almonds and pistachios" }
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ghee", amount = 0.75, unit = "cup" },
@@ -348,6 +350,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
+image = { file = "01a188e4-2ce7-716c-a39c-43b7362fb938.webp", sha256 = "7e22f460c84f4012c85fbb30b1c31a7644a486e6039e89e1fb2cd072ef311b55", alt = "Phirni in a clay bowl with sliced pistachios and almonds" }
 ingredients = [
   { id = "basmati-rice", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -403,6 +406,7 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
+image = { file = "01a188e4-2ceb-7bac-ac78-07969f759c5d.webp", sha256 = "18a29c09b39c4913cd02184f52db22663b0046839e63b3b744b482b6b78bc726", alt = "Rasmalai in saffron milk with sliced pistachios and almonds" }
 ingredients = [
   { id = "milk", amount = 2, unit = "l" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -431,6 +435,7 @@ name = "Shahi tukda"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+image = { file = "01a188e4-2ced-7b2c-9667-2223c028ec69.webp", sha256 = "c89ada5d0d656a320c19b33d7adec9c7740d4bbcece20840baf350e93245f5db", alt = "Shahi tukda, fried bread in rabri with sliced pistachios and almonds" }
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "ghee", amount = 4, unit = "tbsp" },
@@ -458,6 +463,7 @@ name = "Besan ladoo"
 serves = 6
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a188e4-2cef-7334-bc68-2b38530a9c1e.webp", sha256 = "a07fc62713fa2131b5898d46c23e62fb4268809a0376bc8c1af37d6a1dc13003", alt = "Besan ladoo, golden gram flour sweet balls with almond bits" }
 ingredients = [
   { id = "gram-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 0.75, unit = "cup" },
@@ -481,6 +487,7 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 360, note = "freeze for 6 hours" }
+image = { file = "01a188e4-2cf2-76e3-83a6-1b56e3117e9a.webp", sha256 = "13d05fc661add485d3734743dfab129b3d0e78ad4c584929a024a854d32ab506", alt = "Two cone shaped kulfis" }
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "condensed-milk", amount = 0.5, unit = "cup" },

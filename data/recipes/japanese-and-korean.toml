@@ -166,6 +166,7 @@ name = "Gyudon"
 serves = 2
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18c12-0588-7c01-a328-a226413aa80d.webp", sha256 = "1395048f4ddaf7c03449a421fe88e2836b4bfe8ee33303d20080ee381ceb7d9f", alt = "Gyudon, a bowl of rice topped with thin beef, onion and spring onion" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "beef", amount = 300, unit = "g" },
@@ -600,6 +601,7 @@ name = "Japchae"
 serves = 4
 prep_minutes = 25
 cook_minutes = 20
+image = { file = "01a18c12-05aa-7b8d-a68f-39e8fa1979a6.webp", sha256 = "f8aa52e83ac91209a083aeecaecc24918fe89cc54a129eef9a29aceb3f8ba3f4", alt = "Japchae, sweet potato noodles with beef, spinach, carrot, mushroom, egg strips and sesame seeds" }
 ingredients = [
   { id = "sweet-potato-noodles", amount = 200, unit = "g" },
   { id = "beef", amount = 200, unit = "g" },
@@ -726,6 +728,7 @@ name = "Korean fried chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+image = { file = "01a18c12-05b2-739b-9fe9-2cafc76f1bc3.webp", sha256 = "943db11d0e6739ce99984370410a9362ffac5f5eba4996133be71083f4abdf09", alt = "Korean fried chicken glazed in a sticky gochujang sauce with sesame seeds" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "potato-starch", amount = 0.75, unit = "cup" },

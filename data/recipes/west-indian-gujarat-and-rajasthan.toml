@@ -84,6 +84,7 @@ name = "Khandvi"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18b5a-d30e-73db-bf94-a416b22a5d03.webp", sha256 = "fe573fdd357da1339bde149dafe4169f1dcf2985f8593385f0a84652956263b4", alt = "Khandvi rolls with a mustard seed tempering, grated coconut and curry leaves" }
 ingredients = [
   { id = "gram-flour", amount = 0.5, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -156,6 +157,7 @@ name = "Thepla"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b5a-d312-74eb-9175-6a54dc96f32c.webp", sha256 = "9e551c03e89137d372110fdbfaf28e21a0cc8283df62663de9f69997dcaf135c", alt = "A stack of thepla with sesame seeds" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -735,6 +737,7 @@ name = "Dal baati churma"
 serves = 4
 prep_minutes = 40
 cook_minutes = 60
+image = { file = "01a18b5a-d33a-7189-9626-3d0cccf33709.webp", sha256 = "4713b07bbc1c8df11af1942b23b9e3b39055ebb77b39ea237ec272fca2ee2390", alt = "Dal baati churma with baati, dal and sweet churma" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 3, unit = "cup" },
   { id = "semolina", amount = 0.25, unit = "cup" },

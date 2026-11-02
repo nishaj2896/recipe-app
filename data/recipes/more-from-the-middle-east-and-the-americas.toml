@@ -278,6 +278,7 @@ name = "Philly cheesesteak"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18c4f-8e65-79bf-90f1-c901a3d60b0c.webp", sha256 = "a413694c45f504a21b91ef5d4e3177384ffd615a2b40c1d00932b8a6891a2b6a", alt = "Two Philly cheesesteaks with beef, onion, bell pepper and melted cheese" }
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -305,6 +306,7 @@ name = "Jambalaya"
 serves = 6
 prep_minutes = 20
 cook_minutes = 45
+image = { file = "01a18c4f-8e68-7c87-92fa-cbcb9822a6d8.webp", sha256 = "845c37489441cec5ef85b2c3a445c89f864d9f488ed6a502e6b0dd66b5d1f0cf", alt = "Jambalaya with chicken, sausage, prawns, bell pepper and spring onions" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "sausages", amount = 300, unit = "g" },

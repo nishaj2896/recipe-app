@@ -353,6 +353,7 @@ name = "Baingan bharta"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a15175-3c0d-724d-8163-07a8da4afdd6.webp", sha256 = "eeaf1959be161f61be9b7a23584ae473e46985f98f42b4b302b8d526b7be1331", alt = "Baingan bharta, smoky mashed brinjal with onion, tomato and coriander" }
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -410,6 +411,7 @@ name = "Egg curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a15175-3c17-7fd3-9389-349bd64c3500.webp", sha256 = "ee4990b25d9db152306f20168895739370239b2428b8e8308f771bbd17224716", alt = "Egg curry, whole boiled eggs in an orange onion and tomato gravy" }
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -536,6 +538,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 40
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18812-66df-7ccf-b265-66e449208513.webp", sha256 = "e37ddbb9a2a74e157198538145972ac7ab1fd75be136515fbd074c81266a8d69", alt = "Chicken tikka masala, charred chicken in a creamy orange tomato sauce" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -650,6 +653,7 @@ name = "Chicken do pyaza"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18812-66e6-7c65-86e5-04930d86c859.webp", sha256 = "91f151316c87ae7faa98897688b4ed94b7bab0a226364b066445386a7411d4a9", alt = "Chicken do pyaza with cooked onion and coriander" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 4, unit = "medium" },
@@ -685,6 +689,7 @@ name = "Chicken saagwala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+image = { file = "01a18812-671b-7b6a-9f23-dbdbf7526cf0.webp", sha256 = "a63b9f413205041c4492f112328db0685767654ef3dafa8808c56718dd4a5686", alt = "Chicken saagwala in a spinach gravy" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "spinach", amount = 400, unit = "g" },
@@ -722,6 +727,7 @@ name = "Methi chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18812-671e-7d3c-8c9d-dc581af533dd.webp", sha256 = "dc6641313f7dbe511aa0213446074ef47cb8e2885ce4af620d398724901369ca", alt = "Methi chicken, chicken pieces in a fenugreek leaf gravy" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "fenugreek-leaves", amount = 100, unit = "g" },
@@ -872,6 +878,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 90
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18812-6727-7cb4-9f54-7c25a947bee2.webp", sha256 = "8e2e2130ff3225f3e38149933dcb965a3aa4f5a134234c8bc247b12b49d835e0", alt = "Mutton korma, bone-in mutton in a golden onion and cashew gravy" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -908,6 +915,7 @@ name = "Bhuna gosht"
 serves = 4
 prep_minutes = 15
 cook_minutes = 90
+image = { file = "01a18812-6729-72de-b1c0-1cd7ec0890d3.webp", sha256 = "fd59712ab9d03da67f4c3fcb1d38d5cb2d6ad9efd05d109721a54b13f9df775c", alt = "Bhuna gosht, mutton in a dark thick masala with coriander" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "onion", amount = 4, unit = "medium" },
@@ -946,6 +954,7 @@ name = "Aloo keema"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+image = { file = "01a18812-672c-7509-8e08-16d0d0d2d8ce.webp", sha256 = "0c0a81eaf861046594d58559070f110d7b396ef02dc966e159a70ad996db5d1c", alt = "Aloo keema with potato cubes, slit green chillies and coriander" }
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -981,6 +990,7 @@ name = "Nihari"
 serves = 4
 prep_minutes = 15
 cook_minutes = 260
+image = { file = "01a18812-672e-7e5e-9e18-9973c85d213a.webp", sha256 = "5306ce0d82e1e6b4d0e5116ce0f8d9b2fc12460551cd7700dd180c40f61fa0d4", alt = "Nihari topped with fried onion, ginger strips and coriander, with lemon wedges" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1024,6 +1034,7 @@ name = "Laal maas"
 serves = 4
 prep_minutes = 10
 cook_minutes = 90
+image = { file = "01a18812-6730-7099-83c5-19af8f61e6e9.webp", sha256 = "6346bdbd60f8480083ea620277aa2b25f826cc5d3a87729906bf529d0305720a", alt = "Laal maas, Rajasthani mutton in a fiery red gravy" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "dried-red-chillies", amount = 15, unit = "piece" },
@@ -1059,6 +1070,7 @@ name = "Safed maas"
 serves = 4
 prep_minutes = 10
 cook_minutes = 90
+image = { file = "01a18812-6733-728f-98f0-dadfcedbcb95.webp", sha256 = "3b3be97c75fa5bd3f978073b7ae3dfa0d5b80e6f26b89cf97d7237d074bb6e93", alt = "Safed maas, mutton in a white cashew and cream gravy with green chilli" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -1203,6 +1215,7 @@ name = "Paneer lababdar"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18813-9164-74f7-a41f-34424892557e.webp", sha256 = "819ef921a83dab59fa9c7b4cdea29d18cd444a0572f7b1997163fe321230729e", alt = "Paneer lababdar in a rich orange gravy" }
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1239,6 +1252,7 @@ name = "Paneer tikka masala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18813-9166-7175-8846-b0ce683b98f3.webp", sha256 = "b63e26fff99b4584971c3ea2c4061acc7d7963f6699d6ebb907ed0f151692a14", alt = "Paneer tikka masala with bell pepper and onion" }
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -1313,6 +1327,7 @@ name = "Lauki kofta"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+image = { file = "01a18813-916a-75ab-b120-c21d53c9f763.webp", sha256 = "46959ca1b79648dedf68b706afe4a009d81d8d69782551a986041378983d0c40", alt = "Lauki kofta in a tomato gravy with coriander" }
 ingredients = [
   { id = "bottle-gourd", amount = 500, unit = "g" },
   { id = "gram-flour", amount = 0.5, unit = "cup" },
@@ -1386,6 +1401,7 @@ name = "Kashmiri dum aloo"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+image = { file = "01a18813-916f-7061-8fb4-2395b52e9368.webp", sha256 = "6b324e62fb3612c75a6773a86da2396807ca06cf59644b61ec6cb90878d60afa", alt = "Kashmiri dum aloo, baby potatoes in a red gravy" }
 ingredients = [
   { id = "potato", amount = 600, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -1419,6 +1435,7 @@ name = "Aloo methi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18813-9171-7847-8929-9e949df007da.webp", sha256 = "c0eb4e42f720ea4664f04a581241ca263acf48a936c2fda23100145e14a47df5", alt = "Aloo methi, potato cubes tossed with fenugreek leaves and garlic" }
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "fenugreek-leaves", amount = 150, unit = "g" },
@@ -1516,6 +1533,7 @@ name = "Bhindi do pyaza"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18813-9178-7f3a-972a-f2eb49afa918.webp", sha256 = "859513f5b24e943f64c6f7b621b3f33843447415d1cc405d4591f44f35ed038b", alt = "Bhindi do pyaza, okra with onion" }
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1547,6 +1565,7 @@ name = "Navratan korma"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18813-917b-776a-b52f-5d8fdda6cffd.webp", sha256 = "5cb053871ff9dd606c80c8e293d1779f0d297c6bc5a5a80e0be32a5cc33cd286", alt = "Navratan korma with vegetables, paneer, cashews and raisins in a creamy gravy" }
 ingredients = [
   { id = "carrot", amount = 1, unit = "medium" },
   { id = "french-beans", amount = 100, unit = "g" },
@@ -1589,6 +1608,7 @@ name = "Methi matar malai"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18814-ee92-7b2f-a98a-190c8ecb6874.webp", sha256 = "c858e6974a4e0b64c8bd9a28e42fb2d7f1e02d41c5417648f3400fc253fbe024", alt = "Methi matar malai, peas and fenugreek leaves in a creamy gravy" }
 ingredients = [
   { id = "fenugreek-leaves", amount = 100, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -1660,6 +1680,7 @@ name = "Kadai mushroom"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18814-ee96-7f1e-b3ab-56e303682538.webp", sha256 = "cb52386de12a517424f2ca2f1e1eb0963c9f267e24df9cd240504c11833b5811", alt = "Kadai mushroom with bell pepper and onion" }
 ingredients = [
   { id = "mushroom", amount = 400, unit = "g" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -1692,6 +1713,7 @@ name = "Gobi masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18814-ee99-74e7-86ea-8363338f7a02.webp", sha256 = "43a86699495dc0bc75eca53a088fef4bf65c5a2b277b04d21c7460575717f1b2", alt = "Gobi masala with cauliflower florets and coriander" }
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1758,6 +1780,7 @@ name = "Sarson ka saag"
 serves = 4
 prep_minutes = 20
 cook_minutes = 60
+image = { file = "01a18814-ee9d-725a-9e01-d7e3b5ed10fe.webp", sha256 = "ee51425e74e4622d8c52df5262c796e3183460ff7dd1f69d55e676dbdeae5a6e", alt = "Sarson ka saag with a pat of butter on top" }
 ingredients = [
   { id = "mustard-greens", amount = 500, unit = "g" },
   { id = "spinach", amount = 250, unit = "g" },
@@ -2079,6 +2102,7 @@ name = "Fish tikka masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18814-eeb4-7fc6-8ec6-54d4a3443918.webp", sha256 = "47d010eaefd2e814f08af316c1d39f7ac94986d42b7b54166cc96020c19bf9b2", alt = "Fish tikka masala, charred fish pieces in a tomato cream sauce" }
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -2266,6 +2290,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 90
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d.webp", sha256 = "71622ed847c444dc0118bceb0001b93953c0dc2c6bc3226c5779aa19ac6edb3b", alt = "Dal makhani, a creamy dark black lentil and kidney bean dal" }
 ingredients = [
   { id = "whole-urad", amount = 0.75, unit = "cup" },
   { id = "kidney-beans", amount = 0.25, unit = "cup" },
@@ -2334,6 +2359,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+image = { file = "01a188a8-fea2-75ca-bb35-1cffa95c141d.webp", sha256 = "55f879edcc9dae02cfa2fe3e1e0bd00dc2c346bef517977b897f85f156095d81", alt = "Chana dal with tomato and coriander" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2476,6 +2502,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 50
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a188a8-feab-7a94-b669-c2287146ded7.webp", sha256 = "3920bf3f7487468c712baf2c65f27adb45c88f6ed0886d05b3b8ded2aa27f744", alt = "Kala chana curry, black chickpeas in a thick dark gravy" }
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },

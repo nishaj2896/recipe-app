@@ -37,6 +37,7 @@ name = "Classic cheeseburger"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18c1e-2c18-7153-810a-f7fcdbe62089.webp", sha256 = "f8c12bfe8cf4e004f9b2691fe8fdebf20d98fb594ec70b46c2cf1a83d11ec16a", alt = "Classic cheeseburger with lettuce, tomato, onion and gherkins" }
 ingredients = [
   { id = "beef-mince", amount = 600, unit = "g" },
   { id = "burger-buns", amount = 4, unit = "piece" },
@@ -121,6 +122,7 @@ name = "Club sandwich"
 serves = 2
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c1e-2c1f-7a26-a465-c9f9783f9425.webp", sha256 = "0af6ece96605a8939359e33abbd7b3a0684df4db9d5d0ca9b763fe7cd461cbf7", alt = "Club sandwich with chicken, bacon, lettuce and tomato, cut in quarters" }
 ingredients = [
   { id = "white-bread", amount = 6, unit = "slice" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -171,6 +173,7 @@ name = "Buffalo chicken wings"
 serves = 4
 prep_minutes = 15
 cook_minutes = 50
+image = { file = "01a18c1e-2c23-72f6-82d2-c21de41d22ab.webp", sha256 = "a5c1945c14530ff17cf41146a13f4659ec80352ecd6ff6694f6d9e21c6d5e291", alt = "Buffalo chicken wings with blue cheese dip, celery and carrot sticks" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "baking-powder", amount = 1, unit = "tbsp" },
@@ -291,6 +294,7 @@ name = "Chicken pot pie"
 serves = 6
 prep_minutes = 25
 cook_minutes = 55
+image = { file = "01a18c1e-2c2c-712e-adff-f0ebcb7aebfe.webp", sha256 = "5e22cccb87fe7a9864a8ff3b43b98b02aed0b0548ae17b85e09234000b34e77b", alt = "Chicken pot pie with a puff pastry lid cut open to show the filling" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "puff-pastry", amount = 320, unit = "g" },
@@ -559,6 +563,7 @@ name = "Clam chowder"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+image = { file = "01a18c1e-2c40-75e0-8eba-f1c31a55564e.webp", sha256 = "c1811b49d396c83f98704b8cca2a2850c4d54f510f397ddaa3ebf6f220b67a4a", alt = "Clam chowder with potato and crisp bacon" }
 ingredients = [
   { id = "clams", amount = 1, unit = "kg" },
   { id = "bacon", amount = 4, unit = "slice" },
@@ -912,6 +917,7 @@ name = "Chocolate chip cookies"
 serves = 12
 prep_minutes = 15
 cook_minutes = 12
+image = { file = "01a18c1e-2c5b-7243-93f9-c58258a88765.webp", sha256 = "6befc6bc994b6ffc89d5ea0625e5526a38af4b10ef3fc969f5eaa7a18a2c138e", alt = "Chocolate chip cookies, one broken open" }
 ingredients = [
   { id = "butter", amount = 0.75, unit = "cup" },
   { id = "brown-sugar", amount = 0.75, unit = "cup" },
@@ -939,6 +945,7 @@ name = "Banana bread"
 serves = 10
 prep_minutes = 15
 cook_minutes = 60
+image = { file = "01a18c1e-2c5d-7a15-ad15-224d4e7b6b4a.webp", sha256 = "882f27eaa17e2c6b15e3579353093b9d4a0169972b3f527718b407a44f68af0c", alt = "A loaf of banana bread with two thick slices" }
 ingredients = [
   { id = "banana", amount = 3, unit = "large" },
   { id = "butter", amount = 0.33, unit = "cup" },
@@ -966,6 +973,7 @@ name = "Scones"
 serves = 8
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18c1e-2c60-7e3c-a1f5-02288ef083eb.webp", sha256 = "0947c25e9c2676a7d1936e90bc17ed1ab06889333fac73518caec8ef47684874", alt = "Scones, one split with jam and whipped cream" }
 ingredients = [
   { id = "self-raising-flour", amount = 2, unit = "cup" },
   { id = "baking-powder", amount = 1, unit = "tsp" },
