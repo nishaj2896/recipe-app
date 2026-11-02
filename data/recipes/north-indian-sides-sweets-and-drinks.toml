@@ -54,6 +54,7 @@ name = "Masala chai"
 serves = 2
 prep_minutes = 2
 cook_minutes = 8
+image = { file = "01a15175-3c27-73b4-819d-e09422b77b02.webp", sha256 = "ccf0a0dbf136d16c31d5db6f9041d0bcd7049459db72660fae1f6099df0f9e5c", alt = "Glass of masala chai" }
 ingredients = [
   { id = "black-tea", amount = 2, unit = "tsp" },
   { id = "milk", amount = 1, unit = "cup" },

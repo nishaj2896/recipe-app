@@ -47,6 +47,7 @@ name = "Khaman"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18b5a-d30b-7253-9386-da2dbe57c1bf.webp", sha256 = "13cf870fe2c53f0218cd0152bc84c62cc28f576d6a0bae29cff418e9de6a9662", alt = "Khaman squares with mustard seeds, green chillies, coriander and coconut" }
 ingredients = [
   { id = "gram-flour", amount = 1.5, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },

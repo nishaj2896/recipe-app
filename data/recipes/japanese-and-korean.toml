@@ -40,6 +40,7 @@ name = "Salmon teriyaki"
 serves = 2
 prep_minutes = 5
 cook_minutes = 12
+image = { file = "01a18c12-057e-7570-9122-4d5aa8119343.webp", sha256 = "230caabebff869539f2ba686c3fcce4c93c988aebff93ac8b8af48c8da1da671", alt = "Salmon teriyaki with spring onions and sesame seeds" }
 ingredients = [
   { id = "salmon", amount = 2, unit = "piece" },
   { id = "soy-sauce", amount = 3, unit = "tbsp" },
@@ -98,6 +99,7 @@ name = "Katsu curry"
 serves = 4
 prep_minutes = 25
 cook_minutes = 45
+image = { file = "01a18c12-0583-7039-8ac5-f83074f83c43.webp", sha256 = "c547fffd1ace22060e2aa87945bf6561e289dceeb44b50e2b933a80f9eeb7408", alt = "Sliced chicken katsu with a curry sauce of carrot and potato" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -569,6 +571,7 @@ name = "Kimchi fried rice"
 serves = 2
 prep_minutes = 10
 cook_minutes = 12
+image = { file = "01a18c12-05a7-7b68-9f25-51ce04f8a789.webp", sha256 = "514945e23bafbf34b6da3bc4a36b6029fe75099cd9f2b68a50848b2624bd852f", alt = "Kimchi fried rice topped with a fried egg, spring onions and nori" }
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "kimchi", amount = 1, unit = "cup" },
@@ -692,6 +695,7 @@ name = "Tteokbokki"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18c12-05b0-7c66-ab75-c9c955089d41.webp", sha256 = "a3272bceae88988a0ac2580d02035c971eb60ab29a34585002a29f72b140272f", alt = "Tteokbokki with halved boiled eggs and spring onions in a red gochujang sauce" }
 ingredients = [
   { id = "korean-rice-cakes", amount = 500, unit = "g" },
   { id = "gochujang", amount = 3, unit = "tbsp" },

@@ -11,6 +11,7 @@ name = "Rava upma"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a15175-3c15-7017-9787-d9be73c0cb5f.webp", sha256 = "4fb528bfa4acb9d2d41663a6dad19906a858ff31ae6280c5026b0ad97053ede3", alt = "Rava upma with curry leaves, mustard seeds and green chillies" }
 ingredients = [
   { id = "semolina", amount = 180, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -338,6 +339,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+image = { file = "01a188e6-a855-71ed-9bfc-0c9d642f82e1.webp", sha256 = "a0f273453e6b6375033eb70671cf875e669d5627f8f7560fdef499cc04177d23", alt = "Uttapam topped with onion, green chilli and coriander" }
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },

@@ -38,6 +38,7 @@ name = "Penne arrabbiata"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+image = { file = "01a15175-3c21-75ea-9433-d3744b9ac581.webp", sha256 = "378f0e04abfeef1a42158d39147616b43f5592b462d07218744cb036e4cc0167", alt = "Penne arrabbiata with basil" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -149,6 +150,7 @@ name = "Fettuccine alfredo"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18bbd-3cd7-7e67-9e8d-726ac0015cb9.webp", sha256 = "ab2b8be6864780bdb2c514af608074675f70a7ac24ab4ca3fe8af8af39e41401", alt = "Fettuccine alfredo with black pepper" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "butter", amount = 6, unit = "tbsp" },
@@ -554,6 +556,7 @@ name = "Bruschetta"
 serves = 4
 prep_minutes = 15
 cook_minutes = 5
+image = { file = "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e.webp", sha256 = "9559dc165cae1ae9eadf2eafc65f6cd98dc34fb1a7c230f26a528289aff1b9b9", alt = "Bruschetta toasts piled with tomato and basil" }
 ingredients = [
   { id = "baguette", amount = 1, unit = "piece" },
   { id = "tomato", amount = 4, unit = "medium" },

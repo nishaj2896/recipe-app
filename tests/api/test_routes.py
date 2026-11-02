@@ -27,7 +27,7 @@ async def test_search_card_shape(client: AsyncClient) -> None:
     assert first["total_minutes"] == first["prep_minutes"] + first["cook_minutes"]
     assert first["diet"] == "vegetarian"
     assert first["plan_ahead"] is None
-    assert first["image"] is None
+    assert first["image"] is None or set(first["image"]) == {"url", "alt"}
 
 
 async def test_all_staples_card_has_no_percentage(client: AsyncClient) -> None:
@@ -67,7 +67,7 @@ async def test_recipe_detail(client: AsyncClient) -> None:
     assert potato["amount"] > 0
     assert 1 <= detail["serves"] <= 12
     assert len(detail["steps"]) >= 2
-    assert detail["image"] is None
+    assert detail["image"] is None or set(detail["image"]) == {"url", "alt"}
 
 
 async def test_recipe_detail_marks_to_taste_ingredients(client: AsyncClient) -> None:

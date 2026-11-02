@@ -11,6 +11,7 @@ name = "Jeera aloo"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a15175-3c01-7f7f-bbc8-f5c5fce48a60.webp", sha256 = "fd43b504460ba1f80e0d1ee1b19bc6add897a23e269b4a01615dada0c64589f9", alt = "Jeera aloo with coriander and green chillies" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "cumin-seeds", amount = 1.5, unit = "tsp" },

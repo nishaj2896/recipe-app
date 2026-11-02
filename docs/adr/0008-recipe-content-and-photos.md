@@ -96,6 +96,6 @@ The two ingredient checks share one matcher. It normalizes each step as the sear
 
 - **Easier:** a saved recipe can be cooked from the app, for any number of people up to 12. New recipes are a data pull request, checked by CI and synced, with no code change.
 - **Harder:** about 1,000 recipes is a lot to read. The checks in rule 4 catch structural mistakes; only a cook catches a wrong ratio or time, so the batch spot-read matters.
-- **Risk:** 1,000 photos at up to 150 KB is up to 150 MB in the Git history, and history never shrinks. Before the photos pass 100, a follow-up ADR decides between Git LFS and object storage behind the same `/dishes/` path.
+- **Risk:** 1,000 photos at up to 150 KB is up to 150 MB in the Git history, and history never shrinks. Before the photos pass 100, a follow-up ADR decides between Git LFS and object storage behind the same `/dishes/` path. ADR-0011 decided to keep them in Git.
 - **Risk:** scaling is linear. Spices, salt and cooking times don't scale linearly, so at 3× a recipe can taste stronger than intended. The stepper stops at 12 and to-taste stays to-taste; anything smarter is v2.
 - **Deferred:** step photos, unit conversion (cups to grams), and nutrition.

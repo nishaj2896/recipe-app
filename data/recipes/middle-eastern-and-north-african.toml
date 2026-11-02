@@ -11,6 +11,7 @@ name = "Shakshuka"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a15175-3c2d-7620-b329-81eec06563fc.webp", sha256 = "334f60e53ca4c627d2fd43d2517a80aee832413c70745298456402ba92eb4345", alt = "Shakshuka with three eggs in a cast-iron pan" }
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -122,6 +123,7 @@ name = "Tabbouleh"
 serves = 4
 prep_minutes = 25
 cook_minutes = 0
+image = { file = "01a18c16-b1fe-74e7-bca1-bb959369b478.webp", sha256 = "f8939da5b438047627ea7fed5e0fae72384459552f1920ad6a34025971a37867", alt = "Tabbouleh with parsley, tomato and bulgur" }
 ingredients = [
   { id = "bulgur", amount = 0.25, unit = "cup" },
   { id = "parsley", amount = 3, unit = "cup" },
@@ -179,6 +181,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18c16-b202-7160-98cc-bea7bf35c726.webp", sha256 = "49a93fcb4f63e040ff2685dc74cff4747f166c48ae1ba3937916763b92ac4986", alt = "Chicken shawarma wrap cut in half, with garlic sauce" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },

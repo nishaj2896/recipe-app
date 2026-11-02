@@ -285,6 +285,7 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 80
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18b54-81d1-7921-ad97-8f0eec6cba72.webp", sha256 = "2b3d9be8b4829b118d6ff19583ede1848fadee24e5af72d339679cf1e76b886b", alt = "Hyderabadi chicken biryani with fried onions and mint" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
