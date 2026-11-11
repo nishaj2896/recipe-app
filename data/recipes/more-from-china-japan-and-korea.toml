@@ -267,7 +267,7 @@ name = "Zaru soba"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
-image = { file = "01a18c22-48f3-7f62-9b64-c108b0578897.webp", sha256 = "07a869d0ae6958fa2e4e8c1b3900637dacafc2588cfe91088949897eb57d393e", alt = "Zaru soba on a bamboo tray with dipping sauce, spring onion and radish" }
+image = { file = "01a18c22-48f3-7f62-9b64-c108b0578897.webp", sha256 = "0d7ad7785b9ab3d9b7f4a01c054425c480d5082da623d982eede49c33bc7ae80", alt = "Zaru soba on a bamboo tray with dipping sauce, spring onion and radish" }
 ingredients = [
   { id = "soba", amount = 200, unit = "g" },
   { id = "kombu", amount = 5, unit = "g" },

@@ -583,7 +583,7 @@ name = "Haldi doodh"
 serves = 2
 prep_minutes = 5
 cook_minutes = 8
-image = { file = "01a18bae-8f42-72fb-a65a-1d1bbd822900.webp", sha256 = "595125d9348bf07ae837d70a6f49a6d956d8ef4cc0c59282ce86c8746c3382b4", alt = "Glass mug of turmeric milk" }
+image = { file = "01a18bae-8f42-72fb-a65a-1d1bbd822900.webp", sha256 = "a3d021ab5d4e47e99628e33652fd8a022da220d383d2af8eeff68901f8f8878c", alt = "Glass mug of turmeric milk" }
 ingredients = [
   { id = "milk", amount = 2, unit = "cup" },
   { id = "turmeric", amount = 0.5, unit = "tsp" },

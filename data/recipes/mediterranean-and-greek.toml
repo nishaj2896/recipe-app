@@ -457,7 +457,7 @@ name = "Garlic prawns (gambas al ajillo)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 8
-image = { file = "01a18c1a-e243-751a-8dca-550ee3ea79c7.webp", sha256 = "576e8258caad7d1b023ddd0db0713d3903923e27b9c31ffa7a640eaa40624385", alt = "Gambas al ajillo in a terracotta dish with slices of baguette" }
+image = { file = "01a18c1a-e243-751a-8dca-550ee3ea79c7.webp", sha256 = "f224c03635087406f0aecf16bc375b73484698a419ba60127556360c0d2b13c5", alt = "Gambas al ajillo in a terracotta dish with slices of baguette" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "garlic", amount = 8, unit = "clove" },

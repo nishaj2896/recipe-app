@@ -437,7 +437,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
-image = { file = "01a188ac-05b1-784f-bb14-2bba03c32a18.webp", sha256 = "f15d8193e2394128dac604ad2f1ed7690c67322056b4824067132ea00e8194b9", alt = "Two puffed golden bhaturas" }
+image = { file = "01a188ac-05b1-784f-bb14-2bba03c32a18.webp", sha256 = "8cd4a7d5f475e05cb08f8575eb2be11d6984d9fdac26cf012669309d3fb4d2f9", alt = "Two puffed golden bhaturas" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 2, unit = "tbsp" },

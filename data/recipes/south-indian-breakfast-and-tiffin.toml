@@ -311,7 +311,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
-image = { file = "01a188e6-a852-7c61-8e2e-397362b11e41.webp", sha256 = "8d9fc47533b430109f30c57260fbbefcbb608c3ef980560f144d0d64bac7db77", alt = "Crisp golden adai folded in half, flecked with onion and curry leaf" }
+image = { file = "01a188e6-a852-7c61-8e2e-397362b11e41.webp", sha256 = "f741483054e17c8e4b949105f625ce017a5c7ae5d40f254057238de666783a47", alt = "Crisp golden adai folded in half, flecked with onion and curry leaf" }
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -535,7 +535,7 @@ name = "Vegetable upma"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
-image = { file = "01a188e6-a864-7350-92f2-cb841fdb02cd.webp", sha256 = "39a096ba0b7160044284c42297b5b86152797b3f17154e5c807c52c5774b3996", alt = "Vegetable upma with carrot, beans and peas" }
+image = { file = "01a188e6-a864-7350-92f2-cb841fdb02cd.webp", sha256 = "66e6bfb990b28a33075e724ac27e7acf1f9b49b05a08e644ba14ccb904e4c015", alt = "Vegetable upma with carrot, beans and peas" }
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -695,7 +695,7 @@ name = "Akki roti"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
-image = { file = "01a188e6-a870-77c2-b879-2d807d10a1c0.webp", sha256 = "a662e47b95f22df84ffe9aa7746cf721d25ae277fc039ba6147ee903d93db21d", alt = "Round akki roti with grated carrot and herbs and a hole in the middle" }
+image = { file = "01a188e6-a870-77c2-b879-2d807d10a1c0.webp", sha256 = "16d9819185dbbc839b218ff208fbcecfeef40882c2827465648ce75e22f79964", alt = "Round akki roti with grated carrot and herbs and a hole in the middle" }
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },

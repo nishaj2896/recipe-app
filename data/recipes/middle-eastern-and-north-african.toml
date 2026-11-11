@@ -150,7 +150,7 @@ name = "Fattoush"
 serves = 4
 prep_minutes = 20
 cook_minutes = 10
-image = { file = "01a18c16-b200-746a-9aa1-ae1a0b39d650.webp", sha256 = "f1d8729bea733a43e398936888703491ba2792ab334e7956345d8f794ee194ef", alt = "Fattoush salad with toasted pita, radish and sumac" }
+image = { file = "01a18c16-b200-746a-9aa1-ae1a0b39d650.webp", sha256 = "730c52d20e5178c575d72352c6b0541ae0c62d3107c148436c66150aa9600d03", alt = "Fattoush salad with toasted pita, radish and sumac" }
 ingredients = [
   { id = "pita-bread", amount = 2, unit = "piece" },
   { id = "lettuce", amount = 1, unit = "small-head" },

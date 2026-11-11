@@ -216,7 +216,7 @@ name = "Rista"
 serves = 4
 prep_minutes = 30
 cook_minutes = 50
-image = { file = "01a18bb1-05a8-7a89-992d-7ce51e64a3e0.webp", sha256 = "5be9fea454606f4a6adf3d6e1b551ba57afaf4b483d508e732cd07c254dafbfc", alt = "Rista, lamb balls in a deep red gravy" }
+image = { file = "01a18bb1-05a8-7a89-992d-7ce51e64a3e0.webp", sha256 = "bc879b6347d18ef5f18abb5b4ee1434dc69a8f3d2d54f42da5ae1c73e936a6a8", alt = "Rista, lamb balls in a deep red gravy" }
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "ghee", amount = 3, unit = "tbsp" },

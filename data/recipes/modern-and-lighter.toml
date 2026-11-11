@@ -100,7 +100,7 @@ name = "Zucchini fritters"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
-image = { file = "01a18c4f-8e7a-7051-9a08-c730ecb65523.webp", sha256 = "89301579aadd81f86083ea16209492467935ee9bdd6e9c67f0b99bb0810cfb72", alt = "Zucchini fritters with a bowl of yoghurt sauce" }
+image = { file = "01a18c4f-8e7a-7051-9a08-c730ecb65523.webp", sha256 = "41d8c04ee15740bbb706bdc6a12030f55d9bdcc766c39804931aacf8379e029d", alt = "Zucchini fritters with a bowl of yoghurt sauce" }
 ingredients = [
   { id = "zucchini", amount = 3, unit = "medium" },
   { id = "spring-onions", amount = 3, unit = "piece" },

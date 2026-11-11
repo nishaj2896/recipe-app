@@ -626,7 +626,7 @@ name = "Luchi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
-image = { file = "01a18b6e-647d-7e64-8d07-9f5e19ad4398.webp", sha256 = "727727990f08994c48a3ddfde0249c1088ce596b0aa4700eca381b4deea33b08", alt = "Stack of three puffed white luchi" }
+image = { file = "01a18b6e-647d-7e64-8d07-9f5e19ad4398.webp", sha256 = "54ed54ce5f00294bca8b47716953bb48fd7b7e15178fef1192a90f861dcf93b3", alt = "Stack of three puffed white luchi" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },

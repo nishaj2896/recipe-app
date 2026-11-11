@@ -676,7 +676,7 @@ name = "Sweetcorn soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
-image = { file = "01a18ba9-fdc4-7a74-802c-e97f486d751a.webp", sha256 = "9650b0703b5ff2671d8e133dc55fd5a5d9ba19c72e00036437dee989b4eefc6f", alt = "Sweetcorn soup with carrot, beans and spring onion" }
+image = { file = "01a18ba9-fdc4-7a74-802c-e97f486d751a.webp", sha256 = "b261d1a1d30421e3f7dc88e51082f5bc7885511a3b0b93a2d0f376afd158c4e7", alt = "Sweetcorn soup with carrot, beans and spring onion" }
 ingredients = [
   { id = "sweetcorn", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },

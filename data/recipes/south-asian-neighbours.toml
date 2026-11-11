@@ -161,7 +161,7 @@ name = "Nepali dal bhat"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
-image = { file = "01a18c4a-5f7c-7af2-abda-7824f1b45653.webp", sha256 = "ebed7d89a1edb83fc1192923bd0ef8cbb07418cbe0d3d320b07e4dbc9d517c0f", alt = "Nepali dal bhat, white rice with a bowl of masoor dal and coriander" }
+image = { file = "01a18c4a-5f7c-7af2-abda-7824f1b45653.webp", sha256 = "048b7ee8524b153c53d001c8976542680b10c43b383aedd0ebbc792ea5375876", alt = "Nepali dal bhat, white rice with a bowl of masoor dal and coriander" }
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -289,7 +289,7 @@ name = "Chapli kebab"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
-image = { file = "01a18c4a-5f85-7433-b61b-e5730d852ce7.webp", sha256 = "4983558a81f4bcf50c1416d46bdf673c28819ba0120cf9857bd36988a6666361", alt = "Two crisp chapli kebabs with coriander seeds" }
+image = { file = "01a18c4a-5f85-7433-b61b-e5730d852ce7.webp", sha256 = "4d4f0a93fdcd2c52bea0c6cfb8417eda8902a7dcd9a69644fc9be51fd0aca7bf", alt = "Two crisp chapli kebabs with coriander seeds" }
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },

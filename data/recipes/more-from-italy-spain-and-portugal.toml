@@ -263,7 +263,7 @@ name = "Pollo al ajillo"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
-image = { file = "01a18c1a-e28f-71b2-a822-3142aee883aa.webp", sha256 = "f8e6ade48c422fa39bc20338833306801ca8a72b2332442b69017d2ea33bcae4", alt = "Pollo al ajillo with whole garlic cloves, a bay leaf and parsley" }
+image = { file = "01a18c1a-e28f-71b2-a822-3142aee883aa.webp", sha256 = "31d85a4815187dea6283548ad8a6cc4b356bc8ee289e8087b73b1f4f19392818", alt = "Pollo al ajillo with whole garlic cloves, a bay leaf and parsley" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "garlic", amount = 12, unit = "clove" },

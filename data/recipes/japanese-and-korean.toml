@@ -432,7 +432,7 @@ name = "Edamame with sea salt"
 serves = 4
 prep_minutes = 2
 cook_minutes = 6
-image = { file = "01a18c12-059c-795e-86e7-3cf49987770d.webp", sha256 = "e4c9bc6d1a2ef9f7e1429760a5509a74be7029e2bc50f6fce4b607650efc4e0c", alt = "Steamed edamame with sea salt and an empty bowl for the pods" }
+image = { file = "01a18c12-059c-795e-86e7-3cf49987770d.webp", sha256 = "08bb9bca797ed7ebd2d79a893fc492d89f48024d82625be3073e392d6d6f776b", alt = "Steamed edamame with sea salt and an empty bowl for the pods" }
 ingredients = [
   { id = "edamame", amount = 400, unit = "g" },
   { id = "salt", to_taste = true },

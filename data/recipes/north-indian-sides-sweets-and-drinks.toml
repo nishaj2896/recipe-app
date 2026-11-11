@@ -79,7 +79,7 @@ name = "Nimbu pani"
 serves = 4
 prep_minutes = 5
 cook_minutes = 0
-image = { file = "01a15175-3c2a-7329-8454-367648dbe421.webp", sha256 = "414a49f3110e5c32d498c59ee1c01d21140a0d0540bb1333b19d01ca233c94e0", alt = "Glass of nimbu pani over ice" }
+image = { file = "01a15175-3c2a-7329-8454-367648dbe421.webp", sha256 = "cc002d870009febff6b2b8dd54e3897828812787d948bffb1cbfc4407e918441", alt = "Glass of nimbu pani over ice" }
 ingredients = [
   { id = "lemon", amount = 3, unit = "piece" },
   { id = "sugar", amount = 4, unit = "tbsp" },

@@ -105,7 +105,7 @@ name = "Drumstick sambar"
 serves = 4
 prep_minutes = 30
 cook_minutes = 40
-image = { file = "01a188ea-3c95-7b74-afb4-10f1cab70c1b.webp", sha256 = "70d0a07329a07a13beec309dc8c47e15b57c0fb58c9b9df3abec1b574617c7df", alt = "Drumstick sambar with shallots, dried red chillies and curry leaves" }
+image = { file = "01a188ea-3c95-7b74-afb4-10f1cab70c1b.webp", sha256 = "f71153477a0fc975a648ebb5c34ea682f64b6d710d18a43087d6c46425f86006", alt = "Drumstick sambar with shallots, dried red chillies and curry leaves" }
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -660,7 +660,7 @@ name = "Beetroot poriyal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
-image = { file = "01a188ea-3cbc-741f-a28d-f2dde86616e8.webp", sha256 = "6c0a0cab6e930a3d0ec8331848726d2a2bb8457e1392393209f9b760347d0f8e", alt = "Beetroot poriyal with coconut, curry leaves and green chilli" }
+image = { file = "01a188ea-3cbc-741f-a28d-f2dde86616e8.webp", sha256 = "eaddd88778276d475db04c257c1678b9d0bc0e4288c2efea0edb39f409036e98", alt = "Beetroot poriyal with coconut, curry leaves and green chilli" }
 ingredients = [
   { id = "beetroot", amount = 3, unit = "medium" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -1023,7 +1023,7 @@ name = "Chettinad mutton curry"
 serves = 4
 prep_minutes = 30
 cook_minutes = 60
-image = { file = "01a188ea-3cd6-7f31-bfda-d62220000e22.webp", sha256 = "9bf3181e56b3da3a27016dbbe68be7021c3afc3d8aed96888e06422f25f539d8", alt = "Chettinad mutton curry in a dark gravy with curry leaves" }
+image = { file = "01a188ea-3cd6-7f31-bfda-d62220000e22.webp", sha256 = "70321ca5904235ae246d69aee670df9261d5d8a618739a71675328c150cf94c2", alt = "Chettinad mutton curry in a dark gravy with curry leaves" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
