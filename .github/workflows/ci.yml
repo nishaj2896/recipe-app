@@ -127,6 +127,15 @@ jobs:
     name: end-to-end
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Run in Playwright's own image, which already has Chromium and every
+    # system library it needs. Installing them per run used apt, and a DNS
+    # blip on the Ubuntu mirrors failed the job with no code at fault.
+    # Keep the tag equal to @playwright/test in web/package-lock.json; the
+    # check step below fails fast if the two drift apart.
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27
+      # Chromium uses shared memory; Playwright's docs recommend the host IPC.
+      options: --ipc=host
     services:
       postgres:
         image: postgres:17
@@ -134,15 +143,14 @@ jobs:
           POSTGRES_USER: recipe_app
           POSTGRES_PASSWORD: recipe_app
           POSTGRES_DB: recipe_app
-        ports:
-          - 5432:5432
         options: >-
           --health-cmd "pg_isready -U recipe_app -d recipe_app"
           --health-interval 2s
           --health-timeout 3s
           --health-retries 15
     env:
-      DATABASE_URL: postgresql+asyncpg://recipe_app:recipe_app@localhost:5432/recipe_app
+      # Inside a container job, a service is reached by its name, not localhost.
+      DATABASE_URL: postgresql+asyncpg://recipe_app:recipe_app@postgres:5432/recipe_app
     defaults:
       run:
         working-directory: web
@@ -163,8 +171,10 @@ jobs:
         run: |
           uv sync --locked
           npm ci
-      - name: Install Chromium for Playwright
-        run: npx playwright install --with-deps chromium
+      - name: Check the image's Chromium matches the locked Playwright
+        run: >-
+          node -e "require('node:fs').accessSync(require('@playwright/test').chromium.executablePath())"
+          || { echo "::error::The Playwright image tag in ci.yml does not match @playwright/test in package-lock.json"; exit 1; }
       - name: Migrate and load the catalog
         run: |
           uv run --frozen alembic upgrade head
