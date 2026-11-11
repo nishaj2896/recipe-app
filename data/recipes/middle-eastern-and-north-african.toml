@@ -65,6 +65,7 @@ name = "Baba ganoush"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18c16-b1f9-7734-b05c-1bd32e66ce7e.webp", sha256 = "8ed8dd52119ece63a8f0bf1a99725d31de32a8e78f745016d4b5a83ca499dc02", alt = "Baba ganoush with olive oil, parsley and a few dried pomegranate seeds" }
 ingredients = [
   { id = "brinjal", amount = 2, unit = "large" },
   { id = "tahini", amount = 3, unit = "tbsp" },
@@ -149,6 +150,7 @@ name = "Fattoush"
 serves = 4
 prep_minutes = 20
 cook_minutes = 10
+image = { file = "01a18c16-b200-746a-9aa1-ae1a0b39d650.webp", sha256 = "f1d8729bea733a43e398936888703491ba2792ab334e7956345d8f794ee194ef", alt = "Fattoush salad with toasted pita, radish and sumac" }
 ingredients = [
   { id = "pita-bread", amount = 2, unit = "piece" },
   { id = "lettuce", amount = 1, unit = "small-head" },
@@ -298,6 +300,7 @@ name = "Lentil soup (Middle Eastern)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18c16-b20b-7687-a8d0-61a4d7a722dc.webp", sha256 = "5634347d1b58ab4d24b50332b9f854639e30678df6994c0563bc9062682b5c45", alt = "Red lentil soup with chilli flakes and lemon wedges" }
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -547,6 +550,7 @@ name = "Muhammara"
 serves = 6
 prep_minutes = 15
 cook_minutes = 5
+image = { file = "01a18c16-b21d-736b-a3e1-eac6fbbffba8.webp", sha256 = "fe281864345dffc75e6c89f46cd6ac1060cff707cd3f013990841ac1650ff7fd", alt = "Muhammara with olive oil and crumbled walnuts" }
 ingredients = [
   { id = "roasted-red-peppers", amount = 1.5, unit = "cup" },
   { id = "walnuts", amount = 1, unit = "cup" },
@@ -625,6 +629,7 @@ name = "Stuffed peppers (dolma)"
 serves = 4
 prep_minutes = 25
 cook_minutes = 55
+image = { file = "01a18c16-b224-7f04-92ee-74edc53f2d1e.webp", sha256 = "f4a1a38433d8917e26cc1bf6ebbe10afc391ba4a63dec9c11297321a849414a6", alt = "Three stuffed peppers in tomato sauce" }
 ingredients = [
   { id = "bell-pepper", amount = 6, unit = "medium" },
   { id = "rice", amount = 0.5, unit = "cup" },

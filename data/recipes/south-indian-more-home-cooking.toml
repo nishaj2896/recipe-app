@@ -11,6 +11,7 @@ name = "Kozhi varutha curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+image = { file = "01a18bb1-05ba-7a1d-a500-a643e4a781db.webp", sha256 = "eef4056dba1e3d809ccff705ca8d22254e1514c591adc205b76f6f1f5d9d65a2", alt = "Kozhi varutha curry in a dark roasted coconut gravy" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -145,6 +146,7 @@ name = "Kerala vegetable stew"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18bb1-05c3-79ba-b92b-2119c286d751.webp", sha256 = "631892c3219fb6799198261b491e4d1c36068577991bf798cbbdadeb1e09e4c9", alt = "Kerala vegetable stew in coconut milk with whole spices and curry leaves" }
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -308,6 +310,7 @@ name = "Ulli theeyal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18bb3-7942-70c6-8df8-49a3881de224.webp", sha256 = "bf142dafdb20fe01d5ecb27271a22c173050953c63ed745719e0f587a4788e6d", alt = "Ulli theeyal, shallots in a dark roasted coconut gravy" }
 ingredients = [
   { id = "shallot", amount = 20, unit = "piece" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -392,6 +395,7 @@ name = "Keerai masiyal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bb3-7949-7c9d-8955-209ea24d904d.webp", sha256 = "9e94486239e44a970f2df8bc54d1cd127a0843b723af13b3dc19eaee9df6f033", alt = "Keerai masiyal, mashed amaranth leaves with a tempering on top" }
 ingredients = [
   { id = "amaranth-leaves", amount = 300, unit = "g" },
   { id = "garlic", amount = 4, unit = "clove" },
@@ -627,6 +631,7 @@ name = "Natu kodi pulusu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+image = { file = "01a18bb3-795b-7a85-a6f2-5b5f40cf60c8.webp", sha256 = "7a9773ab41355ff717ffc4100f6c92c0a39793f4dc17bd5134debc33bd8a2ac2", alt = "Natu kodi pulusu, chicken in a tangy orange-red gravy with curry leaves" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -724,6 +729,7 @@ name = "Kodi vepudu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18bb3-7962-7cd3-a04e-4d407a7b4c41.webp", sha256 = "1c5d0c629ed78dc657215c3c9973f5fea4b19afa397dea387e0864d2390d83e7", alt = "Kodi vepudu, dry roasted chicken with cashews and curry leaves" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -909,6 +915,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18bb3-796f-7dc7-a3c7-064702929c17.webp", sha256 = "5e2fb4d81b53de786454f6f872be632099666512276fae4e768752c27fc8d121", alt = "Long rolled paper dosa" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -990,6 +997,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a18bb3-7976-781f-a1d7-e11aae04a6bb.webp", sha256 = "f071f4a6b6484f3e2a5c1ed6979b938d95873912f0c027de66af6fd6ce87774b", alt = "Thayir vadai in curd with a tempering and coriander" }
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "curd", amount = 2, unit = "cup" },
@@ -1105,6 +1113,7 @@ name = "Elaneer payasam"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18bb3-797f-7fc7-aa75-207f7a5d34db.webp", sha256 = "9f9a57527ebb5a3229f88e2c2a5c8436c0a5508c7c465d7260ed62773edf4282", alt = "Tender coconut payasam with coconut strips and fried cashews" }
 ingredients = [
   { id = "tender-coconut", amount = 2, unit = "piece" },
   { id = "milk", amount = 3, unit = "cup" },

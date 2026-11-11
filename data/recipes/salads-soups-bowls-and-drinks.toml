@@ -11,6 +11,7 @@ name = "Tofu and broccoli stir-fry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a15175-3c24-7cf4-9ec4-2e239c353e9f.webp", sha256 = "ff396520abdf7c881ca7231a300e6cffb71883bf9d44a482a2e874b788fa18a0", alt = "Tofu and broccoli stir-fry with red pepper" }
 ingredients = [
   { id = "tofu", amount = 300, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -89,6 +90,7 @@ name = "Mushroom soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18c22-48a9-7d28-bc67-5de769d392c2.webp", sha256 = "d444be5659b13b0ccf1c876707db48ef4cd778e122ce1490253eaa0a2fd19d92", alt = "Creamy mushroom soup topped with fried mushroom slices and parsley" }
 ingredients = [
   { id = "mushroom", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -170,6 +172,7 @@ name = "Lentil and vegetable soup"
 serves = 6
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c22-48b0-78be-b545-35b868bd64c1.webp", sha256 = "6de6db42968379faa1ee4354d6070026207a84fd1780fcbe52387f726aa7bd51", alt = "Green lentil soup with carrot, celery, tomato and spinach" }
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -284,6 +287,7 @@ name = "Waldorf salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 5
+image = { file = "01a18c22-48b9-7242-bdd6-e9534b8aef82.webp", sha256 = "0c278dfc08c901e557bc9750a705c06cfa230a3fc813a0d6931dbc0531f82786", alt = "Waldorf salad on lettuce leaves" }
 ingredients = [
   { id = "apple", amount = 2, unit = "medium" },
   { id = "celery", amount = 3, unit = "piece" },
@@ -368,6 +372,7 @@ name = "Teriyaki tofu bowl"
 serves = 2
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18c22-48c0-7d0a-8ea9-de8935531e63.webp", sha256 = "4520a98d9f8217b2424f1a588a07edfb76c94be24e256cdf8a76a8649724ed57", alt = "Teriyaki tofu bowl with broccoli, carrot and edamame on rice" }
 ingredients = [
   { id = "sushi-rice", amount = 0.75, unit = "cup" },
   { id = "tofu", amount = 300, unit = "g" },
@@ -458,6 +463,7 @@ name = "Garlic butter mushrooms"
 serves = 4
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18c22-48c6-7ff9-93cf-4d1fe32b816f.webp", sha256 = "b21d29e285f4d53ed5929b82347135a9b2c155efae295bbe0674c2442ae330e0", alt = "Garlic butter mushrooms with parsley in a small pan" }
 ingredients = [
   { id = "mushroom", amount = 500, unit = "g" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -562,6 +568,7 @@ name = "Garlic butter prawns"
 serves = 4
 prep_minutes = 10
 cook_minutes = 6
+image = { file = "01a18c22-48cf-7d5b-9142-9176d2eaf297.webp", sha256 = "481197322b0d7595d581fbfd8d2f6ae324c8b97264e78af61b091fbe79f40c7f", alt = "Garlic butter prawns with chilli flakes and parsley in a small pan" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -642,6 +649,7 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 5
 plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
+image = { file = "01a18c22-48d6-73e1-ad5e-9405ad8e716c.webp", sha256 = "dc0306c59cdee22d8084795b6e9ef501a42737f4d0dd0c93d0603fc9dfd550f3", alt = "Glass of iced lemon tea with lemon slices and mint" }
 ingredients = [
   { id = "black-tea", amount = 2, unit = "tbsp" },
   { id = "lemon", amount = 2, unit = "medium" },

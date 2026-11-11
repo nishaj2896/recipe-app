@@ -113,6 +113,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 360, note = "soak for 6 hours" }
+image = { file = "01a18b58-52dd-78d4-ba6d-1ff6c2167cf8.webp", sha256 = "1f0951e3730d2d6a20965aa0e0d0ca7b367d1b2b37c43b3a047c806ee8381489", alt = "Sabudana vadas with peanuts, one broken open" }
 ingredients = [
   { id = "sago", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -743,6 +744,7 @@ name = "Malvani fish curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b58-5306-7b8f-9289-d0133ecc40bd.webp", sha256 = "eecf272b0293bf27a95ce2ef27b180700744286d398e5592ad2050dc6f9cfa61", alt = "Malvani fish curry with kokum in a red-orange coconut gravy" }
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -1158,6 +1160,7 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 90
 plan_ahead = { wait_minutes = 1440, note = "rest for 1 day" }
+image = { file = "01a18b58-5322-7611-af58-ebf730607c10.webp", sha256 = "8004b2ad3dc34490d2278f82a7bcc61235ed4c53f54e7a69645122012b950164", alt = "Bowl of dark Goan pork sorpotel" }
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "pork-belly", amount = 250, unit = "g" },

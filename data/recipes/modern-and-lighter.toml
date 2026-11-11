@@ -11,6 +11,7 @@ name = "Lentil bolognese"
 serves = 4
 prep_minutes = 15
 cook_minutes = 50
+image = { file = "01a18c4f-8e73-782f-b11b-025134a37a2c.webp", sha256 = "51605701f875ad36f58fe16b51ec177ccf701143760a4908c880a499bf0746ab", alt = "Spaghetti with lentil bolognese and grated parmesan" }
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -99,6 +100,7 @@ name = "Zucchini fritters"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18c4f-8e7a-7051-9a08-c730ecb65523.webp", sha256 = "89301579aadd81f86083ea16209492467935ee9bdd6e9c67f0b99bb0810cfb72", alt = "Zucchini fritters with a bowl of yoghurt sauce" }
 ingredients = [
   { id = "zucchini", amount = 3, unit = "medium" },
   { id = "spring-onions", amount = 3, unit = "piece" },
@@ -192,6 +194,7 @@ name = "Spinach and ricotta cannelloni"
 serves = 4
 prep_minutes = 30
 cook_minutes = 50
+image = { file = "01a18c4f-8e80-7d75-8d4a-c2c4fc11e9f0.webp", sha256 = "c79c237fe81f9d31f1dda5311e86747e4548f653531e515e984df0b2d6a03ed7", alt = "Spinach and ricotta cannelloni baked under tomato sauce and cheese" }
 ingredients = [
   { id = "cannelloni-tubes", amount = 250, unit = "g" },
   { id = "spinach", amount = 500, unit = "g" },

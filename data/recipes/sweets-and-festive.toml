@@ -63,6 +63,7 @@ name = "Rabri"
 serves = 4
 prep_minutes = 5
 cook_minutes = 70
+image = { file = "01a18bb7-ff02-7143-92a7-8df3cd8f5ced.webp", sha256 = "47f6c9e2742e7f34d648a33d4246784dada8af68716eca516a14854dce4791b8", alt = "Rabri with sliced pistachios and almonds" }
 ingredients = [
   { id = "milk", amount = 6, unit = "cup" },
   { id = "sugar", amount = 0.25, unit = "cup" },
@@ -133,6 +134,7 @@ name = "Coconut barfi"
 serves = 8
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bb7-ff09-7067-926b-c53771dab39b.webp", sha256 = "7a0ba11464bdbc7d6232c22adfd5f28e59835efcb4da2eeb3a71ca7d01653641", alt = "Four squares of coconut barfi with chopped pistachios" }
 ingredients = [
   { id = "coconut", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -202,6 +204,7 @@ name = "Shakarpara"
 serves = 6
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18bb7-ff11-77ec-aed2-7f15cdbeb2a7.webp", sha256 = "41894e74aef46272f33ce57fc1f81fd2145bf574e82f74c9882712ffd5327ab4", alt = "Heap of golden diamond-shaped shakarpara" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -297,6 +300,7 @@ serves = 8
 prep_minutes = 40
 cook_minutes = 25
 plan_ahead = { wait_minutes = 4860, note = "soak the rice for 3 days" }
+image = { file = "01a18bb7-ff1a-7300-9ab2-90a0e2f9f85f.webp", sha256 = "42338f0cd5b4ba1eb1cdc194677dde316798fa19795028e096788f990a4945c5", alt = "Three golden anarsa coated with poppy seeds" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 0.5, unit = "cup" },
@@ -360,6 +364,7 @@ name = "Lauki halwa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+image = { file = "01a18bb7-ff21-7e33-8325-71b9ed7e7c6d.webp", sha256 = "d1cd1621378a7d291f1dd4cfec1bb4e3561951c728576b91433cbd27c13ba8fc", alt = "Lauki halwa with cashews and chopped pistachios" }
 ingredients = [
   { id = "bottle-gourd", amount = 500, unit = "g" },
   { id = "milk", amount = 1.5, unit = "cup" },

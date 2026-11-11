@@ -11,6 +11,7 @@ name = "Sri Lankan chicken curry"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+image = { file = "01a18c4a-5f6c-7ce6-a337-75ae717b09c9.webp", sha256 = "b991ef78a8c8488e7d919990db4251b06f9505bfb4853eecb9df66dae8187a5d", alt = "Sri Lankan chicken curry with curry leaves and cinnamon" }
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 1, unit = "large" },
@@ -160,6 +161,7 @@ name = "Nepali dal bhat"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c4a-5f7c-7af2-abda-7824f1b45653.webp", sha256 = "ebed7d89a1edb83fc1192923bd0ef8cbb07418cbe0d3d320b07e4dbc9d517c0f", alt = "Nepali dal bhat, white rice with a bowl of masoor dal and coriander" }
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -287,6 +289,7 @@ name = "Chapli kebab"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18c4a-5f85-7433-b61b-e5730d852ce7.webp", sha256 = "4983558a81f4bcf50c1416d46bdf673c28819ba0120cf9857bd36988a6666361", alt = "Two crisp chapli kebabs with coriander seeds" }
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },

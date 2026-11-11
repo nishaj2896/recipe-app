@@ -75,6 +75,7 @@ name = "Doi maach"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b6c-2300-7327-91a9-05d6034fc8e1.webp", sha256 = "b57de405d380988aa771534d85f0a8860e3a1ac2e417e8ec7760745cef07a8d5", alt = "Doi maach, rohu fish in a pale curd gravy with whole spices" }
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -174,6 +175,7 @@ name = "Fish kalia"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18b6c-2307-7f62-8244-d19b5f6f2f0e.webp", sha256 = "b0fff0012d591bdc0e22ca79652df046b8eee83a94289626a86d75beadf13812", alt = "Fish kalia, rohu steaks in a deep orange-red gravy" }
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -361,6 +363,7 @@ name = "Shukto"
 serves = 4
 prep_minutes = 25
 cook_minutes = 30
+image = { file = "01a18b6c-2312-71f3-9a20-bd2fa3610ad1.webp", sha256 = "d170ad0293c56da5908348974a3803471662b90be24ec36442d28d598eb31836", alt = "Shukto, Bengali vegetable stew with bitter gourd and drumstick" }
 ingredients = [
   { id = "bitter-gourd", amount = 1, unit = "small" },
   { id = "raw-banana", amount = 1, unit = "medium" },
@@ -484,6 +487,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 45
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a18b6c-231b-7ab1-bf8c-b0dea015ec9f.webp", sha256 = "72151863f420996f58206e587a89242b1dbef8e007620ffacad2a3f125e08c04", alt = "Dhokar dalna, diamond-shaped lentil cakes in a tomato and potato gravy" }
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -622,6 +626,7 @@ name = "Luchi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+image = { file = "01a18b6e-647d-7e64-8d07-9f5e19ad4398.webp", sha256 = "727727990f08994c48a3ddfde0249c1088ce596b0aa4700eca381b4deea33b08", alt = "Stack of three puffed white luchi" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },
@@ -791,6 +796,7 @@ name = "Sandesh"
 serves = 10
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18b6e-648b-7dd2-a446-dc613b1b9aa3.webp", sha256 = "b75783d7388a01e9e77b4139c298af84e9a6a612d6dd784f9f63cc6124d47217", alt = "Four sandesh, each with a sliver of pistachio" }
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "lemon", amount = 1, unit = "medium" },
@@ -873,6 +879,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 0
 plan_ahead = { wait_minutes = 480, note = "ferment the rice overnight" }
+image = { file = "01a18b6e-6492-7b61-aed4-3332d9ef6f29.webp", sha256 = "56592b44cf23c4748b29a9c4e0b59dd610f9227067f3454fc1872ca247b8fc51", alt = "Pakhala bhata, fermented rice in water with a tempering and mint" }
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -1019,6 +1026,7 @@ name = "Sattu paratha"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18b6e-649e-7e36-907d-c3796584d6af.webp", sha256 = "2d06aaffc11e928738220521e9f34b0467238d9a64e7f811d8d5fb89cc5891ee", alt = "Sattu paratha cut open to show the filling" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "sattu", amount = 1, unit = "cup" },
@@ -1139,6 +1147,7 @@ name = "Assamese fish tenga"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b6e-64a8-71cd-a507-dcb7db5575c4.webp", sha256 = "170ec7fa3861a2c58b9272fbaaa5dd79c0bbe67c381b8b020e9a29aab5199192", alt = "Assamese fish tenga, fish in a light tangy tomato broth with green chillies" }
 ingredients = [
   { id = "catla", amount = 500, unit = "g" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -1241,6 +1250,7 @@ name = "Duck curry (Assamese)"
 serves = 4
 prep_minutes = 20
 cook_minutes = 90
+image = { file = "01a18b6e-64b1-7a0b-9f3c-66585ce83261.webp", sha256 = "2c20cd973ba3fe04dd190c910256fb62a4f4c425f5204ffb62cd9dee3e4e5c81", alt = "Assamese duck curry with ash gourd in a dark gravy" }
 ingredients = [
   { id = "duck", amount = 1, unit = "kg" },
   { id = "ash-gourd", amount = 300, unit = "g" },
@@ -1426,6 +1436,7 @@ name = "Eromba"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b6e-64c0-7c14-9e8e-8bddf2c10f9c.webp", sha256 = "da9685d850740f9851501446764efb55f807d098f8c38de966c3a303aa303e73", alt = "Eromba, mashed potato, beans and pumpkin with spring onion and coriander" }
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "french-beans", amount = 10, unit = "piece" },

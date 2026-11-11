@@ -46,6 +46,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 50
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18c4a-5f90-7c75-81a5-7add2dad1f6f.webp", sha256 = "f0ea65d630ac673027d9bd69192427ace328cd8f1dc41b0ed008ea2ef3dc661c", alt = "Chicken yassa with caramelised onions, green olives and a bay leaf" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 4, unit = "large" },
@@ -143,6 +144,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18c4a-5f97-7a26-8dd0-5204054b53a1.webp", sha256 = "a8e5333e9229a9b0e551937ef8c2f6865fcd5eb52d9022ac115f0d8c158befcc", alt = "Charred peri peri chicken with lemon wedges" }
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "birds-eye-chillies", amount = 6, unit = "piece" },
@@ -253,6 +255,7 @@ name = "Githeri"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18c4a-5fa1-7e18-b603-388db5e762a7.webp", sha256 = "5ab2db88ee371e695db275cb83736b36fa6baa5ff74702b17ea1a892cb5e5f4c", alt = "Githeri, sweetcorn and kidney beans in a tomato stew with coriander" }
 ingredients = [
   { id = "sweetcorn", amount = 2, unit = "cup" },
   { id = "kidney-beans", amount = 1, unit = "can" },
@@ -394,6 +397,7 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 135
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18c4a-5fac-7f0e-bbdc-0fe2ceaa316a.webp", sha256 = "96b5e617bcbd96d870e7dfcddd9ebf83e678f5e29308e4d0229faf7a6eb8a57f", alt = "Curry goat with bone-in mutton and potato in a yellow gravy" }
 ingredients = [
   { id = "mutton", amount = 1.2, unit = "kg" },
   { id = "curry-powder", amount = 3, unit = "tbsp" },

@@ -262,6 +262,7 @@ name = "Kasespatzle"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c4f-8e4a-7da0-a168-9785b5513199.webp", sha256 = "c529d32955b88f92e43eb55317e3b21053bb07e030af0e73c011b569cb9365de", alt = "Kasespatzle with melted cheese, fried onions and chives" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },

@@ -175,6 +175,7 @@ name = "Pasta pomodoro"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+image = { file = "01a18bbd-3cd9-7a10-8b53-edda3e236417.webp", sha256 = "f0120ec433b58b3ab784ace4fb6ca64e0cd3cbe23009d3db57764935c1196e86", alt = "Spaghetti pomodoro with basil and grated parmesan" }
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -326,6 +327,7 @@ name = "Vegetable lasagne"
 serves = 8
 prep_minutes = 40
 cook_minutes = 75
+image = { file = "01a18bbd-3ce4-7e5d-a984-8f04acc6917f.webp", sha256 = "dde2b8f41fc63c224bff5589a2ff85e92aaf8e7aeefcbcddfd9d967790ba6a0a", alt = "Square of vegetable lasagne with basil leaves" }
 ingredients = [
   { id = "lasagne-sheets", amount = 250, unit = "g" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -705,6 +707,7 @@ name = "Chicken piccata"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bbd-3d02-7f00-92c1-0cf2e4b0b53c.webp", sha256 = "e87c58ef07c50d309e6307a6326971da9c2141f054857aceca7535391cb59ba2", alt = "Chicken piccata with capers, lemon slices and parsley" }
 ingredients = [
   { id = "chicken", amount = 4, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -813,6 +816,7 @@ name = "Panzanella"
 serves = 4
 prep_minutes = 20
 cook_minutes = 10
+image = { file = "01a18bbd-3d0b-7ac3-b229-7b08b4010644.webp", sha256 = "11dd83079433f7ad7277db18377ed1715f18427287518e6325e3071073d51633", alt = "Panzanella with bread, tomato, cucumber, red onion, capers and basil" }
 ingredients = [
   { id = "sourdough", amount = 6, unit = "slice" },
   { id = "tomato", amount = 5, unit = "medium" },

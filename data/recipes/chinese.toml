@@ -112,6 +112,7 @@ name = "Sweet and sour pork"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18bba-7862-7210-821e-6abaa08ba499.webp", sha256 = "3205abacc7798ee830bc07744475c8bc53049d79228692a51deaa6f1bad3a4b6", alt = "Sweet and sour pork with pineapple, red pepper and onion" }
 ingredients = [
   { id = "pork", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -275,6 +276,7 @@ name = "Egg drop soup"
 serves = 4
 prep_minutes = 5
 cook_minutes = 12
+image = { file = "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399.webp", sha256 = "0442d628849a9b845326e2ff29e07697763d719cb6417c139b2f40953cb55cc1", alt = "Egg drop soup with sesame oil and spring onion" }
 ingredients = [
   { id = "chicken-stock", amount = 5, unit = "cup" },
   { id = "egg", amount = 3, unit = "large" },
@@ -503,6 +505,7 @@ name = "Garlic bok choy"
 serves = 4
 prep_minutes = 5
 cook_minutes = 5
+image = { file = "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6.webp", sha256 = "135100e6c470153ff06a321701def343ca99764c3a994b1eb18d87f35bb3ecf4", alt = "Halved bok choy in a garlic and oyster sauce" }
 ingredients = [
   { id = "bok-choy", amount = 6, unit = "piece" },
   { id = "garlic", amount = 5, unit = "clove" },
@@ -610,6 +613,7 @@ name = "Cashew chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 12
+image = { file = "01a18c0c-0c9f-7f13-9754-6d27f3c0efaf.webp", sha256 = "6271cc44082b6bde7d82923ec4bbb48a60f68e28d807148e29a68b6037329dc1", alt = "Cashew chicken with red bell pepper and onion in a brown sauce" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "cashews", amount = 0.75, unit = "cup" },

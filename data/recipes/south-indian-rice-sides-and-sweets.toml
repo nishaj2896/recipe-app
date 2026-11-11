@@ -68,6 +68,7 @@ name = "Onion tomato chutney"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a15175-3c29-7980-a562-3e1ffcc1a26f.webp", sha256 = "99ac34b530855fe1ae5b4a24d9a7041d318d67b16e8280569e98b8628ef7c0c4", alt = "Onion tomato chutney with a mustard seed and curry leaf tempering" }
 ingredients = [
   { id = "onion", amount = 2, unit = "medium" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -216,6 +217,7 @@ name = "Ghee rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18b54-81cc-797d-9841-68d1b732760a.webp", sha256 = "6b23eaf9a6c5b5f8ac77b26ae1ba5d6aa0d0f92e06fc3f3f48654a63e4dc3c88", alt = "Ghee rice topped with fried onion, cashews and raisins" }
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -425,6 +427,7 @@ name = "Ambur biryani"
 serves = 6
 prep_minutes = 30
 cook_minutes = 100
+image = { file = "01a18b54-81d7-7d2d-84b8-19ea07e126fa.webp", sha256 = "8cb8b59254bcfd3f0b94bbd3c9496f959d803b7eaa64cba2f6b5c9d3395aafe9", alt = "Ambur biryani with mutton, mint and a few dried red chillies" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -566,6 +569,7 @@ name = "Peanut chutney"
 serves = 4
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18b54-81e0-7187-98c3-ce9d815f6f0f.webp", sha256 = "c469d980f5958559fae9ffb16ed9980ecb904f15a297653e1512604e58052353", alt = "Peanut chutney with a mustard seed and curry leaf tempering" }
 ingredients = [
   { id = "peanuts", amount = 0.5, unit = "cup" },
   { id = "dried-red-chillies", amount = 3, unit = "piece" },
@@ -700,6 +704,7 @@ name = "Semiya payasam"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+image = { file = "01a18b54-81eb-78a5-ab03-e87a612113ba.webp", sha256 = "fc6256f6597262be3eb251792efcbdd356e21a7fdb5a9f00ac4d599d8ed482f2", alt = "Semiya payasam with fried cashews and raisins" }
 ingredients = [
   { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -804,6 +809,7 @@ name = "Coconut ladoo"
 serves = 12
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18b54-81f4-7541-9730-2d276b3bee30.webp", sha256 = "2b35f3cad7af6359c271a6d59d36016f52e1b5044109a1875bdcb6331dab831e", alt = "Four coconut ladoos rolled in desiccated coconut" }
 ingredients = [
   { id = "coconut", amount = 2, unit = "cup" },
   { id = "condensed-milk", amount = 0.75, unit = "cup" },

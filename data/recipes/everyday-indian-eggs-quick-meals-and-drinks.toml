@@ -11,6 +11,7 @@ name = "Masala omelette"
 serves = 2
 prep_minutes = 5
 cook_minutes = 5
+image = { file = "01a15175-3c16-7eb1-a711-d43ee35c650f.webp", sha256 = "2d48b994891b674190149d39c7eedd3711f1b0fa5bafe6a01853a74cde34e5e3", alt = "Folded masala omelette with onion, tomato and green chilli" }
 ingredients = [
   { id = "egg", amount = 4, unit = "piece" },
   { id = "onion", amount = 1, unit = "small" },
@@ -95,6 +96,7 @@ name = "Anda paratha"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18ba9-fdcf-7494-8971-ff09fa0f75b5.webp", sha256 = "56718ff19c40c14abe97087ab4f43169c58f20cbfa95bdfde9a523d616c7f790", alt = "Anda paratha with egg, onion and green chilli, one quarter folded back" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },
@@ -207,6 +209,7 @@ name = "Masala toast"
 serves = 2
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18ba9-fdd8-7039-8578-97176286baee.webp", sha256 = "e16455d58f5734601e60f61de4a8738797a08b86785fa523ac0ae47935f24442", alt = "Masala toast cut in half to show potato filling and green chutney" }
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -285,6 +288,7 @@ name = "Maggi masala noodles"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18ba9-fdde-7758-a877-11da4a8efe71.webp", sha256 = "c8b9d036f3d72b0aa3f399904eb6dae13bffe84b56b0b2a46e22e28c689b6365", alt = "Masala instant noodles with peas, tomato and green chillies" }
 ingredients = [
   { id = "instant-noodles", amount = 2, unit = "piece" },
   { id = "onion", amount = 1, unit = "small" },
@@ -396,6 +400,7 @@ name = "Poha cutlet"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18ba9-fde7-700d-907b-733f5b8e95ad.webp", sha256 = "a5e2fdb6e8945145096e6830489ad3f89bfb057ae58a9192b87e461010ec34c7", alt = "Three poha cutlets with carrot and peas" }
 ingredients = [
   { id = "flattened-rice", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -486,6 +491,7 @@ name = "Rava dhokla"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18ba9-fdee-7581-95ec-b06f1bf9bfde.webp", sha256 = "3b798bf83aeb9587ce735b8a209c76004b6b099fa06e15c8278eca7b9a5eb297", alt = "Rava dhokla squares with a mustard seed and curry leaf tempering" }
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -577,6 +583,7 @@ name = "Haldi doodh"
 serves = 2
 prep_minutes = 5
 cook_minutes = 8
+image = { file = "01a18bae-8f42-72fb-a65a-1d1bbd822900.webp", sha256 = "595125d9348bf07ae837d70a6f49a6d956d8ef4cc0c59282ce86c8746c3382b4", alt = "Glass mug of turmeric milk" }
 ingredients = [
   { id = "milk", amount = 2, unit = "cup" },
   { id = "turmeric", amount = 0.5, unit = "tsp" },

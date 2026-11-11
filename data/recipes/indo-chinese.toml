@@ -11,6 +11,7 @@ name = "Vegetable hakka noodles"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a15175-3c23-770c-afb9-16d99fa0592d.webp", sha256 = "b89b3d5068f83bdd790c8a43c1c498924b9f1e3b686064774ee0e9047fb987ea", alt = "Vegetable hakka noodles with spring onion greens" }
 ingredients = [
   { id = "hakka-noodles", amount = 300, unit = "g" },
   { id = "cabbage", amount = 150, unit = "g" },
@@ -134,6 +135,7 @@ name = "Vegetable fried rice"
 serves = 3
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7.webp", sha256 = "0b48e8721c4f64ca525b26c80c26e6e43ad21db04196fbf77ab178045e431f88", alt = "Vegetable fried rice with spring onion greens" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -258,6 +260,7 @@ name = "Vegetable manchurian"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18ba9-fda7-7085-993c-3f33685f2bd0.webp", sha256 = "2d2da39da1c4580693ca8c7561b01a7cf9792d78b5691073e74c686ae74966b7", alt = "Vegetable manchurian balls in a dark sauce with spring onion" }
 ingredients = [
   { id = "cabbage", amount = 2, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -541,6 +544,7 @@ name = "American chop suey"
 serves = 3
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18ba9-fdbb-7ec7-93b4-bb61edf302aa.webp", sha256 = "aebfd0a40066911a9717cf5ef65804f772e76c1863cbf747d4e8cb306586f307", alt = "American chop suey on crisp noodles, topped with a fried egg" }
 ingredients = [
   { id = "hakka-noodles", amount = 150, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -672,6 +676,7 @@ name = "Sweetcorn soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18ba9-fdc4-7a74-802c-e97f486d751a.webp", sha256 = "9650b0703b5ff2671d8e133dc55fd5a5d9ba19c72e00036437dee989b4eefc6f", alt = "Sweetcorn soup with carrot, beans and spring onion" }
 ingredients = [
   { id = "sweetcorn", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },

@@ -108,6 +108,7 @@ name = "Haak saag"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bb1-059f-7a58-b2aa-0261131c9251.webp", sha256 = "dc2a39d58e90f2806b83972de0245d17f60939d039c8057ecb8c567879f1db0d", alt = "Haak saag, collard greens with a few dried red chillies" }
 ingredients = [
   { id = "collard-greens", amount = 500, unit = "g" },
   { id = "dried-red-chillies", amount = 3, unit = "piece" },
@@ -215,6 +216,7 @@ name = "Rista"
 serves = 4
 prep_minutes = 30
 cook_minutes = 50
+image = { file = "01a18bb1-05a8-7a89-992d-7ce51e64a3e0.webp", sha256 = "5be9fea454606f4a6adf3d6e1b551ba57afaf4b483d508e732cd07c254dafbfc", alt = "Rista, lamb balls in a deep red gravy" }
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "ghee", amount = 3, unit = "tbsp" },
