@@ -68,6 +68,7 @@ name = "Rava idli"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a188e6-a840-7af6-83f9-144f64aa1b2a.webp", sha256 = "79f08e785c9f0800aa6bc89eee5fcc9bc043ca70efa95fbb55ee6b3ac6d8ae1d", alt = "Three rava idlis with cashews, carrot and curry leaves" }
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -310,6 +311,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a188e6-a852-7c61-8e2e-397362b11e41.webp", sha256 = "f741483054e17c8e4b949105f625ce017a5c7ae5d40f254057238de666783a47", alt = "Crisp golden adai folded in half, flecked with onion and curry leaf" }
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -533,6 +535,7 @@ name = "Vegetable upma"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a188e6-a864-7350-92f2-cb841fdb02cd.webp", sha256 = "66e6bfb990b28a33075e724ac27e7acf1f9b49b05a08e644ba14ccb904e4c015", alt = "Vegetable upma with carrot, beans and peas" }
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -692,6 +695,7 @@ name = "Akki roti"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a188e6-a870-77c2-b879-2d807d10a1c0.webp", sha256 = "16d9819185dbbc839b218ff208fbcecfeef40882c2827465648ce75e22f79964", alt = "Round akki roti with grated carrot and herbs and a hole in the middle" }
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -770,6 +774,7 @@ name = "Bonda"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a188e6-a876-76dc-8d69-967f75dfca00.webp", sha256 = "d075e8b8fabed0cfc9e80bec8b44bc5bd920867955dc3a08a72fd931bdfcdbbd", alt = "Four potato bondas, one broken open" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -863,6 +868,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+image = { file = "01a188e6-a87d-7334-8571-e2e0502c93a3.webp", sha256 = "c5797ad3d9807ae3a6a1f4c703d6262bb10670655c8e69b1f4b44247caee4626", alt = "Paniyaram with onion and green chilli, one cut open" }
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },

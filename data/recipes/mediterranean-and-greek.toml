@@ -107,6 +107,7 @@ name = "Tzatziki"
 serves = 6
 prep_minutes = 15
 cook_minutes = 0
+image = { file = "01a18c1a-e227-7ec3-9d05-d16f1fce345b.webp", sha256 = "1a83762a65e67ecaa4fc4dc980522a9a70377c884993cc161ee1bea79b0e8fc9", alt = "Bowl of tzatziki with olive oil" }
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -219,6 +220,7 @@ name = "Avgolemono soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18c1a-e231-7ea1-ac8a-52453ef1bdf0.webp", sha256 = "165d9d6e0a1b56ef0e14f14f7a22ee4abb37d88d011ba4bda1df9f271d43eeb5", alt = "Avgolemono soup with orzo, shredded chicken and dill" }
 ingredients = [
   { id = "chicken-stock", amount = 6, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -455,6 +457,7 @@ name = "Garlic prawns (gambas al ajillo)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 8
+image = { file = "01a18c1a-e243-751a-8dca-550ee3ea79c7.webp", sha256 = "f224c03635087406f0aecf16bc375b73484698a419ba60127556360c0d2b13c5", alt = "Gambas al ajillo in a terracotta dish with slices of baguette" }
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "garlic", amount = 8, unit = "clove" },

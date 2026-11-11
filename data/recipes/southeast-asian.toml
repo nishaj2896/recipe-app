@@ -42,6 +42,7 @@ name = "Mee goreng"
 serves = 2
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18c12-05be-7940-8353-deed67958a02.webp", sha256 = "3a955b0841edcd51f71c4390f9978a9fff2da2698e2c5ac88943d6b23ac6a908", alt = "Mee goreng with prawns, tofu and bean sprouts and lime wedges" }
 ingredients = [
   { id = "egg-noodles", amount = 200, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },
@@ -563,6 +564,7 @@ name = "Sinigang"
 serves = 4
 prep_minutes = 15
 cook_minutes = 75
+image = { file = "01a18c12-05e1-798c-bdae-9314d8658870.webp", sha256 = "854582373f99f2d4b2c9a9f60daf01c5ec3cd29e09c07dc7f325f3afd8811453", alt = "Sinigang, sour pork broth with vegetables and a green chilli" }
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "tamarind", amount = 3, unit = "tbsp" },

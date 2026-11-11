@@ -66,6 +66,7 @@ name = "Banana pancakes"
 serves = 2
 prep_minutes = 5
 cook_minutes = 12
+image = { file = "01a18c20-05b7-7ab4-aa08-d40c0a710534.webp", sha256 = "1d6d1652327cfdd77654a377f1029ba8de52585e57c4777ac037b7312591ef8e", alt = "Stack of banana pancakes with sliced banana and honey" }
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "egg", amount = 2, unit = "large" },
@@ -247,6 +248,7 @@ name = "Porridge with fruit"
 serves = 2
 prep_minutes = 2
 cook_minutes = 8
+image = { file = "01a18c20-05c7-763c-b2f0-eba485cb9d6e.webp", sha256 = "c0980e0057334c1520401bfbba24f80fdcc054a4d8a6b5de7adfd2768def34cc", alt = "Oat porridge with banana, raspberries and honey" }
 ingredients = [
   { id = "rolled-oats", amount = 1, unit = "cup" },
   { id = "milk", amount = 2.25, unit = "cup" },
@@ -324,6 +326,7 @@ name = "Breakfast burrito"
 serves = 2
 prep_minutes = 10
 cook_minutes = 12
+image = { file = "01a18c20-05cd-79b1-ac85-edeb6b23dbae.webp", sha256 = "b57babaebbdf2f091944b6276b69fdee97e415a21c243d56d8152891dc61426f", alt = "Breakfast burrito cut in half to show egg, potato, chorizo and avocado" }
 ingredients = [
   { id = "flour-tortillas", amount = 2, unit = "large" },
   { id = "egg", amount = 4, unit = "large" },
@@ -471,6 +474,7 @@ name = "Chocolate cake"
 serves = 12
 prep_minutes = 20
 cook_minutes = 35
+image = { file = "01a18c20-05d9-71c3-86b7-7916342dd901.webp", sha256 = "589f6fe167f7f4cdb4b9ecaf8a0727741312c284f807bc503a1fc58399574459", alt = "Slice of chocolate layer cake with ganache" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1.75, unit = "cup" },
   { id = "cocoa-powder", amount = 0.75, unit = "cup" },
@@ -585,6 +589,7 @@ name = "Banana muffins"
 serves = 12
 prep_minutes = 15
 cook_minutes = 22
+image = { file = "01a18c20-05e1-75f7-8402-eff7d0361150.webp", sha256 = "4e6a62798c4aa85483076a908518528447a6291ed58108bac7c7a90629962b9d", alt = "Two banana muffins, one broken open" }
 ingredients = [
   { id = "banana", amount = 3, unit = "large" },
   { id = "all-purpose-flour", amount = 1.75, unit = "cup" },

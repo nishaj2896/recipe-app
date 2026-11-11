@@ -54,6 +54,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
+image = { file = "01a18bb5-de42-716b-bded-2a9c5cd4e7ae.webp", sha256 = "28c26f1ed18833398dabef04f766d265ee7966fb0a9dacd675f1ba38ddf8890b", alt = "Pathar ka gosht, charred mutton strips with onion rings and coriander" }
 ingredients = [
   { id = "mutton", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -224,6 +225,7 @@ name = "Tamatar ka kut"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18bb5-de4e-7363-aa58-26f9cf296cb5.webp", sha256 = "788ee671cc1c2b4bb364669d9b5c28b5f0a56752db69df69b5f44fbdfee30ab6", alt = "Tamatar ka kut with a tempering of red chillies and curry leaves" }
 ingredients = [
   { id = "tomato", amount = 6, unit = "medium" },
   { id = "sesame-seeds", amount = 2, unit = "tbsp" },
@@ -349,6 +351,7 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 90
 plan_ahead = { wait_minutes = 360, note = "marinate for 6 hours" }
+image = { file = "01a18bb5-de57-7110-86a3-ee7f153ace2d.webp", sha256 = "58357d293ec9dd9130ca7c1b64982d907d42755334c1410db0ad6c2a75c417be", alt = "Kacche gosht ki biryani with fried onions, mint and coriander" }
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 2.5, unit = "cup" },

@@ -102,6 +102,7 @@ name = "Plain paratha"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a188ac-0597-7bfe-8ab8-24300d82453f.webp", sha256 = "446f8197a32a7b917451e91029ec6a4ceb7a039aa79dc738c42c80b95a0f6aae", alt = "Layered triangular plain paratha" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 4, unit = "tbsp" },
@@ -275,6 +276,7 @@ name = "Lachha paratha"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a188ac-05a4-7d6b-8b51-b0183f72ee48.webp", sha256 = "00c989807cec1814d8a411077287cfa141d5cad1580077e562230c20f3743501", alt = "Two flaky layered lachha parathas" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 5, unit = "tbsp" },
@@ -298,6 +300,7 @@ name = "Phulka"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a188ac-05a7-7dde-b069-03b15b2dd2b3.webp", sha256 = "0e1cdc90ee4030959887a9ccff9f8b48c84407df2ebd189ae2daad16c394c927", alt = "Stack of three soft phulkas" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 1, unit = "tbsp" },
@@ -434,6 +437,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
+image = { file = "01a188ac-05b1-784f-bb14-2bba03c32a18.webp", sha256 = "8cd4a7d5f475e05cb08f8575eb2be11d6984d9fdac26cf012669309d3fb4d2f9", alt = "Two puffed golden bhaturas" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 2, unit = "tbsp" },
@@ -461,6 +465,7 @@ name = "Puri"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a188ac-05b3-7852-994e-2b3ec2b5edf4.webp", sha256 = "0f8396f1ebfdae3e980c2135d25d41a30565772247bcefead710be37ebe0eb12", alt = "Stack of four puffed puris" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },
@@ -544,6 +549,7 @@ name = "Kashmiri pulao"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef.webp", sha256 = "d6a6018edbb141d08de792bdf3445244e184b7fa36d363921a182bec2fe5a16b", alt = "Kashmiri pulao with nuts, raisins, apple and pomegranate" }
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "milk", amount = 0.5, unit = "cup" },

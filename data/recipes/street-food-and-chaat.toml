@@ -114,6 +114,7 @@ name = "Dahi puri"
 serves = 4
 prep_minutes = 45
 cook_minutes = 25
+image = { file = "01a18bb5-de66-7825-a8a4-ac3b7ec2ee03.webp", sha256 = "5bdd36b3fdcc2f515ad41790485baacfb6a1969fe1e88023b6eef15639b58d12", alt = "Dahi puri topped with curd, tamarind and green chutney and sev" }
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
@@ -425,6 +426,7 @@ name = "Paneer frankie"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+image = { file = "01a18bb7-fecd-716e-82ca-fabe0a4ffb0f.webp", sha256 = "80c6453f24fe59b1d77b8a76aaf3a356882e8f19deed0a37c873ec86410b26f3", alt = "Paneer frankie wrapped in paper, cut to show the filling" }
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
@@ -532,6 +534,7 @@ name = "Sprouts chaat"
 serves = 4
 prep_minutes = 15
 cook_minutes = 5
+image = { file = "01a18bb7-fed9-72bd-9261-fb787605c7cb.webp", sha256 = "9ce25c8f84a572933dd1db8f783f4d8e98c0c0d7a1ed02e80ec1a77fc95604cc", alt = "Sprouts chaat with onion, tomato, cucumber and coriander" }
 ingredients = [
   { id = "sprouted-mung-beans", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "small" },

@@ -12,6 +12,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18c4f-8e51-78cf-94a3-56308cf794c4.webp", sha256 = "a6211cd28c34dd99869b4bed281feaf20b8776feb8843b15cbdf533b018a83e6", alt = "Shish tawook chicken in a folded pita" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -340,6 +341,7 @@ name = "Gumbo"
 serves = 6
 prep_minutes = 25
 cook_minutes = 95
+image = { file = "01a18c4f-8e6a-7ce8-be6d-bcfabfeb03f8.webp", sha256 = "82833bec6ebd5e64b6b4bdc663e7438e94dd78db633f36f8e8a2abcdc1177311", alt = "Gumbo with chicken, sausage and okra over white rice" }
 ingredients = [
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
   { id = "oil", amount = 0.5, unit = "cup" },

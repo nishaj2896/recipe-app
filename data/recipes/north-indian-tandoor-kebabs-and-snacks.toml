@@ -142,6 +142,7 @@ name = "Mutton seekh kebab"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a188aa-f1c6-79e3-abfa-5caa9d08a92a.webp", sha256 = "39ec43cceec18d1b46da005e6798882637be511f9b06c91cc41198569fe2cf9d", alt = "Three charred mutton seekh kebabs" }
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -561,6 +562,7 @@ name = "Bread pakora"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a188aa-f1e3-77ad-ac8b-74cb57af4709.webp", sha256 = "32c205e38c39067fe2de86b509b8a4e548f343d6827dfd8e962e2e1e791218d4", alt = "Bread pakora triangles, one broken open to show the potato filling" }
 ingredients = [
   { id = "white-bread", amount = 8, unit = "slice" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -732,6 +734,7 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 60
 plan_ahead = { wait_minutes = 600, note = "soak overnight" }
+image = { file = "01a188aa-f1ef-7af4-af63-473bbcc685b1.webp", sha256 = "239fd1470f30dfdf0caa67b06928101a71ad60e14e1d87464da948041aa778ef", alt = "Matar kulcha, white pea curry with chopped toppings and two kulchas" }
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },

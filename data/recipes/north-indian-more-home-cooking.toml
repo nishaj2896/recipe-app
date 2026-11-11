@@ -123,6 +123,7 @@ name = "Paneer shimla mirch"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bae-8f58-7445-88a2-7c32e3cbd50f.webp", sha256 = "ce427e84f482385f630a236180b862e6683f102fa446fe98d4b5ef697f9544ad", alt = "Paneer shimla mirch with green pepper strips in a red masala" }
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -249,6 +250,7 @@ name = "Methi dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18bae-8f61-7771-842d-fd44a5ee1621.webp", sha256 = "8c9228d4c7a2cf69565e43fc8637bd2bebd5a15bd146c736aad6db27a4305ed6", alt = "Methi dal, toor dal with fenugreek leaves and tomato" }
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "fenugreek-leaves", amount = 2, unit = "cup" },
@@ -347,6 +349,7 @@ name = "Aloo rasedar"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f68-75e7-8972-d3050a4170c2.webp", sha256 = "f794d78d3401182ebd7703aae7c872b654fbf4624c8087bbba13c8e21e2a4eac", alt = "Aloo rasedar, potato cubes in a thin spiced gravy with coriander" }
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -469,6 +472,7 @@ name = "Turai ki sabzi"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bae-8f71-76e4-ab85-892b42bb37e0.webp", sha256 = "86c82e465f8144cbbeaa376b26b1be20a2ae2c5f8a757d3c2e41dcbd9227766f", alt = "Turai ki sabzi, ridge gourd with onion and tomato" }
 ingredients = [
   { id = "ridge-gourd", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -579,6 +583,7 @@ name = "Mushroom biryani"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+image = { file = "01a18bae-8f7a-74ce-9516-ead74a26bd01.webp", sha256 = "f4b0fe99cdf8908cfaec4a48c40722a5038291426ba5d34cb528e8cf4c775e99", alt = "Mushroom biryani with mint, coriander and fried onion" }
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "mushroom", amount = 400, unit = "g" },
@@ -694,6 +699,7 @@ name = "Chicken changezi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18bae-8f80-7e13-a0a3-d9ff8bc0f3b1.webp", sha256 = "fcdbbf54aaef8f686196c9bd47d997241650b2a1fd764430edbf26dd42d61712", alt = "Chicken changezi in a creamy pale orange gravy" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -863,6 +869,7 @@ name = "Paneer pasanda"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18bae-8f8b-78ce-ba4f-0aab703ac96a.webp", sha256 = "3b4efbe10391d8ed703a7accb4536f45e53e2854fb8ee5551961cf669431fce1", alt = "Paneer pasanda, stuffed paneer in a creamy cashew and tomato gravy" }
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },

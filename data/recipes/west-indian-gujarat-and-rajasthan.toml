@@ -118,6 +118,7 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 50
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18b5a-d310-7929-af02-f0bb00d619e7.webp", sha256 = "7e050af4597297b4fb452c0b133f8d19f96faa95ffbc47a9f966c382161358a3", alt = "Four squares of baked handvo with sesame and mustard seeds" }
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -247,6 +248,7 @@ name = "Muthia"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b5a-d319-7a8c-8276-6b119c6fb0d7.webp", sha256 = "5c85a15240f5067bee53673310fb0d6a9b2ad308a801dda47ab5fb307734d8b3", alt = "Fried muthia slices with sesame seeds and curry leaves" }
 ingredients = [
   { id = "whole-wheat-flour", amount = 1, unit = "cup" },
   { id = "gram-flour", amount = 0.25, unit = "cup" },
@@ -429,6 +431,7 @@ name = "Gujarati kadhi"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+image = { file = "01a18b5a-d324-72d0-9af6-abcbed788f48.webp", sha256 = "2fa15ec0a98f3125531f90641a66d8911f09ada3ad9407b4c944bfac7555f8f5", alt = "Gujarati kadhi with a tempering of whole spices and curry leaves" }
 ingredients = [
   { id = "curd", amount = 1, unit = "cup" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -545,6 +548,7 @@ name = "Khichu"
 serves = 3
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18b5a-d32b-71be-800f-5b1668950293.webp", sha256 = "e1c975d9d8cebe87574990fcdb262c03b4613257631a4db974b32e91a3fdd474", alt = "Khichu, soft rice flour dough with sesame oil and chilli powder" }
 ingredients = [
   { id = "rice-flour", amount = 1, unit = "cup" },
   { id = "green-chillies", amount = 2, unit = "piece" },
@@ -660,6 +664,7 @@ name = "Basundi"
 serves = 6
 prep_minutes = 5
 cook_minutes = 75
+image = { file = "01a18b5a-d334-7005-83e2-f16bb22dae58.webp", sha256 = "d5bda656fdb91387fab9b93bd8d74c0642ab6cd038db9d7a14904a785d68da77", alt = "Basundi with almonds, pistachios and a few saffron strands" }
 ingredients = [
   { id = "milk", amount = 2, unit = "l" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -816,6 +821,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18b5a-d33f-7442-990c-2210c905c9ea.webp", sha256 = "2b4edd1a07a710a862ea9f876dab55c5bd8f0ab034806af88b85d06c5cbcf971", alt = "Ker sangri with raisins and dried red chillies" }
 ingredients = [
   { id = "ker", amount = 0.25, unit = "cup" },
   { id = "sangri", amount = 1, unit = "cup" },
@@ -900,6 +906,7 @@ name = "Pyaaz kachori"
 serves = 6
 prep_minutes = 40
 cook_minutes = 30
+image = { file = "01a18b5a-d346-7a42-99b1-439ffb638573.webp", sha256 = "a7a271761b33a5c0af3cbc492a3c224add2f2a2b8659876a7d1b83d542303b1c", alt = "Three pyaaz kachoris, one broken open to show the onion filling" }
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 0.25, unit = "cup" },

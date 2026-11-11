@@ -105,6 +105,7 @@ name = "Drumstick sambar"
 serves = 4
 prep_minutes = 30
 cook_minutes = 40
+image = { file = "01a188ea-3c95-7b74-afb4-10f1cab70c1b.webp", sha256 = "f71153477a0fc975a648ebb5c34ea682f64b6d710d18a43087d6c46425f86006", alt = "Drumstick sambar with shallots, dried red chillies and curry leaves" }
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -449,6 +450,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a188ea-3cac-71f6-ad23-3ec3ad770d02.webp", sha256 = "9baea8231f4501cc900d4d1df686b0f0e8cabf8952bb6a4dc133f1982e7b9e2d", alt = "Olan, ash gourd and black-eyed peas in coconut milk" }
 ingredients = [
   { id = "ash-gourd", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.25, unit = "cup" },
@@ -541,6 +543,7 @@ name = "Moru curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a188ea-3cb3-7eba-97c5-eeb4d7c942c5.webp", sha256 = "db0d50519dc57551addbfd1ffa447a679fd553367185503c2411c802596d2151", alt = "Moru curry with a tempering of shallots, red chillies and curry leaves" }
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -657,6 +660,7 @@ name = "Beetroot poriyal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a188ea-3cbc-741f-a28d-f2dde86616e8.webp", sha256 = "eaddd88778276d475db04c257c1678b9d0bc0e4288c2efea0edb39f409036e98", alt = "Beetroot poriyal with coconut, curry leaves and green chilli" }
 ingredients = [
   { id = "beetroot", amount = 3, unit = "medium" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -1019,6 +1023,7 @@ name = "Chettinad mutton curry"
 serves = 4
 prep_minutes = 30
 cook_minutes = 60
+image = { file = "01a188ea-3cd6-7f31-bfda-d62220000e22.webp", sha256 = "70321ca5904235ae246d69aee670df9261d5d8a618739a71675328c150cf94c2", alt = "Chettinad mutton curry in a dark gravy with curry leaves" }
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1258,6 +1263,7 @@ name = "Mangalore fish curry"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+image = { file = "01a188ea-3ce7-7640-8b27-c05b0f875f5c.webp", sha256 = "e32882b0c545739e27548eb61dc777e7e7b9cd9712faea43fac6b68232d5070e", alt = "Mangalore fish curry in a bright red coconut gravy with curry leaves" }
 ingredients = [
   { id = "pomfret", amount = 2, unit = "piece" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -1365,6 +1371,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+image = { file = "01a188ea-3cee-73fc-8601-97ca471c4d6a.webp", sha256 = "58fea7e3059cbbb8aa401d2a9dade8a472bff000fe643a8fa9f3041cac5638e3", alt = "Mor kuzhambu with ash gourd and a tempering of red chillies and curry leaves" }
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },

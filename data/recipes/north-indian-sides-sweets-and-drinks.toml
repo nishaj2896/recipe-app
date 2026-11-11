@@ -79,6 +79,7 @@ name = "Nimbu pani"
 serves = 4
 prep_minutes = 5
 cook_minutes = 0
+image = { file = "01a15175-3c2a-7329-8454-367648dbe421.webp", sha256 = "cc002d870009febff6b2b8dd54e3897828812787d948bffb1cbfc4407e918441", alt = "Glass of nimbu pani over ice" }
 ingredients = [
   { id = "lemon", amount = 3, unit = "piece" },
   { id = "sugar", amount = 4, unit = "tbsp" },
@@ -168,6 +169,7 @@ name = "Imli chutney"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+image = { file = "01a188e4-2cd7-70b5-a340-42122d9c8976.webp", sha256 = "d119a80074310c59bc992bc100afeb537471c8aec996d5a650abcdf1c9bf268c", alt = "Bowl of glossy tamarind and date chutney" }
 ingredients = [
   { id = "tamarind", amount = 100, unit = "g" },
   { id = "jaggery", amount = 150, unit = "g" },
@@ -323,6 +325,7 @@ name = "Seviyan kheer"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+image = { file = "01a188e4-2ce4-7a9d-99e3-c9ea4874d83d.webp", sha256 = "8db9493326c244cc6f11de467e480f77f7bad7ec189f6d6ea4d925ffe0d8ce0e", alt = "Seviyan kheer with raisins, almonds and pistachios" }
 ingredients = [
   { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },

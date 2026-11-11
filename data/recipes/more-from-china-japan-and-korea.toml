@@ -11,6 +11,7 @@ name = "General Tso's chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+image = { file = "01a18c22-48df-729b-a291-7629aa4f0dec.webp", sha256 = "73fb493e45c0a6db8354e8766044a6cfd506b3c8b72e1a9bb882b8fe144d56ce", alt = "General Tso's chicken with dried chillies, sesame and spring onion" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "cornflour", amount = 0.5, unit = "cup" },
@@ -133,6 +134,7 @@ name = "Chinese chicken corn soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18c22-48e8-70c1-acce-651beee65d3f.webp", sha256 = "a81fb5c223c165cae32f0058f4df60113ac91f7fedbad36c0a4c986108251a83", alt = "Chicken and sweetcorn soup with egg ribbons and spring onion" }
 ingredients = [
   { id = "chicken", amount = 250, unit = "g" },
   { id = "sweetcorn", amount = 2, unit = "cup" },
@@ -265,6 +267,7 @@ name = "Zaru soba"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18c22-48f3-7f62-9b64-c108b0578897.webp", sha256 = "0d7ad7785b9ab3d9b7f4a01c054425c480d5082da623d982eede49c33bc7ae80", alt = "Zaru soba on a bamboo tray with dipping sauce, spring onion and radish" }
 ingredients = [
   { id = "soba", amount = 200, unit = "g" },
   { id = "kombu", amount = 5, unit = "g" },

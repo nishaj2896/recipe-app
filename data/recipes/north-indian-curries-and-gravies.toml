@@ -323,6 +323,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a15175-3c0b-7b09-ba59-3db099c27b86.webp", sha256 = "3c80f54c54e26fd6126745319bf1998ff990b2cd48161475dc26f07000d25b28", alt = "Rajma, red kidney beans in a thick onion and tomato gravy" }
 ingredients = [
   { id = "kidney-beans", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -801,6 +802,7 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 70
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18812-6723-7412-8bfb-1565d14f7e7f.webp", sha256 = "f36c52cd2cb85385fbfab5ce55804666f3cab10cd07edb161c748a3ac7774cf0", alt = "Murgh musallam, whole chicken in orange-red gravy with boiled eggs" }
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "egg", amount = 4, unit = "piece" },
@@ -1748,6 +1750,7 @@ name = "Shalgam ki sabzi"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18814-ee9b-761b-81bc-3166d38759d3.webp", sha256 = "7da4ef154a1d4400f30bb46a8558c6b67b633d3187695bcf4b21c1015db064f7", alt = "Shalgam ki sabzi, turnip in a thick tomato gravy" }
 ingredients = [
   { id = "turnip", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -1877,6 +1880,7 @@ name = "Tinda masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18814-eea4-7109-a772-dff32cf1cc95.webp", sha256 = "38d477dbe1308f8df2daba8dcf28bd6439432ac0afe4e4968bd5c3078529b18a", alt = "Tinda masala with coriander" }
 ingredients = [
   { id = "tinda", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2005,6 +2009,7 @@ name = "Gajar matar"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18814-eead-79f9-b123-ff5249b8a748.webp", sha256 = "a7960b59edc14e60be520f19d7c6ef690491965c4924de4251139c955920b510", alt = "Gajar matar, carrot and peas with slit green chillies and coriander" }
 ingredients = [
   { id = "carrot", amount = 3, unit = "medium" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -2140,6 +2145,7 @@ name = "Amritsari fish curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18814-eeb7-7186-993a-897933923772.webp", sha256 = "db6e16f3b3fc8c6ee26c3defe34e6bd5da2eb05a19cc0b8001fd472b1bd1d3e5", alt = "Amritsari fish curry, crumbed fish in a red-orange gravy with coriander" }
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -2323,6 +2329,7 @@ name = "Dal fry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a188a8-fea0-7a73-acf1-d80396c5eb21.webp", sha256 = "fd0ed4f04e3fc05218202ea8f5021342e423f42bf4b952aed2caddf852135064", alt = "Dal fry with tomato, cumin seeds and coriander leaves" }
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },

@@ -432,6 +432,7 @@ name = "Edamame with sea salt"
 serves = 4
 prep_minutes = 2
 cook_minutes = 6
+image = { file = "01a18c12-059c-795e-86e7-3cf49987770d.webp", sha256 = "08bb9bca797ed7ebd2d79a893fc492d89f48024d82625be3073e392d6d6f776b", alt = "Steamed edamame with sea salt and an empty bowl for the pods" }
 ingredients = [
   { id = "edamame", amount = 400, unit = "g" },
   { id = "salt", to_taste = true },
@@ -668,6 +669,7 @@ name = "Kimchi jjigae"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18c12-05ae-78d5-bd9b-c8a6cf79f983.webp", sha256 = "56f11b2657ec0862b0f007ab159df2649dbdb201fd07c741358b3b8caeec9a53", alt = "Kimchi jjigae with tofu and pork in a stone pot" }
 ingredients = [
   { id = "kimchi", amount = 2, unit = "cup" },
   { id = "pork-belly", amount = 250, unit = "g" },

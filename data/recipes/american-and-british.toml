@@ -70,6 +70,7 @@ name = "Veggie burger"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+image = { file = "01a18c1e-2c1b-7471-85fe-d890bb9e9534.webp", sha256 = "e53be62c9c27cbb0b28cd86ed6e324a9f4badf310a60b9e8c69dde700435df82", alt = "Chickpea veggie burger with lettuce and tomato" }
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "can" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -233,6 +234,7 @@ name = "Barbecue pulled chicken"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18c1e-2c28-7f4b-8261-947820124c97.webp", sha256 = "14e91ccdcca74abf2d476a9e3bcf0f0f72299dbda6f25c5396c7abe0287374bd", alt = "Barbecue pulled chicken in a toasted bun" }
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "barbecue-sauce", amount = 0.75, unit = "cup" },
@@ -428,6 +430,7 @@ name = "Bangers and mash"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c1e-2c35-7b45-ac27-4a7522d2376a.webp", sha256 = "f868062ada4964f4fd455a8ea4a500a0a2834a27f092dcd6b49e5b8754851780", alt = "Sausages on mashed potato with onion gravy" }
 ingredients = [
   { id = "sausages", amount = 8, unit = "piece" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -532,6 +535,7 @@ name = "Chicken noodle soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c1e-2c3e-7307-b37a-a3756c335821.webp", sha256 = "cad31e5fc759e04c62381a6c43f0d83bea48dc0efab370c20e6ab19eb56b5914", alt = "Chicken noodle soup with carrot, celery and parsley" }
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg-noodles", amount = 150, unit = "g" },
@@ -689,6 +693,7 @@ name = "Coleslaw"
 serves = 6
 prep_minutes = 15
 cook_minutes = 0
+image = { file = "01a18c1e-2c49-7734-b225-6ad66cd5966a.webp", sha256 = "e8582d3ed5e2af068da3417e1dbccbba80b2ca6b8dd294f824dfe97ab158898f", alt = "Bowl of creamy coleslaw with red and white cabbage and carrot" }
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "small-head" },
   { id = "red-cabbage", amount = 1, unit = "cup" },
@@ -773,6 +778,7 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 40
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18c1e-2c50-70ae-b308-15955fa8465d.webp", sha256 = "a34f935cdb04eea5b98e5dee99f14b6810b4cc3e7faf1f9c61f7671bd33bcbf0", alt = "Fried chicken on a waffle with spicy maple syrup" }
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "buttermilk", amount = 1, unit = "cup" },

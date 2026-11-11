@@ -77,6 +77,7 @@ name = "Red curry with vegetables"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18c0c-0caf-76db-a774-96f2e2d27906.webp", sha256 = "5ea1a4900e297c819ce5c8fe3d81bdd5cca38a7f1ea498e6cc38d08ce02e341c", alt = "Thai red curry with tofu, vegetables and Thai basil" }
 ingredients = [
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -349,6 +350,7 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 25
 plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
+image = { file = "01a18c0c-0cc5-74d1-9786-4b44e97a4a3d.webp", sha256 = "a8c0df4847a383405a00e7dc8827817c939f627fd05586aaafd376319c86995d", alt = "Thai basil fried rice with chicken, egg and red chilli" }
 ingredients = [
   { id = "jasmine-rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },

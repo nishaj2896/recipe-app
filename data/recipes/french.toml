@@ -11,6 +11,7 @@ name = "French omelette"
 serves = 1
 prep_minutes = 2
 cook_minutes = 3
+image = { file = "01a18c1a-e24e-7cc2-9c2e-67a17a5c8ba9.webp", sha256 = "f91591eaa27524286080cb6abe3fa5a61c794eb948d690fbeff029355ef4f38b", alt = "Pale rolled French omelette with chives" }
 ingredients = [
   { id = "egg", amount = 3, unit = "large" },
   { id = "butter", amount = 1, unit = "tbsp" },
@@ -279,6 +280,7 @@ name = "Potato leek soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18c1a-e262-7e5c-b443-f2989481b98a.webp", sha256 = "eb3738e1d507d261994472be95cb4d8076cf0c1ffc05f4240fafe64e0738b7d5", alt = "Potato and leek soup with chives" }
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "leek", amount = 3, unit = "medium" },
@@ -411,6 +413,7 @@ name = "Sole meuniere"
 serves = 2
 prep_minutes = 10
 cook_minutes = 8
+image = { file = "01a18c1a-e26d-799b-9ae5-f798cfc8888e.webp", sha256 = "b07fcca23b9237bb61682b40c108258a1ab7f008a0afe7658f746a1f4f536d5a", alt = "Sole meuniere with brown butter and parsley" }
 ingredients = [
   { id = "sole", amount = 2, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.25, unit = "cup" },

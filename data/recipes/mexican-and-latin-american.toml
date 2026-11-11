@@ -35,6 +35,7 @@ name = "Pico de gallo"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+image = { file = "01a18c16-b1ba-71d5-a397-f131b301bc3c.webp", sha256 = "0ae14703424dca6328c3758b0c36cdbd735d70a5355c91be0637bfebc5a2fec2", alt = "Bowl of pico de gallo" }
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "onion", amount = 0.5, unit = "medium" },
@@ -213,6 +214,7 @@ name = "Cheese quesadilla"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18c16-b1c8-7dc9-abcd-f837e31826be.webp", sha256 = "69f1e40c8e898da01b8834621d885da8e7f265f4af12a06cab7caaf11cf3c5ba", alt = "Cheese quesadilla wedges with jalapenos, sour cream and salsa" }
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "cheddar", amount = 1, unit = "cup" },
@@ -434,6 +436,7 @@ name = "Vegetarian chilli"
 serves = 6
 prep_minutes = 15
 cook_minutes = 50
+image = { file = "01a18c16-b1d7-7a3a-a3c6-acade1bb6015.webp", sha256 = "a0b0d4720fd30953fc28ade60bb37a9db751a8d67b281e06fbddd86a668d1d53", alt = "Vegetarian chilli with beans, sweet potato and coriander" }
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "can" },
   { id = "black-beans", amount = 1, unit = "can" },
