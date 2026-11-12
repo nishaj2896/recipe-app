@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-10-21
+- Amended by: ADR-0012 (rule 5: the device store gains food rules and mood picks)
 - Deciders: Nisha
 - Related: ADR-0003 (cursor, deck), ADR-0005 (the API it calls)
 

@@ -5,6 +5,7 @@
 - Amended: 2026-10-18 (recipe times: rule 10)
 - Amended: 2026-10-19 (deck mix and deck sizes: rule 7; cursor `req`: rule 9)
 - Amended: 2026-10-29 (rule 4: Postgres sorts by `score_int`, looked up from values this function computed; ADR-0007)
+- Amended by: ADR-0012 (rules 5, 6 and 9: new filters, mood and weather fit first in the sort key, more cursor fields)
 - Deciders: Nisha
 - Supersedes: the "Result shape" ranking rule, the plain match-percentage definition, and the "fresh staple typed is promoted to core" rule in the Task 1 "Product decisions locked" table
 - Related: ADR-0001, ADR-0002
