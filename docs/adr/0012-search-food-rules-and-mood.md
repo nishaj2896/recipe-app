@@ -68,7 +68,7 @@ Allergens are best-effort. The food rules screen and every allergy note say that
 
 **6. The sort key gains a fit tiebreak.** For each recipe, `fit` = the number of requested moods it has, plus 1 if it suits any requested weather. With nothing picked, every `fit` is 0. The scored tier sorts by `(-band, -fit, -score_int, total_minutes, recipe_id)`, where `band = score_int // 100_000`. Because `score_int` is the composite score times 1,000,000 (ADR-0003 rule 4), a band is a step of 0.1 of the composite score: recipes are compared by pantry match in those steps and, within a step, a better fit goes first. The band is a hard edge: composites of 0.3999 and 0.4000 land in different bands, while 0.4000 and 0.4999 share one. That is acceptable for a tiebreak, and the gate tests pin one case on each side of an edge. With nothing picked, `band` changes nothing and the order is exactly today's. The all-staples tier sorts by `(-fit, total_minutes, recipe_id)`. `SCORING_VERSION` is bumped, and the cursor's `pos` stores the new keys. Postgres computes `band` with integer division of the `score_int` it already looks up and `fit` by counting array overlaps (ADR-0007 rule 2 still holds: SQL never evaluates the score formula).
 
-Nisha is choosing between this and putting `fit` first; if she picks the other, `fit` moves in front of `band` and nothing else changes.
+Nisha chose this order on 12 Nov over putting `fit` first: the deck is built around cooking with what you have, and moods already narrow it, so fit only breaks near-ties.
 
 **7. The cursor covers every new field.** `req` hashes `jain`, `avoid_allergens`, `avoid_ingredient_ids`, `courses`, `moods`, `weather` and `min_total_minutes` alongside today's fields, each list sorted (ADR-0003 rule 9).
 
