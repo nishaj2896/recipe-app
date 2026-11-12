@@ -3,7 +3,7 @@
 The recipe files are parsed in domain/book.py.
 """
 
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from uuid import UUID
 
@@ -13,6 +13,22 @@ from recipe_app.domain.catalog import (
     IngredientCatalog,
     IngredientClass,
 )
+from recipe_app.domain.normalization import normalize
+from recipe_app.domain.tags import (
+    MAX_ALIAS_LENGTH,
+    MAX_ALIASES,
+    MAX_COURSES,
+    MAX_MOODS,
+    MAX_PAIRINGS,
+    MAX_WEATHER,
+    MIN_COURSES,
+    MIN_MOODS,
+    Allergen,
+    Course,
+    Cuisine,
+    Mood,
+    Weather,
+)
 
 MAX_TOTAL_MINUTES = 24 * 60
 
@@ -20,6 +36,9 @@ MAX_TOTAL_MINUTES = 24 * 60
 MIN_WAIT_MINUTES, MAX_WAIT_MINUTES = 60, 7 * 24 * 60
 MAX_WAIT_NOTE_LENGTH = 40
 PLAN_AHEAD_FIELDS = frozenset({"wait_minutes", "note"})
+TAG_FIELDS = frozenset(
+    {"cuisine", "courses", "moods", "weather", "also_known_as", "pairs_with"}
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -32,6 +51,25 @@ class PlanAhead:
 
     wait_minutes: int
     note: str
+
+
+@dataclass(frozen=True, slots=True)
+class RecipeTags:
+    """What the search, the mood screen and pairings read (ADR-0012 rule 1).
+
+    Every field is optional until the content pull requests tag every recipe;
+    the lists keep the order written.
+    """
+
+    cuisine: Cuisine | None = None
+    courses: tuple[Course, ...] = ()
+    moods: tuple[Mood, ...] = ()
+    weather: tuple[Weather, ...] = ()
+    also_known_as: tuple[str, ...] = ()
+    pairs_with: tuple[UUID, ...] = ()
+
+
+NO_TAGS = RecipeTags()
 
 
 @dataclass(frozen=True, slots=True)
@@ -59,6 +97,7 @@ class Recipe:
     plan_ahead: PlanAhead | None = None
     # Copied from the recipe's content so the swipe card can show it (ADR-0010).
     image: Image | None = None
+    tags: RecipeTags = NO_TAGS
 
     @property
     def total_minutes(self) -> int:
@@ -70,6 +109,19 @@ class Recipe:
         return max(
             (ingredient.diet for ingredient in self.ingredients),
             key=lambda diet: diet.rank,
+        )
+
+    @property
+    def allergens(self) -> tuple[Allergen, ...]:
+        """Every ingredient's allergens, in Allergen order (ADR-0012 rule 2)."""
+        found = {a for ingredient in self.ingredients for a in ingredient.allergens}
+        return tuple(allergen for allergen in Allergen if allergen in found)
+
+    @property
+    def jain(self) -> bool:
+        """Vegan or vegetarian, with no ingredient a Jain kitchen leaves out."""
+        return Diet.VEGETARIAN.allows(self.diet) and all(
+            ingredient.jain for ingredient in self.ingredients
         )
 
     @property
@@ -99,6 +151,7 @@ def build_recipe(
     ingredient_ids: Sequence[str],
     catalog: IngredientCatalog,
     plan_ahead: object = None,
+    tags: Mapping[str, object] | None = None,
 ) -> Recipe:
     """Resolve every ingredient id against the catalog and check every rule.
 
@@ -113,6 +166,7 @@ def build_recipe(
         catalog=catalog,
     )
     wait = check_plan_ahead(plan_ahead, problems)
+    recipe_tags = check_tags(tags or {}, name, id, problems)
     if problems:
         raise RecipeError(
             [f"recipe {name!r} ({id}): {problem}" for problem in problems]
@@ -125,6 +179,7 @@ def build_recipe(
         cook_minutes=cook_minutes,
         ingredients=tuple(ingredients),
         plan_ahead=wait,
+        tags=recipe_tags,
     )
 
 
@@ -168,6 +223,117 @@ def check_plan_ahead(value: object, problems: list[str]) -> PlanAhead | None:
     if len(problems) > before:
         return None
     return PlanAhead(wait_minutes=minutes, note=note)  # type: ignore[arg-type]  # checked
+
+
+def check_tags(
+    row: Mapping[str, object],
+    name: object,
+    recipe_id: UUID | None,
+    problems: list[str],
+) -> RecipeTags:
+    """The tag fields as written in a recipe file (ADR-0012 rules 1 and 3).
+
+    Every field is optional for now. Checks that `pairs_with` names other
+    recipes that exist need the whole book, so parse_recipe_book does those.
+    Adds every problem to `problems`, without naming the recipe.
+    """
+    before = len(problems)
+    cuisine = None
+    if "cuisine" in row:
+        value = row["cuisine"]
+        if isinstance(value, str) and value in Cuisine:
+            cuisine = Cuisine(value)
+        else:
+            problems.append(f"unknown cuisine {value!r}")
+    courses = _choices(row, "courses", Course, MIN_COURSES, MAX_COURSES, problems)
+    moods = _choices(row, "moods", Mood, MIN_MOODS, MAX_MOODS, problems)
+    weather = _choices(row, "weather", Weather, 0, MAX_WEATHER, problems)
+    aliases = _aliases(row.get("also_known_as", []), name, problems)
+    pairs = _pairs(row.get("pairs_with", []), recipe_id, problems)
+    if len(problems) > before:
+        return NO_TAGS
+    return RecipeTags(
+        cuisine=cuisine,
+        courses=courses,
+        moods=moods,
+        weather=weather,
+        also_known_as=aliases,
+        pairs_with=pairs,
+    )
+
+
+def _choices[E: (Course, Mood, Weather)](
+    row: Mapping[str, object],
+    field: str,
+    enum: type[E],
+    least: int,
+    most: int,
+    problems: list[str],
+) -> tuple[E, ...]:
+    if field not in row:
+        return ()
+    values = row[field]
+    if not isinstance(values, list) or not all(isinstance(v, str) for v in values):
+        problems.append(f"{field} must be a list of strings")
+        return ()
+    if not least <= len(values) <= most:
+        problems.append(f"{field} must have {least} to {most} entries")
+    if len(set(values)) != len(values):
+        problems.append(f"{field} has duplicates")
+    unknown = [value for value in values if value not in enum]
+    problems.extend(f"unknown {field} entry {value!r}" for value in unknown)
+    return tuple(enum(value) for value in values if value in enum)
+
+
+def _aliases(value: object, name: object, problems: list[str]) -> tuple[str, ...]:
+    """Other names people type: lower case, single-spaced, not the name itself."""
+    if not isinstance(value, list) or not all(isinstance(v, str) for v in value):
+        problems.append("also_known_as must be a list of strings")
+        return ()
+    if len(value) > MAX_ALIASES:
+        problems.append(f"also_known_as must have at most {MAX_ALIASES} entries")
+    if len(set(value)) != len(value):
+        problems.append("also_known_as has duplicates")
+    own = normalize(name) if isinstance(name, str) else None
+    for alias in value:
+        if (
+            not alias
+            or len(alias) > MAX_ALIAS_LENGTH
+            or alias != " ".join(alias.split())
+            or alias != alias.lower()
+        ):
+            problems.append(
+                f"also_known_as {alias!r} must be 1 to {MAX_ALIAS_LENGTH} "
+                "characters, lower case and single-spaced"
+            )
+        elif normalize(alias) == own:
+            problems.append(f"also_known_as {alias!r} is the recipe's own name")
+    return tuple(value)
+
+
+def _pairs(
+    value: object, recipe_id: UUID | None, problems: list[str]
+) -> tuple[UUID, ...]:
+    if not isinstance(value, list) or not all(isinstance(v, str) for v in value):
+        problems.append("pairs_with must be a list of recipe ids")
+        return ()
+    if len(value) > MAX_PAIRINGS:
+        problems.append(f"pairs_with must have at most {MAX_PAIRINGS} entries")
+    pairs: list[UUID] = []
+    for text in value:
+        try:
+            parsed = UUID(text)
+        except ValueError:
+            parsed = None
+        if parsed is None or str(parsed) != text:
+            problems.append(f"pairs_with {text!r} is not a lowercase UUID string")
+            continue
+        if parsed == recipe_id:
+            problems.append("pairs_with names the recipe itself")
+        elif parsed in pairs:
+            problems.append(f"pairs_with has {text!r} twice")
+        pairs.append(parsed)
+    return tuple(pairs)
 
 
 def check_recipe(

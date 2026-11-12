@@ -101,3 +101,83 @@ def test_the_plan_ahead_wait_is_on_the_detail() -> None:
         "soak overnight",
     )
     assert plain.plan_ahead is None
+
+
+TAGGED_CATALOG = parse_catalog(
+    catalog(
+        category(),
+        ingredient(),
+        ingredient(id="paneer", name="Paneer", diet="vegetarian", allergens=["dairy"]),
+        ingredient(
+            id="naan", name="Naan", diet="vegetarian", allergens=["gluten", "dairy"]
+        ),
+    )
+)
+
+
+def test_the_detail_names_which_ingredients_bring_each_allergen() -> None:
+    """ADR-0012: the allergy note says what in the recipe is the problem."""
+    side = build_recipe(
+        id=UUID(int=6),
+        name="Naan",
+        prep_minutes=10,
+        cook_minutes=10,
+        ingredient_ids=["naan"],
+        catalog=TAGGED_CATALOG,
+        tags={"courses": ["rice-breads"], "moods": ["comforting"]},
+    )
+    main = build_recipe(
+        id=UUID(int=5),
+        name="Paneer with naan",
+        prep_minutes=10,
+        cook_minutes=20,
+        ingredient_ids=["paneer", "naan", "potato"],
+        catalog=TAGGED_CATALOG,
+        tags={
+            "cuisine": "north-indian",
+            "courses": ["mains"],
+            "moods": ["creamy", "comforting"],
+            "pairs_with": [str(side.id)],
+        },
+    )
+
+    detail = recipe_detail(RecipeWithContent(recipe=main, content=None, pairs=(side,)))
+
+    assert [
+        (a.allergen.value, [i.id for i in a.ingredients]) for a in detail.allergens
+    ] == [("dairy", ["paneer", "naan"]), ("gluten", ["naan"])]
+    assert detail.cuisine is not None
+    assert detail.cuisine.value == "north-indian"
+    assert [c.value for c in detail.courses] == ["mains"]
+    assert [m.value for m in detail.moods] == ["creamy", "comforting"]
+    assert detail.jain is True
+    assert [(p.id, p.name) for p in detail.pairs_with] == [(side.id, "Naan")]
+    assert [a.value for a in detail.pairs_with[0].allergens] == ["dairy", "gluten"]
+
+
+def test_the_card_carries_tags_and_allergens() -> None:
+    recipe = build_recipe(
+        id=UUID(int=7),
+        name="Paneer potatoes",
+        prep_minutes=5,
+        cook_minutes=20,
+        ingredient_ids=["paneer", "potato"],
+        catalog=TAGGED_CATALOG,
+        tags={"courses": ["sides"], "moods": ["hearty"]},
+    )
+    match = ScoredMatch(
+        recipe=recipe,
+        score_int=1,
+        match_tenths=1000,
+        matched=recipe.ingredients,
+        missing=(),
+        assumed=(),
+    )
+
+    card = _scored_card(match)
+
+    assert card.cuisine is None
+    assert [c.value for c in card.courses] == ["sides"]
+    assert [m.value for m in card.moods] == ["hearty"]
+    assert [a.value for a in card.allergens] == ["dairy"]
+    assert card.jain is True

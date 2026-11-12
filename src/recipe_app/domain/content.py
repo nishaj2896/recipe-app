@@ -47,6 +47,8 @@ class RecipeWithContent:
 
     recipe: Recipe
     content: RecipeContent | None
+    # The recipes in `recipe.tags.pairs_with`, in that order (ADR-0012 rule 8).
+    pairs: tuple[Recipe, ...] = ()
 
 
 def build_content(

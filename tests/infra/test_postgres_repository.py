@@ -370,3 +370,70 @@ async def test_detail_reads_one_version_while_a_sync_commits(
     assert await repository.detail(recipe.id) == RecipeWithContent(
         recipe=recipe, content=content
     )
+
+
+async def test_tags_allergens_and_pairings_round_trip(
+    empty_engine: AsyncEngine,
+) -> None:
+    """ADR-0012: the deck and the recipe screen read what the files say."""
+    one = parse_catalog(
+        catalog(
+            category(),
+            ingredient(),
+            ingredient(id="onion", name="Onion", jain=False),
+            ingredient(
+                id="naan", name="Naan", diet="vegetarian", allergens=["gluten", "dairy"]
+            ),
+        )
+    )
+    naan = build_recipe(
+        id=UUID(int=11),
+        name="Naan",
+        prep_minutes=10,
+        cook_minutes=10,
+        ingredient_ids=["naan"],
+        catalog=one,
+        tags={"courses": ["rice-breads"], "moods": ["comforting"]},
+    )
+    salad = build_recipe(
+        id=UUID(int=12),
+        name="Onion salad",
+        prep_minutes=5,
+        cook_minutes=0,
+        ingredient_ids=["onion"],
+        catalog=one,
+        tags={"courses": ["salads", "sides"], "moods": ["fresh-herby"]},
+    )
+    main = build_recipe(
+        id=UUID(int=10),
+        name="Potato curry",
+        prep_minutes=10,
+        cook_minutes=25,
+        ingredient_ids=["potato", "onion"],
+        catalog=one,
+        tags={
+            "cuisine": "north-indian",
+            "courses": ["mains"],
+            "moods": ["comforting", "hearty"],
+            "weather": ["rainy-day-cosy", "warming"],
+            "also_known_as": ["aloo curry", "aloo rassa"],
+            # File order, not id order, is the order the screen shows.
+            "pairs_with": [str(salad.id), str(naan.id)],
+        },
+    )
+    await sync(empty_engine, one, [main, naan, salad], now=NOW)
+    repository = await PostgresRecipeRepository.open(empty_engine, one)
+
+    detail = await repository.detail(main.id)
+    assert detail == RecipeWithContent(recipe=main, content=None, pairs=(salad, naan))
+    assert detail.recipe.jain is False
+    naan_detail = await repository.detail(naan.id)
+    assert naan_detail is not None
+    assert [a.value for a in naan_detail.recipe.allergens] == ["dairy", "gluten"]
+    assert naan_detail.pairs == ()
+
+    pantry = resolve_pantry(
+        ingredient_ids=["potato", "onion"], excluded_staples=[], catalog=one
+    )
+    ranked = await repository.ranked(pantry, SearchFilters(), Position(), 20)
+    assert {card.recipe.id: card.recipe for card in ranked.scored}[main.id] == main
