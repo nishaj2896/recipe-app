@@ -174,6 +174,9 @@ def upgrade() -> None:
             name=op.f("uq_recipe_pairings_recipe_id_paired_recipe_id"),
         ),
     )
+    op.create_index(
+        "ix_recipe_pairings_paired_recipe_id", "recipe_pairings", ["paired_recipe_id"]
+    )
 
 
 def downgrade() -> None:

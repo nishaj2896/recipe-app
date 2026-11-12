@@ -234,8 +234,14 @@ recipes = Table(
         _subset_of("allergens", Allergen, len(Allergen)), name="allergens_known"
     ),
     _name_not_blank(),
-    # The search's other way in: the few recipes any pantry can cook.
-    Index("ix_recipes_all_staples", "id", postgresql_where=text("all_staples")),
+    # The search's other way in: the few recipes any pantry can cook, in the
+    # tier's order, so a page stops after `limit` rows instead of sorting.
+    Index(
+        "ix_recipes_all_staples",
+        "total_minutes",
+        "id",
+        postgresql_where=text("all_staples"),
+    ),
 )
 
 recipe_ingredients = Table(
@@ -303,6 +309,8 @@ recipe_pairings = Table(
         f"position BETWEEN 0 AND {MAX_PAIRINGS - 1}", name="position_in_range"
     ),
     CheckConstraint("paired_recipe_id <> recipe_id", name="not_itself"),
+    # The foreign key's other side: checking a recipe is unreferenced reads it.
+    Index("ix_recipe_pairings_paired_recipe_id", "paired_recipe_id"),
 )
 
 catalog_state = Table(
