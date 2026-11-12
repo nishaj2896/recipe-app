@@ -86,6 +86,8 @@ async def sync(
                     "diet": item.diet.value,
                     "category_id": item.category,
                     "retired": item.retired,
+                    "allergens": [allergen.value for allergen in item.allergens],
+                    "jain": item.jain,
                 }
                 for item in catalog.by_id.values()
             ],
@@ -114,6 +116,7 @@ async def sync(
                     "core_weight": sum(match_weight(i) for i in recipe.ingredients),
                     **_wait_columns(recipe),
                     **_content_columns(content.get(recipe.id)),
+                    **_tag_columns(recipe),
                 }
                 for recipe in recipes
             ],
@@ -131,6 +134,19 @@ async def sync(
                 }
                 for recipe in recipes
                 for position, item in enumerate(recipe.ingredients)
+            ],
+        )
+        await _replace(
+            connection,
+            tables.recipe_pairings,
+            [
+                {
+                    "recipe_id": recipe.id,
+                    "position": position,
+                    "paired_recipe_id": paired,
+                }
+                for recipe in recipes
+                for position, paired in enumerate(recipe.tags.pairs_with)
             ],
         )
         await _replace(
@@ -168,6 +184,20 @@ def _wait_columns(recipe: Recipe) -> dict[str, Any]:
     return {
         "wait_minutes": wait.wait_minutes if wait else None,
         "wait_note": wait.note if wait else None,
+    }
+
+
+def _tag_columns(recipe: Recipe) -> dict[str, Any]:
+    tags = recipe.tags
+    return {
+        "cuisine": tags.cuisine.value if tags.cuisine else None,
+        "courses": [course.value for course in tags.courses],
+        "moods": [mood.value for mood in tags.moods],
+        "weather": [weather.value for weather in tags.weather],
+        "also_known_as": list(tags.also_known_as),
+        # Derived, so recomputed on every run (ADR-0012 rule 2).
+        "allergens": [allergen.value for allergen in recipe.allergens],
+        "jain": recipe.jain,
     }
 
 

@@ -105,6 +105,32 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
   schemas: {
+    /**
+     * Allergen
+     * @description The 14 allergens food labels use.
+     * @enum {string}
+     */
+    Allergen:
+      | "peanuts"
+      | "tree-nuts"
+      | "dairy"
+      | "egg"
+      | "gluten"
+      | "soy"
+      | "sesame"
+      | "fish"
+      | "crustaceans"
+      | "molluscs"
+      | "mustard"
+      | "celery"
+      | "sulphites"
+      | "lupin";
+    /** AllergenSource */
+    AllergenSource: {
+      allergen: components["schemas"]["Allergen"];
+      /** Ingredients */
+      ingredients: components["schemas"]["IngredientRef"][];
+    };
     /** CatalogIngredient */
     CatalogIngredient: {
       category: components["schemas"]["CategoryRef"];
@@ -130,6 +156,45 @@ export interface components {
       /** Name */
       name: string;
     };
+    /**
+     * Course
+     * @enum {string}
+     */
+    Course:
+      | "breakfast"
+      | "snacks-starters"
+      | "soups"
+      | "salads"
+      | "mains"
+      | "rice-breads"
+      | "sides"
+      | "desserts"
+      | "drinks";
+    /**
+     * Cuisine
+     * @enum {string}
+     */
+    Cuisine:
+      | "north-indian"
+      | "south-indian"
+      | "east-indian"
+      | "west-indian"
+      | "indo-chinese"
+      | "street-food"
+      | "chinese"
+      | "japanese"
+      | "korean"
+      | "thai"
+      | "southeast-asian"
+      | "middle-eastern"
+      | "mediterranean"
+      | "italian"
+      | "french"
+      | "spanish-portuguese"
+      | "european"
+      | "american-british"
+      | "mexican-latin"
+      | "african-caribbean";
     /**
      * Diet
      * @enum {string}
@@ -176,6 +241,47 @@ export interface components {
       ingredients: components["schemas"]["CatalogIngredient"][];
     };
     /**
+     * Mood
+     * @description A flavour the dish is known for, not one that is merely present.
+     * @enum {string}
+     */
+    Mood:
+      | "spicy"
+      | "tangy"
+      | "sweet"
+      | "savoury"
+      | "creamy"
+      | "smoky"
+      | "fresh-herby"
+      | "comforting"
+      | "crispy"
+      | "sweet-sour"
+      | "light"
+      | "hearty";
+    /**
+     * PairCard
+     * @description Enough of a paired recipe to show it and check it against food rules.
+     */
+    PairCard: {
+      /** Allergens */
+      allergens: components["schemas"]["Allergen"][];
+      /** Courses */
+      courses: components["schemas"]["Course"][];
+      diet: components["schemas"]["Diet"];
+      /**
+       * Id
+       * Format: uuid
+       */
+      id: string;
+      image: components["schemas"]["RecipeImage"] | null;
+      /** Jain */
+      jain: boolean;
+      /** Name */
+      name: string;
+      /** Total Minutes */
+      total_minutes: number;
+    };
+    /**
      * PlanAhead
      * @description A hands-off wait of an hour or more that the times leave out (ADR-0009).
      */
@@ -209,10 +315,19 @@ export interface components {
     };
     /** RecipeCard */
     RecipeCard: {
+      /**
+       * Allergens
+       * @description Best-effort: ready-made ingredients can hide allergens.
+       */
+      allergens: components["schemas"]["Allergen"][];
       /** Assumed Staples */
       assumed_staples: components["schemas"]["IngredientRef"][];
       /** Cook Minutes */
       cook_minutes: number;
+      /** Courses */
+      courses: components["schemas"]["Course"][];
+      /** @description Null until the recipe is tagged. */
+      cuisine: components["schemas"]["Cuisine"] | null;
       diet: components["schemas"]["Diet"];
       /**
        * Id
@@ -220,6 +335,11 @@ export interface components {
        */
       id: string;
       image: components["schemas"]["RecipeImage"] | null;
+      /**
+       * Jain
+       * @description Vegan or vegetarian with no onion, garlic, roots, mushrooms or honey (ADR-0012 rule 2).
+       */
+      jain: boolean;
       /**
        * Match Percentage
        * @description Share of core weight matched; null on all-staples cards.
@@ -229,6 +349,8 @@ export interface components {
       matched_ingredients: components["schemas"]["IngredientRef"][];
       /** Missing Ingredients */
       missing_ingredients: components["schemas"]["IngredientRef"][];
+      /** Moods */
+      moods: components["schemas"]["Mood"][];
       /** Name */
       name: string;
       plan_ahead: components["schemas"]["PlanAhead"] | null;
@@ -240,8 +362,17 @@ export interface components {
     };
     /** RecipeDetail */
     RecipeDetail: {
+      /**
+       * Allergens
+       * @description Each allergen with the ingredients that bring it, in ingredient order. Best-effort: ready-made ingredients can hide allergens.
+       */
+      allergens: components["schemas"]["AllergenSource"][];
       /** Cook Minutes */
       cook_minutes: number;
+      /** Courses */
+      courses: components["schemas"]["Course"][];
+      /** @description Null until the recipe is tagged. */
+      cuisine: components["schemas"]["Cuisine"] | null;
       diet: components["schemas"]["Diet"];
       /**
        * Id
@@ -251,8 +382,17 @@ export interface components {
       image: components["schemas"]["RecipeImage"] | null;
       /** Ingredients */
       ingredients: components["schemas"]["RecipeIngredient"][];
+      /** Jain */
+      jain: boolean;
+      /** Moods */
+      moods: components["schemas"]["Mood"][];
       /** Name */
       name: string;
+      /**
+       * Pairs With
+       * @description Hand-picked recipes to serve alongside, in order. The app hides any that break the user's food rules (ADR-0012 rule 8).
+       */
+      pairs_with: components["schemas"]["PairCard"][];
       plan_ahead: components["schemas"]["PlanAhead"] | null;
       /** Prep Minutes */
       prep_minutes: number;

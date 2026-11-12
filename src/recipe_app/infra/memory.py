@@ -49,7 +49,15 @@ class InMemoryRecipeRepository:
         recipe = self._by_id.get(recipe_id)
         if recipe is None:
             return None
-        return RecipeWithContent(recipe=recipe, content=self._content.get(recipe_id))
+        return RecipeWithContent(
+            recipe=recipe,
+            content=self._content.get(recipe_id),
+            pairs=tuple(
+                self._by_id[pair]
+                for pair in recipe.tags.pairs_with
+                if pair in self._by_id
+            ),
+        )
 
     async def ranked(
         self, pantry: Pantry, filters: SearchFilters, after: Position, limit: int

@@ -1,11 +1,13 @@
 """Domain objects to wire schemas, in one place."""
 
 from recipe_app.api.schemas import (
+    AllergenSource,
     CatalogIngredient,
     CategoryRef,
     IgnoredIngredient,
     IngredientRef,
     IngredientsResponse,
+    PairCard,
     PlanAhead,
     RecipeCard,
     RecipeDetail,
@@ -67,6 +69,33 @@ def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
         ],
         steps=list(content.steps) if content else [],
         image=_image(content.image if content else None),
+        cuisine=recipe.tags.cuisine,
+        courses=list(recipe.tags.courses),
+        moods=list(recipe.tags.moods),
+        jain=recipe.jain,
+        allergens=[
+            AllergenSource(
+                allergen=allergen,
+                ingredients=_refs(
+                    tuple(i for i in recipe.ingredients if allergen in i.allergens)
+                ),
+            )
+            for allergen in recipe.allergens
+        ],
+        pairs_with=[_pair(pair) for pair in detail.pairs],
+    )
+
+
+def _pair(recipe: Recipe) -> PairCard:
+    return PairCard(
+        id=recipe.id,
+        name=recipe.name,
+        total_minutes=recipe.total_minutes,
+        courses=list(recipe.tags.courses),
+        diet=recipe.diet,
+        jain=recipe.jain,
+        allergens=list(recipe.allergens),
+        image=_image(recipe.image),
     )
 
 
@@ -163,6 +192,11 @@ def _card(
         diet=recipe.diet,
         plan_ahead=_plan_ahead(recipe),
         image=_image(recipe.image),
+        cuisine=recipe.tags.cuisine,
+        courses=list(recipe.tags.courses),
+        moods=list(recipe.tags.moods),
+        jain=recipe.jain,
+        allergens=list(recipe.allergens),
     )
 
 

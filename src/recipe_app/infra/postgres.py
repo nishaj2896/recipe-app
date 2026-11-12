@@ -45,10 +45,16 @@ from recipe_app.domain.matching import (
     match_recipe,
 )
 from recipe_app.domain.ranking import Ranking, SearchFilters
-from recipe_app.domain.recipe import Image, PlanAhead, Recipe
+from recipe_app.domain.recipe import Image, PlanAhead, Recipe, RecipeTags
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
+from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
 from recipe_app.domain.units import Unit
-from recipe_app.infra.tables import recipe_ingredients, recipe_steps, recipes
+from recipe_app.infra.tables import (
+    recipe_ingredients,
+    recipe_pairings,
+    recipe_steps,
+    recipes,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -65,6 +71,19 @@ _INGREDIENT_IDS = (
     .scalar_subquery()
     .label("ingredient_ids")
 )
+# Each recipe's pairings in the order written (ADR-0012 rule 8).
+_PAIRS = (
+    select(
+        func.array_agg(
+            aggregate_order_by(
+                recipe_pairings.c.paired_recipe_id, recipe_pairings.c.position
+            )
+        )
+    )
+    .where(recipe_pairings.c.recipe_id == recipes.c.id)
+    .scalar_subquery()
+    .label("pairs_with")
+)
 _RECIPE = select(
     recipes.c.id,
     recipes.c.name,
@@ -75,7 +94,13 @@ _RECIPE = select(
     recipes.c.image_file,
     recipes.c.image_sha256,
     recipes.c.image_alt,
+    recipes.c.cuisine,
+    recipes.c.courses,
+    recipes.c.moods,
+    recipes.c.weather,
+    recipes.c.also_known_as,
     _INGREDIENT_IDS,
+    _PAIRS,
 )
 
 _CONTENT = select(
@@ -143,7 +168,28 @@ class PostgresRecipeRepository:
             if recipe is None:
                 return None
             content = await self._content(connection, recipe_id)
-        return RecipeWithContent(recipe=recipe, content=content)
+            pairs = await self._pairs(connection, recipe.tags.pairs_with)
+        return RecipeWithContent(recipe=recipe, content=content, pairs=pairs)
+
+    async def _pairs(
+        self, connection: AsyncConnection, pair_ids: tuple[UUID, ...]
+    ) -> tuple[Recipe, ...]:
+        """The paired recipes in the order written, read in the caller's
+        transaction; one this process can't build is left out.
+        """
+        if not pair_ids:
+            return ()
+        rows = (
+            (
+                await connection.execute(
+                    _RECIPE.where(recipes.c.id == any_(_uuids("pairs", list(pair_ids))))
+                )
+            )
+            .mappings()
+            .all()
+        )
+        found = {recipe.id: recipe for recipe in self._to_recipes(rows)}
+        return tuple(found[pair] for pair in pair_ids if pair in found)
 
     async def _content(
         self, connection: AsyncConnection, recipe_id: UUID
@@ -307,6 +353,7 @@ class PostgresRecipeRepository:
                         wait_minutes=row["wait_minutes"], note=row["wait_note"]
                     ),
                     image=_image(row),
+                    tags=_tags(row),
                 )
             )
         if skipped:
@@ -359,6 +406,18 @@ def scored_query(
             > tuple_(*_keyset("after_scored", after))
         )
     return query
+
+
+def _tags(row: RowMapping) -> RecipeTags:
+    return RecipeTags(
+        cuisine=None if row["cuisine"] is None else Cuisine(row["cuisine"]),
+        courses=tuple(Course(value) for value in row["courses"]),
+        moods=tuple(Mood(value) for value in row["moods"]),
+        weather=tuple(Weather(value) for value in row["weather"]),
+        also_known_as=tuple(row["also_known_as"]),
+        # array_agg over no rows is NULL.
+        pairs_with=tuple(row["pairs_with"] or ()),
+    )
 
 
 def _image(row: RowMapping) -> Image | None:

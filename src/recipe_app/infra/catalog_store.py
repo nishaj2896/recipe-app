@@ -18,6 +18,7 @@ from recipe_app.domain.catalog import (
     IngredientClass,
     StapleKind,
 )
+from recipe_app.domain.tags import Allergen
 from recipe_app.infra.tables import (
     catalog_state,
     categories,
@@ -98,6 +99,8 @@ async def read_catalog(engine: AsyncEngine) -> IngredientCatalog:
             category=row["category_id"],
             search_terms=tuple(terms.get(row["id"], ())),
             retired=row["retired"],
+            allergens=tuple(Allergen(value) for value in row["allergens"]),
+            jain=row["jain"],
         )
         for row in ingredient_rows
     }

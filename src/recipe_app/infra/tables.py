@@ -9,6 +9,7 @@ from collections.abc import Iterable
 from enum import StrEnum
 
 from sqlalchemy import (
+    ARRAY,
     Boolean,
     CheckConstraint,
     Column,
@@ -46,6 +47,18 @@ from recipe_app.domain.recipe import (
     MAX_WAIT_NOTE_LENGTH,
     MIN_WAIT_MINUTES,
 )
+from recipe_app.domain.tags import (
+    MAX_ALIASES,
+    MAX_COURSES,
+    MAX_MOODS,
+    MAX_PAIRINGS,
+    MAX_WEATHER,
+    Allergen,
+    Course,
+    Cuisine,
+    Mood,
+    Weather,
+)
 from recipe_app.domain.units import Unit
 
 # Every constraint gets a predictable name, so a later migration can drop it by name.
@@ -64,6 +77,12 @@ def _one_of(column: str, values: Iterable[StrEnum]) -> str:
     """A CHECK that the column holds one of the enum's values."""
     listed = ", ".join(f"'{value.value}'" for value in values)
     return f"{column} IN ({listed})"
+
+
+def _subset_of(column: str, values: Iterable[StrEnum], most: int) -> str:
+    """A CHECK that a text[] column holds at most `most` of the enum's values."""
+    listed = ", ".join(f"'{value.value}'" for value in values)
+    return f"{column} <@ ARRAY[{listed}]::text[] AND cardinality({column}) <= {most}"
 
 
 def _id_is_slug() -> CheckConstraint:
@@ -100,8 +119,16 @@ ingredients = Table(
     Column("diet", Text, nullable=False),
     Column("category_id", ForeignKey("categories.id"), nullable=False, index=True),
     Column("retired", Boolean, nullable=False),
+    # ADR-0012 rule 2; the sync writes both on every run.
+    Column(
+        "allergens", ARRAY(Text), nullable=False, server_default=text("'{}'::text[]")
+    ),
+    Column("jain", Boolean, nullable=False, server_default=text("true")),
     _id_is_slug(),
     _name_not_blank(),
+    CheckConstraint(
+        _subset_of("allergens", Allergen, len(Allergen)), name="allergens_known"
+    ),
     CheckConstraint(_one_of('"class"', IngredientClass), name="class_known"),
     CheckConstraint(_one_of("kind", StapleKind), name="kind_known"),
     CheckConstraint(_one_of("diet", Diet), name="diet_known"),
@@ -154,6 +181,22 @@ recipes = Table(
     # A long hands-off wait the times leave out (ADR-0009); both NULL for most.
     Column("wait_minutes", SmallInteger),
     Column("wait_note", Text),
+    # Tags (ADR-0012 rule 1): NULL or empty until the content is tagged.
+    Column("cuisine", Text),
+    Column("courses", ARRAY(Text), nullable=False, server_default=text("'{}'::text[]")),
+    Column("moods", ARRAY(Text), nullable=False, server_default=text("'{}'::text[]")),
+    Column("weather", ARRAY(Text), nullable=False, server_default=text("'{}'::text[]")),
+    Column(
+        "also_known_as",
+        ARRAY(Text),
+        nullable=False,
+        server_default=text("'{}'::text[]"),
+    ),
+    # Derived from the ingredients; the sync recomputes both (ADR-0012 rule 2).
+    Column(
+        "allergens", ARRAY(Text), nullable=False, server_default=text("'{}'::text[]")
+    ),
+    Column("jain", Boolean, nullable=False, server_default=text("false")),
     CheckConstraint("prep_minutes >= 0", name="prep_not_negative"),
     CheckConstraint("core_weight >= 0", name="core_weight_not_negative"),
     CheckConstraint("cook_minutes >= 0", name="cook_not_negative"),
@@ -179,6 +222,16 @@ recipes = Table(
     ),
     CheckConstraint(
         "(wait_minutes IS NULL) = (wait_note IS NULL)", name="wait_has_note"
+    ),
+    CheckConstraint(_one_of("cuisine", Cuisine), name="cuisine_known"),
+    CheckConstraint(_subset_of("courses", Course, MAX_COURSES), name="courses_known"),
+    CheckConstraint(_subset_of("moods", Mood, MAX_MOODS), name="moods_known"),
+    CheckConstraint(_subset_of("weather", Weather, MAX_WEATHER), name="weather_known"),
+    CheckConstraint(
+        f"cardinality(also_known_as) <= {MAX_ALIASES}", name="aliases_count"
+    ),
+    CheckConstraint(
+        _subset_of("allergens", Allergen, len(Allergen)), name="allergens_known"
     ),
     _name_not_blank(),
     # The search's other way in: the few recipes any pantry can cook.
@@ -232,6 +285,24 @@ recipe_steps = Table(
     CheckConstraint(
         f"length(text) BETWEEN 1 AND {MAX_STEP_LENGTH}", name="text_length"
     ),
+)
+
+recipe_pairings = Table(
+    "recipe_pairings",
+    metadata,
+    Column(
+        "recipe_id",
+        ForeignKey("recipes.id", ondelete="CASCADE"),
+        primary_key=True,
+    ),
+    # The order written: the screen shows them in it (ADR-0012 rule 8).
+    Column("position", SmallInteger, primary_key=True),
+    Column("paired_recipe_id", ForeignKey("recipes.id"), nullable=False),
+    UniqueConstraint("recipe_id", "paired_recipe_id"),
+    CheckConstraint(
+        f"position BETWEEN 0 AND {MAX_PAIRINGS - 1}", name="position_in_range"
+    ),
+    CheckConstraint("paired_recipe_id <> recipe_id", name="not_itself"),
 )
 
 catalog_state = Table(

@@ -1,6 +1,44 @@
 {
   "components": {
     "schemas": {
+      "Allergen": {
+        "description": "The 14 allergens food labels use.",
+        "enum": [
+          "peanuts",
+          "tree-nuts",
+          "dairy",
+          "egg",
+          "gluten",
+          "soy",
+          "sesame",
+          "fish",
+          "crustaceans",
+          "molluscs",
+          "mustard",
+          "celery",
+          "sulphites",
+          "lupin"
+        ],
+        "title": "Allergen",
+        "type": "string"
+      },
+      "AllergenSource": {
+        "properties": {
+          "allergen": {
+            "$ref": "#/components/schemas/Allergen"
+          },
+          "ingredients": {
+            "items": {
+              "$ref": "#/components/schemas/IngredientRef"
+            },
+            "title": "Ingredients",
+            "type": "array"
+          }
+        },
+        "required": ["allergen", "ingredients"],
+        "title": "AllergenSource",
+        "type": "object"
+      },
       "CatalogIngredient": {
         "properties": {
           "category": {
@@ -60,6 +98,47 @@
         "required": ["id", "name"],
         "title": "CategoryRef",
         "type": "object"
+      },
+      "Course": {
+        "enum": [
+          "breakfast",
+          "snacks-starters",
+          "soups",
+          "salads",
+          "mains",
+          "rice-breads",
+          "sides",
+          "desserts",
+          "drinks"
+        ],
+        "title": "Course",
+        "type": "string"
+      },
+      "Cuisine": {
+        "enum": [
+          "north-indian",
+          "south-indian",
+          "east-indian",
+          "west-indian",
+          "indo-chinese",
+          "street-food",
+          "chinese",
+          "japanese",
+          "korean",
+          "thai",
+          "southeast-asian",
+          "middle-eastern",
+          "mediterranean",
+          "italian",
+          "french",
+          "spanish-portuguese",
+          "european",
+          "american-british",
+          "mexican-latin",
+          "african-caribbean"
+        ],
+        "title": "Cuisine",
+        "type": "string"
       },
       "Diet": {
         "enum": ["vegan", "vegetarian", "egg", "non_veg"],
@@ -145,6 +224,86 @@
         "title": "IngredientsResponse",
         "type": "object"
       },
+      "Mood": {
+        "description": "A flavour the dish is known for, not one that is merely present.",
+        "enum": [
+          "spicy",
+          "tangy",
+          "sweet",
+          "savoury",
+          "creamy",
+          "smoky",
+          "fresh-herby",
+          "comforting",
+          "crispy",
+          "sweet-sour",
+          "light",
+          "hearty"
+        ],
+        "title": "Mood",
+        "type": "string"
+      },
+      "PairCard": {
+        "description": "Enough of a paired recipe to show it and check it against food rules.",
+        "properties": {
+          "allergens": {
+            "items": {
+              "$ref": "#/components/schemas/Allergen"
+            },
+            "title": "Allergens",
+            "type": "array"
+          },
+          "courses": {
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            },
+            "title": "Courses",
+            "type": "array"
+          },
+          "diet": {
+            "$ref": "#/components/schemas/Diet"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "image": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RecipeImage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "jain": {
+            "title": "Jain",
+            "type": "boolean"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "total_minutes": {
+            "title": "Total Minutes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "total_minutes",
+          "courses",
+          "diet",
+          "jain",
+          "allergens",
+          "image"
+        ],
+        "title": "PairCard",
+        "type": "object"
+      },
       "PlanAhead": {
         "description": "A hands-off wait of an hour or more that the times leave out (ADR-0009).",
         "properties": {
@@ -210,6 +369,14 @@
       },
       "RecipeCard": {
         "properties": {
+          "allergens": {
+            "description": "Best-effort: ready-made ingredients can hide allergens.",
+            "items": {
+              "$ref": "#/components/schemas/Allergen"
+            },
+            "title": "Allergens",
+            "type": "array"
+          },
           "assumed_staples": {
             "items": {
               "$ref": "#/components/schemas/IngredientRef"
@@ -220,6 +387,24 @@
           "cook_minutes": {
             "title": "Cook Minutes",
             "type": "integer"
+          },
+          "courses": {
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            },
+            "title": "Courses",
+            "type": "array"
+          },
+          "cuisine": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Cuisine"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Null until the recipe is tagged."
           },
           "diet": {
             "$ref": "#/components/schemas/Diet"
@@ -238,6 +423,11 @@
                 "type": "null"
               }
             ]
+          },
+          "jain": {
+            "description": "Vegan or vegetarian with no onion, garlic, roots, mushrooms or honey (ADR-0012 rule 2).",
+            "title": "Jain",
+            "type": "boolean"
           },
           "match_percentage": {
             "anyOf": [
@@ -265,6 +455,13 @@
               "$ref": "#/components/schemas/IngredientRef"
             },
             "title": "Missing Ingredients",
+            "type": "array"
+          },
+          "moods": {
+            "items": {
+              "$ref": "#/components/schemas/Mood"
+            },
+            "title": "Moods",
             "type": "array"
           },
           "name": {
@@ -306,16 +503,47 @@
           "total_minutes",
           "diet",
           "plan_ahead",
-          "image"
+          "image",
+          "cuisine",
+          "courses",
+          "moods",
+          "jain",
+          "allergens"
         ],
         "title": "RecipeCard",
         "type": "object"
       },
       "RecipeDetail": {
         "properties": {
+          "allergens": {
+            "description": "Each allergen with the ingredients that bring it, in ingredient order. Best-effort: ready-made ingredients can hide allergens.",
+            "items": {
+              "$ref": "#/components/schemas/AllergenSource"
+            },
+            "title": "Allergens",
+            "type": "array"
+          },
           "cook_minutes": {
             "title": "Cook Minutes",
             "type": "integer"
+          },
+          "courses": {
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            },
+            "title": "Courses",
+            "type": "array"
+          },
+          "cuisine": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Cuisine"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Null until the recipe is tagged."
           },
           "diet": {
             "$ref": "#/components/schemas/Diet"
@@ -342,9 +570,28 @@
             "title": "Ingredients",
             "type": "array"
           },
+          "jain": {
+            "title": "Jain",
+            "type": "boolean"
+          },
+          "moods": {
+            "items": {
+              "$ref": "#/components/schemas/Mood"
+            },
+            "title": "Moods",
+            "type": "array"
+          },
           "name": {
             "title": "Name",
             "type": "string"
+          },
+          "pairs_with": {
+            "description": "Hand-picked recipes to serve alongside, in order. The app hides any that break the user's food rules (ADR-0012 rule 8).",
+            "items": {
+              "$ref": "#/components/schemas/PairCard"
+            },
+            "title": "Pairs With",
+            "type": "array"
           },
           "plan_ahead": {
             "anyOf": [
@@ -395,7 +642,13 @@
           "serves",
           "ingredients",
           "steps",
-          "image"
+          "image",
+          "cuisine",
+          "courses",
+          "moods",
+          "jain",
+          "allergens",
+          "pairs_with"
         ],
         "title": "RecipeDetail",
         "type": "object"

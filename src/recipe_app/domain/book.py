@@ -10,11 +10,13 @@ from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.content import CONTENT_FIELDS, RecipeContent, build_content
 from recipe_app.domain.normalization import normalize
 from recipe_app.domain.recipe import (
+    TAG_FIELDS,
     Recipe,
     RecipeError,
     build_recipe,
     check_plan_ahead,
     check_recipe,
+    check_tags,
 )
 from recipe_app.domain.steps import StepMatcher, step_matcher
 
@@ -23,6 +25,7 @@ RECIPE_FIELDS = (
         {"id", "name", "prep_minutes", "cook_minutes", "ingredients", "plan_ahead"}
     )
     | CONTENT_FIELDS
+    | TAG_FIELDS
 )
 
 
@@ -57,6 +60,10 @@ def parse_recipe_book(
         ):
             recipes.append(recipe)
             content[recipe.id] = recipe_content
+    if not problems:
+        # Needs every id parsed, or one bad recipe would also show as a
+        # missing pairing.
+        _check_pairings(recipes, problems)
     if problems:
         raise RecipeError(problems)
     return RecipeBook(recipes=tuple(recipes), content=MappingProxyType(content))
@@ -126,6 +133,7 @@ def _parse_file(
                 catalog=catalog,
             )
             check_plan_ahead(row.get("plan_ahead"), found)
+            check_tags(row, name, None, found)
             problems.extend(f"{where}: {problem}" for problem in found)
             continue
 
@@ -138,6 +146,7 @@ def _parse_file(
                 ingredient_ids=ingredient_ids,  # type: ignore[arg-type]
                 catalog=catalog,
                 plan_ahead=row.get("plan_ahead"),
+                tags=row,
             )
         except RecipeError as error:
             problems.extend(f"{where}: {problem}" for problem in error.problems)
@@ -149,6 +158,18 @@ def _parse_file(
         # The card shows the photo too (ADR-0010), so the recipe carries it.
         parsed.append((replace(recipe, image=recipe_content.image), recipe_content))
     return parsed
+
+
+def _check_pairings(recipes: list[Recipe], problems: list[str]) -> None:
+    """Every `pairs_with` id names a recipe in the book (ADR-0012 rule 3)."""
+    known = {recipe.id for recipe in recipes}
+    for recipe in recipes:
+        problems.extend(
+            f"recipe {recipe.name!r} ({recipe.id}): pairs_with names unknown "
+            f"recipe {str(paired)!r}"
+            for paired in recipe.tags.pairs_with
+            if paired not in known
+        )
 
 
 def _entries(

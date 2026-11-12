@@ -92,6 +92,11 @@ export function recipe(
     diet: "vegetarian",
     plan_ahead: null,
     image: null,
+    cuisine: "north-indian",
+    courses: ["mains"],
+    moods: ["comforting"],
+    jain: false,
+    allergens: [],
   };
 }
 
@@ -119,6 +124,12 @@ export function detailOf(card: RecipeCard): RecipeDetail {
     ].map((item) => ({ ...item, amount: 1, unit: "cup" as const })),
     steps: ["Gather everything.", "Cook it all together."],
     image: null,
+    cuisine: card.cuisine,
+    courses: card.courses,
+    moods: card.moods,
+    jain: card.jain,
+    allergens: [],
+    pairs_with: [],
   };
 }
 

@@ -10,6 +10,7 @@ from types import MappingProxyType
 from typing import assert_never
 
 from recipe_app.domain.normalization import normalize
+from recipe_app.domain.tags import Allergen
 
 NEVER_STAPLES = frozenset({"milk", "curd"})
 MAX_ID_LENGTH = 64
@@ -17,7 +18,18 @@ SLUG = re.compile(r"[a-z0-9]+(-[a-z0-9]+)*")
 
 CATEGORY_FIELDS = frozenset({"id", "name", "position", "retired"})
 INGREDIENT_FIELDS = frozenset(
-    {"id", "name", "class", "kind", "diet", "category", "search_terms", "retired"}
+    {
+        "id",
+        "name",
+        "class",
+        "kind",
+        "diet",
+        "category",
+        "search_terms",
+        "retired",
+        "allergens",
+        "jain",
+    }
 )
 
 
@@ -76,6 +88,10 @@ class Ingredient:
     category: str
     search_terms: tuple[str, ...]
     retired: bool
+    # What it usually contains, in Allergen order (ADR-0012 rule 2).
+    allergens: tuple[Allergen, ...] = ()
+    # False only for plant ingredients a Jain kitchen leaves out (ADR-0012 rule 2).
+    jain: bool = True
 
 
 @dataclass(frozen=True, slots=True)
@@ -203,6 +219,8 @@ def _parse_ingredients(
         category = _text(row, "category", where, problems)
         search_terms = _search_terms(row, where, problems)
         retired = _retired(row, where, problems)
+        allergens = _allergens(row, where, problems)
+        jain = _jain(row, diet, where, problems)
 
         kind = None
         if "kind" in row:
@@ -235,6 +253,8 @@ def _parse_ingredients(
                     category=category,
                     search_terms=search_terms,
                     retired=retired,
+                    allergens=allergens,
+                    jain=jain,
                 )
             )
     return ingredients
@@ -338,4 +358,36 @@ def _retired(row: dict[str, object], where: str, problems: list[str]) -> bool:
     if isinstance(value, bool):
         return value
     problems.append(f"{where}: retired must be true or false")
+    return False
+
+
+def _allergens(
+    row: dict[str, object], where: str, problems: list[str]
+) -> tuple[Allergen, ...]:
+    """The allergens in Allergen order, so the file's order never matters."""
+    values = row.get("allergens", [])
+    if not isinstance(values, list) or not all(isinstance(v, str) for v in values):
+        problems.append(f"{where}: allergens must be a list of strings")
+        return ()
+    unknown = [value for value in values if value not in Allergen]
+    problems.extend(f"{where}: unknown allergen {value!r}" for value in unknown)
+    if len(set(values)) != len(values):
+        problems.append(f"{where}: allergens has duplicates")
+    if unknown:
+        return ()
+    return tuple(allergen for allergen in Allergen if allergen.value in values)
+
+
+def _jain(
+    row: dict[str, object], diet: Diet | None, where: str, problems: list[str]
+) -> bool:
+    """Only `jain = false` is written; egg and non-veg need no flag (ADR-0012)."""
+    if "jain" not in row:
+        return True
+    value = row["jain"]
+    if value is not False:
+        problems.append(f"{where}: jain can only be false; leave it out for true")
+        return True
+    if diet in {Diet.EGG, Diet.NON_VEG}:
+        problems.append(f"{where}: jain = false is only for vegan or vegetarian")
     return False

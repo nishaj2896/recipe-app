@@ -20,6 +20,7 @@ TABLES = {
     "recipes",
     "recipe_ingredients",
     "recipe_steps",
+    "recipe_pairings",
     "catalog_state",
 }
 

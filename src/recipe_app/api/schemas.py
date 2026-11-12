@@ -16,6 +16,7 @@ from recipe_app.domain.catalog import MAX_ID_LENGTH, SLUG, Diet
 from recipe_app.domain.cursor import MAX_CURSOR_LENGTH
 from recipe_app.domain.deck import MAX_DECK_SIZE
 from recipe_app.domain.matching import IgnoredReason
+from recipe_app.domain.tags import Allergen, Course, Cuisine, Mood
 from recipe_app.domain.units import Unit
 
 MAX_INGREDIENT_IDS = 50
@@ -119,6 +120,16 @@ class RecipeCard(BaseModel):
     diet: Diet
     plan_ahead: PlanAhead | None
     image: RecipeImage | None
+    cuisine: Cuisine | None = Field(description="Null until the recipe is tagged.")
+    courses: list[Course]
+    moods: list[Mood]
+    jain: bool = Field(
+        description="Vegan or vegetarian with no onion, garlic, roots, "
+        "mushrooms or honey (ADR-0012 rule 2)."
+    )
+    allergens: list[Allergen] = Field(
+        description="Best-effort: ready-made ingredients can hide allergens."
+    )
 
 
 class SearchResponse(BaseModel):
@@ -132,6 +143,24 @@ class RecipeIngredient(IngredientRef):
         description="For the recipe's `serves`; null with `unit` when to taste."
     )
     unit: Unit | None
+
+
+class AllergenSource(BaseModel):
+    allergen: Allergen
+    ingredients: list[IngredientRef]
+
+
+class PairCard(BaseModel):
+    """Enough of a paired recipe to show it and check it against food rules."""
+
+    id: UUID
+    name: str
+    total_minutes: int
+    courses: list[Course]
+    diet: Diet
+    jain: bool
+    allergens: list[Allergen]
+    image: RecipeImage | None
 
 
 class RecipeDetail(BaseModel):
@@ -148,6 +177,18 @@ class RecipeDetail(BaseModel):
     ingredients: list[RecipeIngredient]
     steps: list[str]
     image: RecipeImage | None
+    cuisine: Cuisine | None = Field(description="Null until the recipe is tagged.")
+    courses: list[Course]
+    moods: list[Mood]
+    jain: bool
+    allergens: list[AllergenSource] = Field(
+        description="Each allergen with the ingredients that bring it, in "
+        "ingredient order. Best-effort: ready-made ingredients can hide allergens."
+    )
+    pairs_with: list[PairCard] = Field(
+        description="Hand-picked recipes to serve alongside, in order. The app "
+        "hides any that break the user's food rules (ADR-0012 rule 8)."
+    )
 
 
 class CategoryRef(BaseModel):
