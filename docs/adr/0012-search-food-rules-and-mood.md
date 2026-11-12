@@ -1,6 +1,6 @@
 # ADR-0012: Recipe search, food rules, the mood screen and pairings
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-11-12
 - Deciders: Nisha
 - Amends: ADR-0002 rule 6 (Jain sits beside the diet order, not in it), ADR-0003 rules 5, 6 and 9 (new filters, mood and weather fit first in the sort key, more fields in the cursor's `req`), ADR-0006 rule 5 (the device store gains food rules and mood picks), ADR-0008 rule 7 (the recipe detail and the search cards gain fields)
@@ -92,7 +92,7 @@ A recipe that matches more than one way takes its best. Results sort by that cri
 
 The dropdown also shows matching ingredients ("tap to add to pantry") from the catalog the app already holds, so the pantry's search box becomes one box for both. Other screens (deck, cookbook) get a search button that opens the same box.
 
-**11. "See all" opens a results list, not a deck.** The approved mockup's button read "See all 41 recipes as a deck". A deck is ranked by pantry match, and a search for "pa" with an empty pantry would deal almost nothing, because a recipe with nothing matched is in neither tier (ADR-0003 rule 3). The button reads "See all 41 recipes" and opens a scrolling list of the same results, 20 at a time (`offset` on the same endpoint, up to 200). Each row opens the recipe, where it can be saved.
+**11. "See all" opens a results list, not a deck.** The approved mockup's button read "See all 41 recipes as a deck". A deck is ranked by pantry match, and a search for "pa" with an empty pantry would deal almost nothing, because a recipe with nothing matched is in neither tier (ADR-0003 rule 3). The button reads "See all 41 recipes" and opens a scrolling list of the same results, 20 at a time (`offset` on the same endpoint, up to 200). Each row opens the recipe, where it can be saved. Nisha confirmed the list on 12 Nov. "See all" appears only at the bottom of the search dropdown.
 
 **12. The device store gains a version.** ADR-0006 rule 5 holds: v1 has no accounts and the device keeps the only copy. The store adds `foodRulesSeen`, `jain`, `avoidAllergens`, `avoidIngredients` and `mood` (`courses`, `time`, `moods`, `weather`), with a version bump and a migration. `maxTotalMinutes` becomes the `time` choice: 15 and 30 keep their value, 45 and 60 become "1 hr". The food rules screen opens once on first launch (with "Skip for now") and again from a profile button on the pantry. The mood screen opens from "Cook something", remembers the last picks and shows them on the deck as one chip ("Snacks · 30 min · Spicy, Tangy · Rainy-day cosy") that opens it again.
 
