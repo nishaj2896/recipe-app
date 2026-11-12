@@ -3,7 +3,7 @@
 - Status: Proposed
 - Date: 2026-11-12
 - Deciders: Nisha
-- Amends: ADR-0002 rule 6 (Jain sits beside the diet order, not in it), ADR-0003 rules 5, 6 and 9 (new filters, a mood and weather tiebreak in the sort key, more fields in the cursor's `req`), ADR-0006 rule 5 (the device store gains food rules and mood picks), ADR-0008 rule 7 (the recipe detail and the search cards gain fields)
+- Amends: ADR-0002 rule 6 (Jain sits beside the diet order, not in it), ADR-0003 rules 5, 6 and 9 (new filters, mood and weather fit first in the sort key, more fields in the cursor's `req`), ADR-0006 rule 5 (the device store gains food rules and mood picks), ADR-0008 rule 7 (the recipe detail and the search cards gain fields)
 - Related: ADR-0007 (Postgres ranks), ADR-0009 (plan-ahead label), the approved mockups (12 Nov 2026)
 
 ## Context
@@ -66,9 +66,9 @@ Allergens are best-effort. The food rules screen and every allergy note say that
 - `weather`: up to 9 weather ids. **This never removes a recipe**; it only moves recipes that suit any of them forward (rule 6).
 - `min_total_minutes`: with `max_total_minutes`, the time choice. The app sends Any (neither), 15 min (`max 15`), 30 min (`max 30`), 1 hr (`max 60`) or 1 hr+ (`min 61`). The 45-minute choice goes. The time limit moves from the deck's filter sheet to the mood screen, so it lives in one place.
 
-**6. The sort key gains a fit tiebreak.** For each recipe, `fit` = the number of requested moods it has, plus 1 if it suits any requested weather. With nothing picked, every `fit` is 0. The scored tier sorts by `(-band, -fit, -score_int, total_minutes, recipe_id)`, where `band = score_int // 100_000`. Because `score_int` is the composite score times 1,000,000 (ADR-0003 rule 4), a band is a step of 0.1 of the composite score: recipes are compared by pantry match in those steps and, within a step, a better fit goes first. The band is a hard edge: composites of 0.3999 and 0.4000 land in different bands, while 0.4000 and 0.4999 share one. That is acceptable for a tiebreak, and the gate tests pin one case on each side of an edge. With nothing picked, `band` changes nothing and the order is exactly today's. The all-staples tier sorts by `(-fit, total_minutes, recipe_id)`. `SCORING_VERSION` is bumped, and the cursor's `pos` stores the new keys. Postgres computes `band` with integer division of the `score_int` it already looks up and `fit` by counting array overlaps (ADR-0007 rule 2 still holds: SQL never evaluates the score formula).
+**6. The sort key puts fit first.** For each recipe, `fit` = the number of requested moods it has, plus 1 if it suits any requested weather. With nothing picked, every `fit` is 0. The scored tier sorts by `(-fit, -score_int, total_minutes, recipe_id)`, so a recipe that fits more of the picked moods and weather comes before one that fits fewer, and pantry match orders recipes with the same fit. With nothing picked, the order is exactly today's. The all-staples tier sorts by `(-fit, total_minutes, recipe_id)`. `SCORING_VERSION` is bumped, and the cursor's `pos` stores the new keys. Postgres computes `fit` by counting array overlaps and still only looks up `score_int` (ADR-0007 rule 2 holds: SQL never evaluates the score formula).
 
-Nisha chose this order on 12 Nov over putting `fit` first: the deck is built around cooking with what you have, and moods already narrow it, so fit only breaks near-ties.
+Nisha chose this order on 12 Nov over "pantry first, fit breaks ties": what you picked on the mood screen leads, and pantry match comes second. A consequence: with Spicy and Tangy picked, a dish that is both and needs a bigger shop comes before a dish that is only spicy and uses everything you have. The deck's tier rule still holds, so a recipe with nothing matched never appears (ADR-0003 rule 3).
 
 **7. The cursor covers every new field.** `req` hashes `jain`, `avoid_allergens`, `avoid_ingredient_ids`, `courses`, `moods`, `weather` and `min_total_minutes` alongside today's fields, each list sorted (ADR-0003 rule 9).
 
