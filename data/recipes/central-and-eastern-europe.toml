@@ -17,7 +17,7 @@ courses = ["mains", "soups"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["gulyas", "hungarian goulash"]
-pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Dinner rolls, Cucumber sunomono
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Dinner rolls, Coleslaw
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },

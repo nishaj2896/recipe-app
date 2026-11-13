@@ -797,7 +797,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "crispy"]
 also_known_as = ["chicken parmesan", "chicken parm"]
-pairs_with = ["01a18bbd-3cd2-7037-a970-caa33cd9c967", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Spaghetti bolognese, Caprese salad
+pairs_with = ["01a18bbd-3cd9-7a10-8b53-edda3e236417", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Pasta pomodoro, Caprese salad
 ingredients = [
   { id = "chicken", amount = 4, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },

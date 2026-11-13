@@ -505,7 +505,7 @@ cuisine = "japanese"
 courses = ["snacks-starters"]
 moods = ["savoury", "light"]
 also_known_as = ["edamame"]
-pairs_with = ["01a18c22-48c0-7d0a-8ea9-de8935531e63", "01a18c12-05a3-729e-b778-26e6d8ef394a", "01a18c12-058a-7d1f-979e-239d8d907c5e"]  # Teriyaki tofu bowl, Cucumber sunomono, Miso soup
+pairs_with = ["01a18c22-48c0-7d0a-8ea9-de8935531e63", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Teriyaki tofu bowl, Cucumber sunomono
 ingredients = [
   { id = "edamame", amount = 400, unit = "g" },
   { id = "salt", to_taste = true },
@@ -529,7 +529,7 @@ cuisine = "japanese"
 courses = ["snacks-starters"]
 moods = ["crispy", "light"]
 also_known_as = ["tempura"]
-pairs_with = ["01a18c12-058c-79a2-bbdb-2322eab198b0", "01a18c22-48f3-7f62-9b64-c108b0578897", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Vegetable ramen, Zaru soba, Cucumber sunomono
+pairs_with = ["01a18c12-058c-79a2-bbdb-2322eab198b0", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Vegetable ramen, Cucumber sunomono
 ingredients = [
   { id = "sweet-potato", amount = 1, unit = "medium" },
   { id = "zucchini", amount = 1, unit = "medium" },
@@ -918,7 +918,7 @@ courses = ["soups", "mains"]
 moods = ["savoury", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["soybean paste stew"]
-pairs_with = ["01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Kongnamul muchim, Gyeran mari, Cucumber sunomono
+pairs_with = ["01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c12-05b6-76f0-b1d1-fa24c33911e9"]  # Kongnamul muchim, Gyeran mari
 ingredients = [
   { id = "doenjang", amount = 3, unit = "tbsp" },
   { id = "tofu", amount = 300, unit = "g" },
