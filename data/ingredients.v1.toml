@@ -1997,7 +1997,7 @@ class = "A"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["ice cream"]
-allergens = ["dairy"]
+allergens = ["dairy", "egg"]
 
 [[ingredient]]
 id = "whipping-cream"
@@ -2489,6 +2489,7 @@ class = "A"
 diet = "vegetarian"
 category = "pasta-and-noodles"
 allergens = ["gluten", "soy"]
+jain = false
 
 [[ingredient]]
 id = "lasagne-sheets"
@@ -2549,6 +2550,7 @@ class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
 search_terms = ["rice paper sheets"]
+jain = false
 
 [[ingredient]]
 id = "rice-vermicelli"
@@ -3911,6 +3913,7 @@ class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["chana masala"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "cinnamon-sticks"
@@ -4282,6 +4285,8 @@ name = "Kitchen king masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
+jain = false
 
 [[ingredient]]
 id = "kokum"
@@ -4319,6 +4324,8 @@ name = "Meat masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
+jain = false
 
 [[ingredient]]
 id = "msg"
@@ -4399,6 +4406,7 @@ name = "Pav bhaji masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "pink-peppercorns"
@@ -4552,6 +4560,8 @@ name = "Tandoori masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
+jain = false
 
 [[ingredient]]
 id = "turmeric"
@@ -4919,6 +4929,7 @@ class = "B"
 diet = "vegetarian"
 category = "sauces-and-condiments"
 allergens = ["dairy", "mustard", "sulphites"]
+jain = false
 
 [[ingredient]]
 id = "hot-sauce"
@@ -4952,6 +4963,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["tomato ketchup", "tomato sauce"]
+jain = false
 
 [[ingredient]]
 id = "kimchi"
@@ -4967,7 +4979,7 @@ name = "Lime pickle"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
-allergens = ["mustard"]
+allergens = ["gluten", "mustard"]
 
 [[ingredient]]
 id = "liquid-smoke"
@@ -4990,7 +5002,7 @@ name = "Mango pickle"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
-allergens = ["mustard"]
+allergens = ["gluten", "mustard"]
 
 [[ingredient]]
 id = "mayonnaise"
@@ -5007,6 +5019,7 @@ name = "Mint sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "mirin"
@@ -5032,7 +5045,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["mixed pickle"]
-allergens = ["mustard"]
+allergens = ["gluten", "mustard"]
 
 [[ingredient]]
 id = "olives"
