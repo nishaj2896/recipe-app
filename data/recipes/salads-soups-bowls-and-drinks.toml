@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a15175-3c24-7cf4-9ec4-2e239c353e9f.webp", sha256 = "ff396520abdf7c881ca7231a300e6cffb71883bf9d44a482a2e874b788fa18a0", alt = "Tofu and broccoli stir-fry with red pepper" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury", "light"]
+also_known_as = ["tofu broccoli"]
 ingredients = [
   { id = "tofu", amount = 300, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -39,6 +43,11 @@ name = "Tomato soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "european"
+courses = ["soups"]
+moods = ["tangy", "comforting", "creamy"]
+weather = ["rainy-day-cosy", "under-the-weather"]
+also_known_as = ["cream of tomato soup"]
 ingredients = [
   { id = "tomato", amount = 8, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -63,6 +72,11 @@ name = "Roasted pumpkin soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+cuisine = "european"
+courses = ["soups"]
+moods = ["sweet", "creamy", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["pumpkin soup"]
 ingredients = [
   { id = "pumpkin", amount = 1, unit = "kg" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -91,6 +105,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18c22-48a9-7d28-bc67-5de769d392c2.webp", sha256 = "d444be5659b13b0ccf1c876707db48ef4cd778e122ce1490253eaa0a2fd19d92", alt = "Creamy mushroom soup topped with fried mushroom slices and parsley" }
+cuisine = "european"
+courses = ["soups"]
+moods = ["creamy", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["cream of mushroom soup"]
 ingredients = [
   { id = "mushroom", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -119,6 +138,10 @@ name = "Cream of broccoli soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "european"
+courses = ["soups"]
+moods = ["creamy", "comforting"]
+also_known_as = ["broccoli soup"]
 ingredients = [
   { id = "broccoli", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -145,6 +168,11 @@ name = "Carrot and ginger soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "european"
+courses = ["soups"]
+moods = ["sweet", "comforting", "light"]
+weather = ["under-the-weather"]
+also_known_as = ["carrot soup"]
 ingredients = [
   { id = "carrot", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -173,6 +201,10 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c22-48b0-78be-b545-35b868bd64c1.webp", sha256 = "6de6db42968379faa1ee4354d6070026207a84fd1780fcbe52387f726aa7bd51", alt = "Green lentil soup with carrot, celery, tomato and spinach" }
+cuisine = "european"
+courses = ["soups"]
+moods = ["comforting", "hearty"]
+weather = ["rainy-day-cosy", "under-the-weather"]
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -203,6 +235,10 @@ name = "Quinoa salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "mediterranean"
+courses = ["salads"]
+moods = ["fresh-herby", "light"]
+weather = ["just-pleasant"]
 ingredients = [
   { id = "quinoa", amount = 1, unit = "cup" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -231,6 +267,11 @@ name = "Chickpea salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+cuisine = "mediterranean"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["just-pleasant"]
+also_known_as = ["chana salad"]
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -258,6 +299,9 @@ name = "Pasta salad"
 serves = 6
 prep_minutes = 15
 cook_minutes = 12
+cuisine = "italian"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy"]
 ingredients = [
   { id = "pasta", amount = 300, unit = "g" },
   { id = "cherry-tomatoes", amount = 250, unit = "g" },
@@ -288,6 +332,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 5
 image = { file = "01a18c22-48b9-7242-bdd6-e9534b8aef82.webp", sha256 = "0c278dfc08c901e557bc9750a705c06cfa230a3fc813a0d6931dbc0531f82786", alt = "Waldorf salad on lettuce leaves" }
+cuisine = "american-british"
+courses = ["salads"]
+moods = ["creamy", "sweet", "crispy"]
 ingredients = [
   { id = "apple", amount = 2, unit = "medium" },
   { id = "celery", amount = 3, unit = "piece" },
@@ -314,6 +361,9 @@ name = "Roasted vegetable salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "mediterranean"
+courses = ["salads"]
+moods = ["savoury", "fresh-herby"]
 ingredients = [
   { id = "sweet-potato", amount = 1, unit = "large" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -342,6 +392,10 @@ name = "Buddha bowl"
 serves = 2
 prep_minutes = 20
 cook_minutes = 30
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["fresh-herby", "light", "savoury"]
+also_known_as = ["grain bowl"]
 ingredients = [
   { id = "brown-rice", amount = 0.75, unit = "cup" },
   { id = "chickpeas", amount = 1, unit = "can" },
@@ -373,6 +427,10 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18c22-48c0-7d0a-8ea9-de8935531e63.webp", sha256 = "4520a98d9f8217b2424f1a588a07edfb76c94be24e256cdf8a76a8649724ed57", alt = "Teriyaki tofu bowl with broccoli, carrot and edamame on rice" }
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["sweet", "savoury"]
+also_known_as = ["tofu bowl"]
 ingredients = [
   { id = "sushi-rice", amount = 0.75, unit = "cup" },
   { id = "tofu", amount = 300, unit = "g" },
@@ -401,6 +459,11 @@ name = "Poke bowl"
 serves = 2
 prep_minutes = 25
 cook_minutes = 25
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["poke"]
 ingredients = [
   { id = "sushi-rice", amount = 0.75, unit = "cup" },
   { id = "salmon", amount = 250, unit = "g" },
@@ -433,6 +496,10 @@ name = "Vegetable stir-fry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "chinese"
+courses = ["mains", "sides"]
+moods = ["savoury", "light"]
+also_known_as = ["veg stir fry"]
 ingredients = [
   { id = "broccoli", amount = 1, unit = "small" },
   { id = "bell-pepper", amount = 1, unit = "medium" },
@@ -464,6 +531,9 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 10
 image = { file = "01a18c22-48c6-7ff9-93cf-4d1fe32b816f.webp", sha256 = "b21d29e285f4d53ed5929b82347135a9b2c155efae295bbe0674c2442ae330e0", alt = "Garlic butter mushrooms with parsley in a small pan" }
+cuisine = "european"
+courses = ["sides"]
+moods = ["savoury", "creamy"]
 ingredients = [
   { id = "mushroom", amount = 500, unit = "g" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -488,6 +558,11 @@ name = "Roast chicken with vegetables"
 serves = 4
 prep_minutes = 20
 cook_minutes = 90
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["roast chicken"]
 ingredients = [
   { id = "chicken", amount = 1.6, unit = "kg" },
   { id = "potato", amount = 750, unit = "g" },
@@ -517,6 +592,10 @@ name = "Lemon herb grilled chicken"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["just-pleasant"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -543,6 +622,10 @@ name = "Baked salmon with herbs"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "european"
+courses = ["mains"]
+moods = ["fresh-herby", "light"]
+also_known_as = ["baked salmon"]
 ingredients = [
   { id = "salmon", amount = 4, unit = "piece" },
   { id = "dill", amount = 2, unit = "tbsp" },
@@ -569,6 +652,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 6
 image = { file = "01a18c22-48cf-7d5b-9142-9176d2eaf297.webp", sha256 = "481197322b0d7595d581fbfd8d2f6ae324c8b97264e78af61b091fbe79f40c7f", alt = "Garlic butter prawns with chilli flakes and parsley in a small pan" }
+cuisine = "european"
+courses = ["mains"]
+moods = ["savoury", "creamy"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -594,6 +680,10 @@ name = "Stuffed bell peppers"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "hearty"]
+also_known_as = ["stuffed capsicum"]
 ingredients = [
   { id = "bell-pepper", amount = 4, unit = "large" },
   { id = "beef-mince", amount = 400, unit = "g" },
@@ -625,6 +715,11 @@ name = "Hot chocolate"
 serves = 2
 prep_minutes = 2
 cook_minutes = 6
+cuisine = "european"
+courses = ["drinks"]
+moods = ["sweet", "creamy", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in", "grey-gloomy"]
+also_known_as = ["hot cocoa"]
 ingredients = [
   { id = "milk", amount = 2, unit = "cup" },
   { id = "dark-chocolate", amount = 75, unit = "g" },
@@ -650,6 +745,11 @@ prep_minutes = 5
 cook_minutes = 5
 plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
 image = { file = "01a18c22-48d6-73e1-ad5e-9405ad8e716c.webp", sha256 = "dc0306c59cdee22d8084795b6e9ef501a42737f4d0dd0c93d0603fc9dfd550f3", alt = "Glass of iced lemon tea with lemon slices and mint" }
+cuisine = "american-british"
+courses = ["drinks"]
+moods = ["tangy", "sweet"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["iced tea", "lemon iced tea"]
 ingredients = [
   { id = "black-tea", amount = 2, unit = "tbsp" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -673,6 +773,10 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 3
 plan_ahead = { wait_minutes = 60, note = "chill for 1 hour" }
+cuisine = "american-british"
+courses = ["drinks"]
+moods = ["tangy", "sweet"]
+weather = ["cool-down", "sticky-sluggish"]
 ingredients = [
   { id = "lemon", amount = 6, unit = "medium" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -694,6 +798,9 @@ name = "Banana smoothie"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+cuisine = "american-british"
+courses = ["drinks", "breakfast"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "banana", amount = 2, unit = "large" },
   { id = "milk", amount = 1.5, unit = "cup" },
@@ -716,6 +823,11 @@ name = "Strawberry milkshake"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+cuisine = "american-british"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
+also_known_as = ["strawberry shake"]
 ingredients = [
   { id = "strawberries", amount = 1.5, unit = "cup" },
   { id = "milk", amount = 1, unit = "cup" },

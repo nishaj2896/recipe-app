@@ -13,6 +13,9 @@ prep_minutes = 20
 cook_minutes = 35
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 image = { file = "01a188aa-f1bb-7de8-bf53-445fbba68aca.webp", sha256 = "1ce654a4d988e9cee96acb05473240c21072808953e0c19bf229436909d65443", alt = "Charred tandoori chicken with sliced onion rings" }
+cuisine = "north-indian"
+courses = ["mains", "snacks-starters"]
+moods = ["smoky", "spicy"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -46,6 +49,10 @@ prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a188aa-f1be-73ed-a585-cf2dc55a06d0.webp", sha256 = "c61670f5bceac855bcfea38f8e4f588b442060d6009990e3ca2b1e8947936a94", alt = "Charred chicken tikka pieces with a halved lemon" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["smoky", "spicy"]
+also_known_as = ["murgh tikka"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -78,6 +85,10 @@ prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a188aa-f1c1-73fb-9543-fd72dee5304c.webp", sha256 = "7217db1f890f1a48ba8a664ac728addccae05811b8a134f3dfb600a47ce18814", alt = "Pale, creamy chicken malai tikka pieces" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["creamy", "smoky"]
+also_known_as = ["malai tikka", "murgh malai tikka"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -111,6 +122,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a188aa-f1c3-75fe-a474-6b5c552d8ff7.webp", sha256 = "8838d8778d68daf9769fd15768a88554c11cd22d1101a26c2047a37a358248c9", alt = "Chicken seekh kebabs" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["smoky", "spicy"]
 ingredients = [
   { id = "chicken-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -143,6 +157,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a188aa-f1c6-79e3-abfa-5caa9d08a92a.webp", sha256 = "39ec43cceec18d1b46da005e6798882637be511f9b06c91cc41198569fe2cf9d", alt = "Three charred mutton seekh kebabs" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["smoky", "spicy"]
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -176,6 +193,10 @@ prep_minutes = 25
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 image = { file = "01a188aa-f1c8-7e46-bac6-1c917b930b0f.webp", sha256 = "c1713281cc2d90480dae90a3b312388ad4ff9ff45f98901e7c982b4545d4b67f", alt = "Five galouti kebabs" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["creamy", "savoury"]
+also_known_as = ["galawati kebab"]
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -212,6 +233,10 @@ name = "Shami kebab"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "crispy"]
+also_known_as = ["shami kabab"]
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -250,6 +275,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a188aa-f1cc-7900-a94f-6142775566e4.webp", sha256 = "929c00d18301119ac14ac0539800acadb50ed6ef74251cf6a8012fe8c7c39060", alt = "Charred paneer tikka with bell pepper and onion" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["smoky", "spicy"]
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -282,6 +310,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a188aa-f1cf-7eed-a6b4-363efdcb5cc9.webp", sha256 = "5c30096e0c43c4b0bb8283ae868a79f950d0f62d24e07f24604f3cca4695c700", alt = "Hara bhara kebabs, each with a cashew pressed into the middle" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["fresh-herby", "crispy"]
+also_known_as = ["hara bhara kabab"]
 ingredients = [
   { id = "spinach", amount = 200, unit = "g" },
   { id = "peas", amount = 0.5, unit = "cup" },
@@ -316,6 +348,9 @@ name = "Tandoori aloo"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["snacks-starters", "sides"]
+moods = ["smoky", "spicy"]
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -345,6 +380,10 @@ name = "Tandoori gobi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["smoky", "spicy"]
+also_known_as = ["tandoori cauliflower"]
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -376,6 +415,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a188aa-f1d5-7f72-8c2e-8fccf033b963.webp", sha256 = "467035110d76659cdae37ebc84d759529066627f0f7495bd643baee931c5c5d3", alt = "Amritsari fish fry, crisp gram flour coated fish fingers" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
   { id = "gram-flour", amount = 0.5, unit = "cup" },
@@ -407,6 +450,11 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 45
 image = { file = "01a188aa-f1d8-72f8-b06b-92069ff0ac6b.webp", sha256 = "dbf8714c335c731c73f9b87224a2067aee226cf60e2ae5ccc8dd4d9d4866ec26", alt = "Two crisp samosas, one broken open to show a potato and pea filling" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["samosas", "aloo samosa"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "carom-seeds", amount = 0.5, unit = "tsp" },
@@ -445,6 +493,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a188aa-f1da-773c-b67e-c654f0ec5824.webp", sha256 = "fc9d4c5009104058dd975c384736346f7c45011db1452a35819968373e9fc1c2", alt = "Two aloo tikki, one broken open to show a potato and pea filling" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["alu tikki"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "peas", amount = 0.25, unit = "cup" },
@@ -475,6 +528,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a188aa-f1dd-7874-a4eb-9c6cc6e04957.webp", sha256 = "efae0db54ee1e7f9931ecd6413f7d138e1db0979db1ffff0b8915f227810c7ba", alt = "Pyaaz pakora in a bowl" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["onion pakoda", "onion bhaji"]
 ingredients = [
   { id = "onion", amount = 3, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -503,6 +561,10 @@ name = "Mixed pakora"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "gram-flour", amount = 1.5, unit = "cup" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -534,6 +596,11 @@ name = "Paneer pakora"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["paneer pakoda"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -563,6 +630,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a188aa-f1e3-77ad-ac8b-74cb57af4709.webp", sha256 = "32c205e38c39067fe2de86b509b8a4e548f343d6827dfd8e962e2e1e791218d4", alt = "Bread pakora triangles, one broken open to show the potato filling" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["bread pakoda"]
 ingredients = [
   { id = "white-bread", amount = 8, unit = "slice" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -596,6 +668,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a188aa-f1e6-7825-a419-b34dd6c20104.webp", sha256 = "257b82575bba7d78b5fac6638513755a609660ad5f482cdbecab4a7e0b9ccea0", alt = "Papdi chaat with potato, chickpeas, curd, chutneys, sev and pomegranate" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "sweet-sour", "crispy"]
+weather = ["breezy-evening"]
+also_known_as = ["papri chaat"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "carom-seeds", amount = 0.25, unit = "tsp" },
@@ -633,6 +710,10 @@ name = "Aloo chaat"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "spicy", "crispy"]
+weather = ["breezy-evening"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "oil", amount = 3, unit = "tbsp" },
@@ -664,6 +745,11 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a188aa-f1ea-7c30-9f08-d4e9a514d6ab.webp", sha256 = "c2cb6190cf69b53d33c83a768fa659cb95859bd2b5ac75d6e5c2b26ca458cfc7", alt = "Dahi bhalla in curd with green and tamarind chutney" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["creamy", "sweet-sour"]
+weather = ["cool-down"]
+also_known_as = ["dahi bhalle"]
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },
@@ -697,6 +783,9 @@ name = "Chole tikki chaat"
 serves = 4
 prep_minutes = 30
 cook_minutes = 40
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "spicy", "hearty"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "cornflour", amount = 2, unit = "tbsp" },
@@ -735,6 +824,10 @@ prep_minutes = 25
 cook_minutes = 60
 plan_ahead = { wait_minutes = 600, note = "soak overnight" }
 image = { file = "01a188aa-f1ef-7af4-af63-473bbcc685b1.webp", sha256 = "239fd1470f30dfdf0caa67b06928101a71ad60e14e1d87464da948041aa778ef", alt = "Matar kulcha, white pea curry with chopped toppings and two kulchas" }
+cuisine = "street-food"
+courses = ["mains", "snacks-starters"]
+moods = ["tangy", "spicy"]
+also_known_as = ["matar kulche"]
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -774,6 +867,9 @@ name = "Raj kachori"
 serves = 4
 prep_minutes = 30
 cook_minutes = 45
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "sweet-sour", "crispy"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -814,6 +910,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+cuisine = "north-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["moong chilla"]
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },
@@ -845,6 +945,10 @@ name = "Besan chilla"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "north-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["besan cheela", "pudla"]
 ingredients = [
   { id = "gram-flour", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -874,6 +978,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a188aa-f1f8-7392-b067-b7fa74c30949.webp", sha256 = "f5ece05776404d3c1fbfd0f5f905250a97079847ea4452eaff0ec6e072dfa81a", alt = "Paneer bhurji with crumbled paneer, bell pepper and coriander" }
+cuisine = "north-indian"
+courses = ["breakfast", "mains"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },

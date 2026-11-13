@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a15175-3c15-7017-9787-d9be73c0cb5f.webp", sha256 = "4fb528bfa4acb9d2d41663a6dad19906a858ff31ae6280c5026b0ad97053ede3", alt = "Rava upma with curry leaves, mustard seeds and green chillies" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["sooji upma"]
 ingredients = [
   { id = "semolina", amount = 180, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -42,6 +46,10 @@ prep_minutes = 15
 cook_minutes = 15
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 image = { file = "01a188e6-a83e-78f1-a1ee-2349f5e25707.webp", sha256 = "b5ddeb4734faaeb454bef7de088a4d720c83fff1f1286c70dc276072243ce268", alt = "Four steamed idlis on a dark plate" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light", "savoury"]
+weather = ["under-the-weather"]
 ingredients = [
   { id = "idli-rice", amount = 2, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -69,6 +77,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a188e6-a840-7af6-83f9-144f64aa1b2a.webp", sha256 = "79f08e785c9f0800aa6bc89eee5fcc9bc043ca70efa95fbb55ee6b3ac6d8ae1d", alt = "Three rava idlis with cashews, carrot and curry leaves" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light", "savoury"]
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -104,6 +115,9 @@ prep_minutes = 25
 cook_minutes = 40
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 image = { file = "01a188e6-a842-793c-b480-e9e5cbe1d5f2.webp", sha256 = "266acde34fd5d480e311ae73c87733d00fdefaec6e55d3b9a8a3d0aaf68d698e", alt = "Masala dosa folded over a potato filling, with curry leaves, on a dark plate" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -143,6 +157,9 @@ prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 image = { file = "01a188e6-a845-7924-9cb5-dc4f1fd58989.webp", sha256 = "2da6208c02ed92c3ca723bf665d55c060bc7986c49a636bd08a17318da4c301d", alt = "Crisp plain dosa folded in half on a grey plate" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["crispy", "light"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -169,6 +186,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a188e6-a847-798f-86de-7eb83bd2dc75.webp", sha256 = "c1ef84689a1fe8400ea7b8e19ec5d8f629dce80ac61320cfa33f005478e4437c", alt = "Rava dosa with curry leaves and coriander, folded" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["crispy"]
+also_known_as = ["sooji dosa"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "rice-flour", amount = 0.5, unit = "cup" },
@@ -199,6 +220,9 @@ name = "Onion rava dosa"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "rice-flour", amount = 0.5, unit = "cup" },
@@ -231,6 +255,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },
@@ -257,6 +284,9 @@ prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a188e6-a84e-70a4-8c8d-c3da512978e1.webp", sha256 = "b3d6f8e98dcfcb92cd20d7d87e984b3df3bddd4ec11d5463f37d161b9c43cfec", alt = "Three folded neer dosas" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -282,6 +312,10 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 300, note = "soak for 5 hours" }
 image = { file = "01a188e6-a850-7e21-876b-7a364dca12e0.webp", sha256 = "5df60f7c06d5644aa912ff92d3feace855b3cb1bcaaacd863be4652f245fd053", alt = "Pesarattu, green gram dosa with onion and coriander, folded" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["moong dal dosa"]
 ingredients = [
   { id = "mung-beans", amount = 1, unit = "cup" },
   { id = "rice", amount = 2, unit = "tbsp" },
@@ -312,6 +346,10 @@ prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a188e6-a852-7c61-8e2e-397362b11e41.webp", sha256 = "f741483054e17c8e4b949105f625ce017a5c7ae5d40f254057238de666783a47", alt = "Crisp golden adai folded in half, flecked with onion and curry leaf" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "hearty"]
+also_known_as = ["adai dosa"]
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -345,6 +383,9 @@ prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 image = { file = "01a188e6-a855-71ed-9bfc-0c9d642f82e1.webp", sha256 = "a0f273453e6b6375033eb70671cf875e669d5627f8f7560fdef499cc04177d23", alt = "Uttapam topped with onion, green chilli and coriander" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury"]
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -374,6 +415,9 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 image = { file = "01a188e6-a857-74b4-8d83-ccabe430c05c.webp", sha256 = "145de0cd0202bf7d224cdd2ef7411ee05fffba6dc057318ac9b0438689bdd75f", alt = "Onion tomato uttapam with green chillies and idli podi" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "tangy"]
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -405,6 +449,10 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 600, note = "soak, then ferment for 6 hours" }
 image = { file = "01a188e6-a859-75ba-bfec-282fbe3f42b8.webp", sha256 = "7536862bf072a586f861784e5b2bd9a499f2507b5e7f8b465387dd443c868a55", alt = "Appam with a lacy crisp edge and a soft, spongy centre" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light", "sweet"]
+also_known_as = ["palappam"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -431,6 +479,10 @@ name = "Idiyappam"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light"]
+also_known_as = ["string hoppers"]
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -454,6 +506,9 @@ name = "Puttu"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light"]
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -477,6 +532,11 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a188e6-a860-7ddd-8d31-de266d80a111.webp", sha256 = "32f19445850361d1f42d9e4d8c2b6bcd0ed86b40498860a652156ba9d7abd0b1", alt = "Three golden medu vadas on a dark plate" }
+cuisine = "south-indian"
+courses = ["breakfast", "snacks-starters"]
+moods = ["crispy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["ulundu vadai"]
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },
@@ -507,6 +567,11 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
 image = { file = "01a188e6-a862-77f5-8644-a458d0be7b23.webp", sha256 = "152571d82e6cdeebc4d5ecc9627d92d93ce99b62506c03b0259833cae737c08d", alt = "A stack of crisp masala vada" }
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["paruppu vadai"]
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -536,6 +601,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a188e6-a864-7350-92f2-cb841fdb02cd.webp", sha256 = "66e6bfb990b28a33075e724ac27e7acf1f9b49b05a08e644ba14ccb904e4c015", alt = "Vegetable upma with carrot, beans and peas" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -571,6 +639,9 @@ name = "Semiya upma"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "indian-vermicelli", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -605,6 +676,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a188e6-a869-79bd-883f-ce5dd2b6e770.webp", sha256 = "c1abb33cebe454266f5f2f4b7274009a8424692581ccf7b25536b7385d49baf3", alt = "Ven pongal with cashews, curry leaves and black pepper" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["comforting", "creamy"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["khara pongal"]
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "moong-dal", amount = 0.25, unit = "cup" },
@@ -634,6 +710,10 @@ name = "Sakkarai pongal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+also_known_as = ["sweet pongal", "chakkara pongal"]
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "moong-dal", amount = 2, unit = "tbsp" },
@@ -662,6 +742,10 @@ name = "Lemon sevai"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["tangy", "light"]
+also_known_as = ["lemon idiyappam"]
 ingredients = [
   { id = "rice-vermicelli", amount = 200, unit = "g" },
   { id = "lemon", amount = 1, unit = "medium" },
@@ -696,6 +780,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a188e6-a870-77c2-b879-2d807d10a1c0.webp", sha256 = "16d9819185dbbc839b218ff208fbcecfeef40882c2827465648ce75e22f79964", alt = "Round akki roti with grated carrot and herbs and a hole in the middle" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury"]
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -725,6 +812,10 @@ name = "Ragi dosa"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["light"]
+also_known_as = ["nachni dosa"]
 ingredients = [
   { id = "finger-millet-flour", amount = 1, unit = "cup" },
   { id = "rice-flour", amount = 0.25, unit = "cup" },
@@ -754,6 +845,10 @@ name = "Ragi mudde"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["light"]
+also_known_as = ["ragi ball"]
 ingredients = [
   { id = "finger-millet-flour", amount = 1, unit = "cup" },
   { id = "ghee", amount = 1, unit = "tsp" },
@@ -775,6 +870,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a188e6-a876-76dc-8d69-967f75dfca00.webp", sha256 = "d075e8b8fabed0cfc9e80bec8b44bc5bd920867955dc3a08a72fd931bdfcdbbd", alt = "Four potato bondas, one broken open" }
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["aloo bonda"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -810,6 +910,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "rest the batter for 2 hours" }
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -841,6 +945,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 plan_ahead = { wait_minutes = 480, note = "rest the dough for 8 hours" }
+cuisine = "south-indian"
+courses = ["breakfast", "snacks-starters"]
+moods = ["sweet"]
+also_known_as = ["banana buns"]
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -869,6 +977,10 @@ prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
 image = { file = "01a188e6-a87d-7334-8571-e2e0502c93a3.webp", sha256 = "c5797ad3d9807ae3a6a1f4c703d6262bb10670655c8e69b1f4b44247caee4626", alt = "Paniyaram with onion and green chilli, one cut open" }
+cuisine = "south-indian"
+courses = ["breakfast", "snacks-starters"]
+moods = ["crispy", "savoury"]
+also_known_as = ["paddu"]
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -901,6 +1013,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 840, note = "soak and ferment overnight" }
+cuisine = "south-indian"
+courses = ["desserts", "snacks-starters"]
+moods = ["sweet"]
+also_known_as = ["sweet paniyaram"]
 ingredients = [
   { id = "idli-rice", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },
@@ -930,6 +1046,9 @@ name = "Kothu parotta"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "egg", amount = 3, unit = "piece" },
@@ -964,6 +1083,10 @@ serves = 4
 prep_minutes = 40
 cook_minutes = 30
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["crispy"]
+also_known_as = ["kerala parotta"]
 ingredients = [
   { id = "all-purpose-flour", amount = 3, unit = "cup" },
   { id = "milk", amount = 0.5, unit = "cup" },

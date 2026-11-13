@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 40
 image = { file = "01a15175-3c13-7e43-b346-d7c2279e5e6b.webp", sha256 = "80487b096cbcc278d9733734b2dcc305aa8947e699e2977f6396864a090a68c7", alt = "Rice kheer in a small bowl" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy", "comforting"]
+also_known_as = ["chawal ki kheer"]
 ingredients = [
   { id = "rice", amount = 50, unit = "g" },
   { id = "milk", amount = 1, unit = "l" },
@@ -34,6 +38,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 0
 image = { file = "01a15175-3c26-7418-8595-c4174264ab0c.webp", sha256 = "b9eb7c17953582364e9b2421e08d2f806310b11e0f0b65716bf0845784ab723a", alt = "Cucumber raita with coriander" }
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["creamy", "fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["kheera raita"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -56,6 +65,11 @@ serves = 2
 prep_minutes = 2
 cook_minutes = 8
 image = { file = "01a15175-3c27-73b4-819d-e09422b77b02.webp", sha256 = "ccf0a0dbf136d16c31d5db6f9041d0bcd7049459db72660fae1f6099df0f9e5c", alt = "Glass of masala chai" }
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["spicy", "comforting"]
+weather = ["rainy-day-cosy", "warming", "grey-gloomy"]
+also_known_as = ["chai"]
 ingredients = [
   { id = "black-tea", amount = 2, unit = "tsp" },
   { id = "milk", amount = 1, unit = "cup" },
@@ -80,6 +94,11 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 0
 image = { file = "01a15175-3c2a-7329-8454-367648dbe421.webp", sha256 = "cc002d870009febff6b2b8dd54e3897828812787d948bffb1cbfc4407e918441", alt = "Glass of nimbu pani over ice" }
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["tangy", "fresh-herby"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["shikanji"]
 ingredients = [
   { id = "lemon", amount = 3, unit = "piece" },
   { id = "sugar", amount = 4, unit = "tbsp" },
@@ -99,6 +118,11 @@ name = "Kachumber salad"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["salads", "sides"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["cool-down"]
+also_known_as = ["kachumber"]
 ingredients = [
   { id = "tomato", amount = 2, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -120,6 +144,10 @@ name = "Boondi raita"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["creamy", "light"]
+weather = ["cool-down"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "boondi", amount = 0.5, unit = "cup" },
@@ -144,6 +172,10 @@ name = "Mint chutney"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["fresh-herby", "tangy", "spicy"]
+also_known_as = ["pudina chutney", "green chutney"]
 ingredients = [
   { id = "mint", amount = 1, unit = "cup" },
   { id = "coriander-leaves", amount = 1, unit = "cup" },
@@ -170,6 +202,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 20
 image = { file = "01a188e4-2cd7-70b5-a340-42122d9c8976.webp", sha256 = "d119a80074310c59bc992bc100afeb537471c8aec996d5a650abcdf1c9bf268c", alt = "Bowl of glossy tamarind and date chutney" }
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["sweet-sour"]
+also_known_as = ["tamarind chutney", "saunth"]
 ingredients = [
   { id = "tamarind", amount = 100, unit = "g" },
   { id = "jaggery", amount = 150, unit = "g" },
@@ -198,6 +234,10 @@ name = "Laccha onion"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
+also_known_as = ["lachha pyaz", "onion salad"]
 ingredients = [
   { id = "onion", amount = 2, unit = "medium" },
   { id = "lemon", amount = 1, unit = "medium" },
@@ -221,6 +261,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 60
 image = { file = "01a188e4-2cdc-7ae1-bc1a-736d9a9a15de.webp", sha256 = "fea67c15329737de7e0030cb6bc73f89ccd6561ceac24661836c0159225e451f", alt = "Gajar ka halwa in a small bowl, topped with cashews, almonds and raisins" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy", "comforting"]
+weather = ["warming", "cosy-night-in"]
+also_known_as = ["gajar halwa", "carrot halwa"]
 ingredients = [
   { id = "carrot", amount = 1, unit = "kg" },
   { id = "milk", amount = 1, unit = "l" },
@@ -249,6 +294,10 @@ name = "Sooji halwa"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+also_known_as = ["suji halwa", "rava sheera"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "ghee", amount = 0.25, unit = "cup" },
@@ -273,6 +322,11 @@ name = "Atta halwa"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+weather = ["warming"]
+also_known_as = ["kada prasad"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
   { id = "ghee", amount = 0.5, unit = "cup" },
@@ -298,6 +352,10 @@ prep_minutes = 10
 cook_minutes = 50
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a188e4-2ce2-77ff-91f5-6fed7d3942ac.webp", sha256 = "279f0fa34f9fc025e6ccd16e47983d4d38d9202c4f0f333fdb878a7095a81aae", alt = "Moong dal halwa with chopped almonds and pistachios" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+weather = ["warming"]
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ghee", amount = 0.75, unit = "cup" },
@@ -326,6 +384,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 25
 image = { file = "01a188e4-2ce4-7a9d-99e3-c9ea4874d83d.webp", sha256 = "8db9493326c244cc6f11de467e480f77f7bad7ec189f6d6ea4d925ffe0d8ce0e", alt = "Seviyan kheer with raisins, almonds and pistachios" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["vermicelli kheer"]
 ingredients = [
   { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -354,6 +416,11 @@ prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
 image = { file = "01a188e4-2ce7-716c-a39c-43b7362fb938.webp", sha256 = "7e22f460c84f4012c85fbb30b1c31a7644a486e6039e89e1fb2cd072ef311b55", alt = "Phirni in a clay bowl with sliced pistachios and almonds" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
+also_known_as = ["firni"]
 ingredients = [
   { id = "basmati-rice", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -381,6 +448,10 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 60, note = "soak in syrup for 1 hour" }
 image = { file = "01a188e4-2ce9-7b4e-b35a-8e2b508762c7.webp", sha256 = "1c5c5a6827bfbd214ed59b92595b2648ac07af3c443f25e7f54ed5d1b409d498", alt = "Three gulab jamun in syrup in a dark bowl, with cardamom pods beside it" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+also_known_as = ["gulab jamoon"]
 ingredients = [
   { id = "khoa", amount = 200, unit = "g" },
   { id = "all-purpose-flour", amount = 3, unit = "tbsp" },
@@ -410,6 +481,11 @@ prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 image = { file = "01a188e4-2ceb-7bac-ac78-07969f759c5d.webp", sha256 = "18a29c09b39c4913cd02184f52db22663b0046839e63b3b744b482b6b78bc726", alt = "Rasmalai in saffron milk with sliced pistachios and almonds" }
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
+also_known_as = ["ras malai"]
 ingredients = [
   { id = "milk", amount = 2, unit = "l" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -439,6 +515,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 image = { file = "01a188e4-2ced-7b2c-9667-2223c028ec69.webp", sha256 = "c89ada5d0d656a320c19b33d7adec9c7740d4bbcece20840baf350e93245f5db", alt = "Shahi tukda, fried bread in rabri with sliced pistachios and almonds" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["shahi tukra"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "ghee", amount = 4, unit = "tbsp" },
@@ -467,6 +547,10 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a188e4-2cef-7334-bc68-2b38530a9c1e.webp", sha256 = "a07fc62713fa2131b5898d46c23e62fb4268809a0376bc8c1af37d6a1dc13003", alt = "Besan ladoo, golden gram flour sweet balls with almond bits" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["besan laddu"]
 ingredients = [
   { id = "gram-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 0.75, unit = "cup" },
@@ -491,6 +575,11 @@ prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 360, note = "freeze for 6 hours" }
 image = { file = "01a188e4-2cf2-76e3-83a6-1b56e3117e9a.webp", sha256 = "13d05fc661add485d3734743dfab129b3d0e78ad4c584929a024a854d32ab506", alt = "Two cone shaped kulfis" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["malai kulfi"]
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "condensed-milk", amount = 0.5, unit = "cup" },
@@ -514,6 +603,11 @@ name = "Lassi"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["creamy", "tangy"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["salted lassi", "namkeen lassi"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "sugar", amount = 3, unit = "tbsp" },
@@ -534,6 +628,11 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 0
 image = { file = "01a188e4-2cf6-7b18-9459-f97d106e2641.webp", sha256 = "474c9bb784da8aedd2ce4237d8060fffb2b40d93bb4eba44639f860680b7b63f", alt = "Tall glass of mango lassi with a mint leaf on top" }
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["aam lassi"]
 ingredients = [
   { id = "mango", amount = 1, unit = "large" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -554,6 +653,11 @@ name = "Jaljeera"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["tangy", "spicy", "fresh-herby"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["jal jeera"]
 ingredients = [
   { id = "mint", amount = 0.5, unit = "cup" },
   { id = "coriander-leaves", amount = 0.25, unit = "cup" },
@@ -581,6 +685,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 10
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "almonds", amount = 30, unit = "g" },
