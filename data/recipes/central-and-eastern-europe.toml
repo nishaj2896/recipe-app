@@ -12,6 +12,11 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 140
 image = { file = "01a18c4f-8e37-7126-acc4-b385b93d789a.webp", sha256 = "9fb5125bb9290ac6b5c9c8ff47b59a53948efc3efe363b173a086d50e8645bb9", alt = "Goulash with beef, potato, bell pepper and carrot" }
+cuisine = "european"
+courses = ["mains", "soups"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["gulyas", "hungarian goulash"]
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -46,6 +51,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 55
 image = { file = "01a18c4f-8e3a-7063-b073-a7536c40ab46.webp", sha256 = "1f07477169582b737d0d19b7cae60c2825ae83e65a1b414fbbf85373eb775e63", alt = "Chicken paprikash, chicken thighs in a creamy paprika sauce" }
+cuisine = "european"
+courses = ["mains"]
+moods = ["creamy", "spicy", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["paprikash"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -78,6 +88,10 @@ serves = 4
 prep_minutes = 60
 cook_minutes = 50
 image = { file = "01a18c4f-8e3d-7b71-8c32-bf5237331077.webp", sha256 = "2587417ea2174bc1cfe5f76b211fb7cb9e7e9e047d1a60c8291d4894cc6cef7d", alt = "Pierogi pan-fried and topped with onions" }
+cuisine = "european"
+courses = ["mains", "snacks-starters"]
+moods = ["savoury", "comforting"]
+also_known_as = ["pierogies", "perogies"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "egg", amount = 1, unit = "large" },
@@ -109,6 +123,11 @@ serves = 6
 prep_minutes = 25
 cook_minutes = 50
 image = { file = "01a18c4f-8e3f-75c2-bb6a-2fea6fbd422c.webp", sha256 = "74257aba2ae88aae00f83c794a605b4656e034e8aa8d8d32c25d9c0c164f676d", alt = "Borscht, beetroot soup with sour cream and dill" }
+cuisine = "european"
+courses = ["soups"]
+moods = ["tangy", "sweet", "comforting"]
+weather = ["grey-gloomy"]
+also_known_as = ["borsch", "beetroot soup"]
 ingredients = [
   { id = "beetroot", amount = 4, unit = "medium" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -144,6 +163,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18c4f-8e41-773d-81a2-1f6f4e80757a.webp", sha256 = "766433f2b4018a110f99c8730f8a548ecbee59bbaccda9de4e1e214d7846809d", alt = "Beef stroganoff with mushrooms in a sour cream sauce" }
+cuisine = "european"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["stroganoff"]
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -175,6 +199,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 image = { file = "01a18c4f-8e43-75c6-8647-fe98c8b15ce7.webp", sha256 = "05dd7870b1ed69302072e73e7396f059053bee24dbce0be2e3e21fbef6fbe855", alt = "Crumbed pork schnitzel with lemon wedges" }
+cuisine = "european"
+courses = ["mains"]
+moods = ["crispy", "savoury"]
+also_known_as = ["wiener schnitzel"]
 ingredients = [
   { id = "pork", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -202,6 +230,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18c4f-8e46-7171-8c13-0f42282cc945.webp", sha256 = "2445e4b8700b7d1e33b188dd6f1dc021a3170693345d25443928d716e602db24", alt = "Crisp potato latkes with a dollop of sour cream" }
+cuisine = "european"
+courses = ["snacks-starters", "sides"]
+moods = ["crispy", "savoury"]
+also_known_as = ["potato latkes", "potato pancakes"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -229,6 +261,11 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 30
 image = { file = "01a18c4f-8e48-703e-851e-ecff58525a98.webp", sha256 = "2d0bde7348cdb628ef39d24ff71cc1f06b5e1011a2802dd02e52f7b7e6b17c14", alt = "Swedish meatballs in a cream gravy with cranberry sauce" }
+cuisine = "european"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["kottbullar"]
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "breadcrumbs", amount = 0.5, unit = "cup" },
@@ -263,6 +300,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c4f-8e4a-7da0-a168-9785b5513199.webp", sha256 = "c529d32955b88f92e43eb55317e3b21053bb07e030af0e73c011b569cb9365de", alt = "Kasespatzle with melted cheese, fried onions and chives" }
+cuisine = "european"
+courses = ["mains"]
+moods = ["creamy", "savoury", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["kaesespaetzle", "spaetzle", "cheese spaetzle"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },
@@ -292,6 +334,11 @@ name = "Cabbage rolls"
 serves = 6
 prep_minutes = 40
 cook_minutes = 80
+cuisine = "european"
+courses = ["mains"]
+moods = ["savoury", "tangy", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["golabki", "stuffed cabbage"]
 ingredients = [
   { id = "cabbage", amount = 1, unit = "small-head" },
   { id = "beef-mince", amount = 500, unit = "g" },
@@ -326,6 +373,11 @@ serves = 8
 prep_minutes = 40
 cook_minutes = 45
 image = { file = "01a18c4f-8e4f-7cd9-b9c2-69653c3ea757.webp", sha256 = "7c462cccdd07eb7392f1bf346d22ff8d65487292acc1815da26f7ccf43d11091", alt = "Apple strudel cut open to show the apple, raisin and walnut filling, dusted with icing sugar" }
+cuisine = "european"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["apfelstrudel", "strudel"]
 ingredients = [
   { id = "filo-pastry", amount = 250, unit = "g" },
   { id = "apple", amount = 5, unit = "medium" },

@@ -12,6 +12,10 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 5
 image = { file = "01a15175-3c16-7eb1-a711-d43ee35c650f.webp", sha256 = "2d48b994891b674190149d39c7eedd3711f1b0fa5bafe6a01853a74cde34e5e3", alt = "Folded masala omelette with onion, tomato and green chilli" }
+cuisine = "north-indian"
+courses = ["breakfast"]
+moods = ["spicy", "savoury"]
+also_known_as = ["masala omelet", "anda omelette"]
 ingredients = [
   { id = "egg", amount = 4, unit = "piece" },
   { id = "onion", amount = 1, unit = "small" },
@@ -38,6 +42,10 @@ name = "Egg bhurji"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "north-indian"
+courses = ["breakfast", "mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["anda bhurji"]
 ingredients = [
   { id = "egg", amount = 4, unit = "piece" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -64,6 +72,10 @@ name = "Boiled egg masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["egg masala", "anda masala"]
 ingredients = [
   { id = "egg", amount = 6, unit = "large" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -97,6 +109,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18ba9-fdcf-7494-8971-ff09fa0f75b5.webp", sha256 = "56718ff19c40c14abe97087ab4f43169c58f20cbfa95bdfde9a523d616c7f790", alt = "Anda paratha with egg, onion and green chilli, one quarter folded back" }
+cuisine = "north-indian"
+courses = ["breakfast"]
+moods = ["savoury", "hearty"]
+also_known_as = ["egg paratha"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },
@@ -125,6 +141,10 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 15
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "crispy"]
+also_known_as = ["muttai dosa"]
 ingredients = [
   { id = "egg", amount = 2, unit = "large" },
   { id = "onion", amount = 1, unit = "small" },
@@ -152,6 +172,10 @@ name = "Egg kothu parotta"
 serves = 3
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["mains", "snacks-starters"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["kottu"]
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "egg", amount = 3, unit = "large" },
@@ -183,6 +207,9 @@ name = "Bread omelette"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "street-food"
+courses = ["breakfast", "snacks-starters"]
+moods = ["savoury"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "egg", amount = 3, unit = "large" },
@@ -210,6 +237,9 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18ba9-fdd8-7039-8578-97176286baee.webp", sha256 = "e16455d58f5734601e60f61de4a8738797a08b86785fa523ac0ae47935f24442", alt = "Masala toast cut in half to show potato filling and green chutney" }
+cuisine = "street-food"
+courses = ["snacks-starters", "breakfast"]
+moods = ["spicy", "savoury", "crispy"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -238,6 +268,10 @@ name = "Vegetable sandwich (Bombay)"
 serves = 2
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "street-food"
+courses = ["snacks-starters", "breakfast"]
+moods = ["fresh-herby", "tangy", "savoury"]
+also_known_as = ["bombay sandwich", "veg sandwich"]
 ingredients = [
   { id = "white-bread", amount = 6, unit = "slice" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -265,6 +299,10 @@ name = "Cheese chilli toast"
 serves = 2
 prep_minutes = 10
 cook_minutes = 10
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["spicy", "creamy", "savoury"]
+also_known_as = ["chilli cheese toast"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "processed-cheese", amount = 1, unit = "cup" },
@@ -289,6 +327,11 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 10
 image = { file = "01a18ba9-fdde-7758-a877-11da4a8efe71.webp", sha256 = "c8b9d036f3d72b0aa3f399904eb6dae13bffe84b56b0b2a46e22e28c689b6365", alt = "Masala instant noodles with peas, tomato and green chillies" }
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury", "comforting"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["maggi"]
 ingredients = [
   { id = "instant-noodles", amount = 2, unit = "piece" },
   { id = "onion", amount = 1, unit = "small" },
@@ -312,6 +355,10 @@ name = "Vermicelli upma"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["seviyan upma"]
 ingredients = [
   { id = "indian-vermicelli", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -343,6 +390,9 @@ name = "Oats upma"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "rolled-oats", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "small" },
@@ -373,6 +423,10 @@ name = "Oats chilla"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "north-indian"
+courses = ["breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["oats cheela"]
 ingredients = [
   { id = "rolled-oats", amount = 1, unit = "cup" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -401,6 +455,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a18ba9-fde7-700d-907b-733f5b8e95ad.webp", sha256 = "a5e2fdb6e8945145096e6830489ad3f89bfb057ae58a9192b87e461010ec34c7", alt = "Three poha cutlets with carrot and peas" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "flattened-rice", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -429,6 +486,11 @@ name = "Vegetable cutlet"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["veg cutlet"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -461,6 +523,10 @@ name = "Paneer kathi roll"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "street-food"
+courses = ["snacks-starters", "mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["paneer roll", "paneer kati roll"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -492,6 +558,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18ba9-fdee-7581-95ec-b06f1bf9bfde.webp", sha256 = "3b798bf83aeb9587ce735b8a209c76004b6b099fa06e15c8278eca7b9a5eb297", alt = "Rava dhokla squares with a mustard seed and curry leaf tempering" }
+cuisine = "west-indian"
+courses = ["snacks-starters", "breakfast"]
+moods = ["savoury", "tangy", "light"]
+also_known_as = ["sooji dhokla", "suji dhokla"]
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -520,6 +590,10 @@ name = "Banana sheera"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+cuisine = "west-indian"
+courses = ["desserts", "breakfast"]
+moods = ["sweet", "comforting"]
+also_known_as = ["kela sheera"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "banana", amount = 1, unit = "medium" },
@@ -543,6 +617,10 @@ name = "Sweet lassi"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down", "sticky-sluggish"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "sugar", amount = 3, unit = "tbsp" },
@@ -562,6 +640,11 @@ name = "Ginger lemon tea"
 serves = 2
 prep_minutes = 5
 cook_minutes = 6
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["fresh-herby", "tangy"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["adrak nimbu chai"]
 ingredients = [
   { id = "water", amount = 2, unit = "cup" },
   { id = "ginger", amount = 1, unit = "piece" },
@@ -584,6 +667,11 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 8
 image = { file = "01a18bae-8f42-72fb-a65a-1d1bbd822900.webp", sha256 = "a3d021ab5d4e47e99628e33652fd8a022da220d383d2af8eeff68901f8f8878c", alt = "Glass mug of turmeric milk" }
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["comforting", "creamy"]
+weather = ["under-the-weather", "cosy-night-in"]
+also_known_as = ["turmeric milk", "golden milk"]
 ingredients = [
   { id = "milk", amount = 2, unit = "cup" },
   { id = "turmeric", amount = 0.5, unit = "tsp" },
@@ -606,6 +694,11 @@ name = "Kokum sharbat"
 serves = 4
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "west-indian"
+courses = ["drinks"]
+moods = ["tangy", "sweet"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["kokum juice"]
 ingredients = [
   { id = "kokum", amount = 12, unit = "piece" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -627,6 +720,11 @@ name = "Aam panna"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["tangy", "sweet", "fresh-herby"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["aam ka panna", "raw mango drink"]
 ingredients = [
   { id = "raw-mango", amount = 2, unit = "medium" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -649,6 +747,10 @@ name = "Rose milk"
 serves = 3
 prep_minutes = 5
 cook_minutes = 0
+cuisine = "south-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
 ingredients = [
   { id = "milk", amount = 3, unit = "cup" },
   { id = "rose-syrup", amount = 4, unit = "tbsp" },
@@ -666,6 +768,11 @@ name = "Badam milk"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["warming", "cosy-night-in"]
+also_known_as = ["badam doodh"]
 ingredients = [
   { id = "almonds", amount = 20, unit = "piece" },
   { id = "milk", amount = 3, unit = "cup" },
@@ -688,6 +795,11 @@ name = "Cold coffee"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["iced coffee"]
 ingredients = [
   { id = "instant-coffee", amount = 2, unit = "tsp" },
   { id = "sugar", amount = 3, unit = "tbsp" },
@@ -706,6 +818,11 @@ name = "Kesar pista milk"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "north-indian"
+courses = ["drinks"]
+moods = ["sweet", "creamy"]
+weather = ["cosy-night-in"]
+also_known_as = ["kesar doodh", "saffron milk"]
 ingredients = [
   { id = "milk", amount = 3, unit = "cup" },
   { id = "saffron", amount = 1, unit = "pinch" },

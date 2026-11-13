@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18b6c-22fb-7037-a86e-1fd6c219f189.webp", sha256 = "ac9a6f898abfb1a02707e9eae18c4b05ae833117ca2f92c38c1ec6eb6f6fbdbe", alt = "Machher jhol: rohu steaks and potato in a light turmeric broth with coriander" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["savoury", "light", "comforting"]
+also_known_as = ["macher jhol", "fish jhol"]
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -48,6 +52,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a18b6c-22fe-7801-9a85-873df71cd0c8.webp", sha256 = "a881aae1a438f1d8d72eb4f69ccb8e4ee1f678ee0d932ef058781ec5f0783b11", alt = "Shorshe ilish, hilsa steaks in a yellow mustard gravy with green chillies and nigella seeds" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["sorshe ilish", "hilsa in mustard"]
 ingredients = [
   { id = "hilsa", amount = 500, unit = "g" },
   { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
@@ -76,6 +85,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18b6c-2300-7327-91a9-05d6034fc8e1.webp", sha256 = "b57de405d380988aa771534d85f0a8860e3a1ac2e417e8ec7760745cef07a8d5", alt = "Doi maach, rohu fish in a pale curd gravy with whole spices" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["creamy", "tangy", "savoury"]
+also_known_as = ["doi mach", "fish in yogurt"]
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -112,6 +125,10 @@ name = "Chingri malai curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet", "savoury"]
+also_known_as = ["chingri malaikari"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -148,6 +165,10 @@ name = "Bhetki paturi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "smoky"]
+also_known_as = ["fish paturi"]
 ingredients = [
   { id = "barramundi", amount = 500, unit = "g" },
   { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
@@ -176,6 +197,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18b6c-2307-7f62-8244-d19b5f6f2f0e.webp", sha256 = "b0fff0012d591bdc0e22ca79652df046b8eee83a94289626a86d75beadf13812", alt = "Fish kalia, rohu steaks in a deep orange-red gravy" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["macher kalia"]
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -216,6 +241,11 @@ prep_minutes = 20
 cook_minutes = 100
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18b6c-2309-7c0e-a805-0e6fbbaf3fd7.webp", sha256 = "9ba701078625ce14cb2dd93f0be765ac8271565728de739f1d7f0f15b05662c7", alt = "Kosha mangsho, Bengali mutton with potatoes in a dark gravy" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["bengali mutton curry"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -255,6 +285,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 45
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
+also_known_as = ["rezala"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -293,6 +327,10 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 80
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+cuisine = "east-indian"
+courses = ["rice-breads", "mains"]
+moods = ["savoury", "hearty", "comforting"]
+also_known_as = ["calcutta biryani", "kolkata biriyani"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -337,6 +375,10 @@ name = "Aloo posto"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["savoury", "comforting"]
+also_known_as = ["alu posto", "potato in poppy seed"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "poppy-seeds", amount = 0.25, unit = "cup" },
@@ -364,6 +406,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 30
 image = { file = "01a18b6c-2312-71f3-9a20-bd2fa3610ad1.webp", sha256 = "d170ad0293c56da5908348974a3803471662b90be24ec36442d28d598eb31836", alt = "Shukto, Bengali vegetable stew with bitter gourd and drumstick" }
+cuisine = "east-indian"
+courses = ["sides", "mains"]
+moods = ["savoury", "light"]
+also_known_as = ["sukto"]
 ingredients = [
   { id = "bitter-gourd", amount = 1, unit = "small" },
   { id = "raw-banana", amount = 1, unit = "medium" },
@@ -400,6 +446,10 @@ name = "Begun bhaja"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["crispy", "savoury"]
+also_known_as = ["baingan bhaja", "fried brinjal"]
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "turmeric", amount = 0.5, unit = "tsp" },
@@ -423,6 +473,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 45
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["sweet", "savoury", "comforting"]
+also_known_as = ["chholar dal"]
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -457,6 +511,10 @@ name = "Moong dal (Bengali)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "light"]
+also_known_as = ["bengali moong dal", "mug dal"]
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "tomato", amount = 1, unit = "small" },
@@ -488,6 +546,9 @@ prep_minutes = 20
 cook_minutes = 45
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a18b6c-231b-7ab1-bf8c-b0dea015ec9f.webp", sha256 = "72151863f420996f58206e587a89242b1dbef8e007620ffacad2a3f125e08c04", alt = "Dhokar dalna, diamond-shaped lentil cakes in a tomato and potato gravy" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["savoury", "spicy", "comforting"]
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -526,6 +587,10 @@ name = "Chhanar dalna"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "comforting"]
+also_known_as = ["chhena dalna"]
 ingredients = [
   { id = "chhena", amount = 250, unit = "g" },
   { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
@@ -562,6 +627,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+cuisine = "east-indian"
+courses = ["snacks-starters", "mains"]
+moods = ["spicy", "tangy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["ghoogni"]
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -598,6 +668,11 @@ name = "Jhalmuri"
 serves = 2
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "east-indian"
+courses = ["snacks-starters"]
+moods = ["spicy", "tangy", "crispy"]
+weather = ["rainy-day-cosy", "breezy-evening"]
+also_known_as = ["jhal muri"]
 ingredients = [
   { id = "puffed-rice", amount = 3, unit = "cup" },
   { id = "onion", amount = 1, unit = "small" },
@@ -627,6 +702,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 image = { file = "01a18b6e-647d-7e64-8d07-9f5e19ad4398.webp", sha256 = "54ed54ce5f00294bca8b47716953bb48fd7b7e15178fef1192a90f861dcf93b3", alt = "Stack of three puffed white luchi" }
+cuisine = "east-indian"
+courses = ["rice-breads"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },
@@ -649,6 +727,10 @@ name = "Aloo dum (Bengali)"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "comforting"]
+also_known_as = ["alur dom", "aloo dum"]
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -684,6 +766,10 @@ name = "Kolkata egg roll"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["savoury", "spicy"]
+also_known_as = ["egg roll"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },
@@ -716,6 +802,10 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18b6e-6485-7005-bfca-5c9f8d7f87c6.webp", sha256 = "1a34e75f019fc2d4b2d8d331bd3ee102217b9625d5ae4db7b727eae0b0a7fe52", alt = "Chicken kathi roll wrapped in paper, cut in half" }
+cuisine = "street-food"
+courses = ["snacks-starters", "mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["chicken kathi roll", "kati roll"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -750,6 +840,11 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 600, note = "set the curd for 8 hours" }
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
+also_known_as = ["mishti dahi", "sweet yogurt"]
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -773,6 +868,11 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 40
 image = { file = "01a18b6e-6489-7a5b-af0c-fb5a0bfccff6.webp", sha256 = "b1fcb64eed648997322cfbd14916a38ec7610f706fddc6fed72692a969a3131c", alt = "Rosogolla, soft white milk-curd balls in a shallow dish" }
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+weather = ["cool-down"]
+also_known_as = ["rasgulla", "rasagola"]
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "lemon", amount = 1, unit = "medium" },
@@ -797,6 +897,10 @@ serves = 10
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18b6e-648b-7dd2-a446-dc613b1b9aa3.webp", sha256 = "b75783d7388a01e9e77b4139c298af84e9a6a612d6dd784f9f63cc6124d47217", alt = "Four sandesh, each with a sliver of pistachio" }
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["sondesh"]
 ingredients = [
   { id = "milk", amount = 1, unit = "l" },
   { id = "lemon", amount = 1, unit = "medium" },
@@ -822,6 +926,10 @@ name = "Payesh"
 serves = 6
 prep_minutes = 5
 cook_minutes = 60
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy", "comforting"]
+also_known_as = ["bengali kheer"]
 ingredients = [
   { id = "gobindobhog-rice", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 1.5, unit = "l" },
@@ -846,6 +954,10 @@ name = "Dalma (Odisha)"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "light"]
+also_known_as = ["dalma"]
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "raw-banana", amount = 1, unit = "small" },
@@ -880,6 +992,11 @@ prep_minutes = 10
 cook_minutes = 0
 plan_ahead = { wait_minutes = 480, note = "ferment the rice overnight" }
 image = { file = "01a18b6e-6492-7b61-aed4-3332d9ef6f29.webp", sha256 = "56592b44cf23c4748b29a9c4e0b59dd610f9227067f3454fc1872ca247b8fc51", alt = "Pakhala bhata, fermented rice in water with a tempering and mint" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["tangy", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["pakhala", "panta bhat"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -909,6 +1026,10 @@ name = "Chhena poda"
 serves = 8
 prep_minutes = 20
 cook_minutes = 60
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "smoky"]
+also_known_as = ["chenna poda"]
 ingredients = [
   { id = "chhena", amount = 500, unit = "g" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -932,6 +1053,10 @@ name = "Machha besara"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["macha besara"]
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
@@ -961,6 +1086,10 @@ name = "Santula"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["light", "savoury"]
+weather = ["under-the-weather"]
 ingredients = [
   { id = "potato", amount = 1, unit = "medium" },
   { id = "raw-banana", amount = 1, unit = "small" },
@@ -991,6 +1120,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 50
 image = { file = "01a18b6e-649b-7949-a6c1-be44149c2c9e.webp", sha256 = "aa140af163ba3e235a09b82138523fc5ffdec4102ec6c4983c0c5b9dc3615601", alt = "Litti with ghee, served with brinjal and potato chokha" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["smoky", "savoury", "hearty"]
+also_known_as = ["litti"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "sattu", amount = 1, unit = "cup" },
@@ -1027,6 +1160,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18b6e-649e-7e36-907d-c3796584d6af.webp", sha256 = "2d06aaffc11e928738220521e9f34b0467238d9a64e7f811d8d5fb89cc5891ee", alt = "Sattu paratha cut open to show the filling" }
+cuisine = "east-indian"
+courses = ["rice-breads", "breakfast"]
+moods = ["savoury", "spicy", "hearty"]
+also_known_as = ["sattu ki roti"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "sattu", amount = 1, unit = "cup" },
@@ -1058,6 +1195,10 @@ name = "Aloo bhujia (Bihar)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["savoury", "spicy"]
+also_known_as = ["aloo bhujiya"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "green-chillies", amount = 2, unit = "piece" },
@@ -1083,6 +1224,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 90
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["ahuna mutton", "handi meat"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1121,6 +1267,10 @@ name = "Thekua"
 serves = 12
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "east-indian"
+courses = ["desserts", "snacks-starters"]
+moods = ["sweet", "crispy"]
+also_known_as = ["khajuria"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "jaggery", amount = 0.5, unit = "cup" },
@@ -1148,6 +1298,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18b6e-64a8-71cd-a507-dcb7db5575c4.webp", sha256 = "170ec7fa3861a2c58b9272fbaaa5dd79c0bbe67c381b8b020e9a29aab5199192", alt = "Assamese fish tenga, fish in a light tangy tomato broth with green chillies" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["tangy", "light"]
+also_known_as = ["fish tenga"]
 ingredients = [
   { id = "catla", amount = 500, unit = "g" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -1176,6 +1330,10 @@ name = "Masor tenga"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["tangy", "light"]
+also_known_as = ["assamese sour fish curry"]
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "raw-mango", amount = 1, unit = "small" },
@@ -1203,6 +1361,10 @@ name = "Aloo pitika"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["savoury", "comforting"]
+also_known_as = ["alu pitika"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "onion", amount = 1, unit = "small" },
@@ -1224,6 +1386,9 @@ name = "Khar"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "east-indian"
+courses = ["sides", "mains"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "raw-papaya", amount = 1, unit = "small" },
   { id = "moong-dal", amount = 0.25, unit = "cup" },
@@ -1251,6 +1416,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 90
 image = { file = "01a18b6e-64b1-7a0b-9f3c-66585ce83261.webp", sha256 = "2c20cd973ba3fe04dd190c910256fb62a4f4c425f5204ffb62cd9dee3e4e5c81", alt = "Assamese duck curry with ash gourd in a dark gravy" }
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["haah mangxo"]
 ingredients = [
   { id = "duck", amount = 1, unit = "kg" },
   { id = "ash-gourd", amount = 300, unit = "g" },
@@ -1285,6 +1455,9 @@ name = "Pork with bamboo shoot"
 serves = 4
 prep_minutes = 15
 cook_minutes = 70
+cuisine = "east-indian"
+courses = ["mains"]
+moods = ["savoury", "tangy", "spicy"]
 ingredients = [
   { id = "pork-belly", amount = 500, unit = "g" },
   { id = "bamboo-shoots", amount = 1, unit = "cup" },
@@ -1313,6 +1486,11 @@ serves = 4
 prep_minutes = 40
 cook_minutes = 15
 image = { file = "01a18b6e-64b7-7b9a-b499-16796ab1c345.webp", sha256 = "3b42a281b3b089960650f82ee18e3558532e795a65a94817208dd47993769ef7", alt = "Steamed vegetable momos, one opened to show the filling" }
+cuisine = "east-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["veg momos"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "cabbage", amount = 2, unit = "cup" },
@@ -1343,6 +1521,11 @@ name = "Momos (chicken)"
 serves = 4
 prep_minutes = 40
 cook_minutes = 15
+cuisine = "east-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["chicken momos"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "chicken-mince", amount = 300, unit = "g" },
@@ -1372,6 +1555,10 @@ name = "Thukpa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "east-indian"
+courses = ["soups", "mains"]
+moods = ["savoury", "comforting", "spicy"]
+weather = ["rainy-day-cosy", "cosy-night-in", "under-the-weather"]
 ingredients = [
   { id = "egg-noodles", amount = 200, unit = "g" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -1406,6 +1593,10 @@ name = "Shapale"
 serves = 4
 prep_minutes = 30
 cook_minutes = 20
+cuisine = "east-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "crispy"]
+also_known_as = ["sha phaley"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "beef-mince", amount = 300, unit = "g" },
@@ -1437,6 +1628,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18b6e-64c0-7c14-9e8e-8bddf2c10f9c.webp", sha256 = "da9685d850740f9851501446764efb55f807d098f8c38de966c3a303aa303e73", alt = "Eromba, mashed potato, beans and pumpkin with spring onion and coriander" }
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["spicy", "savoury"]
+also_known_as = ["iromba"]
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "french-beans", amount = 10, unit = "piece" },
@@ -1464,6 +1659,9 @@ name = "Jadoh"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+cuisine = "east-indian"
+courses = ["rice-breads", "mains"]
+moods = ["savoury", "hearty"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "pork", amount = 400, unit = "g" },
@@ -1495,6 +1693,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["black rice kheer", "chakhao kheer"]
 ingredients = [
   { id = "black-rice", amount = 0.33, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -1518,6 +1720,9 @@ serves = 8
 prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 4500, note = "pickle for 3 days" }
+cuisine = "east-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "bamboo-shoots", amount = 2, unit = "cup" },
   { id = "mustard-oil", amount = 0.5, unit = "cup" },

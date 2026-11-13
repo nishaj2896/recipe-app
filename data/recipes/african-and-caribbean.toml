@@ -12,6 +12,10 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 50
 image = { file = "01a18c4a-5f8e-7c60-acaf-8a4fe25a35f2.webp", sha256 = "ddd4927dfb547f528bbe512cde77f1b3c20b0fefab71a1721e18b02327750c06", alt = "Jollof rice in a tomato and pepper sauce" }
+cuisine = "african-caribbean"
+courses = ["mains", "rice-breads"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["jollof", "jolof rice"]
 ingredients = [
   { id = "parboiled-rice", amount = 2, unit = "cup" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -47,6 +51,10 @@ prep_minutes = 20
 cook_minutes = 50
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18c4a-5f90-7c75-81a5-7add2dad1f6f.webp", sha256 = "f0ea65d630ac673027d9bd69192427ace328cd8f1dc41b0ed008ea2ef3dc661c", alt = "Chicken yassa with caramelised onions, green olives and a bay leaf" }
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["tangy", "savoury", "comforting"]
+also_known_as = ["poulet yassa", "yassa"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 4, unit = "large" },
@@ -77,6 +85,10 @@ name = "Bobotie"
 serves = 6
 prep_minutes = 20
 cook_minutes = 55
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["savoury", "sweet", "comforting"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -109,6 +121,11 @@ name = "Bunny chow"
 serves = 4
 prep_minutes = 20
 cook_minutes = 90
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["spicy", "hearty", "comforting"]
+weather = ["warming"]
+also_known_as = ["bunny curry"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -145,6 +162,11 @@ prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18c4a-5f97-7a26-8dd0-5204054b53a1.webp", sha256 = "a8e5333e9229a9b0e551937ef8c2f6865fcd5eb52d9022ac115f0d8c158befcc", alt = "Charred peri peri chicken with lemon wedges" }
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["spicy", "smoky", "tangy"]
+weather = ["breezy-evening"]
+also_known_as = ["piri piri chicken"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "birds-eye-chillies", amount = 6, unit = "piece" },
@@ -171,6 +193,11 @@ name = "Doro wat"
 serves = 4
 prep_minutes = 20
 cook_minutes = 90
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["warming", "cosy-night-in"]
+also_known_as = ["doro wot", "doro wet"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 4, unit = "large" },
@@ -200,6 +227,11 @@ name = "Misir wot"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["warming"]
+also_known_as = ["misir wat", "red lentil wot"]
 ingredients = [
   { id = "masoor-dal", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -226,6 +258,11 @@ name = "Suya"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "african-caribbean"
+courses = ["snacks-starters"]
+moods = ["spicy", "smoky", "savoury"]
+weather = ["breezy-evening"]
+also_known_as = ["beef suya"]
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "peanuts", amount = 0.5, unit = "cup" },
@@ -256,6 +293,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a18c4a-5fa1-7e18-b603-388db5e762a7.webp", sha256 = "5ab2db88ee371e695db275cb83736b36fa6baa5ff74702b17ea1a892cb5e5f4c", alt = "Githeri, sweetcorn and kidney beans in a tomato stew with coriander" }
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
 ingredients = [
   { id = "sweetcorn", amount = 2, unit = "cup" },
   { id = "kidney-beans", amount = 1, unit = "can" },
@@ -283,6 +323,9 @@ name = "Chakalaka"
 serves = 6
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "african-caribbean"
+courses = ["sides"]
+moods = ["spicy", "tangy", "savoury"]
 ingredients = [
   { id = "onion", amount = 1, unit = "large" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -311,6 +354,11 @@ name = "Groundnut stew"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["creamy", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["peanut stew", "maafe", "mafe"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "peanut-butter", amount = 0.5, unit = "cup" },
@@ -343,6 +391,10 @@ prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 image = { file = "01a18c4a-5fa8-7cf2-b166-0d8dcc87af9a.webp", sha256 = "5a8eb8518dedd93d2a765529d04f6c78fadf6209ccff7647689c5c05df701496", alt = "Charred jerk chicken with lime wedges" }
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["spicy", "smoky", "savoury"]
+weather = ["breezy-evening"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "jerk-seasoning", amount = 3, unit = "tbsp" },
@@ -369,6 +421,9 @@ name = "Rice and peas"
 serves = 6
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "african-caribbean"
+courses = ["rice-breads", "sides"]
+moods = ["savoury", "creamy", "comforting"]
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "kidney-beans", amount = 1, unit = "can" },
@@ -398,6 +453,11 @@ prep_minutes = 20
 cook_minutes = 135
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18c4a-5fac-7f0e-bbdc-0fe2ceaa316a.webp", sha256 = "96b5e617bcbd96d870e7dfcddd9ebf83e678f5e29308e4d0229faf7a6eb8a57f", alt = "Curry goat with bone-in mutton and potato in a yellow gravy" }
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["goat curry"]
 ingredients = [
   { id = "mutton", amount = 1.2, unit = "kg" },
   { id = "curry-powder", amount = 3, unit = "tbsp" },
@@ -430,6 +490,9 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+cuisine = "african-caribbean"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury", "comforting"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -462,6 +525,10 @@ name = "Brown stew chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+cuisine = "african-caribbean"
+courses = ["mains"]
+moods = ["savoury", "sweet", "comforting"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "brown-sugar", amount = 2, unit = "tbsp" },
@@ -495,6 +562,10 @@ name = "Fried plantains"
 serves = 4
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "african-caribbean"
+courses = ["sides", "snacks-starters"]
+moods = ["sweet", "crispy"]
+also_known_as = ["plantain"]
 ingredients = [
   { id = "raw-banana", amount = 3, unit = "large" },
   { id = "oil", amount = 0.5, unit = "cup" },

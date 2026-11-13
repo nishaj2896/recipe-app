@@ -12,6 +12,11 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 20
 image = { file = "01a15175-3c22-7b07-abf6-87ad9705c184.webp", sha256 = "49a9a64f79180cdc1c58fe33f104a9fc3fd6ca33ad82c8f105d77b59f37b68fb", alt = "Macaroni and cheese in a dark bowl" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["creamy", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["mac and cheese", "mac n cheese"]
 ingredients = [
   { id = "pasta", amount = 300, unit = "g" },
   { id = "cheddar", amount = 200, unit = "g" },
@@ -38,6 +43,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 10
 image = { file = "01a18c1e-2c18-7153-810a-f7fcdbe62089.webp", sha256 = "f8c12bfe8cf4e004f9b2691fe8fdebf20d98fb594ec70b46c2cf1a83d11ec16a", alt = "Classic cheeseburger with lettuce, tomato, onion and gherkins" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "hearty"]
+also_known_as = ["cheeseburger", "burger"]
 ingredients = [
   { id = "beef-mince", amount = 600, unit = "g" },
   { id = "burger-buns", amount = 4, unit = "piece" },
@@ -71,6 +80,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18c1e-2c1b-7471-85fe-d890bb9e9534.webp", sha256 = "e53be62c9c27cbb0b28cd86ed6e324a9f4badf310a60b9e8c69dde700435df82", alt = "Chickpea veggie burger with lettuce and tomato" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "hearty"]
+also_known_as = ["vegetable burger"]
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "can" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -103,6 +116,11 @@ name = "Grilled cheese sandwich"
 serves = 1
 prep_minutes = 3
 cook_minutes = 8
+cuisine = "american-british"
+courses = ["snacks-starters", "breakfast"]
+moods = ["savoury", "creamy", "comforting"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["cheese toastie", "grilled cheese"]
 ingredients = [
   { id = "white-bread", amount = 2, unit = "slice" },
   { id = "cheddar", amount = 0.75, unit = "cup" },
@@ -124,6 +142,9 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c1e-2c1f-7a26-a465-c9f9783f9425.webp", sha256 = "0af6ece96605a8939359e33abbd7b3a0684df4db9d5d0ca9b763fe7cd461cbf7", alt = "Club sandwich with chicken, bacon, lettuce and tomato, cut in quarters" }
+cuisine = "american-british"
+courses = ["snacks-starters"]
+moods = ["savoury", "hearty"]
 ingredients = [
   { id = "white-bread", amount = 6, unit = "slice" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -150,6 +171,10 @@ name = "BLT"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "american-british"
+courses = ["snacks-starters", "breakfast"]
+moods = ["savoury", "crispy"]
+also_known_as = ["bacon lettuce tomato sandwich"]
 ingredients = [
   { id = "bacon", amount = 6, unit = "slice" },
   { id = "lettuce", amount = 4, unit = "leaf" },
@@ -175,6 +200,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 50
 image = { file = "01a18c1e-2c23-72f6-82d2-c21de41d22ab.webp", sha256 = "a5c1945c14530ff17cf41146a13f4659ec80352ecd6ff6694f6d9e21c6d5e291", alt = "Buffalo chicken wings with blue cheese dip, celery and carrot sticks" }
+cuisine = "american-british"
+courses = ["snacks-starters"]
+moods = ["spicy", "tangy", "savoury"]
+also_known_as = ["buffalo wings", "hot wings"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "baking-powder", amount = 1, unit = "tbsp" },
@@ -206,6 +235,11 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 image = { file = "01a18c1e-2c26-7602-b476-32b344331bf7.webp", sha256 = "c443f86a106bc8ecbd1941d0b154af25147aefa7d34e6567e8f2d67d816cb712", alt = "Two pieces of crisp fried chicken" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["crispy", "savoury", "hearty"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["southern fried chicken"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "buttermilk", amount = 2, unit = "cup" },
@@ -235,6 +269,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 image = { file = "01a18c1e-2c28-7f4b-8261-947820124c97.webp", sha256 = "14e91ccdcca74abf2d476a9e3bcf0f0f72299dbda6f25c5396c7abe0287374bd", alt = "Barbecue pulled chicken in a toasted bun" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["smoky", "sweet", "savoury"]
+also_known_as = ["bbq pulled chicken", "pulled chicken"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "barbecue-sauce", amount = 0.75, unit = "cup" },
@@ -264,6 +302,10 @@ name = "Meatloaf"
 serves = 6
 prep_minutes = 15
 cook_minutes = 65
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "beef-mince", amount = 900, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -297,6 +339,10 @@ serves = 6
 prep_minutes = 25
 cook_minutes = 55
 image = { file = "01a18c1e-2c2c-712e-adff-f0ebcb7aebfe.webp", sha256 = "5e22cccb87fe7a9864a8ff3b43b98b02aed0b0548ae17b85e09234000b34e77b", alt = "Chicken pot pie with a puff pastry lid cut open to show the filling" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["creamy", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "puff-pastry", amount = 320, unit = "g" },
@@ -330,6 +376,11 @@ serves = 6
 prep_minutes = 25
 cook_minutes = 75
 image = { file = "01a18c1e-2c2e-7fff-847b-aa6cc5b2c8a5.webp", sha256 = "92d3ea696010a5c58334b8c0055aa21db5eeb027a3e3de1bce3e7955710ba2a4", alt = "Shepherd's pie with browned mash over a lamb, carrot and pea filling" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["shepherds pie"]
 ingredients = [
   { id = "lamb-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -365,6 +416,10 @@ name = "Cottage pie"
 serves = 6
 prep_minutes = 25
 cook_minutes = 75
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -402,6 +457,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 35
 image = { file = "01a18c1e-2c33-789b-8049-74cd10b23778.webp", sha256 = "dc221df3c731778305560946f2a168c7f700c0e33340ca291a14e18a60e5ceae", alt = "Battered fish with thick chips, tartare sauce and a lemon wedge" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["crispy", "savoury", "hearty"]
+also_known_as = ["fish n chips"]
 ingredients = [
   { id = "cod", amount = 4, unit = "piece" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -431,6 +490,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c1e-2c35-7b45-ac27-4a7522d2376a.webp", sha256 = "f868062ada4964f4fd455a8ea4a500a0a2834a27f092dcd6b49e5b8754851780", alt = "Sausages on mashed potato with onion gravy" }
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["sausage and mash"]
 ingredients = [
   { id = "sausages", amount = 8, unit = "piece" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -460,6 +524,10 @@ name = "Full English breakfast"
 serves = 2
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["savoury", "hearty"]
+also_known_as = ["fry up", "english breakfast"]
 ingredients = [
   { id = "sausages", amount = 4, unit = "piece" },
   { id = "bacon", amount = 4, unit = "slice" },
@@ -489,6 +557,9 @@ name = "Beans on toast"
 serves = 2
 prep_minutes = 3
 cook_minutes = 7
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["savoury", "comforting"]
 ingredients = [
   { id = "baked-beans", amount = 1, unit = "can" },
   { id = "sourdough", amount = 2, unit = "slice" },
@@ -511,6 +582,11 @@ name = "Jacket potato with beans and cheese"
 serves = 2
 prep_minutes = 5
 cook_minutes = 75
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["grey-gloomy"]
+also_known_as = ["baked potato"]
 ingredients = [
   { id = "potato", amount = 2, unit = "large" },
   { id = "baked-beans", amount = 1, unit = "can" },
@@ -536,6 +612,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c1e-2c3e-7307-b37a-a3756c335821.webp", sha256 = "cad31e5fc759e04c62381a6c43f0d83bea48dc0efab370c20e6ab19eb56b5914", alt = "Chicken noodle soup with carrot, celery and parsley" }
+cuisine = "american-british"
+courses = ["soups"]
+moods = ["savoury", "comforting", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg-noodles", amount = 150, unit = "g" },
@@ -568,6 +648,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 40
 image = { file = "01a18c1e-2c40-75e0-8eba-f1c31a55564e.webp", sha256 = "c1811b49d396c83f98704b8cca2a2850c4d54f510f397ddaa3ebf6f220b67a4a", alt = "Clam chowder with potato and crisp bacon" }
+cuisine = "american-british"
+courses = ["soups"]
+moods = ["creamy", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["new england clam chowder"]
 ingredients = [
   { id = "clams", amount = 1, unit = "kg" },
   { id = "bacon", amount = 4, unit = "slice" },
@@ -600,6 +685,10 @@ name = "Corn chowder"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "american-british"
+courses = ["soups"]
+moods = ["creamy", "comforting", "sweet"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
 ingredients = [
   { id = "sweetcorn", amount = 3, unit = "cup" },
   { id = "potato", amount = 400, unit = "g" },
@@ -631,6 +720,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 10
 image = { file = "01a18c1e-2c45-70d5-872a-680de59f4bec.webp", sha256 = "8b975d980aa42330b543dfe6f16bbb0c7dd859ae8b99d8f25ad05923b8464558", alt = "Caesar salad of little gem leaves with croutons, parmesan shavings and anchovies" }
+cuisine = "american-british"
+courses = ["salads"]
+moods = ["savoury", "fresh-herby", "crispy"]
 ingredients = [
   { id = "lettuce", amount = 2, unit = "small-head" },
   { id = "parmesan", amount = 0.75, unit = "cup" },
@@ -661,6 +753,9 @@ name = "Cobb salad"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "american-british"
+courses = ["salads"]
+moods = ["savoury", "hearty"]
 ingredients = [
   { id = "lettuce", amount = 1, unit = "small-head" },
   { id = "chicken", amount = 400, unit = "g" },
@@ -694,6 +789,10 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 0
 image = { file = "01a18c1e-2c49-7734-b225-6ad66cd5966a.webp", sha256 = "e8582d3ed5e2af068da3417e1dbccbba80b2ca6b8dd294f824dfe97ab158898f", alt = "Bowl of creamy coleslaw with red and white cabbage and carrot" }
+cuisine = "american-british"
+courses = ["sides", "salads"]
+moods = ["creamy", "tangy", "fresh-herby"]
+also_known_as = ["slaw"]
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "small-head" },
   { id = "red-cabbage", amount = 1, unit = "cup" },
@@ -720,6 +819,9 @@ name = "Potato salad"
 serves = 6
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "american-british"
+courses = ["sides", "salads"]
+moods = ["creamy", "tangy"]
 ingredients = [
   { id = "potato", amount = 1, unit = "kg" },
   { id = "mayonnaise", amount = 0.5, unit = "cup" },
@@ -747,6 +849,10 @@ name = "Sloppy joes"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "sweet", "comforting"]
+also_known_as = ["sloppy joe"]
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -779,6 +885,9 @@ prep_minutes = 25
 cook_minutes = 40
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18c1e-2c50-70ae-b308-15955fa8465d.webp", sha256 = "a34f935cdb04eea5b98e5dee99f14b6810b4cc3e7faf1f9c61f7671bd33bcbf0", alt = "Fried chicken on a waffle with spicy maple syrup" }
+cuisine = "american-british"
+courses = ["mains", "breakfast"]
+moods = ["savoury", "sweet", "crispy"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "buttermilk", amount = 1, unit = "cup" },
@@ -812,6 +921,9 @@ name = "Biscuits and gravy"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["savoury", "creamy", "comforting"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2.25, unit = "cup" },
   { id = "baking-powder", amount = 1, unit = "tbsp" },
@@ -839,6 +951,10 @@ name = "Cornbread"
 serves = 8
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "american-british"
+courses = ["sides", "rice-breads"]
+moods = ["sweet", "savoury"]
+also_known_as = ["corn bread"]
 ingredients = [
   { id = "cornmeal", amount = 1, unit = "cup" },
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
@@ -868,6 +984,10 @@ prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 120, note = "cool for 2 hours" }
 image = { file = "01a18c1e-2c57-7240-8e29-fc1b83b88212.webp", sha256 = "326ad003c0237903f2a31b348c621ba6d0c56fc739ef1f0472f3a1f98475387d", alt = "Slice of apple pie with a golden lattice-slit crust" }
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "shortcrust-pastry", amount = 640, unit = "g" },
   { id = "apple", amount = 6, unit = "medium" },
@@ -898,6 +1018,10 @@ serves = 12
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18c1e-2c59-7b08-9eaa-6c2b7e7344e9.webp", sha256 = "8b681498f3eecf3df7d9f088eb2b30e9ffb754972cbd52787bfc17d4f729748e", alt = "Two stacked chocolate brownies on a dark plate" }
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+also_known_as = ["chocolate brownies", "brownie"]
 ingredients = [
   { id = "dark-chocolate", amount = 200, unit = "g" },
   { id = "butter", amount = 0.75, unit = "cup" },
@@ -924,6 +1048,10 @@ serves = 12
 prep_minutes = 15
 cook_minutes = 12
 image = { file = "01a18c1e-2c5b-7243-93f9-c58258a88765.webp", sha256 = "6befc6bc994b6ffc89d5ea0625e5526a38af4b10ef3fc969f5eaa7a18a2c138e", alt = "Chocolate chip cookies, one broken open" }
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["choc chip cookies", "cookies"]
 ingredients = [
   { id = "butter", amount = 0.75, unit = "cup" },
   { id = "brown-sugar", amount = 0.75, unit = "cup" },
@@ -952,6 +1080,10 @@ serves = 10
 prep_minutes = 15
 cook_minutes = 60
 image = { file = "01a18c1e-2c5d-7a15-ad15-224d4e7b6b4a.webp", sha256 = "882f27eaa17e2c6b15e3579353093b9d4a0169972b3f527718b407a44f68af0c", alt = "A loaf of banana bread with two thick slices" }
+cuisine = "american-british"
+courses = ["desserts", "breakfast"]
+moods = ["sweet", "comforting"]
+also_known_as = ["banana cake"]
 ingredients = [
   { id = "banana", amount = 3, unit = "large" },
   { id = "butter", amount = 0.33, unit = "cup" },
@@ -980,6 +1112,10 @@ serves = 8
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c1e-2c60-7e3c-a1f5-02288ef083eb.webp", sha256 = "0947c25e9c2676a7d1936e90bc17ed1ab06889333fac73518caec8ef47684874", alt = "Scones, one split with jam and whipped cream" }
+cuisine = "american-british"
+courses = ["desserts", "breakfast"]
+moods = ["sweet", "savoury"]
+also_known_as = ["scone"]
 ingredients = [
   { id = "self-raising-flour", amount = 2, unit = "cup" },
   { id = "baking-powder", amount = 1, unit = "tsp" },
@@ -1007,6 +1143,10 @@ name = "Sticky toffee pudding"
 serves = 8
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+weather = ["cosy-night-in", "grey-gloomy"]
 ingredients = [
   { id = "dates", amount = 1, unit = "cup" },
   { id = "baking-soda", amount = 1, unit = "tsp" },

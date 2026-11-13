@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18bba-785c-7cb8-834d-24e0197260c4.webp", sha256 = "39f3ec2b9fa611f7722f649534e71cef98a2863315cd991ececeb763de8707f9", alt = "Kung pao chicken with peanuts, dried chillies and spring onion" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["spicy", "savoury", "sweet"]
+also_known_as = ["gong bao chicken", "kung po chicken"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.5, unit = "cup" },
@@ -47,6 +51,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a18bba-785e-7793-8335-d5dc9b148364.webp", sha256 = "42a24861351b31d95da17589f6db19424817e7bb0d2df009617925ccd7263fa3", alt = "Mapo tofu with beef mince and spring onions in a chilli sauce" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+weather = ["warming"]
+also_known_as = ["ma po tofu"]
 ingredients = [
   { id = "silken-tofu", amount = 400, unit = "g" },
   { id = "beef-mince", amount = 150, unit = "g" },
@@ -79,6 +88,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18bba-7860-7ecc-b429-d4ea871652b1.webp", sha256 = "ea2ce788a20672be99dbb9ba9d65281ef29af4801d18af07471889c1e3f1a6ed", alt = "Sweet and sour chicken with pineapple, bell pepper and onion" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["sweet-sour", "crispy"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -113,6 +125,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18bba-7862-7210-821e-6abaa08ba499.webp", sha256 = "3205abacc7798ee830bc07744475c8bc53049d79228692a51deaa6f1bad3a4b6", alt = "Sweet and sour pork with pineapple, red pepper and onion" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["sweet-sour", "crispy"]
+also_known_as = ["gu lao rou"]
 ingredients = [
   { id = "pork", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -148,6 +164,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18bba-7864-7566-a0af-e8db965d1e38.webp", sha256 = "dcdee7154c127585ee9e4b2d67de4d8f2cce6d3a5c7da57f2dbc301407b58522", alt = "Beef and broccoli in a glossy dark sauce" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury"]
 ingredients = [
   { id = "beef", amount = 400, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -181,6 +200,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18bba-7867-75c3-afd9-3f677a5b2c4b.webp", sha256 = "fa1f2bae0d29b69990b512cc8fe969ef23869f8d9c92c4955e13a2bbb7f79559", alt = "Chicken chow mein with cabbage, carrot, bean sprouts and spring onions" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury"]
+also_known_as = ["chowmein"]
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -213,6 +236,9 @@ name = "Lo mein"
 serves = 4
 prep_minutes = 15
 cook_minutes = 12
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury"]
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "mushroom", amount = 150, unit = "g" },
@@ -246,6 +272,10 @@ name = "Yangzhou fried rice"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "chinese"
+courses = ["rice-breads", "mains"]
+moods = ["savoury"]
+also_known_as = ["yeung chow fried rice", "special fried rice"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "prawns", amount = 200, unit = "g" },
@@ -277,6 +307,11 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 12
 image = { file = "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399.webp", sha256 = "0442d628849a9b845326e2ff29e07697763d719cb6417c139b2f40953cb55cc1", alt = "Egg drop soup with sesame oil and spring onion" }
+cuisine = "chinese"
+courses = ["soups"]
+moods = ["savoury", "light", "comforting"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["egg flower soup"]
 ingredients = [
   { id = "chicken-stock", amount = 5, unit = "cup" },
   { id = "egg", amount = 3, unit = "large" },
@@ -305,6 +340,11 @@ serves = 4
 prep_minutes = 40
 cook_minutes = 15
 image = { file = "01a18c0c-0c86-76cd-838f-e85d444f482c.webp", sha256 = "4bd56f5f9d1943c0edf36834ff3dc9cbed456332d2e3c33aff27b2c28c2931b9", alt = "Wonton soup with prawn and pork wontons, bok choy and spring onions" }
+cuisine = "chinese"
+courses = ["soups"]
+moods = ["savoury", "comforting", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["wanton soup"]
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 250, unit = "g" },
@@ -336,6 +376,10 @@ serves = 4
 prep_minutes = 45
 cook_minutes = 15
 image = { file = "01a18c0c-0c89-764f-8418-92103561610f.webp", sha256 = "d5f6e43f23503835e237215a60aa8aed4ccc380b3e5792ab80551cdcb6082515", alt = "Steamed pork dumplings with a black vinegar and chilli oil dip" }
+cuisine = "chinese"
+courses = ["snacks-starters"]
+moods = ["savoury"]
+also_known_as = ["siu mai", "shumai"]
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 300, unit = "g" },
@@ -365,6 +409,10 @@ name = "Pan-fried potstickers"
 serves = 4
 prep_minutes = 45
 cook_minutes = 20
+cuisine = "chinese"
+courses = ["snacks-starters"]
+moods = ["savoury", "crispy"]
+also_known_as = ["potstickers", "guo tie"]
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 300, unit = "g" },
@@ -398,6 +446,10 @@ prep_minutes = 15
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 image = { file = "01a18c0c-0c8d-7a83-a7e3-2c0d7c110e37.webp", sha256 = "2314339530e2199a012120ab4161ccb5c53f3f8a8bce9f7c840eba7340173997", alt = "Sliced char siu pork with a sticky red glaze" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["sweet", "smoky", "savoury"]
+also_known_as = ["char siu", "chinese bbq pork"]
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "hoisin-sauce", amount = 3, unit = "tbsp" },
@@ -426,6 +478,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c0c-0c90-7f6e-b008-450543d82631.webp", sha256 = "bf47c35945181cebe383f39e11f5a695a25bfe42646f98389312fb49f624a5cc", alt = "Dan dan noodles with pork, bok choy, peanuts and spring onions" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+weather = ["warming"]
+also_known_as = ["dandan noodles"]
 ingredients = [
   { id = "egg-noodles", amount = 400, unit = "g" },
   { id = "pork", amount = 200, unit = "g" },
@@ -458,6 +515,10 @@ name = "Scallion pancakes"
 serves = 4
 prep_minutes = 30
 cook_minutes = 20
+cuisine = "chinese"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+also_known_as = ["cong you bing", "spring onion pancakes"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "spring-onions", amount = 6, unit = "piece" },
@@ -481,6 +542,10 @@ name = "Tomato and egg stir-fry"
 serves = 2
 prep_minutes = 5
 cook_minutes = 8
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury", "tangy", "comforting"]
+also_known_as = ["tomato egg"]
 ingredients = [
   { id = "tomato", amount = 3, unit = "medium" },
   { id = "egg", amount = 4, unit = "large" },
@@ -506,6 +571,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 5
 image = { file = "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6.webp", sha256 = "135100e6c470153ff06a321701def343ca99764c3a994b1eb18d87f35bb3ecf4", alt = "Halved bok choy in a garlic and oyster sauce" }
+cuisine = "chinese"
+courses = ["sides"]
+moods = ["savoury", "fresh-herby", "light"]
+also_known_as = ["bok choy"]
 ingredients = [
   { id = "bok-choy", amount = 6, unit = "piece" },
   { id = "garlic", amount = 5, unit = "clove" },
@@ -529,6 +598,10 @@ name = "Dry-fried green beans"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "chinese"
+courses = ["sides"]
+moods = ["spicy", "savoury"]
+also_known_as = ["sichuan green beans"]
 ingredients = [
   { id = "french-beans", amount = 400, unit = "g" },
   { id = "pork", amount = 100, unit = "g" },
@@ -557,6 +630,11 @@ name = "Hong shao rou"
 serves = 4
 prep_minutes = 15
 cook_minutes = 90
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["sweet", "savoury", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["red braised pork"]
 ingredients = [
   { id = "pork-belly", amount = 750, unit = "g" },
   { id = "rock-sugar", amount = 2, unit = "tbsp" },
@@ -587,6 +665,10 @@ name = "Ginger scallion fish"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["fresh-herby", "light", "savoury"]
+also_known_as = ["steamed fish"]
 ingredients = [
   { id = "barramundi", amount = 2, unit = "piece" },
   { id = "ginger", amount = 1, unit = "piece" },
@@ -614,6 +696,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 12
 image = { file = "01a18c0c-0c9f-7f13-9754-6d27f3c0efaf.webp", sha256 = "6271cc44082b6bde7d82923ec4bbb48a60f68e28d807148e29a68b6037329dc1", alt = "Cashew chicken with red bell pepper and onion in a brown sauce" }
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury", "sweet"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "cashews", amount = 0.75, unit = "cup" },
@@ -645,6 +730,9 @@ name = "Orange chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["sweet-sour", "crispy"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "orange", amount = 2, unit = "medium" },
@@ -676,6 +764,11 @@ name = "Congee"
 serves = 4
 prep_minutes = 10
 cook_minutes = 75
+cuisine = "chinese"
+courses = ["breakfast", "mains"]
+moods = ["comforting", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["jook", "rice porridge"]
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -702,6 +795,10 @@ name = "Chinese steamed egg"
 serves = 2
 prep_minutes = 5
 cook_minutes = 12
+cuisine = "chinese"
+courses = ["sides"]
+moods = ["light", "savoury"]
+also_known_as = ["steamed egg custard"]
 ingredients = [
   { id = "egg", amount = 3, unit = "large" },
   { id = "soy-sauce", amount = 1, unit = "tbsp" },
@@ -724,6 +821,11 @@ name = "Sesame noodles"
 serves = 4
 prep_minutes = 10
 cook_minutes = 10
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["savoury", "creamy"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["cold sesame noodles"]
 ingredients = [
   { id = "egg-noodles", amount = 400, unit = "g" },
   { id = "tahini", amount = 3, unit = "tbsp" },
