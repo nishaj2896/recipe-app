@@ -267,3 +267,12 @@ def test_two_recipes_may_not_share_an_alias() -> None:
         f"recipe 'Bharli vangi' ({OTHER_ID}): also_known_as 'stuffed-brinjal' is "
         "also an alias of 'Aloo matar'"
     ]
+
+
+def test_one_recipe_may_not_carry_two_aliases_that_fold_together() -> None:
+    problems = parse(recipe_table(also_known_as=["stuffed brinjal", "stuffed-brinjal"]))
+
+    assert problems == [
+        f"recipe 'Aloo matar' ({RECIPE_ID}): also_known_as 'stuffed-brinjal' folds "
+        "to the same search key as another of its aliases"
+    ]

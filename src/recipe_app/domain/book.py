@@ -195,11 +195,18 @@ def _check_aliases(recipes: list[Recipe], problems: list[str]) -> None:
                 problems.append(
                     f"{where}: also_known_as {alias!r} is the name of {other}"
                 )
-            elif key in owners and owners[key] is not recipe:
-                problems.append(
-                    f"{where}: also_known_as {alias!r} is also an alias of "
-                    f"{owners[key].name!r}"
-                )
+            elif key in owners:
+                owner = owners[key]
+                if owner is recipe:
+                    problems.append(
+                        f"{where}: also_known_as {alias!r} folds to the same "
+                        "search key as another of its aliases"
+                    )
+                else:
+                    problems.append(
+                        f"{where}: also_known_as {alias!r} is also an alias of "
+                        f"{owner.name!r}"
+                    )
             owners.setdefault(key, recipe)
 
 
