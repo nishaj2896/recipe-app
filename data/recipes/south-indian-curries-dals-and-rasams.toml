@@ -50,7 +50,6 @@ image = { file = "01a15175-3c1d-7c1d-b8aa-d85e1a2b9630.webp", sha256 = "ce1c2ce8
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
-also_known_as = ["meen curry"]
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 400, unit = "ml" },

@@ -396,7 +396,7 @@ image = { file = "01a18bae-8f68-75e7-8972-d3050a4170c2.webp", sha256 = "f794d78d
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "comforting"]
-also_known_as = ["aloo ki sabzi", "rasedar aloo"]
+also_known_as = ["rasedar aloo"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "tomato", amount = 2, unit = "medium" },
