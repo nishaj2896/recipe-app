@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 0
 image = { file = "01a15175-3c25-7f40-bf4a-9042230e50c8.webp", sha256 = "b057d29311b8e6c1e6e440c69d9c8869f1e630efcf66e8d2329255654d5af709", alt = "Guacamole with tomato, onion and coriander in a stone bowl" }
+cuisine = "mexican-latin"
+courses = ["snacks-starters", "sides"]
+moods = ["creamy", "fresh-herby", "tangy"]
+also_known_as = ["guac"]
 ingredients = [
   { id = "avocado", amount = 2, unit = "large" },
   { id = "lime", amount = 1, unit = "piece" },
@@ -36,6 +40,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 0
 image = { file = "01a18c16-b1ba-71d5-a397-f131b301bc3c.webp", sha256 = "0ae14703424dca6328c3758b0c36cdbd735d70a5355c91be0637bfebc5a2fec2", alt = "Bowl of pico de gallo" }
+cuisine = "mexican-latin"
+courses = ["sides"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["cool-down"]
+also_known_as = ["salsa fresca"]
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "onion", amount = 0.5, unit = "medium" },
@@ -60,6 +69,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18c16-b1bc-7bbc-91a7-36928f0fe539.webp", sha256 = "d0d597274e0efbd1ca5f66c9460e5f7c9eab8734979375629f7f5ba6ccafd9e1", alt = "Chicken tacos with avocado, sour cream and coriander, with a lime wedge" }
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "corn-tortillas", amount = 12, unit = "piece" },
@@ -91,6 +103,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 10
 image = { file = "01a18c16-b1bf-7519-9fd0-abe8820a9743.webp", sha256 = "7c2c3239516fbca6f7dc5c183d618630f9cf7acb7a08b9eb8633189848c5d525", alt = "Three fish tacos with red cabbage, avocado, sauce and coriander, with lime wedges" }
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["fresh-herby", "savoury", "crispy"]
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "corn-tortillas", amount = 12, unit = "piece" },
@@ -122,6 +137,9 @@ name = "Bean and cheese burrito"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["savoury", "hearty"]
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "large" },
   { id = "pinto-beans", amount = 2, unit = "can" },
@@ -150,6 +168,10 @@ name = "Chicken burrito bowl"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["savoury", "spicy", "hearty"]
+also_known_as = ["burrito bowl"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "chicken", amount = 600, unit = "g" },
@@ -186,6 +208,9 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c16-b1c5-7f4d-8ead-a6d31cb5c333.webp", sha256 = "996a2aebf7874b6818936e7771163b2289745869d8ab0285efd9511e18e0a40e", alt = "Chicken quesadilla cut into wedges, showing cheese, chicken and peppers" }
+cuisine = "mexican-latin"
+courses = ["snacks-starters", "mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -215,6 +240,9 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 10
 image = { file = "01a18c16-b1c8-7dc9-abcd-f837e31826be.webp", sha256 = "69f1e40c8e898da01b8834621d885da8e7f265f4af12a06cab7caaf11cf3c5ba", alt = "Cheese quesadilla wedges with jalapenos, sour cream and salsa" }
+cuisine = "mexican-latin"
+courses = ["snacks-starters"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "cheddar", amount = 1, unit = "cup" },
@@ -240,6 +268,9 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 45
 image = { file = "01a18c16-b1ca-78fe-b3fe-a064097e22c9.webp", sha256 = "75d362482066b077f59f8e6ab0e9fbbc1abb777acfa54399a22c4965d54968f1", alt = "Chicken enchiladas baked with cheddar, topped with sour cream and coriander" }
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["spicy", "creamy", "savoury"]
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -273,6 +304,10 @@ name = "Vegetable enchiladas"
 serves = 4
 prep_minutes = 25
 cook_minutes = 40
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["spicy", "creamy", "savoury"]
+also_known_as = ["veg enchiladas"]
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "zucchini", amount = 1, unit = "medium" },
@@ -307,6 +342,9 @@ name = "Chilaquiles"
 serves = 2
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "mexican-latin"
+courses = ["breakfast"]
+moods = ["spicy", "savoury", "crispy"]
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "tomato", amount = 3, unit = "medium" },
@@ -337,6 +375,9 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18c16-b1d1-7a28-b9cf-eeaa18d43c95.webp", sha256 = "98e2b841bf81279b22c29858138bbc02e78821459950d3877ffbd1698adaeac9", alt = "Huevos rancheros, fried eggs on tortilla with black beans, tomato sauce, feta, avocado and coriander" }
+cuisine = "mexican-latin"
+courses = ["breakfast"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "corn-tortillas", amount = 4, unit = "piece" },
   { id = "egg", amount = 4, unit = "large" },
@@ -369,6 +410,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c16-b1d3-7e3e-863a-992cc0c6d5c8.webp", sha256 = "bd4ac9c84391991dc705b95dac902921e100434ba6fa10a174f05b17b55852fc", alt = "Chicken fajitas sizzling in a pan with tortillas, sour cream, avocado and coriander" }
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["smoky", "spicy", "savoury"]
+also_known_as = ["fajitas"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "bell-pepper", amount = 3, unit = "medium" },
@@ -402,6 +447,11 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 75
 image = { file = "01a18c16-b1d5-7f04-9135-65abc9fff371.webp", sha256 = "c00118f9017f8d3e63c8e556e2688259667014ef896af8e1b98b2c719a079ab0", alt = "Chilli con carne with kidney beans, bell pepper and sour cream" }
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["chili con carne"]
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -437,6 +487,11 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 50
 image = { file = "01a18c16-b1d7-7a3a-a3c6-acade1bb6015.webp", sha256 = "a0b0d4720fd30953fc28ade60bb37a9db751a8d67b281e06fbddd86a668d1d53", alt = "Vegetarian chilli with beans, sweet potato and coriander" }
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["veggie chili", "bean chilli"]
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "can" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -471,6 +526,10 @@ name = "Mexican rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "mexican-latin"
+courses = ["rice-breads", "sides"]
+moods = ["savoury"]
+also_known_as = ["spanish rice", "arroz rojo"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -499,6 +558,10 @@ name = "Refried beans"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+cuisine = "mexican-latin"
+courses = ["sides"]
+moods = ["savoury", "creamy", "comforting"]
+also_known_as = ["frijoles refritos"]
 ingredients = [
   { id = "pinto-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 0.5, unit = "medium" },
@@ -522,6 +585,10 @@ name = "Black bean soup"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "mexican-latin"
+courses = ["soups"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "black-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -553,6 +620,11 @@ name = "Elote"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+cuisine = "mexican-latin"
+courses = ["snacks-starters"]
+moods = ["smoky", "creamy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["mexican street corn"]
 ingredients = [
   { id = "corn-on-the-cob", amount = 4, unit = "piece" },
   { id = "butter", amount = 2, unit = "tbsp" },
@@ -578,6 +650,11 @@ name = "Tortilla soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "mexican-latin"
+courses = ["soups"]
+moods = ["spicy", "savoury", "comforting"]
+weather = ["under-the-weather"]
+also_known_as = ["sopa de tortilla"]
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "chicken-stock", amount = 5, unit = "cup" },
@@ -610,6 +687,11 @@ name = "Pozole"
 serves = 6
 prep_minutes = 20
 cook_minutes = 120
+cuisine = "mexican-latin"
+courses = ["soups", "mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["posole"]
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "hominy", amount = 2, unit = "can" },
@@ -640,6 +722,10 @@ name = "Arroz con pollo"
 serves = 4
 prep_minutes = 15
 cook_minutes = 50
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["chicken and rice"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -673,6 +759,10 @@ name = "Black beans and rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "mexican-latin"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["moros y cristianos"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -703,6 +793,10 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 45
 image = { file = "01a18c16-b1ec-76ee-b4de-eb918ca0f587.webp", sha256 = "36b710ed5fa776bd22e3219ec59007051378e39b4bac062cade8e9bccb949008", alt = "Baked beef empanadas, one broken open to show the filling" }
+cuisine = "mexican-latin"
+courses = ["snacks-starters"]
+moods = ["savoury", "crispy"]
+also_known_as = ["empanada"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "butter", amount = 0.5, unit = "cup" },
@@ -735,6 +829,10 @@ name = "Arepas"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "mexican-latin"
+courses = ["breakfast", "snacks-starters"]
+moods = ["savoury"]
+also_known_as = ["arepa"]
 ingredients = [
   { id = "precooked-cornmeal", amount = 2, unit = "cup" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -760,6 +858,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 0
 image = { file = "01a18c16-b1f0-7193-a3c6-cca15f0397f5.webp", sha256 = "eaecfef2c650b48aed0978b807325079bc54ae22865cb745a44f0274c1fed3f6", alt = "Ceviche of cod with red onion, tomato, jalapeno, avocado and coriander" }
+cuisine = "mexican-latin"
+courses = ["snacks-starters"]
+moods = ["tangy", "fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "lime", amount = 6, unit = "medium" },
@@ -786,6 +888,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a18c16-b1f2-74a5-b7e7-d9ff01095978.webp", sha256 = "474a5ebf4a38e2a48621ffa18dd42b353b11ee9cf01a024f5ba261a49f2787c5", alt = "Cinnamon sugar churros with a bowl of chocolate sauce" }
+cuisine = "mexican-latin"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["churro"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "butter", amount = 2, unit = "tbsp" },
@@ -816,6 +922,10 @@ prep_minutes = 20
 cook_minutes = 35
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 image = { file = "01a18c16-b1f5-73bb-948e-00616bf14b39.webp", sha256 = "62354441551220928d2a9ba2ce2e30f0368c19fd24e38642f1a4afde632c594c", alt = "A square of tres leches cake with whipped cream and cinnamon, in a pool of milk" }
+cuisine = "mexican-latin"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["tres leches"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "baking-powder", amount = 1.5, unit = "tsp" },

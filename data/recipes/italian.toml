@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a15175-3c20-7774-8764-e8cf6dcf654a.webp", sha256 = "57ed7b605b1ff13ea3b7efdd83829fabebfea34da342af165270412900e4ed7c", alt = "Spaghetti aglio e olio with sliced garlic, chilli flakes and parsley" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "spicy", "light"]
+also_known_as = ["aglio olio", "spaghetti aglio e olio"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "garlic", amount = 6, unit = "clove" },
@@ -39,6 +43,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 20
 image = { file = "01a15175-3c21-75ea-9433-d3744b9ac581.webp", sha256 = "378f0e04abfeef1a42158d39147616b43f5592b462d07218744cb036e4cc0167", alt = "Penne arrabbiata with basil" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["spicy", "tangy"]
+also_known_as = ["arrabiata", "penne arrabiata"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -66,6 +74,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a18bbd-3cd0-7bec-8c09-6e9f33e2d4d6.webp", sha256 = "6c097172c972ba4abddbee5b181fc8998ffad2777c5180c6311ee55db79d1840", alt = "Spaghetti carbonara twirled into a nest with crisp bacon, pecorino and black pepper" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+also_known_as = ["carbonara"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "bacon", amount = 150, unit = "g" },
@@ -93,6 +105,11 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 135
 image = { file = "01a18bbd-3cd2-7037-a970-caa33cd9c967.webp", sha256 = "53cc923d94a52cea555529b01b89c653134389a51f31a630e26c11f8d502501e", alt = "Spaghetti bolognese with grated parmesan" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["spag bol"]
 ingredients = [
   { id = "pasta", amount = 500, unit = "g" },
   { id = "beef-mince", amount = 500, unit = "g" },
@@ -128,6 +145,9 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a18bbd-3cd5-761a-ac0f-c9043cb35d5d.webp", sha256 = "ca51a0e512f96358ae2a6cc7a24ecd1f49be8a3716145cafbea4ef8cb2a2f5e2", alt = "Spaghetti cacio e pepe twirled into a nest with black pepper" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "pecorino", amount = 120, unit = "g" },
@@ -152,6 +172,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a18bbd-3cd7-7e67-9e8d-726ac0015cb9.webp", sha256 = "ab2b8be6864780bdb2c514af608074675f70a7ac24ab4ca3fe8af8af39e41401", alt = "Fettuccine alfredo with black pepper" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "comforting"]
+also_known_as = ["alfredo pasta", "white sauce pasta"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "butter", amount = 6, unit = "tbsp" },
@@ -176,6 +200,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 25
 image = { file = "01a18bbd-3cd9-7a10-8b53-edda3e236417.webp", sha256 = "f0120ec433b58b3ab784ace4fb6ca64e0cd3cbe23009d3db57764935c1196e86", alt = "Spaghetti pomodoro with basil and grated parmesan" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["tangy", "fresh-herby", "light"]
+also_known_as = ["tomato pasta"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -202,6 +230,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18bbd-3cdb-7309-a9be-fcf6f5a03463.webp", sha256 = "82b1eb0fbe32a52d3f532e00e301990b7b5e5e43eb201823c1f1da894cc2b201", alt = "Pesto pasta in a basil sauce" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["fresh-herby", "savoury"]
+also_known_as = ["pasta al pesto"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "basil", amount = 2, unit = "cup" },
@@ -227,6 +259,9 @@ name = "Pasta primavera"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "italian"
+courses = ["mains"]
+moods = ["fresh-herby", "light"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "asparagus", amount = 200, unit = "g" },
@@ -258,6 +293,10 @@ name = "Penne alla vodka"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "tangy"]
+also_known_as = ["vodka pasta"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "vodka", amount = 0.25, unit = "cup" },
@@ -289,6 +328,11 @@ serves = 8
 prep_minutes = 40
 cook_minutes = 165
 image = { file = "01a18bbd-3ce2-7a5b-b957-059ee79f0139.webp", sha256 = "757af77f3fd7e8c38ab9ad99128c361fe8ab5d062271f27fb53b803b8aef6965", alt = "A square of baked meat lasagne" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["lasagna"]
 ingredients = [
   { id = "lasagne-sheets", amount = 250, unit = "g" },
   { id = "beef-mince", amount = 750, unit = "g" },
@@ -328,6 +372,11 @@ serves = 8
 prep_minutes = 40
 cook_minutes = 75
 image = { file = "01a18bbd-3ce4-7e5d-a984-8f04acc6917f.webp", sha256 = "dde2b8f41fc63c224bff5589a2ff85e92aaf8e7aeefcbcddfd9d967790ba6a0a", alt = "Square of vegetable lasagne with basil leaves" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["veg lasagna", "vegetable lasagna"]
 ingredients = [
   { id = "lasagne-sheets", amount = 250, unit = "g" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -362,6 +411,10 @@ name = "Baked ziti"
 serves = 6
 prep_minutes = 15
 cook_minutes = 50
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "hearty"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "pasta", amount = 450, unit = "g" },
   { id = "sausages", amount = 300, unit = "g" },
@@ -394,6 +447,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18bbd-3ce9-71d9-a100-997abd112da6.webp", sha256 = "ce182cf43153d716648db5aa4bc31c7265821e3e76d69b5f16044e65a17e8390", alt = "Creamy mushroom risotto topped with sliced mushrooms, thyme and parmesan" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "mushroom", amount = 400, unit = "g" },
@@ -426,6 +483,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18bbd-3ceb-71d3-8aef-e0474ed06755.webp", sha256 = "2caeb680b4712dca86d17b69ce1190b735edd0342987f4f0e20bf64fd2854055", alt = "Risotto alla milanese, golden with saffron" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "comforting"]
+also_known_as = ["saffron risotto"]
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "saffron", amount = 2, unit = "pinch" },
@@ -452,6 +513,9 @@ name = "Pea and lemon risotto"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "fresh-herby", "light"]
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "peas", amount = 1.5, unit = "cup" },
@@ -482,6 +546,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a18bbd-3cf0-701a-9203-0517f62b7cb5.webp", sha256 = "213ea490e5a4d54cf2862dcb6263fa69eff47804fe6fe980375ad8028b0f1efb", alt = "Gnocchi with brown butter and crisp sage leaves" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["gnocchi"]
 ingredients = [
   { id = "gnocchi", amount = 500, unit = "g" },
   { id = "butter", amount = 6, unit = "tbsp" },
@@ -508,6 +576,10 @@ prep_minutes = 25
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 image = { file = "01a18bbd-3cf2-72f3-97ac-b70d056785cb.webp", sha256 = "11b91d83031773b0405936b92b677c27024b44ea8f48257a029a5e32a82bba5e", alt = "Margherita pizza with blistered crust, mozzarella and basil" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy"]
+also_known_as = ["pizza margherita", "cheese pizza"]
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -537,6 +609,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+cuisine = "italian"
+courses = ["mains", "snacks-starters"]
+moods = ["savoury", "creamy"]
+also_known_as = ["white pizza"]
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -564,6 +640,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 5
 image = { file = "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e.webp", sha256 = "9559dc165cae1ae9eadf2eafc65f6cd98dc34fb1a7c230f26a528289aff1b9b9", alt = "Bruschetta toasts piled with tomato and basil" }
+cuisine = "italian"
+courses = ["snacks-starters"]
+moods = ["fresh-herby", "tangy", "crispy"]
+weather = ["just-pleasant"]
 ingredients = [
   { id = "baguette", amount = 1, unit = "piece" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -589,6 +669,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 0
 image = { file = "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4.webp", sha256 = "e19629355864821ad67e4e3c3955c9f3a49f6a34be5f99adeed0a3bfafbd6a79", alt = "Caprese salad of tomato, mozzarella and basil with olive oil and black pepper" }
+cuisine = "italian"
+courses = ["salads"]
+moods = ["fresh-herby", "creamy", "light"]
+weather = ["just-pleasant", "cool-down"]
+also_known_as = ["insalata caprese"]
 ingredients = [
   { id = "tomato", amount = 4, unit = "large" },
   { id = "mozzarella", amount = 250, unit = "g" },
@@ -611,6 +696,11 @@ name = "Minestrone"
 serves = 6
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "italian"
+courses = ["soups"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "under-the-weather"]
+also_known_as = ["minestrone soup"]
 ingredients = [
   { id = "onion", amount = 1, unit = "medium" },
   { id = "carrot", amount = 2, unit = "medium" },
@@ -646,6 +736,11 @@ name = "Ribollita"
 serves = 6
 prep_minutes = 20
 cook_minutes = 50
+cuisine = "italian"
+courses = ["soups"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["tuscan bread soup"]
 ingredients = [
   { id = "cannellini-beans", amount = 2, unit = "can" },
   { id = "kale", amount = 300, unit = "g" },
@@ -677,6 +772,10 @@ name = "Chicken parmigiana"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "crispy"]
+also_known_as = ["chicken parmesan", "chicken parm"]
 ingredients = [
   { id = "chicken", amount = 4, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -708,6 +807,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18bbd-3d02-7f00-92c1-0cf2e4b0b53c.webp", sha256 = "e87c58ef07c50d309e6307a6326971da9c2141f054857aceca7535391cb59ba2", alt = "Chicken piccata with capers, lemon slices and parsley" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["tangy", "savoury", "light"]
 ingredients = [
   { id = "chicken", amount = 4, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -737,6 +839,10 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 70
 image = { file = "01a18bbd-3d04-78cf-ba7a-3a5d367d9a2e.webp", sha256 = "311aa32321757dae99f8377ffb92f9c21c7ffb07691da661138fcc83019b0bb8", alt = "A square of baked eggplant parmigiana with melted mozzarella" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "comforting"]
+also_known_as = ["melanzane alla parmigiana", "aubergine parmigiana"]
 ingredients = [
   { id = "brinjal", amount = 3, unit = "medium" },
   { id = "passata", amount = 3, unit = "cup" },
@@ -763,6 +869,9 @@ name = "Frittata"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "italian"
+courses = ["breakfast", "mains"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "egg", amount = 8, unit = "large" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -791,6 +900,9 @@ serves = 8
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+cuisine = "italian"
+courses = ["rice-breads"]
+moods = ["savoury", "fresh-herby"]
 ingredients = [
   { id = "bread-flour", amount = 4, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },
@@ -817,6 +929,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 10
 image = { file = "01a18bbd-3d0b-7ac3-b229-7b08b4010644.webp", sha256 = "11dd83079433f7ad7277db18377ed1715f18427287518e6325e3071073d51633", alt = "Panzanella with bread, tomato, cucumber, red onion, capers and basil" }
+cuisine = "italian"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["just-pleasant"]
+also_known_as = ["bread salad"]
 ingredients = [
   { id = "sourdough", amount = 6, unit = "slice" },
   { id = "tomato", amount = 5, unit = "medium" },
@@ -846,6 +963,9 @@ prep_minutes = 30
 cook_minutes = 0
 plan_ahead = { wait_minutes = 360, note = "chill for 6 hours" }
 image = { file = "01a18bbd-3d0d-77cc-8ec9-0e772f02c3e7.webp", sha256 = "5ae7252c48524022d711d7c153058351e4ec08f9a4e1e286fa49c87eda19ff15", alt = "Square slice of tiramisu dusted with cocoa" }
+cuisine = "italian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "ladyfingers", amount = 250, unit = "g" },
   { id = "mascarpone", amount = 500, unit = "g" },
@@ -872,6 +992,11 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 10
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
+cuisine = "italian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down"]
+also_known_as = ["pannacotta"]
 ingredients = [
   { id = "whipping-cream", amount = 2, unit = "cup" },
   { id = "milk", amount = 1, unit = "cup" },
@@ -896,6 +1021,10 @@ name = "Affogato"
 serves = 4
 prep_minutes = 5
 cook_minutes = 3
+cuisine = "italian"
+courses = ["desserts"]
+moods = ["sweet"]
+weather = ["cool-down"]
 ingredients = [
   { id = "vanilla-ice-cream", amount = 4, unit = "cup" },
   { id = "espresso-powder", amount = 2, unit = "tbsp" },
@@ -914,6 +1043,11 @@ name = "Pasta e fagioli"
 serves = 6
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "italian"
+courses = ["soups", "mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["pasta fazool"]
 ingredients = [
   { id = "borlotti-beans", amount = 2, unit = "can" },
   { id = "pasta", amount = 200, unit = "g" },
@@ -945,6 +1079,10 @@ name = "Shrimp scampi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "fresh-herby"]
+also_known_as = ["prawn scampi"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "pasta", amount = 400, unit = "g" },

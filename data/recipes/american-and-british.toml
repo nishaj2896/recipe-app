@@ -46,7 +46,7 @@ image = { file = "01a18c1e-2c18-7153-810a-f7fcdbe62089.webp", sha256 = "f8c12bfe
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
-also_known_as = ["cheeseburger", "burger"]
+also_known_as = ["cheeseburger"]
 ingredients = [
   { id = "beef-mince", amount = 600, unit = "g" },
   { id = "burger-buns", amount = 4, unit = "piece" },
@@ -1051,7 +1051,7 @@ image = { file = "01a18c1e-2c5b-7243-93f9-c58258a88765.webp", sha256 = "6befc6bc
 cuisine = "american-british"
 courses = ["desserts"]
 moods = ["sweet", "crispy"]
-also_known_as = ["choc chip cookies", "cookies"]
+also_known_as = ["choc chip cookies"]
 ingredients = [
   { id = "butter", amount = 0.75, unit = "cup" },
   { id = "brown-sugar", amount = 0.75, unit = "cup" },

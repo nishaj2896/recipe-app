@@ -12,6 +12,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 0
 image = { file = "01a18c1a-e21f-7a45-9042-2fc871e11814.webp", sha256 = "ca32efdd0aee3aae2e1c7fa16ba5c35ad65ce22611ebd3f520e09d9bce1e61a7", alt = "Greek salad with tomato, cucumber, olives and a slab of feta" }
+cuisine = "mediterranean"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["just-pleasant", "cool-down"]
+also_known_as = ["horiatiki"]
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -40,6 +45,10 @@ serves = 8
 prep_minutes = 45
 cook_minutes = 90
 image = { file = "01a18c1a-e223-7646-ba6f-355a95a97ae1.webp", sha256 = "a876ec45fd98109bf6b20ad311351c39bce21c4e40e34fac16ccc7f403a6afa6", alt = "Square of moussaka with a golden bechamel top" }
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["savoury", "creamy", "hearty"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "brinjal", amount = 3, unit = "large" },
   { id = "lamb-mince", amount = 750, unit = "g" },
@@ -78,6 +87,10 @@ serves = 8
 prep_minutes = 30
 cook_minutes = 45
 image = { file = "01a18c1a-e225-7218-89eb-d75b3423a537.webp", sha256 = "36cee536574450bf57a30b0c4182fd4c3c9c1d270752476afcda5466224f0cae", alt = "Square of spanakopita with crisp filo and a spinach and feta filling" }
+cuisine = "mediterranean"
+courses = ["snacks-starters", "mains"]
+moods = ["savoury", "crispy"]
+also_known_as = ["spinach pie"]
 ingredients = [
   { id = "spinach", amount = 750, unit = "g" },
   { id = "feta", amount = 300, unit = "g" },
@@ -108,6 +121,11 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 0
 image = { file = "01a18c1a-e227-7ec3-9d05-d16f1fce345b.webp", sha256 = "1a83762a65e67ecaa4fc4dc980522a9a70377c884993cc161ee1bea79b0e8fc9", alt = "Bowl of tzatziki with olive oil" }
+cuisine = "mediterranean"
+courses = ["sides", "snacks-starters"]
+moods = ["creamy", "fresh-herby", "tangy"]
+weather = ["cool-down"]
+also_known_as = ["tzaziki"]
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -134,6 +152,11 @@ prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18c1a-e22a-7100-a285-c7d4fa9f5e28.webp", sha256 = "4b28031f754439b59b2a541fab06fcfc9e10fb78e22d39b89bf164fefba0644f", alt = "Chicken souvlaki skewers on pita with tomato, onion, tzatziki and lemon" }
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["fresh-herby", "savoury", "smoky"]
+weather = ["breezy-evening"]
+also_known_as = ["souvlaki"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -163,6 +186,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["savoury", "hearty"]
+also_known_as = ["gyro"]
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -193,6 +220,9 @@ name = "Greek lemon chicken and potatoes"
 serves = 4
 prep_minutes = 15
 cook_minutes = 70
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["tangy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -221,6 +251,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 image = { file = "01a18c1a-e231-7ea1-ac8a-52453ef1bdf0.webp", sha256 = "165d9d6e0a1b56ef0e14f14f7a22ee4abb37d88d011ba4bda1df9f271d43eeb5", alt = "Avgolemono soup with orzo, shredded chicken and dill" }
+cuisine = "mediterranean"
+courses = ["soups"]
+moods = ["tangy", "comforting", "creamy"]
+weather = ["under-the-weather"]
+also_known_as = ["avgolemono"]
 ingredients = [
   { id = "chicken-stock", amount = 6, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -246,6 +281,10 @@ name = "Gigantes plaki"
 serves = 4
 prep_minutes = 15
 cook_minutes = 55
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["giant beans"]
 ingredients = [
   { id = "butter-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 1, unit = "large" },
@@ -277,6 +316,10 @@ name = "Briam"
 serves = 6
 prep_minutes = 25
 cook_minutes = 75
+cuisine = "mediterranean"
+courses = ["mains"]
+moods = ["fresh-herby", "savoury"]
+also_known_as = ["greek roasted vegetables"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -308,6 +351,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c1a-e237-7e9e-8a9e-8419d18ce300.webp", sha256 = "c56ba0967733e733e801c68fb627fe8a009bf841388536a94561c4d0e4db0102", alt = "Spanish tortilla with a slice cut out" }
+cuisine = "spanish-portuguese"
+courses = ["mains", "snacks-starters"]
+moods = ["savoury", "comforting"]
+also_known_as = ["tortilla espanola", "spanish omelette"]
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -332,6 +379,10 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 45
 image = { file = "01a18c1a-e23a-7163-812e-7d217736420a.webp", sha256 = "afbf239c4fe4c76a05199b001f87e08cf4e3ed358ab3641747ceb896447ec987", alt = "Paella with chicken, prawns, peas and parsley, with lemon wedges" }
+cuisine = "spanish-portuguese"
+courses = ["mains", "rice-breads"]
+moods = ["savoury", "hearty"]
+also_known_as = ["seafood paella"]
 ingredients = [
   { id = "bomba-rice", amount = 2, unit = "cup" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -366,6 +417,10 @@ name = "Vegetable paella"
 serves = 6
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "spanish-portuguese"
+courses = ["mains", "rice-breads"]
+moods = ["savoury"]
+also_known_as = ["veg paella"]
 ingredients = [
   { id = "bomba-rice", amount = 2, unit = "cup" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -402,6 +457,11 @@ prep_minutes = 20
 cook_minutes = 0
 plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
 image = { file = "01a18c1a-e23e-7160-97b9-408aa2d7c024.webp", sha256 = "9443583379cd09574e864f241ad508b53376f28cbe9883b2c270f4b08b984b8b", alt = "Gazpacho topped with diced vegetables and olive oil" }
+cuisine = "spanish-portuguese"
+courses = ["soups"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["cold tomato soup"]
 ingredients = [
   { id = "tomato", amount = 1, unit = "kg" },
   { id = "cucumber", amount = 0.5, unit = "medium" },
@@ -429,6 +489,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c1a-e240-7717-ba70-99578e6fe513.webp", sha256 = "3c3cf1a49b71f405cd9e4bc0ee5a986fe8f1535f0ae8d47cfcab3521bb943205", alt = "Patatas bravas with spicy tomato sauce and dots of aioli" }
+cuisine = "spanish-portuguese"
+courses = ["snacks-starters"]
+moods = ["spicy", "crispy"]
+also_known_as = ["bravas"]
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "olive-oil", amount = 0.33, unit = "cup" },
@@ -458,6 +522,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 8
 image = { file = "01a18c1a-e243-751a-8dca-550ee3ea79c7.webp", sha256 = "f224c03635087406f0aecf16bc375b73484698a419ba60127556360c0d2b13c5", alt = "Gambas al ajillo in a terracotta dish with slices of baguette" }
+cuisine = "spanish-portuguese"
+courses = ["snacks-starters"]
+moods = ["savoury", "spicy"]
+also_known_as = ["gambas al ajillo"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "garlic", amount = 8, unit = "clove" },
@@ -485,6 +553,9 @@ serves = 6
 prep_minutes = 25
 cook_minutes = 60
 image = { file = "01a18c1a-e245-7f15-8b1f-0aedd856d372.webp", sha256 = "fd5bef3099a57f360a8dc1d8e36eff8d30daaa0728094bf4cc10b2d6d43b7208", alt = "Ratatouille with aubergine, courgette, peppers and basil" }
+cuisine = "french"
+courses = ["mains", "sides"]
+moods = ["fresh-herby", "savoury", "light"]
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -513,6 +584,9 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 10
 plan_ahead = { wait_minutes = 60, note = "press for 1 hour" }
+cuisine = "french"
+courses = ["snacks-starters"]
+moods = ["fresh-herby", "savoury"]
 ingredients = [
   { id = "baguette", amount = 1, unit = "large" },
   { id = "canned-tuna", amount = 2, unit = "can" },
@@ -544,6 +618,10 @@ name = "Grilled halloumi salad"
 serves = 4
 prep_minutes = 15
 cook_minutes = 8
+cuisine = "mediterranean"
+courses = ["salads"]
+moods = ["savoury", "fresh-herby"]
+also_known_as = ["halloumi salad"]
 ingredients = [
   { id = "halloumi", amount = 250, unit = "g" },
   { id = "rocket", amount = 3, unit = "cup" },
@@ -572,6 +650,9 @@ name = "Lentil salad with feta"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "mediterranean"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy", "light"]
 ingredients = [
   { id = "puy-lentils", amount = 1, unit = "cup" },
   { id = "feta", amount = 150, unit = "g" },

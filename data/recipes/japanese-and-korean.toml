@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a18c12-057c-7595-8e84-0c214eda32e4.webp", sha256 = "41d9151e1234c30818ad86996e3f16f5fcc23816d38ee4637f4014ad7f488353", alt = "Sliced chicken teriyaki glazed, with sesame seeds and spring onion" }
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["sweet", "savoury"]
+also_known_as = ["teriyaki chicken"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "soy-sauce", amount = 4, unit = "tbsp" },
@@ -41,6 +45,10 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 12
 image = { file = "01a18c12-057e-7570-9122-4d5aa8119343.webp", sha256 = "230caabebff869539f2ba686c3fcce4c93c988aebff93ac8b8af48c8da1da671", alt = "Salmon teriyaki with spring onions and sesame seeds" }
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["sweet", "savoury"]
+also_known_as = ["teriyaki salmon"]
 ingredients = [
   { id = "salmon", amount = 2, unit = "piece" },
   { id = "soy-sauce", amount = 3, unit = "tbsp" },
@@ -69,6 +77,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18c12-0581-7b81-9a6b-9632b57e5a6b.webp", sha256 = "998a05bad1cd668b51b8170a59bba4b6dabeadbe44b7b8a927fe35fae5b7a399", alt = "Sliced crumbed chicken katsu with tonkatsu sauce and shredded cabbage" }
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -100,6 +111,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 45
 image = { file = "01a18c12-0583-7039-8ac5-f83074f83c43.webp", sha256 = "c547fffd1ace22060e2aa87945bf6561e289dceeb44b50e2b933a80f9eeb7408", alt = "Sliced chicken katsu with a curry sauce of carrot and potato" }
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -137,6 +152,10 @@ name = "Oyakodon"
 serves = 2
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["chicken and egg rice bowl"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -167,6 +186,10 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18c12-0588-7c01-a328-a226413aa80d.webp", sha256 = "1395048f4ddaf7c03449a421fe88e2836b4bfe8ee33303d20080ee381ceb7d9f", alt = "Gyudon, a bowl of rice topped with thin beef, onion and spring onion" }
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["savoury", "sweet", "comforting"]
+also_known_as = ["beef bowl"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "beef", amount = 300, unit = "g" },
@@ -198,6 +221,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a18c12-058a-7d1f-979e-239d8d907c5e.webp", sha256 = "3153b99af62aaf49b3cb311a4a42da0549973ded260a50cc9a72c1364494f295", alt = "Miso soup with tofu, wakame and spring onion in a lidded bowl" }
+cuisine = "japanese"
+courses = ["soups"]
+moods = ["savoury", "light"]
+weather = ["under-the-weather"]
 ingredients = [
   { id = "miso", amount = 3, unit = "tbsp" },
   { id = "tofu", amount = 200, unit = "g" },
@@ -222,6 +249,11 @@ name = "Vegetable ramen"
 serves = 2
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "japanese"
+courses = ["soups", "mains"]
+moods = ["savoury", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["veg ramen"]
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "vegetable-stock", amount = 4, unit = "cup" },
@@ -256,6 +288,10 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18c12-058f-7662-80eb-6650ca8f7264.webp", sha256 = "9a467a1f2e9eef323ec596c300b828203354cd104ddff23ea0efd09666ebfa44", alt = "Shoyu ramen with chicken, halved eggs, bamboo shoots, spring onions and nori" }
+cuisine = "japanese"
+courses = ["soups", "mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
@@ -289,6 +325,10 @@ name = "Yaki udon"
 serves = 2
 prep_minutes = 10
 cook_minutes = 10
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["savoury"]
+also_known_as = ["stir fried udon"]
 ingredients = [
   { id = "udon", amount = 400, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -318,6 +358,9 @@ name = "Yakisoba"
 serves = 2
 prep_minutes = 10
 cook_minutes = 10
+cuisine = "japanese"
+courses = ["mains"]
+moods = ["savoury", "sweet"]
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "pork-belly", amount = 150, unit = "g" },
@@ -348,6 +391,10 @@ name = "Okonomiyaki"
 serves = 2
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "japanese"
+courses = ["mains", "snacks-starters"]
+moods = ["savoury", "crispy"]
+also_known_as = ["japanese pancake"]
 ingredients = [
   { id = "all-purpose-flour", amount = 0.75, unit = "cup" },
   { id = "baking-powder", amount = 0.5, unit = "tsp" },
@@ -381,6 +428,10 @@ name = "Tamagoyaki"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "japanese"
+courses = ["breakfast", "sides"]
+moods = ["sweet", "savoury", "light"]
+also_known_as = ["japanese omelette"]
 ingredients = [
   { id = "egg", amount = 4, unit = "large" },
   { id = "sugar", amount = 2, unit = "tsp" },
@@ -406,6 +457,10 @@ name = "Onigiri"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "japanese"
+courses = ["snacks-starters"]
+moods = ["savoury", "light"]
+also_known_as = ["rice ball"]
 ingredients = [
   { id = "sushi-rice", amount = 1.5, unit = "cup" },
   { id = "canned-tuna", amount = 1, unit = "can" },
@@ -433,6 +488,10 @@ serves = 4
 prep_minutes = 2
 cook_minutes = 6
 image = { file = "01a18c12-059c-795e-86e7-3cf49987770d.webp", sha256 = "08bb9bca797ed7ebd2d79a893fc492d89f48024d82625be3073e392d6d6f776b", alt = "Steamed edamame with sea salt and an empty bowl for the pods" }
+cuisine = "japanese"
+courses = ["snacks-starters"]
+moods = ["savoury", "light"]
+also_known_as = ["edamame"]
 ingredients = [
   { id = "edamame", amount = 400, unit = "g" },
   { id = "salt", to_taste = true },
@@ -452,6 +511,10 @@ name = "Vegetable tempura"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "japanese"
+courses = ["snacks-starters"]
+moods = ["crispy", "light"]
+also_known_as = ["tempura"]
 ingredients = [
   { id = "sweet-potato", amount = 1, unit = "medium" },
   { id = "zucchini", amount = 1, unit = "medium" },
@@ -483,6 +546,9 @@ name = "Agedashi tofu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "japanese"
+courses = ["snacks-starters"]
+moods = ["savoury", "crispy"]
 ingredients = [
   { id = "tofu", amount = 400, unit = "g" },
   { id = "potato-starch", amount = 0.33, unit = "cup" },
@@ -512,6 +578,11 @@ name = "Cucumber sunomono"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+cuisine = "japanese"
+courses = ["salads", "sides"]
+moods = ["tangy", "fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["sunomono"]
 ingredients = [
   { id = "cucumber", amount = 2, unit = "medium" },
   { id = "wakame", amount = 1, unit = "tbsp" },
@@ -537,6 +608,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 30
 image = { file = "01a18c12-05a5-7159-8e6a-b67889e637dd.webp", sha256 = "48a2359f7798c9c90223b1161fdc8da2dd9e93e03febf6ec570603d7e1762bb0", alt = "Bibimbap in a stone bowl with a fried egg, vegetables and gochujang" }
+cuisine = "korean"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["bibim bap"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "beef", amount = 250, unit = "g" },
@@ -574,6 +649,10 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 12
 image = { file = "01a18c12-05a7-7b68-9f25-51ce04f8a789.webp", sha256 = "514945e23bafbf34b6da3bc4a36b6029fe75099cd9f2b68a50848b2624bd852f", alt = "Kimchi fried rice topped with a fried egg, spring onions and nori" }
+cuisine = "korean"
+courses = ["mains", "rice-breads"]
+moods = ["spicy", "tangy", "savoury"]
+also_known_as = ["kimchi bokkeumbap"]
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "kimchi", amount = 1, unit = "cup" },
@@ -603,6 +682,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 20
 image = { file = "01a18c12-05aa-7b8d-a68f-39e8fa1979a6.webp", sha256 = "f8aa52e83ac91209a083aeecaecc24918fe89cc54a129eef9a29aceb3f8ba3f4", alt = "Japchae, sweet potato noodles with beef, spinach, carrot, mushroom, egg strips and sesame seeds" }
+cuisine = "korean"
+courses = ["mains", "sides"]
+moods = ["savoury", "sweet"]
+also_known_as = ["chapchae"]
 ingredients = [
   { id = "sweet-potato-noodles", amount = 200, unit = "g" },
   { id = "beef", amount = 200, unit = "g" },
@@ -639,6 +722,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 10
 image = { file = "01a18c12-05ac-7ede-bdd7-28382fdd8332.webp", sha256 = "60ff17e297580dc818f88cb2bbf09100028a4e5ac33786969d60b44a31a66655", alt = "Bulgogi beef with sesame seeds and spring onion" }
+cuisine = "korean"
+courses = ["mains"]
+moods = ["sweet", "savoury", "smoky"]
+also_known_as = ["beef bulgogi"]
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "pear", amount = 1, unit = "small" },
@@ -670,6 +757,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18c12-05ae-78d5-bd9b-c8a6cf79f983.webp", sha256 = "56f11b2657ec0862b0f007ab159df2649dbdb201fd07c741358b3b8caeec9a53", alt = "Kimchi jjigae with tofu and pork in a stone pot" }
+cuisine = "korean"
+courses = ["soups", "mains"]
+moods = ["spicy", "tangy", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["kimchi stew"]
 ingredients = [
   { id = "kimchi", amount = 2, unit = "cup" },
   { id = "pork-belly", amount = 250, unit = "g" },
@@ -700,6 +792,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18c12-05b0-7c66-ab75-c9c955089d41.webp", sha256 = "a3272bceae88988a0ac2580d02035c971eb60ab29a34585002a29f72b140272f", alt = "Tteokbokki with halved boiled eggs and spring onions in a red gochujang sauce" }
+cuisine = "korean"
+courses = ["snacks-starters"]
+moods = ["spicy", "sweet", "comforting"]
+also_known_as = ["topokki", "ddukbokki"]
 ingredients = [
   { id = "korean-rice-cakes", amount = 500, unit = "g" },
   { id = "gochujang", amount = 3, unit = "tbsp" },
@@ -731,6 +827,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 image = { file = "01a18c12-05b2-739b-9fe9-2cafc76f1bc3.webp", sha256 = "943db11d0e6739ce99984370410a9362ffac5f5eba4996133be71083f4abdf09", alt = "Korean fried chicken glazed in a sticky gochujang sauce with sesame seeds" }
+cuisine = "korean"
+courses = ["mains", "snacks-starters"]
+moods = ["crispy", "spicy", "sweet"]
+also_known_as = ["yangnyeom chicken"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "potato-starch", amount = 0.75, unit = "cup" },
@@ -762,6 +862,10 @@ name = "Gyeran mari"
 serves = 2
 prep_minutes = 10
 cook_minutes = 10
+cuisine = "korean"
+courses = ["sides", "breakfast"]
+moods = ["savoury", "light"]
+also_known_as = ["korean rolled omelette"]
 ingredients = [
   { id = "egg", amount = 5, unit = "large" },
   { id = "carrot", amount = 0.5, unit = "small" },
@@ -786,6 +890,11 @@ name = "Doenjang jjigae"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "korean"
+courses = ["soups", "mains"]
+moods = ["savoury", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["soybean paste stew"]
 ingredients = [
   { id = "doenjang", amount = 3, unit = "tbsp" },
   { id = "tofu", amount = 300, unit = "g" },
@@ -816,6 +925,10 @@ name = "Kongnamul muchim"
 serves = 4
 prep_minutes = 5
 cook_minutes = 6
+cuisine = "korean"
+courses = ["sides"]
+moods = ["savoury", "fresh-herby", "light"]
+also_known_as = ["soybean sprout salad"]
 ingredients = [
   { id = "soybean-sprouts", amount = 300, unit = "g" },
   { id = "garlic", amount = 1, unit = "clove" },

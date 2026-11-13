@@ -167,7 +167,6 @@ cuisine = "european"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 weather = ["cosy-night-in"]
-also_known_as = ["stroganoff"]
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },

@@ -668,7 +668,6 @@ cook_minutes = 15
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["fresh-herby", "light", "savoury"]
-also_known_as = ["steamed fish"]
 ingredients = [
   { id = "barramundi", amount = 2, unit = "piece" },
   { id = "ginger", amount = 1, unit = "piece" },

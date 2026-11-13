@@ -12,6 +12,9 @@ serves = 1
 prep_minutes = 2
 cook_minutes = 3
 image = { file = "01a18c1a-e24e-7cc2-9c2e-67a17a5c8ba9.webp", sha256 = "f91591eaa27524286080cb6abe3fa5a61c794eb948d690fbeff029355ef4f38b", alt = "Pale rolled French omelette with chives" }
+cuisine = "french"
+courses = ["breakfast"]
+moods = ["creamy", "savoury", "light"]
 ingredients = [
   { id = "egg", amount = 3, unit = "large" },
   { id = "butter", amount = 1, unit = "tbsp" },
@@ -35,6 +38,9 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a18c1a-e250-74b1-966c-5ae1ee0ad31c.webp", sha256 = "8b7de92c3bed4a35e526e06d34bade43cbe5b988914236afb23ed83f321a0ccb", alt = "Croque monsieur with ham and a browned cheese sauce top" }
+cuisine = "french"
+courses = ["snacks-starters", "breakfast"]
+moods = ["creamy", "savoury", "comforting"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "ham", amount = 4, unit = "slice" },
@@ -63,6 +69,9 @@ serves = 8
 prep_minutes = 20
 cook_minutes = 55
 image = { file = "01a18c1a-e252-7f62-a590-359eefff3fae.webp", sha256 = "f473d49795e0acd371584d68b80e62d2148c7804ef1a31cd3de068f88d9a471a", alt = "A slice of quiche Lorraine with bacon" }
+cuisine = "french"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "shortcrust-pastry", amount = 320, unit = "g" },
   { id = "bacon", amount = 200, unit = "g" },
@@ -90,6 +99,10 @@ name = "Spinach and cheese quiche"
 serves = 8
 prep_minutes = 20
 cook_minutes = 55
+cuisine = "french"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
+also_known_as = ["spinach quiche"]
 ingredients = [
   { id = "shortcrust-pastry", amount = 320, unit = "g" },
   { id = "spinach", amount = 300, unit = "g" },
@@ -119,6 +132,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 80
 image = { file = "01a18c1a-e257-7ace-9f3e-2795b3093cb1.webp", sha256 = "0c36a4b768f5aee27cdfd8ff9704fff2a63ffda3cd1ca3e5b7352dbc96b86f7e", alt = "French onion soup with a gruyere crouton, in a white pot" }
+cuisine = "french"
+courses = ["soups"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["onion soup", "soupe a l'oignon"]
 ingredients = [
   { id = "onion", amount = 1, unit = "kg" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -150,6 +168,10 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 105
 image = { file = "01a18c1a-e259-7a4a-8d66-0e670d7dceaf.webp", sha256 = "b53280aed2d7846bbce972ad0e668155260e4fcecd557641ac330c4386d11ee7", alt = "Coq au vin with bacon, mushrooms, shallots, carrots and parsley" }
+cuisine = "french"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "red-wine", amount = 3, unit = "cup" },
@@ -185,6 +207,10 @@ name = "Chicken fricassee"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+cuisine = "french"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+also_known_as = ["fricassee"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -218,6 +244,11 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 180
 image = { file = "01a18c1a-e25e-743c-b81e-5a37d3b511fb.webp", sha256 = "e83ddad8bce7c024b85a2bcef8d011e57b9bf30a513599b15df1431621c20bda", alt = "Beef bourguignon with bacon, mushrooms, pearl onions and carrots in a stoneware bowl" }
+cuisine = "french"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["boeuf bourguignon"]
 ingredients = [
   { id = "beef", amount = 1.2, unit = "kg" },
   { id = "red-wine", amount = 3, unit = "cup" },
@@ -255,6 +286,11 @@ name = "Gratin dauphinois"
 serves = 6
 prep_minutes = 20
 cook_minutes = 75
+cuisine = "french"
+courses = ["sides"]
+moods = ["creamy", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["potato gratin", "dauphinoise potatoes"]
 ingredients = [
   { id = "potato", amount = 1, unit = "kg" },
   { id = "whipping-cream", amount = 1.5, unit = "cup" },
@@ -281,6 +317,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18c1a-e262-7e5c-b443-f2989481b98a.webp", sha256 = "eb3738e1d507d261994472be95cb4d8076cf0c1ffc05f4240fafe64e0738b7d5", alt = "Potato and leek soup with chives" }
+cuisine = "french"
+courses = ["soups"]
+moods = ["creamy", "comforting"]
+weather = ["rainy-day-cosy", "under-the-weather"]
+also_known_as = ["leek and potato soup", "vichyssoise"]
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "leek", amount = 3, unit = "medium" },
@@ -306,6 +347,11 @@ name = "Nicoise salad"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "french"
+courses = ["salads"]
+moods = ["fresh-herby", "savoury", "light"]
+weather = ["just-pleasant"]
+also_known_as = ["salade nicoise"]
 ingredients = [
   { id = "canned-tuna", amount = 2, unit = "can" },
   { id = "egg", amount = 4, unit = "large" },
@@ -338,6 +384,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 25
 image = { file = "01a18c1a-e267-73ed-b982-a8f8d5e90ab5.webp", sha256 = "75d9f0770727a50d358e699fce6f2a26d5ef91b4c401cd9f62f1ce3f1af80972", alt = "Folded crepes with sugar and lemon wedges" }
+cuisine = "french"
+courses = ["desserts", "breakfast"]
+moods = ["sweet", "light"]
+also_known_as = ["crepe", "french pancakes"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 2, unit = "large" },
@@ -363,6 +413,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "rest the batter for 1 hour" }
+cuisine = "french"
+courses = ["mains", "breakfast"]
+moods = ["savoury"]
+also_known_as = ["galette", "buckwheat crepes"]
 ingredients = [
   { id = "buckwheat-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 5, unit = "large" },
@@ -388,6 +442,10 @@ name = "Moules marinieres"
 serves = 2
 prep_minutes = 20
 cook_minutes = 10
+cuisine = "french"
+courses = ["mains"]
+moods = ["savoury", "light", "fresh-herby"]
+also_known_as = ["mussels in white wine"]
 ingredients = [
   { id = "mussels", amount = 1, unit = "kg" },
   { id = "shallot", amount = 2, unit = "piece" },
@@ -414,6 +472,9 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 8
 image = { file = "01a18c1a-e26d-799b-9ae5-f798cfc8888e.webp", sha256 = "b07fcca23b9237bb61682b40c108258a1ab7f008a0afe7658f746a1f4f536d5a", alt = "Sole meuniere with brown butter and parsley" }
+cuisine = "french"
+courses = ["mains"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "sole", amount = 2, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.25, unit = "cup" },
@@ -440,6 +501,10 @@ prep_minutes = 20
 cook_minutes = 5
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 image = { file = "01a18c1a-e26f-7acd-8683-24e7da24f6d1.webp", sha256 = "7e8a2ee1aaf34d124b4814cc159d57e5846a58473579a74c23bbc6a8d7ce2afa", alt = "Two glasses of chocolate mousse" }
+cuisine = "french"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["mousse au chocolat"]
 ingredients = [
   { id = "dark-chocolate", amount = 200, unit = "g" },
   { id = "egg", amount = 6, unit = "large" },
@@ -465,6 +530,9 @@ prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 240, note = "chill for 4 hours" }
 image = { file = "01a18c1a-e272-73e1-a7c9-d766e23e8c6c.webp", sha256 = "4671f503081f0be2e05df61c6bef258f3fd4dd67024953a2e3da11916ec53fca", alt = "Crème brûlée in a white ramekin with a caramelised sugar top" }
+cuisine = "french"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "whipping-cream", amount = 2, unit = "cup" },
   { id = "egg", amount = 6, unit = "large" },
@@ -489,6 +557,10 @@ name = "Tarte tatin"
 serves = 8
 prep_minutes = 20
 cook_minutes = 50
+cuisine = "french"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
+also_known_as = ["upside down apple tart"]
 ingredients = [
   { id = "apple", amount = 6, unit = "medium" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -513,6 +585,10 @@ name = "Clafoutis"
 serves = 6
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "french"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["cherry clafoutis"]
 ingredients = [
   { id = "cherries", amount = 500, unit = "g" },
   { id = "egg", amount = 3, unit = "large" },
@@ -539,6 +615,9 @@ name = "Pain perdu"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "french"
+courses = ["breakfast", "desserts"]
+moods = ["sweet", "comforting"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "egg", amount = 2, unit = "large" },

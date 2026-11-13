@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a15175-3c2d-7620-b329-81eec06563fc.webp", sha256 = "334f60e53ca4c627d2fd43d2517a80aee832413c70745298456402ba92eb4345", alt = "Shakshuka with three eggs in a cast-iron pan" }
+cuisine = "middle-eastern"
+courses = ["breakfast", "mains"]
+moods = ["spicy", "tangy", "savoury"]
+also_known_as = ["shakshouka"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -39,6 +43,10 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 0
 image = { file = "01a18c16-b1f7-7efc-a15b-2215d35ab4bd.webp", sha256 = "3e87723a29b79e0b8e1b084802fad96803ed3addb699ca4c4ddd966bdd746a9b", alt = "Hummus with a swirl of olive oil and paprika" }
+cuisine = "middle-eastern"
+courses = ["snacks-starters", "sides"]
+moods = ["creamy", "savoury"]
+also_known_as = ["houmous", "humus"]
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "tahini", amount = 0.33, unit = "cup" },
@@ -66,6 +74,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 image = { file = "01a18c16-b1f9-7734-b05c-1bd32e66ce7e.webp", sha256 = "8ed8dd52119ece63a8f0bf1a99725d31de32a8e78f745016d4b5a83ca499dc02", alt = "Baba ganoush with olive oil, parsley and a few dried pomegranate seeds" }
+cuisine = "middle-eastern"
+courses = ["snacks-starters", "sides"]
+moods = ["smoky", "creamy"]
+also_known_as = ["baba ghanoush", "baba ghanouj"]
 ingredients = [
   { id = "brinjal", amount = 2, unit = "large" },
   { id = "tahini", amount = 3, unit = "tbsp" },
@@ -93,6 +105,10 @@ prep_minutes = 25
 cook_minutes = 15
 plan_ahead = { wait_minutes = 720, note = "soak for 12 hours" }
 image = { file = "01a18c16-b1fb-7119-aad6-b093cf759ea7.webp", sha256 = "4d4c93f81c71d7012886501bc7f490b4707d49dbe163ec3553c48b4d08f2354f", alt = "Falafel, one broken open to show the green inside, with tahini sauce" }
+cuisine = "middle-eastern"
+courses = ["snacks-starters"]
+moods = ["crispy", "fresh-herby", "savoury"]
+also_known_as = ["felafel"]
 ingredients = [
   { id = "chickpeas", amount = 1.5, unit = "cup" },
   { id = "parsley", amount = 1, unit = "cup" },
@@ -125,6 +141,11 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 0
 image = { file = "01a18c16-b1fe-74e7-bca1-bb959369b478.webp", sha256 = "f8939da5b438047627ea7fed5e0fae72384459552f1920ad6a34025971a37867", alt = "Tabbouleh with parsley, tomato and bulgur" }
+cuisine = "middle-eastern"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy", "light"]
+weather = ["cool-down", "just-pleasant"]
+also_known_as = ["tabouli", "tabouleh"]
 ingredients = [
   { id = "bulgur", amount = 0.25, unit = "cup" },
   { id = "parsley", amount = 3, unit = "cup" },
@@ -151,6 +172,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 10
 image = { file = "01a18c16-b200-746a-9aa1-ae1a0b39d650.webp", sha256 = "730c52d20e5178c575d72352c6b0541ae0c62d3107c148436c66150aa9600d03", alt = "Fattoush salad with toasted pita, radish and sumac" }
+cuisine = "middle-eastern"
+courses = ["salads"]
+moods = ["fresh-herby", "tangy", "crispy"]
+weather = ["just-pleasant"]
 ingredients = [
   { id = "pita-bread", amount = 2, unit = "piece" },
   { id = "lettuce", amount = 1, unit = "small-head" },
@@ -184,6 +209,10 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18c16-b202-7160-98cc-bea7bf35c726.webp", sha256 = "49a93fcb4f63e040ff2685dc74cff4747f166c48ae1ba3937916763b92ac4986", alt = "Chicken shawarma wrap cut in half, with garlic sauce" }
+cuisine = "middle-eastern"
+courses = ["mains", "snacks-starters"]
+moods = ["savoury", "spicy"]
+also_known_as = ["shawarma", "shwarma"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -218,6 +247,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "smoky"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -244,6 +276,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 12
 image = { file = "01a18c16-b207-7c33-9307-ea008a44cf84.webp", sha256 = "12aecf7ef57b78493e787f410781977b579f0e36a9e1bc7ae2f62410eea93ef3", alt = "Grilled lamb kofta on a yogurt sauce with a lemon wedge and mint" }
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "smoky", "spicy"]
+also_known_as = ["kofta kebab"]
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "small" },
@@ -275,6 +311,10 @@ name = "Mujadara"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["mujaddara"]
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "basmati-rice", amount = 0.75, unit = "cup" },
@@ -301,6 +341,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 image = { file = "01a18c16-b20b-7687-a8d0-61a4d7a722dc.webp", sha256 = "5634347d1b58ab4d24b50332b9f854639e30678df6994c0563bc9062682b5c45", alt = "Red lentil soup with chilli flakes and lemon wedges" }
+cuisine = "middle-eastern"
+courses = ["soups"]
+moods = ["savoury", "comforting", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["shorbat adas"]
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -328,6 +373,9 @@ name = "Fatteh"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["creamy", "crispy", "savoury"]
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "pita-bread", amount = 2, unit = "piece" },
@@ -359,6 +407,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 90
 plan_ahead = { wait_minutes = 720, note = "soak for 12 hours" }
+cuisine = "middle-eastern"
+courses = ["breakfast"]
+moods = ["savoury", "comforting"]
+also_known_as = ["foul medames", "ful"]
 ingredients = [
   { id = "dried-fava-beans", amount = 1, unit = "cup" },
   { id = "garlic", amount = 3, unit = "clove" },
@@ -387,6 +439,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 60
 image = { file = "01a18c16-b212-7c32-8007-d7113fc06483.webp", sha256 = "8eff079045f9cab3766ee41e48462ef1545717395c725a7a92b24b2bc3cdfee2", alt = "Moroccan chicken tagine with olives and preserved lemon" }
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["sweet", "savoury", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["chicken tagine"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -420,6 +477,10 @@ name = "Vegetable tagine"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["sweet", "savoury", "comforting"]
+also_known_as = ["veg tagine"]
 ingredients = [
   { id = "butternut-squash", amount = 500, unit = "g" },
   { id = "carrot", amount = 2, unit = "medium" },
@@ -451,6 +512,9 @@ name = "Chickpea tagine"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "spicy", "comforting"]
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "sweet-potato", amount = 1, unit = "large" },
@@ -482,6 +546,10 @@ name = "Couscous with vegetables"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "light"]
+also_known_as = ["vegetable couscous"]
 ingredients = [
   { id = "couscous", amount = 1.5, unit = "cup" },
   { id = "vegetable-stock", amount = 4, unit = "cup" },
@@ -514,6 +582,10 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 90
 image = { file = "01a18c16-b21b-72d4-8743-b45d91b056e2.webp", sha256 = "14f6e28b5915abaa951b74d802f451e8b61779a48c02a50af96d14a14031cd73", alt = "Harira, Moroccan soup with lamb, lentils, chickpeas and herbs" }
+cuisine = "middle-eastern"
+courses = ["soups"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "lamb", amount = 300, unit = "g" },
   { id = "green-lentils", amount = 0.5, unit = "cup" },
@@ -551,6 +623,9 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 5
 image = { file = "01a18c16-b21d-736b-a3e1-eac6fbbffba8.webp", sha256 = "fe281864345dffc75e6c89f46cd6ac1060cff707cd3f013990841ac1650ff7fd", alt = "Muhammara with olive oil and crumbled walnuts" }
+cuisine = "middle-eastern"
+courses = ["snacks-starters", "sides"]
+moods = ["smoky", "spicy", "sweet"]
 ingredients = [
   { id = "roasted-red-peppers", amount = 1.5, unit = "cup" },
   { id = "walnuts", amount = 1, unit = "cup" },
@@ -579,6 +654,10 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 0
 plan_ahead = { wait_minutes = 720, note = "chill for 12 hours" }
+cuisine = "middle-eastern"
+courses = ["snacks-starters"]
+moods = ["creamy", "tangy", "fresh-herby"]
+also_known_as = ["labneh"]
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "zaatar", amount = 1, unit = "tbsp" },
@@ -604,6 +683,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+cuisine = "middle-eastern"
+courses = ["snacks-starters", "breakfast"]
+moods = ["fresh-herby", "savoury"]
+also_known_as = ["manakeesh", "zaatar bread"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 1.5, unit = "tsp" },
@@ -630,6 +713,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 55
 image = { file = "01a18c16-b224-7f04-92ee-74edc53f2d1e.webp", sha256 = "f4a1a38433d8917e26cc1bf6ebbe10afc391ba4a63dec9c11297321a849414a6", alt = "Three stuffed peppers in tomato sauce" }
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "tangy"]
+also_known_as = ["dolma"]
 ingredients = [
   { id = "bell-pepper", amount = 6, unit = "medium" },
   { id = "rice", amount = 0.5, unit = "cup" },
@@ -661,6 +748,10 @@ name = "Lebanese garlic potatoes"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "middle-eastern"
+courses = ["sides"]
+moods = ["savoury", "crispy"]
+also_known_as = ["batata harra"]
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "garlic", amount = 6, unit = "clove" },
@@ -686,6 +777,9 @@ name = "Chicken freekeh"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+cuisine = "middle-eastern"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "freekeh", amount = 1.5, unit = "cup" },
@@ -716,6 +810,10 @@ name = "Kunafa"
 serves = 8
 prep_minutes = 25
 cook_minutes = 40
+cuisine = "middle-eastern"
+courses = ["desserts"]
+moods = ["sweet", "crispy", "creamy"]
+also_known_as = ["knafeh", "kunafeh"]
 ingredients = [
   { id = "kataifi-pastry", amount = 400, unit = "g" },
   { id = "butter", amount = 0.75, unit = "cup" },

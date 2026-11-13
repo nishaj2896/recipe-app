@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a15175-3c23-770c-afb9-16d99fa0592d.webp", sha256 = "b89b3d5068f83bdd790c8a43c1c498924b9f1e3b686064774ee0e9047fb987ea", alt = "Vegetable hakka noodles with spring onion greens" }
+cuisine = "indo-chinese"
+courses = ["mains"]
+moods = ["savoury", "spicy"]
+also_known_as = ["veg hakka noodles", "veg noodles"]
 ingredients = [
   { id = "hakka-noodles", amount = 300, unit = "g" },
   { id = "cabbage", amount = 150, unit = "g" },
@@ -44,6 +48,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 10
 plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
+cuisine = "indo-chinese"
+courses = ["rice-breads", "mains"]
+moods = ["savoury"]
 ingredients = [
   { id = "egg", amount = 3, unit = "piece" },
   { id = "rice", amount = 250, unit = "g" },
@@ -71,6 +78,10 @@ serves = 3
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c.webp", sha256 = "bb1cfab9c534e7f39aa6e022a63895b46b1f4a5e943860588215d9e8c2164a08", alt = "Chicken hakka noodles with carrot, bell pepper and spring onion" }
+cuisine = "indo-chinese"
+courses = ["mains"]
+moods = ["savoury", "spicy"]
+also_known_as = ["chicken noodles"]
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -104,6 +115,10 @@ name = "Schezwan noodles"
 serves = 3
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "indo-chinese"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["szechuan noodles", "schezuan noodles"]
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "cabbage", amount = 1, unit = "cup" },
@@ -136,6 +151,10 @@ serves = 3
 prep_minutes = 15
 cook_minutes = 10
 image = { file = "01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7.webp", sha256 = "0b48e8721c4f64ca525b26c80c26e6e43ad21db04196fbf77ab178045e431f88", alt = "Vegetable fried rice with spring onion greens" }
+cuisine = "indo-chinese"
+courses = ["rice-breads", "mains"]
+moods = ["savoury"]
+also_known_as = ["veg fried rice"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -167,6 +186,10 @@ name = "Schezwan fried rice"
 serves = 3
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "indo-chinese"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["szechuan fried rice"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -195,6 +218,9 @@ name = "Chicken fried rice"
 serves = 3
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "indo-chinese"
+courses = ["rice-breads", "mains"]
+moods = ["savoury"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -226,6 +252,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18ba9-fda5-7a51-ae40-a5af6d7795ce.webp", sha256 = "a2a0c779c4362a4fdbb051c2fec253f631c5c0411f5397af1e09b332d4acc98e", alt = "Gobi manchurian glazed in sauce and scattered with spring onions" }
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["spicy", "sweet-sour", "crispy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["cauliflower manchurian"]
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "cornflour", amount = 0.33, unit = "cup" },
@@ -261,6 +292,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18ba9-fda7-7085-993c-3f33685f2bd0.webp", sha256 = "2d2da39da1c4580693ca8c7561b01a7cf9792d78b5691073e74c686ae74966b7", alt = "Vegetable manchurian balls in a dark sauce with spring onion" }
+cuisine = "indo-chinese"
+courses = ["snacks-starters", "mains"]
+moods = ["spicy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["veg manchurian"]
 ingredients = [
   { id = "cabbage", amount = 2, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -294,6 +330,11 @@ name = "Chilli paneer"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "indo-chinese"
+courses = ["snacks-starters", "mains"]
+moods = ["spicy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["paneer chilli"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "cornflour", amount = 3, unit = "tbsp" },
@@ -328,6 +369,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18ba9-fdab-7f88-b7ce-d7c9ec4c2f29.webp", sha256 = "8e8f7d6878e5d661961776439c8e8d57b542ba21603f43d60d8c3b9122f7ea0e", alt = "Chilli chicken with bell pepper, onion and spring onion" }
+cuisine = "indo-chinese"
+courses = ["snacks-starters", "mains"]
+moods = ["spicy", "savoury"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -364,6 +409,10 @@ prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18ba9-fdad-7151-92ab-02f89a09a8f9.webp", sha256 = "0647763de2e4167081f5c45caf8d31901458133321ae6f0776ee3b76743a5dd7", alt = "Chicken 65 with curry leaves and green chillies" }
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["spicy", "crispy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 3, unit = "tbsp" },
@@ -394,6 +443,11 @@ name = "Gobi 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["spicy", "crispy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["cauliflower 65"]
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -423,6 +477,9 @@ name = "Dragon chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["spicy", "sweet", "crispy"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -455,6 +512,11 @@ name = "Honey chilli potato"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["sweet", "spicy", "crispy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["honey chilli potatoes"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "cornflour", amount = 4, unit = "tbsp" },
@@ -486,6 +548,9 @@ name = "Chilli mushroom"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "mushroom", amount = 300, unit = "g" },
   { id = "cornflour", amount = 4, unit = "tbsp" },
@@ -517,6 +582,10 @@ name = "Paneer 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["spicy", "crispy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -545,6 +614,10 @@ serves = 3
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18ba9-fdbb-7ec7-93b4-bb61edf302aa.webp", sha256 = "aebfd0a40066911a9717cf5ef65804f772e76c1863cbf747d4e8cb306586f307", alt = "American chop suey on crisp noodles, topped with a fried egg" }
+cuisine = "indo-chinese"
+courses = ["mains"]
+moods = ["sweet-sour", "crispy"]
+also_known_as = ["chop suey"]
 ingredients = [
   { id = "hakka-noodles", amount = 150, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -581,6 +654,9 @@ name = "Chicken lollipop"
 serves = 4
 prep_minutes = 30
 cook_minutes = 25
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["spicy", "crispy"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -609,6 +685,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18ba9-fdbf-7184-9155-c47cc6706208.webp", sha256 = "206df66ee0aace4b097888da9d17036179f687fc451c9067881e1f554cdc83ae", alt = "Hot and sour soup topped with spring onions" }
+cuisine = "indo-chinese"
+courses = ["soups"]
+moods = ["spicy", "tangy"]
+weather = ["rainy-day-cosy", "under-the-weather"]
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },
@@ -641,6 +721,10 @@ name = "Manchow soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "indo-chinese"
+courses = ["soups"]
+moods = ["spicy", "savoury", "crispy"]
+weather = ["rainy-day-cosy", "under-the-weather"]
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },
@@ -677,6 +761,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18ba9-fdc4-7a74-802c-e97f486d751a.webp", sha256 = "b261d1a1d30421e3f7dc88e51082f5bc7885511a3b0b93a2d0f376afd158c4e7", alt = "Sweetcorn soup with carrot, beans and spring onion" }
+cuisine = "indo-chinese"
+courses = ["soups"]
+moods = ["sweet", "comforting", "light"]
+weather = ["rainy-day-cosy", "under-the-weather"]
+also_known_as = ["sweet corn soup"]
 ingredients = [
   { id = "sweetcorn", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },
@@ -707,6 +796,9 @@ name = "Chilli garlic noodles"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "indo-chinese"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "garlic", amount = 10, unit = "clove" },
@@ -734,6 +826,10 @@ name = "Crispy corn"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "indo-chinese"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "sweetcorn", amount = 2, unit = "cup" },
   { id = "cornflour", amount = 3, unit = "tbsp" },
@@ -763,6 +859,10 @@ name = "Triple Schezwan rice"
 serves = 3
 prep_minutes = 25
 cook_minutes = 30
+cuisine = "indo-chinese"
+courses = ["mains", "rice-breads"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["triple szechuan rice"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "hakka-noodles", amount = 100, unit = "g" },
