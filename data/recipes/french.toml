@@ -41,6 +41,7 @@ image = { file = "01a18c1a-e250-74b1-966c-5ae1ee0ad31c.webp", sha256 = "8b7de92c
 cuisine = "french"
 courses = ["snacks-starters", "breakfast"]
 moods = ["creamy", "savoury", "comforting"]
+pairs_with = ["01a18c1a-e257-7ace-9f3e-2795b3093cb1", "01a18c1a-e262-7e5c-b443-f2989481b98a"]  # French onion soup, Potato leek soup
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "ham", amount = 4, unit = "slice" },
@@ -72,6 +73,7 @@ image = { file = "01a18c1a-e252-7f62-a590-359eefff3fae.webp", sha256 = "f473d497
 cuisine = "french"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a18c1a-e264-78a6-a891-1b252c51c87a", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Nicoise salad, Greek salad
 ingredients = [
   { id = "shortcrust-pastry", amount = 320, unit = "g" },
   { id = "bacon", amount = 200, unit = "g" },
@@ -103,6 +105,7 @@ cuisine = "french"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["spinach quiche"]
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Greek salad, Tomato soup
 ingredients = [
   { id = "shortcrust-pastry", amount = 320, unit = "g" },
   { id = "spinach", amount = 300, unit = "g" },
@@ -137,6 +140,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["onion soup", "soupe a l'oignon"]
+pairs_with = ["01a18c1a-e250-74b1-966c-5ae1ee0ad31c", "01a18c1a-e264-78a6-a891-1b252c51c87a"]  # Croque monsieur, Nicoise salad
 ingredients = [
   { id = "onion", amount = 1, unit = "kg" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -172,6 +176,7 @@ cuisine = "french"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c1a-e260-7bc3-98fd-78f93a8e5b91", "01a18c20-05e8-76f5-9e83-2ff6f7cb10ea"]  # Gratin dauphinois, Dinner rolls
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "red-wine", amount = 3, unit = "cup" },
@@ -211,6 +216,7 @@ cuisine = "french"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 also_known_as = ["fricassee"]
+pairs_with = ["01a18c1a-e260-7bc3-98fd-78f93a8e5b91", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f"]  # Gratin dauphinois, Garlic butter mushrooms
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -249,6 +255,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["boeuf bourguignon"]
+pairs_with = ["01a18c1a-e260-7bc3-98fd-78f93a8e5b91", "01a18c20-05e8-76f5-9e83-2ff6f7cb10ea"]  # Gratin dauphinois, Dinner rolls
 ingredients = [
   { id = "beef", amount = 1.2, unit = "kg" },
   { id = "red-wine", amount = 3, unit = "cup" },
@@ -322,6 +329,7 @@ courses = ["soups"]
 moods = ["creamy", "comforting"]
 weather = ["rainy-day-cosy", "under-the-weather"]
 also_known_as = ["leek and potato soup", "vichyssoise"]
+pairs_with = ["01a18c1a-e250-74b1-966c-5ae1ee0ad31c", "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde", "01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c20-05e8-76f5-9e83-2ff6f7cb10ea"]  # Croque monsieur, Grilled cheese sandwich, Focaccia, Dinner rolls
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "leek", amount = 3, unit = "medium" },
@@ -417,6 +425,7 @@ cuisine = "french"
 courses = ["mains", "breakfast"]
 moods = ["savoury"]
 also_known_as = ["buckwheat crepes"]
+pairs_with = ["01a18c1a-e264-78a6-a891-1b252c51c87a", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Nicoise salad, Greek salad
 ingredients = [
   { id = "buckwheat-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 5, unit = "large" },
@@ -446,6 +455,7 @@ cuisine = "french"
 courses = ["mains"]
 moods = ["savoury", "light", "fresh-herby"]
 also_known_as = ["mussels in white wine"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c1a-e264-78a6-a891-1b252c51c87a"]  # Focaccia, Nicoise salad
 ingredients = [
   { id = "mussels", amount = 1, unit = "kg" },
   { id = "shallot", amount = 2, unit = "piece" },
@@ -475,6 +485,7 @@ image = { file = "01a18c1a-e26d-799b-9ae5-f798cfc8888e.webp", sha256 = "b07fcca2
 cuisine = "french"
 courses = ["mains"]
 moods = ["savoury", "light"]
+pairs_with = ["01a18c1a-e260-7bc3-98fd-78f93a8e5b91", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Gratin dauphinois, Greek salad
 ingredients = [
   { id = "sole", amount = 2, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.25, unit = "cup" },

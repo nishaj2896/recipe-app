@@ -16,6 +16,7 @@ cuisine = "african-caribbean"
 courses = ["mains", "rice-breads"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["jollof", "jolof rice"]
+pairs_with = ["01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb", "01a18c4a-5f9e-7bee-8ce8-4ef55d36a07c", "01a18c4a-5fa3-749b-91ba-ee309bcc42dc"]  # Fried plantains, Suya, Chakalaka
 ingredients = [
   { id = "parboiled-rice", amount = 2, unit = "cup" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -55,6 +56,7 @@ cuisine = "african-caribbean"
 courses = ["mains"]
 moods = ["tangy", "savoury", "comforting"]
 also_known_as = ["poulet yassa", "yassa"]
+pairs_with = ["01a18c4a-5faa-7c6d-9b1e-0d3fb026c018", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Rice and peas, Fried plantains
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 4, unit = "large" },
@@ -89,6 +91,7 @@ cuisine = "african-caribbean"
 courses = ["mains"]
 moods = ["savoury", "sweet", "comforting"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c4a-5faa-7c6d-9b1e-0d3fb026c018", "01a18c4a-5fa3-749b-91ba-ee309bcc42dc"]  # Rice and peas, Chakalaka
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -126,6 +129,7 @@ courses = ["mains"]
 moods = ["spicy", "hearty", "comforting"]
 weather = ["warming"]
 also_known_as = ["bunny curry"]
+pairs_with = ["01a18c4a-5fa3-749b-91ba-ee309bcc42dc", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Chakalaka, Kachumber salad
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -167,6 +171,7 @@ courses = ["mains"]
 moods = ["spicy", "smoky", "tangy"]
 weather = ["breezy-evening"]
 also_known_as = ["piri piri chicken"]
+pairs_with = ["01a18c4a-5faa-7c6d-9b1e-0d3fb026c018", "01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Rice and peas, Coleslaw, Fried plantains
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "birds-eye-chillies", amount = 6, unit = "piece" },
@@ -198,6 +203,7 @@ courses = ["mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["warming", "cosy-night-in"]
 also_known_as = ["doro wot", "doro wet"]
+pairs_with = ["01a18c4a-5f9c-76aa-b08e-975f307ae259", "01a18c4a-5fa3-749b-91ba-ee309bcc42dc"]  # Misir wot, Chakalaka
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 4, unit = "large" },
@@ -232,6 +238,7 @@ courses = ["mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["warming"]
 also_known_as = ["misir wat", "red lentil wot"]
+pairs_with = ["01a18c4a-5fa3-749b-91ba-ee309bcc42dc", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Chakalaka, Fried plantains
 ingredients = [
   { id = "masoor-dal", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -263,6 +270,7 @@ courses = ["snacks-starters"]
 moods = ["spicy", "smoky", "savoury"]
 weather = ["breezy-evening"]
 also_known_as = ["beef suya"]
+pairs_with = ["01a18c4a-5f8e-7c60-acaf-8a4fe25a35f2", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Jollof rice, Fried plantains
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "peanuts", amount = 0.5, unit = "cup" },
@@ -296,6 +304,7 @@ image = { file = "01a18c4a-5fa1-7e18-b603-388db5e762a7.webp", sha256 = "5ab2db88
 cuisine = "african-caribbean"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
+pairs_with = ["01a18c4a-5fa3-749b-91ba-ee309bcc42dc", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Chakalaka, Fried plantains
 ingredients = [
   { id = "sweetcorn", amount = 2, unit = "cup" },
   { id = "kidney-beans", amount = 1, unit = "can" },
@@ -359,6 +368,7 @@ courses = ["mains"]
 moods = ["creamy", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["peanut stew", "maafe", "mafe"]
+pairs_with = ["01a18c4a-5f8e-7c60-acaf-8a4fe25a35f2", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Jollof rice, Fried plantains
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "peanut-butter", amount = 0.5, unit = "cup" },
@@ -395,6 +405,7 @@ cuisine = "african-caribbean"
 courses = ["mains"]
 moods = ["spicy", "smoky", "savoury"]
 weather = ["breezy-evening"]
+pairs_with = ["01a18c4a-5faa-7c6d-9b1e-0d3fb026c018", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Rice and peas, Fried plantains, Coleslaw
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "jerk-seasoning", amount = 3, unit = "tbsp" },
@@ -458,6 +469,7 @@ courses = ["mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["goat curry"]
+pairs_with = ["01a18c4a-5faa-7c6d-9b1e-0d3fb026c018", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Rice and peas, Fried plantains
 ingredients = [
   { id = "mutton", amount = 1.2, unit = "kg" },
   { id = "curry-powder", amount = 3, unit = "tbsp" },
@@ -493,6 +505,7 @@ plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 cuisine = "african-caribbean"
 courses = ["snacks-starters"]
 moods = ["spicy", "savoury", "comforting"]
+pairs_with = ["01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb", "01a18c22-48d9-7217-90ea-1e9143c5f867"]  # Fried plantains, Lemonade
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -529,6 +542,7 @@ cuisine = "african-caribbean"
 courses = ["mains"]
 moods = ["savoury", "sweet", "comforting"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c4a-5faa-7c6d-9b1e-0d3fb026c018", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Rice and peas, Fried plantains, Coleslaw
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "brown-sugar", amount = 2, unit = "tbsp" },

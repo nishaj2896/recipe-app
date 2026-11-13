@@ -16,6 +16,7 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["sweet", "savoury"]
 also_known_as = ["teriyaki chicken"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a", "01a18c12-059c-795e-86e7-3cf49987770d"]  # Miso soup, Cucumber sunomono, Edamame with sea salt
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "soy-sauce", amount = 4, unit = "tbsp" },
@@ -49,6 +50,7 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["sweet", "savoury"]
 also_known_as = ["teriyaki salmon"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Miso soup, Cucumber sunomono
 ingredients = [
   { id = "salmon", amount = 2, unit = "piece" },
   { id = "soy-sauce", amount = 3, unit = "tbsp" },
@@ -80,6 +82,7 @@ image = { file = "01a18c12-0581-7b81-9a6b-9632b57e5a6b.webp", sha256 = "998a05ba
 cuisine = "japanese"
 courses = ["mains"]
 moods = ["crispy", "savoury"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Miso soup, Cucumber sunomono
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -115,6 +118,7 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Miso soup, Cucumber sunomono
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -156,6 +160,7 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["chicken and egg rice bowl"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Miso soup, Cucumber sunomono
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -190,6 +195,7 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["savoury", "sweet", "comforting"]
 also_known_as = ["beef bowl"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-0597-7e5e-ac40-cfb172a0404a"]  # Miso soup, Tamagoyaki
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "beef", amount = 300, unit = "g" },
@@ -225,6 +231,7 @@ cuisine = "japanese"
 courses = ["soups"]
 moods = ["savoury", "light"]
 weather = ["under-the-weather"]
+pairs_with = ["01a18c12-059a-7721-81dd-7131e81407a3", "01a18c12-05a0-73a8-a766-96806251dc80"]  # Onigiri, Agedashi tofu
 ingredients = [
   { id = "miso", amount = 3, unit = "tbsp" },
   { id = "tofu", amount = 200, unit = "g" },
@@ -254,6 +261,7 @@ courses = ["soups", "mains"]
 moods = ["savoury", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["veg ramen"]
+pairs_with = ["01a18c12-059c-795e-86e7-3cf49987770d", "01a18c12-059e-722d-a067-310f47137a7d"]  # Edamame with sea salt, Vegetable tempura
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "vegetable-stock", amount = 4, unit = "cup" },
@@ -292,6 +300,7 @@ cuisine = "japanese"
 courses = ["soups", "mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
+pairs_with = ["01a18c0c-0c8b-7ec8-ace2-6083872a7596", "01a18c12-059c-795e-86e7-3cf49987770d"]  # Pan-fried potstickers, Edamame with sea salt
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
@@ -329,6 +338,7 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["savoury"]
 also_known_as = ["stir fried udon"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-059c-795e-86e7-3cf49987770d"]  # Miso soup, Edamame with sea salt
 ingredients = [
   { id = "udon", amount = 400, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -361,6 +371,7 @@ cook_minutes = 10
 cuisine = "japanese"
 courses = ["mains"]
 moods = ["savoury", "sweet"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-059c-795e-86e7-3cf49987770d"]  # Miso soup, Edamame with sea salt
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "pork-belly", amount = 150, unit = "g" },
@@ -395,6 +406,7 @@ cuisine = "japanese"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "crispy"]
 also_known_as = ["japanese pancake"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Miso soup, Cucumber sunomono
 ingredients = [
   { id = "all-purpose-flour", amount = 0.75, unit = "cup" },
   { id = "baking-powder", amount = 0.5, unit = "tsp" },
@@ -461,6 +473,7 @@ cuisine = "japanese"
 courses = ["snacks-starters"]
 moods = ["savoury", "light"]
 also_known_as = ["rice ball"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-0597-7e5e-ac40-cfb172a0404a"]  # Miso soup, Tamagoyaki
 ingredients = [
   { id = "sushi-rice", amount = 1.5, unit = "cup" },
   { id = "canned-tuna", amount = 1, unit = "can" },
@@ -492,6 +505,7 @@ cuisine = "japanese"
 courses = ["snacks-starters"]
 moods = ["savoury", "light"]
 also_known_as = ["edamame"]
+pairs_with = ["01a18c22-48c0-7d0a-8ea9-de8935531e63", "01a18c12-05a3-729e-b778-26e6d8ef394a", "01a18c12-058a-7d1f-979e-239d8d907c5e"]  # Teriyaki tofu bowl, Cucumber sunomono, Miso soup
 ingredients = [
   { id = "edamame", amount = 400, unit = "g" },
   { id = "salt", to_taste = true },
@@ -515,6 +529,7 @@ cuisine = "japanese"
 courses = ["snacks-starters"]
 moods = ["crispy", "light"]
 also_known_as = ["tempura"]
+pairs_with = ["01a18c12-058c-79a2-bbdb-2322eab198b0", "01a18c22-48f3-7f62-9b64-c108b0578897", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Vegetable ramen, Zaru soba, Cucumber sunomono
 ingredients = [
   { id = "sweet-potato", amount = 1, unit = "medium" },
   { id = "zucchini", amount = 1, unit = "medium" },
@@ -549,6 +564,7 @@ cook_minutes = 25
 cuisine = "japanese"
 courses = ["snacks-starters"]
 moods = ["savoury", "crispy"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-059a-7721-81dd-7131e81407a3"]  # Miso soup, Onigiri
 ingredients = [
   { id = "tofu", amount = 400, unit = "g" },
   { id = "potato-starch", amount = 0.33, unit = "cup" },
@@ -612,6 +628,7 @@ cuisine = "korean"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["bibim bap"]
+pairs_with = ["01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c12-05b8-7ce9-be22-d87e34acc693"]  # Kongnamul muchim, Doenjang jjigae
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "beef", amount = 250, unit = "g" },
@@ -653,6 +670,7 @@ cuisine = "korean"
 courses = ["mains", "rice-breads"]
 moods = ["spicy", "tangy", "savoury"]
 also_known_as = ["kimchi bokkeumbap"]
+pairs_with = ["01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05ba-797e-a429-511c8aa7595c"]  # Gyeran mari, Kongnamul muchim
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "kimchi", amount = 1, unit = "cup" },
@@ -686,6 +704,7 @@ cuisine = "korean"
 courses = ["mains", "sides"]
 moods = ["savoury", "sweet"]
 also_known_as = ["chapchae"]
+pairs_with = ["01a18c12-05ac-7ede-bdd7-28382fdd8332", "01a18c12-05ba-797e-a429-511c8aa7595c"]  # Bulgogi, Kongnamul muchim
 ingredients = [
   { id = "sweet-potato-noodles", amount = 200, unit = "g" },
   { id = "beef", amount = 200, unit = "g" },
@@ -726,6 +745,7 @@ cuisine = "korean"
 courses = ["mains"]
 moods = ["sweet", "savoury", "smoky"]
 also_known_as = ["beef bulgogi"]
+pairs_with = ["01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05b8-7ce9-be22-d87e34acc693"]  # Kongnamul muchim, Gyeran mari, Doenjang jjigae
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "pear", amount = 1, unit = "small" },
@@ -762,6 +782,7 @@ courses = ["soups", "mains"]
 moods = ["spicy", "tangy", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["kimchi stew"]
+pairs_with = ["01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05ba-797e-a429-511c8aa7595c"]  # Gyeran mari, Kongnamul muchim
 ingredients = [
   { id = "kimchi", amount = 2, unit = "cup" },
   { id = "pork-belly", amount = 250, unit = "g" },
@@ -796,6 +817,7 @@ cuisine = "korean"
 courses = ["snacks-starters"]
 moods = ["spicy", "sweet", "comforting"]
 also_known_as = ["topokki", "ddukbokki"]
+pairs_with = ["01a18c12-05b2-739b-9fe9-2cafc76f1bc3", "01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05ba-797e-a429-511c8aa7595c"]  # Korean fried chicken, Gyeran mari, Kongnamul muchim
 ingredients = [
   { id = "korean-rice-cakes", amount = 500, unit = "g" },
   { id = "gochujang", amount = 3, unit = "tbsp" },
@@ -831,6 +853,7 @@ cuisine = "korean"
 courses = ["mains", "snacks-starters"]
 moods = ["crispy", "spicy", "sweet"]
 also_known_as = ["yangnyeom chicken"]
+pairs_with = ["01a18c12-05b0-7c66-ab75-c9c955089d41", "01a18c12-05ba-797e-a429-511c8aa7595c"]  # Tteokbokki, Kongnamul muchim
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "potato-starch", amount = 0.75, unit = "cup" },
@@ -895,6 +918,7 @@ courses = ["soups", "mains"]
 moods = ["savoury", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["soybean paste stew"]
+pairs_with = ["01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05a3-729e-b778-26e6d8ef394a"]  # Kongnamul muchim, Gyeran mari, Cucumber sunomono
 ingredients = [
   { id = "doenjang", amount = 3, unit = "tbsp" },
   { id = "tofu", amount = 300, unit = "g" },

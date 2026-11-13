@@ -46,6 +46,7 @@ cuisine = "north-indian"
 courses = ["breakfast", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["anda bhurji"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a188ac-0597-7bfe-8ab8-24300d82453f", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Phulka, Plain paratha, Kachumber salad
 ingredients = [
   { id = "egg", amount = 4, unit = "piece" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -76,6 +77,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["anda masala"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c10-76ca-bf43-23fffb096acd", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Phulka, Jeera rice, Kachumber salad
 ingredients = [
   { id = "egg", amount = 6, unit = "large" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -175,6 +177,7 @@ cook_minutes = 20
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c29-7980-a562-3e1ffcc1a26f"]  # Cucumber raita, Onion tomato chutney
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "egg", amount = 3, unit = "large" },
@@ -239,6 +242,7 @@ image = { file = "01a18ba9-fdd8-7039-8578-97176286baee.webp", sha256 = "e16455d5
 cuisine = "street-food"
 courses = ["snacks-starters", "breakfast"]
 moods = ["spicy", "savoury", "crispy"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cd5-7b59-9694-5bb15b2ee30c"]  # Masala chai, Mint chutney
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -271,6 +275,7 @@ cuisine = "street-food"
 courses = ["snacks-starters", "breakfast"]
 moods = ["fresh-herby", "tangy", "savoury"]
 also_known_as = ["bombay sandwich", "veg sandwich"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Mint chutney, Cold coffee
 ingredients = [
   { id = "white-bread", amount = 6, unit = "slice" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -302,6 +307,7 @@ cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["spicy", "creamy", "savoury"]
 also_known_as = ["chilli cheese toast"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Masala chai, Tomato soup
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "processed-cheese", amount = 1, unit = "cup" },
@@ -331,6 +337,7 @@ courses = ["snacks-starters"]
 moods = ["spicy", "savoury", "comforting"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["maggi"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chai, Cold coffee
 ingredients = [
   { id = "instant-noodles", amount = 2, unit = "piece" },
   { id = "onion", amount = 1, unit = "small" },
@@ -457,6 +464,7 @@ image = { file = "01a18ba9-fde7-700d-907b-733f5b8e95ad.webp", sha256 = "a5e2fdb6
 cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Masala chai
 ingredients = [
   { id = "flattened-rice", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -490,6 +498,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "savoury", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["veg cutlet"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Masala chai
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -526,6 +535,7 @@ cuisine = "street-food"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["paneer roll", "paneer kati roll"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -561,6 +571,7 @@ cuisine = "west-indian"
 courses = ["snacks-starters", "breakfast"]
 moods = ["savoury", "tangy", "light"]
 also_known_as = ["sooji dhokla", "suji dhokla"]
+pairs_with = ["01a18b54-81e2-7b3b-9004-93f5c851d16f", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Coriander chutney, Masala chai
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "curd", amount = 0.75, unit = "cup" },

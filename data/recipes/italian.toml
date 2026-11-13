@@ -16,6 +16,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "spicy", "light"]
 also_known_as = ["aglio olio", "spaghetti aglio e olio"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Caprese salad, Bruschetta
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "garlic", amount = 6, unit = "clove" },
@@ -47,6 +48,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
 also_known_as = ["arrabiata", "penne arrabiata"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -78,6 +80,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 also_known_as = ["carbonara"]
+pairs_with = ["01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Panzanella, Bruschetta
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "bacon", amount = 150, unit = "g" },
@@ -110,6 +113,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["spag bol"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 500, unit = "g" },
   { id = "beef-mince", amount = 500, unit = "g" },
@@ -148,6 +152,7 @@ image = { file = "01a18bbd-3cd5-761a-ac0f-c9043cb35d5d.webp", sha256 = "ca51a0e5
 cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Caprese salad, Bruschetta
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "pecorino", amount = 120, unit = "g" },
@@ -176,6 +181,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "comforting"]
 also_known_as = ["alfredo pasta", "white sauce pasta"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "butter", amount = 6, unit = "tbsp" },
@@ -204,6 +210,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["tangy", "fresh-herby", "light"]
 also_known_as = ["tomato pasta"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -234,6 +241,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["fresh-herby", "savoury"]
 also_known_as = ["pasta al pesto"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Caprese salad, Bruschetta
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "basil", amount = 2, unit = "cup" },
@@ -262,6 +270,7 @@ cook_minutes = 20
 cuisine = "italian"
 courses = ["mains"]
 moods = ["fresh-herby", "light"]
+pairs_with = ["01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Panzanella, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "asparagus", amount = 200, unit = "g" },
@@ -297,6 +306,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "tangy"]
 also_known_as = ["vodka pasta"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "vodka", amount = 0.25, unit = "cup" },
@@ -332,6 +342,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "lasagne-sheets", amount = 250, unit = "g" },
   { id = "beef-mince", amount = 750, unit = "g" },
@@ -376,6 +387,7 @@ courses = ["mains"]
 moods = ["savoury", "creamy", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["veg lasagna", "vegetable lasagna"]
+pairs_with = ["01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Panzanella, Focaccia
 ingredients = [
   { id = "lasagne-sheets", amount = 250, unit = "g" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -414,6 +426,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 450, unit = "g" },
   { id = "sausages", amount = 300, unit = "g" },
@@ -450,6 +463,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Caprese salad, Bruschetta
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "mushroom", amount = 400, unit = "g" },
@@ -486,6 +500,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "comforting"]
 also_known_as = ["saffron risotto"]
+pairs_with = ["01a18c1a-e28a-74e5-92b6-a1a8ec7dfb8d", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Osso buco, Caprese salad
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "saffron", amount = 2, unit = "pinch" },
@@ -515,6 +530,7 @@ cook_minutes = 30
 cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "fresh-herby", "light"]
+pairs_with = ["01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Panzanella, Bruschetta
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "peas", amount = 1.5, unit = "cup" },
@@ -549,6 +565,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["gnocchi"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d0b-7ac3-b229-7b08b4010644"]  # Caprese salad, Panzanella
 ingredients = [
   { id = "gnocchi", amount = 500, unit = "g" },
   { id = "butter", amount = 6, unit = "tbsp" },
@@ -579,6 +596,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy"]
 also_known_as = ["pizza margherita", "cheese pizza"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d0b-7ac3-b229-7b08b4010644"]  # Caprese salad, Panzanella
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -612,6 +630,7 @@ cuisine = "italian"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "creamy"]
 also_known_as = ["white pizza"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3cfb-7ae2-8e94-3abb35af35c9"]  # Caprese salad, Panzanella, Minestrone
 ingredients = [
   { id = "00-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -643,6 +662,7 @@ cuisine = "italian"
 courses = ["snacks-starters"]
 moods = ["fresh-herby", "tangy", "crispy"]
 weather = ["just-pleasant"]
+pairs_with = ["01a15175-3c21-75ea-9433-d3744b9ac581", "01a15175-3c20-7774-8764-e8cf6dcf654a", "01a18bbd-3cfb-7ae2-8e94-3abb35af35c9"]  # Penne arrabbiata, Pasta aglio e olio, Minestrone
 ingredients = [
   { id = "baguette", amount = 1, unit = "piece" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -700,6 +720,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "under-the-weather"]
 also_known_as = ["minestrone soup"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Focaccia, Bruschetta
 ingredients = [
   { id = "onion", amount = 1, unit = "medium" },
   { id = "carrot", amount = 2, unit = "medium" },
@@ -740,6 +761,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["tuscan bread soup"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Focaccia, Bruschetta
 ingredients = [
   { id = "cannellini-beans", amount = 2, unit = "can" },
   { id = "kale", amount = 300, unit = "g" },
@@ -775,6 +797,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "crispy"]
 also_known_as = ["chicken parmesan", "chicken parm"]
+pairs_with = ["01a18bbd-3cd2-7037-a970-caa33cd9c967", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Spaghetti bolognese, Caprese salad
 ingredients = [
   { id = "chicken", amount = 4, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -809,6 +832,7 @@ image = { file = "01a18bbd-3d02-7f00-92c1-0cf2e4b0b53c.webp", sha256 = "e87c58ef
 cuisine = "italian"
 courses = ["mains"]
 moods = ["tangy", "savoury", "light"]
+pairs_with = ["01a15175-3c20-7774-8764-e8cf6dcf654a", "01a18bbd-3d0b-7ac3-b229-7b08b4010644"]  # Pasta aglio e olio, Panzanella
 ingredients = [
   { id = "chicken", amount = 4, unit = "piece" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -842,6 +866,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "comforting"]
 also_known_as = ["melanzane alla parmigiana", "aubergine parmigiana"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3d0b-7ac3-b229-7b08b4010644"]  # Focaccia, Panzanella
 ingredients = [
   { id = "brinjal", amount = 3, unit = "medium" },
   { id = "passata", amount = 3, unit = "cup" },
@@ -871,6 +896,7 @@ cook_minutes = 25
 cuisine = "italian"
 courses = ["breakfast", "mains"]
 moods = ["savoury", "light"]
+pairs_with = ["01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Panzanella, Focaccia, Caprese salad
 ingredients = [
   { id = "egg", amount = 8, unit = "large" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -1047,6 +1073,7 @@ courses = ["soups", "mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["pasta fazool"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf6-7749-91f2-7e78cdf3ef7e"]  # Focaccia, Bruschetta
 ingredients = [
   { id = "borlotti-beans", amount = 2, unit = "can" },
   { id = "pasta", amount = 200, unit = "g" },
@@ -1082,6 +1109,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "fresh-herby"]
 also_known_as = ["prawn scampi"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Focaccia, Caprese salad
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "pasta", amount = 400, unit = "g" },
