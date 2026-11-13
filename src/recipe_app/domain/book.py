@@ -1,5 +1,6 @@
 """The recipe files, data/recipes/*.toml, parsed and checked (ADR-0008 rules 2 to 4)."""
 
+import re
 import tomllib
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, replace
@@ -64,6 +65,7 @@ def parse_recipe_book(
         # Needs every id parsed, or one bad recipe would also show as a
         # missing pairing.
         _check_pairings(recipes, problems)
+        _check_aliases(recipes, problems)
     if problems:
         raise RecipeError(problems)
     return RecipeBook(recipes=tuple(recipes), content=MappingProxyType(content))
@@ -170,6 +172,35 @@ def _check_pairings(recipes: list[Recipe], problems: list[str]) -> None:
             for paired in recipe.tags.pairs_with
             if paired not in known
         )
+
+
+def search_key(text: str) -> str:
+    """Normalized, punctuation folded to spaces: "Peri-peri" -> "peri peri"."""
+    return " ".join(re.sub(r"[^\w]+", " ", normalize(text)).split())
+
+
+def _check_aliases(recipes: list[Recipe], problems: list[str]) -> None:
+    """An alias finds one recipe only (ADR-0012 rule 3): it is no recipe's
+    name, its own included, and no other recipe's alias, compared by search_key.
+    """
+    names = {search_key(recipe.name): recipe for recipe in recipes}
+    owners: dict[str, Recipe] = {}
+    for recipe in recipes:
+        where = f"recipe {recipe.name!r} ({recipe.id})"
+        for alias in recipe.tags.also_known_as:
+            key = search_key(alias)
+            if key in names:
+                named = names[key]
+                other = "this recipe" if named is recipe else repr(named.name)
+                problems.append(
+                    f"{where}: also_known_as {alias!r} is the name of {other}"
+                )
+            elif key in owners and owners[key] is not recipe:
+                problems.append(
+                    f"{where}: also_known_as {alias!r} is also an alias of "
+                    f"{owners[key].name!r}"
+                )
+            owners.setdefault(key, recipe)
 
 
 def _entries(
