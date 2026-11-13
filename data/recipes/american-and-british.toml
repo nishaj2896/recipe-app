@@ -17,6 +17,7 @@ courses = ["mains"]
 moods = ["creamy", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["mac and cheese", "mac n cheese"]
+pairs_with = ["01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Roasted vegetable salad, Garlic butter mushrooms, Coleslaw
 ingredients = [
   { id = "pasta", amount = 300, unit = "g" },
   { id = "cheddar", amount = 200, unit = "g" },
@@ -47,6 +48,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["cheeseburger"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691", "01a18c22-48dd-7b2f-9eb2-5fb9c0306f0a"]  # Coleslaw, Potato salad, Strawberry milkshake
 ingredients = [
   { id = "beef-mince", amount = 600, unit = "g" },
   { id = "burger-buns", amount = 4, unit = "piece" },
@@ -84,6 +86,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["vegetable burger"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691", "01a18c22-48d9-7217-90ea-1e9143c5f867"]  # Coleslaw, Potato salad, Lemonade
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "can" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -121,6 +124,7 @@ courses = ["snacks-starters", "breakfast"]
 moods = ["savoury", "creamy", "comforting"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["cheese toastie", "grilled cheese"]
+pairs_with = ["01a15175-3c28-7e20-acbd-34fc9479bf29", "01a18c22-48a7-7e7c-8eb5-069a3ed8724b", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Tomato soup, Roasted pumpkin soup, Coleslaw
 ingredients = [
   { id = "white-bread", amount = 2, unit = "slice" },
   { id = "cheddar", amount = 0.75, unit = "cup" },
@@ -145,6 +149,7 @@ image = { file = "01a18c1e-2c1f-7a26-a465-c9f9783f9425.webp", sha256 = "0af6ece9
 cuisine = "american-british"
 courses = ["snacks-starters"]
 moods = ["savoury", "hearty"]
+pairs_with = ["01a18c1e-2c4b-7dfc-a7c9-42e2549bc691", "01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c22-48d6-73e1-ad5e-9405ad8e716c"]  # Potato salad, Coleslaw, Iced lemon tea
 ingredients = [
   { id = "white-bread", amount = 6, unit = "slice" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -175,6 +180,7 @@ cuisine = "american-british"
 courses = ["snacks-starters", "breakfast"]
 moods = ["savoury", "crispy"]
 also_known_as = ["bacon lettuce tomato sandwich"]
+pairs_with = ["01a18c1e-2c4b-7dfc-a7c9-42e2549bc691", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Potato salad, Tomato soup
 ingredients = [
   { id = "bacon", amount = 6, unit = "slice" },
   { id = "lettuce", amount = 4, unit = "leaf" },
@@ -204,6 +210,7 @@ cuisine = "american-british"
 courses = ["snacks-starters"]
 moods = ["spicy", "tangy", "savoury"]
 also_known_as = ["buffalo wings", "hot wings"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c47-7cbd-8480-1d9e29512b63", "01a18c22-48d9-7217-90ea-1e9143c5f867"]  # Coleslaw, Cobb salad, Lemonade
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "baking-powder", amount = 1, unit = "tbsp" },
@@ -240,6 +247,7 @@ courses = ["mains"]
 moods = ["crispy", "savoury", "hearty"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["southern fried chicken"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a15175-3c22-7b07-abf6-87ad9705c184"]  # Coleslaw, Cornbread, Macaroni and cheese
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "buttermilk", amount = 2, unit = "cup" },
@@ -273,6 +281,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["smoky", "sweet", "savoury"]
 also_known_as = ["bbq pulled chicken", "pulled chicken"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691"]  # Coleslaw, Cornbread, Potato salad
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "barbecue-sauce", amount = 0.75, unit = "cup" },
@@ -306,6 +315,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c1e-2c42-74c3-bbf2-53e1786b026a", "01a18c1e-2c45-70d5-872a-680de59f4bec", "01a18c20-05e8-76f5-9e83-2ff6f7cb10ea"]  # Corn chowder, Caesar salad, Dinner rolls
 ingredients = [
   { id = "beef-mince", amount = 900, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -343,6 +353,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["creamy", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
+pairs_with = ["01a18c1e-2c45-70d5-872a-680de59f4bec", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f"]  # Caesar salad, Garlic butter mushrooms
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "puff-pastry", amount = 320, unit = "g" },
@@ -381,6 +392,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["shepherds pie"]
+pairs_with = ["01a18c1e-2c45-70d5-872a-680de59f4bec", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f"]  # Caesar salad, Garlic butter mushrooms
 ingredients = [
   { id = "lamb-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -420,6 +432,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
+pairs_with = ["01a18c1e-2c45-70d5-872a-680de59f4bec", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f"]  # Caesar salad, Garlic butter mushrooms
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -461,6 +474,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["crispy", "savoury", "hearty"]
 also_known_as = ["fish n chips"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c22-48d9-7217-90ea-1e9143c5f867"]  # Coleslaw, Lemonade
 ingredients = [
   { id = "cod", amount = 4, unit = "piece" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -495,6 +509,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["sausage and mash"]
+pairs_with = ["01a18c22-48c6-7ff9-93cf-4d1fe32b816f", "01a18c1e-2c45-70d5-872a-680de59f4bec"]  # Garlic butter mushrooms, Caesar salad
 ingredients = [
   { id = "sausages", amount = 8, unit = "piece" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -587,6 +602,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["grey-gloomy"]
 also_known_as = ["baked potato"]
+pairs_with = ["01a15175-3c28-7e20-acbd-34fc9479bf29", "01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Tomato soup, Roasted vegetable salad, Coleslaw
 ingredients = [
   { id = "potato", amount = 2, unit = "large" },
   { id = "baked-beans", amount = 1, unit = "can" },
@@ -616,6 +632,7 @@ cuisine = "american-british"
 courses = ["soups"]
 moods = ["savoury", "comforting", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde"]  # Dinner rolls, Grilled cheese sandwich
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg-noodles", amount = 150, unit = "g" },
@@ -653,6 +670,7 @@ courses = ["soups"]
 moods = ["creamy", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["new england clam chowder"]
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c45-70d5-872a-680de59f4bec"]  # Dinner rolls, Caesar salad
 ingredients = [
   { id = "clams", amount = 1, unit = "kg" },
   { id = "bacon", amount = 4, unit = "slice" },
@@ -689,6 +707,7 @@ cuisine = "american-british"
 courses = ["soups"]
 moods = ["creamy", "comforting", "sweet"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
+pairs_with = ["01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde"]  # Cornbread, Grilled cheese sandwich
 ingredients = [
   { id = "sweetcorn", amount = 3, unit = "cup" },
   { id = "potato", amount = 400, unit = "g" },
@@ -853,6 +872,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "sweet", "comforting"]
 also_known_as = ["sloppy joe"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691"]  # Coleslaw, Potato salad
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -888,6 +908,7 @@ image = { file = "01a18c1e-2c50-70ae-b308-15955fa8465d.webp", sha256 = "a34f935c
 cuisine = "american-british"
 courses = ["mains", "breakfast"]
 moods = ["savoury", "sweet", "crispy"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c22-48d6-73e1-ad5e-9405ad8e716c"]  # Coleslaw, Iced lemon tea
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "buttermilk", amount = 1, unit = "cup" },

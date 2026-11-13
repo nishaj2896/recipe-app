@@ -16,6 +16,7 @@ cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["savoury", "spicy"]
 also_known_as = ["veg hakka noodles", "veg noodles"]
+pairs_with = ["01a18ba9-fda7-7085-993c-3f33685f2bd0", "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e"]  # Vegetable manchurian, Manchow soup
 ingredients = [
   { id = "hakka-noodles", amount = 300, unit = "g" },
   { id = "cabbage", amount = 150, unit = "g" },
@@ -51,6 +52,7 @@ plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
 cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["savoury"]
+pairs_with = ["01a18ba9-fdab-7f88-b7ce-d7c9ec4c2f29", "01a18ba9-fda7-7085-993c-3f33685f2bd0", "01a18ba9-fda9-743f-9389-d41d9343ddd3"]  # Chilli chicken, Vegetable manchurian, Chilli paneer
 ingredients = [
   { id = "egg", amount = 3, unit = "piece" },
   { id = "rice", amount = 250, unit = "g" },
@@ -81,6 +83,7 @@ image = { file = "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c.webp", sha256 = "bb1cfab9
 cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["savoury", "spicy"]
+pairs_with = ["01a18ba9-fdab-7f88-b7ce-d7c9ec4c2f29", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Chilli chicken, Hot and sour soup
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -118,6 +121,7 @@ cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["szechuan noodles", "schezuan noodles"]
+pairs_with = ["01a18ba9-fda9-743f-9389-d41d9343ddd3", "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e"]  # Chilli paneer, Manchow soup
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "cabbage", amount = 1, unit = "cup" },
@@ -154,6 +158,7 @@ cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["savoury"]
 also_known_as = ["veg fried rice"]
+pairs_with = ["01a18ba9-fda7-7085-993c-3f33685f2bd0", "01a18ba9-fda9-743f-9389-d41d9343ddd3"]  # Vegetable manchurian, Chilli paneer
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -189,6 +194,7 @@ cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["szechuan fried rice"]
+pairs_with = ["01a18ba9-fda9-743f-9389-d41d9343ddd3", "01a18ba9-fda5-7a51-ae40-a5af6d7795ce"]  # Chilli paneer, Gobi manchurian
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -220,6 +226,7 @@ cook_minutes = 15
 cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["savoury"]
+pairs_with = ["01a18ba9-fdab-7f88-b7ce-d7c9ec4c2f29", "01a18ba9-fdc4-7a74-802c-e97f486d751a"]  # Chilli chicken, Sweetcorn soup
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -256,6 +263,7 @@ courses = ["snacks-starters"]
 moods = ["spicy", "sweet-sour", "crispy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["cauliflower manchurian"]
+pairs_with = ["01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Vegetable fried rice, Hot and sour soup
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "cornflour", amount = 0.33, unit = "cup" },
@@ -296,6 +304,7 @@ courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["veg manchurian"]
+pairs_with = ["01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7", "01a15175-3c23-770c-afb9-16d99fa0592d"]  # Vegetable fried rice, Vegetable hakka noodles
 ingredients = [
   { id = "cabbage", amount = 2, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -334,6 +343,7 @@ courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["paneer chilli"]
+pairs_with = ["01a15175-3c23-770c-afb9-16d99fa0592d", "01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7"]  # Vegetable hakka noodles, Vegetable fried rice
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "cornflour", amount = 3, unit = "tbsp" },
@@ -372,6 +382,7 @@ cuisine = "indo-chinese"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a18ba9-fda2-7f0b-a091-d063bc307813", "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c"]  # Chicken fried rice, Chicken hakka noodles
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -412,6 +423,7 @@ cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a15175-3c12-7238-998a-d2b358a0c24e", "01a15175-3c11-7d06-89b9-1b9f415eeffd"]  # Curd rice, Lemon rice
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 3, unit = "tbsp" },
@@ -447,6 +459,7 @@ courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["cauliflower 65"]
+pairs_with = ["01a15175-3c12-7238-998a-d2b358a0c24e", "01a15175-3c11-7d06-89b9-1b9f415eeffd"]  # Curd rice, Lemon rice
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -479,6 +492,7 @@ cook_minutes = 25
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "sweet", "crispy"]
+pairs_with = ["01a18ba9-fda2-7f0b-a091-d063bc307813", "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c"]  # Chicken fried rice, Chicken hakka noodles
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -516,6 +530,7 @@ courses = ["snacks-starters"]
 moods = ["sweet", "spicy", "crispy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["honey chilli potatoes"]
+pairs_with = ["01a18ba9-fdc4-7a74-802c-e97f486d751a", "01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7"]  # Sweetcorn soup, Vegetable fried rice
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "cornflour", amount = 4, unit = "tbsp" },
@@ -550,6 +565,7 @@ cook_minutes = 20
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7", "01a15175-3c23-770c-afb9-16d99fa0592d"]  # Vegetable fried rice, Vegetable hakka noodles
 ingredients = [
   { id = "mushroom", amount = 300, unit = "g" },
   { id = "cornflour", amount = 4, unit = "tbsp" },
@@ -585,6 +601,7 @@ cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a15175-3c12-7238-998a-d2b358a0c24e", "01a15175-3c11-7d06-89b9-1b9f415eeffd"]  # Curd rice, Lemon rice
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -617,6 +634,7 @@ cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["sweet-sour", "crispy"]
 also_known_as = ["chop suey"]
+pairs_with = ["01a18ba9-fdc4-7a74-802c-e97f486d751a", "01a18ba9-fdc8-7466-afa0-8148214eb406"]  # Sweetcorn soup, Crispy corn
 ingredients = [
   { id = "hakka-noodles", amount = 150, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -656,6 +674,7 @@ cook_minutes = 25
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
+pairs_with = ["01a18ba9-fda2-7f0b-a091-d063bc307813", "01a18ba9-fda0-7088-9d35-66b6ea197a87"]  # Chicken fried rice, Schezwan fried rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -688,6 +707,7 @@ cuisine = "indo-chinese"
 courses = ["soups"]
 moods = ["spicy", "tangy"]
 weather = ["rainy-day-cosy", "under-the-weather"]
+pairs_with = ["01a18ba9-fdc8-7466-afa0-8148214eb406", "01a18ba9-fdb4-70f4-b745-a6f112b1e9d1"]  # Crispy corn, Honey chilli potato
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },
@@ -724,6 +744,7 @@ cuisine = "indo-chinese"
 courses = ["soups"]
 moods = ["spicy", "savoury", "crispy"]
 weather = ["rainy-day-cosy", "under-the-weather"]
+pairs_with = ["01a18ba9-fdc8-7466-afa0-8148214eb406", "01a18ba9-fdb6-7f73-ac42-3bcb45916094"]  # Crispy corn, Chilli mushroom
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },
@@ -765,6 +786,7 @@ courses = ["soups"]
 moods = ["sweet", "comforting", "light"]
 weather = ["rainy-day-cosy", "under-the-weather"]
 also_known_as = ["sweet corn soup"]
+pairs_with = ["01a18ba9-fdc8-7466-afa0-8148214eb406", "01a18ba9-fdb4-70f4-b745-a6f112b1e9d1"]  # Crispy corn, Honey chilli potato
 ingredients = [
   { id = "sweetcorn", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "small" },
@@ -798,6 +820,7 @@ cook_minutes = 15
 cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18ba9-fda9-743f-9389-d41d9343ddd3", "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e"]  # Chilli paneer, Manchow soup
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "garlic", amount = 10, unit = "clove" },
@@ -829,6 +852,7 @@ cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a18ba9-fdc4-7a74-802c-e97f486d751a", "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e"]  # Sweetcorn soup, Manchow soup
 ingredients = [
   { id = "sweetcorn", amount = 2, unit = "cup" },
   { id = "cornflour", amount = 3, unit = "tbsp" },
@@ -862,6 +886,7 @@ cuisine = "indo-chinese"
 courses = ["mains", "rice-breads"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["triple szechuan rice"]
+pairs_with = ["01a18ba9-fdc1-7b4e-ab76-379c6e5f963e", "01a18ba9-fdc8-7466-afa0-8148214eb406"]  # Manchow soup, Crispy corn
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "hakka-noodles", amount = 100, unit = "g" },

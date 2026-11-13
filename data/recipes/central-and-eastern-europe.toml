@@ -17,6 +17,7 @@ courses = ["mains", "soups"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["gulyas", "hungarian goulash"]
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Dinner rolls, Coleslaw
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -56,6 +57,7 @@ courses = ["mains"]
 moods = ["creamy", "spicy", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["paprikash"]
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c45-70d5-872a-680de59f4bec"]  # Dinner rolls, Caesar salad
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -92,6 +94,7 @@ cuisine = "european"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "comforting"]
 also_known_as = ["pierogies", "perogies"]
+pairs_with = ["01a18c4f-8e3f-75c2-bb6a-2fea6fbd422c", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Borscht, Coleslaw
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "egg", amount = 1, unit = "large" },
@@ -128,6 +131,7 @@ courses = ["soups"]
 moods = ["tangy", "sweet", "comforting"]
 weather = ["grey-gloomy"]
 also_known_as = ["borsch", "beetroot soup"]
+pairs_with = ["01a18c4f-8e3d-7b71-8c32-bf5237331077", "01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c1a-e24b-7049-9abc-36ca76194a3d"]  # Pierogi, Dinner rolls, Focaccia, Lentil salad with feta
 ingredients = [
   { id = "beetroot", amount = 4, unit = "medium" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -167,6 +171,7 @@ cuisine = "european"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c22-48c6-7ff9-93cf-4d1fe32b816f", "01a18c20-05e8-76f5-9e83-2ff6f7cb10ea"]  # Garlic butter mushrooms, Dinner rolls
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -202,6 +207,7 @@ cuisine = "european"
 courses = ["mains"]
 moods = ["crispy", "savoury"]
 also_known_as = ["wiener schnitzel"]
+pairs_with = ["01a18c1e-2c4b-7dfc-a7c9-42e2549bc691", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Potato salad, Coleslaw
 ingredients = [
   { id = "pork", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -233,6 +239,7 @@ cuisine = "european"
 courses = ["snacks-starters", "sides"]
 moods = ["crispy", "savoury"]
 also_known_as = ["potato latkes", "potato pancakes"]
+pairs_with = ["01a18c4f-8e3f-75c2-bb6a-2fea6fbd422c", "01a18c1a-e262-7e5c-b443-f2989481b98a"]  # Borscht, Potato leek soup
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -265,6 +272,7 @@ courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["kottbullar"]
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Dinner rolls, Coleslaw
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "breadcrumbs", amount = 0.5, unit = "cup" },
@@ -304,6 +312,7 @@ courses = ["mains"]
 moods = ["creamy", "savoury", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["kaesespaetzle", "spaetzle", "cheese spaetzle"]
+pairs_with = ["01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Roasted vegetable salad, Greek salad
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },
@@ -338,6 +347,7 @@ courses = ["mains"]
 moods = ["savoury", "tangy", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["golabki", "stuffed cabbage"]
+pairs_with = ["01a18c20-05e8-76f5-9e83-2ff6f7cb10ea", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691"]  # Dinner rolls, Potato salad
 ingredients = [
   { id = "cabbage", amount = 1, unit = "small-head" },
   { id = "beef-mince", amount = 500, unit = "g" },

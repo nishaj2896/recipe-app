@@ -50,12 +50,15 @@ def repository(request: pytest.FixtureRequest) -> Iterator[RecipeRepository]:
 
 
 def test_detail_round_trips_for_every_recipe(repository: RecipeRepository) -> None:
-    """Same recipe; amounts survive numeric(9, 3), and steps and amounts keep
-    their order.
+    """Same recipe; amounts survive numeric(9, 3), and steps, amounts and
+    pairings keep their order.
     """
+    by_id = {recipe.id: recipe for recipe in SEED}
     for recipe in SEED:
         assert asyncio.run(repository.detail(recipe.id)) == RecipeWithContent(
-            recipe=recipe, content=BOOK.content[recipe.id]
+            recipe=recipe,
+            content=BOOK.content[recipe.id],
+            pairs=tuple(by_id[pair] for pair in recipe.tags.pairs_with),
         )
 
 

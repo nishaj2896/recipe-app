@@ -16,6 +16,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury", "sweet"]
 also_known_as = ["gong bao chicken", "kung po chicken"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Egg fried rice, Garlic bok choy, Hot and sour soup
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.5, unit = "cup" },
@@ -56,6 +57,7 @@ courses = ["mains"]
 moods = ["spicy", "savoury"]
 weather = ["warming"]
 also_known_as = ["ma po tofu"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Egg fried rice, Garlic bok choy
 ingredients = [
   { id = "silken-tofu", amount = 400, unit = "g" },
   { id = "beef-mince", amount = 150, unit = "g" },
@@ -91,6 +93,7 @@ image = { file = "01a18bba-7860-7ecc-b429-d4ea871652b1.webp", sha256 = "ea2ce788
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["sweet-sour", "crispy"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399"]  # Egg fried rice, Garlic bok choy, Egg drop soup
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -129,6 +132,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["sweet-sour", "crispy"]
 also_known_as = ["gu lao rou"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Egg fried rice, Garlic bok choy
 ingredients = [
   { id = "pork", amount = 500, unit = "g" },
   { id = "egg", amount = 1, unit = "large" },
@@ -167,6 +171,7 @@ image = { file = "01a18bba-7864-7566-a0af-e8db965d1e38.webp", sha256 = "dcdee715
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399"]  # Egg fried rice, Egg drop soup
 ingredients = [
   { id = "beef", amount = 400, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -204,6 +209,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury"]
 also_known_as = ["chowmein"]
+pairs_with = ["01a18c0c-0c8b-7ec8-ace2-6083872a7596", "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399"]  # Pan-fried potstickers, Egg drop soup
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -239,6 +245,7 @@ cook_minutes = 12
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury"]
+pairs_with = ["01a18c0c-0c8b-7ec8-ace2-6083872a7596", "01a18c0c-0c86-76cd-838f-e85d444f482c"]  # Pan-fried potstickers, Wonton soup
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "mushroom", amount = 150, unit = "g" },
@@ -276,6 +283,7 @@ cuisine = "chinese"
 courses = ["rice-breads", "mains"]
 moods = ["savoury"]
 also_known_as = ["yeung chow fried rice", "special fried rice"]
+pairs_with = ["01a18bba-7860-7ecc-b429-d4ea871652b1", "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Sweet and sour chicken, Egg drop soup, Garlic bok choy
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "prawns", amount = 200, unit = "g" },
@@ -312,6 +320,7 @@ courses = ["soups"]
 moods = ["savoury", "light", "comforting"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["egg flower soup"]
+pairs_with = ["01a18c0c-0c8b-7ec8-ace2-6083872a7596", "01a18c0c-0c92-7cb2-8e19-527eff504a2f"]  # Pan-fried potstickers, Scallion pancakes
 ingredients = [
   { id = "chicken-stock", amount = 5, unit = "cup" },
   { id = "egg", amount = 3, unit = "large" },
@@ -345,6 +354,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["wanton soup"]
+pairs_with = ["01a18c0c-0c92-7cb2-8e19-527eff504a2f", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Scallion pancakes, Garlic bok choy
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 250, unit = "g" },
@@ -380,6 +390,7 @@ cuisine = "chinese"
 courses = ["snacks-starters"]
 moods = ["savoury"]
 also_known_as = ["siu mai", "shumai"]
+pairs_with = ["01a18c0c-0c86-76cd-838f-e85d444f482c", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Wonton soup, Garlic bok choy
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 300, unit = "g" },
@@ -413,6 +424,7 @@ cuisine = "chinese"
 courses = ["snacks-starters"]
 moods = ["savoury", "crispy"]
 also_known_as = ["potstickers", "guo tie"]
+pairs_with = ["01a18c0c-0c84-72c3-9cb7-30ec9cbf0399", "01a18c0c-0c98-78ec-b4e3-bf80061baee4"]  # Egg drop soup, Dry-fried green beans
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "pork", amount = 300, unit = "g" },
@@ -450,6 +462,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["sweet", "smoky", "savoury"]
 also_known_as = ["char siu", "chinese bbq pork"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Egg fried rice, Garlic bok choy
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "hoisin-sauce", amount = 3, unit = "tbsp" },
@@ -483,6 +496,7 @@ courses = ["mains"]
 moods = ["spicy", "savoury"]
 weather = ["warming"]
 also_known_as = ["dandan noodles"]
+pairs_with = ["01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a18c0c-0c89-764f-8418-92103561610f"]  # Garlic bok choy, Steamed pork dumplings
 ingredients = [
   { id = "egg-noodles", amount = 400, unit = "g" },
   { id = "pork", amount = 200, unit = "g" },
@@ -519,6 +533,7 @@ cuisine = "chinese"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 also_known_as = ["cong you bing", "spring onion pancakes"]
+pairs_with = ["01a18ba9-fdbf-7184-9155-c47cc6706208", "01a15175-3c24-7cf4-9ec4-2e239c353e9f"]  # Hot and sour soup, Tofu and broccoli stir-fry
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "spring-onions", amount = 6, unit = "piece" },
@@ -546,6 +561,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury", "tangy", "comforting"]
 also_known_as = ["tomato egg"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Egg fried rice, Hot and sour soup
 ingredients = [
   { id = "tomato", amount = 3, unit = "medium" },
   { id = "egg", amount = 4, unit = "large" },
@@ -635,6 +651,7 @@ courses = ["mains"]
 moods = ["sweet", "savoury", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["red braised pork"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a18c0c-0c98-78ec-b4e3-bf80061baee4"]  # Egg fried rice, Garlic bok choy, Dry-fried green beans
 ingredients = [
   { id = "pork-belly", amount = 750, unit = "g" },
   { id = "rock-sugar", amount = 2, unit = "tbsp" },
@@ -668,6 +685,7 @@ cook_minutes = 15
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["fresh-herby", "light", "savoury"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Egg fried rice, Garlic bok choy
 ingredients = [
   { id = "barramundi", amount = 2, unit = "piece" },
   { id = "ginger", amount = 1, unit = "piece" },
@@ -698,6 +716,7 @@ image = { file = "01a18c0c-0c9f-7f13-9754-6d27f3c0efaf.webp", sha256 = "6271cc44
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury", "sweet"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c98-78ec-b4e3-bf80061baee4"]  # Egg fried rice, Dry-fried green beans
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "cashews", amount = 0.75, unit = "cup" },
@@ -732,6 +751,7 @@ cook_minutes = 25
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["sweet-sour", "crispy"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Egg fried rice, Garlic bok choy
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "orange", amount = 2, unit = "medium" },
@@ -768,6 +788,7 @@ courses = ["breakfast", "mains"]
 moods = ["comforting", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["jook", "rice porridge"]
+pairs_with = ["01a18c0c-0ca6-7663-a3b1-a9bc14bfc4c5", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Chinese steamed egg, Garlic bok choy
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -825,6 +846,7 @@ courses = ["mains"]
 moods = ["savoury", "creamy"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["cold sesame noodles"]
+pairs_with = ["01a18c0c-0c92-7cb2-8e19-527eff504a2f", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Scallion pancakes, Hot and sour soup
 ingredients = [
   { id = "egg-noodles", amount = 400, unit = "g" },
   { id = "tahini", amount = 3, unit = "tbsp" },

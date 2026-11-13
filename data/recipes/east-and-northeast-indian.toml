@@ -16,6 +16,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "light", "comforting"]
 also_known_as = ["macher jhol", "fish jhol"]
+pairs_with = ["01a18b6c-2314-7050-bfd8-e8715f0078ad", "01a18b6c-230f-778c-af4b-21c7e55dd3ec"]  # Begun bhaja, Aloo posto
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -57,6 +58,7 @@ courses = ["mains"]
 moods = ["spicy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["sorshe ilish", "hilsa in mustard"]
+pairs_with = ["01a18b6c-2314-7050-bfd8-e8715f0078ad", "01a18b6c-2318-7ce3-bf93-e93158d24747"]  # Begun bhaja, Moong dal (Bengali)
 ingredients = [
   { id = "hilsa", amount = 500, unit = "g" },
   { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
@@ -89,6 +91,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["creamy", "tangy", "savoury"]
 also_known_as = ["doi mach", "fish in yogurt"]
+pairs_with = ["01a18b6c-2314-7050-bfd8-e8715f0078ad", "01a18b6c-2318-7ce3-bf93-e93158d24747"]  # Begun bhaja, Moong dal (Bengali)
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -129,6 +132,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["creamy", "sweet", "savoury"]
 also_known_as = ["chingri malaikari"]
+pairs_with = ["01a18b6c-2314-7050-bfd8-e8715f0078ad", "01a18b6c-230f-778c-af4b-21c7e55dd3ec", "01a18b6e-647d-7e64-8d07-9f5e19ad4398"]  # Begun bhaja, Aloo posto, Luchi
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -169,6 +173,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "smoky"]
 also_known_as = ["fish paturi"]
+pairs_with = ["01a18b6c-2318-7ce3-bf93-e93158d24747", "01a18b6c-230f-778c-af4b-21c7e55dd3ec"]  # Moong dal (Bengali), Aloo posto
 ingredients = [
   { id = "barramundi", amount = 500, unit = "g" },
   { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
@@ -201,6 +206,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["macher kalia"]
+pairs_with = ["01a18b6c-2314-7050-bfd8-e8715f0078ad", "01a18b6c-2318-7ce3-bf93-e93158d24747"]  # Begun bhaja, Moong dal (Bengali)
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -246,6 +252,7 @@ courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["bengali mutton curry"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Luchi, Laccha onion
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -289,6 +296,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["rezala"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a188ac-05ad-7540-a452-90d483cf792b"]  # Luchi, Butter naan
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -331,6 +339,7 @@ cuisine = "east-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty", "comforting"]
 also_known_as = ["calcutta biryani", "kolkata biriyani"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a18b6c-230b-7d8e-a2b9-3bc8dc74d927"]  # Cucumber raita, Chicken rezala
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -410,6 +419,7 @@ cuisine = "east-indian"
 courses = ["sides", "mains"]
 moods = ["savoury", "light"]
 also_known_as = ["sukto"]
+pairs_with = ["01a18b6c-2318-7ce3-bf93-e93158d24747", "01a18b6c-2314-7050-bfd8-e8715f0078ad"]  # Moong dal (Bengali), Begun bhaja
 ingredients = [
   { id = "bitter-gourd", amount = 1, unit = "small" },
   { id = "raw-banana", amount = 1, unit = "medium" },
@@ -477,6 +487,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["sweet", "savoury", "comforting"]
 also_known_as = ["chholar dal"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a18b6c-2314-7050-bfd8-e8715f0078ad"]  # Luchi, Begun bhaja
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -515,6 +526,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "light"]
 also_known_as = ["bengali moong dal", "mug dal"]
+pairs_with = ["01a18b6c-2314-7050-bfd8-e8715f0078ad", "01a18b6c-230f-778c-af4b-21c7e55dd3ec"]  # Begun bhaja, Aloo posto
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "tomato", amount = 1, unit = "small" },
@@ -549,6 +561,7 @@ image = { file = "01a18b6c-231b-7ab1-bf8c-b0dea015ec9f.webp", sha256 = "72151863
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "spicy", "comforting"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a18b6c-2314-7050-bfd8-e8715f0078ad"]  # Luchi, Begun bhaja
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -591,6 +604,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "comforting"]
 also_known_as = ["chhena dalna"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a18b6c-2314-7050-bfd8-e8715f0078ad"]  # Luchi, Begun bhaja
 ingredients = [
   { id = "chhena", amount = 250, unit = "g" },
   { id = "all-purpose-flour", amount = 1, unit = "tbsp" },
@@ -632,6 +646,7 @@ courses = ["snacks-starters", "mains"]
 moods = ["spicy", "tangy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["ghoogni"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a18b6e-647b-7878-a77e-44bf0f676105"]  # Luchi, Jhalmuri
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -731,6 +746,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "comforting"]
 also_known_as = ["alur dom"]
+pairs_with = ["01a18b6e-647d-7e64-8d07-9f5e19ad4398", "01a18b6c-2316-7333-944f-c7fb46467420"]  # Luchi, Cholar dal
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -770,6 +786,7 @@ cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["savoury", "spicy"]
 also_known_as = ["egg roll"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a18b6e-647b-7878-a77e-44bf0f676105"]  # Mint chutney, Jhalmuri
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "egg", amount = 4, unit = "large" },
@@ -806,6 +823,7 @@ cuisine = "street-food"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["chicken kathi roll"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -958,6 +976,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "light"]
 also_known_as = ["dalma"]
+pairs_with = ["01a18b6e-6499-77e1-a914-d4c9a399db81", "01a18b6c-2314-7050-bfd8-e8715f0078ad"]  # Santula, Begun bhaja
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "raw-banana", amount = 1, unit = "small" },
@@ -997,6 +1016,7 @@ courses = ["mains"]
 moods = ["tangy", "light"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["pakhala", "panta bhat"]
+pairs_with = ["01a18b6e-64a1-776c-93f9-48d0d50e9f96", "01a18b6c-2314-7050-bfd8-e8715f0078ad"]  # Aloo bhujia (Bihar), Begun bhaja
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -1057,6 +1077,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["macha besara"]
+pairs_with = ["01a18b6e-6499-77e1-a914-d4c9a399db81", "01a18b6e-6490-7cba-afad-65572d8f90dc"]  # Santula, Dalma (Odisha)
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "yellow-mustard-seeds", amount = 2, unit = "tbsp" },
@@ -1124,6 +1145,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["smoky", "savoury", "hearty"]
 also_known_as = ["litti"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "sattu", amount = 1, unit = "cup" },
@@ -1229,6 +1251,7 @@ courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["ahuna mutton", "handi meat"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Phulka, Laccha onion
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1302,6 +1325,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["tangy", "light"]
 also_known_as = ["fish tenga"]
+pairs_with = ["01a18b6e-64ac-7fa1-a48f-95312700f1b0", "01a18b6e-64af-7f81-b561-631c3610580d"]  # Aloo pitika, Khar
 ingredients = [
   { id = "catla", amount = 500, unit = "g" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -1334,6 +1358,7 @@ cuisine = "east-indian"
 courses = ["mains"]
 moods = ["tangy", "light"]
 also_known_as = ["assamese sour fish curry"]
+pairs_with = ["01a18b6e-64ac-7fa1-a48f-95312700f1b0", "01a18b6e-64af-7f81-b561-631c3610580d"]  # Aloo pitika, Khar
 ingredients = [
   { id = "rohu", amount = 500, unit = "g" },
   { id = "raw-mango", amount = 1, unit = "small" },
@@ -1421,6 +1446,7 @@ courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["haah mangxo"]
+pairs_with = ["01a18b6e-64ac-7fa1-a48f-95312700f1b0", "01a18b6e-64af-7f81-b561-631c3610580d"]  # Aloo pitika, Khar
 ingredients = [
   { id = "duck", amount = 1, unit = "kg" },
   { id = "ash-gourd", amount = 300, unit = "g" },
@@ -1458,6 +1484,7 @@ cook_minutes = 70
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "tangy", "spicy"]
+pairs_with = ["01a18b6e-64ac-7fa1-a48f-95312700f1b0", "01a18b6e-64c7-7a18-b299-a240be93a862"]  # Aloo pitika, Bamboo shoot pickle
 ingredients = [
   { id = "pork-belly", amount = 500, unit = "g" },
   { id = "bamboo-shoots", amount = 1, unit = "cup" },
@@ -1491,6 +1518,7 @@ courses = ["snacks-starters"]
 moods = ["savoury", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["veg momos"]
+pairs_with = ["01a15175-3c2b-7dd6-aec8-9b35af3404ac", "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e"]  # Garlic chutney, Manchow soup
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "cabbage", amount = 2, unit = "cup" },
@@ -1526,6 +1554,7 @@ courses = ["snacks-starters"]
 moods = ["savoury", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["chicken momos"]
+pairs_with = ["01a18b6e-64bb-7068-87da-4caaa0829038", "01a15175-3c2b-7dd6-aec8-9b35af3404ac"]  # Thukpa, Garlic chutney
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "chicken-mince", amount = 300, unit = "g" },
@@ -1559,6 +1588,7 @@ cuisine = "east-indian"
 courses = ["soups", "mains"]
 moods = ["savoury", "comforting", "spicy"]
 weather = ["rainy-day-cosy", "cosy-night-in", "under-the-weather"]
+pairs_with = ["01a18b6e-64b7-7b9a-b499-16796ab1c345", "01a18b6e-64be-789f-b77d-282653368b70"]  # Momos (vegetable), Shapale
 ingredients = [
   { id = "egg-noodles", amount = 200, unit = "g" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -1597,6 +1627,7 @@ cuisine = "east-indian"
 courses = ["snacks-starters"]
 moods = ["savoury", "crispy"]
 also_known_as = ["sha phaley"]
+pairs_with = ["01a18b6e-64bb-7068-87da-4caaa0829038", "01a15175-3c2b-7dd6-aec8-9b35af3404ac"]  # Thukpa, Garlic chutney
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "beef-mince", amount = 300, unit = "g" },
@@ -1662,6 +1693,7 @@ cook_minutes = 45
 cuisine = "east-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty"]
+pairs_with = ["01a18b6e-64c0-7c14-9e8e-8bddf2c10f9c", "01a18b6e-64c7-7a18-b299-a240be93a862"]  # Eromba, Bamboo shoot pickle
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "pork", amount = 400, unit = "g" },
