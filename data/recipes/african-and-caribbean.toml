@@ -166,7 +166,7 @@ cuisine = "african-caribbean"
 courses = ["mains"]
 moods = ["spicy", "smoky", "tangy"]
 weather = ["breezy-evening"]
-also_known_as = ["piri piri chicken", "peri-peri chicken"]
+also_known_as = ["piri piri chicken"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "birds-eye-chillies", amount = 6, unit = "piece" },

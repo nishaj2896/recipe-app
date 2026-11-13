@@ -175,7 +175,7 @@ cook_minutes = 20
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
-also_known_as = ["kothu parotta", "kottu"]
+also_known_as = ["kottu"]
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "egg", amount = 3, unit = "large" },
@@ -358,7 +358,7 @@ cook_minutes = 15
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["savoury", "light"]
-also_known_as = ["semiya upma", "seviyan upma"]
+also_known_as = ["seviyan upma"]
 ingredients = [
   { id = "indian-vermicelli", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -621,7 +621,6 @@ cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["sweet", "creamy"]
 weather = ["cool-down", "sticky-sluggish"]
-also_known_as = ["lassi"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "sugar", amount = 3, unit = "tbsp" },
@@ -773,7 +772,7 @@ cuisine = "south-indian"
 courses = ["drinks"]
 moods = ["sweet", "creamy"]
 weather = ["warming", "cosy-night-in"]
-also_known_as = ["badam doodh", "almond milk"]
+also_known_as = ["badam doodh"]
 ingredients = [
   { id = "almonds", amount = 20, unit = "piece" },
   { id = "milk", amount = 3, unit = "cup" },

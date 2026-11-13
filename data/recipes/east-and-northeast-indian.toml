@@ -128,7 +128,7 @@ cook_minutes = 25
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["creamy", "sweet", "savoury"]
-also_known_as = ["prawn malai curry", "chingri malaikari"]
+also_known_as = ["chingri malaikari"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
