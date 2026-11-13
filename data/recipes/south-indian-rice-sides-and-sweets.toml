@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a15175-3c11-7d06-89b9-1b9f415eeffd.webp", sha256 = "ffb8d3ae116ce92f7ebed08e01c7b19b9114c2e4c692393d1b8880241b07ee53", alt = "Lemon rice with peanuts, curry leaves and green chillies" }
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["tangy", "light"]
+also_known_as = ["chitranna"]
 ingredients = [
   { id = "rice", amount = 250, unit = "g" },
   { id = "peanuts", amount = 30, unit = "g" },
@@ -41,6 +45,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a15175-3c12-7238-998a-d2b358a0c24e.webp", sha256 = "16fdc13dfe7fc3b711e012a6bae3f6e1eb4a90ea0fcaa53c25e5beaed9cc32d9", alt = "Curd rice with a mustard seed and curry leaf tempering" }
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["creamy", "comforting", "light"]
+weather = ["cool-down", "sticky-sluggish", "under-the-weather"]
+also_known_as = ["thayir sadam", "dahi chawal"]
 ingredients = [
   { id = "rice", amount = 200, unit = "g" },
   { id = "curd", amount = 1.5, unit = "cup" },
@@ -69,6 +78,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a15175-3c29-7980-a562-3e1ffcc1a26f.webp", sha256 = "99ac34b530855fe1ae5b4a24d9a7041d318d67b16e8280569e98b8628ef7c0c4", alt = "Onion tomato chutney with a mustard seed and curry leaf tempering" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "onion", amount = 2, unit = "medium" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -95,6 +107,10 @@ name = "Garlic chutney"
 serves = 4
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["spicy"]
+also_known_as = ["lahsun chutney"]
 ingredients = [
   { id = "garlic", amount = 15, unit = "clove" },
   { id = "dried-red-chillies", amount = 6, unit = "piece" },
@@ -117,6 +133,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18b54-81c5-7e25-a61a-8625f39be958.webp", sha256 = "dba6bd525667ebef7220c19edbedc5d8f7b2449a6c1c2d472264377f6cdc60af", alt = "Tamarind rice with peanuts, curry leaves and dried red chillies" }
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["tangy", "spicy"]
+also_known_as = ["puliyogare", "puli sadam"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tamarind", amount = 2, unit = "tbsp" },
@@ -153,6 +173,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18b54-81c7-70ee-be9d-ec402bc962fd.webp", sha256 = "08915eabc7b6baba22817311351785f0e477df47d6c1428e423e240d99af32b3", alt = "Coconut rice with cashews, curry leaves and dried red chillies" }
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["savoury", "light"]
+also_known_as = ["thengai sadam"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -184,6 +208,10 @@ name = "Tomato rice"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["tangy", "spicy"]
+also_known_as = ["thakkali sadam"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -218,6 +246,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a18b54-81cc-797d-9841-68d1b732760a.webp", sha256 = "6b23eaf9a6c5b5f8ac77b26ae1ba5d6aa0d0f92e06fc3f3f48654a63e4dc3c88", alt = "Ghee rice topped with fried onion, cashews and raisins" }
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["savoury"]
+also_known_as = ["neichoru"]
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -248,6 +280,10 @@ name = "Vangi bath"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["spicy", "tangy"]
+also_known_as = ["vangibath"]
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "small-brinjal", amount = 300, unit = "g" },
@@ -290,6 +326,9 @@ prep_minutes = 40
 cook_minutes = 80
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18b54-81d1-7921-ad97-8f0eec6cba72.webp", sha256 = "2b3d9be8b4829b118d6ff19583ede1848fadee24e5af72d339679cf1e76b886b", alt = "Hyderabadi chicken biryani with fried onions and mint" }
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -335,6 +374,9 @@ name = "Hyderabadi vegetable biryani"
 serves = 4
 prep_minutes = 30
 cook_minutes = 75
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "basmati-rice", amount = 2, unit = "cup" },
   { id = "carrot", amount = 2, unit = "medium" },
@@ -383,6 +425,10 @@ name = "Thalassery biryani"
 serves = 6
 prep_minutes = 30
 cook_minutes = 80
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["savoury", "hearty"]
+also_known_as = ["malabar biryani"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -428,6 +474,9 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 100
 image = { file = "01a18b54-81d7-7d2d-84b8-19ea07e126fa.webp", sha256 = "8cb8b59254bcfd3f0b94bbd3c9496f959d803b7eaa64cba2f6b5c9d3395aafe9", alt = "Ambur biryani with mutton, mint and a few dried red chillies" }
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -468,6 +517,9 @@ name = "Chettinad biryani"
 serves = 6
 prep_minutes = 30
 cook_minutes = 70
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -514,6 +566,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 5
 image = { file = "01a18b54-81db-76fb-8c2c-f4f8a4475b55.webp", sha256 = "414caaac6fa99aea271389aad8a99ac822c29d8d4c1fb06a992623c450f39a6e", alt = "Coconut chutney with a mustard seed, curry leaf and dried chilli tempering" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["fresh-herby", "light"]
+also_known_as = ["nariyal chutney"]
 ingredients = [
   { id = "coconut", amount = 1, unit = "cup" },
   { id = "chana-dal", amount = 2, unit = "tbsp" },
@@ -541,6 +597,9 @@ name = "Tomato chutney"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "onion", amount = 1, unit = "small" },
@@ -570,6 +629,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 10
 image = { file = "01a18b54-81e0-7187-98c3-ce9d815f6f0f.webp", sha256 = "c469d980f5958559fae9ffb16ed9980ecb904f15a297653e1512604e58052353", alt = "Peanut chutney with a mustard seed and curry leaf tempering" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["savoury"]
+also_known_as = ["verkadalai chutney"]
 ingredients = [
   { id = "peanuts", amount = 0.5, unit = "cup" },
   { id = "dried-red-chillies", amount = 3, unit = "piece" },
@@ -596,6 +659,10 @@ name = "Coriander chutney"
 serves = 4
 prep_minutes = 10
 cook_minutes = 5
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["fresh-herby", "tangy"]
+also_known_as = ["kothamalli chutney"]
 ingredients = [
   { id = "coriander-leaves", amount = 1, unit = "bunch" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -624,6 +691,10 @@ name = "Gunpowder (podi)"
 serves = 8
 prep_minutes = 5
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["spicy"]
+also_known_as = ["podi", "milagai podi"]
 ingredients = [
   { id = "urad-dal", amount = 0.5, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -650,6 +721,9 @@ name = "Parippu payasam"
 serves = 6
 prep_minutes = 10
 cook_minutes = 45
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "moong-dal", amount = 0.5, unit = "cup" },
   { id = "jaggery", amount = 1, unit = "cup" },
@@ -680,6 +754,10 @@ name = "Paal payasam"
 serves = 6
 prep_minutes = 5
 cook_minutes = 60
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["rice payasam"]
 ingredients = [
   { id = "rice", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 1.5, unit = "l" },
@@ -705,6 +783,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 25
 image = { file = "01a18b54-81eb-78a5-ab03-e87a612113ba.webp", sha256 = "fc6256f6597262be3eb251792efcbdd356e21a7fdb5a9f00ac4d599d8ed482f2", alt = "Semiya payasam with fried cashews and raisins" }
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["vermicelli payasam"]
 ingredients = [
   { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
   { id = "milk", amount = 1, unit = "l" },
@@ -730,6 +812,9 @@ serves = 12
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a18b54-81ed-7b59-8c51-f262d91a2e78.webp", sha256 = "646f03ca7d10a4de25fd034e09096bbb09a494c8963c876582fd5d26ac7ac888", alt = "Four pieces of Mysore pak" }
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet"]
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "sugar", amount = 2, unit = "cup" },
@@ -754,6 +839,10 @@ name = "Kesari bath"
 serves = 4
 prep_minutes = 5
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["kesari", "rava kesari"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -782,6 +871,10 @@ name = "Rava ladoo"
 serves = 12
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["rava laddu"]
 ingredients = [
   { id = "semolina", amount = 1, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -810,6 +903,10 @@ serves = 12
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18b54-81f4-7541-9730-2d276b3bee30.webp", sha256 = "2b35f3cad7af6359c271a6d59d36016f52e1b5044109a1875bdcb6331dab831e", alt = "Four coconut ladoos rolled in desiccated coconut" }
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["nariyal ladoo"]
 ingredients = [
   { id = "coconut", amount = 2, unit = "cup" },
   { id = "condensed-milk", amount = 0.75, unit = "cup" },
@@ -833,6 +930,9 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18b54-81f6-7fd7-a5ee-6bc05b5d3a98.webp", sha256 = "3a304e6c354e4bbe61dcdb7ad9902db2ba1f9d1f21dcdec5af9b1faa0eb86b84", alt = "Double ka meetha, fried bread triangles in saffron milk with sliced almonds and pistachios" }
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "white-bread", amount = 8, unit = "slice" },
   { id = "milk", amount = 750, unit = "ml" },
@@ -862,6 +962,10 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 40
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "tangy"]
+also_known_as = ["khubani ka meetha"]
 ingredients = [
   { id = "dried-apricots", amount = 250, unit = "g" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -885,6 +989,11 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a18b54-81fb-7b02-a01b-8336a10cf2c5.webp", sha256 = "d2de81962db154203c3162da8b8ad72e5da6527cb0c3e94bd63507a203bb73eb", alt = "South Indian filter coffee in a steel tumbler and davara" }
+cuisine = "south-indian"
+courses = ["drinks"]
+moods = ["creamy", "comforting"]
+weather = ["rainy-day-cosy", "grey-gloomy"]
+also_known_as = ["kaapi", "madras coffee"]
 ingredients = [
   { id = "ground-coffee", amount = 4, unit = "tbsp" },
   { id = "milk", amount = 1, unit = "cup" },
@@ -905,6 +1014,10 @@ name = "Panakam"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "south-indian"
+courses = ["drinks"]
+moods = ["sweet", "spicy"]
+weather = ["cool-down", "sticky-sluggish"]
 ingredients = [
   { id = "jaggery", amount = 0.5, unit = "cup" },
   { id = "lemon", amount = 1, unit = "medium" },
@@ -927,6 +1040,11 @@ name = "Neer mor"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "south-indian"
+courses = ["drinks"]
+moods = ["tangy", "fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["spiced buttermilk"]
 ingredients = [
   { id = "curd", amount = 1, unit = "cup" },
   { id = "ginger", amount = 1, unit = "piece" },

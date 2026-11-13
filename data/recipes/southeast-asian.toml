@@ -12,6 +12,9 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 12
 image = { file = "01a18c12-05bc-7ee2-a97d-f619d0729c98.webp", sha256 = "cde63b3195dbd222f7a040103043dab348de0939666e3d79f88cb55ebb63dc3f", alt = "Nasi goreng topped with two fried eggs, with sliced cucumber and tomato" }
+cuisine = "southeast-asian"
+courses = ["mains", "rice-breads"]
+moods = ["spicy", "savoury", "sweet"]
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -43,6 +46,9 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 10
 image = { file = "01a18c12-05be-7940-8353-deed67958a02.webp", sha256 = "3a955b0841edcd51f71c4390f9978a9fff2da2698e2c5ac88943d6b23ac6a908", alt = "Mee goreng with prawns, tofu and bean sprouts and lime wedges" }
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "sweet"]
 ingredients = [
   { id = "egg-noodles", amount = 200, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },
@@ -78,6 +84,10 @@ prep_minutes = 25
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18c12-05c1-7817-a7a0-c3bcf90f7c81.webp", sha256 = "1b4940d4546bebcfca40018c21425abfd5017f11feaabf363d53f84632c91823", alt = "Malaysian chicken satay skewers with peanut sauce and cucumber" }
+cuisine = "southeast-asian"
+courses = ["snacks-starters"]
+moods = ["smoky", "sweet", "savoury"]
+also_known_as = ["chicken satay", "satay"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "lemongrass", amount = 2, unit = "piece" },
@@ -113,6 +123,10 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 180
 image = { file = "01a18c12-05c3-70ea-8643-588ed0682229.webp", sha256 = "853ef77ed7c1ce8386300ded052a28b9d7a9ae19f39833e5d5127d4f3aa4dbb4", alt = "Dark, dry beef rendang" }
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["spicy", "creamy", "hearty"]
+also_known_as = ["rendang"]
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -151,6 +165,11 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 30
 image = { file = "01a18c12-05c5-7502-b0ef-66f86d8c763d.webp", sha256 = "8a125af872601a8b5d7094af4347607309e69095b9830db52e84cb9df9d9262b", alt = "Laksa with chicken, prawns, tofu, a halved egg, mint and lime" }
+cuisine = "southeast-asian"
+courses = ["soups", "mains"]
+moods = ["spicy", "creamy", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["curry laksa"]
 ingredients = [
   { id = "rice-vermicelli", amount = 200, unit = "g" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -194,6 +213,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 60
 image = { file = "01a18c12-05c8-719e-9bef-f6d5dd1971d9.webp", sha256 = "4e69fa648193ad9a8e5292adc5e7816c9bad487bcf11790dd6f0e78308fd7cbd", alt = "Hainanese chicken rice with sliced chicken, rice, cucumber, chilli sauce, ginger sauce and a small bowl of soup" }
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["savoury", "light"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "jasmine-rice", amount = 1.5, unit = "cup" },
@@ -229,6 +251,10 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 8
 image = { file = "01a18c12-05ca-7255-a495-c8a66a5e3891.webp", sha256 = "95afad42a055da637db9592c78c7bd385a506cbb9d93312b9742a485b943483c", alt = "Char kway teow with prawns, sausage, bean sprouts and chives" }
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["smoky", "savoury"]
+also_known_as = ["char koay teow"]
 ingredients = [
   { id = "flat-rice-noodles", amount = 300, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },
@@ -261,6 +287,9 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 25
 image = { file = "01a18c12-05cc-7f07-8dd1-2c174ad6bd82.webp", sha256 = "db25c5f07b1295beb4e5923ba871984165f7e16e5fd4dccf53ccc770d89c6834", alt = "Gado-gado with potato, beans, cabbage, egg, tofu, tempeh, cucumber and peanut sauce" }
+cuisine = "southeast-asian"
+courses = ["salads"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "french-beans", amount = 150, unit = "g" },
@@ -298,6 +327,11 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 180
 image = { file = "01a18c12-05ce-7e43-9ce5-fdc95ffd4fe0.webp", sha256 = "36dbb13e2f05037168784c30c2e47551b79afb85ba6ccfcac77015a6518a490f", alt = "Pho bo with beef, with bean sprouts, Thai basil, lime and chillies on the side" }
+cuisine = "southeast-asian"
+courses = ["soups", "mains"]
+moods = ["fresh-herby", "comforting"]
+weather = ["rainy-day-cosy", "under-the-weather"]
+also_known_as = ["beef pho"]
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -338,6 +372,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 90
 image = { file = "01a18c12-05d1-7c88-bf63-87aac9ac94bb.webp", sha256 = "5154d26fccb63e5d90336818d97031839adf653244bc10449a15cbeab7eed9fd", alt = "Pho ga with a plate of bean sprouts, basil, coriander, lime, spring onion and chilli" }
+cuisine = "southeast-asian"
+courses = ["soups", "mains"]
+moods = ["fresh-herby", "comforting", "light"]
+weather = ["under-the-weather"]
+also_known_as = ["chicken pho"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "onion", amount = 1, unit = "large" },
@@ -375,6 +414,9 @@ name = "Bun cha"
 serves = 4
 prep_minutes = 30
 cook_minutes = 20
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["smoky", "fresh-herby", "sweet"]
 ingredients = [
   { id = "pork", amount = 400, unit = "g" },
   { id = "pork-belly", amount = 300, unit = "g" },
@@ -410,6 +452,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 15
 image = { file = "01a18c12-05d5-7522-b0bf-1c1591a91e41.webp", sha256 = "e63396df2b49b7fc8eced91d53aa70449c75bf1f40d8467290dc1bb3d406c84e", alt = "Banh mi with grilled pork, pickled carrot, cucumber, jalapeno and coriander" }
+cuisine = "southeast-asian"
+courses = ["snacks-starters", "mains"]
+moods = ["fresh-herby", "tangy", "crispy"]
+also_known_as = ["banh mi sandwich"]
 ingredients = [
   { id = "baguette", amount = 2, unit = "piece" },
   { id = "pork", amount = 400, unit = "g" },
@@ -446,6 +492,11 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 10
 image = { file = "01a18c12-05d7-74e6-b16d-95b0ded08ba3.webp", sha256 = "5562a032712fe63c80b55f1f9566850e87b518f8fa183c43722e07d338ed74da", alt = "Vietnamese spring rolls with prawns and herbs, with a peanut dipping sauce" }
+cuisine = "southeast-asian"
+courses = ["snacks-starters"]
+moods = ["fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["summer rolls", "goi cuon"]
 ingredients = [
   { id = "rice-paper", amount = 12, unit = "piece" },
   { id = "rice-vermicelli", amount = 100, unit = "g" },
@@ -476,6 +527,9 @@ name = "Lemongrass chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["fresh-herby", "savoury"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "lemongrass", amount = 3, unit = "piece" },
@@ -505,6 +559,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 45
 image = { file = "01a18c12-05dc-7d43-8bbb-a8f70519d3c3.webp", sha256 = "4aeb13d7e6245ca8fac6fe313014b81ee664817e30c4dca2ac29888cb1bc9d89", alt = "Chicken adobo in a dark soy and vinegar sauce with bay leaves and garlic" }
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["tangy", "savoury", "comforting"]
+also_known_as = ["adobo"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "cane-vinegar", amount = 0.5, unit = "cup" },
@@ -532,6 +590,10 @@ name = "Pancit canton"
 serves = 4
 prep_minutes = 20
 cook_minutes = 15
+cuisine = "southeast-asian"
+courses = ["mains"]
+moods = ["savoury"]
+also_known_as = ["pancit"]
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -565,6 +627,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 75
 image = { file = "01a18c12-05e1-798c-bdae-9314d8658870.webp", sha256 = "854582373f99f2d4b2c9a9f60daf01c5ec3cd29e09c07dc7f325f3afd8811453", alt = "Sinigang, sour pork broth with vegetables and a green chilli" }
+cuisine = "southeast-asian"
+courses = ["soups"]
+moods = ["tangy", "comforting"]
+weather = ["rainy-day-cosy", "under-the-weather"]
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "tamarind", amount = 3, unit = "tbsp" },
@@ -595,6 +661,10 @@ name = "Lumpia"
 serves = 4
 prep_minutes = 30
 cook_minutes = 20
+cuisine = "southeast-asian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+also_known_as = ["filipino spring rolls"]
 ingredients = [
   { id = "spring-roll-wrappers", amount = 20, unit = "piece" },
   { id = "pork", amount = 400, unit = "g" },
@@ -624,6 +694,11 @@ name = "Burmese khow suey"
 serves = 4
 prep_minutes = 25
 cook_minutes = 40
+cuisine = "southeast-asian"
+courses = ["mains", "soups"]
+moods = ["creamy", "comforting", "spicy"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["khao suey", "khow suey"]
 ingredients = [
   { id = "egg-noodles", amount = 400, unit = "g" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -661,6 +736,10 @@ name = "Singapore noodles"
 serves = 2
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "chinese"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["singapore mei fun"]
 ingredients = [
   { id = "rice-vermicelli", amount = 150, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },

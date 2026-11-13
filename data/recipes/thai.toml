@@ -12,6 +12,10 @@ serves = 2
 prep_minutes = 20
 cook_minutes = 12
 image = { file = "01a18c0c-0cab-74d1-84e6-cbf6625fa8ec.webp", sha256 = "061b45044f07f5bd38a6cc58ae21492bece0b8096e39f90691fa4b8fdb890456", alt = "Pad thai with prawns, tofu, bean sprouts and a lime wedge" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["sweet-sour", "savoury"]
+also_known_as = ["phad thai"]
 ingredients = [
   { id = "flat-rice-noodles", amount = 200, unit = "g" },
   { id = "prawns", amount = 200, unit = "g" },
@@ -47,6 +51,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18c0c-0cad-740d-8f61-ea9172a571f5.webp", sha256 = "824c986edaa82ebbd71e166a6fff4133f3f6f0f314c71a5f206ccde5db956c2f", alt = "Thai green curry with chicken, aubergine, bamboo shoots and Thai basil" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["spicy", "creamy", "fresh-herby"]
+also_known_as = ["thai green curry", "green curry"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
@@ -78,6 +86,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a18c0c-0caf-76db-a774-96f2e2d27906.webp", sha256 = "5ea1a4900e297c819ce5c8fe3d81bdd5cca38a7f1ea498e6cc38d08ce02e341c", alt = "Thai red curry with tofu, vegetables and Thai basil" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["spicy", "creamy"]
+also_known_as = ["thai red curry", "red curry"]
 ingredients = [
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -111,6 +123,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 120
 image = { file = "01a18c0c-0cb2-7c90-af98-3af5b60de70e.webp", sha256 = "d00c9914b401acb68d69e0d260eabce265664514cefec381fe5996f05c8c16db", alt = "Massaman beef curry with potato, onion and peanuts" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["creamy", "sweet", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["matsaman curry"]
 ingredients = [
   { id = "beef", amount = 750, unit = "g" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -144,6 +161,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a18c0c-0cb4-703b-9866-c2132dd12c68.webp", sha256 = "4f1e76205ff63011ac808b466113adfd7495cc9638e5d3ea977ebf3dea97ce22", alt = "Panang curry with chicken, bell pepper and Thai basil" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["creamy", "spicy"]
+also_known_as = ["phanaeng curry"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
@@ -172,6 +193,10 @@ name = "Yellow curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "thai"
+courses = ["mains"]
+moods = ["creamy", "comforting"]
+also_known_as = ["thai yellow curry"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -201,6 +226,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c0c-0cb9-7a88-bdde-57551b5d091e.webp", sha256 = "0aa9ec9378ae3b67d4e2304c321741acf140d19915cd6d2e408dd7d4ecbb03f9", alt = "Tom yum soup with prawns, mushrooms and herbs in a white bowl" }
+cuisine = "thai"
+courses = ["soups"]
+moods = ["spicy", "tangy", "fresh-herby"]
+weather = ["rainy-day-cosy", "under-the-weather"]
+also_known_as = ["tom yum"]
 ingredients = [
   { id = "prawns", amount = 400, unit = "g" },
   { id = "lemongrass", amount = 2, unit = "piece" },
@@ -230,6 +260,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a18c0c-0cbc-706a-93a0-33a01e525cfd.webp", sha256 = "eda68e76943ea921d8fc606a2ffc0822c27e57e86a0799240e317f5d8dcba9b2", alt = "Tom kha gai with chicken, mushrooms, chillies and coriander" }
+cuisine = "thai"
+courses = ["soups"]
+moods = ["creamy", "tangy", "fresh-herby"]
+weather = ["under-the-weather"]
+also_known_as = ["tom kha"]
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -260,6 +295,10 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 10
 image = { file = "01a18c0c-0cbe-7287-819a-154eb608ae68.webp", sha256 = "e02902539efd24bc61c8002c7cd6c54eccfb8c6357839b74bc7da290bfae8248", alt = "Pad see ew with flat rice noodles, chicken and broccoli" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["savoury", "sweet"]
+also_known_as = ["pad si ew"]
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -289,6 +328,10 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a18c0c-0cc0-7460-a7a7-08a0acc9e782.webp", sha256 = "fdf4c5f5baa57085d25b7c02ba6c4afe5474594d658b41362fc2a2532d93b7b3", alt = "Pad kra pao with minced chicken and holy basil over jasmine rice with a fried egg" }
+cuisine = "thai"
+courses = ["mains"]
+moods = ["spicy", "fresh-herby", "savoury"]
+also_known_as = ["pad krapow", "thai basil chicken"]
 ingredients = [
   { id = "chicken-mince", amount = 300, unit = "g" },
   { id = "holy-basil", amount = 1, unit = "cup" },
@@ -319,6 +362,10 @@ name = "Drunken noodles"
 serves = 2
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "thai"
+courses = ["mains"]
+moods = ["spicy", "fresh-herby"]
+also_known_as = ["pad kee mao"]
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -351,6 +398,10 @@ prep_minutes = 10
 cook_minutes = 25
 plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
 image = { file = "01a18c0c-0cc5-74d1-9786-4b44e97a4a3d.webp", sha256 = "a8c0df4847a383405a00e7dc8827817c939f627fd05586aaafd376319c86995d", alt = "Thai basil fried rice with chicken, egg and red chilli" }
+cuisine = "thai"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "fresh-herby"]
+also_known_as = ["khao pad krapow"]
 ingredients = [
   { id = "jasmine-rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -380,6 +431,10 @@ name = "Pineapple fried rice"
 serves = 3
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "thai"
+courses = ["rice-breads", "mains"]
+moods = ["sweet", "savoury"]
+also_known_as = ["khao pad sapparot"]
 ingredients = [
   { id = "jasmine-rice", amount = 1.5, unit = "cup" },
   { id = "pineapple", amount = 1, unit = "cup" },
@@ -412,6 +467,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 0
 image = { file = "01a18c0c-0cc9-72e1-a05c-a224cdf481aa.webp", sha256 = "bd4159600460ee2f9e44bfacbb9814fbf4a290fa2a69eda784b6cd2ab91cbf04", alt = "Som tam with green papaya, tomatoes, green beans, peanuts and dried shrimp" }
+cuisine = "thai"
+courses = ["salads"]
+moods = ["spicy", "tangy", "fresh-herby"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["papaya salad", "green papaya salad"]
 ingredients = [
   { id = "raw-papaya", amount = 1, unit = "small" },
   { id = "cherry-tomatoes", amount = 8, unit = "piece" },
@@ -439,6 +499,10 @@ name = "Larb"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "thai"
+courses = ["salads", "mains"]
+moods = ["spicy", "tangy", "fresh-herby"]
+also_known_as = ["laab", "larb gai"]
 ingredients = [
   { id = "chicken-mince", amount = 500, unit = "g" },
   { id = "glutinous-rice", amount = 2, unit = "tbsp" },
@@ -467,6 +531,10 @@ name = "Thai cashew chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 12
+cuisine = "thai"
+courses = ["mains"]
+moods = ["savoury", "sweet"]
+also_known_as = ["gai pad med mamuang"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "cashews", amount = 0.75, unit = "cup" },
@@ -498,6 +566,10 @@ name = "Thai peanut noodles"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "thai"
+courses = ["mains"]
+moods = ["creamy", "savoury", "spicy"]
+also_known_as = ["peanut noodles"]
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "peanut-butter", amount = 0.33, unit = "cup" },
@@ -531,6 +603,10 @@ prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a18c0c-0cd2-773b-9416-1958680405f1.webp", sha256 = "1a2e426c9e96d9708d12382a3755c4b307ed4d77ff3abd20b6922ecdfbb9b5af", alt = "Mango sticky rice with sliced mango and coconut sauce" }
+cuisine = "thai"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["khao niao mamuang"]
 ingredients = [
   { id = "glutinous-rice", amount = 1, unit = "cup" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -556,6 +632,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d.webp", sha256 = "bd21b165a75872aad6f28617c76752eb3d74dafedee82eb7764344d108aa540a", alt = "Thai fish cakes with a cucumber dipping sauce" }
+cuisine = "thai"
+courses = ["snacks-starters"]
+moods = ["spicy", "fresh-herby"]
+also_known_as = ["tod mun pla"]
 ingredients = [
   { id = "basa", amount = 400, unit = "g" },
   { id = "thai-curry-paste", amount = 2, unit = "tbsp" },
@@ -583,6 +663,11 @@ name = "Glass noodle salad"
 serves = 4
 prep_minutes = 20
 cook_minutes = 10
+cuisine = "thai"
+courses = ["salads"]
+moods = ["tangy", "spicy", "fresh-herby"]
+weather = ["cool-down"]
+also_known_as = ["yum woon sen"]
 ingredients = [
   { id = "glass-noodles", amount = 150, unit = "g" },
   { id = "prawns", amount = 200, unit = "g" },

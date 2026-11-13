@@ -730,7 +730,7 @@ cook_minutes = 35
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "comforting"]
-also_known_as = ["alur dom", "aloo dum"]
+also_known_as = ["alur dom"]
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "tomato", amount = 2, unit = "medium" },

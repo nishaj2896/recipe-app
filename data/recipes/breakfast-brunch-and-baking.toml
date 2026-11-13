@@ -167,7 +167,6 @@ cook_minutes = 6
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["savoury", "creamy", "comforting"]
-also_known_as = ["scrambled eggs"]
 ingredients = [
   { id = "egg", amount = 4, unit = "large" },
   { id = "butter", amount = 2, unit = "tbsp" },

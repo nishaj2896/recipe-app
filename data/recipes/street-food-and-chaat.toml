@@ -13,6 +13,11 @@ prep_minutes = 45
 cook_minutes = 25
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a18bb5-de60-7c32-a24f-28041b37426d.webp", sha256 = "2a268f29d86e01ef7663b630bac87f8b6b27219b2b0beacecc0fbfe8d8f84b48", alt = "Pani puri with potato and chickpea filling, beside a glass of spiced water" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "spicy", "crispy"]
+weather = ["breezy-evening", "sticky-sluggish"]
+also_known_as = ["golgappa", "puchka", "gol gappe"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
@@ -51,6 +56,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 0
 image = { file = "01a18bb5-de62-7321-8c50-e37b9ff38d38.webp", sha256 = "3c02ccf471cd606f65b15e431c21427aedcdb4c5eb3fc937381f75c00e567c14", alt = "Bhel puri with sev, peanuts, onion and coriander" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "sweet-sour", "crispy"]
+weather = ["breezy-evening"]
+also_known_as = ["bhel"]
 ingredients = [
   { id = "puffed-rice", amount = 4, unit = "cup" },
   { id = "sev", amount = 0.5, unit = "cup" },
@@ -82,6 +92,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 20
 image = { file = "01a18bb5-de64-7236-873d-96ef0d79db73.webp", sha256 = "0e1714934b1b8a45c06cfe5adad81dfcc291f27e6e04d4587a0459fc066bb60f", alt = "Sev puri with potato, onion, chutneys and sev" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "sweet-sour", "crispy"]
+weather = ["breezy-evening"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },
@@ -115,6 +129,10 @@ serves = 4
 prep_minutes = 45
 cook_minutes = 25
 image = { file = "01a18bb5-de66-7825-a8a4-ac3b7ec2ee03.webp", sha256 = "5bdd36b3fdcc2f515ad41790485baacfb6a1969fe1e88023b6eef15639b58d12", alt = "Dahi puri topped with curd, tamarind and green chutney and sev" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["creamy", "sweet-sour"]
+weather = ["cool-down"]
 ingredients = [
   { id = "semolina", amount = 0.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "tbsp" },
@@ -149,6 +167,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 55
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "spicy", "hearty"]
+also_known_as = ["ragda patties"]
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "potato", amount = 4, unit = "medium" },
@@ -185,6 +207,11 @@ name = "Kanda bhaji"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["kanda bhajji"]
 ingredients = [
   { id = "onion", amount = 3, unit = "medium" },
   { id = "gram-flour", amount = 0.75, unit = "cup" },
@@ -212,6 +239,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18bb5-de6d-7d05-bbc4-ec4322edc12b.webp", sha256 = "a284498fda986d3629bf5e101011c42c010682cb264c2914b31822334d99a408", alt = "Two dabeli pav filled with spiced potato, rolled in sev with peanuts and pomegranate" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["sweet-sour", "spicy"]
+also_known_as = ["kutchi dabeli"]
 ingredients = [
   { id = "pav", amount = 8, unit = "piece" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -247,6 +278,10 @@ name = "Vegetable frankie"
 serves = 4
 prep_minutes = 25
 cook_minutes = 30
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury"]
+also_known_as = ["veg frankie"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
@@ -282,6 +317,11 @@ prep_minutes = 30
 cook_minutes = 80
 plan_ahead = { wait_minutes = 600, note = "soak overnight" }
 image = { file = "01a18bb7-fec4-7656-a6b2-1e578490c3c9.webp", sha256 = "12653655000f8b667818e744a02316ed0b65b616f9ebb8f5b8464e7ba273f6b0", alt = "Chole in a small bowl with a puffed bhatura and sliced onion" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["chole bhatura"]
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 1, unit = "tbsp" },
@@ -320,6 +360,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 600, note = "soak overnight" }
+cuisine = "street-food"
+courses = ["mains"]
+moods = ["spicy", "tangy", "hearty"]
+also_known_as = ["chole kulcha"]
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -360,6 +404,9 @@ serves = 4
 prep_minutes = 40
 cook_minutes = 50
 plan_ahead = { wait_minutes = 120, note = "soak for 2 hours" }
+cuisine = "street-food"
+courses = ["breakfast", "snacks-starters"]
+moods = ["spicy", "crispy", "hearty"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -400,6 +447,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["moong pakoda"]
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 1, unit = "piece" },
@@ -427,6 +479,9 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 25
 image = { file = "01a18bb7-fecd-716e-82ca-fabe0a4ffb0f.webp", sha256 = "80c6453f24fe59b1d77b8a76aaf3a356882e8f19deed0a37c873ec86410b26f3", alt = "Paneer frankie wrapped in paper, cut to show the filling" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
@@ -459,6 +514,11 @@ name = "Shakarkandi chaat"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "sweet", "spicy"]
+weather = ["breezy-evening"]
+also_known_as = ["sweet potato chaat"]
 ingredients = [
   { id = "sweet-potato", amount = 3, unit = "medium" },
   { id = "lemon", amount = 1, unit = "small" },
@@ -483,6 +543,10 @@ name = "Fruit chaat"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "sweet", "fresh-herby"]
+weather = ["cool-down"]
 ingredients = [
   { id = "apple", amount = 1, unit = "medium" },
   { id = "banana", amount = 2, unit = "medium" },
@@ -508,6 +572,10 @@ name = "Corn chaat"
 serves = 4
 prep_minutes = 10
 cook_minutes = 8
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "spicy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "sweetcorn", amount = 2, unit = "cup" },
   { id = "butter", amount = 1, unit = "tbsp" },
@@ -535,6 +603,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 5
 image = { file = "01a18bb7-fed9-72bd-9261-fb787605c7cb.webp", sha256 = "9ce25c8f84a572933dd1db8f783f4d8e98c0c0d7a1ed02e80ec1a77fc95604cc", alt = "Sprouts chaat with onion, tomato, cucumber and coriander" }
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["tangy", "fresh-herby", "light"]
+also_known_as = ["sprout salad"]
 ingredients = [
   { id = "sprouted-mung-beans", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "small" },
@@ -562,6 +634,9 @@ name = "Tawa pulao"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "street-food"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -593,6 +668,9 @@ name = "Masala pav"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "street-food"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "pav", amount = 8, unit = "piece" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -621,6 +699,11 @@ name = "Bun maska"
 serves = 4
 prep_minutes = 5
 cook_minutes = 5
+cuisine = "street-food"
+courses = ["breakfast", "snacks-starters"]
+moods = ["sweet", "creamy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["bun maska chai"]
 ingredients = [
   { id = "burger-buns", amount = 4, unit = "piece" },
   { id = "butter", amount = 4, unit = "tbsp" },
