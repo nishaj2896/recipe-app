@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a15175-3c19-76f2-97d3-b9a4d1936e13.webp", sha256 = "c49571eee16d8cd867c51ac33f99292fd49c620e4ed26fa26363a0faf85caf89", alt = "Stack of pancakes with butter, maple syrup and berries" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["sweet", "comforting"]
+also_known_as = ["pancake"]
 ingredients = [
   { id = "egg", amount = 1, unit = "piece" },
   { id = "all-purpose-flour", amount = 150, unit = "g" },
@@ -39,6 +43,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18c20-05b5-7a1a-9a87-cb218f0dd9f0.webp", sha256 = "294530d3f2c582aff86317e55eaf4dd34a1464d1b7ca772ff62448a06a804c87", alt = "A stack of buttermilk pancakes with maple syrup poured over" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["sweet", "comforting"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 2, unit = "tbsp" },
@@ -67,6 +74,9 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 12
 image = { file = "01a18c20-05b7-7ab4-aa08-d40c0a710534.webp", sha256 = "1d6d1652327cfdd77654a377f1029ba8de52585e57c4777ac037b7312591ef8e", alt = "Stack of banana pancakes with sliced banana and honey" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["sweet", "comforting"]
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "egg", amount = 2, unit = "large" },
@@ -94,6 +104,10 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 10
 image = { file = "01a18c20-05b9-7b7f-aa58-4cb357f2c54c.webp", sha256 = "4ed236111c85c844613de86ebb400ee7960649e1610f7025adacd18e9c0b7da4", alt = "Thick French toast with sliced strawberries and maple syrup" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["sweet", "comforting"]
+also_known_as = ["eggy bread"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "egg", amount = 3, unit = "large" },
@@ -122,6 +136,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18c20-05bb-7848-841d-b203183823aa.webp", sha256 = "98f479da68d5f560ac25de52553ac9e92428ea059ecfcd10bded710be29e4f2d", alt = "Golden waffle with maple syrup" }
+cuisine = "american-british"
+courses = ["breakfast", "desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["waffle"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 2, unit = "tbsp" },
@@ -148,6 +166,10 @@ name = "Scrambled eggs on toast"
 serves = 2
 prep_minutes = 3
 cook_minutes = 6
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["savoury", "creamy", "comforting"]
+also_known_as = ["scrambled eggs"]
 ingredients = [
   { id = "egg", amount = 4, unit = "large" },
   { id = "butter", amount = 2, unit = "tbsp" },
@@ -173,6 +195,10 @@ serves = 2
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18c20-05c0-7d72-b117-e84ec404ce1f.webp", sha256 = "eba33bee19ee32e57419be3c8aa9bf55447404f82d9c53049e58062834d84e19", alt = "Eggs Benedict with ham, poached eggs, hollandaise and chives" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["creamy", "savoury"]
+also_known_as = ["eggs benny"]
 ingredients = [
   { id = "egg", amount = 6, unit = "large" },
   { id = "english-muffins", amount = 2, unit = "piece" },
@@ -202,6 +228,10 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 3
 image = { file = "01a18c20-05c2-759a-863d-cb88348f2f92.webp", sha256 = "061bc6b4fed339bcc5b540f9821c14a53420b5abc9c8d5d00792bac7691fb636", alt = "Two slices of sourdough avocado toast with olive oil and chilli flakes" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["fresh-herby", "creamy", "light"]
+also_known_as = ["avo toast"]
 ingredients = [
   { id = "avocado", amount = 2, unit = "medium" },
   { id = "sourdough", amount = 2, unit = "slice" },
@@ -225,6 +255,10 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 0
 plan_ahead = { wait_minutes = 360, note = "chill for 6 hours" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["creamy", "sweet", "light"]
+weather = ["cool-down", "sticky-sluggish"]
 ingredients = [
   { id = "rolled-oats", amount = 1, unit = "cup" },
   { id = "milk", amount = 1.25, unit = "cup" },
@@ -249,6 +283,11 @@ serves = 2
 prep_minutes = 2
 cook_minutes = 8
 image = { file = "01a18c20-05c7-763c-b2f0-eba485cb9d6e.webp", sha256 = "c0980e0057334c1520401bfbba24f80fdcc054a4d8a6b5de7adfd2768def34cc", alt = "Oat porridge with banana, raspberries and honey" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["creamy", "sweet", "comforting"]
+weather = ["warming", "under-the-weather"]
+also_known_as = ["oatmeal", "porridge"]
 ingredients = [
   { id = "rolled-oats", amount = 1, unit = "cup" },
   { id = "milk", amount = 2.25, unit = "cup" },
@@ -272,6 +311,9 @@ name = "Granola"
 serves = 8
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["sweet", "crispy"]
 ingredients = [
   { id = "rolled-oats", amount = 3, unit = "cup" },
   { id = "almonds", amount = 0.5, unit = "cup" },
@@ -302,6 +344,11 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 0
 plan_ahead = { wait_minutes = 240, note = "freeze for 4 hours" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["sweet", "light", "fresh-herby"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["smoothie bowl"]
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "strawberries", amount = 1, unit = "cup" },
@@ -327,6 +374,9 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 12
 image = { file = "01a18c20-05cd-79b1-ac85-edeb6b23dbae.webp", sha256 = "b57babaebbdf2f091944b6276b69fdee97e415a21c243d56d8152891dc61426f", alt = "Breakfast burrito cut in half to show egg, potato, chorizo and avocado" }
+cuisine = "american-british"
+courses = ["breakfast"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "flour-tortillas", amount = 2, unit = "large" },
   { id = "egg", amount = 4, unit = "large" },
@@ -353,6 +403,10 @@ name = "Egg muffins"
 serves = 6
 prep_minutes = 10
 cook_minutes = 22
+cuisine = "american-british"
+courses = ["breakfast", "snacks-starters"]
+moods = ["savoury", "light"]
+also_known_as = ["egg bites"]
 ingredients = [
   { id = "egg", amount = 8, unit = "large" },
   { id = "spinach", amount = 1, unit = "cup" },
@@ -381,6 +435,11 @@ prep_minutes = 30
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 image = { file = "01a18c20-05d2-7d4d-bae0-43afae128a22.webp", sha256 = "82eeaf08f265b583ba20737fd3e1ff4942b154b5f5a42dba1d7a3db3a3685064", alt = "Two iced cinnamon rolls" }
+cuisine = "american-british"
+courses = ["desserts", "breakfast"]
+moods = ["sweet", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["cinnamon buns"]
 ingredients = [
   { id = "all-purpose-flour", amount = 3.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },
@@ -411,6 +470,10 @@ name = "Blueberry muffins"
 serves = 12
 prep_minutes = 15
 cook_minutes = 22
+cuisine = "american-british"
+courses = ["desserts", "breakfast"]
+moods = ["sweet"]
+also_known_as = ["muffins"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -441,6 +504,9 @@ serves = 12
 prep_minutes = 25
 cook_minutes = 40
 image = { file = "01a18c20-05d6-78eb-9d0b-f5ab40a1f49f.webp", sha256 = "34094a720eb3e7ab07fbffa8453e7918f4238971ee142d201294cea09bd9193c", alt = "A slice of carrot cake with cream cheese frosting and walnuts" }
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
 ingredients = [
   { id = "carrot", amount = 3, unit = "medium" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -475,6 +541,9 @@ serves = 12
 prep_minutes = 20
 cook_minutes = 35
 image = { file = "01a18c20-05d9-71c3-86b7-7916342dd901.webp", sha256 = "589f6fe167f7f4cdb4b9ecaf8a0727741312c284f807bc503a1fc58399574459", alt = "Slice of chocolate layer cake with ganache" }
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "comforting"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1.75, unit = "cup" },
   { id = "cocoa-powder", amount = 0.75, unit = "cup" },
@@ -507,6 +576,10 @@ name = "Vanilla sponge cake"
 serves = 10
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["sponge cake", "vanilla cake"]
 ingredients = [
   { id = "butter", amount = 1, unit = "cup" },
   { id = "sugar", amount = 1, unit = "cup" },
@@ -535,6 +608,10 @@ name = "Lemon drizzle cake"
 serves = 10
 prep_minutes = 15
 cook_minutes = 45
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "tangy"]
+also_known_as = ["lemon cake"]
 ingredients = [
   { id = "butter", amount = 0.75, unit = "cup" },
   { id = "sugar", amount = 1.25, unit = "cup" },
@@ -562,6 +639,10 @@ prep_minutes = 25
 cook_minutes = 60
 plan_ahead = { wait_minutes = 420, note = "chill for 6 hours" }
 image = { file = "01a18c20-05df-76aa-a0a5-be146776e75a.webp", sha256 = "1ef9517579ef449117a9d898d4725b59a56392052bb3e995fa3368ce43079467", alt = "Slice of baked cheesecake on a biscuit base" }
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["baked cheesecake"]
 ingredients = [
   { id = "digestive-biscuits", amount = 250, unit = "g" },
   { id = "butter", amount = 0.5, unit = "cup" },
@@ -590,6 +671,9 @@ serves = 12
 prep_minutes = 15
 cook_minutes = 22
 image = { file = "01a18c20-05e1-75f7-8402-eff7d0361150.webp", sha256 = "4e6a62798c4aa85483076a908518528447a6291ed58108bac7c7a90629962b9d", alt = "Two banana muffins, one broken open" }
+cuisine = "american-british"
+courses = ["desserts", "breakfast"]
+moods = ["sweet"]
 ingredients = [
   { id = "banana", amount = 3, unit = "large" },
   { id = "all-purpose-flour", amount = 1.75, unit = "cup" },
@@ -618,6 +702,10 @@ name = "Oatmeal cookies"
 serves = 12
 prep_minutes = 15
 cook_minutes = 12
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["oat cookies"]
 ingredients = [
   { id = "rolled-oats", amount = 1.5, unit = "cup" },
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
@@ -645,6 +733,10 @@ name = "Shortbread"
 serves = 12
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "american-british"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["shortbread biscuits"]
 ingredients = [
   { id = "butter", amount = 1, unit = "cup" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -668,6 +760,10 @@ serves = 12
 prep_minutes = 25
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
+cuisine = "american-british"
+courses = ["rice-breads"]
+moods = ["savoury"]
+also_known_as = ["bread rolls"]
 ingredients = [
   { id = "bread-flour", amount = 3.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },
