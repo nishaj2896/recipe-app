@@ -173,6 +173,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["beet"]
+jain = false
 
 [[ingredient]]
 id = "bell-pepper"
@@ -273,6 +274,7 @@ name = "Carrot"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "cassava"
@@ -281,6 +283,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["tapioca root", "yuca"]
+jain = false
 
 [[ingredient]]
 id = "cauliflower"
@@ -295,6 +298,8 @@ name = "Celeriac"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+allergens = ["celery"]
+jain = false
 
 [[ingredient]]
 id = "celery"
@@ -302,6 +307,7 @@ name = "Celery"
 class = "B"
 diet = "vegan"
 category = "vegetables"
+allergens = ["celery"]
 
 [[ingredient]]
 id = "cherry-tomatoes"
@@ -340,6 +346,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["taro root", "taro"]
+jain = false
 
 [[ingredient]]
 id = "colocasia-leaves"
@@ -371,6 +378,7 @@ class = "B"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["dried shiitake", "porcini"]
+jain = false
 
 [[ingredient]]
 id = "drumstick-leaves"
@@ -394,6 +402,7 @@ name = "Edamame"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+allergens = ["soy"]
 
 [[ingredient]]
 id = "elephant-foot-yam"
@@ -402,6 +411,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["yam"]
+jain = false
 
 [[ingredient]]
 id = "fennel-bulb"
@@ -441,6 +451,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["mixed veg"]
+jain = false
 
 [[ingredient]]
 id = "galangal"
@@ -448,6 +459,7 @@ name = "Galangal"
 class = "B"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "garlic"
@@ -456,6 +468,7 @@ class = "S"
 kind = "fresh"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "ginger"
@@ -465,6 +478,7 @@ kind = "fresh"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["fresh ginger"]
+jain = false
 
 [[ingredient]]
 id = "gongura"
@@ -535,6 +549,7 @@ name = "Leek"
 class = "B"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "lettuce"
@@ -551,6 +566,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["lotus stem"]
+jain = false
 
 [[ingredient]]
 id = "mushroom"
@@ -559,6 +575,7 @@ class = "B"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["button mushroom", "white mushroom", "oyster mushroom", "portobello", "shiitake", "canned mushrooms"]
+jain = false
 
 [[ingredient]]
 id = "mustard-greens"
@@ -566,6 +583,7 @@ name = "Mustard greens"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "nori"
@@ -591,6 +609,7 @@ kind = "fresh"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["red onion", "white onion"]
+jain = false
 
 [[ingredient]]
 id = "parsnip"
@@ -598,6 +617,7 @@ name = "Parsnip"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "passata"
@@ -635,6 +655,7 @@ name = "Potato"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "pumpkin"
@@ -651,6 +672,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["white radish", "daikon"]
+jain = false
 
 [[ingredient]]
 id = "raw-banana"
@@ -729,6 +751,7 @@ class = "B"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["small onions", "sambar onions"]
+jain = false
 
 [[ingredient]]
 id = "small-brinjal"
@@ -751,6 +774,7 @@ name = "Soybean sprouts"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+allergens = ["soy"]
 
 [[ingredient]]
 id = "spinach"
@@ -766,6 +790,7 @@ class = "A"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["green garlic"]
+jain = false
 
 [[ingredient]]
 id = "spring-onions"
@@ -774,6 +799,7 @@ class = "B"
 diet = "vegan"
 category = "vegetables"
 search_terms = ["scallions", "green onions"]
+jain = false
 
 [[ingredient]]
 id = "sprouted-mung-beans"
@@ -789,6 +815,7 @@ name = "Sun-dried tomatoes"
 class = "B"
 diet = "vegan"
 category = "vegetables"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "sweet-potato"
@@ -796,6 +823,7 @@ name = "Sweet potato"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "sweetcorn"
@@ -842,6 +870,7 @@ name = "Turnip"
 class = "A"
 diet = "vegan"
 category = "vegetables"
+jain = false
 
 [[ingredient]]
 id = "wakame"
@@ -1014,6 +1043,7 @@ name = "Sausages"
 class = "A"
 diet = "non_veg"
 category = "meat-and-poultry"
+allergens = ["gluten", "sulphites"]
 
 [[ingredient]]
 id = "turkey"
@@ -1038,6 +1068,7 @@ name = "Anchovies"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "barramundi"
@@ -1046,6 +1077,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["asian sea bass"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "basa"
@@ -1053,6 +1085,7 @@ name = "Basa"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "bombay-duck"
@@ -1061,6 +1094,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["bummalo"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "bonito-flakes"
@@ -1069,6 +1103,7 @@ class = "B"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["dried bonito flakes"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "canned-sardines"
@@ -1077,6 +1112,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["tinned sardines"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "canned-tuna"
@@ -1085,6 +1121,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["tinned tuna"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "catla"
@@ -1092,6 +1129,7 @@ name = "Catla"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "clams"
@@ -1099,6 +1137,7 @@ name = "Clams"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["molluscs"]
 
 [[ingredient]]
 id = "cod"
@@ -1106,6 +1145,7 @@ name = "Cod"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "crab"
@@ -1113,6 +1153,7 @@ name = "Crab"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["crustaceans"]
 
 [[ingredient]]
 id = "dried-fish"
@@ -1121,6 +1162,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["bombay duck"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "dried-shrimp"
@@ -1128,6 +1170,7 @@ name = "Dried shrimp"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["crustaceans"]
 
 [[ingredient]]
 id = "hilsa"
@@ -1135,6 +1178,7 @@ name = "Hilsa"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "kingfish"
@@ -1143,6 +1187,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["seer fish"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "lobster"
@@ -1150,6 +1195,7 @@ name = "Lobster"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["crustaceans"]
 
 [[ingredient]]
 id = "mackerel"
@@ -1157,6 +1203,7 @@ name = "Mackerel"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "mussels"
@@ -1164,6 +1211,7 @@ name = "Mussels"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["molluscs"]
 
 [[ingredient]]
 id = "oysters"
@@ -1171,6 +1219,7 @@ name = "Oysters"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["molluscs"]
 
 [[ingredient]]
 id = "pomfret"
@@ -1178,6 +1227,7 @@ name = "Pomfret"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "prawns"
@@ -1186,6 +1236,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["shrimp"]
+allergens = ["crustaceans"]
 
 [[ingredient]]
 id = "rohu"
@@ -1193,6 +1244,7 @@ name = "Rohu"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "salmon"
@@ -1200,6 +1252,7 @@ name = "Salmon"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "salt-cod"
@@ -1208,6 +1261,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["dried salt cod"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "sardines"
@@ -1216,6 +1270,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["fresh sardines"]
+allergens = ["fish"]
 
 [[ingredient]]
 id = "scallops"
@@ -1223,6 +1278,7 @@ name = "Scallops"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["molluscs"]
 
 [[ingredient]]
 id = "smoked-salmon"
@@ -1230,6 +1286,7 @@ name = "Smoked salmon"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "sole"
@@ -1237,6 +1294,7 @@ name = "Sole"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "squid"
@@ -1245,6 +1303,7 @@ class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
 search_terms = ["calamari"]
+allergens = ["molluscs"]
 
 [[ingredient]]
 id = "tilapia"
@@ -1252,6 +1311,7 @@ name = "Tilapia"
 class = "A"
 diet = "non_veg"
 category = "fish-and-seafood"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "tuna"
@@ -1262,6 +1322,7 @@ category = "fish-and-seafood"
 search_terms = ["fresh tuna"]
 
 # Tofu & plant proteins
+allergens = ["fish"]
 
 [[ingredient]]
 id = "plant-based-mince"
@@ -1270,6 +1331,7 @@ class = "A"
 diet = "vegan"
 category = "tofu-and-plant-proteins"
 search_terms = ["vegan mince", "meat-free mince"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "seitan"
@@ -1277,6 +1339,7 @@ name = "Seitan"
 class = "A"
 diet = "vegan"
 category = "tofu-and-plant-proteins"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "silken-tofu"
@@ -1284,6 +1347,7 @@ name = "Silken tofu"
 class = "A"
 diet = "vegan"
 category = "tofu-and-plant-proteins"
+allergens = ["soy"]
 
 [[ingredient]]
 id = "soya-chunks"
@@ -1292,6 +1356,7 @@ class = "A"
 diet = "vegan"
 category = "tofu-and-plant-proteins"
 search_terms = ["textured vegetable protein", "tvp", "soy chunks"]
+allergens = ["soy"]
 
 [[ingredient]]
 id = "soya-granules"
@@ -1300,6 +1365,7 @@ class = "A"
 diet = "vegan"
 category = "tofu-and-plant-proteins"
 search_terms = ["soy granules"]
+allergens = ["soy"]
 
 [[ingredient]]
 id = "tempeh"
@@ -1307,6 +1373,7 @@ name = "Tempeh"
 class = "A"
 diet = "vegan"
 category = "tofu-and-plant-proteins"
+allergens = ["soy"]
 
 [[ingredient]]
 id = "tofu"
@@ -1317,6 +1384,7 @@ category = "tofu-and-plant-proteins"
 search_terms = ["firm tofu"]
 
 # Dals & pulses
+allergens = ["soy"]
 
 [[ingredient]]
 id = "adzuki-beans"
@@ -1541,6 +1609,7 @@ class = "A"
 diet = "vegan"
 category = "dals-and-pulses"
 search_terms = ["soya beans"]
+allergens = ["soy"]
 
 [[ingredient]]
 id = "toor-dal"
@@ -1589,6 +1658,7 @@ name = "Blue cheese"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "brie"
@@ -1596,6 +1666,7 @@ name = "Brie"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "burrata"
@@ -1603,6 +1674,7 @@ name = "Burrata"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "butter"
@@ -1612,6 +1684,7 @@ kind = "pantry"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["salted butter", "unsalted butter"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "buttermilk"
@@ -1619,6 +1692,7 @@ name = "Buttermilk"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "camembert"
@@ -1626,6 +1700,7 @@ name = "Camembert"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "cheddar"
@@ -1634,6 +1709,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["cheddar cheese"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "chhena"
@@ -1641,6 +1717,7 @@ name = "Chhena"
 class = "A"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "condensed-milk"
@@ -1649,6 +1726,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["sweetened condensed milk"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "cottage-cheese"
@@ -1656,6 +1734,7 @@ name = "Cottage cheese"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "cream"
@@ -1664,6 +1743,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["fresh cream", "single cream", "cooking cream", "light cream"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "cream-cheese"
@@ -1671,6 +1751,7 @@ name = "Cream cheese"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "creme-fraiche"
@@ -1678,6 +1759,7 @@ name = "Creme fraiche"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "curd"
@@ -1686,6 +1768,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["yogurt", "yoghurt", "plain yogurt"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "dairy-whitener"
@@ -1694,6 +1777,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["milk whitener"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "duck-egg"
@@ -1701,6 +1785,7 @@ name = "Duck egg"
 class = "A"
 diet = "egg"
 category = "dairy-and-eggs"
+allergens = ["egg"]
 
 [[ingredient]]
 id = "egg"
@@ -1709,6 +1794,7 @@ class = "A"
 diet = "egg"
 category = "dairy-and-eggs"
 search_terms = ["hen eggs", "chicken eggs", "egg whites"]
+allergens = ["egg"]
 
 [[ingredient]]
 id = "emmental"
@@ -1717,6 +1803,7 @@ class = "B"
 diet = "non_veg"
 category = "dairy-and-eggs"
 search_terms = ["swiss cheese"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "evaporated-milk"
@@ -1724,6 +1811,7 @@ name = "Evaporated milk"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "feta"
@@ -1731,6 +1819,7 @@ name = "Feta"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "ghee"
@@ -1740,6 +1829,7 @@ kind = "pantry"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["clarified butter"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "goat-cheese"
@@ -1748,6 +1838,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["chevre"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "gouda"
@@ -1755,6 +1846,7 @@ name = "Gouda"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "gruyere"
@@ -1762,6 +1854,7 @@ name = "Gruyere"
 class = "B"
 diet = "non_veg"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "halloumi"
@@ -1769,6 +1862,7 @@ name = "Halloumi"
 class = "A"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "hung-curd"
@@ -1777,6 +1871,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["greek yogurt", "strained yogurt"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "kefir"
@@ -1784,6 +1879,7 @@ name = "Kefir"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "khoa"
@@ -1791,6 +1887,7 @@ name = "Khoa"
 class = "A"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "malai"
@@ -1798,6 +1895,7 @@ name = "Malai"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "mascarpone"
@@ -1805,6 +1903,7 @@ name = "Mascarpone"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "milk"
@@ -1813,6 +1912,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["whole milk", "toned milk", "uht milk", "full cream milk"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "milk-powder"
@@ -1821,6 +1921,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["powdered milk"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "mozzarella"
@@ -1828,6 +1929,7 @@ name = "Mozzarella"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "paneer"
@@ -1836,6 +1938,7 @@ class = "A"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["indian cottage cheese"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "parmesan"
@@ -1844,6 +1947,7 @@ class = "B"
 diet = "non_veg"
 category = "dairy-and-eggs"
 search_terms = ["parmigiano reggiano"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "pecorino"
@@ -1851,6 +1955,7 @@ name = "Pecorino"
 class = "B"
 diet = "non_veg"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "processed-cheese"
@@ -1859,6 +1964,7 @@ class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["cheese slices", "cheese spread"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "quail-egg"
@@ -1866,6 +1972,7 @@ name = "Quail egg"
 class = "A"
 diet = "egg"
 category = "dairy-and-eggs"
+allergens = ["egg"]
 
 [[ingredient]]
 id = "ricotta"
@@ -1873,6 +1980,7 @@ name = "Ricotta"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "sour-cream"
@@ -1880,6 +1988,7 @@ name = "Sour cream"
 class = "B"
 diet = "vegetarian"
 category = "dairy-and-eggs"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "vanilla-ice-cream"
@@ -1888,6 +1997,7 @@ class = "A"
 diet = "vegetarian"
 category = "dairy-and-eggs"
 search_terms = ["ice cream"]
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "whipping-cream"
@@ -1898,6 +2008,7 @@ category = "dairy-and-eggs"
 search_terms = ["double cream", "heavy cream"]
 
 # Plant-based milks
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "almond-milk"
@@ -1905,6 +2016,7 @@ name = "Almond milk"
 class = "B"
 diet = "vegan"
 category = "plant-based-milks"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "cashew-milk"
@@ -1912,6 +2024,7 @@ name = "Cashew milk"
 class = "B"
 diet = "vegan"
 category = "plant-based-milks"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "coconut-cream"
@@ -1935,6 +2048,7 @@ name = "Oat milk"
 class = "B"
 diet = "vegan"
 category = "plant-based-milks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "rice-milk"
@@ -1952,6 +2066,7 @@ category = "plant-based-milks"
 search_terms = ["soya milk"]
 
 # Rice & grains
+allergens = ["soy"]
 
 [[ingredient]]
 id = "amaranth"
@@ -2006,6 +2121,7 @@ class = "A"
 diet = "vegan"
 category = "rice-and-grains"
 search_terms = ["cracked wheat"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "brown-rice"
@@ -2029,6 +2145,7 @@ class = "A"
 diet = "vegan"
 category = "rice-and-grains"
 search_terms = ["bulgur wheat"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "farro"
@@ -2036,6 +2153,7 @@ name = "Farro"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "finger-millet"
@@ -2072,6 +2190,7 @@ name = "Freekeh"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "glutinous-rice"
@@ -2147,6 +2266,7 @@ class = "A"
 diet = "vegan"
 category = "rice-and-grains"
 search_terms = ["barley"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "pearl-millet"
@@ -2207,6 +2327,7 @@ class = "A"
 diet = "vegan"
 category = "rice-and-grains"
 search_terms = ["oats", "porridge oats"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "rye-berries"
@@ -2214,6 +2335,7 @@ name = "Rye berries"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sago"
@@ -2236,6 +2358,7 @@ name = "Spelt"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "steel-cut-oats"
@@ -2243,6 +2366,7 @@ name = "Steel-cut oats"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sushi-rice"
@@ -2264,6 +2388,7 @@ name = "Wheat berries"
 class = "A"
 diet = "vegan"
 category = "rice-and-grains"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "wild-rice"
@@ -2280,6 +2405,7 @@ name = "Cannelloni tubes"
 class = "A"
 diet = "egg"
 category = "pasta-and-noodles"
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "cheese-filled-pasta"
@@ -2288,6 +2414,7 @@ class = "A"
 diet = "egg"
 category = "pasta-and-noodles"
 search_terms = ["ravioli", "tortellini", "ricotta ravioli"]
+allergens = ["gluten", "dairy", "egg"]
 
 [[ingredient]]
 id = "couscous"
@@ -2295,6 +2422,7 @@ name = "Couscous"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "egg-noodles"
@@ -2302,6 +2430,7 @@ name = "Egg noodles"
 class = "A"
 diet = "egg"
 category = "pasta-and-noodles"
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "egg-pasta"
@@ -2310,6 +2439,7 @@ class = "A"
 diet = "egg"
 category = "pasta-and-noodles"
 search_terms = ["fresh egg pasta", "tagliatelle", "pappardelle"]
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "flat-rice-noodles"
@@ -2333,6 +2463,7 @@ name = "Gnocchi"
 class = "A"
 diet = "egg"
 category = "pasta-and-noodles"
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "hakka-noodles"
@@ -2340,6 +2471,7 @@ name = "Hakka noodles"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "indian-vermicelli"
@@ -2348,6 +2480,7 @@ class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
 search_terms = ["roasted vermicelli"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "instant-noodles"
@@ -2355,6 +2488,7 @@ name = "Instant noodles"
 class = "A"
 diet = "vegetarian"
 category = "pasta-and-noodles"
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "lasagne-sheets"
@@ -2363,6 +2497,7 @@ class = "A"
 diet = "egg"
 category = "pasta-and-noodles"
 search_terms = ["lasagna"]
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "meat-filled-pasta"
@@ -2371,6 +2506,7 @@ class = "A"
 diet = "non_veg"
 category = "pasta-and-noodles"
 search_terms = ["meat ravioli", "meat tortellini"]
+allergens = ["gluten", "dairy", "egg"]
 
 [[ingredient]]
 id = "orzo"
@@ -2378,6 +2514,7 @@ name = "Orzo"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "pasta"
@@ -2386,6 +2523,7 @@ class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
 search_terms = ["spaghetti", "penne", "fusilli", "macaroni", "linguine", "fettuccine", "rigatoni", "farfalle", "conchiglie", "shells", "orecchiette", "ditalini", "angel hair", "whole-wheat pasta", "gluten-free pasta"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "pearl-couscous"
@@ -2394,6 +2532,7 @@ class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
 search_terms = ["giant couscous", "israeli couscous"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "ramen-noodles"
@@ -2401,6 +2540,7 @@ name = "Ramen noodles"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "rice-paper"
@@ -2424,6 +2564,7 @@ name = "Shirataki noodles"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+jain = false
 
 [[ingredient]]
 id = "soba"
@@ -2431,6 +2572,7 @@ name = "Soba"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "somen"
@@ -2438,6 +2580,7 @@ name = "Somen"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "spring-roll-wrappers"
@@ -2445,6 +2588,7 @@ name = "Spring roll wrappers"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sweet-potato-noodles"
@@ -2452,6 +2596,7 @@ name = "Sweet potato noodles"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+jain = false
 
 [[ingredient]]
 id = "udon"
@@ -2459,6 +2604,7 @@ name = "Udon"
 class = "A"
 diet = "vegan"
 category = "pasta-and-noodles"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "wonton-wrappers"
@@ -2469,6 +2615,7 @@ category = "pasta-and-noodles"
 search_terms = ["dumpling wrappers", "gyoza wrappers"]
 
 # Bread, bakery & snacks
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "amaretti"
@@ -2476,6 +2623,7 @@ name = "Amaretti"
 class = "A"
 diet = "egg"
 category = "bread-bakery-and-snacks"
+allergens = ["tree-nuts", "egg"]
 
 [[ingredient]]
 id = "bagels"
@@ -2483,6 +2631,7 @@ name = "Bagels"
 class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "baguette"
@@ -2490,6 +2639,7 @@ name = "Baguette"
 class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "boondi"
@@ -2505,6 +2655,7 @@ name = "Breadcrumbs"
 class = "B"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "brown-bread"
@@ -2513,6 +2664,7 @@ class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["whole-wheat bread"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "burger-buns"
@@ -2520,6 +2672,7 @@ name = "Burger buns"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "chocolate-sandwich-cookies"
@@ -2528,6 +2681,7 @@ class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
 search_terms = ["cream biscuits"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "corn-tortillas"
@@ -2542,6 +2696,7 @@ name = "Croissants"
 class = "A"
 diet = "egg"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy", "egg"]
 
 [[ingredient]]
 id = "digestive-biscuits"
@@ -2549,6 +2704,7 @@ name = "Digestive biscuits"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "english-muffins"
@@ -2556,6 +2712,7 @@ name = "English muffins"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "filo-pastry"
@@ -2564,6 +2721,7 @@ class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["phyllo"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "flour-tortillas"
@@ -2572,6 +2730,7 @@ class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["wraps"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "frozen-parathas"
@@ -2580,6 +2739,7 @@ class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
 search_terms = ["ready rotis", "frozen rotis"]
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "glucose-biscuits"
@@ -2587,6 +2747,7 @@ name = "Glucose biscuits"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "graham-crackers"
@@ -2594,6 +2755,7 @@ name = "Graham crackers"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "hot-dog-buns"
@@ -2601,6 +2763,7 @@ name = "Hot dog buns"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "kataifi-pastry"
@@ -2609,6 +2772,7 @@ class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["shredded filo"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "ladyfingers"
@@ -2617,6 +2781,7 @@ class = "A"
 diet = "egg"
 category = "bread-bakery-and-snacks"
 search_terms = ["savoiardi", "sponge fingers"]
+allergens = ["gluten", "egg"]
 
 [[ingredient]]
 id = "lavash"
@@ -2624,6 +2789,7 @@ name = "Lavash"
 class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "marie-biscuits"
@@ -2631,6 +2797,7 @@ name = "Marie biscuits"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "naan"
@@ -2638,6 +2805,7 @@ name = "Naan"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "panko"
@@ -2646,6 +2814,7 @@ class = "B"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["japanese breadcrumbs"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "papad"
@@ -2654,6 +2823,7 @@ class = "B"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["poppadom", "papadum"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "pav"
@@ -2662,6 +2832,7 @@ class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
 search_terms = ["dinner rolls", "bread rolls"]
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "pita-bread"
@@ -2670,6 +2841,7 @@ class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["pitta"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "pizza-base"
@@ -2678,6 +2850,7 @@ class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["pizza crust"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "puff-pastry"
@@ -2685,6 +2858,7 @@ name = "Puff pastry"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "rice-wafers"
@@ -2701,6 +2875,7 @@ class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
 search_terms = ["toast biscuits"]
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "sev"
@@ -2716,6 +2891,7 @@ class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
 search_terms = ["pie crust"]
+allergens = ["gluten", "dairy"]
 
 [[ingredient]]
 id = "sourdough"
@@ -2723,6 +2899,7 @@ name = "Sourdough"
 class = "A"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "taco-shells"
@@ -2737,6 +2914,7 @@ name = "Wafer biscuits"
 class = "A"
 diet = "vegetarian"
 category = "bread-bakery-and-snacks"
+allergens = ["gluten", "dairy", "soy"]
 
 [[ingredient]]
 id = "white-bread"
@@ -2747,6 +2925,7 @@ category = "bread-bakery-and-snacks"
 search_terms = ["sandwich bread"]
 
 # Fruits
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "apple"
@@ -3063,6 +3242,7 @@ name = "Chives"
 class = "B"
 diet = "vegan"
 category = "fresh-herbs"
+jain = false
 
 [[ingredient]]
 id = "coriander-leaves"
@@ -3188,6 +3368,7 @@ name = "Almond butter"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "almond-flakes"
@@ -3196,6 +3377,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["flaked almonds", "sliced almonds"]
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "almonds"
@@ -3203,6 +3385,7 @@ name = "Almonds"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "basil-seeds"
@@ -3218,6 +3401,7 @@ name = "Brazil nuts"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "candied-peel"
@@ -3226,6 +3410,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["mixed peel"]
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "cashew-butter"
@@ -3233,6 +3418,7 @@ name = "Cashew butter"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "cashews"
@@ -3241,6 +3427,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["cashew nuts"]
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "charoli"
@@ -3248,6 +3435,7 @@ name = "Charoli"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "chestnuts"
@@ -3284,6 +3472,7 @@ name = "Currants"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dates"
@@ -3299,6 +3488,7 @@ name = "Desiccated coconut"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dried-apple-rings"
@@ -3306,6 +3496,7 @@ name = "Dried apple rings"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dried-apricots"
@@ -3313,6 +3504,7 @@ name = "Dried apricots"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dried-blueberries"
@@ -3335,6 +3527,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["copra"]
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dried-cranberries"
@@ -3349,6 +3542,7 @@ name = "Dried figs"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dried-mango"
@@ -3356,6 +3550,7 @@ name = "Dried mango"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "dried-mulberries"
@@ -3394,6 +3589,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["candied cherries"]
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "goji-berries"
@@ -3408,6 +3604,7 @@ name = "Hazelnuts"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "hemp-seeds"
@@ -3422,6 +3619,7 @@ name = "Macadamia nuts"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "marzipan"
@@ -3430,6 +3628,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["almond paste"]
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "melon-seeds"
@@ -3444,6 +3643,7 @@ name = "Peanut butter"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["peanuts"]
 
 [[ingredient]]
 id = "peanuts"
@@ -3452,6 +3652,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["groundnuts"]
+allergens = ["peanuts"]
 
 [[ingredient]]
 id = "pecans"
@@ -3459,6 +3660,7 @@ name = "Pecans"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "pine-nuts"
@@ -3466,6 +3668,7 @@ name = "Pine nuts"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "pistachios"
@@ -3473,6 +3676,7 @@ name = "Pistachios"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "prunes"
@@ -3503,6 +3707,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["golden raisins", "sultanas", "black raisins"]
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "sunflower-seed-butter"
@@ -3525,6 +3730,7 @@ class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
 search_terms = ["sesame paste"]
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "tender-coconut"
@@ -3540,6 +3746,7 @@ name = "Tutti frutti"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "walnuts"
@@ -3547,6 +3754,7 @@ name = "Walnuts"
 class = "B"
 diet = "vegan"
 category = "nuts-seeds-and-dried-fruit"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "watermelon-seeds"
@@ -3571,6 +3779,7 @@ class = "S"
 kind = "pantry"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "baharat"
@@ -3639,6 +3848,7 @@ name = "Cajun seasoning"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "caraway-seeds"
@@ -3660,6 +3870,7 @@ name = "Celery seeds"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["celery"]
 
 [[ingredient]]
 id = "chaat-masala"
@@ -3667,6 +3878,7 @@ name = "Chaat masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "chai-masala"
@@ -3765,6 +3977,7 @@ class = "S"
 kind = "pantry"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "dill-seeds"
@@ -3787,6 +4000,7 @@ name = "Dried chives"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "dried-dill"
@@ -3920,6 +4134,7 @@ name = "Dukkah"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["tree-nuts", "sesame"]
 
 [[ingredient]]
 id = "everything-bagel-seasoning"
@@ -3927,6 +4142,8 @@ name = "Everything bagel seasoning"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["sesame"]
+jain = false
 
 [[ingredient]]
 id = "fennel-seeds"
@@ -3962,6 +4179,7 @@ name = "Furikake"
 class = "B"
 diet = "non_veg"
 category = "spices-and-seasonings"
+allergens = ["soy", "sesame", "fish"]
 
 [[ingredient]]
 id = "garam-masala"
@@ -3977,6 +4195,7 @@ name = "Garlic powder"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "gochugaru"
@@ -3992,6 +4211,7 @@ name = "Goda masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "green-cardamom"
@@ -4024,6 +4244,7 @@ class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["gunpowder", "chutney powder"]
+allergens = ["gluten", "sesame"]
 
 [[ingredient]]
 id = "italian-seasoning"
@@ -4039,6 +4260,7 @@ name = "Jerk seasoning"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "juniper-berries"
@@ -4075,6 +4297,7 @@ name = "Lemon pepper"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "long-pepper"
@@ -4112,6 +4335,7 @@ class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["mustard flour"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "mustard-seeds"
@@ -4121,6 +4345,7 @@ kind = "pantry"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["black mustard seeds", "brown mustard seeds"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "nigella-seeds"
@@ -4150,6 +4375,7 @@ name = "Onion powder"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "panch-phoron"
@@ -4158,6 +4384,7 @@ class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["bengali five spice"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "paprika"
@@ -4207,6 +4434,7 @@ name = "Rasam powder"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "red-chilli-powder"
@@ -4247,6 +4475,7 @@ name = "Sambar powder"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sesame-seeds"
@@ -4254,6 +4483,7 @@ name = "Sesame seeds"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "shichimi-togarashi"
@@ -4261,6 +4491,7 @@ name = "Shichimi togarashi"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "sichuan-peppercorns"
@@ -4305,6 +4536,7 @@ name = "Taco seasoning"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+jain = false
 
 [[ingredient]]
 id = "tamarind"
@@ -4351,6 +4583,7 @@ name = "Yellow mustard seeds"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "zaatar"
@@ -4360,6 +4593,7 @@ diet = "vegan"
 category = "spices-and-seasonings"
 
 # Oils & fats
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "avocado-oil"
@@ -4383,6 +4617,7 @@ class = "B"
 diet = "vegan"
 category = "oils-and-fats"
 search_terms = ["chili crisp"]
+jain = false
 
 [[ingredient]]
 id = "coconut-oil"
@@ -4426,6 +4661,7 @@ name = "Margarine"
 class = "B"
 diet = "vegetarian"
 category = "oils-and-fats"
+allergens = ["dairy", "soy"]
 
 [[ingredient]]
 id = "mustard-oil"
@@ -4433,6 +4669,7 @@ name = "Mustard oil"
 class = "B"
 diet = "vegan"
 category = "oils-and-fats"
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "oil"
@@ -4458,6 +4695,7 @@ class = "B"
 diet = "vegan"
 category = "oils-and-fats"
 search_terms = ["gingelly oil"]
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "shortening"
@@ -4473,6 +4711,7 @@ name = "Toasted sesame oil"
 class = "B"
 diet = "vegan"
 category = "oils-and-fats"
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "truffle-oil"
@@ -4489,6 +4728,7 @@ diet = "vegan"
 category = "oils-and-fats"
 
 # Sauces & condiments
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "apple-cider-vinegar"
@@ -4496,6 +4736,7 @@ name = "Apple cider vinegar"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "balsamic-glaze"
@@ -4503,6 +4744,7 @@ name = "Balsamic glaze"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "balsamic-vinegar"
@@ -4510,6 +4752,7 @@ name = "Balsamic vinegar"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "barbecue-sauce"
@@ -4518,6 +4761,8 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["bbq sauce"]
+allergens = ["mustard", "sulphites"]
+jain = false
 
 [[ingredient]]
 id = "black-bean-sauce"
@@ -4525,6 +4770,8 @@ name = "Black bean sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy"]
+jain = false
 
 [[ingredient]]
 id = "black-vinegar"
@@ -4555,6 +4802,7 @@ class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
 search_terms = ["chicken broth", "chicken stock cube", "chicken bouillon"]
+allergens = ["celery"]
 
 [[ingredient]]
 id = "chilli-garlic-sauce"
@@ -4562,6 +4810,7 @@ name = "Chilli garlic sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "cranberry-sauce"
@@ -4576,6 +4825,7 @@ name = "Dark soy sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "dijon-mustard"
@@ -4583,6 +4833,7 @@ name = "Dijon mustard"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["mustard", "sulphites"]
 
 [[ingredient]]
 id = "doenjang"
@@ -4591,6 +4842,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["korean soybean paste"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "doubanjiang"
@@ -4599,6 +4851,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["chilli bean paste"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "fish-sauce"
@@ -4606,6 +4859,7 @@ name = "Fish sauce"
 class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
+allergens = ["fish"]
 
 [[ingredient]]
 id = "gherkins"
@@ -4622,6 +4876,7 @@ class = "S"
 kind = "fresh"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "gochujang"
@@ -4629,6 +4884,7 @@ name = "Gochujang"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "green-chutney"
@@ -4637,6 +4893,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["mint chutney", "coriander chutney"]
+jain = false
 
 [[ingredient]]
 id = "harissa"
@@ -4644,6 +4901,7 @@ name = "Harissa"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "hoisin-sauce"
@@ -4651,6 +4909,8 @@ name = "Hoisin sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy", "sesame"]
+jain = false
 
 [[ingredient]]
 id = "horseradish-sauce"
@@ -4658,6 +4918,7 @@ name = "Horseradish sauce"
 class = "B"
 diet = "vegetarian"
 category = "sauces-and-condiments"
+allergens = ["dairy", "mustard", "sulphites"]
 
 [[ingredient]]
 id = "hot-sauce"
@@ -4673,6 +4934,7 @@ name = "Japanese mayonnaise"
 class = "B"
 diet = "egg"
 category = "sauces-and-condiments"
+allergens = ["egg", "mustard"]
 
 [[ingredient]]
 id = "kecap-manis"
@@ -4681,6 +4943,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["sweet soy sauce"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "ketchup"
@@ -4696,6 +4959,7 @@ name = "Kimchi"
 class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
+allergens = ["fish", "crustaceans"]
 
 [[ingredient]]
 id = "lime-pickle"
@@ -4703,6 +4967,7 @@ name = "Lime pickle"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "liquid-smoke"
@@ -4717,6 +4982,7 @@ name = "Malt vinegar"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "mango-pickle"
@@ -4724,6 +4990,7 @@ name = "Mango pickle"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "mayonnaise"
@@ -4732,6 +4999,7 @@ class = "B"
 diet = "egg"
 category = "sauces-and-condiments"
 search_terms = ["mayo"]
+allergens = ["egg", "mustard"]
 
 [[ingredient]]
 id = "mint-sauce"
@@ -4746,6 +5014,7 @@ name = "Mirin"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "miso"
@@ -4754,6 +5023,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["miso paste"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "mixed-vegetable-pickle"
@@ -4762,6 +5032,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["mixed pickle"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "olives"
@@ -4777,6 +5048,7 @@ name = "Oyster sauce"
 class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy", "molluscs"]
 
 [[ingredient]]
 id = "pasta-sauce"
@@ -4785,6 +5057,8 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["marinara", "tomato pasta sauce"]
+allergens = ["celery"]
+jain = false
 
 [[ingredient]]
 id = "pesto"
@@ -4793,6 +5067,7 @@ class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
 search_terms = ["basil pesto"]
+allergens = ["tree-nuts", "dairy"]
 
 [[ingredient]]
 id = "pizza-sauce"
@@ -4800,6 +5075,7 @@ name = "Pizza sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "ponzu"
@@ -4807,6 +5083,7 @@ name = "Ponzu"
 class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy", "fish"]
 
 [[ingredient]]
 id = "red-wine-vinegar"
@@ -4814,6 +5091,7 @@ name = "Red wine vinegar"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "rice-vinegar"
@@ -4829,6 +5107,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["cooking sake"]
+jain = false
 
 [[ingredient]]
 id = "salsa"
@@ -4836,6 +5115,7 @@ name = "Salsa"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "sauerkraut"
@@ -4851,6 +5131,8 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["szechuan sauce"]
+allergens = ["gluten", "soy"]
+jain = false
 
 [[ingredient]]
 id = "shaoxing-wine"
@@ -4859,6 +5141,8 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["chinese cooking wine"]
+allergens = ["gluten", "sulphites"]
+jain = false
 
 [[ingredient]]
 id = "sherry-vinegar"
@@ -4866,6 +5150,7 @@ name = "Sherry vinegar"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "soy-sauce"
@@ -4874,6 +5159,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["light soy sauce"]
+allergens = ["gluten", "soy"]
 
 [[ingredient]]
 id = "sriracha"
@@ -4881,6 +5167,8 @@ name = "Sriracha"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
+jain = false
 
 [[ingredient]]
 id = "sweet-chilli-sauce"
@@ -4888,6 +5176,7 @@ name = "Sweet chilli sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+jain = false
 
 [[ingredient]]
 id = "tamari"
@@ -4895,6 +5184,7 @@ name = "Tamari"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["soy"]
 
 [[ingredient]]
 id = "tamarind-chutney"
@@ -4910,6 +5200,7 @@ name = "Tartar sauce"
 class = "B"
 diet = "egg"
 category = "sauces-and-condiments"
+allergens = ["egg", "mustard"]
 
 [[ingredient]]
 id = "teriyaki-sauce"
@@ -4917,6 +5208,8 @@ name = "Teriyaki sauce"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["gluten", "soy"]
+jain = false
 
 [[ingredient]]
 id = "thai-curry-paste"
@@ -4925,6 +5218,7 @@ class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
 search_terms = ["red curry paste", "green curry paste"]
+allergens = ["crustaceans"]
 
 [[ingredient]]
 id = "vegetable-stock"
@@ -4933,6 +5227,8 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["vegetable broth", "vegetable stock cube", "vegetable bouillon"]
+allergens = ["celery"]
+jain = false
 
 [[ingredient]]
 id = "white-vinegar"
@@ -4948,6 +5244,7 @@ name = "White wine vinegar"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "wholegrain-mustard"
@@ -4955,6 +5252,7 @@ name = "Wholegrain mustard"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
+allergens = ["mustard", "sulphites"]
 
 [[ingredient]]
 id = "worcestershire-sauce"
@@ -4962,6 +5260,7 @@ name = "Worcestershire sauce"
 class = "B"
 diet = "non_veg"
 category = "sauces-and-condiments"
+allergens = ["gluten", "fish", "sulphites"]
 
 [[ingredient]]
 id = "yellow-mustard"
@@ -4972,6 +5271,7 @@ category = "sauces-and-condiments"
 search_terms = ["american mustard"]
 
 # Sweeteners
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "agave-syrup"
@@ -4995,6 +5295,7 @@ name = "Caramel sauce"
 class = "B"
 diet = "vegetarian"
 category = "sweeteners"
+allergens = ["dairy"]
 
 [[ingredient]]
 id = "chocolate-syrup"
@@ -5067,6 +5368,7 @@ name = "Honey"
 class = "B"
 diet = "vegetarian"
 category = "sweeteners"
+jain = false
 
 [[ingredient]]
 id = "icing-sugar"
@@ -5142,6 +5444,7 @@ class = "B"
 diet = "vegan"
 category = "sweeteners"
 search_terms = ["black treacle", "treacle"]
+allergens = ["sulphites"]
 
 [[ingredient]]
 id = "monk-fruit-sweetener"
@@ -5212,6 +5515,7 @@ class = "A"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["tipo 00"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "active-dry-yeast"
@@ -5236,6 +5540,7 @@ class = "A"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["plain flour"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "almond-extract"
@@ -5243,6 +5548,7 @@ name = "Almond extract"
 class = "B"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "almond-flour"
@@ -5251,6 +5557,7 @@ class = "A"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["ground almonds", "almond meal"]
+allergens = ["tree-nuts"]
 
 [[ingredient]]
 id = "amaranth-flour"
@@ -5266,6 +5573,7 @@ class = "B"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["arrowroot"]
+jain = false
 
 [[ingredient]]
 id = "baking-powder"
@@ -5289,6 +5597,7 @@ class = "A"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["strong flour"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "buckwheat-flour"
@@ -5303,6 +5612,7 @@ name = "Cake flour"
 class = "A"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "chocolate-chips"
@@ -5310,6 +5620,7 @@ name = "Chocolate chips"
 class = "B"
 diet = "vegetarian"
 category = "flours-and-baking"
+allergens = ["dairy", "soy"]
 
 [[ingredient]]
 id = "chocolate-spread"
@@ -5318,6 +5629,7 @@ class = "B"
 diet = "vegetarian"
 category = "flours-and-baking"
 search_terms = ["hazelnut chocolate spread"]
+allergens = ["tree-nuts", "dairy", "soy"]
 
 [[ingredient]]
 id = "cocoa-butter"
@@ -5369,6 +5681,7 @@ name = "Couverture chocolate"
 class = "A"
 diet = "vegetarian"
 category = "flours-and-baking"
+allergens = ["dairy", "soy"]
 
 [[ingredient]]
 id = "cream-of-tartar"
@@ -5390,6 +5703,7 @@ name = "Dark chocolate"
 class = "A"
 diet = "vegetarian"
 category = "flours-and-baking"
+allergens = ["dairy", "soy"]
 
 [[ingredient]]
 id = "edible-glitter"
@@ -5481,6 +5795,7 @@ class = "B"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["kudzu starch"]
+jain = false
 
 [[ingredient]]
 id = "lemon-extract"
@@ -5510,6 +5825,7 @@ name = "Meringue powder"
 class = "B"
 diet = "egg"
 category = "flours-and-baking"
+allergens = ["egg"]
 
 [[ingredient]]
 id = "milk-chocolate"
@@ -5517,6 +5833,7 @@ name = "Milk chocolate"
 class = "A"
 diet = "vegetarian"
 category = "flours-and-baking"
+allergens = ["dairy", "soy"]
 
 [[ingredient]]
 id = "multigrain-flour"
@@ -5524,6 +5841,7 @@ name = "Multigrain flour"
 class = "A"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "oat-flour"
@@ -5531,6 +5849,7 @@ name = "Oat flour"
 class = "A"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "orange-blossom-water"
@@ -5575,6 +5894,7 @@ name = "Potato starch"
 class = "B"
 diet = "vegan"
 category = "flours-and-baking"
+jain = false
 
 [[ingredient]]
 id = "precooked-cornmeal"
@@ -5611,6 +5931,7 @@ name = "Rye flour"
 class = "A"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sattu"
@@ -5627,6 +5948,7 @@ class = "A"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["self-rising flour"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "semolina"
@@ -5634,6 +5956,7 @@ name = "Semolina"
 class = "A"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sorghum-flour"
@@ -5648,6 +5971,7 @@ name = "Soy flour"
 class = "B"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["soy"]
 
 [[ingredient]]
 id = "spelt-flour"
@@ -5655,6 +5979,7 @@ name = "Spelt flour"
 class = "A"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "sprinkles"
@@ -5671,6 +5996,7 @@ class = "B"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["tapioca flour", "sago flour"]
+jain = false
 
 [[ingredient]]
 id = "urad-flour"
@@ -5693,6 +6019,7 @@ name = "Vital wheat gluten"
 class = "B"
 diet = "vegan"
 category = "flours-and-baking"
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "water-chestnut-flour"
@@ -5707,6 +6034,7 @@ name = "White chocolate"
 class = "A"
 diet = "vegetarian"
 category = "flours-and-baking"
+allergens = ["dairy", "soy"]
 
 [[ingredient]]
 id = "whole-wheat-flour"
@@ -5715,6 +6043,7 @@ class = "A"
 diet = "vegan"
 category = "flours-and-baking"
 search_terms = ["chapati flour", "wholemeal flour"]
+allergens = ["gluten"]
 
 [[ingredient]]
 id = "xanthan-gum"
@@ -5731,6 +6060,8 @@ name = "Beer"
 class = "B"
 diet = "vegetarian"
 category = "drinks-and-water"
+allergens = ["gluten"]
+jain = false
 
 [[ingredient]]
 id = "black-tea"
@@ -5746,6 +6077,7 @@ name = "Brandy"
 class = "B"
 diet = "vegetarian"
 category = "drinks-and-water"
+jain = false
 
 [[ingredient]]
 id = "chamomile"
@@ -5820,6 +6152,8 @@ name = "Red wine"
 class = "B"
 diet = "vegetarian"
 category = "drinks-and-water"
+allergens = ["sulphites"]
+jain = false
 
 [[ingredient]]
 id = "rooibos"
@@ -5834,6 +6168,7 @@ name = "Rum"
 class = "B"
 diet = "vegan"
 category = "drinks-and-water"
+jain = false
 
 [[ingredient]]
 id = "vodka"
@@ -5841,6 +6176,7 @@ name = "Vodka"
 class = "B"
 diet = "vegan"
 category = "drinks-and-water"
+jain = false
 
 [[ingredient]]
 id = "water"
@@ -5856,3 +6192,5 @@ name = "White wine"
 class = "B"
 diet = "vegetarian"
 category = "drinks-and-water"
+allergens = ["sulphites"]
+jain = false
