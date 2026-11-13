@@ -12,6 +12,10 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 15
 image = { file = "01a18bb7-fefd-7ae2-9008-269b5bb6fddc.webp", sha256 = "7020fa0b2706c385653ae32c73b5cfb46c649cba606feae769b502ec18dde3d1", alt = "Pieces of kaju katli stacked on a plate" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["kaju barfi"]
 ingredients = [
   { id = "cashews", amount = 1, unit = "cup" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -36,6 +40,10 @@ prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 480, note = "ferment the batter overnight" }
 image = { file = "01a18bb7-ff00-77fb-9d41-8f9f889044fe.webp", sha256 = "356bb435eecd1e95a10597b35cbdd0f53860e9f95110700c4b252118b0aa686a", alt = "Stack of golden jalebi" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["jilebi", "jalabi"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "cornflour", amount = 1, unit = "tbsp" },
@@ -64,6 +72,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 70
 image = { file = "01a18bb7-ff02-7143-92a7-8df3cd8f5ced.webp", sha256 = "47f6c9e2742e7f34d648a33d4246784dada8af68716eca516a14854dce4791b8", alt = "Rabri with sliced pistachios and almonds" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["rabdi"]
 ingredients = [
   { id = "milk", amount = 6, unit = "cup" },
   { id = "sugar", amount = 0.25, unit = "cup" },
@@ -86,6 +98,10 @@ name = "Motichoor ladoo"
 serves = 8
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["motichur laddu"]
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "sugar", amount = 1, unit = "cup" },
@@ -112,6 +128,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 30
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["sago kheer", "javvarisi payasam"]
 ingredients = [
   { id = "sago", amount = 0.25, unit = "cup" },
   { id = "milk", amount = 4, unit = "cup" },
@@ -135,6 +155,10 @@ serves = 8
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a18bb7-ff09-7067-926b-c53771dab39b.webp", sha256 = "7a0ba11464bdbc7d6232c22adfd5f28e59835efcb4da2eeb3a71ca7d01653641", alt = "Four squares of coconut barfi with chopped pistachios" }
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["nariyal barfi"]
 ingredients = [
   { id = "coconut", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -157,6 +181,10 @@ name = "Doodh peda"
 serves = 8
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["peda"]
 ingredients = [
   { id = "khoa", amount = 250, unit = "g" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -181,6 +209,9 @@ serves = 8
 prep_minutes = 10
 cook_minutes = 45
 plan_ahead = { wait_minutes = 120, note = "let it set for 2 hours" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "milk", amount = 6, unit = "cup" },
   { id = "lemon", amount = 1, unit = "small" },
@@ -205,6 +236,10 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18bb7-ff11-77ec-aed2-7f15cdbeb2a7.webp", sha256 = "41894e74aef46272f33ce57fc1f81fd2145bf574e82f74c9882712ffd5327ab4", alt = "Heap of golden diamond-shaped shakarpara" }
+cuisine = "west-indian"
+courses = ["snacks-starters", "desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["shankarpali"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -227,6 +262,10 @@ name = "Gujiya"
 serves = 8
 prep_minutes = 40
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
+also_known_as = ["karanji"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 0.25, unit = "cup" },
@@ -254,6 +293,9 @@ name = "Patishapta"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
   { id = "semolina", amount = 0.25, unit = "cup" },
@@ -279,6 +321,10 @@ name = "Narkel naru"
 serves = 8
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "east-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["narikel naru"]
 ingredients = [
   { id = "coconut", amount = 2, unit = "cup" },
   { id = "jaggery", amount = 0.75, unit = "cup" },
@@ -301,6 +347,9 @@ prep_minutes = 40
 cook_minutes = 25
 plan_ahead = { wait_minutes = 4860, note = "soak the rice for 3 days" }
 image = { file = "01a18bb7-ff1a-7300-9ab2-90a0e2f9f85f.webp", sha256 = "42338f0cd5b4ba1eb1cdc194677dde316798fa19795028e096788f990a4945c5", alt = "Three golden anarsa coated with poppy seeds" }
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 0.5, unit = "cup" },
@@ -323,6 +372,10 @@ name = "Peanut chikki"
 serves = 8
 prep_minutes = 5
 cook_minutes = 20
+cuisine = "west-indian"
+courses = ["desserts", "snacks-starters"]
+moods = ["sweet", "crispy"]
+also_known_as = ["chikki"]
 ingredients = [
   { id = "peanuts", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 0.75, unit = "cup" },
@@ -343,6 +396,10 @@ name = "Til ladoo"
 serves = 8
 prep_minutes = 5
 cook_minutes = 20
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+also_known_as = ["tilgul"]
 ingredients = [
   { id = "sesame-seeds", amount = 1, unit = "cup" },
   { id = "jaggery", amount = 0.75, unit = "cup" },
@@ -365,6 +422,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 image = { file = "01a18bb7-ff21-7e33-8325-71b9ed7e7c6d.webp", sha256 = "d1cd1621378a7d291f1dd4cfec1bb4e3561951c728576b91433cbd27c13ba8fc", alt = "Lauki halwa with cashews and chopped pistachios" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["ghiya halwa"]
 ingredients = [
   { id = "bottle-gourd", amount = 500, unit = "g" },
   { id = "milk", amount = 1.5, unit = "cup" },
@@ -389,6 +450,10 @@ name = "Badam halwa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["almond halwa"]
 ingredients = [
   { id = "almonds", amount = 1, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },
@@ -413,6 +478,10 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 35
 plan_ahead = { wait_minutes = 480, note = "freeze for 8 hours" }
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+weather = ["cool-down", "sticky-sluggish"]
 ingredients = [
   { id = "mango", amount = 2, unit = "large" },
   { id = "milk", amount = 3, unit = "cup" },
@@ -435,6 +504,10 @@ name = "Aval payasam"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["poha kheer"]
 ingredients = [
   { id = "flattened-rice", amount = 0.5, unit = "cup" },
   { id = "milk", amount = 4, unit = "cup" },

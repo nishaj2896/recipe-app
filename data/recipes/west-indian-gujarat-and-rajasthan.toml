@@ -13,6 +13,10 @@ prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 image = { file = "01a18b5a-d309-7a45-94ad-a3bc8b578eae.webp", sha256 = "5c0e9878c7651ca45874a0789f494e8b30c3f4a7b63330fe8360c10411d0900d", alt = "Dhokla squares with mustard seeds, sesame seeds and coriander" }
+cuisine = "west-indian"
+courses = ["snacks-starters", "breakfast"]
+moods = ["light", "tangy"]
+also_known_as = ["khatta dhokla"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "urad-dal", amount = 0.25, unit = "cup" },
@@ -48,6 +52,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18b5a-d30b-7253-9386-da2dbe57c1bf.webp", sha256 = "13cf870fe2c53f0218cd0152bc84c62cc28f576d6a0bae29cff418e9de6a9662", alt = "Khaman squares with mustard seeds, green chillies, coriander and coconut" }
+cuisine = "west-indian"
+courses = ["snacks-starters", "breakfast"]
+moods = ["light", "sweet-sour"]
+also_known_as = ["khaman dhokla"]
 ingredients = [
   { id = "gram-flour", amount = 1.5, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },
@@ -85,6 +93,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18b5a-d30e-73db-bf94-a416b22a5d03.webp", sha256 = "fe573fdd357da1339bde149dafe4169f1dcf2985f8593385f0a84652956263b4", alt = "Khandvi rolls with a mustard seed tempering, grated coconut and curry leaves" }
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["light", "savoury"]
+also_known_as = ["patuli"]
 ingredients = [
   { id = "gram-flour", amount = 0.5, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -119,6 +131,9 @@ prep_minutes = 20
 cook_minutes = 50
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
 image = { file = "01a18b5a-d310-7929-af02-f0bb00d619e7.webp", sha256 = "7e050af4597297b4fb452c0b133f8d19f96faa95ffbc47a9f966c382161358a3", alt = "Four squares of baked handvo with sesame and mustard seeds" }
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "crispy"]
 ingredients = [
   { id = "rice", amount = 1, unit = "cup" },
   { id = "toor-dal", amount = 0.25, unit = "cup" },
@@ -159,6 +174,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18b5a-d312-74eb-9175-6a54dc96f32c.webp", sha256 = "9e551c03e89137d372110fdbfaf28e21a0cc8283df62663de9f69997dcaf135c", alt = "A stack of thepla with sesame seeds" }
+cuisine = "west-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -188,6 +206,9 @@ name = "Methi thepla"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "fresh-herby"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "fenugreek-leaves", amount = 1, unit = "cup" },
@@ -219,6 +240,10 @@ name = "Fafda"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+also_known_as = ["fafda jalebi"]
 ingredients = [
   { id = "gram-flour", amount = 1.5, unit = "cup" },
   { id = "carom-seeds", amount = 0.5, unit = "tsp" },
@@ -249,6 +274,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18b5a-d319-7a8c-8276-6b119c6fb0d7.webp", sha256 = "5c85a15240f5067bee53673310fb0d6a9b2ad308a801dda47ab5fb307734d8b3", alt = "Fried muthia slices with sesame seeds and curry leaves" }
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "light"]
+also_known_as = ["muthiya"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 1, unit = "cup" },
   { id = "gram-flour", amount = 0.25, unit = "cup" },
@@ -285,6 +314,11 @@ name = "Undhiyu"
 serves = 6
 prep_minutes = 40
 cook_minutes = 50
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["savoury", "sweet", "hearty"]
+weather = ["warming"]
+also_known_as = ["oondhiyu"]
 ingredients = [
   { id = "flat-beans", amount = 250, unit = "g" },
   { id = "small-brinjal", amount = 6, unit = "piece" },
@@ -334,6 +368,10 @@ name = "Sev tameta nu shaak"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["tangy", "sweet"]
+also_known_as = ["sev tamatar"]
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "sev", amount = 1, unit = "cup" },
@@ -367,6 +405,10 @@ name = "Bhindi sambhariya"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["sides"]
+moods = ["savoury", "spicy"]
+also_known_as = ["bharela bhinda"]
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "gram-flour", amount = 3, unit = "tbsp" },
@@ -399,6 +441,10 @@ name = "Ringan no olo"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "west-indian"
+courses = ["sides"]
+moods = ["smoky", "savoury"]
+also_known_as = ["baingan bharta gujarati style"]
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "spring-onions", amount = 4, unit = "piece" },
@@ -432,6 +478,9 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 20
 image = { file = "01a18b5a-d324-72d0-9af6-abcbed788f48.webp", sha256 = "2fa15ec0a98f3125531f90641a66d8911f09ada3ad9407b4c944bfac7555f8f5", alt = "Gujarati kadhi with a tempering of whole spices and curry leaves" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["sweet", "tangy", "creamy"]
 ingredients = [
   { id = "curd", amount = 1, unit = "cup" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -466,6 +515,10 @@ name = "Gujarati dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["sweet-sour", "comforting"]
+also_known_as = ["khatti meethi dal"]
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -505,6 +558,11 @@ name = "Dal dhokli"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["sweet-sour", "comforting", "hearty"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["dal dhokali"]
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "whole-wheat-flour", amount = 1, unit = "cup" },
@@ -549,6 +607,10 @@ serves = 3
 prep_minutes = 5
 cook_minutes = 15
 image = { file = "01a18b5a-d32b-71be-800f-5b1668950293.webp", sha256 = "e1c975d9d8cebe87574990fcdb262c03b4613257631a4db974b32e91a3fdd474", alt = "Khichu, soft rice flour dough with sesame oil and chilli powder" }
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "light"]
+also_known_as = ["papdi no lot"]
 ingredients = [
   { id = "rice-flour", amount = 1, unit = "cup" },
   { id = "green-chillies", amount = 2, unit = "piece" },
@@ -574,6 +636,11 @@ name = "Bajra rotla"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["rice-breads"]
+moods = ["savoury", "hearty"]
+weather = ["warming"]
+also_known_as = ["bajra no rotlo"]
 ingredients = [
   { id = "pearl-millet-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },
@@ -595,6 +662,9 @@ name = "Lilva kachori"
 serves = 6
 prep_minutes = 40
 cook_minutes = 30
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "green-pigeon-peas", amount = 2, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -631,6 +701,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["sweet-sour", "savoury"]
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "sev", amount = 0.5, unit = "cup" },
@@ -665,6 +738,9 @@ serves = 6
 prep_minutes = 5
 cook_minutes = 75
 image = { file = "01a18b5a-d334-7005-83e2-f16bb22dae58.webp", sha256 = "d5bda656fdb91387fab9b93bd8d74c0642ab6cd038db9d7a14904a785d68da77", alt = "Basundi with almonds, pistachios and a few saffron strands" }
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
 ingredients = [
   { id = "milk", amount = 2, unit = "l" },
   { id = "sugar", amount = 0.5, unit = "cup" },
@@ -691,6 +767,9 @@ serves = 12
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 120, note = "let it set for 2 hours" }
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet"]
 ingredients = [
   { id = "gram-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 1, unit = "cup" },
@@ -720,6 +799,11 @@ name = "Aamras"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet"]
+weather = ["cool-down"]
+also_known_as = ["aam ras"]
 ingredients = [
   { id = "mango", amount = 4, unit = "medium" },
   { id = "sugar", amount = 1, unit = "tbsp" },
@@ -743,6 +827,10 @@ serves = 4
 prep_minutes = 40
 cook_minutes = 60
 image = { file = "01a18b5a-d33a-7189-9626-3d0cccf33709.webp", sha256 = "4713b07bbc1c8df11af1942b23b9e3b39055ebb77b39ea237ec272fca2ee2390", alt = "Dal baati churma with baati, dal and sweet churma" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["savoury", "hearty", "comforting"]
+also_known_as = ["dal bati"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 3, unit = "cup" },
   { id = "semolina", amount = 0.25, unit = "cup" },
@@ -786,6 +874,10 @@ name = "Gatte ki sabzi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy"]
+also_known_as = ["besan gatte"]
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -822,6 +914,9 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a18b5a-d33f-7442-990c-2210c905c9ea.webp", sha256 = "2b4edd1a07a710a862ea9f876dab55c5bd8f0ab034806af88b85d06c5cbcf971", alt = "Ker sangri with raisins and dried red chillies" }
+cuisine = "west-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "ker", amount = 0.25, unit = "cup" },
   { id = "sangri", amount = 1, unit = "cup" },
@@ -855,6 +950,9 @@ name = "Papad ki sabzi"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+cuisine = "west-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "papad", amount = 6, unit = "piece" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -885,6 +983,11 @@ name = "Bajre ki roti"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["rice-breads"]
+moods = ["savoury"]
+weather = ["warming"]
+also_known_as = ["bajra roti"]
 ingredients = [
   { id = "pearl-millet-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },
@@ -907,6 +1010,10 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 30
 image = { file = "01a18b5a-d346-7a42-99b1-439ffb638573.webp", sha256 = "a7a271761b33a5c0af3cbc492a3c224add2f2a2b8659876a7d1b83d542303b1c", alt = "Three pyaaz kachoris, one broken open to show the onion filling" }
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+also_known_as = ["onion kachori"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 0.25, unit = "cup" },
@@ -944,6 +1051,11 @@ name = "Mirchi vada"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "spicy"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["mirchi bada"]
 ingredients = [
   { id = "green-chillies", amount = 8, unit = "piece" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -977,6 +1089,9 @@ name = "Rajasthani kadhi"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "curd", amount = 1, unit = "cup" },
   { id = "gram-flour", amount = 3, unit = "tbsp" },
@@ -1008,6 +1123,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+cuisine = "west-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "ker", amount = 2, unit = "tbsp" },
   { id = "sangri", amount = 0.5, unit = "cup" },
@@ -1042,6 +1160,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 45
 plan_ahead = { wait_minutes = 480, note = "soak for 8 hours" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["comforting", "hearty"]
+weather = ["warming", "under-the-weather"]
 ingredients = [
   { id = "pearl-millet", amount = 0.75, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -1069,6 +1191,9 @@ name = "Malpua"
 serves = 6
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "khoa", amount = 0.25, unit = "cup" },
@@ -1097,6 +1222,9 @@ name = "Ghevar"
 serves = 8
 prep_minutes = 30
 cook_minutes = 45
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet", "crispy"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "ghee", amount = 1.5, unit = "cup" },
@@ -1126,6 +1254,11 @@ name = "Masala chaas"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "west-indian"
+courses = ["drinks"]
+moods = ["tangy", "fresh-herby", "light"]
+weather = ["cool-down", "sticky-sluggish"]
+also_known_as = ["chaas"]
 ingredients = [
   { id = "curd", amount = 1, unit = "cup" },
   { id = "ginger", amount = 1, unit = "piece" },
