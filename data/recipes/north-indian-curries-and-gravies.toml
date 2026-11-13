@@ -232,7 +232,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 weather = ["rainy-day-cosy"]
-also_known_as = ["dal tarka", "yellow dal"]
+also_known_as = ["dal tarka"]
 ingredients = [
   { id = "toor-dal", amount = 200, unit = "g" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -331,7 +331,6 @@ image = { file = "01a15175-3c0a-725c-9c90-73d0fa294994.webp", sha256 = "242cf89a
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "hearty"]
-also_known_as = ["chole"]
 ingredients = [
   { id = "chickpeas", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1522,7 +1521,6 @@ image = { file = "01a18813-916d-76a8-8e55-04610b474e19.webp", sha256 = "458414a1
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "comforting"]
-also_known_as = ["dum alu"]
 ingredients = [
   { id = "potato", amount = 600, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },

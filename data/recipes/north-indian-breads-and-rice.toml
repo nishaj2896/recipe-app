@@ -15,7 +15,7 @@ image = { file = "01a15175-3c0f-7496-91c1-4e90dc98797e.webp", sha256 = "0384274b
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
-also_known_as = ["veg pulao", "pulav"]
+also_known_as = ["veg pulao"]
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -81,7 +81,6 @@ image = { file = "01a15175-3c1c-71e8-a493-8702aa35c9e3.webp", sha256 = "2efad934
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury", "hearty"]
-also_known_as = ["biriyani"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
@@ -118,7 +117,6 @@ image = { file = "01a188ac-0597-7bfe-8ab8-24300d82453f.webp", sha256 = "446f8197
 cuisine = "north-indian"
 courses = ["rice-breads", "breakfast"]
 moods = ["savoury"]
-also_known_as = ["parantha"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 4, unit = "tbsp" },
@@ -429,7 +427,6 @@ image = { file = "01a188ac-05ad-7540-a452-90d483cf792b.webp", sha256 = "35042958
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "creamy"]
-also_known_as = ["nan"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -497,7 +494,6 @@ image = { file = "01a188ac-05b1-784f-bb14-2bba03c32a18.webp", sha256 = "8cd4a7d5
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["crispy"]
-also_known_as = ["bhature"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 2, unit = "tbsp" },
@@ -936,7 +932,6 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["comforting", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
-also_known_as = ["khichri", "kichdi"]
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },

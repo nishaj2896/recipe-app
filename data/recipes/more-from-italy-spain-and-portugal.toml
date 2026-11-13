@@ -169,7 +169,7 @@ plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
 cuisine = "italian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
-also_known_as = ["arancini balls", "rice balls"]
+also_known_as = ["arancini balls"]
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
