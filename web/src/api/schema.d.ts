@@ -194,7 +194,8 @@ export interface components {
       | "european"
       | "american-british"
       | "mexican-latin"
-      | "african-caribbean";
+      | "african-caribbean"
+      | "south-asian";
     /**
      * Diet
      * @enum {string}

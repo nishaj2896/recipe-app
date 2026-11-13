@@ -28,6 +28,7 @@ class Cuisine(StrEnum):
     AMERICAN_BRITISH = "american-british"
     MEXICAN_LATIN = "mexican-latin"
     AFRICAN_CARIBBEAN = "african-caribbean"
+    SOUTH_ASIAN = "south-asian"
 
 
 class Course(StrEnum):

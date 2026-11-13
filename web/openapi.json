@@ -135,7 +135,8 @@
           "european",
           "american-british",
           "mexican-latin",
-          "african-caribbean"
+          "african-caribbean",
+          "south-asian"
         ],
         "title": "Cuisine",
         "type": "string"

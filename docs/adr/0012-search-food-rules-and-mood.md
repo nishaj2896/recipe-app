@@ -30,11 +30,11 @@ also_known_as = ["paneer makhani"]
 pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c10-76ca-bf43-23fffb096acd"]
 ```
 
-- `cuisine`: exactly one id from the cuisine list in `recipe_app.domain.tags` (north-indian, south-indian, east-indian, west-indian, indo-chinese, street-food, chinese, japanese, korean, thai, southeast-asian, middle-eastern, mediterranean, italian, french, spanish-portuguese, european, american-british, mexican-latin, african-caribbean). It labels the search dropdown and lets "Thai" find Thai dishes.
+- `cuisine`: exactly one id from the cuisine list in `recipe_app.domain.tags` (north-indian, south-indian, east-indian, west-indian, indo-chinese, street-food, chinese, japanese, korean, thai, southeast-asian, middle-eastern, mediterranean, italian, french, spanish-portuguese, european, american-british, mexican-latin, african-caribbean, south-asian). It labels the search dropdown and lets "Thai" find Thai dishes. `south-asian` covers dishes from India's neighbours (Sri Lanka, Nepal, Pakistan and Afghanistan), so a Sri Lankan curry is not labelled South Indian (Nisha, 13 Nov 2026).
 - `courses`: 1 or 2 of `breakfast`, `snacks-starters`, `soups`, `salads`, `mains`, `rice-breads`, `sides`, `desserts`, `drinks`.
 - `moods`: 1 to 3 of `spicy`, `tangy`, `sweet`, `savoury`, `creamy`, `smoky`, `fresh-herby`, `comforting`, `crispy`, `sweet-sour`, `light`, `hearty`. A tag means the flavour is what the dish is known for, not that it is present at all.
 - `weather`: 0 to 3 of `cool-down`, `rainy-day-cosy`, `warming`, `just-pleasant`, `grey-gloomy`, `cosy-night-in`, `sticky-sluggish`, `breezy-evening`, `under-the-weather`. Most everyday dishes suit any weather and have none.
-- `also_known_as`: 0 to 5 other names people type, such as "aloo" names, Hindi names for English dishes and common spellings ("biriyani"). 1 to 60 characters each, lower case.
+- `also_known_as`: 0 to 5 other names people type, such as "aloo" names, Hindi names for English dishes and other names for this one dish. An alias never names a family of dishes or a spelling of one ("quesadilla", "biriyani", "meen curry"): as an exact match it would rank one member above the rest, and the trigram match already finds spellings. 1 to 60 characters each, lower case.
 - `pairs_with`: 0 to 4 recipe ids, each an existing, different recipe, hand-picked (rule 8).
 
 Lists hold no duplicates. The ids are published like ingredient ids: never renamed or reused (ADR-0001 rule 2). The web app owns the labels ("Fresh and herby", "Rainy-day cosy").
