@@ -75,7 +75,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
-also_known_as = ["egg masala", "anda masala"]
+also_known_as = ["anda masala"]
 ingredients = [
   { id = "egg", amount = 6, unit = "large" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -175,7 +175,6 @@ cook_minutes = 20
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
-also_known_as = ["kottu"]
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "egg", amount = 3, unit = "large" },

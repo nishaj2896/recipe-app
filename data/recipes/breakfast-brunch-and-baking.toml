@@ -473,7 +473,6 @@ cook_minutes = 22
 cuisine = "american-british"
 courses = ["desserts", "breakfast"]
 moods = ["sweet"]
-also_known_as = ["muffins"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 0.75, unit = "cup" },

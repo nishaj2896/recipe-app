@@ -140,7 +140,6 @@ cook_minutes = 15
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
-also_known_as = ["burrito"]
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "large" },
   { id = "pinto-beans", amount = 2, unit = "can" },
@@ -212,7 +211,6 @@ image = { file = "01a18c16-b1c5-7f4d-8ead-a6d31cb5c333.webp", sha256 = "996a2aeb
 cuisine = "mexican-latin"
 courses = ["snacks-starters", "mains"]
 moods = ["creamy", "savoury"]
-also_known_as = ["quesadilla"]
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -273,7 +271,6 @@ image = { file = "01a18c16-b1ca-78fe-b3fe-a064097e22c9.webp", sha256 = "75d36248
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["spicy", "creamy", "savoury"]
-also_known_as = ["enchiladas"]
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -454,7 +451,7 @@ cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
-also_known_as = ["chili con carne", "chili"]
+also_known_as = ["chili con carne"]
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },

@@ -109,7 +109,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
-also_known_as = ["spag bol", "bolognese"]
+also_known_as = ["spag bol"]
 ingredients = [
   { id = "pasta", amount = 500, unit = "g" },
   { id = "beef-mince", amount = 500, unit = "g" },

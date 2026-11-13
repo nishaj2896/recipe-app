@@ -15,7 +15,6 @@ image = { file = "01a18c1a-e24e-7cc2-9c2e-67a17a5c8ba9.webp", sha256 = "f91591ea
 cuisine = "french"
 courses = ["breakfast"]
 moods = ["creamy", "savoury", "light"]
-also_known_as = ["omelette"]
 ingredients = [
   { id = "egg", amount = 3, unit = "large" },
   { id = "butter", amount = 1, unit = "tbsp" },
@@ -42,7 +41,6 @@ image = { file = "01a18c1a-e250-74b1-966c-5ae1ee0ad31c.webp", sha256 = "8b7de92c
 cuisine = "french"
 courses = ["snacks-starters", "breakfast"]
 moods = ["creamy", "savoury", "comforting"]
-also_known_as = ["croque madame"]
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "ham", amount = 4, unit = "slice" },
@@ -74,7 +72,6 @@ image = { file = "01a18c1a-e252-7f62-a590-359eefff3fae.webp", sha256 = "f473d497
 cuisine = "french"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
-also_known_as = ["quiche"]
 ingredients = [
   { id = "shortcrust-pastry", amount = 320, unit = "g" },
   { id = "bacon", amount = 200, unit = "g" },

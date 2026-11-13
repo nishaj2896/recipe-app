@@ -409,7 +409,7 @@ prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18ba9-fdad-7151-92ab-02f89a09a8f9.webp", sha256 = "0647763de2e4167081f5c45caf8d31901458133321ae6f0776ee3b76743a5dd7", alt = "Chicken 65 with curry leaves and green chillies" }
-cuisine = "indo-chinese"
+cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]
@@ -443,7 +443,7 @@ name = "Gobi 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
-cuisine = "indo-chinese"
+cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]
@@ -582,7 +582,7 @@ name = "Paneer 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
-cuisine = "indo-chinese"
+cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]

@@ -80,7 +80,6 @@ image = { file = "01a18c12-0581-7b81-9a6b-9632b57e5a6b.webp", sha256 = "998a05ba
 cuisine = "japanese"
 courses = ["mains"]
 moods = ["crispy", "savoury"]
-also_known_as = ["katsu"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.33, unit = "cup" },
@@ -116,7 +115,6 @@ cuisine = "japanese"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
-also_known_as = ["japanese curry"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
@@ -294,7 +292,6 @@ cuisine = "japanese"
 courses = ["soups", "mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
-also_known_as = ["ramen"]
 ingredients = [
   { id = "ramen-noodles", amount = 200, unit = "g" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
