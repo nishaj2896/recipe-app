@@ -12,6 +12,10 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 100
 image = { file = "01a18bba-7837-7a19-8c57-dc1766a2eb87.webp", sha256 = "ee436718e3538db20f9534dd0b3b2e99985d619cee12d63a8c29834b8e6b5b9f", alt = "Dhansak, mutton in a thick lentil and vegetable curry with mint and coriander" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy", "comforting"]
+also_known_as = ["parsi dhansak"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },
@@ -54,6 +58,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 90
 image = { file = "01a18bba-783a-7f89-9156-96d4c76b0195.webp", sha256 = "ef1547b0114fe4d1c6e1e801583f9f453e52bef4a0c95bd1f9d2f1399871ecc9", alt = "Sali boti, mutton in red-brown gravy piled with crisp potato straws" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["sweet", "tangy", "crispy"]
+also_known_as = ["salli boti"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -87,6 +95,10 @@ name = "Patra ni machhi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["fresh-herby", "savoury"]
+also_known_as = ["patra ni macchi"]
 ingredients = [
   { id = "pomfret", amount = 2, unit = "medium" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -116,6 +128,10 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 10
 image = { file = "01a18bba-783e-776a-a2d5-218668bd63db.webp", sha256 = "84040b7d655239af50ee44671e3e040c683d788c429a82910e7c2ea8867dd4bd", alt = "Akuri, spiced Parsi scrambled eggs with onion, tomato and coriander" }
+cuisine = "west-indian"
+courses = ["breakfast"]
+moods = ["spicy", "creamy"]
+also_known_as = ["parsi scrambled eggs"]
 ingredients = [
   { id = "egg", amount = 4, unit = "large" },
   { id = "onion", amount = 1, unit = "small" },
@@ -144,6 +160,10 @@ serves = 6
 prep_minutes = 15
 cook_minutes = 90
 plan_ahead = { wait_minutes = 180, note = "chill for 3 hours" }
+cuisine = "west-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy"]
+also_known_as = ["parsi custard"]
 ingredients = [
   { id = "milk", amount = 4, unit = "cup" },
   { id = "condensed-milk", amount = 0.5, unit = "cup" },
@@ -174,6 +194,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18bba-7843-7da8-9065-2ad4a677f1b5.webp", sha256 = "03fa7590b99ffc33848e5fa2f9899ce0a267ad4313403b6e4ee8e12e2224478a", alt = "Sindhi kadhi with drumstick, okra and potato" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["tangy", "savoury", "comforting"]
 ingredients = [
   { id = "gram-flour", amount = 0.33, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tbsp" },
@@ -211,6 +234,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["sindhi sai bhaji"]
 ingredients = [
   { id = "spinach", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.33, unit = "cup" },
@@ -246,6 +273,9 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 50
 plan_ahead = { wait_minutes = 120, note = "soak for 2 hours" }
+cuisine = "west-indian"
+courses = ["breakfast"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -280,6 +310,10 @@ name = "Koki"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "west-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "crispy"]
+also_known_as = ["sindhi koki"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -309,6 +343,9 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 75
 image = { file = "01a18bba-784c-7106-a51f-b79ab68de48c.webp", sha256 = "483f823014f21ee41309037abaef5bd38c1f70d74cac5d6cf0842f41a2da0fc0", alt = "Sindhi biryani with chicken, potato and prunes" }
+cuisine = "west-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "tangy", "hearty"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 2.5, unit = "cup" },
@@ -352,6 +389,10 @@ name = "Kori rotti"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "crispy"]
+also_known_as = ["kori roti"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "rice-wafers", amount = 12, unit = "piece" },
@@ -387,6 +428,9 @@ name = "Mangalorean chicken sukka"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -421,6 +465,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18bba-7853-74cc-8240-1f2f01fdd32c.webp", sha256 = "9b93c372d5190c5697dd1b45659104cf41f99b085dc127d5e1b498626402edd5", alt = "Kundapur chicken curry in a deep red coconut gravy" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["kundapura chicken"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -455,6 +503,10 @@ name = "Bohri dabba gosht"
 serves = 6
 prep_minutes = 20
 cook_minutes = 100
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury", "hearty"]
+also_known_as = ["dabba gosht"]
 ingredients = [
   { id = "mutton", amount = 500, unit = "g" },
   { id = "pasta", amount = 150, unit = "g" },
@@ -490,6 +542,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "rest the batter for 2 hours" }
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["mangalore bajji"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "rice-flour", amount = 2, unit = "tbsp" },
@@ -522,6 +579,10 @@ serves = 4
 prep_minutes = 40
 cook_minutes = 50
 plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "spicy"]
+also_known_as = ["pathrode", "colocasia leaf rolls"]
 ingredients = [
   { id = "colocasia-leaves", amount = 10, unit = "piece" },
   { id = "rice", amount = 1, unit = "cup" },

@@ -12,6 +12,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a15175-3c0c-7410-9068-956c67818f62.webp", sha256 = "a39d5c8eccf8cc6fd72396967ab4dcb56eec46e843d055c45613ee9e228bcf41", alt = "Bowl of sambar with drumsticks, aubergine, tomato and a dried red chilli" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy", "comforting"]
 ingredients = [
   { id = "toor-dal", amount = 150, unit = "g" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -44,6 +47,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a15175-3c1d-7c1d-b8aa-d85e1a2b9630.webp", sha256 = "ce1c2ce899ee37087a88d304376b75a515a82029cd79b8418f6f060eee7010a5", alt = "Kerala fish curry in a black clay bowl with red rice, curry leaves and fried shallots" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy"]
+also_known_as = ["meen curry"]
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 400, unit = "ml" },
@@ -78,6 +85,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a15175-3c1e-730e-b9ba-d7d3a63e5dac.webp", sha256 = "3df8eb83def5d54a8dbc13df84a52f36fa5cf2eda85a7c06aaa9cada5cc9ed5b", alt = "Prawn masala in a dark onion and tomato masala" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -106,6 +116,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 40
 image = { file = "01a188ea-3c95-7b74-afb4-10f1cab70c1b.webp", sha256 = "f71153477a0fc975a648ebb5c34ea682f64b6d710d18a43087d6c46425f86006", alt = "Drumstick sambar with shallots, dried red chillies and curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy", "comforting"]
+also_known_as = ["murungakkai sambar"]
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -143,6 +157,9 @@ name = "Arachuvitta sambar"
 serves = 4
 prep_minutes = 30
 cook_minutes = 45
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy", "comforting"]
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "small-brinjal", amount = 4, unit = "piece" },
@@ -181,6 +198,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a188ea-3c9a-72ea-8684-721851036d44.webp", sha256 = "9d4626b1ca6c1a986c2d5b29c46fd3cbecbd067229d086ae76982f56e5435baa", alt = "Rasam in a glass bowl with coriander" }
+cuisine = "south-indian"
+courses = ["soups"]
+moods = ["tangy", "spicy", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["saaru"]
 ingredients = [
   { id = "tamarind", amount = 1, unit = "tbsp" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -215,6 +237,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a188ea-3c9c-7c7f-aa71-7e8a79791cf3.webp", sha256 = "6f98ce210e0646f5e8e9aec6b25965f0d88f944f71da34834088cbdcc12c4489", alt = "Tomato rasam with a tempering of mustard seeds and curry leaves and coriander" }
+cuisine = "south-indian"
+courses = ["soups"]
+moods = ["tangy", "spicy", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["thakkali rasam"]
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "tamarind", amount = 1, unit = "tsp" },
@@ -249,6 +276,11 @@ name = "Pepper rasam"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["soups"]
+moods = ["spicy", "tangy"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["milagu rasam"]
 ingredients = [
   { id = "black-pepper", amount = 1.5, unit = "tsp" },
   { id = "cumin-seeds", amount = 1.5, unit = "tsp" },
@@ -282,6 +314,10 @@ name = "Lemon rasam"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "south-indian"
+courses = ["soups"]
+moods = ["tangy", "light"]
+weather = ["under-the-weather"]
 ingredients = [
   { id = "moong-dal", amount = 0.25, unit = "cup" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -315,6 +351,10 @@ name = "Mysore rasam"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["soups"]
+moods = ["tangy", "spicy"]
+weather = ["rainy-day-cosy"]
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tbsp" },
@@ -352,6 +392,9 @@ name = "Kootu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["mains", "sides"]
+moods = ["comforting", "light"]
 ingredients = [
   { id = "moong-dal", amount = 0.333, unit = "cup" },
   { id = "snake-gourd", amount = 1, unit = "medium" },
@@ -383,6 +426,9 @@ name = "Poricha kootu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["mains", "sides"]
+moods = ["comforting", "savoury"]
 ingredients = [
   { id = "moong-dal", amount = 0.333, unit = "cup" },
   { id = "broad-beans", amount = 250, unit = "g" },
@@ -416,6 +462,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 25
 image = { file = "01a188ea-3caa-7220-9faf-98ccabab40da.webp", sha256 = "155080a4af2c602237b4fbc5aad3f86ca4463d560580db2b153386b0935e8b84", alt = "Avial with mixed vegetable batons in a coconut and curd gravy" }
+cuisine = "south-indian"
+courses = ["sides", "mains"]
+moods = ["creamy", "tangy"]
+also_known_as = ["aviyal"]
 ingredients = [
   { id = "raw-banana", amount = 1, unit = "medium" },
   { id = "elephant-foot-yam", amount = 150, unit = "g" },
@@ -451,6 +501,9 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
 image = { file = "01a188ea-3cac-71f6-ad23-3ec3ad770d02.webp", sha256 = "9baea8231f4501cc900d4d1df686b0f0e8cabf8952bb6a4dc133f1982e7b9e2d", alt = "Olan, ash gourd and black-eyed peas in coconut milk" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["creamy", "light"]
 ingredients = [
   { id = "ash-gourd", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.25, unit = "cup" },
@@ -477,6 +530,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["sweet", "savoury", "comforting"]
+also_known_as = ["erisheri"]
 ingredients = [
   { id = "pumpkin", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.333, unit = "cup" },
@@ -510,6 +567,9 @@ name = "Kalan"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["tangy", "creamy"]
 ingredients = [
   { id = "raw-banana", amount = 1, unit = "medium" },
   { id = "elephant-foot-yam", amount = 200, unit = "g" },
@@ -544,6 +604,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 15
 image = { file = "01a188ea-3cb3-7eba-97c5-eeb4d7c942c5.webp", sha256 = "db0d50519dc57551addbfd1ffa447a679fd553367185503c2411c802596d2151", alt = "Moru curry with a tempering of shallots, red chillies and curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "creamy", "light"]
+weather = ["cool-down"]
+also_known_as = ["moru kachiyathu"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -577,6 +642,10 @@ name = "Thoran (cabbage)"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["light", "fresh-herby"]
+also_known_as = ["cabbage thoran"]
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "small-head" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -606,6 +675,10 @@ name = "Beans poriyal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["light", "savoury"]
+also_known_as = ["beans thoran"]
 ingredients = [
   { id = "french-beans", amount = 300, unit = "g" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -632,6 +705,9 @@ name = "Carrot poriyal"
 serves = 4
 prep_minutes = 15
 cook_minutes = 12
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["sweet", "light"]
 ingredients = [
   { id = "carrot", amount = 4, unit = "medium" },
   { id = "moong-dal", amount = 2, unit = "tbsp" },
@@ -661,6 +737,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a188ea-3cbc-741f-a28d-f2dde86616e8.webp", sha256 = "eaddd88778276d475db04c257c1678b9d0bc0e4288c2efea0edb39f409036e98", alt = "Beetroot poriyal with coconut, curry leaves and green chilli" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["sweet", "light"]
 ingredients = [
   { id = "beetroot", amount = 3, unit = "medium" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -689,6 +768,10 @@ name = "Potato roast"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["crispy", "spicy"]
+also_known_as = ["urulai roast"]
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "red-chilli-powder", amount = 1, unit = "tsp" },
@@ -716,6 +799,10 @@ name = "Vazhakkai fry"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["crispy", "spicy"]
+also_known_as = ["raw banana fry"]
 ingredients = [
   { id = "raw-banana", amount = 2, unit = "medium" },
   { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
@@ -742,6 +829,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 40
 image = { file = "01a188ea-3cc3-70fd-b2c5-17178ffc8504.webp", sha256 = "7a9a2e1b6da44a99beee8a38917978ffa58dffe4d767861239b32963e9fb4f1d", alt = "Chettinad chicken in a dark spiced gravy with curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["chicken chettinad"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -783,6 +874,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+cuisine = "south-indian"
+courses = ["mains", "snacks-starters"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -816,6 +910,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a188ea-3cc8-7da1-93a4-f4117af4edcd.webp", sha256 = "84430f8cb74ebf7845194f748258626f473b19db9e2bd78dd902d3eb27b724a4", alt = "Pepper chicken with curry leaves, onion and green chillies" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["milagu chicken"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "black-pepper", amount = 1, unit = "tbsp" },
@@ -846,6 +944,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 40
 image = { file = "01a188ea-3cca-76f8-9ac0-90fb54d62175.webp", sha256 = "8ce8e48926c2773d895a0fe684ccf91669125beb50b495965af8755659107c80", alt = "Kerala chicken stew in white coconut gravy with potato, carrot, ginger and curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["creamy", "light", "comforting"]
+weather = ["under-the-weather"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -880,6 +982,9 @@ name = "Nadan chicken curry"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -916,6 +1021,9 @@ name = "Andhra chicken curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -953,6 +1061,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 60
 image = { file = "01a188ea-3cd1-7f7f-80af-7681e7a27bc1.webp", sha256 = "d7bcf85b948f640866df375eba7adace8399bfb9ffd4f4cb177273a65b91d65a", alt = "Gongura mutton in a dark green gravy with dried red chillies and fried garlic" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy", "hearty"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "gongura", amount = 2, unit = "bunch" },
@@ -987,6 +1098,9 @@ name = "Mutton sukka"
 serves = 4
 prep_minutes = 20
 cook_minutes = 60
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1024,6 +1138,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 60
 image = { file = "01a188ea-3cd6-7f31-bfda-d62220000e22.webp", sha256 = "70321ca5904235ae246d69aee670df9261d5d8a618739a71675328c150cf94c2", alt = "Chettinad mutton curry in a dark gravy with curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1063,6 +1181,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a188ea-3cd8-7393-af5e-22e126fec6cf.webp", sha256 = "65e55e2a1575602e0efa0108b99a2f7cd37411feddd33c33ae32003563fc8e64", alt = "Meen moilee: fish steak in coconut gravy with tomato slices and green chilli" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["creamy", "light"]
+also_known_as = ["fish molee", "fish moilee"]
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -1095,6 +1217,10 @@ name = "Fish fry (Kerala style)"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "south-indian"
+courses = ["snacks-starters", "mains"]
+moods = ["crispy", "spicy"]
+also_known_as = ["meen varuthathu", "kerala fish fry"]
 ingredients = [
   { id = "mackerel", amount = 4, unit = "piece" },
   { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tbsp" },
@@ -1123,6 +1249,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a188ea-3cdc-72fb-9f3a-876114a5e690.webp", sha256 = "441b2961e196df6fbea04293077d468dd3017fba4eb76fbf4fc4dade74ab710e", alt = "Prawn ghee roast, prawns in a glossy dark red masala with curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "dried-red-chillies", amount = 10, unit = "piece" },
@@ -1157,6 +1286,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy"]
+also_known_as = ["mangalorean ghee roast"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -1193,6 +1326,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a188ea-3ce1-7124-af6c-a6af4494637a.webp", sha256 = "165e156edce082766b6d8c8d6651023f0bff732ef193925f7cc2272136a75f26", alt = "Kerala egg roast with curry leaves in a dark onion masala" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["mutta roast"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1227,6 +1364,10 @@ name = "Egg curry (Chettinad)"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["chettinad egg curry"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1264,6 +1405,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 image = { file = "01a188ea-3ce7-7640-8b27-c05b0f875f5c.webp", sha256 = "e32882b0c545739e27548eb61dc777e7e7b9cd9712faea43fac6b68232d5070e", alt = "Mangalore fish curry in a bright red coconut gravy with curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy"]
 ingredients = [
   { id = "pomfret", amount = 2, unit = "piece" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -1298,6 +1442,10 @@ name = "Ennai kathirikai"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy"]
+also_known_as = ["ennai kathirikai kuzhambu"]
 ingredients = [
   { id = "small-brinjal", amount = 8, unit = "piece" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -1335,6 +1483,10 @@ name = "Vatha kuzhambu"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy"]
+also_known_as = ["vathal kuzhambu"]
 ingredients = [
   { id = "tamarind", amount = 2, unit = "tbsp" },
   { id = "shallot", amount = 10, unit = "piece" },
@@ -1372,6 +1524,10 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 image = { file = "01a188ea-3cee-73fc-8601-97ca471c4d6a.webp", sha256 = "58fea7e3059cbbb8aa401d2a9dade8a472bff000fe643a8fa9f3041cac5638e3", alt = "Mor kuzhambu with ash gourd and a tempering of red chillies and curry leaves" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["creamy", "tangy"]
+weather = ["cool-down"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },
@@ -1406,6 +1562,9 @@ name = "Puli kuzhambu"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "tamarind", amount = 2, unit = "tbsp" },
   { id = "drumsticks", amount = 1, unit = "piece" },
@@ -1442,6 +1601,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["savoury"]
+also_known_as = ["beans usili"]
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -1472,6 +1635,10 @@ name = "Gutti vankaya"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["gutti vankaya kura", "stuffed brinjal curry"]
 ingredients = [
   { id = "small-brinjal", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
@@ -1508,6 +1675,10 @@ name = "Bagara baingan"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "spicy"]
+also_known_as = ["baghare baingan"]
 ingredients = [
   { id = "small-brinjal", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
@@ -1548,6 +1719,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18b54-81ba-79c9-9638-10695d0dc5d7.webp", sha256 = "c14bc769481513542d9b8b7a7ca2e92e006a18a20ea62ff7f9d7f26f933b3c24", alt = "Mirchi ka salan, green chillies in a peanut sesame gravy with curry leaves" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "green-chillies", amount = 10, unit = "piece" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
@@ -1585,6 +1759,9 @@ name = "Pappu (Andhra dal)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["comforting", "light"]
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "spinach", amount = 1, unit = "bunch" },
@@ -1619,6 +1796,10 @@ name = "Tomato pappu"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "comforting"]
+also_known_as = ["tomato dal"]
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "tomato", amount = 3, unit = "medium" },
@@ -1652,6 +1833,10 @@ name = "Majjige huli"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "creamy"]
+weather = ["cool-down"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },
@@ -1688,6 +1873,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 45
 image = { file = "01a18b54-81c3-7ff4-9f69-c14cf198bfb0.webp", sha256 = "024fcadb6a3a09073ef6fa28ab54c777115026bb6d20b8f27bc28a7b0440eff5", alt = "Bisi bele bath with vegetables, shallots, curry leaves and fried cashews" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy", "comforting"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["bisibelebath"]
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },

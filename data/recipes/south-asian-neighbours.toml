@@ -12,6 +12,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 45
 image = { file = "01a18c4a-5f6c-7ce6-a337-75ae717b09c9.webp", sha256 = "b991ef78a8c8488e7d919990db4251b06f9505bfb4853eecb9df66dae8187a5d", alt = "Sri Lankan chicken curry with curry leaves and cinnamon" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 1, unit = "large" },
@@ -48,6 +51,9 @@ serves = 2
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18c4a-5f73-7aea-a8ab-569912f8df1b.webp", sha256 = "9c54e2cff5516c33ddb6c98c0c001cb178b40e6c67e9a3384d7083415e48a374", alt = "Kottu roti with chopped paratha, chicken, egg, cabbage, carrot and leek" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -80,6 +86,10 @@ name = "Pol sambol"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["spicy", "tangy"]
+also_known_as = ["coconut sambol"]
 ingredients = [
   { id = "coconut", amount = 1.5, unit = "cup" },
   { id = "shallot", amount = 3, unit = "piece" },
@@ -103,6 +113,9 @@ name = "Sri Lankan dhal curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["creamy", "comforting"]
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "coconut-milk", amount = 1, unit = "cup" },
@@ -135,6 +148,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 360, note = "ferment the batter for 6 hours" }
+cuisine = "south-indian"
+courses = ["breakfast"]
+moods = ["crispy", "savoury"]
+also_known_as = ["egg appa"]
 ingredients = [
   { id = "rice-flour", amount = 2, unit = "cup" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -162,6 +179,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18c4a-5f7c-7af2-abda-7824f1b45653.webp", sha256 = "048b7ee8524b153c53d001c8976542680b10c43b383aedd0ebbc792ea5375876", alt = "Nepali dal bhat, white rice with a bowl of masoor dal and coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["dal bhat"]
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -195,6 +216,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["smoky", "spicy"]
+also_known_as = ["sekuwa"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "mustard-oil", amount = 2, unit = "tbsp" },
@@ -224,6 +249,10 @@ name = "Aloo tama"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["tangy", "savoury"]
+also_known_as = ["alu tama"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "bamboo-shoots", amount = 1, unit = "cup" },
@@ -257,6 +286,9 @@ name = "Chicken karahi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "tomato", amount = 5, unit = "medium" },
@@ -290,6 +322,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 15
 image = { file = "01a18c4a-5f85-7433-b61b-e5730d852ce7.webp", sha256 = "4d4f0a93fdcd2c52bea0c6cfb8417eda8902a7dcd9a69644fc9be51fd0aca7bf", alt = "Two crisp chapli kebabs with coriander seeds" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["spicy", "savoury"]
+also_known_as = ["chapli kabab"]
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -322,6 +358,10 @@ name = "Kabuli pulao"
 serves = 6
 prep_minutes = 25
 cook_minutes = 105
+cuisine = "middle-eastern"
+courses = ["rice-breads", "mains"]
+moods = ["sweet", "savoury"]
+also_known_as = ["qabuli palaw"]
 ingredients = [
   { id = "basmati-rice", amount = 2, unit = "cup" },
   { id = "lamb", amount = 750, unit = "g" },
@@ -354,6 +394,10 @@ name = "Mantu"
 serves = 4
 prep_minutes = 40
 cook_minutes = 40
+cuisine = "middle-eastern"
+courses = ["snacks-starters", "mains"]
+moods = ["savoury", "creamy"]
+also_known_as = ["afghan dumplings"]
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "lamb-mince", amount = 400, unit = "g" },
@@ -386,6 +430,9 @@ name = "Bolani"
 serves = 4
 prep_minutes = 30
 cook_minutes = 25
+cuisine = "middle-eastern"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },
