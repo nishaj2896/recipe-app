@@ -725,7 +725,6 @@ cook_minutes = 50
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
-also_known_as = ["chicken and rice"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "rice", amount = 1.5, unit = "cup" },

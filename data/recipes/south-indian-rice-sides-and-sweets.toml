@@ -329,7 +329,6 @@ image = { file = "01a18b54-81d1-7921-ad97-8f0eec6cba72.webp", sha256 = "2b3d9be8
 cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury", "hearty"]
-also_known_as = ["hyderabadi biryani", "dum biryani"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },

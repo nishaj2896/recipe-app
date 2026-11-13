@@ -81,7 +81,6 @@ image = { file = "01a18ba9-fd9a-7c40-b6bc-1e62a8ec585c.webp", sha256 = "bb1cfab9
 cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["savoury", "spicy"]
-also_known_as = ["chicken noodles"]
 ingredients = [
   { id = "hakka-noodles", amount = 200, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },

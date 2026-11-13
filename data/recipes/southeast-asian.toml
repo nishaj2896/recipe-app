@@ -216,7 +216,6 @@ image = { file = "01a18c12-05c8-719e-9bef-f6d5dd1971d9.webp", sha256 = "4e69fa64
 cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["savoury", "light"]
-also_known_as = ["chicken rice"]
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "jasmine-rice", amount = 1.5, unit = "cup" },
