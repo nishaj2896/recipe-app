@@ -47,7 +47,7 @@ Lists hold no duplicates. The ids are published like ingredient ids: never renam
 
 A recipe's allergens are the union of its ingredients' allergens. A recipe is Jain when its diet is vegan or vegetarian and none of its ingredients has `jain = false`. Both are computed, never hand-labelled, like diet (ADR-0002 rule 6). Jain cannot join the diet order: a vegan dish with onion is not Jain, and a Jain dish with paneer is not vegan.
 
-**3. The loader and CI check every new field.** On load, every recipe has a cuisine, 1 or 2 courses and 1 to 3 moods; every tag is on its list; `pairs_with` ids exist and are not the recipe itself; aliases are unique within a recipe and are not the recipe's own name. Every allergen is on the list. A bad file stops the app from starting, as today.
+**3. The loader and CI check every new field.** On load, every recipe has a cuisine, 1 or 2 courses and 1 to 3 moods; every tag is on its list; `pairs_with` ids exist and are not the recipe itself; aliases are unique across the whole book: after normalizing and folding punctuation, no alias equals any recipe's name (its own included) or another recipe's alias, so an alias finds exactly one recipe. Every allergen is on the list. A bad file stops the app from starting, as today.
 
 **4. Food rules are filters, and they apply to the deck only.** The deck request, `POST /api/v1/recipes/search`, gains:
 

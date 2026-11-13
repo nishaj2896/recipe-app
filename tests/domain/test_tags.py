@@ -231,3 +231,48 @@ def test_an_egg_recipe_is_never_jain() -> None:
 
     assert recipe.diet is Diet.EGG
     assert recipe.jain is False
+
+
+def test_an_alias_may_not_be_another_recipes_name() -> None:
+    problems = parse(
+        recipe_table(also_known_as=["phulka"]),
+        recipe_table(id=OTHER_ID, name="Phulka"),
+    )
+
+    assert problems == [
+        f"recipe 'Aloo matar' ({RECIPE_ID}): also_known_as 'phulka' is the name "
+        "of 'Phulka'"
+    ]
+
+
+def test_an_alias_differing_only_by_punctuation_is_the_own_name() -> None:
+    problems = parse(
+        recipe_table(name="Peri-peri chicken", also_known_as=["peri peri chicken"])
+    )
+
+    assert any("is the name of this recipe" in problem for problem in problems), (
+        problems
+    )
+
+
+def test_two_recipes_may_not_share_an_alias() -> None:
+    problems = parse(
+        recipe_table(also_known_as=["stuffed brinjal"]),
+        recipe_table(
+            id=OTHER_ID, name="Bharli vangi", also_known_as=["stuffed-brinjal"]
+        ),
+    )
+
+    assert problems == [
+        f"recipe 'Bharli vangi' ({OTHER_ID}): also_known_as 'stuffed-brinjal' is "
+        "also an alias of 'Aloo matar'"
+    ]
+
+
+def test_one_recipe_may_not_carry_two_aliases_that_fold_together() -> None:
+    problems = parse(recipe_table(also_known_as=["stuffed brinjal", "stuffed-brinjal"]))
+
+    assert problems == [
+        f"recipe 'Aloo matar' ({RECIPE_ID}): also_known_as 'stuffed-brinjal' folds "
+        "to the same search key as another of its aliases"
+    ]
