@@ -2825,7 +2825,6 @@ class = "B"
 diet = "vegan"
 category = "bread-bakery-and-snacks"
 search_terms = ["poppadom", "papadum"]
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "pav"
@@ -3781,7 +3780,6 @@ class = "S"
 kind = "pantry"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "baharat"
@@ -3880,7 +3878,6 @@ name = "Chaat masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "chai-masala"
@@ -3913,7 +3910,6 @@ class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["chana masala"]
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "cinnamon-sticks"
@@ -4247,7 +4243,7 @@ class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
 search_terms = ["gunpowder", "chutney powder"]
-allergens = ["gluten", "sesame"]
+allergens = ["sesame"]
 
 [[ingredient]]
 id = "italian-seasoning"
@@ -4285,7 +4281,6 @@ name = "Kitchen king masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 jain = false
 
 [[ingredient]]
@@ -4324,7 +4319,6 @@ name = "Meat masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 jain = false
 
 [[ingredient]]
@@ -4406,7 +4400,6 @@ name = "Pav bhaji masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "pink-peppercorns"
@@ -4442,7 +4435,6 @@ name = "Rasam powder"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "red-chilli-powder"
@@ -4483,7 +4475,6 @@ name = "Sambar powder"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 
 [[ingredient]]
 id = "sesame-seeds"
@@ -4560,7 +4551,6 @@ name = "Tandoori masala"
 class = "B"
 diet = "vegan"
 category = "spices-and-seasonings"
-allergens = ["gluten"]
 jain = false
 
 [[ingredient]]
@@ -4979,7 +4969,7 @@ name = "Lime pickle"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
-allergens = ["gluten", "mustard"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "liquid-smoke"
@@ -5002,7 +4992,7 @@ name = "Mango pickle"
 class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
-allergens = ["gluten", "mustard"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "mayonnaise"
@@ -5045,7 +5035,7 @@ class = "B"
 diet = "vegan"
 category = "sauces-and-condiments"
 search_terms = ["mixed pickle"]
-allergens = ["gluten", "mustard"]
+allergens = ["mustard"]
 
 [[ingredient]]
 id = "olives"
