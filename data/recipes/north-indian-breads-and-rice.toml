@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a15175-3c0f-7496-91c1-4e90dc98797e.webp", sha256 = "0384274b90e12834ceee009e081debe14dbca05879c1189024353b9efa6d0e05", alt = "Vegetable pulao with carrot, beans, peas and whole spices" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury"]
+also_known_as = ["veg pulao", "pulav"]
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -46,6 +50,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 20
 image = { file = "01a15175-3c10-76ca-bf43-23fffb096acd.webp", sha256 = "c517c957ca5101c061eab4768c42e5ec73ca136346f1e8f138e85749ecf3a704", alt = "Jeera rice with cumin seeds" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury", "light"]
+also_known_as = ["cumin rice"]
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "cumin-seeds", amount = 2, unit = "tsp" },
@@ -70,6 +78,10 @@ prep_minutes = 30
 cook_minutes = 60
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a15175-3c1c-71e8-a493-8702aa35c9e3.webp", sha256 = "2efad93421198c010e4ad682c976f19a05cd5c5b383f0fa13f02b7b44955470b", alt = "Chicken biryani topped with fried onions and mint, with a bowl of raita" }
+cuisine = "north-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["biriyani"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
@@ -103,6 +115,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a188ac-0597-7bfe-8ab8-24300d82453f.webp", sha256 = "446f8197a32a7b917451e91029ec6a4ceb7a039aa79dc738c42c80b95a0f6aae", alt = "Layered triangular plain paratha" }
+cuisine = "north-indian"
+courses = ["rice-breads", "breakfast"]
+moods = ["savoury"]
+also_known_as = ["parantha"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 4, unit = "tbsp" },
@@ -127,6 +143,11 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 35
 image = { file = "01a188ac-0599-7b01-a8c0-c7e57b87d415.webp", sha256 = "bebeb0d90bb85e1a5852d0f03d239130780cadb8ccb13021b6619fff060faf75", alt = "Stack of aloo parathas with a pat of butter and fresh coriander" }
+cuisine = "north-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "spicy", "hearty"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["aloo parantha", "potato paratha"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -161,6 +182,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 35
 image = { file = "01a188ac-059c-7117-b956-95db3c58e90f.webp", sha256 = "c32f62446073c68e90e80d142c5b34baad4aaf510837091c5da8cdadeba79f76", alt = "Gobi paratha, one cut open to show the cauliflower filling" }
+cuisine = "north-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "hearty"]
+also_known_as = ["gobhi paratha"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "cauliflower", amount = 0.5, unit = "small-head" },
@@ -191,6 +216,9 @@ name = "Paneer paratha"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "hearty"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "paneer", amount = 200, unit = "g" },
@@ -219,6 +247,9 @@ name = "Methi paratha"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "fresh-herby"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "fenugreek-leaves", amount = 100, unit = "g" },
@@ -247,6 +278,9 @@ name = "Mooli paratha"
 serves = 4
 prep_minutes = 25
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["breakfast", "rice-breads"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "radish", amount = 2, unit = "medium" },
@@ -277,6 +311,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a188ac-05a4-7d6b-8b51-b0183f72ee48.webp", sha256 = "00c989807cec1814d8a411077287cfa141d5cad1580077e562230c20f3743501", alt = "Two flaky layered lachha parathas" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["crispy", "savoury"]
+also_known_as = ["laccha paratha"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 5, unit = "tbsp" },
@@ -301,6 +339,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a188ac-05a7-7dde-b069-03b15b2dd2b3.webp", sha256 = "0e1cdc90ee4030959887a9ccff9f8b48c84407df2ebd189ae2daad16c394c927", alt = "Stack of three soft phulkas" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["light"]
+also_known_as = ["chapati", "chapathi"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 1, unit = "tbsp" },
@@ -322,6 +364,10 @@ name = "Tandoori roti"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["smoky"]
+also_known_as = ["tandoor roti"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -346,6 +392,9 @@ name = "Missi roti"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 1, unit = "cup" },
@@ -377,6 +426,10 @@ prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 image = { file = "01a188ac-05ad-7540-a452-90d483cf792b.webp", sha256 = "35042958be48dbadd43d5528b4c128a93cb252ebcd3e05141ef009957760d643", alt = "Blistered butter naan" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury", "creamy"]
+also_known_as = ["nan"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -406,6 +459,9 @@ prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 image = { file = "01a188ac-05af-7758-b298-8c9999377ec6.webp", sha256 = "9966aad0b0dee7204bd30c97c88fbb668b321f7192d09cdbeafd205c7c0fcc96", alt = "Garlic naan with coriander and nigella seeds" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -438,6 +494,10 @@ prep_minutes = 15
 cook_minutes = 25
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 image = { file = "01a188ac-05b1-784f-bb14-2bba03c32a18.webp", sha256 = "8cd4a7d5f475e05cb08f8575eb2be11d6984d9fdac26cf012669309d3fb4d2f9", alt = "Two puffed golden bhaturas" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["crispy"]
+also_known_as = ["bhature"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 2, unit = "tbsp" },
@@ -466,6 +526,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a188ac-05b3-7852-994e-2b3ec2b5edf4.webp", sha256 = "0f8396f1ebfdae3e980c2135d25d41a30565772247bcefead710be37ebe0eb12", alt = "Stack of four puffed puris" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["crispy"]
+also_known_as = ["poori"]
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },
@@ -491,6 +555,9 @@ prep_minutes = 20
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "let the dough rest for 2 hours" }
 image = { file = "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2.webp", sha256 = "c0863c4f49dafef35915a62d8a25121c75d45b66959a11668873796a46a4d023", alt = "Kulcha with nigella seeds and coriander, one cut open" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -518,6 +585,10 @@ name = "Matar pulao"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["savoury", "light"]
+also_known_as = ["peas pulao"]
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -550,6 +621,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef.webp", sha256 = "d6a6018edbb141d08de792bdf3445244e184b7fa36d363921a182bec2fe5a16b", alt = "Kashmiri pulao with nuts, raisins, apple and pomegranate" }
+cuisine = "north-indian"
+courses = ["rice-breads"]
+moods = ["sweet"]
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "milk", amount = 0.5, unit = "cup" },
@@ -588,6 +662,9 @@ prep_minutes = 40
 cook_minutes = 120
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a188e4-2cc1-7d6c-91e0-de20898e32ce.webp", sha256 = "f97670efde2c03fae3e950dab0477bbf54dfd05a991b3387d1f6977c6c28aacf", alt = "Mutton biryani topped with fried onions, with a piece of mutton" }
+cuisine = "north-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury", "hearty"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -633,6 +710,10 @@ serves = 6
 prep_minutes = 30
 cook_minutes = 150
 image = { file = "01a188e4-2cc3-741b-b1ec-d5dc88859668.webp", sha256 = "e608ce0c3e06c8dfeeb3119d258def6ce65e2286d3ad249c7bbf16288d46a6b4", alt = "Lucknowi biryani with mutton and basmati rice" }
+cuisine = "north-indian"
+courses = ["rice-breads", "mains"]
+moods = ["savoury", "hearty"]
+also_known_as = ["awadhi biryani"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -678,6 +759,10 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 45
 image = { file = "01a188e4-2cc5-7d1d-8441-6a87ddb91dee.webp", sha256 = "b27b5872e07b7be1ab92348794b69497087fa8b7d12c513ba9e3842474fb3e89", alt = "Vegetable biryani with cauliflower, carrot, beans and peas, topped with fried onions and mint" }
+cuisine = "north-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["veg biryani"]
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -722,6 +807,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 image = { file = "01a188e4-2cc7-76a3-9aa0-27fb2fe4dd84.webp", sha256 = "a6bb511c596dc8a01f2cfd9f700f096925353cb38237baa420dad350b4c42c02", alt = "Egg biryani with masala coated eggs, basmati rice, mint and coriander" }
+cuisine = "north-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["anda biryani"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -760,6 +849,9 @@ name = "Paneer biryani"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "north-indian"
+courses = ["rice-breads", "mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -799,6 +891,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 60
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["rajma rice"]
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "cup" },
   { id = "basmati-rice", amount = 1, unit = "cup" },
@@ -835,6 +932,11 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 25
 image = { file = "01a188e4-2cce-7282-8ab9-28675b97891a.webp", sha256 = "93d197d5806a47df82384ed705a879a1542a03f589d4ad6f61824cf86668a9b4", alt = "Khichdi with a little ghee on top" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["comforting", "light"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["khichri", "kichdi"]
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -862,6 +964,10 @@ name = "Masala khichdi"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["comforting", "spicy"]
+weather = ["under-the-weather", "rainy-day-cosy"]
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },

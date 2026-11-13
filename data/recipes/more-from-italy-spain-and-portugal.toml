@@ -11,6 +11,10 @@ name = "Spaghetti alle vongole"
 serves = 2
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "fresh-herby", "light"]
+also_known_as = ["vongole", "spaghetti with clams"]
 ingredients = [
   { id = "pasta", amount = 200, unit = "g" },
   { id = "clams", amount = 750, unit = "g" },
@@ -37,6 +41,10 @@ name = "Pasta puttanesca"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+cuisine = "italian"
+courses = ["mains"]
+moods = ["tangy", "savoury", "spicy"]
+also_known_as = ["puttanesca"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -65,6 +73,9 @@ name = "Penne with sausage and peppers"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "spicy", "hearty"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "sausages", amount = 400, unit = "g" },
@@ -95,6 +106,10 @@ name = "Ravioli with butter and sage"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "creamy"]
+also_known_as = ["ravioli"]
 ingredients = [
   { id = "cheese-filled-pasta", amount = 400, unit = "g" },
   { id = "butter", amount = 4, unit = "tbsp" },
@@ -120,6 +135,11 @@ name = "Tortellini in brodo"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "italian"
+courses = ["soups"]
+moods = ["savoury", "comforting"]
+weather = ["under-the-weather", "rainy-day-cosy"]
+also_known_as = ["tortellini soup"]
 ingredients = [
   { id = "meat-filled-pasta", amount = 400, unit = "g" },
   { id = "chicken-stock", amount = 6, unit = "cup" },
@@ -146,6 +166,10 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 45
 plan_ahead = { wait_minutes = 120, note = "chill for 2 hours" }
+cuisine = "italian"
+courses = ["snacks-starters"]
+moods = ["crispy", "savoury"]
+also_known_as = ["arancini balls", "rice balls"]
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
@@ -176,6 +200,10 @@ name = "Saltimbocca"
 serves = 4
 prep_minutes = 15
 cook_minutes = 10
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "fresh-herby"]
+also_known_as = ["saltimbocca alla romana"]
 ingredients = [
   { id = "veal", amount = 500, unit = "g" },
   { id = "prosciutto", amount = 8, unit = "slice" },
@@ -202,6 +230,11 @@ name = "Osso buco"
 serves = 4
 prep_minutes = 25
 cook_minutes = 135
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["ossobuco"]
 ingredients = [
   { id = "veal", amount = 1.2, unit = "kg" },
   { id = "all-purpose-flour", amount = 0.25, unit = "cup" },
@@ -235,6 +268,10 @@ name = "Pasta alla norma"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "tangy"]
+also_known_as = ["norma"]
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "brinjal", amount = 2, unit = "medium" },
@@ -264,6 +301,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 image = { file = "01a18c1a-e28f-71b2-a822-3142aee883aa.webp", sha256 = "31d85a4815187dea6283548ad8a6cc4b356bc8ee289e8087b73b1f4f19392818", alt = "Pollo al ajillo with whole garlic cloves, a bay leaf and parsley" }
+cuisine = "spanish-portuguese"
+courses = ["mains"]
+moods = ["savoury", "fresh-herby"]
+also_known_as = ["garlic chicken"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "garlic", amount = 12, unit = "clove" },
@@ -289,6 +330,11 @@ name = "Caldo verde"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+cuisine = "spanish-portuguese"
+courses = ["soups"]
+moods = ["savoury", "comforting"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["portuguese kale soup"]
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "kale", amount = 200, unit = "g" },
@@ -316,6 +362,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 plan_ahead = { wait_minutes = 1440, note = "soak for 1 day" }
+cuisine = "spanish-portuguese"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["bacalhau"]
 ingredients = [
   { id = "salt-cod", amount = 400, unit = "g" },
   { id = "potato", amount = 500, unit = "g" },
@@ -345,6 +395,10 @@ serves = 12
 prep_minutes = 30
 cook_minutes = 25
 image = { file = "01a18c1a-e295-7c65-a793-e4566d8fd6bc.webp", sha256 = "f362ca4abba19ecea5bc44284a1e77121d27083b41fe54e9880dc11d8b5cf4a1", alt = "Three Portuguese custard tarts with blistered tops" }
+cuisine = "spanish-portuguese"
+courses = ["desserts"]
+moods = ["sweet", "creamy", "crispy"]
+also_known_as = ["portuguese custard tart", "pasteis de nata"]
 ingredients = [
   { id = "puff-pastry", amount = 320, unit = "g" },
   { id = "milk", amount = 1, unit = "cup" },
@@ -372,6 +426,10 @@ name = "Albondigas"
 serves = 4
 prep_minutes = 25
 cook_minutes = 35
+cuisine = "spanish-portuguese"
+courses = ["mains", "snacks-starters"]
+moods = ["savoury", "tangy"]
+also_known_as = ["spanish meatballs"]
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "breadcrumbs", amount = 0.5, unit = "cup" },

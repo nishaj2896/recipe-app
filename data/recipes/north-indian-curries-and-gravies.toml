@@ -12,6 +12,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a15175-3c00-74aa-990d-9f9791e9d729.webp", sha256 = "aad26a93f1b24533e440dda5d61984c0c6ea4a82fe1691b94641633a6f0017a5", alt = "Aloo matar with potato cubes and peas in a tomato gravy, with slit green chillies and coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["aloo mutter"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -44,6 +48,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a15175-3c02-76b4-b315-57189e41c2d0.webp", sha256 = "a396420ee6bcf33582a552349736a837e096817f1522110de642b88abd8a0149", alt = "Aloo gobi with coriander" }
+cuisine = "north-indian"
+courses = ["mains", "sides"]
+moods = ["savoury", "spicy"]
+also_known_as = ["aloo gobhi"]
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "cauliflower", amount = 1, unit = "small-head" },
@@ -76,6 +84,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 20
 image = { file = "01a15175-3c03-7619-8dad-e95a1c70ce7c.webp", sha256 = "b90b0388c2e81c7b0833bfadce4b29f87cbe1397366f9189e5bfa870b88972ec", alt = "Bhindi masala with onion in a dark bowl" }
+cuisine = "north-indian"
+courses = ["mains", "sides"]
+moods = ["spicy", "savoury"]
+also_known_as = ["okra masala"]
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -105,6 +117,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a15175-3c04-77e6-a1ae-16fb9ffe2211.webp", sha256 = "3dac4bf6047e95c92ecd7a2a02f1406392037609b034d4f107e19088e3b8ee06", alt = "Palak paneer with seared paneer cubes, cream swirl and ginger, with naan" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
+also_known_as = ["saag paneer"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "spinach", amount = 1, unit = "bunch" },
@@ -139,6 +155,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a15175-3c05-7501-8755-44f4683cdaee.webp", sha256 = "299438ff3383fde640302d44df021848d06961d768ff3eed78f716e3492a585b", alt = "Paneer butter masala in a bowl with a swirl of cream" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet", "savoury"]
+also_known_as = ["paneer makhani", "paneer makhanwala"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -173,6 +193,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a15175-3c06-7d2e-a006-d8be5bd6ccb6.webp", sha256 = "708ce5ae46a4d68e6e460bfa9e1cc94c5197f15ada0bccd94b37cee45861a412", alt = "Matar paneer with paneer cubes and peas in a tomato gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "creamy", "comforting"]
+also_known_as = ["mutter paneer"]
 ingredients = [
   { id = "paneer", amount = 200, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -204,6 +228,11 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a15175-3c07-7f8f-85c3-388e5af7e04a.webp", sha256 = "070f7747a75fd4f0ec8b955126ec828f4bd191a4900a83f156eb854b83bc5e2a", alt = "Dal tadka with a tempering of dried chillies and garlic, beside basmati rice" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["dal tarka", "yellow dal"]
 ingredients = [
   { id = "toor-dal", amount = 200, unit = "g" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -234,6 +263,11 @@ name = "Moong dal"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["comforting", "light"]
+weather = ["under-the-weather"]
+also_known_as = ["moong ki dal"]
 ingredients = [
   { id = "moong-dal", amount = 200, unit = "g" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -260,6 +294,10 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 20
 image = { file = "01a15175-3c09-7ca6-ad61-f6dc043fd0dc.webp", sha256 = "a315127ff79f1a3c5455879d0074d93044611b9eb827c39366805eaa3c2c6fb7", alt = "Masoor dal with onion, tomato and cumin seeds" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["comforting", "light"]
+also_known_as = ["lal masoor dal"]
 ingredients = [
   { id = "masoor-dal", amount = 200, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -290,6 +328,10 @@ prep_minutes = 15
 cook_minutes = 40
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a15175-3c0a-725c-9c90-73d0fa294994.webp", sha256 = "242cf89a0620fe4bab4b0fd1e96a9cc93bdc672059e9cd6287fa0a23b1417fca", alt = "Chana masala with coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy", "hearty"]
+also_known_as = ["chole"]
 ingredients = [
   { id = "chickpeas", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -324,6 +366,11 @@ prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a15175-3c0b-7b09-ba59-3db099c27b86.webp", sha256 = "3c80f54c54e26fd6126745319bf1998ff990b2cd48161475dc26f07000d25b28", alt = "Rajma, red kidney beans in a thick onion and tomato gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["rajma masala"]
 ingredients = [
   { id = "kidney-beans", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -355,6 +402,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 image = { file = "01a15175-3c0d-724d-8163-07a8da4afdd6.webp", sha256 = "eeaf1959be161f61be9b7a23584ae473e46985f98f42b4b302b8d526b7be1331", alt = "Baingan bharta, smoky mashed brinjal with onion, tomato and coriander" }
+cuisine = "north-indian"
+courses = ["mains", "sides"]
+moods = ["smoky", "spicy"]
+also_known_as = ["baingan ka bharta", "bharta"]
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -382,6 +433,10 @@ name = "Mixed vegetable sabzi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["mains", "sides"]
+moods = ["savoury"]
+also_known_as = ["mix veg"]
 ingredients = [
   { id = "carrot", amount = 2, unit = "medium" },
   { id = "french-beans", amount = 100, unit = "g" },
@@ -413,6 +468,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 25
 image = { file = "01a15175-3c17-7fd3-9389-349bd64c3500.webp", sha256 = "ee4990b25d9db152306f20168895739370239b2428b8e8308f771bbd17224716", alt = "Egg curry, whole boiled eggs in an orange onion and tomato gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["anda curry"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -444,6 +503,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a15175-3c1a-7713-b024-befd853a33b0.webp", sha256 = "6e1d88b6ae8b365d59228c01d2a35122c3dc79c379a207912dd6054c3a6cfc9a", alt = "Chicken curry on the bone in a red gravy with coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "comforting"]
+also_known_as = ["murgh curry"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "large" },
@@ -478,6 +541,10 @@ prep_minutes = 15
 cook_minutes = 35
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a15175-3c1b-7327-a70a-a937797a18f2.webp", sha256 = "3767105b210c4f666f0c78ff59bc4a151ce6c8fcad91833bece1a9f8d0ffc2cf", alt = "Butter chicken in a copper karahi with lemon, coriander and pickled onion" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet", "savoury"]
+also_known_as = ["murgh makhani", "chicken makhani"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -510,6 +577,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 image = { file = "01a15175-3c1f-7c61-883c-38096935aec4.webp", sha256 = "a344facfca17165ac63520ba5a3182576285058979a1e9ddfaa420a64ac015c2", alt = "Keema matar with lamb mince and peas" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["kheema matar"]
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -540,6 +611,9 @@ prep_minutes = 20
 cook_minutes = 40
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18812-66df-7ccf-b265-66e449208513.webp", sha256 = "e37ddbb9a2a74e157198538145972ac7ab1fd75be136515fbd074c81266a8d69", alt = "Chicken tikka masala, charred chicken in a creamy orange tomato sauce" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "spicy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -579,6 +653,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18812-66e1-7e53-9639-1744613bb000.webp", sha256 = "f07dce28571fb14d1e0ccd7817ba338bb45d0b273cbb22cc380be577c33946ce", alt = "Kadai chicken with bell pepper in a black kadai" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["kadhai chicken"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coriander-seeds", amount = 1.5, unit = "tbsp" },
@@ -616,6 +694,9 @@ prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18812-66e4-7839-95e5-6eec566ea16c.webp", sha256 = "6ce35ae35ca9aa4c03cc0309f4cbf5a5415d95285af64a7ec59f1e339449f8d9", alt = "Chicken korma in a creamy gravy with a cinnamon stick" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -655,6 +736,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18812-66e6-7c65-86e5-04930d86c859.webp", sha256 = "91f151316c87ae7faa98897688b4ed94b7bab0a226364b066445386a7411d4a9", alt = "Chicken do pyaza with cooked onion and coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 4, unit = "medium" },
@@ -691,6 +775,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 image = { file = "01a18812-671b-7b6a-9f23-dbdbf7526cf0.webp", sha256 = "a63b9f413205041c4492f112328db0685767654ef3dafa8808c56718dd4a5686", alt = "Chicken saagwala in a spinach gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "creamy"]
+also_known_as = ["saag chicken", "palak chicken"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "spinach", amount = 400, unit = "g" },
@@ -729,6 +817,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18812-671e-7d3c-8c9d-dc581af533dd.webp", sha256 = "dc6641313f7dbe511aa0213446074ef47cb8e2885ce4af620d398724901369ca", alt = "Methi chicken, chicken pieces in a fenugreek leaf gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "fresh-herby"]
+also_known_as = ["methi murgh"]
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "fenugreek-leaves", amount = 100, unit = "g" },
@@ -763,6 +855,11 @@ name = "Dhaba chicken curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 50
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["dhaba style chicken"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -803,6 +900,9 @@ prep_minutes = 30
 cook_minutes = 70
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18812-6723-7412-8bfb-1565d14f7e7f.webp", sha256 = "f36c52cd2cb85385fbfab5ce55804666f3cab10cd07edb161c748a3ac7774cf0", alt = "Murgh musallam, whole chicken in orange-red gravy with boiled eggs" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury", "hearty"]
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "egg", amount = 4, unit = "piece" },
@@ -844,6 +944,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 90
 image = { file = "01a18812-6725-7086-8370-27cb6d78f9e4.webp", sha256 = "cc265430eca1091784e422b1c33a060ee780e1fbb3a54880e96935a9af0df464", alt = "Rogan josh in a copper bowl with cinnamon, cardamom and a bay leaf" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["roghan josh"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -881,6 +986,9 @@ prep_minutes = 15
 cook_minutes = 90
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 image = { file = "01a18812-6727-7cb4-9f54-7c25a947bee2.webp", sha256 = "8e2e2130ff3225f3e38149933dcb965a3aa4f5a134234c8bc247b12b49d835e0", alt = "Mutton korma, bone-in mutton in a golden onion and cashew gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury", "hearty"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -918,6 +1026,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 90
 image = { file = "01a18812-6729-72de-b1c0-1cd7ec0890d3.webp", sha256 = "fd59712ab9d03da67f4c3fcb1d38d5cb2d6ad9efd05d109721a54b13f9df775c", alt = "Bhuna gosht, mutton in a dark thick masala with coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["bhuna mutton"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "onion", amount = 4, unit = "medium" },
@@ -957,6 +1069,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 image = { file = "01a18812-672c-7509-8e08-16d0d0d2d8ce.webp", sha256 = "0c0a81eaf861046594d58559070f110d7b396ef02dc966e159a70ad996db5d1c", alt = "Aloo keema with potato cubes, slit green chillies and coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "spicy", "hearty"]
+also_known_as = ["keema aloo"]
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -993,6 +1109,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 260
 image = { file = "01a18812-672e-7e5e-9e18-9973c85d213a.webp", sha256 = "5306ce0d82e1e6b4d0e5116ce0f8d9b2fc12460551cd7700dd180c40f61fa0d4", alt = "Nihari topped with fried onion, ginger strips and coriander, with lemon wedges" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "comforting", "hearty"]
+weather = ["cosy-night-in", "grey-gloomy"]
+also_known_as = ["nihari gosht"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1037,6 +1158,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 90
 image = { file = "01a18812-6730-7099-83c5-19af8f61e6e9.webp", sha256 = "6346bdbd60f8480083ea620277aa2b25f826cc5d3a87729906bf529d0305720a", alt = "Laal maas, Rajasthani mutton in a fiery red gravy" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["spicy", "smoky", "hearty"]
+also_known_as = ["lal maas"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "dried-red-chillies", amount = 15, unit = "piece" },
@@ -1073,6 +1198,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 90
 image = { file = "01a18812-6733-728f-98f0-dadfcedbcb95.webp", sha256 = "3b3be97c75fa5bd3f978073b7ae3dfa0d5b80e6f26b89cf97d7237d074bb6e93", alt = "Safed maas, mutton in a white cashew and cream gravy with green chilli" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -1112,6 +1240,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18813-915d-78a8-a3da-6f5f2edc97ba.webp", sha256 = "a2c246aadebd54ea25b669847bb47a169057022da752f505d8f28eab73481d1a", alt = "Kadai paneer with bell pepper and coriander in a thick masala" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["karahi paneer", "kadhai paneer"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -1147,6 +1279,9 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 30
 image = { file = "01a18813-915f-7056-bd66-9f687cc3ed6f.webp", sha256 = "826abb6231aa7b9a61771c4887018f030568682de2a61fd7da6597021bc478d4", alt = "Shahi paneer cubes in a creamy gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet"]
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1183,6 +1318,9 @@ name = "Paneer do pyaza"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1218,6 +1356,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18813-9164-74f7-a41f-34424892557e.webp", sha256 = "819ef921a83dab59fa9c7b4cdea29d18cd444a0572f7b1997163fe321230729e", alt = "Paneer lababdar in a rich orange gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1255,6 +1396,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18813-9166-7175-8846-b0ce683b98f3.webp", sha256 = "b63e26fff99b4584971c3ea2c4061acc7d7963f6699d6ebb907ed0f151692a14", alt = "Paneer tikka masala with bell pepper and onion" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "spicy", "smoky"]
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -1291,6 +1435,9 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 40
 image = { file = "01a18813-9168-7124-87f8-728a0e7c0890.webp", sha256 = "9b0861e34bc20561f1dab48de667f4a37404ba99bf84b24fe76ea34ed14a72f1", alt = "Malai kofta: three golden koftas in a creamy tomato gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet", "comforting"]
 ingredients = [
   { id = "paneer", amount = 200, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -1330,6 +1477,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 40
 image = { file = "01a18813-916a-75ab-b120-c21d53c9f763.webp", sha256 = "46959ca1b79648dedf68b706afe4a009d81d8d69782551a986041378983d0c40", alt = "Lauki kofta in a tomato gravy with coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["ghiya kofta"]
 ingredients = [
   { id = "bottle-gourd", amount = 500, unit = "g" },
   { id = "gram-flour", amount = 0.5, unit = "cup" },
@@ -1368,6 +1519,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 image = { file = "01a18813-916d-76a8-8e55-04610b474e19.webp", sha256 = "458414a119f7798e71118c9c6a38d9b3b85d49711706f82e5dcb561a5efec2e9", alt = "Dum aloo of baby potatoes in a red gravy, with coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "comforting"]
+also_known_as = ["dum alu"]
 ingredients = [
   { id = "potato", amount = 600, unit = "g" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -1404,6 +1559,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 image = { file = "01a18813-916f-7061-8fb4-2395b52e9368.webp", sha256 = "6b324e62fb3612c75a6773a86da2396807ca06cf59644b61ec6cb90878d60afa", alt = "Kashmiri dum aloo, baby potatoes in a red gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "potato", amount = 600, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -1438,6 +1596,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18813-9171-7847-8929-9e949df007da.webp", sha256 = "c0eb4e42f720ea4664f04a581241ca263acf48a936c2fda23100145e14a47df5", alt = "Aloo methi, potato cubes tossed with fenugreek leaves and garlic" }
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["savoury", "fresh-herby"]
+also_known_as = ["methi aloo"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "fenugreek-leaves", amount = 150, unit = "g" },
@@ -1467,6 +1629,10 @@ name = "Aloo palak"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["sides", "mains"]
+moods = ["savoury", "light"]
+also_known_as = ["palak aloo"]
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "spinach", amount = 400, unit = "g" },
@@ -1501,6 +1667,10 @@ name = "Aloo baingan"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["sides", "mains"]
+moods = ["savoury", "spicy"]
+also_known_as = ["baingan aloo"]
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "brinjal", amount = 300, unit = "g" },
@@ -1536,6 +1706,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18813-9178-7f3a-972a-f2eb49afa918.webp", sha256 = "859513f5b24e943f64c6f7b621b3f33843447415d1cc405d4591f44f35ed038b", alt = "Bhindi do pyaza, okra with onion" }
+cuisine = "north-indian"
+courses = ["sides", "mains"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1568,6 +1741,10 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 35
 image = { file = "01a18813-917b-776a-b52f-5d8fdda6cffd.webp", sha256 = "5cb053871ff9dd606c80c8e293d1779f0d297c6bc5a5a80e0be32a5cc33cd286", alt = "Navratan korma with vegetables, paneer, cashews and raisins in a creamy gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet"]
+also_known_as = ["navratna korma"]
 ingredients = [
   { id = "carrot", amount = 1, unit = "medium" },
   { id = "french-beans", amount = 100, unit = "g" },
@@ -1611,6 +1788,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 image = { file = "01a18814-ee92-7b2f-a98a-190c8ecb6874.webp", sha256 = "c858e6974a4e0b64c8bd9a28e42fb2d7f1e02d41c5417648f3400fc253fbe024", alt = "Methi matar malai, peas and fenugreek leaves in a creamy gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet"]
 ingredients = [
   { id = "fenugreek-leaves", amount = 100, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -1648,6 +1828,9 @@ name = "Mushroom matar"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "spicy"]
 ingredients = [
   { id = "mushroom", amount = 300, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -1683,6 +1866,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18814-ee96-7f1e-b3ab-56e303682538.webp", sha256 = "cb52386de12a517424f2ca2f1e1eb0963c9f267e24df9cd240504c11833b5811", alt = "Kadai mushroom with bell pepper and onion" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["karahi mushroom"]
 ingredients = [
   { id = "mushroom", amount = 400, unit = "g" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -1716,6 +1903,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18814-ee99-74e7-86ea-8363338f7a02.webp", sha256 = "43a86699495dc0bc75eca53a088fef4bf65c5a2b277b04d21c7460575717f1b2", alt = "Gobi masala with cauliflower florets and coriander" }
+cuisine = "north-indian"
+courses = ["mains", "sides"]
+moods = ["spicy", "savoury"]
+also_known_as = ["gobhi masala"]
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1751,6 +1942,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18814-ee9b-761b-81bc-3166d38759d3.webp", sha256 = "7da4ef154a1d4400f30bb46a8558c6b67b633d3187695bcf4b21c1015db064f7", alt = "Shalgam ki sabzi, turnip in a thick tomato gravy" }
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["savoury", "sweet"]
+also_known_as = ["turnip sabzi"]
 ingredients = [
   { id = "turnip", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -1784,6 +1979,11 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 60
 image = { file = "01a18814-ee9d-725a-9e01-d7e3b5ed10fe.webp", sha256 = "ee51425e74e4622d8c52df5262c796e3183460ff7dd1f69d55e676dbdeae5a6e", alt = "Sarson ka saag with a pat of butter on top" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["warming", "cosy-night-in"]
+also_known_as = ["sarson da saag"]
 ingredients = [
   { id = "mustard-greens", amount = 500, unit = "g" },
   { id = "spinach", amount = 250, unit = "g" },
@@ -1816,6 +2016,10 @@ name = "Arbi masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["spicy", "savoury"]
+also_known_as = ["arbi fry", "colocasia masala"]
 ingredients = [
   { id = "colocasia", amount = 500, unit = "g" },
   { id = "carom-seeds", amount = 0.5, unit = "tsp" },
@@ -1846,6 +2050,10 @@ name = "Kathal ki sabzi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["jackfruit sabzi"]
 ingredients = [
   { id = "raw-jackfruit", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1881,6 +2089,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18814-eea4-7109-a772-dff32cf1cc95.webp", sha256 = "38d477dbe1308f8df2daba8dcf28bd6439432ac0afe4e4968bd5c3078529b18a", alt = "Tinda masala with coriander" }
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["savoury", "light"]
+also_known_as = ["tinde ki sabzi"]
 ingredients = [
   { id = "tinda", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -1914,6 +2126,10 @@ name = "Karela masala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["spicy", "savoury"]
+also_known_as = ["karela fry", "bitter gourd sabzi"]
 ingredients = [
   { id = "bitter-gourd", amount = 400, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1943,6 +2159,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["comforting", "light"]
 ingredients = [
   { id = "bottle-gourd", amount = 300, unit = "g" },
   { id = "chana-dal", amount = 0.5, unit = "cup" },
@@ -1977,6 +2196,10 @@ name = "Kaddu ki sabzi"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["sweet", "tangy"]
+also_known_as = ["khatta meetha kaddu", "pumpkin sabzi"]
 ingredients = [
   { id = "pumpkin", amount = 500, unit = "g" },
   { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
@@ -2010,6 +2233,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 image = { file = "01a18814-eead-79f9-b123-ff5249b8a748.webp", sha256 = "a7960b59edc14e60be520f19d7c6ef690491965c4924de4251139c955920b510", alt = "Gajar matar, carrot and peas with slit green chillies and coriander" }
+cuisine = "north-indian"
+courses = ["sides"]
+moods = ["sweet", "savoury"]
+also_known_as = ["gajar matar ki sabzi"]
 ingredients = [
   { id = "carrot", amount = 3, unit = "medium" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -2040,6 +2267,10 @@ name = "Egg ghotala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "street-food"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["anda ghotala"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -2073,6 +2304,10 @@ name = "Egg korma"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
+also_known_as = ["anda korma"]
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -2108,6 +2343,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18814-eeb4-7fc6-8ec6-54d4a3443918.webp", sha256 = "47d010eaefd2e814f08af316c1d39f7ac94986d42b7b54166cc96020c19bf9b2", alt = "Fish tikka masala, charred fish pieces in a tomato cream sauce" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "spicy"]
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -2146,6 +2384,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18814-eeb7-7186-993a-897933923772.webp", sha256 = "db6e16f3b3fc8c6ee26c3defe34e6bd5da2eb05a19cc0b8001fd472b1bd1d3e5", alt = "Amritsari fish curry, crumbed fish in a red-orange gravy with coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -2184,6 +2425,9 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 25
 image = { file = "01a18814-eeb9-75ab-a2c2-ce5bda60dd82.webp", sha256 = "361752108ef8090800118db6c631718b7576e0a6f51d38ebdfb3a79d1bd6434f", alt = "Prawn malai curry with a bay leaf and green chillies" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "sweet"]
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 400, unit = "ml" },
@@ -2222,6 +2466,10 @@ prep_minutes = 15
 cook_minutes = 60
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a188a8-fe99-7464-a603-5cf6a0b60ff9.webp", sha256 = "2c04ddd8a1a3b5782d09f4209410805770f9953a9fa1d9c8f0e16408c83eba06", alt = "Pindi chole with fried ginger strips and green chillies, topped with raw onion rings" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "tangy", "hearty"]
+also_known_as = ["pindi chana"]
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 2, unit = "tsp" },
@@ -2257,6 +2505,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 image = { file = "01a188a8-fe9b-7064-9d21-396b09a70f61.webp", sha256 = "3bc179feecafe32e6aaa7eec1340d5682b9bb458f56aa5742783d4c8eeb48f9e", alt = "Kadhi pakora with a tempering of dried red chillies, curry leaves and mustard seeds" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["tangy", "creamy", "comforting"]
+weather = ["rainy-day-cosy"]
+also_known_as = ["punjabi kadhi"]
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "gram-flour", amount = 0.75, unit = "cup" },
@@ -2297,6 +2550,11 @@ prep_minutes = 10
 cook_minutes = 90
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d.webp", sha256 = "71622ed847c444dc0118bceb0001b93953c0dc2c6bc3226c5779aa19ac6edb3b", alt = "Dal makhani, a creamy dark black lentil and kidney bean dal" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "smoky", "comforting"]
+weather = ["cosy-night-in"]
+also_known_as = ["maa ki dal"]
 ingredients = [
   { id = "whole-urad", amount = 0.75, unit = "cup" },
   { id = "kidney-beans", amount = 0.25, unit = "cup" },
@@ -2330,6 +2588,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a188a8-fea0-7a73-acf1-d80396c5eb21.webp", sha256 = "fd0ed4f04e3fc05218202ea8f5021342e423f42bf4b952aed2caddf852135064", alt = "Dal fry with tomato, cumin seeds and coriander leaves" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2367,6 +2628,10 @@ prep_minutes = 10
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
 image = { file = "01a188a8-fea2-75ca-bb35-1cffa95c141d.webp", sha256 = "55f879edcc9dae02cfa2fe3e1e0bd00dc2c346bef517977b897f85f156095d81", alt = "Chana dal with tomato and coriander" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["chana dal fry"]
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2402,6 +2667,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
 ingredients = [
   { id = "urad-dal", amount = 0.5, unit = "cup" },
   { id = "chana-dal", amount = 0.5, unit = "cup" },
@@ -2437,6 +2705,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 40
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+cuisine = "west-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting"]
+also_known_as = ["panchratna dal"]
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -2476,6 +2748,10 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 45
 plan_ahead = { wait_minutes = 360, note = "soak for 6 hours" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury"]
+also_known_as = ["lobia", "black eyed peas curry"]
 ingredients = [
   { id = "black-eyed-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -2510,6 +2786,10 @@ prep_minutes = 10
 cook_minutes = 50
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 image = { file = "01a188a8-feab-7a94-b669-c2287146ded7.webp", sha256 = "3920bf3f7487468c712baf2c65f27adb45c88f6ed0886d05b3b8ded2aa27f744", alt = "Kala chana curry, black chickpeas in a thick dark gravy" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["kala chana"]
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -2543,6 +2823,10 @@ name = "Soya chunk curry"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["spicy", "savoury", "hearty"]
+also_known_as = ["soya chunks curry", "meal maker curry"]
 ingredients = [
   { id = "soya-chunks", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
