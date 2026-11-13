@@ -805,7 +805,7 @@ image = { file = "01a18b6e-6485-7005-bfca-5c9f8d7f87c6.webp", sha256 = "1a34e75f
 cuisine = "street-food"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
-also_known_as = ["chicken kathi roll", "kati roll"]
+also_known_as = ["chicken kathi roll"]
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },

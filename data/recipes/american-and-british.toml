@@ -1021,7 +1021,7 @@ image = { file = "01a18c1e-2c59-7b08-9eaa-6c2b7e7344e9.webp", sha256 = "8b681498
 cuisine = "american-british"
 courses = ["desserts"]
 moods = ["sweet", "comforting"]
-also_known_as = ["chocolate brownies", "brownie"]
+also_known_as = ["chocolate brownies"]
 ingredients = [
   { id = "dark-chocolate", amount = 200, unit = "g" },
   { id = "butter", amount = 0.75, unit = "cup" },

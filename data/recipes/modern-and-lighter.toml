@@ -12,6 +12,11 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 50
 image = { file = "01a18c4f-8e73-782f-b11b-025134a37a2c.webp", sha256 = "51605701f875ad36f58fe16b51ec177ccf701143760a4908c880a499bf0746ab", alt = "Spaghetti with lentil bolognese and grated parmesan" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["vegan bolognese", "lentil spaghetti"]
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -44,6 +49,10 @@ name = "Roasted cauliflower steak"
 serves = 2
 prep_minutes = 10
 cook_minutes = 30
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["smoky", "savoury", "light"]
+also_known_as = ["cauliflower steak"]
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "large" },
   { id = "olive-oil", amount = 3, unit = "tbsp" },
@@ -71,6 +80,9 @@ name = "Stuffed sweet potatoes"
 serves = 4
 prep_minutes = 15
 cook_minutes = 55
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["sweet", "savoury", "hearty"]
 ingredients = [
   { id = "sweet-potato", amount = 4, unit = "medium" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -101,6 +113,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 25
 image = { file = "01a18c4f-8e7a-7051-9a08-c730ecb65523.webp", sha256 = "41d8c04ee15740bbb706bdc6a12030f55d9bdcc766c39804931aacf8379e029d", alt = "Zucchini fritters with a bowl of yoghurt sauce" }
+cuisine = "mediterranean"
+courses = ["snacks-starters"]
+moods = ["crispy", "fresh-herby", "light"]
+also_known_as = ["courgette fritters"]
 ingredients = [
   { id = "zucchini", amount = 3, unit = "medium" },
   { id = "spring-onions", amount = 3, unit = "piece" },
@@ -131,6 +147,10 @@ name = "Mushroom stroganoff"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "european"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+weather = ["cosy-night-in"]
 ingredients = [
   { id = "mushroom", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -162,6 +182,11 @@ name = "Vegetable pot pie"
 serves = 6
 prep_minutes = 30
 cook_minutes = 55
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["creamy", "comforting", "hearty"]
+weather = ["rainy-day-cosy", "cosy-night-in"]
+also_known_as = ["veg pot pie"]
 ingredients = [
   { id = "puff-pastry", amount = 300, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -195,6 +220,10 @@ serves = 4
 prep_minutes = 30
 cook_minutes = 50
 image = { file = "01a18c4f-8e80-7d75-8d4a-c2c4fc11e9f0.webp", sha256 = "c79c237fe81f9d31f1dda5311e86747e4548f653531e515e984df0b2d6a03ed7", alt = "Spinach and ricotta cannelloni baked under tomato sauce and cheese" }
+cuisine = "italian"
+courses = ["mains"]
+moods = ["creamy", "savoury", "comforting"]
+also_known_as = ["cannelloni"]
 ingredients = [
   { id = "cannelloni-tubes", amount = 250, unit = "g" },
   { id = "spinach", amount = 500, unit = "g" },
@@ -226,6 +255,10 @@ name = "Black bean burgers"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+cuisine = "american-british"
+courses = ["mains"]
+moods = ["savoury", "smoky", "hearty"]
+also_known_as = ["black bean burger"]
 ingredients = [
   { id = "black-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 1, unit = "small" },
@@ -258,6 +291,10 @@ name = "Grilled chicken salad"
 serves = 2
 prep_minutes = 15
 cook_minutes = 15
+cuisine = "american-british"
+courses = ["salads"]
+moods = ["fresh-herby", "light", "savoury"]
+weather = ["just-pleasant"]
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "olive-oil", amount = 3, unit = "tbsp" },

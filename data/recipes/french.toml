@@ -387,7 +387,7 @@ image = { file = "01a18c1a-e267-73ed-b982-a8f8d5e90ab5.webp", sha256 = "75d9f077
 cuisine = "french"
 courses = ["desserts", "breakfast"]
 moods = ["sweet", "light"]
-also_known_as = ["crepe", "french pancakes"]
+also_known_as = ["french pancakes"]
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 2, unit = "large" },
@@ -416,7 +416,7 @@ plan_ahead = { wait_minutes = 60, note = "rest the batter for 1 hour" }
 cuisine = "french"
 courses = ["mains", "breakfast"]
 moods = ["savoury"]
-also_known_as = ["galette", "buckwheat crepes"]
+also_known_as = ["buckwheat crepes"]
 ingredients = [
   { id = "buckwheat-flour", amount = 1, unit = "cup" },
   { id = "egg", amount = 5, unit = "large" },

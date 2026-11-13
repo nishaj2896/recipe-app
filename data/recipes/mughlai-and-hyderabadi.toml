@@ -13,6 +13,11 @@ prep_minutes = 30
 cook_minutes = 150
 plan_ahead = { wait_minutes = 180, note = "soak for 3 hours" }
 image = { file = "01a18bb5-de40-7910-9565-67c1cca06b59.webp", sha256 = "63fd2d2a633230f2bf5956fab44e61be544f6a0bf438d70323adf680489b1db0", alt = "Haleem topped with fried onions, mint, coriander, cashews and lemon wedges" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["savoury", "comforting", "hearty"]
+weather = ["cosy-night-in"]
+also_known_as = ["hyderabadi haleem"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "broken-wheat", amount = 0.75, unit = "cup" },
@@ -55,6 +60,9 @@ prep_minutes = 20
 cook_minutes = 25
 plan_ahead = { wait_minutes = 240, note = "marinate for 4 hours" }
 image = { file = "01a18bb5-de42-716b-bded-2a9c5cd4e7ae.webp", sha256 = "28c26f1ed18833398dabef04f766d265ee7966fb0a9dacd675f1ba38ddf8890b", alt = "Pathar ka gosht, charred mutton strips with onion rings and coriander" }
+cuisine = "south-indian"
+courses = ["mains", "snacks-starters"]
+moods = ["smoky", "savoury"]
 ingredients = [
   { id = "mutton", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -87,6 +95,9 @@ prep_minutes = 20
 cook_minutes = 45
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
 image = { file = "01a18bb5-de44-75ae-a292-eacaadbb0d01.webp", sha256 = "f3cc6f65f653f1f05734f95a67a3b6ae2376ccd557ac529a2fa7db2a5b1dd1b3", alt = "Dum ka chicken in a creamy gravy with green chillies and coriander" }
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -121,6 +132,10 @@ name = "Shikampuri kebab"
 serves = 4
 prep_minutes = 30
 cook_minutes = 60
+cuisine = "south-indian"
+courses = ["snacks-starters"]
+moods = ["savoury", "creamy"]
+also_known_as = ["shikampuri kabab"]
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -156,6 +171,11 @@ name = "Hyderabadi marag"
 serves = 4
 prep_minutes = 15
 cook_minutes = 100
+cuisine = "south-indian"
+courses = ["soups"]
+moods = ["creamy", "comforting"]
+weather = ["cosy-night-in", "under-the-weather"]
+also_known_as = ["marag"]
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "cashews", amount = 20, unit = "piece" },
@@ -193,6 +213,10 @@ name = "Khatti dal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+cuisine = "south-indian"
+courses = ["mains"]
+moods = ["tangy", "savoury"]
+also_known_as = ["hyderabadi khatti dal"]
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tbsp" },
@@ -226,6 +250,9 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 30
 image = { file = "01a18bb5-de4e-7363-aa58-26f9cf296cb5.webp", sha256 = "788ee671cc1c2b4bb364669d9b5c28b5f0a56752db69df69b5f44fbdfee30ab6", alt = "Tamatar ka kut with a tempering of red chillies and curry leaves" }
+cuisine = "south-indian"
+courses = ["sides"]
+moods = ["tangy", "spicy"]
 ingredients = [
   { id = "tomato", amount = 6, unit = "medium" },
   { id = "sesame-seeds", amount = 2, unit = "tbsp" },
@@ -258,6 +285,10 @@ name = "Bagara khana"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+cuisine = "south-indian"
+courses = ["rice-breads"]
+moods = ["savoury"]
+also_known_as = ["bagara rice"]
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -289,6 +320,10 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 20
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+cuisine = "north-indian"
+courses = ["snacks-starters"]
+moods = ["creamy", "savoury"]
+also_known_as = ["reshmi kebab", "reshmi kabab"]
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "cream", amount = 0.25, unit = "cup" },
@@ -319,6 +354,10 @@ serves = 6
 prep_minutes = 20
 cook_minutes = 210
 plan_ahead = { wait_minutes = 480, note = "marinate for 8 hours" }
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["savoury", "spicy", "hearty"]
+also_known_as = ["raan"]
 ingredients = [
   { id = "mutton", amount = 1.5, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -352,6 +391,10 @@ prep_minutes = 30
 cook_minutes = 90
 plan_ahead = { wait_minutes = 360, note = "marinate for 6 hours" }
 image = { file = "01a18bb5-de57-7110-86a3-ee7f153ace2d.webp", sha256 = "58357d293ec9dd9130ca7c1b64982d907d42755334c1410db0ad6c2a75c417be", alt = "Kacche gosht ki biryani with fried onions, mint and coriander" }
+cuisine = "south-indian"
+courses = ["rice-breads", "mains"]
+moods = ["savoury", "hearty", "spicy"]
+also_known_as = ["hyderabadi mutton biryani", "kachchi biryani"]
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 2.5, unit = "cup" },
@@ -396,6 +439,10 @@ name = "Sheer khurma"
 serves = 6
 prep_minutes = 15
 cook_minutes = 30
+cuisine = "south-indian"
+courses = ["desserts"]
+moods = ["sweet", "creamy", "comforting"]
+also_known_as = ["sheer korma"]
 ingredients = [
   { id = "indian-vermicelli", amount = 0.5, unit = "cup" },
   { id = "milk", amount = 6, unit = "cup" },
@@ -424,6 +471,10 @@ name = "Chicken shahi korma"
 serves = 4
 prep_minutes = 20
 cook_minutes = 45
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
+also_known_as = ["shahi korma"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -461,6 +512,10 @@ name = "Murgh zafrani"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+cuisine = "north-indian"
+courses = ["mains"]
+moods = ["creamy", "savoury"]
+also_known_as = ["saffron chicken"]
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "saffron", amount = 2, unit = "pinch" },

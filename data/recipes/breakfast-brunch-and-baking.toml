@@ -15,7 +15,6 @@ image = { file = "01a15175-3c19-76f2-97d3-b9a4d1936e13.webp", sha256 = "c49571ee
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["sweet", "comforting"]
-also_known_as = ["pancake"]
 ingredients = [
   { id = "egg", amount = 1, unit = "piece" },
   { id = "all-purpose-flour", amount = 150, unit = "g" },
@@ -139,7 +138,6 @@ image = { file = "01a18c20-05bb-7848-841d-b203183823aa.webp", sha256 = "98f479da
 cuisine = "american-british"
 courses = ["breakfast", "desserts"]
 moods = ["sweet", "crispy"]
-also_known_as = ["waffle"]
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "sugar", amount = 2, unit = "tbsp" },
