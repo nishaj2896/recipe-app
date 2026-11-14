@@ -15,6 +15,7 @@ image = { file = "01a18bb1-05ba-7a1d-a500-a643e4a781db.webp", sha256 = "eef4056d
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a188e6-a859-75ba-bfec-282fbe3f42b8"]  # Malabar parotta, Appam
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -53,6 +54,7 @@ cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury"]
 also_known_as = ["beef ularthiyathu", "beef fry"]
+pairs_with = ["01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a18bb1-05c1-7a32-9511-2d06fe5eb8aa"]  # Malabar parotta, Kappa puzhukku
 ingredients = [
   { id = "beef", amount = 750, unit = "g" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -92,6 +94,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "creamy"]
 also_known_as = ["chemmeen curry"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188ea-3cb6-7424-9dce-c1297ddd5716"]  # Appam, Thoran (cabbage)
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -131,6 +134,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["tapioca puzhukku"]
+pairs_with = ["01a18bb3-793e-7973-9268-9a1926287bf2", "01a18bb3-7942-70c6-8df8-49a3881de224"]  # Pulissery, Ulli theeyal
 ingredients = [
   { id = "cassava", amount = 750, unit = "g" },
   { id = "coconut", amount = 0.75, unit = "cup" },
@@ -167,6 +171,7 @@ courses = ["mains"]
 moods = ["creamy", "light"]
 weather = ["under-the-weather"]
 also_known_as = ["veg stew"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188e6-a85b-7547-9e70-1b8b55331ede"]  # Appam, Idiyappam
 ingredients = [
   { id = "potato", amount = 2, unit = "medium" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -207,6 +212,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["kadala"]
+pairs_with = ["01a188e6-a85e-7a81-95c3-da336c547c81", "01a188e6-a859-75ba-bfec-282fbe3f42b8"]  # Puttu, Appam
 ingredients = [
   { id = "black-chickpeas", amount = 1, unit = "cup" },
   { id = "coconut", amount = 0.75, unit = "cup" },
@@ -244,6 +250,7 @@ cook_minutes = 30
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["creamy", "comforting", "light"]
+pairs_with = ["01a188ea-3cb6-7424-9dce-c1297ddd5716", "01a188ea-3caa-7220-9faf-98ccabab40da"]  # Thoran (cabbage), Avial
 ingredients = [
   { id = "moong-dal", amount = 0.75, unit = "cup" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -279,6 +286,7 @@ courses = ["mains"]
 moods = ["tangy", "creamy"]
 weather = ["cool-down"]
 also_known_as = ["moru kootan"]
+pairs_with = ["01a188ea-3cb6-7424-9dce-c1297ddd5716", "01a18bb3-7944-7d4c-9de4-2e51067a846f"]  # Thoran (cabbage), Beans mezhukkupuratti
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },
@@ -314,6 +322,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["sweet-sour", "creamy"]
 also_known_as = ["mango pulissery"]
+pairs_with = ["01a188ea-3cb6-7424-9dce-c1297ddd5716", "01a188ea-3cac-71f6-ad23-3ec3ad770d02"]  # Thoran (cabbage), Olan
 ingredients = [
   { id = "mango", amount = 3, unit = "small" },
   { id = "curd", amount = 1.5, unit = "cup" },
@@ -351,6 +360,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
 also_known_as = ["theeyal"]
+pairs_with = ["01a18bb3-7944-7d4c-9de4-2e51067a846f", "01a18bb3-793b-75c4-8d52-015913570d99"]  # Beans mezhukkupuratti, Kerala parippu curry
 ingredients = [
   { id = "shallot", amount = 20, unit = "piece" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -718,6 +728,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "hearty"]
 also_known_as = ["country chicken curry"]
+pairs_with = ["01a188e6-a874-7436-afac-bc19d73fa001", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Ragi mudde, Curd rice
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -755,6 +766,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["prawn iguru"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Pappu (Andhra dal), Curd rice
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -788,6 +800,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
 also_known_as = ["andhra fish curry"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Pappu (Andhra dal), Curd rice
 ingredients = [
   { id = "rohu", amount = 600, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -828,6 +841,7 @@ cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "crispy"]
 also_known_as = ["andhra chicken fry"]
+pairs_with = ["01a188ea-3c9a-72ea-8684-721851036d44", "01a18b54-81bc-7a52-880f-c3f97db20b9e"]  # Rasam, Pappu (Andhra dal)
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -863,6 +877,7 @@ cook_minutes = 85
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a188ea-3c9a-72ea-8684-721851036d44", "01a188e6-a884-71cb-8e87-cdbd3d356c9e"]  # Rasam, Malabar parotta
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "shallot", amount = 15, unit = "piece" },
@@ -897,6 +912,7 @@ image = { file = "01a18bb3-7966-79f8-9538-81de32bfa3bd.webp", sha256 = "55d3d3a7
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188ea-3c9a-72ea-8684-721851036d44", "01a188e6-a884-71cb-8e87-cdbd3d356c9e"]  # Rasam, Malabar parotta
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "shallot", amount = 12, unit = "piece" },

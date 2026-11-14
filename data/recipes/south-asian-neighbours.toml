@@ -444,7 +444,7 @@ cook_minutes = 25
 cuisine = "south-asian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
-pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a18c4a-5f8a-7fd8-af05-9530d10377b7", "01a18c4a-5f87-7180-bffa-d6d81231c9e1"]  # Mint chutney, Mantu, Kabuli pulao
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a18bb1-05a4-7444-aa2a-a0032794431b", "01a18c4a-5f8a-7fd8-af05-9530d10377b7"]  # Mint chutney, Kahwa, Mantu
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },
