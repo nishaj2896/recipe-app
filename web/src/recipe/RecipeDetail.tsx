@@ -324,24 +324,27 @@ function RulesNote({
   const choice = DIET_CHOICES.find(
     (item) => item.id === dietChoice(rules.diet, rules.jain),
   );
-  const notes: { title: string; text: string }[] = [
+  const notes: { key: string; title: string; text: string }[] = [
     ...broken.allergens.map((allergen) => {
       const label = lower(ALLERGENS[allergen]);
       const from = sources
         .find((source) => source.allergen === allergen)
         ?.ingredients.map((item) => lower(item.name));
       return {
+        key: `allergen:${allergen}`,
         title: `Contains ${label}`,
         text: `This recipe uses ${namesList(from ?? [])}, and your food rules say you're allergic to ${label}.`,
       };
     }),
     ...broken.ingredientIds.map((id) => ({
+      key: `ingredient:${id}`,
       title: `Uses ${lower(ingredientName(id))}`,
       text: "Your food rules say you avoid it.",
     })),
     ...(broken.diet || broken.jain
       ? [
           {
+            key: "diet",
             title: "Not for your diet",
             text: `Your food rules say ${choice?.label ?? "a diet"}: ${lower(choice?.hint ?? "")}.`,
           },
@@ -367,7 +370,7 @@ function RulesNote({
       </svg>
       <div className={styles.rulesText}>
         {notes.map((note) => (
-          <p key={note.title}>
+          <p key={note.key}>
             <strong>{note.title}</strong> {note.text}
           </p>
         ))}

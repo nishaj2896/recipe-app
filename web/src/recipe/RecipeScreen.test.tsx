@@ -251,3 +251,17 @@ test("an avoided ingredient and a diet are named too", async () => {
   expect(note).not.toHaveTextContent("Ready-made");
   expect(screen.getByText("Avoided")).toBeInTheDocument();
 });
+
+test("following a pairing opens that recipe at the top", async () => {
+  const scrollTo = vi.fn();
+  vi.stubGlobal("scrollTo", scrollTo);
+  withCashewsAndPairs();
+  const user = open();
+
+  const pairs = await screen.findByRole("region", { name: "Pairs well with" });
+  scrollTo.mockClear();
+  await user.click(within(pairs).getByRole("link", { name: /Phulka/ }));
+
+  expect(window.location.pathname).toBe("/recipe/00000000-0000-4000-8000-000000000010");
+  expect(scrollTo).toHaveBeenCalledWith(0, 0);
+});
