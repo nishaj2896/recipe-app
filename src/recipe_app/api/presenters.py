@@ -4,6 +4,8 @@ from recipe_app.api.schemas import (
     AllergenSource,
     CatalogIngredient,
     CategoryRef,
+    FoundRecipe,
+    FoundRecipes,
     IgnoredIngredient,
     IngredientRef,
     IngredientsResponse,
@@ -23,6 +25,7 @@ from recipe_app.domain.catalog import Ingredient, IngredientCatalog
 from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch
 from recipe_app.domain.recipe import Image, Recipe
+from recipe_app.domain.recipe_search import Found
 from recipe_app.services.catalog import listed_ingredients, staple_groups
 from recipe_app.services.search import SearchResult
 
@@ -83,6 +86,26 @@ def recipe_detail(detail: RecipeWithContent) -> RecipeDetail:
             for allergen in recipe.allergens
         ],
         pairs_with=[_pair(pair) for pair in detail.pairs],
+    )
+
+
+def found_recipes(found: Found) -> FoundRecipes:
+    return FoundRecipes(
+        results=[
+            FoundRecipe(
+                id=recipe.id,
+                name=recipe.name,
+                cuisine=recipe.tags.cuisine,
+                total_minutes=recipe.total_minutes,
+                diet=recipe.diet,
+                jain=recipe.jain,
+                image=_image(recipe.image),
+                allergens=list(recipe.allergens),
+                ingredient_ids=[item.id for item in recipe.ingredients],
+            )
+            for recipe in found.recipes
+        ],
+        total=found.total,
     )
 
 
