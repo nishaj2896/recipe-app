@@ -1,0 +1,362 @@
+/* The food rules and mood screens: a column of choices and a pinned button. */
+/*
+ * The choices scroll above the buttons, never under them, so no choice is
+ * ever half hidden behind a button (WCAG 2.2 target size).
+ */
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--glow), var(--bg);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-6);
+  overflow-y: auto;
+  /* Clear of the notch and status bar when installed (viewport-fit=cover). */
+  padding: calc(var(--space-6) + env(safe-area-inset-top))
+    max(var(--space-4), env(safe-area-inset-right)) var(--space-6)
+    max(var(--space-4), env(safe-area-inset-left));
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.back {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.title {
+  margin-top: var(--space-2);
+  font-size: clamp(24px, 7vw, 30px);
+  font-weight: 800;
+}
+
+.lead {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.headingNote {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.note {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Diet: one row per choice, a radio on the right. */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 52px;
+  padding: 7px var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.rowLabel {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.rowHint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.dot {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+}
+
+.row:has(input:checked) {
+  border: 1.5px solid var(--go);
+}
+
+.row:has(input:checked) .dot {
+  border: 5px solid var(--go);
+}
+
+.row:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* The native radio stays focusable and announced; the row is its look. */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Pills that toggle: allergens, courses, moods, weather. */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.pill {
+  min-height: 44px;
+  padding: 0 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.grid .pill {
+  padding: 0 var(--space-2);
+  font-size: 13px;
+}
+
+.pill[aria-pressed="true"] {
+  border: 1.5px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+/* An allergen or avoided ingredient is a warning: red, like skip. */
+.pill[data-avoid][aria-pressed="true"],
+.avoided {
+  border: 1.5px solid var(--stop);
+  background: color-mix(in srgb, var(--stop) 16%, transparent);
+}
+
+.avoided {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border-radius: 999px;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.addOther {
+  min-height: 44px;
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.search::placeholder {
+  color: var(--text-muted);
+}
+
+/* The time choice: one segmented row. */
+.segments {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.segment {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 40px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.segment:has(input:checked) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.segment:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.fineTune {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 56px;
+  padding: 10px var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fineTuneText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fineTuneLabel {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.fineTuneArrow {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+/* The buttons stay on screen however long the choices run. */
+.actions {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) max(var(--space-4), env(safe-area-inset-right))
+    calc(var(--space-4) + env(safe-area-inset-bottom))
+    max(var(--space-4), env(safe-area-inset-left));
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.primary,
+.secondary {
+  width: 100%;
+  min-height: 56px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary {
+  border: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.primary[data-kind="save"] {
+  background: var(--go);
+  color: var(--on-go);
+}
+
+.secondary {
+  min-height: 48px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.link {
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* `hidden` would lose to the section's display: flex. */
+.section[hidden] {
+  display: none;
+}

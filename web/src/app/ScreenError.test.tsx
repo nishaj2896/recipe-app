@@ -12,7 +12,7 @@ vi.mock("../cookbook/CookbookScreen", () => {
 });
 
 beforeEach(() => {
-  useDevice.setState({ ...emptyDevice, hydration: "ready" });
+  useDevice.setState({ ...emptyDevice, foodRulesSeen: true, hydration: "ready" });
   window.history.pushState({}, "", "/saved");
   // React reports the caught error; it's expected here.
   vi.spyOn(console, "error").mockImplementation(() => undefined);

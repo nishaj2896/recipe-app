@@ -222,24 +222,35 @@
   color: var(--on-go);
 }
 
-.filterChip {
-  align-self: flex-start;
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: var(--space-3);
-  padding: var(--space-2) var(--space-4);
+  max-width: 100%;
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface);
   color: var(--text);
+  font-size: 13px;
   font-weight: 700;
-  cursor: pointer;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-/* An active filter is a choice the user made: it reads louder. */
-.filterChip[data-active] {
-  border-color: var(--text);
+/* Picks are choices the user made for this deck: they read louder. */
+.chip[data-active] {
+  border: 1.5px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 /* Read by screen readers, not shown. */

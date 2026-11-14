@@ -1,6 +1,8 @@
 import type { RecipeCard } from "../api/client";
 import { DishPhoto } from "../art/DishPhoto";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
+import { MOODS } from "../rules/labels";
+import type { Mood } from "../store/device";
 import { DIETS } from "./diets";
 import { listNames } from "./names";
 import styles from "./RecipeFace.module.css";
@@ -34,11 +36,18 @@ function MatchRing({ percentage }: { percentage: number }) {
 export function RecipeFace({
   card,
   categories,
+  moods = [],
+  weatherBadge = "Weather pick",
 }: {
   card: RecipeCard;
   /** Each ingredient's category id, so its drawing can fall back to the category's. */
   categories: ReadonlyMap<string, string>;
+  /** The moods picked for this deck: the card shows the ones it has. */
+  moods?: readonly Mood[];
+  /** The badge on a card that suits the weather picked. */
+  weatherBadge?: string;
 }) {
+  const fits = moods.filter((mood) => card.moods.includes(mood));
   // A few of the matched ingredients float over the dish, as garnish.
   const garnish = card.matched_ingredients.slice(0, 3);
   const onlyMissing =
@@ -68,6 +77,7 @@ export function RecipeFace({
         ) : (
           <DishArt recipeId={card.id} size={230} />
         )}
+        {card.weather_fit && <span className={styles.weather}>{weatherBadge}</span>}
         {card.match_percentage === null ? (
           <span className={styles.basics}>Pantry basics</span>
         ) : (
@@ -85,6 +95,11 @@ export function RecipeFace({
             <span className={styles.dot} aria-hidden="true" />
             {DIETS[card.diet]}
           </span>
+          {fits.map((mood) => (
+            <span key={mood} className={styles.chip} data-mood>
+              {MOODS[mood]}
+            </span>
+          ))}
           {card.plan_ahead && (
             <span className={styles.chip} data-plan-ahead>
               <span aria-hidden="true">⏳</span> Plan ahead: {card.plan_ahead.note}

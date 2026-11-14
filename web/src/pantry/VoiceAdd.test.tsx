@@ -47,6 +47,7 @@ beforeEach(() => {
   stubApi();
   useDevice.setState({
     ...emptyDevice,
+    foodRulesSeen: true,
     pantry: ["egg"],
     voiceNoticeSeen: true,
     hydration: "ready",

@@ -6,9 +6,19 @@ export const PHONE = { viewport: { width: 390, height: 844 }, hasTouch: true };
 /** Ingredients that deal a full deck from the real catalog. */
 export const PANTRY = ["Paneer", "Potato", "Peas", "Milk", "Egg", "Rice"];
 
+/**
+ * Opens the pantry. A first visit lands on the food rules first (ADR-0012
+ * rule 12): this skips them.
+ */
+export async function openPantry(page: Page) {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Skip for now" }).click();
+  await expect(page.getByRole("searchbox", { name: "Search ingredients" })).toBeVisible();
+}
+
 /** Opens the pantry and adds each ingredient by searching for its tile. */
 export async function fillPantry(page: Page, names: readonly string[] = PANTRY) {
-  await page.goto("/");
+  await openPantry(page);
   const search = page.getByRole("searchbox", { name: "Search ingredients" });
   for (const name of names) {
     await search.fill(name);
@@ -22,9 +32,16 @@ export async function fillPantry(page: Page, names: readonly string[] = PANTRY) 
   ).toBeVisible();
 }
 
-/** Goes from the pantry to the deck and waits for the first card. */
-export async function openDeck(page: Page) {
+/** Goes from the pantry to the mood screen, picking nothing. */
+export async function openMood(page: Page) {
   await page.getByRole("link", { name: /Cook something/ }).click();
+  await expect(page.getByRole("heading", { name: "What are you making?" })).toBeVisible();
+}
+
+/** Goes from the pantry to the deck, past the mood screen, and waits for the first card. */
+export async function openDeck(page: Page) {
+  await openMood(page);
+  await page.getByRole("button", { name: /^Deal my cards/ }).click();
   // The cooking scene fades out over the dealt card: wait until it's gone.
   await expect(page.getByText("Cooking up ideas")).toHaveCount(0);
   await expect(page.getByRole("article")).toBeVisible();

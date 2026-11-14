@@ -14,6 +14,7 @@ const [matar, aloo, bhurji] = DECK as [
 beforeEach(() => {
   useDevice.setState({
     ...emptyDevice,
+    foodRulesSeen: true,
     pantry: ["paneer", "potato", "egg", "milk"],
     hydration: "ready",
   });
@@ -368,64 +369,134 @@ test("the hint isn't shown once the user has swiped before", async () => {
   expect(screen.getByText("Swipe right to save, left to skip")).toBeInTheDocument();
 });
 
-test("the deck's filters are sent, and changing them deals a fresh deck", async () => {
-  useDevice.setState({ diet: "vegetarian" });
-  const { user, api } = await openDeck();
-  expect(api.searches[0]).toMatchObject({ diet: "vegetarian", max_total_minutes: null });
+test("the food rules and mood picks are sent, and the chips name them", async () => {
+  useDevice.setState({
+    diet: "vegetarian",
+    jain: true,
+    avoidAllergens: ["peanuts"],
+    mood: {
+      courses: ["snacks-starters"],
+      time: "30",
+      moods: ["spicy", "tangy"],
+      weather: ["rainy-day-cosy"],
+    },
+  });
+  const { api } = await openDeck();
 
-  await user.click(screen.getByRole("button", { name: "Filters: Veg · Any time" }));
-  const sheet = await screen.findByRole("dialog", { name: "Filters" });
-  const apply = within(sheet).getByRole("button", { name: "Show recipes" });
-  expect(apply).toBeDisabled();
-
-  await user.click(within(sheet).getByRole("radio", { name: "Vegan" }));
-  await user.click(within(sheet).getByRole("radio", { name: "≤30 min" }));
-  await user.click(apply);
-
-  expect(screen.getByText(/Cooking up ideas/)).toBeInTheDocument();
-  await user.click(await screen.findByRole("button", { name: "Skip" }));
-  await nextCardIs("Matar Paneer");
-  expect(api.searches[1]).toMatchObject({
-    diet: "vegan",
+  expect(api.searches[0]).toMatchObject({
+    diet: "vegetarian",
+    jain: true,
+    avoid_allergens: ["peanuts"],
+    avoid_ingredient_ids: [],
+    courses: ["snacks-starters"],
+    min_total_minutes: null,
     max_total_minutes: 30,
+    moods: ["spicy", "tangy"],
+    weather: ["rainy-day-cosy"],
+  });
+  expect(
+    screen.getByRole("link", { name: "Your food rules: Jain · No peanuts" }),
+  ).toHaveAttribute("href", "/food-rules");
+  expect(
+    screen.getByRole("link", {
+      name: "Your picks: Snacks · 30 min · Spicy, Tangy · Rainy-day cosy",
+    }),
+  ).toHaveAttribute("href", "/mood");
+});
+
+test("a card that suits the weather picked says so, and shows the picked moods it has", async () => {
+  useDevice.setState({
+    mood: {
+      courses: [],
+      time: "any",
+      moods: ["comforting"],
+      weather: ["rainy-day-cosy"],
+    },
+  });
+  await openDeck(() => ({
+    results: [{ ...matar, weather_fit: true }],
+    next_cursor: null,
+    ignored_ingredients: [],
+  }));
+
+  expect(within(topCard()).getByText("Rainy-day pick")).toBeInTheDocument();
+  expect(within(topCard()).getByText("Comforting")).toBeInTheDocument();
+});
+
+test("a short first deck offers more: first without moods, then without courses", async () => {
+  useDevice.setState({
+    mood: { courses: ["mains"], time: "15", moods: ["spicy"], weather: [] },
+  });
+  const { user, api } = await openDeck((body) => ({
+    // Fewer than 5 with moods, the whole deck without.
+    results: body.moods.length > 0 ? [matar] : DECK,
+    next_cursor: null,
+    ignored_ingredients: [],
+  }));
+
+  await user.click(screen.getByRole("button", { name: "Skip Matar Paneer" }));
+  expect(
+    await screen.findByText("Only 1 recipe matches your picks. Show more?"),
+  ).toBeInTheDocument();
+  await user.click(screen.getByRole("button", { name: "Show more" }));
+  await user.click(await screen.findByRole("button", { name: "Skip" }));
+
+  await nextCardIs("Aloo Gobi");
+  expect(api.searches[1]).toMatchObject({
+    moods: [],
+    courses: ["mains"],
+    max_total_minutes: 15,
     cursor: null,
   });
-  expect(useDevice.getState()).toMatchObject({ diet: "vegan", maxTotalMinutes: 30 });
+  // The chip says what this deck dealt; the saved picks stay as they were.
   expect(
-    screen.getByRole("button", { name: "Filters: Vegan · ≤30 min" }),
+    screen.getByRole("link", { name: "Your picks: Mains · 15 min" }),
   ).toBeInTheDocument();
+  expect(useDevice.getState().mood.moods).toEqual(["spicy"]);
+
+  // Still short with courses: the next offer drops them.
+  await user.click(screen.getByRole("button", { name: "Skip Aloo Gobi" }));
+  await nextCardIs("Egg Bhurji");
+  await user.click(screen.getByRole("button", { name: "Skip Egg Bhurji" }));
+  await user.click(await screen.findByRole("button", { name: "Show more" }));
+  await user.click(await screen.findByRole("button", { name: "Skip" }));
+  await waitFor(() => {
+    expect(api.searches[2]).toMatchObject({ moods: [], courses: [] });
+  });
 });
 
-test("closing the filters without applying keeps the deck", async () => {
-  const { user, api } = await openDeck();
-
-  await user.click(screen.getByRole("button", { name: /^Filters:/ }));
-  const sheet = await screen.findByRole("dialog", { name: "Filters" });
-  await user.click(within(sheet).getByRole("radio", { name: "Vegan" }));
-  await user.click(within(sheet).getByRole("button", { name: "Done" }));
-
-  expect(topCard()).toHaveAccessibleName("Matar Paneer");
-  expect(api.searches).toHaveLength(1);
-  expect(useDevice.getState().diet).toBeNull();
-});
-
-test("when filters leave nothing to cook, they can be cleared", async () => {
-  useDevice.setState({ maxTotalMinutes: 15 });
+test("when the picks leave nothing to cook, the deck offers to drop moods", async () => {
+  useDevice.setState({
+    mood: { courses: [], time: "any", moods: ["smoky"], weather: [] },
+  });
   const { user, api } = await openDeck((body) => ({
-    results: body.max_total_minutes === null ? DECK : [],
+    results: body.moods.length > 0 ? [] : DECK,
     next_cursor: null,
     ignored_ingredients: [],
   }));
 
   expect(
-    screen.getByText("No recipe matches this pantry with these filters."),
+    screen.getByText("No recipe matches this pantry with these picks."),
   ).toBeInTheDocument();
-  await user.click(screen.getByRole("button", { name: "Clear filters" }));
+  await user.click(screen.getByRole("button", { name: "Try without moods" }));
   await user.click(await screen.findByRole("button", { name: "Skip" }));
 
   await nextCardIs("Matar Paneer");
-  expect(api.searches[1]).toMatchObject({ max_total_minutes: null });
-  expect(useDevice.getState().maxTotalMinutes).toBeNull();
+  expect(api.searches[1]).toMatchObject({ moods: [] });
+});
+
+test("the food rules are never widened: a time limit alone sends you to the picks", async () => {
+  useDevice.setState({
+    avoidAllergens: ["dairy"],
+    mood: { courses: [], time: "15", moods: [], weather: [] },
+  });
+  await openDeck(() => ({ results: [], next_cursor: null, ignored_ingredients: [] }));
+
+  expect(screen.getByRole("link", { name: "Change your picks" })).toHaveAttribute(
+    "href",
+    "/mood",
+  );
+  expect(screen.queryByRole("button", { name: /Try/ })).not.toBeInTheDocument();
 });
 
 test("a save is kept even if the user leaves before the card has flown off", async () => {

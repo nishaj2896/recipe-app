@@ -164,3 +164,22 @@
   background: var(--surface);
   color: var(--text-muted);
 }
+
+/* A mood the user picked: the reason this card came early (ADR-0012 rule 6). */
+.chip[data-mood] {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.weather {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 2;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 700;
+}

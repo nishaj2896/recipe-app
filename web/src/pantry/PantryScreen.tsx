@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import type { CatalogIngredient } from "../api/client";
 import { useCatalog, useStaples } from "../api/queries";
@@ -56,7 +56,9 @@ export function PantryScreen() {
     saved,
     voiceNoticeSeen,
     markVoiceNoticeSeen,
+    foodRulesSeen,
   } = useDevice();
+  const navigate = useNavigate();
   const { launch } = useFlight();
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState(POPULAR_TAB);
@@ -89,6 +91,12 @@ export function PantryScreen() {
     },
     [],
   );
+
+  // The food rules open once, on the first visit (ADR-0012 rule 12). Not
+  // after a failed read: the rules may well be set, just unreadable.
+  useEffect(() => {
+    if (hydration === "ready" && !foodRulesSeen) void navigate("/food-rules");
+  }, [hydration, foodRulesSeen, navigate]);
 
   // Taps wait until the saved pantry has been read, so a tap can't race it
   // (the store refuses writes before then anyway).
@@ -189,15 +197,33 @@ export function PantryScreen() {
   return (
     <main className={styles.screen}>
       <header className={styles.header}>
-        {saved.length > 0 && (
-          <Link
-            to="/saved"
-            className={styles.cookbook}
-            aria-label={`Your cookbook: ${String(saved.length)} saved`}
-          >
-            <span aria-hidden="true">♥</span> {saved.length}
+        <div className={styles.headerLinks}>
+          <Link to="/food-rules" className={styles.profile} aria-label="Your food rules">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" />
+            </svg>
           </Link>
-        )}
+          {saved.length > 0 && (
+            <Link
+              to="/saved"
+              className={styles.cookbook}
+              aria-label={`Your cookbook: ${String(saved.length)} saved`}
+            >
+              <span aria-hidden="true">♥</span> {saved.length}
+            </Link>
+          )}
+        </div>
         <p className={styles.hello}>{greeting.hello}</p>
         <h1 className={styles.title}>
           What's for <span className={styles.meal}>{greeting.meal}</span>?

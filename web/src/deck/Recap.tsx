@@ -13,11 +13,13 @@ interface Props {
   /** Another deck is ready to deal: false once every recipe has been shown. */
   hasMore: boolean;
   onDealMore: () => void;
+  /** The first deck ran short with moods or courses picked (ADR-0012 rule 13). */
+  short: { count: number; onShowMore: () => void } | null;
   byId: ReadonlyMap<string, CatalogIngredient>;
 }
 
 /** The end of a deck: what you saved, and what to buy to cook it. */
-export function Recap({ dealt, saved, hasMore, onDealMore, byId }: Props) {
+export function Recap({ dealt, saved, hasMore, onDealMore, short, byId }: Props) {
   const items = shoppingList(saved);
   const [shared, setShared] = useState<"copied" | "failed" | null>(null);
 
@@ -89,7 +91,17 @@ export function Recap({ dealt, saved, hasMore, onDealMore, byId }: Props) {
         </div>
       )}
 
-      {hasMore ? (
+      {short && (
+        <p className={styles.subtitle}>
+          Only {short.count} {short.count === 1 ? "recipe matches" : "recipes match"} your
+          picks. Show more?
+        </p>
+      )}
+      {short ? (
+        <button type="button" className={styles.more} onClick={short.onShowMore}>
+          Show more
+        </button>
+      ) : hasMore ? (
         <button type="button" className={styles.more} onClick={onDealMore}>
           Deal more
         </button>

@@ -6,16 +6,26 @@ import { api } from "./client";
 // revalidates with the ETag the API sends, so one fetch per visit is enough.
 const ONCE_PER_VISIT = { staleTime: Infinity, gcTime: Infinity } as const;
 
+const ingredientsQuery = {
+  queryKey: ["ingredients"],
+  queryFn: async () => {
+    const { data, error } = await api.GET("/api/v1/ingredients");
+    if (error) throw new Error("could not load the ingredients");
+    return data.ingredients;
+  },
+  ...ONCE_PER_VISIT,
+};
+
+/** Every live ingredient, staples included: anything can be avoided. */
+export function useIngredients() {
+  return useQuery(ingredientsQuery);
+}
+
 /** Ingredients the user can pick: everything but staples, which are assumed. */
 export function useCatalog() {
   return useQuery({
-    queryKey: ["ingredients"],
-    queryFn: async () => {
-      const { data, error } = await api.GET("/api/v1/ingredients");
-      if (error) throw new Error("could not load the ingredients");
-      return data.ingredients.filter((item) => item.class !== "S");
-    },
-    ...ONCE_PER_VISIT,
+    ...ingredientsQuery,
+    select: (ingredients) => ingredients.filter((item) => item.class !== "S"),
   });
 }
 
