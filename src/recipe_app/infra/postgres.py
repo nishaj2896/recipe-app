@@ -399,22 +399,50 @@ def scored_query(
     score = func.coalesce(
         triangle[core_q * (core_q - 1) // 2 + weights.c.matched_q], -1
     ).label("score_int")
-    # With no moods or weather picked, every fit is 0: leave it out, so the
-    # query is exactly the one ADR-0007 measured.
     fit = _fit(filters)
-    leading = [] if fit is None else [-fit]
-    query = (
-        select(recipes.c.id, score)
+    if fit is None:
+        # Nothing picked, so every fit is 0: leave it out, and the query is
+        # exactly the one ADR-0007 measured.
+        query = (
+            select(recipes.c.id, score)
+            .join(weights, weights.c.recipe_id == recipes.c.id)
+            # Scored tier: at least one ticked ingredient (ADR-0003 rule 3).
+            .where(weights.c.matched_q > 0, *_filters(filters))
+            .order_by(score.desc(), recipes.c.total_minutes, recipes.c.id)
+            .limit(limit)
+        )
+        if after is not None:
+            query = query.where(
+                tuple_(-score, recipes.c.total_minutes, recipes.c.id)
+                > tuple_(*_keyset("after_scored", after, with_fit=False))
+            )
+        return query
+
+    # Every candidate is scored and sorted anyway, so rank them once in a
+    # MATERIALIZED CTE and resume and limit outside it. Inlined, the keyset
+    # became a join filter, and Postgres 17 planned that ~30x slower.
+    candidates = (
+        select(
+            recipes.c.id,
+            score,
+            fit,
+            recipes.c.total_minutes,
+        )
         .join(weights, weights.c.recipe_id == recipes.c.id)
-        # Scored tier: at least one ticked ingredient (ADR-0003 rule 3).
         .where(weights.c.matched_q > 0, *_filters(filters))
-        .order_by(*leading, score.desc(), recipes.c.total_minutes, recipes.c.id)
+        .cte("candidates")
+        .prefix_with("MATERIALIZED")
+    )
+    c = candidates.c
+    query = (
+        select(c.id, c.score_int)
+        .order_by(c.fit.desc(), c.score_int.desc(), c.total_minutes, c.id)
         .limit(limit)
     )
     if after is not None:
         query = query.where(
-            tuple_(*leading, -score, recipes.c.total_minutes, recipes.c.id)
-            > tuple_(*_keyset("after_scored", after, with_fit=fit is not None))
+            tuple_(-c.fit, -c.score_int, c.total_minutes, c.id)
+            > tuple_(*_keyset("after_scored", after, with_fit=True))
         )
     return query
 
@@ -426,18 +454,11 @@ def _fit(filters: SearchFilters) -> ColumnElement[int] | None:
     if not filters.ranks_by_fit:
         return None
     parts: list[ColumnElement[int]] = []
-    if filters.moods:
-        mood = (
-            func.unnest(recipes.c.moods)
-            .table_valued("value")
-            .render_derived(name="mood")
-        )
-        parts.append(
-            select(func.count())
-            .select_from(mood)
-            .where(mood.c.value == _any_text("fit_moods", filters.moods))
-            .scalar_subquery()
-        )
+    # One CASE per picked mood: a plain expression, no subquery per row.
+    parts.extend(
+        case((_text_param(f"fit_mood_{n}", mood) == any_(recipes.c.moods), 1), else_=0)
+        for n, mood in enumerate(sorted(filters.moods))
+    )
     if filters.weather:
         suits = _overlaps(recipes.c.weather, "fit_weather", filters.weather)
         parts.append(case((suits, 1), else_=0))
@@ -572,6 +593,10 @@ def _filters(filters: SearchFilters) -> list[ColumnElement[bool]]:
     if filters.moods:
         conditions.append(_overlaps(recipes.c.moods, "moods", filters.moods))
     return conditions
+
+
+def _text_param(name: str, value: str) -> Any:
+    return bindparam(name, value, type_=Text)
 
 
 def _overlaps(
