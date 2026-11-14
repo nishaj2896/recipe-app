@@ -12,6 +12,7 @@ beforeEach(() => {
   stubApi();
   useDevice.setState({
     ...emptyDevice,
+    foodRulesSeen: true,
     pantry: ["paneer"],
     saved: [DECK[0]?.id ?? ""],
     hydration: "ready",

@@ -10,7 +10,12 @@ const GONE = "00000000-0000-4000-8000-00000000dead";
 
 beforeEach(() => {
   stubApi();
-  useDevice.setState({ ...emptyDevice, pantry: ["paneer"], hydration: "ready" });
+  useDevice.setState({
+    ...emptyDevice,
+    foodRulesSeen: true,
+    pantry: ["paneer"],
+    hydration: "ready",
+  });
 });
 
 afterEach(() => {

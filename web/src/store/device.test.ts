@@ -88,7 +88,12 @@ const v4 = (data: Partial<DeviceData>) =>
     version: 4,
   });
 
-const v5 = (data: Partial<DeviceData>) =>
+type V5 = Omit<
+  DeviceData,
+  "jain" | "avoidAllergens" | "avoidIngredients" | "foodRulesSeen" | "mood"
+> & { maxTotalMinutes: number | null };
+
+const v5 = (data: Partial<V5>) =>
   JSON.stringify({
     state: {
       pantry: [],
@@ -105,6 +110,27 @@ const v5 = (data: Partial<DeviceData>) =>
     version: 5,
   });
 
+const v6 = (data: Partial<DeviceData>) =>
+  JSON.stringify({
+    state: {
+      pantry: [],
+      outOfStaples: [],
+      saved: [],
+      hidden: [],
+      diet: null,
+      jain: false,
+      avoidAllergens: [],
+      avoidIngredients: [],
+      foodRulesSeen: false,
+      mood: { courses: [], time: "any", moods: [], weather: [] },
+      swipeHintSeen: false,
+      voiceNoticeSeen: false,
+      installNudgeDismissed: false,
+      ...data,
+    },
+    version: 6,
+  });
+
 test("a first visit starts empty and saves what the user adds", async () => {
   const { device, stored } = await coldStart();
   const { useDevice } = device;
@@ -112,7 +138,7 @@ test("a first visit starts empty and saves what the user adds", async () => {
 
   useDevice.getState().addToPantry(["milk"]);
 
-  expect(await stored()).toBe(v5({ pantry: ["milk"] }));
+  expect(await stored()).toBe(v6({ pantry: ["milk"] }));
 });
 
 test("a return visit gets back what was saved", async () => {
@@ -122,12 +148,21 @@ test("a return visit gets back what was saved", async () => {
     saved: ["r1"],
     hidden: ["r2"],
     diet: "vegetarian" as const,
-    maxTotalMinutes: 30,
+    jain: true,
+    avoidAllergens: ["peanuts" as const],
+    avoidIngredients: ["coconut"],
+    foodRulesSeen: true,
+    mood: {
+      courses: ["mains" as const],
+      time: "30" as const,
+      moods: ["spicy" as const],
+      weather: ["warming" as const],
+    },
     swipeHintSeen: true,
     voiceNoticeSeen: true,
     installNudgeDismissed: true,
   };
-  const { device } = await coldStart(v5(saved));
+  const { device } = await coldStart(v6(saved));
 
   expect(device.useDevice.getState()).toMatchObject({ hydration: "ready", ...saved });
 });
@@ -147,7 +182,7 @@ test("data saved before recipes existed (v1) is upgraded, not lost", async () =>
   useDevice.getState().saveRecipe("r1");
 
   expect(await stored()).toBe(
-    v5({
+    v6({
       pantry: ["milk", "egg"],
       outOfStaples: ["salt"],
       saved: ["r1"],
@@ -168,7 +203,7 @@ test.each([
     pantry: ["milk"],
     ...data,
     diet: null,
-    maxTotalMinutes: null,
+    mood: { courses: [], time: "any", moods: [], weather: [] },
     swipeHintSeen: seen,
     voiceNoticeSeen: false,
   });
@@ -201,9 +236,39 @@ test("data saved before the install nudge (v4) is upgraded", async () => {
 });
 
 test.each([
+  [null, "any"],
+  [15, "15"],
+  [30, "30"],
+  [45, "60"],
+  [60, "60"],
+] as const)(
+  "data saved before food rules (v5) is upgraded: a %s minute limit becomes %s",
+  async (maxTotalMinutes, time) => {
+    const { device } = await coldStart(
+      v5({ pantry: ["milk"], diet: "vegan", maxTotalMinutes, swipeHintSeen: true }),
+    );
+
+    const state = device.useDevice.getState();
+    expect(state).toMatchObject({
+      hydration: "ready",
+      pantry: ["milk"],
+      diet: "vegan",
+      jain: false,
+      avoidAllergens: [],
+      avoidIngredients: [],
+      // The food rules screen is new to everyone: it opens once.
+      foodRulesSeen: false,
+      mood: { courses: [], time, moods: [], weather: [] },
+      swipeHintSeen: true,
+    });
+    expect(state).not.toHaveProperty("maxTotalMinutes");
+  },
+);
+
+test.each([
   [
     "from a newer version of the app",
-    JSON.stringify({ state: { pantry: ["milk"], saved: ["r1"], lists: [] }, version: 6 }),
+    JSON.stringify({ state: { pantry: ["milk"], saved: ["r1"], lists: [] }, version: 7 }),
   ],
   ["that isn't valid JSON", "{not json"],
 ])("data %s is never written over", async (_case, saved) => {
@@ -318,12 +383,35 @@ describe("actions", () => {
     expect(persist).toHaveBeenCalledTimes(1);
   });
 
-  test("filters are remembered for the next deck", () => {
-    useDevice.getState().setFilters({ diet: "egg", maxTotalMinutes: 45 });
-    expect(useDevice.getState()).toMatchObject({ diet: "egg", maxTotalMinutes: 45 });
+  test("saving food rules remembers them and marks the screen seen", () => {
+    const rules = {
+      diet: "vegetarian" as const,
+      jain: true,
+      avoidAllergens: ["gluten" as const],
+      avoidIngredients: ["mushroom"],
+    };
+    useDevice.getState().setFoodRules(rules);
+    expect(useDevice.getState()).toMatchObject({ ...rules, foodRulesSeen: true });
+  });
 
-    useDevice.getState().setFilters({ diet: null, maxTotalMinutes: null });
-    expect(useDevice.getState()).toMatchObject({ diet: null, maxTotalMinutes: null });
+  test("skipping the food rules marks the screen seen and changes nothing", () => {
+    useDevice.getState().markFoodRulesSeen();
+    expect(useDevice.getState()).toMatchObject({
+      diet: null,
+      avoidAllergens: [],
+      foodRulesSeen: true,
+    });
+  });
+
+  test("the mood picks are remembered for the next deck", () => {
+    const mood = {
+      courses: ["snacks-starters" as const],
+      time: "over-60" as const,
+      moods: [],
+      weather: ["rainy-day-cosy" as const],
+    };
+    useDevice.getState().setMood(mood);
+    expect(useDevice.getState().mood).toEqual(mood);
   });
 
   test("the swipe hint, once seen, stays seen", () => {
@@ -361,7 +449,7 @@ describe("two tabs", () => {
 
     a.getState().addToPantry(["egg"]);
 
-    expect(await second.stored()).toBe(v5({ pantry: ["milk", "egg"], saved: ["r1"] }));
+    expect(await second.stored()).toBe(v6({ pantry: ["milk", "egg"], saved: ["r1"] }));
   });
 });
 

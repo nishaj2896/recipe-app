@@ -1,7 +1,7 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test, type Page } from "@playwright/test";
 
-import { fillPantry, openDeck, topCardName } from "./app";
+import { fillPantry, openMood, openPantry, topCardName } from "./app";
 
 // ADR-0006 rule 10: axe checks each screen and sheet against WCAG 2.2 AA.
 async function expectAccessible(page: Page, screen: string) {
@@ -26,9 +26,10 @@ for (const colorScheme of ["dark", "light"] as const) {
 
     test("empty screens", async ({ page }) => {
       await page.goto("/");
-      await expect(
-        page.getByRole("searchbox", { name: "Search ingredients" }),
-      ).toBeVisible();
+      await expect(page.getByRole("heading", { name: "Your food rules" })).toBeVisible();
+      await expectAccessible(page, "food rules, first visit");
+
+      await openPantry(page);
       await expectAccessible(page, "pantry, empty");
 
       await page.goto("/deck");
@@ -59,15 +60,37 @@ for (const colorScheme of ["dark", "light"] as const) {
       await expectAccessible(page, "staples sheet");
     });
 
-    test("deck, its sheets, the recap and the cookbook", async ({ page }) => {
-      await fillPantry(page);
-      await openDeck(page);
-      await expectAccessible(page, "deck");
+    test("food rules with picks made", async ({ page }) => {
+      await openPantry(page);
+      await page.getByRole("link", { name: "Your food rules" }).click();
+      await page.getByRole("radio", { name: /^Jain/ }).check();
+      await page.getByRole("button", { name: "Gluten" }).click();
+      await page
+        .getByRole("button", { name: "+ Something else? Search any ingredient" })
+        .click();
+      await page
+        .getByRole("searchbox", { name: "Search an ingredient to avoid" })
+        .fill("coconut");
+      await page
+        .getByRole("button", { name: /^Avoid / })
+        .first()
+        .click();
+      await expectAccessible(page, "food rules, filled in");
+    });
 
-      await page.getByRole("button", { name: /^Filters:/ }).click();
-      await expect(page.getByRole("dialog", { name: "Filters" })).toBeVisible();
-      await expectAccessible(page, "filters sheet");
-      await page.getByRole("button", { name: "Done" }).click();
+    test("mood screen, deck, its sheets, the recap and the cookbook", async ({
+      page,
+    }) => {
+      await fillPantry(page);
+      await openMood(page);
+      await page.getByRole("button", { name: "Mains" }).click();
+      await page.getByRole("button", { name: /Fine-tune/ }).click();
+      await page.getByRole("button", { name: "Comforting" }).click();
+      await expectAccessible(page, "mood screen");
+      await page.getByRole("button", { name: "Show me everything" }).click();
+      await expect(page.getByText("Cooking up ideas")).toHaveCount(0);
+      await expect(page.getByRole("article")).toBeVisible();
+      await expectAccessible(page, "deck");
 
       const name = await topCardName(page);
       await page.getByRole("button", { name: `About ${name}`, exact: true }).click();

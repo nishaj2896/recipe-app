@@ -3,17 +3,18 @@ import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } fro
 import { Link } from "react-router";
 
 import type { RecipeCard } from "../api/client";
-import { useCatalog } from "../api/queries";
+import { useCatalog, useIngredients } from "../api/queries";
 import { Sheet } from "../app/Sheet";
 import { useAfterPaint } from "../motion/afterPaint";
 import { greetingFor } from "../pantry/greeting";
 import { RecipeDetail } from "../recipe/RecipeDetail";
-import { useDevice } from "../store/device";
+import { WEATHER_PICKS } from "../rules/labels";
+import type { MoodScreenState } from "../rules/MoodScreen";
+import { foodRulesSummary, moodSummary, widened } from "../rules/summary";
+import { type MoodPicks, noMood, useDevice } from "../store/device";
 import { dealMessage, swipeMessage, undoMessage } from "./announce";
 import { CookingScene } from "./CookingScene";
 import styles from "./DeckScreen.module.css";
-import { type Filters, FilterSheet } from "./FilterSheet";
-import { filterSummary } from "./filters";
 import { Recap } from "./Recap";
 import { RecipeFace } from "./RecipeFace";
 import { type SearchRequest, searchFor } from "./searchRequest";
@@ -37,6 +38,11 @@ function isTyping(target: EventTarget | null): boolean {
 
 /** Cards drawn under the top one, to show the deck's depth. */
 const STACK = 3;
+/**
+ * A first deck shorter than this, with moods or courses picked, offers to
+ * deal again with fewer picks (ADR-0012 rule 13).
+ */
+const SHORT_DECK = 5;
 
 /**
  * Shows its children from the second frame on. A fresh deal draws the top
@@ -54,7 +60,9 @@ export function DeckScreen() {
   const hidden = useDevice((state) => state.hidden);
   const pantry = useDevice((state) => state.pantry);
   const diet = useDevice((state) => state.diet);
-  const maxTotalMinutes = useDevice((state) => state.maxTotalMinutes);
+  const jain = useDevice((state) => state.jain);
+  const avoidAllergens = useDevice((state) => state.avoidAllergens);
+  const avoidIngredients = useDevice((state) => state.avoidIngredients);
   const swipeHintSeen = useDevice((state) => state.swipeHintSeen);
   const {
     saveRecipe,
@@ -62,21 +70,31 @@ export function DeckScreen() {
     hideRecipe,
     unhideRecipe,
     removeFromPantry,
-    setFilters,
     markSwipeHintSeen,
   } = useDevice.getState();
   const catalog = useCatalog();
+  const ingredients = useIngredients();
   const loaded = hydration !== "pending";
 
   // The search and what was saved before are read once, when the deck opens:
   // swiping changes both, and the deck must not reshuffle under the finger.
-  const searchOnOpen = useMemo(
-    () => (loaded ? searchFor(useDevice.getState()) : undefined),
+  // The food rules and mood screens are screens of their own, so coming back
+  // from either opens the deck afresh.
+  const moodOnOpen = useMemo(
+    () => (loaded ? useDevice.getState().mood : noMood),
     [loaded],
   );
-  // New filters are a new search, read when they're applied.
-  const [searchWithFilters, setSearchWithFilters] = useState<SearchRequest | null>();
-  const search = searchWithFilters === undefined ? searchOnOpen : searchWithFilters;
+  const searchOnOpen = useMemo(
+    () => (loaded ? searchFor(useDevice.getState(), moodOnOpen) : undefined),
+    [loaded, moodOnOpen],
+  );
+  // "Show more?" deals again with fewer picks; the saved picks stay as they are.
+  const [widenedTo, setWidenedTo] = useState<{
+    mood: MoodPicks;
+    search: SearchRequest | null;
+  } | null>(null);
+  const mood = widenedTo?.mood ?? moodOnOpen;
+  const search = widenedTo ? widenedTo.search : searchOnOpen;
   const savedOnOpen = useMemo(
     () => (loaded ? new Set(useDevice.getState().saved) : new Set<string>()),
     [loaded],
@@ -91,7 +109,6 @@ export function DeckScreen() {
   const [sceneDoneFor, setSceneDoneFor] = useState<string | null>(null);
   // The recipe whose details are open over the deck, if any.
   const [about, setAbout] = useState<string | null>(null);
-  const [filtering, setFiltering] = useState(false);
   // The card flying off: its choice is already stored, but it stays on top
   // until it has left the screen.
   const [flying, setFlying] = useState<string | null>(null);
@@ -222,14 +239,25 @@ export function DeckScreen() {
     setDeckIndex(0);
   }
 
-  function applyFilters(filters: Filters) {
-    setFilters(filters);
-    setFiltering(false);
-    setSearchWithFilters(searchFor(useDevice.getState()));
+  const wider = widened(mood);
+  function showMore() {
+    if (!wider) return;
+    setWidenedTo({ mood: wider, search: searchFor(useDevice.getState(), wider) });
     startOver();
   }
+  // Only the first deck is ever short: a deck of 20 has no next deck.
+  const short =
+    wider !== null && firstPage !== undefined && firstPage.results.length < SHORT_DECK;
 
-  const filtered = diet !== null || maxTotalMinutes !== null;
+  const names = new Map((ingredients.data ?? []).map((item) => [item.id, item.name]));
+  const rules = foodRulesSummary({ diet, jain, avoidAllergens, avoidIngredients }, (id) =>
+    names.get(id),
+  );
+  const picks = moodSummary(mood);
+  const weatherBadge =
+    mood.weather.length === 1 && mood.weather[0]
+      ? WEATHER_PICKS[mood.weather[0]]
+      : "Weather pick";
 
   if (search === null) {
     return (
@@ -280,36 +308,24 @@ export function DeckScreen() {
           </m.span>
         </Link>
       </header>
-      <button
-        type="button"
-        className={styles.filterChip}
-        data-active={filtered || undefined}
-        aria-label={`Filters: ${filterSummary(diet, maxTotalMinutes)}`}
-        onClick={() => {
-          setFiltering(true);
-        }}
-      >
-        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-          <path
-            d="M2 4h12M4 8h8M6 12h4"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-        {filterSummary(diet, maxTotalMinutes)}
-      </button>
-      <Sheet
-        open={filtering}
-        onClose={() => {
-          setFiltering(false);
-        }}
-        title="Filters"
-      >
-        {filtering && (
-          <FilterSheet initial={{ diet, maxTotalMinutes }} onApply={applyFilters} />
-        )}
-      </Sheet>
+      <nav className={styles.chips} aria-label="What this deck deals">
+        <Link
+          to="/food-rules"
+          className={styles.chip}
+          aria-label={`Your food rules: ${rules}`}
+        >
+          {rules}
+        </Link>
+        <Link
+          to="/mood"
+          state={{ fromDeck: true } satisfies MoodScreenState}
+          className={styles.chip}
+          data-active={picks !== null || undefined}
+          aria-label={`Your picks: ${picks ?? "none"}`}
+        >
+          {picks ?? "Pick a mood"}
+        </Link>
+      </nav>
       {dealt.length > 0 && current && (
         <div className={styles.progress} aria-hidden="true">
           <m.span
@@ -371,7 +387,12 @@ export function DeckScreen() {
                           aria-hidden="true"
                           animate={{ scale: 1 - depth * 0.05, y: depth * 16 }}
                         >
-                          <RecipeFace card={card} categories={categories} />
+                          <RecipeFace
+                            card={card}
+                            categories={categories}
+                            moods={mood.moods}
+                            weatherBadge={weatherBadge}
+                          />
                         </m.div>
                       );
                     })}
@@ -390,7 +411,12 @@ export function DeckScreen() {
                     setAbout(current.id);
                   }}
                 >
-                  <RecipeFace card={current} categories={categories} />
+                  <RecipeFace
+                    card={current}
+                    categories={categories}
+                    moods={mood.moods}
+                    weatherBadge={weatherBadge}
+                  />
                   {!swipeHintSeen && <SwipeHint />}
                 </SwipeCard>
               </div>
@@ -483,20 +509,29 @@ export function DeckScreen() {
           ) : dealt.length === 0 && deckIndex === 0 ? (
             <div className={styles.empty}>
               <h2 className={styles.emptyTitle}>Nothing to cook yet</h2>
-              {filtered ? (
+              {wider ? (
                 <>
                   <p className={styles.muted}>
-                    No recipe matches this pantry with these filters.
+                    No recipe matches this pantry with these picks.
                   </p>
-                  <button
-                    type="button"
-                    className={styles.primary}
-                    onClick={() => {
-                      applyFilters({ diet: null, maxTotalMinutes: null });
-                    }}
-                  >
-                    Clear filters
+                  <button type="button" className={styles.primary} onClick={showMore}>
+                    {wider.moods.length < mood.moods.length
+                      ? "Try without moods"
+                      : "Try every course"}
                   </button>
+                </>
+              ) : picks !== null ? (
+                <>
+                  <p className={styles.muted}>
+                    No recipe matches this pantry with these picks.
+                  </p>
+                  <Link
+                    to="/mood"
+                    state={{ fromDeck: true } satisfies MoodScreenState}
+                    className={styles.primary}
+                  >
+                    Change your picks
+                  </Link>
                 </>
               ) : (
                 <>
@@ -516,6 +551,9 @@ export function DeckScreen() {
               saved={savedHere}
               hasMore={page.next_cursor !== null}
               onDealMore={dealMore}
+              short={
+                short ? { count: firstPage.results.length, onShowMore: showMore } : null
+              }
               byId={byId}
             />
           )}

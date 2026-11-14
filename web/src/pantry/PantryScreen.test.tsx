@@ -7,7 +7,7 @@ import { stubApi } from "../test/api";
 
 beforeEach(() => {
   stubApi();
-  useDevice.setState({ ...emptyDevice, hydration: "ready" });
+  useDevice.setState({ ...emptyDevice, foodRulesSeen: true, hydration: "ready" });
 });
 
 afterEach(() => {
@@ -155,14 +155,22 @@ test("staples are assumed, and the user can untick one they're out of", async ()
   expect(strip).toHaveTextContent("out of salt");
 });
 
-test("Cook something appears once the pantry has an ingredient", async () => {
+test("Cook something appears once the pantry has an ingredient, and opens the mood screen", async () => {
   const user = await openApp();
   expect(screen.queryByRole("link", { name: /Cook something/ })).not.toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /Egg/ }));
   expect(screen.getByRole("link", { name: /Cook something/ })).toHaveAttribute(
     "href",
-    "/deck",
+    "/mood",
+  );
+});
+
+test("the profile button opens the food rules", async () => {
+  await openApp();
+  expect(screen.getByRole("link", { name: "Your food rules" })).toHaveAttribute(
+    "href",
+    "/food-rules",
   );
 });
 

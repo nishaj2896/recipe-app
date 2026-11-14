@@ -5,6 +5,24 @@ import type { components } from "../api/schema";
 import { createIdbStorage } from "./idbStorage";
 
 export type Diet = components["schemas"]["Diet"];
+export type Allergen = components["schemas"]["Allergen"];
+export type Course = components["schemas"]["Course"];
+export type Mood = components["schemas"]["Mood"];
+export type Weather = components["schemas"]["Weather"];
+
+/**
+ * The mood screen's time choice (ADR-0012 rule 5): any time, at most 15, 30
+ * or 60 minutes, or over an hour.
+ */
+export type TimeChoice = "any" | "15" | "30" | "60" | "over-60";
+
+/** What the mood screen last dealt with; every part is optional. */
+export interface MoodPicks {
+  courses: Course[];
+  time: TimeChoice;
+  moods: Mood[];
+  weather: Weather[];
+}
 
 /**
  * What this device remembers between visits (ADR-0006 rule 5). v1 has no
@@ -25,8 +43,16 @@ export interface DeviceData {
   hidden: string[];
   /** The strictest diet a deck may deal, or null for any. */
   diet: Diet | null;
-  /** The longest total time a deck may deal, in minutes, or null for any. */
-  maxTotalMinutes: number | null;
+  /** Whether the deck deals only Jain recipes; set only with a veg diet. */
+  jain: boolean;
+  /** Allergens the deck never deals (ADR-0012 rule 4). */
+  avoidAllergens: Allergen[];
+  /** Ingredient ids the deck never deals, oldest first. */
+  avoidIngredients: string[];
+  /** Whether the food rules screen has been shown once, saved or skipped. */
+  foodRulesSeen: boolean;
+  /** The mood screen's last picks. */
+  mood: MoodPicks;
   /** Whether the user has swiped once, so the first-run hint never shows again. */
   swipeHintSeen: boolean;
   /**
@@ -66,7 +92,11 @@ interface DeviceActions {
   restoreSaved: (removed: readonly SavedPlace[]) => void;
   hideRecipe: (id: string) => void;
   unhideRecipe: (id: string) => void;
-  setFilters: (filters: Pick<DeviceData, "diet" | "maxTotalMinutes">) => void;
+  setFoodRules: (
+    rules: Pick<DeviceData, "diet" | "jain" | "avoidAllergens" | "avoidIngredients">,
+  ) => void;
+  markFoodRulesSeen: () => void;
+  setMood: (mood: MoodPicks) => void;
   markSwipeHintSeen: () => void;
   markVoiceNoticeSeen: () => void;
   dismissInstallNudge: () => void;
@@ -75,9 +105,11 @@ interface DeviceActions {
 export type DeviceState = DeviceData & DeviceActions & { hydration: Hydration };
 
 export const DEVICE_STORE_NAME = "device";
-export const DEVICE_STORE_VERSION = 5;
+export const DEVICE_STORE_VERSION = 6;
 /** The most hidden ids the search API accepts (ADR-0006 rule 5). */
 export const MAX_HIDDEN = 200;
+
+export const noMood: MoodPicks = { courses: [], time: "any", moods: [], weather: [] };
 
 export const emptyDevice: DeviceData = {
   pantry: [],
@@ -85,7 +117,11 @@ export const emptyDevice: DeviceData = {
   saved: [],
   hidden: [],
   diet: null,
-  maxTotalMinutes: null,
+  jain: false,
+  avoidAllergens: [],
+  avoidIngredients: [],
+  foodRulesSeen: false,
+  mood: noMood,
   swipeHintSeen: false,
   voiceNoticeSeen: false,
   installNudgeDismissed: false,
@@ -106,14 +142,31 @@ const without = (list: readonly string[], id: string) =>
  */
 export function migrateDevice(stored: unknown, version: number): DeviceData {
   if (version === DEVICE_STORE_VERSION) return stored as DeviceData;
+  // v5 had a time limit in minutes and no food rules. 15 and 30 keep their
+  // value, 45 and 60 become "1 hr" (ADR-0012 rule 12). The food rules screen
+  // is new to everyone, so it opens once.
+  if (version === 5) {
+    const { maxTotalMinutes, ...v5 } = stored as Omit<DeviceData, "jain"> & {
+      maxTotalMinutes: number | null;
+    };
+    return {
+      ...v5,
+      jain: false,
+      avoidAllergens: [],
+      avoidIngredients: [],
+      foodRulesSeen: false,
+      mood: { ...noMood, time: timeFromMinutes(maxTotalMinutes) },
+    };
+  }
   // v4 had no install nudge.
-  if (version === 4) return { ...(stored as DeviceData), installNudgeDismissed: false };
+  if (version === 4)
+    return migrateDevice({ ...(stored as object), installNudgeDismissed: false }, 5);
   // v3 had no voice add, so nobody has seen its notice.
   if (version === 3)
     return migrateDevice({ ...(stored as DeviceData), voiceNoticeSeen: false }, 4);
   // v2 had no filters and no hint. Someone with saves has clearly swiped.
   if (version === 2) {
-    const v2 = stored as DeviceData;
+    const v2 = stored as Pick<DeviceData, "saved" | "hidden">;
     return migrateDevice(
       {
         ...v2,
@@ -128,6 +181,14 @@ export function migrateDevice(stored: unknown, version: number): DeviceData {
   if (version === 1)
     return migrateDevice({ ...(stored as object), saved: [], hidden: [] }, 2);
   throw new Error(`no migration from device store version ${String(version)}`);
+}
+
+/** A v5 time limit as a time choice; 45 had no choice of its own. */
+function timeFromMinutes(minutes: number | null): TimeChoice {
+  if (minutes === null) return "any";
+  if (minutes <= 15) return "15";
+  if (minutes <= 30) return "30";
+  return "60";
 }
 
 /**
@@ -249,8 +310,14 @@ export const useDevice = create<DeviceState>()(
       unhideRecipe: (id) => {
         set((state) => ({ hidden: without(state.hidden, id) }));
       },
-      setFilters: ({ diet, maxTotalMinutes }) => {
-        set({ diet, maxTotalMinutes });
+      setFoodRules: ({ diet, jain, avoidAllergens, avoidIngredients }) => {
+        set({ diet, jain, avoidAllergens, avoidIngredients, foodRulesSeen: true });
+      },
+      markFoodRulesSeen: () => {
+        set((state) => (state.foodRulesSeen ? state : { foodRulesSeen: true }));
+      },
+      setMood: (mood) => {
+        set({ mood });
       },
       markSwipeHintSeen: () => {
         set((state) => (state.swipeHintSeen ? state : { swipeHintSeen: true }));
@@ -279,7 +346,11 @@ export const useDevice = create<DeviceState>()(
         saved,
         hidden,
         diet,
-        maxTotalMinutes,
+        jain,
+        avoidAllergens,
+        avoidIngredients,
+        foodRulesSeen,
+        mood,
         swipeHintSeen,
         voiceNoticeSeen,
         installNudgeDismissed,
@@ -289,7 +360,11 @@ export const useDevice = create<DeviceState>()(
         saved,
         hidden,
         diet,
-        maxTotalMinutes,
+        jain,
+        avoidAllergens,
+        avoidIngredients,
+        foodRulesSeen,
+        mood,
         swipeHintSeen,
         voiceNoticeSeen,
         installNudgeDismissed,

@@ -1,6 +1,6 @@
 import { type Browser, expect, type Page, test } from "@playwright/test";
 
-import { dragCard, fillPantry, openDeck, PHONE } from "./app";
+import { dragCard, fillPantry, openDeck, openMood, PHONE } from "./app";
 
 // ADR-0006 rule 10: the app's three big motions, replayed on a CPU slowed
 // 4×, must not block the main thread for long. The browser reports any task
@@ -114,7 +114,7 @@ test("a swipe flies off without a long task", async ({ browser, baseURL }) => {
   expect(longest).toBe(0);
 });
 
-// Dealing swaps the pantry screen for the deck, then draws the first card as
+// Dealing swaps the mood screen for the deck, then draws the first card as
 // the cooking scene fades. Each of those moments may take up to 100 ms
 // (Nisha, 21 Oct): it happens once, behind the fade, not mid-motion.
 const DEAL_BUDGET_MS = 100;
@@ -126,10 +126,11 @@ test("the deck deals within its budget", async ({ browser, baseURL }) => {
       baseURL ?? "",
       async (page) => {
         await fillPantry(page);
-        await page.getByRole("link", { name: /Cook something/ }).hover();
+        await openMood(page);
+        await page.getByRole("button", { name: "Deal my cards" }).hover();
       },
       async (page) => {
-        await page.getByRole("link", { name: /Cook something/ }).click();
+        await page.getByRole("button", { name: "Deal my cards" }).click();
         await expect(page.getByText("Cooking up ideas")).toHaveCount(0, {
           timeout: 15_000,
         });

@@ -82,7 +82,7 @@ export function PantryDock({ items, stapleCount, onOpenPantry }: Props) {
         )}
       </div>
       {count > 0 ? (
-        <Link to="/deck" className={styles.cta}>
+        <Link to="/mood" className={styles.cta}>
           Cook something <span aria-hidden="true">→</span>
         </Link>
       ) : (

@@ -8,7 +8,12 @@ import { DECK, detailOf, stubApi } from "../test/api";
 const matar = DECK[0] as (typeof DECK)[0];
 
 beforeEach(() => {
-  useDevice.setState({ ...emptyDevice, pantry: ["paneer"], hydration: "ready" });
+  useDevice.setState({
+    ...emptyDevice,
+    foodRulesSeen: true,
+    pantry: ["paneer"],
+    hydration: "ready",
+  });
 });
 
 afterEach(() => {
