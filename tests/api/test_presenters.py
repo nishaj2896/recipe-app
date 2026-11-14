@@ -153,9 +153,7 @@ def test_the_detail_names_which_ingredients_bring_each_allergen() -> None:
     assert detail.jain is True
     assert [(p.id, p.name) for p in detail.pairs_with] == [(side.id, "Naan")]
     assert [a.value for a in detail.pairs_with[0].allergens] == ["dairy", "gluten"]
-    assert detail.pairs_with[0].ingredient_ids == [
-        item.id for item in side.ingredients
-    ]
+    assert detail.pairs_with[0].ingredient_ids == [item.id for item in side.ingredients]
 
 
 def test_the_card_carries_tags_and_allergens() -> None:
