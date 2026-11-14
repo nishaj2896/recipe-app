@@ -69,6 +69,14 @@ def test_search_key_folds_punctuation_and_underscores() -> None:
     assert search_key("  Peri-Peri_Chicken!  ") == "peri peri chicken"
 
 
+def test_search_key_drops_accents() -> None:
+    assert search_key("Crème Brûlée") == "creme brulee"
+
+
+def test_an_accented_query_finds_the_plain_name() -> None:
+    assert names([recipe(1, "Creme brulee")], "crème brû") == ["Creme brulee"]
+
+
 def test_the_name_start_comes_before_a_word_start_and_a_close_spelling() -> None:
     recipes = [
         recipe(1, "Matar paneer"),
@@ -129,6 +137,33 @@ def test_the_cuisine_label_finds_its_recipes() -> None:
 
     assert names(recipes, "Thai") == ["Green curry"]
     assert names(recipes, "middle east") == ["Fattoush"]
+
+
+def test_two_letters_skip_close_spelling_and_lose_no_match() -> None:
+    """Two letters make three trigrams, two of them a word's start ("  c",
+    " ch"), so a name without a word starting with them shares at most one:
+    1 / (3 + 3 - 1) = 0.2, under the 0.3 threshold. Skipping criterion 3 for
+    them only saves time.
+    """
+    query = RESOLVER.resolve("ch")
+
+    assert trigram_similarity("ch", "xch") < 0.3
+    assert match(recipe(1, "Bach"), query) is None
+    assert match(recipe(2, "Chai"), query) == (Criterion.NAME_STARTS, 0.0)
+
+
+def test_any_word_of_a_cuisine_label_finds_it() -> None:
+    assert RESOLVER.resolve("indian").cuisines == {
+        Cuisine.NORTH_INDIAN,
+        Cuisine.SOUTH_INDIAN,
+        Cuisine.EAST_INDIAN,
+        Cuisine.WEST_INDIAN,
+    }
+    assert RESOLVER.resolve("asian").cuisines == {
+        Cuisine.SOUTH_ASIAN,
+        Cuisine.SOUTHEAST_ASIAN,
+    }
+    assert RESOLVER.resolve("ind").cuisines >= {Cuisine.INDO_CHINESE}
 
 
 def test_resolve_skips_retired_ingredients() -> None:

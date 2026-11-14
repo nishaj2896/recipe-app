@@ -58,6 +58,7 @@ from recipe_app.domain.recipe_search import (
     Criterion,
     Found,
     RecipeQuery,
+    spells_close,
 )
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
@@ -693,6 +694,8 @@ def _matches(query: RecipeQuery) -> Subquery:
                 word_starts,
                 and_(names.text.op("%")(key), similarity >= threshold),
             )
+            if spells_close(query.key)
+            else or_(starts, word_starts)
         )
     ]
     other = literal(int(Criterion.INGREDIENT_OR_CUISINE))

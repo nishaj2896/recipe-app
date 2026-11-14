@@ -27,7 +27,13 @@ def normalize(text: str) -> str:
 
 
 def search_key(text: str) -> str:
-    """Normalized, with punctuation and underscores folded to single spaces:
-    "Peri-peri" -> "peri peri". Recipe search compares these (ADR-0012 rule 10).
+    """Normalized, without accents, and with punctuation and underscores
+    folded to single spaces: "Crème brûlée" -> "creme brulee", "Peri-peri" ->
+    "peri peri". Recipe search compares these (ADR-0012 rule 10). Ingredient
+    names keep their accents (ADR-0001); only search drops them, because a
+    phone keyboard adds them to words the book spells without.
     """
-    return " ".join(re.sub(r"[\W_]+", " ", normalize(text)).split())
+    decomposed = unicodedata.normalize("NFKD", normalize(text))
+    bare = "".join(c for c in decomposed if unicodedata.category(c) != "Mn")
+    folded = unicodedata.normalize("NFKC", bare)
+    return " ".join(re.sub(r"[\W_]+", " ", folded).split())
