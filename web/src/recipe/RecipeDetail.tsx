@@ -1,11 +1,14 @@
 import { type ReactNode, useState } from "react";
+import { Link } from "react-router";
 
-import type { RecipeIngredient } from "../api/client";
+import type { PairCard, RecipeIngredient } from "../api/client";
 import { useCatalog, useRecipe, useStaples } from "../api/queries";
 import { DishPhoto } from "../art/DishPhoto";
 import { DishArt, IngredientArt } from "../art/IngredientArt";
 import { DIETS } from "../deck/diets";
-import { useDevice } from "../store/device";
+import { type Breaks, breaks, type FoodRules, keepsRules } from "../rules/check";
+import { ALLERGENS, COURSES, DIET_CHOICES, dietChoice } from "../rules/labels";
+import { type Allergen, useDevice } from "../store/device";
 import styles from "./RecipeDetail.module.css";
 import { MAX_SERVINGS, MIN_SERVINGS, scaledAmount } from "./scale";
 import { formatWait } from "./wait";
@@ -31,6 +34,11 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
   const pantry = useDevice((state) => state.pantry);
   const outOfStaples = useDevice((state) => state.outOfStaples);
   const saved = useDevice((state) => state.saved);
+  const diet = useDevice((state) => state.diet);
+  const jain = useDevice((state) => state.jain);
+  const avoidAllergens = useDevice((state) => state.avoidAllergens);
+  const avoidIngredients = useDevice((state) => state.avoidIngredients);
+  const rules: FoodRules = { diet, jain, avoidAllergens, avoidIngredients };
   // Not saved: each recipe opens at its written size (ADR-0008 rule 8). The
   // id keeps a choice from carrying over when the deck shows the next recipe.
   const [chosen, setChosen] = useState<{ recipeId: string; servings: number } | null>(
@@ -94,6 +102,27 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
       ),
     ],
   ];
+  const broken = breaks(
+    {
+      diet: detail.diet,
+      jain: detail.jain,
+      allergens: detail.allergens.map((source) => source.allergen),
+      ingredient_ids: detail.ingredients.map((item) => item.id),
+    },
+    rules,
+  );
+  // Each ingredient's tags: the avoided allergens it brings, or "Avoided".
+  const tagsOf = (item: RecipeIngredient): string[] => [
+    ...detail.allergens
+      .filter(
+        (source) =>
+          broken.allergens.includes(source.allergen) &&
+          source.ingredients.some((ref) => ref.id === item.id),
+      )
+      .map((source) => ALLERGENS[source.allergen]),
+    ...(broken.ingredientIds.includes(item.id) ? ["Avoided"] : []),
+  ];
+  const pairs = detail.pairs_with.filter((pair) => keepsRules(pair, rules));
   const isSaved = saved.includes(detail.id);
   const serves = detail.serves;
   const shownServings = chosen?.recipeId === detail.id ? chosen.servings : serves;
@@ -108,6 +137,14 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
 
   return (
     <article className={styles.detail} aria-labelledby="recipe-name">
+      <RulesNote
+        broken={broken}
+        rules={rules}
+        sources={detail.allergens}
+        ingredientName={(id) =>
+          detail.ingredients.find((item) => item.id === id)?.name ?? id
+        }
+      />
       <div className={styles.art}>
         {detail.image ? (
           <DishPhoto
@@ -196,7 +233,14 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
                         categoryId={categoryOf.get(item.id) ?? ""}
                         size={32}
                       />
-                      <span className={styles.itemName}>{item.name}</span>
+                      <span className={styles.itemName}>
+                        {item.name}
+                        {tagsOf(item).map((tag) => (
+                          <span key={tag} className={styles.warnTag}>
+                            {tag}
+                          </span>
+                        ))}
+                      </span>
                       {amount !== null && <span className={styles.amount}>{amount}</span>}
                     </li>
                   );
@@ -219,6 +263,21 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
         </section>
       )}
 
+      {pairs.length > 0 && (
+        <section className={styles.group} aria-labelledby="pairs-title">
+          <GroupTitle id="pairs-title" className={styles.groupTitle}>
+            Pairs well with
+          </GroupTitle>
+          <ul className={styles.pairs}>
+            {pairs.map((pair) => (
+              <li key={pair.id}>
+                <PairLink pair={pair} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <div className={styles.actions}>
         {actions ?? (
           <button
@@ -235,5 +294,114 @@ export function RecipeDetail({ recipeId, actions, nested = false }: Props) {
         )}
       </div>
     </article>
+  );
+}
+
+const lower = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
+
+function namesList(names: readonly string[]): string {
+  return names.length < 2
+    ? names.join("")
+    : `${names.slice(0, -1).join(", ")} and ${names.at(-1) ?? ""}`;
+}
+
+/**
+ * What in this recipe breaks the food rules, at the top of the recipe
+ * (ADR-0012 rule 4). Search and saved recipes show every recipe, so this is
+ * where the rules are said out loud.
+ */
+function RulesNote({
+  broken,
+  rules,
+  sources,
+  ingredientName,
+}: {
+  broken: Breaks;
+  rules: FoodRules;
+  sources: readonly { allergen: Allergen; ingredients: readonly { name: string }[] }[];
+  ingredientName: (id: string) => string;
+}) {
+  const choice = DIET_CHOICES.find(
+    (item) => item.id === dietChoice(rules.diet, rules.jain),
+  );
+  const notes: { title: string; text: string }[] = [
+    ...broken.allergens.map((allergen) => {
+      const label = lower(ALLERGENS[allergen]);
+      const from = sources
+        .find((source) => source.allergen === allergen)
+        ?.ingredients.map((item) => lower(item.name));
+      return {
+        title: `Contains ${label}`,
+        text: `This recipe uses ${namesList(from ?? [])}, and your food rules say you're allergic to ${label}.`,
+      };
+    }),
+    ...broken.ingredientIds.map((id) => ({
+      title: `Uses ${lower(ingredientName(id))}`,
+      text: "Your food rules say you avoid it.",
+    })),
+    ...(broken.diet || broken.jain
+      ? [
+          {
+            title: "Not for your diet",
+            text: `Your food rules say ${choice?.label ?? "a diet"}: ${lower(choice?.hint ?? "")}.`,
+          },
+        ]
+      : []),
+  ];
+  if (notes.length === 0) return null;
+  return (
+    <div className={styles.rulesNote} role="note">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 3L2 20h20z" />
+        <path d="M12 10v4M12 17h.01" />
+      </svg>
+      <div className={styles.rulesText}>
+        {notes.map((note) => (
+          <p key={note.title}>
+            <strong>{note.title}</strong> {note.text}
+          </p>
+        ))}
+        <p>
+          It won't appear in your deck.
+          {broken.allergens.length > 0 &&
+            " Ready-made items can hide allergens too, so check their labels."}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/** One "pairs well with" pick: its photo, name, course and time. */
+function PairLink({ pair }: { pair: PairCard }) {
+  const course = pair.courses[0];
+  return (
+    <Link to={`/recipe/${pair.id}`} className={styles.pair}>
+      {pair.image ? (
+        <DishPhoto
+          {...pair.image}
+          alt=""
+          recipeId={pair.id}
+          className={styles.pairPhoto}
+          artSize={96}
+        />
+      ) : (
+        <DishArt recipeId={pair.id} size={96} />
+      )}
+      <span className={styles.pairName}>{pair.name}</span>
+      <span className={styles.pairMeta}>
+        {course ? `${COURSES[course]} · ` : ""}
+        {pair.total_minutes} min
+      </span>
+    </Link>
   );
 }

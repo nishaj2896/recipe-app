@@ -95,6 +95,7 @@ def _pair(recipe: Recipe) -> PairCard:
         diet=recipe.diet,
         jain=recipe.jain,
         allergens=list(recipe.allergens),
+        ingredient_ids=[item.id for item in recipe.ingredients],
         image=_image(recipe.image),
     )
 

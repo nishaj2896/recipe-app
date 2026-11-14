@@ -275,6 +275,11 @@ export interface components {
        */
       id: string;
       image: components["schemas"]["RecipeImage"] | null;
+      /**
+       * Ingredient Ids
+       * @description So the app can hide a pick that uses an ingredient the food rules avoid.
+       */
+      ingredient_ids: string[];
       /** Jain */
       jain: boolean;
       /** Name */
