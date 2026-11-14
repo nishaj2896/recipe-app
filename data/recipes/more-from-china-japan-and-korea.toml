@@ -16,6 +16,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["sweet", "spicy", "crispy"]
 also_known_as = ["general tso chicken", "general tsos chicken"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a18c0c-0c84-72c3-9cb7-30ec9cbf0399"]  # Egg fried rice, Garlic bok choy, Egg drop soup
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "cornflour", amount = 0.5, unit = "cup" },
@@ -53,6 +54,7 @@ cuisine = "chinese"
 courses = ["mains", "sides"]
 moods = ["sweet-sour", "spicy", "savoury"]
 also_known_as = ["fish fragrant eggplant", "sichuan eggplant"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Egg fried rice, Hot and sour soup
 ingredients = [
   { id = "brinjal", amount = 2, unit = "medium" },
   { id = "pork", amount = 150, unit = "g" },
@@ -88,6 +90,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["hui guo rou"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Egg fried rice, Garlic bok choy
 ingredients = [
   { id = "pork-belly", amount = 500, unit = "g" },
   { id = "doubanjiang", amount = 1.5, unit = "tbsp" },
@@ -121,6 +124,7 @@ cook_minutes = 15
 cuisine = "chinese"
 courses = ["mains"]
 moods = ["fresh-herby", "light", "savoury"]
+pairs_with = ["01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a15175-3c2c-75c4-a0fb-92fed93ef6e7"]  # Garlic bok choy, Egg fried rice
 ingredients = [
   { id = "barramundi", amount = 1, unit = "piece" },
   { id = "ginger", amount = 1, unit = "piece" },
@@ -155,6 +159,7 @@ courses = ["soups"]
 moods = ["comforting", "light", "sweet"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["chicken corn soup"]
+pairs_with = ["01a18c0c-0c92-7cb2-8e19-527eff504a2f", "01a18c0c-0c8b-7ec8-ace2-6083872a7596"]  # Scallion pancakes, Pan-fried potstickers
 ingredients = [
   { id = "chicken", amount = 250, unit = "g" },
   { id = "sweetcorn", amount = 2, unit = "cup" },
@@ -187,6 +192,7 @@ cuisine = "chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "smoky"]
 also_known_as = ["lamb skewers", "chuanr"]
+pairs_with = ["01a18c0c-0c92-7cb2-8e19-527eff504a2f", "01a15175-3c2c-75c4-a0fb-92fed93ef6e7"]  # Scallion pancakes, Egg fried rice
 ingredients = [
   { id = "lamb", amount = 750, unit = "g" },
   { id = "cumin-seeds", amount = 2, unit = "tbsp" },
@@ -216,6 +222,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury"]
 also_known_as = ["cong you ban mian", "spring onion oil noodles"]
+pairs_with = ["01a18c0c-0ca6-7663-a3b1-a9bc14bfc4c5", "01a18ba9-fdbf-7184-9155-c47cc6706208", "01a18c0c-0c92-7cb2-8e19-527eff504a2f"]  # Chinese steamed egg, Hot and sour soup, Scallion pancakes
 ingredients = [
   { id = "egg-noodles", amount = 200, unit = "g" },
   { id = "spring-onions", amount = 8, unit = "piece" },
@@ -245,6 +252,7 @@ cuisine = "japanese"
 courses = ["snacks-starters", "mains"]
 moods = ["crispy", "savoury"]
 also_known_as = ["karaage", "japanese fried chicken"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-05a3-729e-b778-26e6d8ef394a", "01a18c12-059a-7721-81dd-7131e81407a3"]  # Miso soup, Cucumber sunomono, Onigiri
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "soy-sauce", amount = 2, unit = "tbsp" },
@@ -309,6 +317,7 @@ courses = ["mains"]
 moods = ["light", "savoury"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["cold soba"]
+pairs_with = ["01a18c12-059e-722d-a067-310f47137a7d", "01a18c12-0597-7e5e-ac40-cfb172a0404a"]  # Vegetable tempura, Tamagoyaki
 ingredients = [
   { id = "soba", amount = 200, unit = "g" },
   { id = "kombu", amount = 5, unit = "g" },
@@ -341,6 +350,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["kare raisu"]
+pairs_with = ["01a18c12-05a3-729e-b778-26e6d8ef394a", "01a18c12-058a-7d1f-979e-239d8d907c5e"]  # Cucumber sunomono, Miso soup
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -380,6 +390,7 @@ cuisine = "korean"
 courses = ["mains"]
 moods = ["spicy", "sweet", "savoury"]
 also_known_as = ["dak galbi"]
+pairs_with = ["01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c12-05b6-76f0-b1d1-fa24c33911e9"]  # Kongnamul muchim, Gyeran mari
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "gochujang", amount = 3, unit = "tbsp" },
@@ -417,6 +428,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["seafood pancake", "pajeon"]
+pairs_with = ["01a18c12-05b8-7ce9-be22-d87e34acc693", "01a18c12-05ae-78d5-bd9b-c8a6cf79f983"]  # Doenjang jjigae, Kimchi jjigae
 ingredients = [
   { id = "all-purpose-flour", amount = 0.75, unit = "cup" },
   { id = "potato-starch", amount = 2, unit = "tbsp" },
@@ -454,6 +466,7 @@ courses = ["soups", "mains"]
 moods = ["spicy", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in", "under-the-weather"]
 also_known_as = ["soft tofu stew", "sundubu"]
+pairs_with = ["01a18c12-05b6-76f0-b1d1-fa24c33911e9", "01a18c12-05ba-797e-a429-511c8aa7595c", "01a18c22-48fa-76a3-8887-e143c758b99b"]  # Gyeran mari, Kongnamul muchim, Haemul pajeon
 ingredients = [
   { id = "silken-tofu", amount = 350, unit = "g" },
   { id = "clams", amount = 200, unit = "g" },

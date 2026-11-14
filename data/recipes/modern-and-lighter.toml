@@ -17,6 +17,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["vegan bolognese", "lentil spaghetti"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d"]  # Focaccia, Caprese salad, Roasted vegetable salad
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -53,6 +54,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["smoky", "savoury", "light"]
 also_known_as = ["cauliflower steak"]
+pairs_with = ["01a18c22-48b2-74d0-8a43-2df3b2454ab2", "01a18c16-b1f7-7efc-a15b-2215d35ab4bd"]  # Quinoa salad, Hummus
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "large" },
   { id = "olive-oil", amount = 3, unit = "tbsp" },
@@ -83,6 +85,7 @@ cook_minutes = 55
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["sweet", "savoury", "hearty"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c22-48b4-727a-95b0-bed292ecbfe6"]  # Guacamole, Chickpea salad
 ingredients = [
   { id = "sweet-potato", amount = 4, unit = "medium" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -117,6 +120,7 @@ cuisine = "mediterranean"
 courses = ["snacks-starters"]
 moods = ["crispy", "fresh-herby", "light"]
 also_known_as = ["courgette fritters"]
+pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c1a-e21f-7a45-9042-2fc871e11814", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Tzatziki, Greek salad, Tomato soup
 ingredients = [
   { id = "zucchini", amount = 3, unit = "medium" },
   { id = "spring-onions", amount = 3, unit = "piece" },
@@ -151,6 +155,7 @@ cuisine = "european"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Roasted vegetable salad, Focaccia
 ingredients = [
   { id = "mushroom", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -187,6 +192,7 @@ courses = ["mains"]
 moods = ["creamy", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["veg pot pie"]
+pairs_with = ["01a18c22-48bb-71ce-a8dc-d6f1c63d2b3d", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Roasted vegetable salad, Tomato soup
 ingredients = [
   { id = "puff-pastry", amount = 300, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -224,6 +230,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 also_known_as = ["cannelloni"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "cannelloni-tubes", amount = 250, unit = "g" },
   { id = "spinach", amount = 500, unit = "g" },
@@ -259,6 +266,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "smoky", "hearty"]
 also_known_as = ["black bean burger"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Coleslaw, Potato salad, Guacamole
 ingredients = [
   { id = "black-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 1, unit = "small" },

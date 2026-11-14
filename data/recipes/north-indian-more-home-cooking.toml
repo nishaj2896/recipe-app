@@ -46,6 +46,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["tangy", "savoury", "comforting"]
 also_known_as = ["aloo tamatar ki sabzi"]
+pairs_with = ["01a188ac-05b3-7852-994e-2b3ec2b5edf4", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Puri, Phulka
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "tomato", amount = 3, unit = "medium" },
@@ -144,6 +145,7 @@ cuisine = "north-indian"
 courses = ["mains", "sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["paneer capsicum"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a"]  # Phulka, Dal tadka
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -178,6 +180,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Butter naan, Jeera rice
 ingredients = [
   { id = "baby-corn", amount = 200, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -214,6 +217,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["palak corn"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Phulka, Jeera rice
 ingredients = [
   { id = "spinach", amount = 300, unit = "g" },
   { id = "sweetcorn", amount = 1, unit = "cup" },
@@ -249,6 +253,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "light"]
 also_known_as = ["palak dal", "spinach dal"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c01-7f7f-bbc8-f5c5fce48a60"]  # Jeera rice, Phulka, Jeera aloo
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "spinach", amount = 200, unit = "g" },
@@ -285,6 +290,7 @@ image = { file = "01a18bae-8f61-7771-842d-fd44a5ee1621.webp", sha256 = "8c9228d4
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "fresh-herby", "comforting"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Jeera rice, Phulka
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "fenugreek-leaves", amount = 2, unit = "cup" },
@@ -321,6 +327,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["comforting", "light"]
 also_known_as = ["ghiya dal"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Phulka, Jeera rice
 ingredients = [
   { id = "chana-dal", amount = 0.5, unit = "cup" },
   { id = "bottle-gourd", amount = 300, unit = "g" },
@@ -358,6 +365,7 @@ courses = ["mains"]
 moods = ["tangy", "comforting"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["kadhi rice"]
+pairs_with = ["01a15175-3c01-7f7f-bbc8-f5c5fce48a60", "01a15175-3c03-7619-8dad-e95a1c70ce7c"]  # Jeera aloo, Bhindi masala
 ingredients = [
   { id = "curd", amount = 1.5, unit = "cup" },
   { id = "gram-flour", amount = 0.33, unit = "cup" },
@@ -397,6 +405,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "comforting"]
 also_known_as = ["rasedar aloo"]
+pairs_with = ["01a188ac-05b3-7852-994e-2b3ec2b5edf4", "01a188e4-2cd3-7853-8804-0034c2b6a9f7"]  # Puri, Boondi raita
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -432,6 +441,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "spicy"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Phulka, Jeera rice
 ingredients = [
   { id = "mushroom", amount = 250, unit = "g" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -661,6 +671,7 @@ image = { file = "01a18bae-8f7a-74ce-9516-ead74a26bd01.webp", sha256 = "f4b0fe99
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a18b54-81ba-79c9-9638-10695d0dc5d7"]  # Cucumber raita, Mirchi ka salan
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "mushroom", amount = 400, unit = "g" },
@@ -704,6 +715,7 @@ cook_minutes = 60
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "comforting"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Cucumber raita, Kachumber salad
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -745,6 +757,7 @@ plan_ahead = { wait_minutes = 75, note = "marinate for 75 minutes" }
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "comforting", "hearty"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Boondi raita, Kachumber salad
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -787,6 +800,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "spicy", "savoury"]
 also_known_as = ["changezi chicken"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Butter naan, Laccha onion
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -825,6 +839,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "spicy"]
 also_known_as = ["kali mirch chicken"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Butter naan, Jeera rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -862,6 +877,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["handi chicken"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c10-76ca-bf43-23fffb096acd", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Butter naan, Jeera rice, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -900,6 +916,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
 also_known_as = ["achari murgh"]
+pairs_with = ["01a188ac-05a4-7d6b-8b51-b0183f72ee48", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Lachha paratha, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -938,6 +955,7 @@ image = { file = "01a18bae-8f89-7ce0-b537-23fa8d97c511.webp", sha256 = "acf7dc44
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a188ac-05a4-7d6b-8b51-b0183f72ee48", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Lachha paratha, Jeera rice
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -975,6 +993,7 @@ image = { file = "01a18bae-8f8b-78ce-ba4f-0aab703ac96a.webp", sha256 = "3b4efbe1
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "sweet"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Butter naan, Jeera rice
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1012,6 +1031,7 @@ cook_minutes = 85
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "spicy", "hearty"]
+pairs_with = ["01a188ac-05a9-7419-8d55-e9c12cddd474", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Tandoori roti, Jeera rice
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 5, unit = "medium" },
@@ -1052,6 +1072,7 @@ cuisine = "street-food"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["kheema pav"]
+pairs_with = ["01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Laccha onion, Masala chai
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "pav", amount = 8, unit = "piece" },
@@ -1090,6 +1111,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["sides", "mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a"]  # Phulka, Dal tadka
 ingredients = [
   { id = "egg", amount = 6, unit = "large" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1124,6 +1146,7 @@ cook_minutes = 30
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a188ac-05a9-7419-8d55-e9c12cddd474"]  # Jeera rice, Tandoori roti
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },

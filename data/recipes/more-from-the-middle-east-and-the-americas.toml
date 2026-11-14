@@ -16,6 +16,7 @@ image = { file = "01a18c4f-8e51-78cf-94a3-56308cf794c4.webp", sha256 = "a6211cd2
 cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "tangy", "smoky"]
+pairs_with = ["01a18c16-b1f7-7efc-a15b-2215d35ab4bd", "01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b226-7f9a-b520-d9efd665bed4"]  # Hummus, Fattoush, Lebanese garlic potatoes
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -48,6 +49,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 also_known_as = ["kibbe"]
+pairs_with = ["01a18c16-b1f7-7efc-a15b-2215d35ab4bd", "01a18c16-b1fe-74e7-bca1-bb959369b478", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Hummus, Tabbouleh, Fattoush
 ingredients = [
   { id = "bulgur", amount = 1, unit = "cup" },
   { id = "lamb-mince", amount = 750, unit = "g" },
@@ -83,6 +85,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters"]
 moods = ["fresh-herby", "savoury", "light"]
 also_known_as = ["mercimek koftesi"]
+pairs_with = ["01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b20b-7687-a8d0-61a4d7a722dc"]  # Fattoush, Lentil soup (Middle Eastern)
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "bulgur", amount = 0.75, unit = "cup" },
@@ -178,6 +181,7 @@ cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "sweet"]
 also_known_as = ["stuffed aubergine"]
+pairs_with = ["01a18c16-b21f-7240-a280-85a631ce2371", "01a18c16-b20b-7687-a8d0-61a4d7a722dc"]  # Labneh with za'atar, Lentil soup (Middle Eastern)
 ingredients = [
   { id = "brinjal", amount = 4, unit = "medium" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -211,6 +215,7 @@ cuisine = "middle-eastern"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "spicy", "crispy"]
 also_known_as = ["turkish pizza"]
+pairs_with = ["01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b1fe-74e7-bca1-bb959369b478", "01a18c16-b20b-7687-a8d0-61a4d7a722dc"]  # Fattoush, Tabbouleh, Lentil soup (Middle Eastern)
 ingredients = [
   { id = "all-purpose-flour", amount = 3, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },
@@ -283,6 +288,7 @@ cuisine = "mexican-latin"
 courses = ["snacks-starters"]
 moods = ["crispy", "creamy", "spicy"]
 also_known_as = ["loaded nachos"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a18c16-b1d7-7a3a-a3c6-acade1bb6015"]  # Guacamole, Pico de gallo, Vegetarian chilli
 ingredients = [
   { id = "corn-tortillas", amount = 12, unit = "piece" },
   { id = "oil", amount = 0.5, unit = "cup" },
@@ -318,6 +324,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "creamy", "hearty"]
 also_known_as = ["cheesesteak"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691"]  # Coleslaw, Potato salad
 ingredients = [
   { id = "beef", amount = 600, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -349,6 +356,7 @@ image = { file = "01a18c4f-8e68-7c87-92fa-cbcb9822a6d8.webp", sha256 = "845c3748
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Cornbread, Coleslaw
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "sausages", amount = 300, unit = "g" },
@@ -387,6 +395,7 @@ cuisine = "american-british"
 courses = ["soups", "mains"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
+pairs_with = ["01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691"]  # Cornbread, Potato salad
 ingredients = [
   { id = "all-purpose-flour", amount = 0.5, unit = "cup" },
   { id = "oil", amount = 0.5, unit = "cup" },
@@ -424,6 +433,7 @@ cook_minutes = 35
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a18c1e-2c49-7734-b225-6ad66cd5966a", "01a18c22-48d6-73e1-ad5e-9405ad8e716c"]  # Coleslaw, Iced lemon tea
 ingredients = [
   { id = "grits", amount = 1, unit = "cup" },
   { id = "milk", amount = 2, unit = "cup" },
@@ -457,6 +467,7 @@ cook_minutes = 10
 cuisine = "american-british"
 courses = ["snacks-starters"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a15175-3c28-7e20-acbd-34fc9479bf29", "01a18c1e-2c49-7734-b225-6ad66cd5966a"]  # Tomato soup, Coleslaw
 ingredients = [
   { id = "canned-tuna", amount = 1, unit = "can" },
   { id = "mayonnaise", amount = 3, unit = "tbsp" },

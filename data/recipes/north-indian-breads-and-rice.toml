@@ -81,6 +81,7 @@ image = { file = "01a15175-3c1c-71e8-a493-8702aa35c9e3.webp", sha256 = "2efad934
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a18b54-81ba-79c9-9638-10695d0dc5d7", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Cucumber raita, Mirchi ka salan, Laccha onion
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "basmati-rice", amount = 400, unit = "g" },
@@ -661,6 +662,7 @@ image = { file = "01a188e4-2cc1-7d6c-91e0-de20898e32ce.webp", sha256 = "f97670ef
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a18b54-81ba-79c9-9638-10695d0dc5d7"]  # Cucumber raita, Mirchi ka salan
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -710,6 +712,7 @@ cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["awadhi biryani"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a188aa-f1ca-74c1-976b-a15fbbe73ec2"]  # Boondi raita, Shami kebab
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -759,6 +762,7 @@ cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["veg biryani"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a18b54-81ba-79c9-9638-10695d0dc5d7"]  # Cucumber raita, Mirchi ka salan
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -807,6 +811,7 @@ cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["anda biryani"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a18b54-81ba-79c9-9638-10695d0dc5d7"]  # Cucumber raita, Mirchi ka salan
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -848,6 +853,7 @@ cook_minutes = 40
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a18b54-81ba-79c9-9638-10695d0dc5d7"]  # Boondi raita, Mirchi ka salan
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -892,6 +898,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["rajma rice"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Cucumber raita, Kachumber salad
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "cup" },
   { id = "basmati-rice", amount = 1, unit = "cup" },
@@ -932,6 +939,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["comforting", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c01-7f7f-bbc8-f5c5fce48a60"]  # Cucumber raita, Jeera aloo
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -963,6 +971,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["comforting", "spicy"]
 weather = ["under-the-weather", "rainy-day-cosy"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Boondi raita, Kachumber salad
 ingredients = [
   { id = "rice", amount = 0.5, unit = "cup" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },

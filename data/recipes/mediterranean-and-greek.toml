@@ -49,6 +49,7 @@ cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["savoury", "creamy", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18c1a-e227-7ec3-9d05-d16f1fce345b"]  # Greek salad, Tzatziki
 ingredients = [
   { id = "brinjal", amount = 3, unit = "large" },
   { id = "lamb-mince", amount = 750, unit = "g" },
@@ -91,6 +92,7 @@ cuisine = "mediterranean"
 courses = ["snacks-starters", "mains"]
 moods = ["savoury", "crispy"]
 also_known_as = ["spinach pie"]
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18c1a-e227-7ec3-9d05-d16f1fce345b"]  # Greek salad, Tzatziki
 ingredients = [
   { id = "spinach", amount = 750, unit = "g" },
   { id = "feta", amount = 300, unit = "g" },
@@ -157,6 +159,7 @@ courses = ["mains"]
 moods = ["fresh-herby", "savoury", "smoky"]
 weather = ["breezy-evening"]
 also_known_as = ["souvlaki"]
+pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Tzatziki, Greek salad
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -190,6 +193,7 @@ cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["gyro"]
+pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Tzatziki, Greek salad
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -223,6 +227,7 @@ cook_minutes = 70
 cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["tangy", "savoury"]
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18c1a-e227-7ec3-9d05-d16f1fce345b"]  # Greek salad, Tzatziki
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "potato", amount = 1, unit = "kg" },
@@ -256,6 +261,7 @@ courses = ["soups"]
 moods = ["tangy", "comforting", "creamy"]
 weather = ["under-the-weather"]
 also_known_as = ["avgolemono"]
+pairs_with = ["01a18c1a-e225-7218-89eb-d75b3423a537", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Spanakopita, Greek salad
 ingredients = [
   { id = "chicken-stock", amount = 6, unit = "cup" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -285,6 +291,7 @@ cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["giant beans"]
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Greek salad, Tzatziki, Focaccia
 ingredients = [
   { id = "butter-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 1, unit = "large" },
@@ -320,6 +327,7 @@ cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["fresh-herby", "savoury"]
 also_known_as = ["greek roasted vegetables"]
+pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Tzatziki, Greek salad, Focaccia
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -355,6 +363,7 @@ cuisine = "spanish-portuguese"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "comforting"]
 also_known_as = ["tortilla espanola", "spanish omelette"]
+pairs_with = ["01a18c1a-e23e-7160-97b9-408aa2d7c024", "01a18c1a-e240-7717-ba70-99578e6fe513"]  # Gazpacho, Patatas bravas
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -383,6 +392,7 @@ cuisine = "spanish-portuguese"
 courses = ["mains", "rice-breads"]
 moods = ["savoury", "hearty"]
 also_known_as = ["seafood paella"]
+pairs_with = ["01a18c1a-e23e-7160-97b9-408aa2d7c024", "01a18c1a-e240-7717-ba70-99578e6fe513"]  # Gazpacho, Patatas bravas
 ingredients = [
   { id = "bomba-rice", amount = 2, unit = "cup" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -421,6 +431,7 @@ cuisine = "spanish-portuguese"
 courses = ["mains", "rice-breads"]
 moods = ["savoury"]
 also_known_as = ["veg paella"]
+pairs_with = ["01a18c1a-e23e-7160-97b9-408aa2d7c024", "01a18c1a-e249-7758-befc-cf8b638283d0"]  # Gazpacho, Grilled halloumi salad
 ingredients = [
   { id = "bomba-rice", amount = 2, unit = "cup" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -462,6 +473,7 @@ courses = ["soups"]
 moods = ["fresh-herby", "tangy", "light"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["cold tomato soup"]
+pairs_with = ["01a18c1a-e23c-70c8-a6e4-4dcbb7ff6477", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Vegetable paella, Focaccia
 ingredients = [
   { id = "tomato", amount = 1, unit = "kg" },
   { id = "cucumber", amount = 0.5, unit = "medium" },
@@ -493,6 +505,7 @@ cuisine = "spanish-portuguese"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 also_known_as = ["bravas"]
+pairs_with = ["01a18c1a-e237-7e9e-8a9e-8419d18ce300", "01a18c1a-e23e-7160-97b9-408aa2d7c024"]  # Spanish tortilla, Gazpacho
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "olive-oil", amount = 0.33, unit = "cup" },
@@ -526,6 +539,7 @@ cuisine = "spanish-portuguese"
 courses = ["snacks-starters"]
 moods = ["savoury", "spicy"]
 also_known_as = ["gambas al ajillo"]
+pairs_with = ["01a18c1a-e240-7717-ba70-99578e6fe513", "01a18c1a-e23a-7163-812e-7d217736420a", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Patatas bravas, Paella, Focaccia
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "garlic", amount = 8, unit = "clove" },
@@ -556,6 +570,7 @@ image = { file = "01a18c1a-e245-7f15-8b1f-0aedd856d372.webp", sha256 = "fd5bef30
 cuisine = "french"
 courses = ["mains", "sides"]
 moods = ["fresh-herby", "savoury", "light"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c1a-e249-7758-befc-cf8b638283d0"]  # Focaccia, Grilled halloumi salad
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "zucchini", amount = 2, unit = "medium" },
@@ -587,6 +602,7 @@ plan_ahead = { wait_minutes = 60, note = "press for 1 hour" }
 cuisine = "french"
 courses = ["snacks-starters"]
 moods = ["fresh-herby", "savoury"]
+pairs_with = ["01a18c1a-e23e-7160-97b9-408aa2d7c024", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Gazpacho, Greek salad
 ingredients = [
   { id = "baguette", amount = 1, unit = "large" },
   { id = "canned-tuna", amount = 2, unit = "can" },

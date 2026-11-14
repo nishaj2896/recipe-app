@@ -16,6 +16,7 @@ courses = ["mains"]
 moods = ["savoury", "creamy", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["kashmiri yakhni"]
+pairs_with = ["01a18bb1-05a1-73ca-961f-164794f6a53a", "01a18bb1-059f-7a58-b2aa-0261131c9251"]  # Modur pulao, Haak saag
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "curd", amount = 2, unit = "cup" },
@@ -53,6 +54,7 @@ plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb1-059f-7a58-b2aa-0261131c9251", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Jeera rice, Haak saag, Cucumber raita
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "cup" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -89,6 +91,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["lotus stem yakhni"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb1-059f-7a58-b2aa-0261131c9251"]  # Jeera rice, Haak saag
 ingredients = [
   { id = "lotus-root", amount = 400, unit = "g" },
   { id = "curd", amount = 2, unit = "cup" },
@@ -216,6 +219,7 @@ courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["goshtaba"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb1-059f-7a58-b2aa-0261131c9251", "01a18bb1-05a8-7a89-992d-7ce51e64a3e0"]  # Jeera rice, Haak saag, Rista
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "curd", amount = 2, unit = "cup" },
@@ -251,6 +255,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18bb1-05a6-7840-bb37-3b8210e9410c", "01a18bb1-059f-7a58-b2aa-0261131c9251", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Gushtaba, Haak saag, Jeera rice
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "ghee", amount = 3, unit = "tbsp" },
@@ -286,6 +291,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 also_known_as = ["tabak maz"]
+pairs_with = ["01a18bb1-0599-7033-996a-0c33915b7e19", "01a18bb1-05a1-73ca-961f-164794f6a53a", "01a18bb1-05a4-7444-aa2a-a0032794431b"]  # Mutton yakhni, Modur pulao, Kahwa
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "milk", amount = 2, unit = "cup" },
@@ -318,6 +324,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["chaman qaliya"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb1-059f-7a58-b2aa-0261131c9251", "01a18bb1-059d-74f9-b761-6e010a3b1ddb"]  # Jeera rice, Haak saag, Nadru yakhni
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
   { id = "milk", amount = 1.5, unit = "cup" },
@@ -351,6 +358,7 @@ cook_minutes = 40
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188e4-2cbd-7a25-9b2f-bf0fe50666ef", "01a15175-3c26-7418-8595-c4174264ab0c", "01a188ac-05ad-7540-a452-90d483cf792b"]  # Kashmiri pulao, Cucumber raita, Butter naan
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -424,6 +432,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["himachali madra"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb1-059f-7a58-b2aa-0261131c9251"]  # Jeera rice, Haak saag
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "curd", amount = 1.5, unit = "cup" },
@@ -460,6 +469,7 @@ cook_minutes = 80
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "comforting"]
+pairs_with = ["01a18bb1-05b1-7199-8baa-c57efd50eb5f", "01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb1-05b3-7b1d-9b2c-1aac51d99625"]  # Siddu, Jeera rice, Madra
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "buttermilk", amount = 2, unit = "cup" },
@@ -499,6 +509,7 @@ plan_ahead = { wait_minutes = 540, note = "soak overnight" }
 cuisine = "north-indian"
 courses = ["snacks-starters", "breakfast"]
 moods = ["crispy", "savoury"]
+pairs_with = ["01a188e4-2cd7-70b5-a340-42122d9c8976", "01a188a8-feab-7a94-b669-c2287146ded7", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Imli chutney, Kala chana curry, Masala chai
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "whole-urad", amount = 0.5, unit = "cup" },

@@ -72,6 +72,7 @@ image = { file = "01a18c16-b1bc-7bbc-91a7-36928f0fe539.webp", sha256 = "d0d59727
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a18c16-b1dc-7661-b3c5-f26b7b54eaab"]  # Guacamole, Pico de gallo, Refried beans
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "corn-tortillas", amount = 12, unit = "piece" },
@@ -106,6 +107,7 @@ image = { file = "01a18c16-b1bf-7519-9fd0-abe8820a9743.webp", sha256 = "7c2c3239
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["fresh-herby", "savoury", "crispy"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c"]  # Guacamole, Pico de gallo
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "corn-tortillas", amount = 12, unit = "piece" },
@@ -140,6 +142,7 @@ cook_minutes = 15
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c"]  # Guacamole, Pico de gallo
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "large" },
   { id = "pinto-beans", amount = 2, unit = "can" },
@@ -172,6 +175,7 @@ cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "spicy", "hearty"]
 also_known_as = ["burrito bowl"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c"]  # Guacamole, Pico de gallo
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "chicken", amount = 600, unit = "g" },
@@ -211,6 +215,7 @@ image = { file = "01a18c16-b1c5-7f4d-8ead-a6d31cb5c333.webp", sha256 = "996a2aeb
 cuisine = "mexican-latin"
 courses = ["snacks-starters", "mains"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a18c16-b1de-73bd-83d6-265b83a49fbb"]  # Guacamole, Pico de gallo, Black bean soup
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -243,6 +248,7 @@ image = { file = "01a18c16-b1c8-7dc9-abcd-f837e31826be.webp", sha256 = "69f1e40c
 cuisine = "mexican-latin"
 courses = ["snacks-starters"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a18c16-b1de-73bd-83d6-265b83a49fbb"]  # Guacamole, Pico de gallo, Black bean soup
 ingredients = [
   { id = "flour-tortillas", amount = 4, unit = "medium" },
   { id = "cheddar", amount = 1, unit = "cup" },
@@ -271,6 +277,7 @@ image = { file = "01a18c16-b1ca-78fe-b3fe-a064097e22c9.webp", sha256 = "75d36248
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["spicy", "creamy", "savoury"]
+pairs_with = ["01a18c16-b1da-75e9-9ce3-dc405ae494ae", "01a18c16-b1dc-7661-b3c5-f26b7b54eaab", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Mexican rice, Refried beans, Guacamole
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "chicken", amount = 500, unit = "g" },
@@ -308,6 +315,7 @@ cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["spicy", "creamy", "savoury"]
 also_known_as = ["veg enchiladas"]
+pairs_with = ["01a18c16-b1dc-7661-b3c5-f26b7b54eaab", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Refried beans, Guacamole
 ingredients = [
   { id = "corn-tortillas", amount = 8, unit = "piece" },
   { id = "zucchini", amount = 1, unit = "medium" },
@@ -414,6 +422,7 @@ cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["smoky", "spicy", "savoury"]
 also_known_as = ["fajitas"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a18c16-b1da-75e9-9ce3-dc405ae494ae"]  # Guacamole, Pico de gallo, Mexican rice
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "bell-pepper", amount = 3, unit = "medium" },
@@ -452,6 +461,7 @@ courses = ["mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in", "grey-gloomy"]
 also_known_as = ["chili con carne"]
+pairs_with = ["01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Cornbread, Guacamole
 ingredients = [
   { id = "beef-mince", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -492,6 +502,7 @@ courses = ["mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["veggie chili", "bean chilli"]
+pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c"]  # Guacamole, Pico de gallo
 ingredients = [
   { id = "kidney-beans", amount = 1, unit = "can" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -589,6 +600,7 @@ cuisine = "mexican-latin"
 courses = ["soups"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a18c16-b1c8-7dc9-abcd-f837e31826be", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Cheese quesadilla, Guacamole
 ingredients = [
   { id = "black-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -625,6 +637,7 @@ courses = ["snacks-starters"]
 moods = ["smoky", "creamy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["mexican street corn"]
+pairs_with = ["01a18c16-b1c1-7e5b-9ac6-e79c9ffcfbf1", "01a18c16-b1cc-7b35-81e9-492fe634f2dc"]  # Bean and cheese burrito, Vegetable enchiladas
 ingredients = [
   { id = "corn-on-the-cob", amount = 4, unit = "piece" },
   { id = "butter", amount = 2, unit = "tbsp" },
@@ -655,6 +668,7 @@ courses = ["soups"]
 moods = ["spicy", "savoury", "comforting"]
 weather = ["under-the-weather"]
 also_known_as = ["sopa de tortilla"]
+pairs_with = ["01a18c16-b1c8-7dc9-abcd-f837e31826be", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Cheese quesadilla, Guacamole
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "chicken-stock", amount = 5, unit = "cup" },
@@ -692,6 +706,7 @@ courses = ["soups", "mains"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["posole"]
+pairs_with = ["01a18c16-b1c8-7dc9-abcd-f837e31826be", "01a18c16-b1e0-7d3b-b9f3-01fe6b89235a"]  # Cheese quesadilla, Elote
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "hominy", amount = 2, unit = "can" },
@@ -725,6 +740,7 @@ cook_minutes = 50
 cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
+pairs_with = ["01a18c16-b1dc-7661-b3c5-f26b7b54eaab", "01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Refried beans, Guacamole, Fried plantains
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -762,6 +778,7 @@ cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["moros y cristianos"]
+pairs_with = ["01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb", "01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c"]  # Fried plantains, Guacamole, Pico de gallo
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -796,6 +813,7 @@ cuisine = "mexican-latin"
 courses = ["snacks-starters"]
 moods = ["savoury", "crispy"]
 also_known_as = ["empanada"]
+pairs_with = ["01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Pico de gallo, Guacamole
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "butter", amount = 0.5, unit = "cup" },
@@ -832,6 +850,7 @@ cuisine = "mexican-latin"
 courses = ["breakfast", "snacks-starters"]
 moods = ["savoury"]
 also_known_as = ["arepa"]
+pairs_with = ["01a18c16-b1de-73bd-83d6-265b83a49fbb", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Black bean soup, Guacamole
 ingredients = [
   { id = "precooked-cornmeal", amount = 2, unit = "cup" },
   { id = "black-beans", amount = 1, unit = "can" },
@@ -861,6 +880,7 @@ cuisine = "mexican-latin"
 courses = ["snacks-starters"]
 moods = ["tangy", "fresh-herby", "light"]
 weather = ["cool-down", "sticky-sluggish"]
+pairs_with = ["01a18c16-b1e0-7d3b-b9f3-01fe6b89235a", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Elote, Guacamole
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "lime", amount = 6, unit = "medium" },
