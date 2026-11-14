@@ -11,6 +11,7 @@ from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.matching import Pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters
+from recipe_app.domain.recipe_search import Found, RecipeQuery
 
 
 class RecipeRepository(Protocol):
@@ -31,5 +32,13 @@ class RecipeRepository(Protocol):
         Exactly `resume(rank(every recipe, pantry, filters), after)` with each
         tier cut to `limit` (ADR-0003 rules 5, 6 and 9; ADR-0007 rule 1). The
         in-memory adapter computes it that way and is the reference.
+        """
+        ...
+
+    async def find(self, query: RecipeQuery, limit: int, offset: int) -> Found:
+        """Recipes matching typed text, best first (ADR-0012 rule 10).
+
+        Exactly `recipe_search.find(every recipe, query, limit, offset)`;
+        the in-memory adapter computes it that way and is the reference.
         """
         ...

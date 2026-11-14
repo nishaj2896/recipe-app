@@ -267,6 +267,30 @@ class RecipeDetail(BaseModel):
     )
 
 
+class FoundRecipe(BaseModel):
+    """A recipe search result: enough for the dropdown and "See all"."""
+
+    id: UUID
+    name: str
+    cuisine: Cuisine | None
+    total_minutes: int
+    diet: Diet
+    jain: bool
+    image: RecipeImage | None
+    allergens: list[Allergen] = Field(
+        description="Best-effort: ready-made ingredients can hide allergens."
+    )
+    ingredient_ids: list[str] = Field(
+        description="Every ingredient, so the app can count what the pantry "
+        "has without sending it."
+    )
+
+
+class FoundRecipes(BaseModel):
+    results: list[FoundRecipe]
+    total: int = Field(description='Every match, for "See all 41 recipes".')
+
+
 class CategoryRef(BaseModel):
     id: str
     name: str
