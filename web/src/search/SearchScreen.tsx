@@ -34,7 +34,7 @@ export function SearchScreen() {
     total === undefined
       ? "Recipes"
       : total === 0
-        ? `No recipe matches “${text.trim()}”`
+        ? `No recipe matches “${results.data?.pages[0]?.q ?? ""}”`
         : `${String(total)} ${total === 1 ? "recipe" : "recipes"}`;
   // Search pages stop at offset 200 (ADR-0012 rule 11), so a broad word
   // lists fewer than it finds: say so where the list ends.

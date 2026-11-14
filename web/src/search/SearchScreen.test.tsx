@@ -173,3 +173,35 @@ test("the deck and the cookbook open search", async () => {
   ).toHaveFocus();
   expect(screen.getByText(/Type a dish, an ingredient or a cuisine/)).toBeInTheDocument();
 });
+
+test("while the next search loads, the last answer still names its own text", async () => {
+  stubApi();
+  const fetch = globalThis.fetch;
+  vi.stubGlobal("fetch", async (request: Request) => {
+    const url = new URL(request.url);
+    if (url.pathname !== "/api/v1/recipes") return fetch(request);
+    // The second search never answers, so the first stays on screen.
+    if (url.searchParams.get("q") !== "zz") return new Promise<Response>(() => {});
+    return Response.json({ results: [], total: 0 });
+  });
+  window.history.pushState({}, "", "/search?q=zz");
+  const user = userEvent.setup();
+  render(<App />);
+
+  expect(
+    await screen.findByRole(
+      "heading",
+      { name: "No recipe matches “zz”" },
+      { timeout: 5000 },
+    ),
+  ).toBeInTheDocument();
+  await user.type(
+    screen.getByRole("searchbox", { name: "Search recipes or ingredients" }),
+    "q",
+  );
+  // Past the 200 ms pause, so the next search has started.
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  expect(
+    screen.getByRole("heading", { name: "No recipe matches “zz”" }),
+  ).toBeInTheDocument();
+});

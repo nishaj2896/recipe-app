@@ -29,7 +29,7 @@ export function RecipeResults({ text }: { text: string }) {
         </p>
       )}
       {found.data && total === 0 && (
-        <p className={styles.status}>No recipe matches “{settled}”.</p>
+        <p className={styles.status}>No recipe matches “{found.data.q}”.</p>
       )}
       <ul className={styles.list}>
         {(found.data?.results ?? []).map((recipe) => (

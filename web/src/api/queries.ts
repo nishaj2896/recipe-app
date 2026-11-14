@@ -81,7 +81,9 @@ async function findRecipes(text: string, limit: number, offset: number) {
     params: { query: { q: text, limit, offset } },
   });
   if (error) throw new Error(`could not search recipes: ${error.title}`);
-  return data;
+  // The text rides along: while the next search loads, the last results
+  // still show, and must be described by the text they answer.
+  return { ...data, q: text };
 }
 
 /** Whether typed text is long enough to search recipes for. */
