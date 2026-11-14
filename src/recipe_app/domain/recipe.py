@@ -39,6 +39,9 @@ PLAN_AHEAD_FIELDS = frozenset({"wait_minutes", "note"})
 TAG_FIELDS = frozenset(
     {"cuisine", "courses", "moods", "weather", "also_known_as", "pairs_with"}
 )
+# Every recipe file sets these (ADR-0012 rule 3); the search and the mood
+# screen read them for every recipe.
+REQUIRED_TAG_FIELDS = ("cuisine", "courses", "moods")
 
 
 @dataclass(frozen=True, slots=True)
@@ -57,8 +60,9 @@ class PlanAhead:
 class RecipeTags:
     """What the search, the mood screen and pairings read (ADR-0012 rule 1).
 
-    Every field is optional until the content pull requests tag every recipe;
-    the lists keep the order written.
+    A recipe file must set cuisine, courses and moods (ADR-0012 rule 3;
+    missing_tags). A recipe built in code, as in tests, may leave them
+    empty. The lists keep the order written.
     """
 
     cuisine: Cuisine | None = None
@@ -233,7 +237,8 @@ def check_tags(
 ) -> RecipeTags:
     """The tag fields as written in a recipe file (ADR-0012 rules 1 and 3).
 
-    Every field is optional for now. Checks that `pairs_with` names other
+    Checks each field that is present; missing_tags checks that a recipe
+    file sets the required ones. Checks that `pairs_with` names other
     recipes that exist need the whole book, so parse_recipe_book does those.
     Adds every problem to `problems`, without naming the recipe.
     """
@@ -260,6 +265,13 @@ def check_tags(
         also_known_as=aliases,
         pairs_with=pairs,
     )
+
+
+def missing_tags(row: Mapping[str, object]) -> list[str]:
+    """A problem for each of cuisine, courses and moods a recipe file leaves out
+    (ADR-0012 rule 3).
+    """
+    return [f"{field} is required" for field in REQUIRED_TAG_FIELDS if field not in row]
 
 
 def _choices[E: (Course, Mood, Weather)](

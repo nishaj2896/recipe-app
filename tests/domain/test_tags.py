@@ -46,11 +46,25 @@ def test_tags_are_kept() -> None:
     assert recipe.tags.pairs_with == ()
 
 
-def test_tags_are_optional_for_now() -> None:
+def test_optional_tags_default_to_empty() -> None:
     recipe = _book(recipe_table()).recipes[0]
 
-    assert recipe.tags.cuisine is None
-    assert recipe.tags.courses == ()
+    assert recipe.tags.weather == ()
+    assert recipe.tags.also_known_as == ()
+    assert recipe.tags.pairs_with == ()
+
+
+@pytest.mark.parametrize("field", ["cuisine", "courses", "moods"])
+def test_cuisine_courses_and_moods_are_required(field: str) -> None:
+    problems = parse(recipe_table(**{field: None}))
+
+    assert problems == [f"a.toml recipe #1: {field} is required"]
+
+
+def test_missing_tags_show_even_without_an_id() -> None:
+    problems = parse(recipe_table(id=None, cuisine=None))
+
+    assert "a.toml recipe #1: cuisine is required" in problems, problems
 
 
 def test_pairs_with_keeps_its_order() -> None:
