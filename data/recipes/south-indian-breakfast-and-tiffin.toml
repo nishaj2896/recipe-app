@@ -1095,6 +1095,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["crispy"]
 also_known_as = ["kerala parotta"]
+pairs_with = ["01a18bb1-05c3-79ba-b92b-2119c286d751", "01a18bb1-05c5-7f08-9a8a-78805b0d5863", "01a18bb1-05ba-7a1d-a500-a643e4a781db", "01a18bb1-05bc-726c-a26b-6de1ffd7076c"]  # Kerala vegetable stew, Kadala curry, Kozhi varutha curry, Kerala beef fry
 ingredients = [
   { id = "all-purpose-flour", amount = 3, unit = "cup" },
   { id = "milk", amount = 0.5, unit = "cup" },

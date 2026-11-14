@@ -928,6 +928,7 @@ plan_ahead = { wait_minutes = 60, note = "let the dough rise for 1 hour" }
 cuisine = "italian"
 courses = ["rice-breads"]
 moods = ["savoury", "fresh-herby"]
+pairs_with = ["01a18bbd-3cfb-7ae2-8e94-3abb35af35c9", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a15175-3c21-75ea-9433-d3744b9ac581", "01a18bbd-3cfd-730f-9137-674584b35d79"]  # Minestrone, Caprese salad, Penne arrabbiata, Ribollita
 ingredients = [
   { id = "bread-flour", amount = 4, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },

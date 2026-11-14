@@ -16,6 +16,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
 also_known_as = ["veg pulao"]
+pairs_with = ["01a15175-3c05-7501-8755-44f4683cdaee", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a18812-66e4-7839-95e5-6eec566ea16c", "01a188e4-2cd3-7853-8804-0034c2b6a9f7"]  # Paneer butter masala, Dal makhani, Chicken korma, Boondi raita
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "carrot", amount = 1, unit = "medium" },
@@ -54,6 +55,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "light"]
 also_known_as = ["cumin rice"]
+pairs_with = ["01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c0b-7b09-ba59-3db099c27b86", "01a15175-3c1b-7327-a70a-a937797a18f2", "01a18812-6725-7086-8370-27cb6d78f9e4"]  # Dal tadka, Rajma, Butter chicken, Rogan josh
 ingredients = [
   { id = "basmati-rice", amount = 300, unit = "g" },
   { id = "cumin-seeds", amount = 2, unit = "tsp" },
@@ -118,6 +120,7 @@ image = { file = "01a188ac-0597-7bfe-8ab8-24300d82453f.webp", sha256 = "446f8197
 cuisine = "north-indian"
 courses = ["rice-breads", "breakfast"]
 moods = ["savoury"]
+pairs_with = ["01a15175-3c05-7501-8755-44f4683cdaee", "01a15175-3c18-79cf-a283-c1a2dae07776", "01a15175-3c00-74aa-990d-9f9791e9d729", "01a15175-3c1f-7c61-883c-38096935aec4"]  # Paneer butter masala, Egg bhurji, Aloo matar, Keema matar
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 4, unit = "tbsp" },
@@ -147,6 +150,7 @@ courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "spicy", "hearty"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["aloo parantha", "potato paratha"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Cucumber raita, Masala chai, Lassi
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -185,6 +189,7 @@ cuisine = "north-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "hearty"]
 also_known_as = ["gobhi paratha"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Cucumber raita, Masala chai, Lassi
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "cauliflower", amount = 0.5, unit = "small-head" },
@@ -218,6 +223,7 @@ cook_minutes = 30
 cuisine = "north-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Cucumber raita, Masala chai, Lassi
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "paneer", amount = 200, unit = "g" },
@@ -249,6 +255,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "fresh-herby"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c00-74aa-990d-9f9791e9d729", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Cucumber raita, Aloo matar, Masala chai
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "fenugreek-leaves", amount = 100, unit = "g" },
@@ -280,6 +287,7 @@ cook_minutes = 30
 cuisine = "north-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "spicy"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Cucumber raita, Masala chai, Lassi
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "radish", amount = 2, unit = "medium" },
@@ -314,6 +322,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["crispy", "savoury"]
 also_known_as = ["laccha paratha"]
+pairs_with = ["01a15175-3c05-7501-8755-44f4683cdaee", "01a15175-3c1b-7327-a70a-a937797a18f2", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a18bae-8f87-76cb-9c2c-58f538f6ec3c"]  # Paneer butter masala, Butter chicken, Dal makhani, Achari chicken
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 5, unit = "tbsp" },
@@ -342,6 +351,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["light"]
 also_known_as = ["chapati", "chapathi"]
+pairs_with = ["01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c02-76b4-b315-57189e41c2d0", "01a15175-3c04-77e6-a1ae-16fb9ffe2211", "01a15175-3c1a-7713-b024-befd853a33b0"]  # Dal tadka, Aloo gobi, Palak paneer, Chicken curry
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 1, unit = "tbsp" },
@@ -367,6 +377,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["smoky"]
 also_known_as = ["tandoor roti"]
+pairs_with = ["01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a18813-915d-78a8-a3da-6f5f2edc97ba", "01a18812-66e1-7e53-9639-1744613bb000", "01a18812-6729-72de-b1c0-1cd7ec0890d3"]  # Dal makhani, Kadai paneer, Kadai chicken, Bhuna gosht
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 2, unit = "tbsp" },
@@ -394,6 +405,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "spicy"]
+pairs_with = ["01a18814-ee9d-725a-9e01-d7e3b5ed10fe", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Sarson ka saag, Dal makhani, Lassi
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 1, unit = "cup" },
@@ -428,6 +440,7 @@ image = { file = "01a188ac-05ad-7540-a452-90d483cf792b.webp", sha256 = "35042958
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "creamy"]
+pairs_with = ["01a15175-3c05-7501-8755-44f4683cdaee", "01a15175-3c1b-7327-a70a-a937797a18f2", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a18812-6725-7086-8370-27cb6d78f9e4"]  # Paneer butter masala, Butter chicken, Dal makhani, Rogan josh
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -460,6 +473,7 @@ image = { file = "01a188ac-05af-7758-b298-8c9999377ec6.webp", sha256 = "9966aad0
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
+pairs_with = ["01a18812-66df-7ccf-b265-66e449208513", "01a18813-9166-7175-8846-b0ce683b98f3", "01a18813-915d-78a8-a3da-6f5f2edc97ba"]  # Chicken tikka masala, Paneer tikka masala, Kadai paneer
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -495,6 +509,7 @@ image = { file = "01a188ac-05b1-784f-bb14-2bba03c32a18.webp", sha256 = "8cd4a7d5
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["crispy"]
+pairs_with = ["01a15175-3c0a-725c-9c90-73d0fa294994", "01a188a8-fe99-7464-a603-5cf6a0b60ff9", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Chana masala, Pindi chole, Lassi
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 2, unit = "tbsp" },
@@ -527,6 +542,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["crispy"]
 also_known_as = ["poori"]
+pairs_with = ["01a18bae-8f68-75e7-8972-d3050a4170c2", "01a18813-916d-76a8-8e55-04610b474e19", "01a188a8-feab-7a94-b669-c2287146ded7", "01a188e4-2cde-7eb4-af0f-2283def40ac1"]  # Aloo rasedar, Dum aloo, Kala chana curry, Sooji halwa
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "semolina", amount = 1, unit = "tbsp" },
@@ -555,6 +571,7 @@ image = { file = "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2.webp", sha256 = "c0863c4f
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
+pairs_with = ["01a188a8-fe99-7464-a603-5cf6a0b60ff9", "01a15175-3c0a-725c-9c90-73d0fa294994", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Pindi chole, Chana masala, Laccha onion
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -586,6 +603,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "light"]
 also_known_as = ["peas pulao"]
+pairs_with = ["01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a15175-3c05-7501-8755-44f4683cdaee", "01a18812-66e4-7839-95e5-6eec566ea16c", "01a188e4-2cd3-7853-8804-0034c2b6a9f7"]  # Dal makhani, Paneer butter masala, Chicken korma, Boondi raita
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -621,6 +639,7 @@ image = { file = "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef.webp", sha256 = "d6a6018e
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["sweet"]
+pairs_with = ["01a18813-915f-7056-bd66-9f687cc3ed6f", "01a18813-9168-7124-87f8-728a0e7c0890", "01a18812-6723-7412-8bfb-1565d14f7e7f", "01a18812-6725-7086-8370-27cb6d78f9e4"]  # Shahi paneer, Malai kofta, Murgh musallam, Rogan josh
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "milk", amount = 0.5, unit = "cup" },

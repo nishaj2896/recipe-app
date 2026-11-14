@@ -444,6 +444,7 @@ cuisine = "japanese"
 courses = ["breakfast", "sides"]
 moods = ["sweet", "savoury", "light"]
 also_known_as = ["japanese omelette"]
+pairs_with = ["01a18c12-058a-7d1f-979e-239d8d907c5e", "01a18c12-059a-7721-81dd-7131e81407a3", "01a18c12-058c-79a2-bbdb-2322eab198b0"]  # Miso soup, Onigiri, Vegetable ramen
 ingredients = [
   { id = "egg", amount = 4, unit = "large" },
   { id = "sugar", amount = 2, unit = "tsp" },
@@ -599,6 +600,7 @@ courses = ["salads", "sides"]
 moods = ["tangy", "fresh-herby", "light"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["sunomono"]
+pairs_with = ["01a18c12-057e-7570-9122-4d5aa8119343", "01a18c12-0581-7b81-9a6b-9632b57e5a6b", "01a18c22-48c0-7d0a-8ea9-de8935531e63", "01a18c12-059e-722d-a067-310f47137a7d"]  # Salmon teriyaki, Chicken katsu, Teriyaki tofu bowl, Vegetable tempura
 ingredients = [
   { id = "cucumber", amount = 2, unit = "medium" },
   { id = "wakame", amount = 1, unit = "tbsp" },
@@ -889,6 +891,7 @@ cuisine = "korean"
 courses = ["sides", "breakfast"]
 moods = ["savoury", "light"]
 also_known_as = ["korean rolled omelette"]
+pairs_with = ["01a18c12-05ae-78d5-bd9b-c8a6cf79f983", "01a18c12-05ac-7ede-bdd7-28382fdd8332", "01a18c12-05b8-7ce9-be22-d87e34acc693"]  # Kimchi jjigae, Bulgogi, Doenjang jjigae
 ingredients = [
   { id = "egg", amount = 5, unit = "large" },
   { id = "carrot", amount = 0.5, unit = "small" },
@@ -953,6 +956,7 @@ cuisine = "korean"
 courses = ["sides"]
 moods = ["savoury", "fresh-herby", "light"]
 also_known_as = ["soybean sprout salad"]
+pairs_with = ["01a18c12-05a5-7159-8e6a-b67889e637dd", "01a18c12-05b8-7ce9-be22-d87e34acc693", "01a18c12-05ac-7ede-bdd7-28382fdd8332"]  # Bibimbap, Doenjang jjigae, Bulgogi
 ingredients = [
   { id = "soybean-sprouts", amount = 300, unit = "g" },
   { id = "garlic", amount = 1, unit = "clove" },

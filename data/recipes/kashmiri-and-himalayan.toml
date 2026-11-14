@@ -128,6 +128,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "light"]
 also_known_as = ["haakh", "kashmiri saag"]
+pairs_with = ["01a18bb1-059b-75c8-9915-6cfb22b09272", "01a18bb1-059d-74f9-b761-6e010a3b1ddb", "01a18812-6725-7086-8370-27cb6d78f9e4", "01a18bb1-0599-7033-996a-0c33915b7e19"]  # Kashmiri rajma, Nadru yakhni, Rogan josh, Mutton yakhni
 ingredients = [
   { id = "collard-greens", amount = 500, unit = "g" },
   { id = "dried-red-chillies", amount = 3, unit = "piece" },
@@ -155,6 +156,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["sweet"]
 also_known_as = ["kashmiri sweet pulao"]
+pairs_with = ["01a18bb1-059b-75c8-9915-6cfb22b09272", "01a18bb1-05ad-75ec-b930-539fe274a355", "01a18812-6725-7086-8370-27cb6d78f9e4", "01a18bb1-0599-7033-996a-0c33915b7e19"]  # Kashmiri rajma, Chaman kaliya, Rogan josh, Mutton yakhni
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "milk", amount = 1, unit = "cup" },
@@ -398,6 +400,7 @@ cuisine = "north-indian"
 courses = ["rice-breads", "breakfast"]
 moods = ["savoury", "comforting"]
 weather = ["warming"]
+pairs_with = ["01a18bb1-05b3-7b1d-9b2c-1aac51d99625", "01a18bb1-05b5-723b-a26c-80807806dc9b", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Madra, Chha gosht, Masala chai
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "active-dry-yeast", amount = 1, unit = "tsp" },

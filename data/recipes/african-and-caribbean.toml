@@ -335,6 +335,7 @@ cook_minutes = 25
 cuisine = "african-caribbean"
 courses = ["sides"]
 moods = ["spicy", "tangy", "savoury"]
+pairs_with = ["01a18c4a-5f93-7445-b9e5-2ace755af2f9", "01a18c4a-5f97-7a26-8dd0-5204054b53a1", "01a18c4a-5f9c-76aa-b08e-975f307ae259", "01a18c4a-5fa1-7e18-b603-388db5e762a7"]  # Bobotie, Peri peri chicken, Misir wot, Githeri
 ingredients = [
   { id = "onion", amount = 1, unit = "large" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -435,6 +436,7 @@ cook_minutes = 35
 cuisine = "african-caribbean"
 courses = ["rice-breads", "sides"]
 moods = ["savoury", "creamy", "comforting"]
+pairs_with = ["01a18c4a-5fa8-7cf2-b166-0d8dcc87af9a", "01a18c4a-5fac-7f0e-bbdc-0fe2ceaa316a", "01a18c4a-5fb1-7545-9231-705002a3aa96", "01a18c4a-5fb3-7bd1-9db2-f8d7f9200fcb"]  # Jerk chicken, Curry goat, Brown stew chicken, Fried plantains
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "kidney-beans", amount = 1, unit = "can" },

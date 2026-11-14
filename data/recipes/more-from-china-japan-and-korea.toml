@@ -284,6 +284,7 @@ cuisine = "japanese"
 courses = ["sides"]
 moods = ["savoury", "light"]
 also_known_as = ["japanese egg custard"]
+pairs_with = ["01a18c12-057e-7570-9122-4d5aa8119343", "01a18c12-057c-7595-8e84-0c214eda32e4", "01a18c12-058a-7d1f-979e-239d8d907c5e"]  # Salmon teriyaki, Chicken teriyaki, Miso soup
 ingredients = [
   { id = "egg", amount = 3, unit = "large" },
   { id = "kombu", amount = 5, unit = "g" },

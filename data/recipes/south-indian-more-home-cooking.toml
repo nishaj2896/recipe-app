@@ -385,6 +385,7 @@ cook_minutes = 15
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["savoury", "light"]
+pairs_with = ["01a18bb3-793e-7973-9268-9a1926287bf2", "01a18bb3-793b-75c4-8d52-015913570d99", "01a188ea-3cb3-7eba-97c5-eeb4d7c942c5"]  # Pulissery, Kerala parippu curry, Moru curry
 ingredients = [
   { id = "french-beans", amount = 400, unit = "g" },
   { id = "shallot", amount = 5, unit = "piece" },
@@ -414,6 +415,7 @@ cook_minutes = 12
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["light", "savoury"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9a-72ea-8684-721851036d44", "01a188ea-3cf0-70ca-868f-023f55d47c2b"]  # Sambar, Rasam, Puli kuzhambu
 ingredients = [
   { id = "cabbage", amount = 400, unit = "g" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -446,6 +448,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["light", "fresh-herby"]
 also_known_as = ["mashed greens"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9a-72ea-8684-721851036d44", "01a18b54-81b2-73c3-a493-d7534d850d9b"]  # Sambar, Rasam, Paruppu usili
 ingredients = [
   { id = "amaranth-leaves", amount = 300, unit = "g" },
   { id = "garlic", amount = 4, unit = "clove" },
@@ -476,6 +479,7 @@ cook_minutes = 30
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["comforting", "light"]
+pairs_with = ["01a188ea-3c9a-72ea-8684-721851036d44", "01a188e6-a874-7436-afac-bc19d73fa001", "01a188ea-3c9f-74bf-ace5-568ea6e5dff0"]  # Rasam, Ragi mudde, Pepper rasam
 ingredients = [
   { id = "amaranth-leaves", amount = 250, unit = "g" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -615,6 +619,7 @@ cook_minutes = 25
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["crispy", "spicy"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a18b54-81bf-717b-ba26-18dc1c50374c", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Pappu (Andhra dal), Tomato pappu, Rasam
 ingredients = [
   { id = "ivy-gourd", amount = 400, unit = "g" },
   { id = "garlic", amount = 5, unit = "clove" },
@@ -647,6 +652,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["crispy", "spicy"]
 also_known_as = ["okra fry", "bhindi fry"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a18b54-81bf-717b-ba26-18dc1c50374c", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Pappu (Andhra dal), Tomato pappu, Rasam
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -677,6 +683,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["spicy", "crispy"]
 also_known_as = ["bangaladumpa vepudu"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a18b54-81bf-717b-ba26-18dc1c50374c", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Pappu (Andhra dal), Tomato pappu, Rasam
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "garlic", amount = 5, unit = "clove" },

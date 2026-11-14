@@ -92,6 +92,7 @@ cuisine = "south-asian"
 courses = ["sides"]
 moods = ["spicy", "tangy"]
 also_known_as = ["coconut sambol"]
+pairs_with = ["01a18c4a-5f73-7aea-a8ab-569912f8df1b", "01a18c4a-5f78-7d6f-a4fe-8f109cab562f", "01a18c4a-5f7a-7e5c-997b-ef9101e0b2a2", "01a18c4a-5f6c-7ce6-a337-75ae717b09c9"]  # Kottu roti, Sri Lankan dhal curry, Egg hoppers, Sri Lankan chicken curry
 ingredients = [
   { id = "coconut", amount = 1.5, unit = "cup" },
   { id = "shallot", amount = 3, unit = "piece" },

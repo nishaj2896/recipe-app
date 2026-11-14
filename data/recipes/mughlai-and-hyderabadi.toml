@@ -259,6 +259,7 @@ image = { file = "01a18bb5-de4e-7363-aa58-26f9cf296cb5.webp", sha256 = "788ee671
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a18bb5-de50-7373-9e6b-7e673c767eed", "01a18bb5-de4b-7a71-b8ad-29efc0aec3a4", "01a18bb5-de44-75ae-a292-eacaadbb0d01"]  # Bagara khana, Khatti dal, Dum ka chicken
 ingredients = [
   { id = "tomato", amount = 6, unit = "medium" },
   { id = "sesame-seeds", amount = 2, unit = "tbsp" },
@@ -295,6 +296,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
 also_known_as = ["bagara rice"]
+pairs_with = ["01a18bb5-de44-75ae-a292-eacaadbb0d01", "01a18b54-81b8-7a60-85b4-7519966796a9", "01a18b54-81ba-79c9-9638-10695d0dc5d7", "01a18bb5-de42-716b-bded-2a9c5cd4e7ae"]  # Dum ka chicken, Bagara baingan, Mirchi ka salan, Pathar ka gosht
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },

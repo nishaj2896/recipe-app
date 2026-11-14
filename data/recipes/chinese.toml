@@ -591,6 +591,7 @@ cuisine = "chinese"
 courses = ["sides"]
 moods = ["savoury", "fresh-herby", "light"]
 also_known_as = ["bok choy"]
+pairs_with = ["01a18c0c-0c9b-7fd2-a681-080da440ba0a", "01a18c0c-0c9d-704d-9c75-895ccf99a70e", "01a18c0c-0c8d-7a83-a7e3-2c0d7c110e37"]  # Hong shao rou, Ginger scallion fish, Char siu pork
 ingredients = [
   { id = "bok-choy", amount = 6, unit = "piece" },
   { id = "garlic", amount = 5, unit = "clove" },
@@ -618,6 +619,7 @@ cuisine = "chinese"
 courses = ["sides"]
 moods = ["spicy", "savoury"]
 also_known_as = ["sichuan green beans"]
+pairs_with = ["01a18bba-785c-7cb8-834d-24e0197260c4", "01a18c0c-0c9b-7fd2-a681-080da440ba0a", "01a18bba-785e-7793-8335-d5dc9b148364"]  # Kung pao chicken, Hong shao rou, Mapo tofu
 ingredients = [
   { id = "french-beans", amount = 400, unit = "g" },
   { id = "pork", amount = 100, unit = "g" },
@@ -819,6 +821,7 @@ cuisine = "chinese"
 courses = ["sides"]
 moods = ["light", "savoury"]
 also_known_as = ["steamed egg custard"]
+pairs_with = ["01a18c0c-0ca4-723c-b4e4-813d4740db1c", "01a18c0c-0c94-7245-8103-1e8150106026", "01a18c0c-0c9d-704d-9c75-895ccf99a70e"]  # Congee, Tomato and egg stir-fry, Ginger scallion fish
 ingredients = [
   { id = "egg", amount = 3, unit = "large" },
   { id = "soy-sauce", amount = 1, unit = "tbsp" },

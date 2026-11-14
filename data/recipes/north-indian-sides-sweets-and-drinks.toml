@@ -43,6 +43,7 @@ courses = ["sides"]
 moods = ["creamy", "fresh-herby", "light"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["kheera raita"]
+pairs_with = ["01a15175-3c1c-71e8-a493-8702aa35c9e3", "01a188e4-2cc5-7d1d-8441-6a87ddb91dee", "01a188ac-0599-7b01-a8c0-c7e57b87d415", "01a188e4-2cc1-7d6c-91e0-de20898e32ce"]  # Chicken biryani, Vegetable biryani, Aloo paratha, Mutton biryani
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "cucumber", amount = 1, unit = "medium" },
@@ -123,6 +124,7 @@ courses = ["salads", "sides"]
 moods = ["fresh-herby", "tangy", "light"]
 weather = ["cool-down"]
 also_known_as = ["kachumber"]
+pairs_with = ["01a188e4-2ccc-7d84-a054-9790a3a27f41", "01a15175-3c1a-7713-b024-befd853a33b0", "01a18bba-7837-7a19-8c57-dc1766a2eb87", "01a15175-3c07-7f8f-85c3-388e5af7e04a"]  # Rajma chawal, Chicken curry, Dhansak, Dal tadka
 ingredients = [
   { id = "tomato", amount = 2, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -148,6 +150,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["creamy", "light"]
 weather = ["cool-down"]
+pairs_with = ["01a188e4-2cca-72b2-8e7d-907f76755018", "01a188e4-2cc3-741b-b1ec-d5dc88859668", "01a15175-3c0f-7496-91c1-4e90dc98797e", "01a188e4-2cd1-7458-b604-22a48aacf77c"]  # Paneer biryani, Lucknowi biryani, Vegetable pulao, Masala khichdi
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "boondi", amount = 0.5, unit = "cup" },
@@ -176,6 +179,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["fresh-herby", "tangy", "spicy"]
 also_known_as = ["pudina chutney", "green chutney"]
+pairs_with = ["01a188aa-f1d8-72f8-b06b-92069ff0ac6b", "01a188aa-f1cc-7900-a94f-6142775566e4", "01a188aa-f1be-73ed-a585-cf2dc55a06d0", "01a188aa-f1cf-7eed-a6b4-363efdcb5cc9"]  # Samosa, Paneer tikka, Chicken tikka, Hara bhara kebab
 ingredients = [
   { id = "mint", amount = 1, unit = "cup" },
   { id = "coriander-leaves", amount = 1, unit = "cup" },
@@ -206,6 +210,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["sweet-sour"]
 also_known_as = ["tamarind chutney", "saunth"]
+pairs_with = ["01a188aa-f1d8-72f8-b06b-92069ff0ac6b", "01a188aa-f1da-773c-b67e-c654f0ec5824", "01a18b5a-d346-7a42-99b1-439ffb638573", "01a18b6c-22eb-7724-bab0-860096ffe397"]  # Samosa, Aloo tikki, Pyaaz kachori, Mirchi vada
 ingredients = [
   { id = "tamarind", amount = 100, unit = "g" },
   { id = "jaggery", amount = 150, unit = "g" },
@@ -238,6 +243,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
 also_known_as = ["lachha pyaz", "onion salad"]
+pairs_with = ["01a15175-3c1b-7327-a70a-a937797a18f2", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a188aa-f1bb-7de8-bf53-445fbba68aca", "01a18bb7-fec4-7656-a6b2-1e578490c3c9"]  # Butter chicken, Dal makhani, Tandoori chicken, Chole bhature
 ingredients = [
   { id = "onion", amount = 2, unit = "medium" },
   { id = "lemon", amount = 1, unit = "medium" },

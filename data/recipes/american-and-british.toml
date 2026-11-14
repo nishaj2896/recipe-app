@@ -812,6 +812,7 @@ cuisine = "american-british"
 courses = ["sides", "salads"]
 moods = ["creamy", "tangy", "fresh-herby"]
 also_known_as = ["slaw"]
+pairs_with = ["01a18c1e-2c26-7602-b476-32b344331bf7", "01a18c1e-2c28-7f4b-8261-947820124c97", "01a18c1e-2c1b-7471-85fe-d890bb9e9534", "01a15175-3c22-7b07-abf6-87ad9705c184"]  # Fried chicken, Barbecue pulled chicken, Veggie burger, Macaroni and cheese
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "small-head" },
   { id = "red-cabbage", amount = 1, unit = "cup" },
@@ -841,6 +842,7 @@ cook_minutes = 20
 cuisine = "american-british"
 courses = ["sides", "salads"]
 moods = ["creamy", "tangy"]
+pairs_with = ["01a18c1e-2c28-7f4b-8261-947820124c97", "01a18c4f-8e43-75c6-8647-fe98c8b15ce7", "01a18c1e-2c1b-7471-85fe-d890bb9e9534", "01a18c4f-8e83-7646-8bd2-bc94525cd58e"]  # Barbecue pulled chicken, Schnitzel, Veggie burger, Black bean burgers
 ingredients = [
   { id = "potato", amount = 1, unit = "kg" },
   { id = "mayonnaise", amount = 0.5, unit = "cup" },
@@ -976,6 +978,7 @@ cuisine = "american-british"
 courses = ["sides", "rice-breads"]
 moods = ["sweet", "savoury"]
 also_known_as = ["corn bread"]
+pairs_with = ["01a18c16-b1d5-7f04-9135-65abc9fff371", "01a18c16-b1d7-7a3a-a3c6-acade1bb6015", "01a18c1e-2c26-7602-b476-32b344331bf7", "01a18c16-b1de-73bd-83d6-265b83a49fbb"]  # Chilli con carne, Vegetarian chilli, Fried chicken, Black bean soup
 ingredients = [
   { id = "cornmeal", amount = 1, unit = "cup" },
   { id = "all-purpose-flour", amount = 1, unit = "cup" },

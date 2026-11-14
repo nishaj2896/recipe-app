@@ -319,6 +319,7 @@ cuisine = "west-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "crispy"]
 also_known_as = ["sindhi koki"]
+pairs_with = ["01a18bba-7843-7da8-9065-2ad4a677f1b5", "01a15175-3c27-73b4-819d-e09422b77b02", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Sindhi kadhi, Masala chai, Cucumber raita
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },

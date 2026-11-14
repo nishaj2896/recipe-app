@@ -298,6 +298,7 @@ courses = ["sides"]
 moods = ["creamy", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["potato gratin", "dauphinoise potatoes"]
+pairs_with = ["01a18c1a-e259-7a4a-8d66-0e670d7dceaf", "01a18c1a-e25e-743c-b81e-5a37d3b511fb", "01a18c1a-e245-7f15-8b1f-0aedd856d372", "01a18c4f-8e7c-7950-bcb5-1169c9b59a47"]  # Coq au vin, Beef bourguignon, Ratatouille, Mushroom stroganoff
 ingredients = [
   { id = "potato", amount = 1, unit = "kg" },
   { id = "whipping-cream", amount = 1.5, unit = "cup" },

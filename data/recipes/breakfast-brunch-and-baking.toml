@@ -760,6 +760,7 @@ cuisine = "american-british"
 courses = ["rice-breads"]
 moods = ["savoury"]
 also_known_as = ["bread rolls"]
+pairs_with = ["01a18c4f-8e41-773d-81a2-1f6f4e80757a", "01a18c4f-8e7c-7950-bcb5-1169c9b59a47", "01a15175-3c28-7e20-acbd-34fc9479bf29", "01a18c4f-8e48-703e-851e-ecff58525a98"]  # Beef stroganoff, Mushroom stroganoff, Tomato soup, Swedish meatballs
 ingredients = [
   { id = "bread-flour", amount = 3.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 2, unit = "tsp" },

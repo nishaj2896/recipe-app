@@ -177,6 +177,7 @@ image = { file = "01a18b5a-d312-74eb-9175-6a54dc96f32c.webp", sha256 = "9e551c03
 cuisine = "west-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18b5a-d31d-7dd0-a9bf-275ed4ca8f72", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Masala chai, Sev tameta nu shaak, Cucumber raita
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "gram-flour", amount = 2, unit = "tbsp" },
@@ -209,6 +210,7 @@ cook_minutes = 25
 cuisine = "west-indian"
 courses = ["breakfast", "rice-breads"]
 moods = ["savoury", "fresh-herby"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a15175-3c26-7418-8595-c4174264ab0c", "01a18b5a-d326-701c-8229-0a8ee2bb57a6"]  # Masala chai, Cucumber raita, Gujarati dal
 ingredients = [
   { id = "whole-wheat-flour", amount = 2, unit = "cup" },
   { id = "fenugreek-leaves", amount = 1, unit = "cup" },
@@ -409,6 +411,7 @@ cuisine = "west-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["bharela bhinda"]
+pairs_with = ["01a18b5a-d326-701c-8229-0a8ee2bb57a6", "01a18b5a-d324-72d0-9af6-abcbed788f48", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Gujarati dal, Gujarati kadhi, Phulka
 ingredients = [
   { id = "okra", amount = 400, unit = "g" },
   { id = "gram-flour", amount = 3, unit = "tbsp" },
@@ -445,6 +448,7 @@ cuisine = "west-indian"
 courses = ["sides"]
 moods = ["smoky", "savoury"]
 also_known_as = ["baingan bharta gujarati style"]
+pairs_with = ["01a18b5a-d32d-7abf-acf8-0c6a378df2fa", "01a18b5a-d324-72d0-9af6-abcbed788f48", "01a188e4-2cce-7282-8ab9-28675b97891a"]  # Bajra rotla, Gujarati kadhi, Khichdi
 ingredients = [
   { id = "brinjal", amount = 1, unit = "large" },
   { id = "spring-onions", amount = 4, unit = "piece" },
@@ -641,6 +645,7 @@ courses = ["rice-breads"]
 moods = ["savoury", "hearty"]
 weather = ["warming"]
 also_known_as = ["bajra no rotlo"]
+pairs_with = ["01a18b5a-d322-74c9-9313-79da8e1c1998", "01a18b5a-d324-72d0-9af6-abcbed788f48", "01a18b5a-d31d-7dd0-a9bf-275ed4ca8f72"]  # Ringan no olo, Gujarati kadhi, Sev tameta nu shaak
 ingredients = [
   { id = "pearl-millet-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },
@@ -917,6 +922,7 @@ image = { file = "01a18b5a-d33f-7442-990c-2210c905c9ea.webp", sha256 = "2b4edd1a
 cuisine = "west-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a18b5a-d33a-7189-9626-3d0cccf33709", "01a18b5a-d343-7c1d-a464-f1e946eea2e3", "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe"]  # Dal baati churma, Bajre ki roti, Panchmel dal
 ingredients = [
   { id = "ker", amount = 0.25, unit = "cup" },
   { id = "sangri", amount = 1, unit = "cup" },
@@ -953,6 +959,7 @@ cook_minutes = 15
 cuisine = "west-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a18b5a-d343-7c1d-a464-f1e946eea2e3", "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Bajre ki roti, Panchmel dal, Phulka
 ingredients = [
   { id = "papad", amount = 6, unit = "piece" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -988,6 +995,7 @@ courses = ["rice-breads"]
 moods = ["savoury"]
 weather = ["warming"]
 also_known_as = ["bajra roti"]
+pairs_with = ["01a18812-6730-7099-83c5-19af8f61e6e9", "01a18b5a-d33f-7442-990c-2210c905c9ea", "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe", "01a18814-ee9d-725a-9e01-d7e3b5ed10fe"]  # Laal maas, Ker sangri, Panchmel dal, Sarson ka saag
 ingredients = [
   { id = "pearl-millet-flour", amount = 2, unit = "cup" },
   { id = "ghee", amount = 2, unit = "tbsp" },
@@ -1126,6 +1134,7 @@ plan_ahead = { wait_minutes = 480, note = "soak overnight" }
 cuisine = "west-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a18b5a-d343-7c1d-a464-f1e946eea2e3", "01a188a8-fea6-7a2f-b1f7-7b2cb7a040fe", "01a18b5a-d33a-7189-9626-3d0cccf33709"]  # Bajre ki roti, Panchmel dal, Dal baati churma
 ingredients = [
   { id = "ker", amount = 2, unit = "tbsp" },
   { id = "sangri", amount = 0.5, unit = "cup" },

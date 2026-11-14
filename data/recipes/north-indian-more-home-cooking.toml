@@ -16,6 +16,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["jeera alu", "cumin potatoes"]
+pairs_with = ["01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a188ac-05b3-7852-994e-2b3ec2b5edf4", "01a188a8-fe9b-7064-9d21-396b09a70f61", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Dal tadka, Puri, Kadhi pakora, Phulka
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "cumin-seeds", amount = 1.5, unit = "tsp" },
@@ -82,6 +83,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["aloo capsicum"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c0b-7b09-ba59-3db099c27b86"]  # Phulka, Dal tadka, Rajma
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "bell-pepper", amount = 2, unit = "medium" },
@@ -113,6 +115,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["besan capsicum"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a188a8-fea0-7a73-acf1-d80396c5eb21", "01a15175-3c08-7c89-b35a-70fd46ca1dcd"]  # Phulka, Dal fry, Moong dal
 ingredients = [
   { id = "bell-pepper", amount = 3, unit = "medium" },
   { id = "gram-flour", amount = 0.5, unit = "cup" },
@@ -479,6 +482,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["gobhi matar"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c0b-7b09-ba59-3db099c27b86"]  # Phulka, Dal tadka, Rajma
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "peas", amount = 1, unit = "cup" },
@@ -513,6 +517,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["aloo bhindi"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a18bae-8f66-7fb8-866a-aeb8c1f8b992"]  # Phulka, Dal tadka, Kadhi chawal
 ingredients = [
   { id = "okra", amount = 300, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -545,6 +550,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["light", "savoury"]
 also_known_as = ["tori ki sabzi", "ridge gourd sabzi"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c08-7c89-b35a-70fd46ca1dcd", "01a15175-3c07-7f8f-85c3-388e5af7e04a"]  # Phulka, Moong dal, Dal tadka
 ingredients = [
   { id = "ridge-gourd", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -576,6 +582,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
 also_known_as = ["parval aloo"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a18b6c-2316-7333-944f-c7fb46467420"]  # Phulka, Dal tadka, Cholar dal
 ingredients = [
   { id = "pointed-gourd", amount = 300, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -607,6 +614,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["crispy", "savoury"]
 also_known_as = ["ivy gourd fry"]
+pairs_with = ["01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a18bae-8f66-7fb8-866a-aeb8c1f8b992"]  # Dal tadka, Phulka, Kadhi chawal
 ingredients = [
   { id = "ivy-gourd", amount = 300, unit = "g" },
   { id = "cumin-seeds", amount = 1, unit = "tsp" },
@@ -636,6 +644,7 @@ cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
 also_known_as = ["paneer pulao"]
+pairs_with = ["01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a15175-3c1b-7327-a70a-a937797a18f2"]  # Dal makhani, Boondi raita, Butter chicken
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "paneer", amount = 150, unit = "g" },

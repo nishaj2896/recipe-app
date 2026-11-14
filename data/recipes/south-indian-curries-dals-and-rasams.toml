@@ -503,6 +503,7 @@ image = { file = "01a188ea-3cac-71f6-ad23-3ec3ad770d02.webp", sha256 = "9baea823
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["creamy", "light"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a18bb3-793b-75c4-8d52-015913570d99", "01a188ea-3caa-7220-9faf-98ccabab40da"]  # Sambar, Kerala parippu curry, Avial
 ingredients = [
   { id = "ash-gourd", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.25, unit = "cup" },
@@ -533,6 +534,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["sweet", "savoury", "comforting"]
 also_known_as = ["erisheri"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a18bb3-793b-75c4-8d52-015913570d99", "01a188ea-3cb3-7eba-97c5-eeb4d7c942c5"]  # Sambar, Kerala parippu curry, Moru curry
 ingredients = [
   { id = "pumpkin", amount = 400, unit = "g" },
   { id = "black-eyed-peas", amount = 0.333, unit = "cup" },
@@ -569,6 +571,7 @@ cook_minutes = 40
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["tangy", "creamy"]
+pairs_with = ["01a188ea-3cb6-7424-9dce-c1297ddd5716", "01a188ea-3caa-7220-9faf-98ccabab40da", "01a188ea-3cac-71f6-ad23-3ec3ad770d02"]  # Thoran (cabbage), Avial, Olan
 ingredients = [
   { id = "raw-banana", amount = 1, unit = "medium" },
   { id = "elephant-foot-yam", amount = 200, unit = "g" },
@@ -645,6 +648,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["light", "fresh-herby"]
 also_known_as = ["cabbage thoran"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a18bb3-793b-75c4-8d52-015913570d99", "01a18bb3-793e-7973-9268-9a1926287bf2", "01a15175-3c1d-7c1d-b8aa-d85e1a2b9630"]  # Sambar, Kerala parippu curry, Pulissery, Kerala fish curry
 ingredients = [
   { id = "cabbage", amount = 0.5, unit = "small-head" },
   { id = "coconut", amount = 0.5, unit = "cup" },
@@ -678,6 +682,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["light", "savoury"]
 also_known_as = ["beans thoran"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9a-72ea-8684-721851036d44", "01a188ea-3cee-73fc-8601-97ca471c4d6a"]  # Sambar, Rasam, Mor kuzhambu
 ingredients = [
   { id = "french-beans", amount = 300, unit = "g" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -707,6 +712,7 @@ cook_minutes = 12
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["sweet", "light"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9a-72ea-8684-721851036d44", "01a188ea-3cec-7210-ab93-705e0b4c0ba2"]  # Sambar, Rasam, Vatha kuzhambu
 ingredients = [
   { id = "carrot", amount = 4, unit = "medium" },
   { id = "moong-dal", amount = 2, unit = "tbsp" },
@@ -739,6 +745,7 @@ image = { file = "01a188ea-3cbc-741f-a28d-f2dde86616e8.webp", sha256 = "eaddd887
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["sweet", "light"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9a-72ea-8684-721851036d44", "01a188ea-3ca1-74df-9b08-0e0b7a063e5c"]  # Sambar, Rasam, Lemon rasam
 ingredients = [
   { id = "beetroot", amount = 3, unit = "medium" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -771,6 +778,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["crispy", "spicy"]
 also_known_as = ["urulai roast"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9a-72ea-8684-721851036d44", "01a15175-3c12-7238-998a-d2b358a0c24e", "01a188ea-3cec-7210-ab93-705e0b4c0ba2"]  # Sambar, Rasam, Curd rice, Vatha kuzhambu
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "red-chilli-powder", amount = 1, unit = "tsp" },
@@ -802,6 +810,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["crispy", "spicy"]
 also_known_as = ["raw banana fry"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3c9f-74bf-ace5-568ea6e5dff0", "01a188ea-3cee-73fc-8601-97ca471c4d6a"]  # Sambar, Pepper rasam, Mor kuzhambu
 ingredients = [
   { id = "raw-banana", amount = 2, unit = "medium" },
   { id = "red-chilli-powder", amount = 1.5, unit = "tsp" },
@@ -1604,6 +1613,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["savoury"]
 also_known_as = ["beans usili"]
+pairs_with = ["01a188ea-3cee-73fc-8601-97ca471c4d6a", "01a188ea-3cec-7210-ab93-705e0b4c0ba2", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Mor kuzhambu, Vatha kuzhambu, Rasam
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -1721,6 +1731,7 @@ image = { file = "01a18b54-81ba-79c9-9638-10695d0dc5d7.webp", sha256 = "c14bc769
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a18b54-81d3-759d-859a-3a23caeaf910", "01a18b54-81d1-7921-ad97-8f0eec6cba72", "01a18bb5-de57-7110-86a3-ee7f153ace2d", "01a18bb5-de50-7373-9e6b-7e673c767eed"]  # Hyderabadi vegetable biryani, Hyderabadi chicken biryani, Kacche gosht ki biryani, Bagara khana
 ingredients = [
   { id = "green-chillies", amount = 10, unit = "piece" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
