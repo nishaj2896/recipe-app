@@ -19,7 +19,7 @@ test("the pantry box finds recipes, and See all lists every match", async ({ pag
   await recipes.getByRole("link", { name: /^See all \d+ recipes$/ }).click();
   await expect(page).toHaveURL(/\/search\?q=paneer$/);
   await expect(
-    page.getByRole("heading", { level: 1, name: /^\d+ recipes$/ }),
+    page.getByRole("heading", { level: 2, name: /^\d+ recipes$/ }),
   ).toBeVisible();
 
   // The ingredient chip adds paneer to the pantry from here too.
@@ -41,12 +41,12 @@ test("search opens from the cookbook and finds by cuisine", async ({ page }) => 
     .getByRole("searchbox", { name: "Search recipes or ingredients" })
     .fill("thai");
   await expect(
-    page.getByRole("heading", { level: 1, name: /^\d+ recipes?$/ }),
+    page.getByRole("heading", { level: 2, name: /^\d+ recipes?$/ }),
   ).toBeVisible();
   await page
     .getByRole("searchbox", { name: "Search recipes or ingredients" })
     .fill("zzqx");
   await expect(
-    page.getByRole("heading", { level: 1, name: "No recipe matches “zzqx”" }),
+    page.getByRole("heading", { level: 2, name: "No recipe matches “zzqx”" }),
   ).toBeVisible();
 });

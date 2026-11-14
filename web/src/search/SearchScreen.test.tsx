@@ -87,6 +87,55 @@ test("See all shows every match and pages through them", async () => {
   ).toBeInTheDocument();
 });
 
+test("paging stops at the API's deepest page and says why", async () => {
+  const row = (n: number) => ({
+    ...foundOf(DECK[0] as (typeof DECK)[0]),
+    id: `00000000-0000-4000-8000-${String(n).padStart(12, "0")}`,
+    name: `Curry ${String(n + 1)}`,
+  });
+  stubApi();
+  const fetch = globalThis.fetch;
+  vi.stubGlobal("fetch", async (request: Request) => {
+    const url = new URL(request.url);
+    if (url.pathname !== "/api/v1/recipes") return fetch(request);
+    const offset = Number(url.searchParams.get("offset"));
+    const limit = Number(url.searchParams.get("limit"));
+    if (offset > 200) return new Response(null, { status: 422 });
+    const results = Array.from({ length: limit }, (_, n) => row(offset + n));
+    return Response.json({ results, total: 554 });
+  });
+  window.history.pushState({}, "", "/search?q=curry");
+  const user = userEvent.setup();
+  render(<App />);
+
+  expect(
+    await screen.findByRole("heading", { name: "554 recipes" }, { timeout: 5000 }),
+  ).toBeInTheDocument();
+  for (let shown = 20; shown < 220; shown += 20) {
+    await waitFor(() => {
+      expect(screen.getAllByRole("link", { name: /^Curry / })).toHaveLength(shown);
+    });
+    await user.click(screen.getByRole("button", { name: "Show more" }));
+  }
+  await waitFor(() => {
+    expect(screen.getAllByRole("link", { name: /^Curry / })).toHaveLength(220);
+  });
+  expect(screen.queryByRole("button", { name: "Show more" })).not.toBeInTheDocument();
+  expect(
+    screen.getByText("Showing the first 220. Add a word to narrow it down."),
+  ).toBeInTheDocument();
+}, 30_000);
+
+test("the whole list ends without the narrowing hint", async () => {
+  stubApi();
+  window.history.pushState({}, "", "/search?q=aloo");
+  render(<App />);
+  expect(
+    await screen.findByRole("heading", { name: /^\d+ recipes?$/ }, { timeout: 5000 }),
+  ).toBeInTheDocument();
+  expect(screen.queryByText(/Showing the first/)).not.toBeInTheDocument();
+});
+
 test("a result that breaks the food rules says so in red, and still shows", async () => {
   useDevice.setState({ avoidAllergens: ["dairy"], diet: "vegan" });
   stubApi();

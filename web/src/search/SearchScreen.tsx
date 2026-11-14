@@ -30,9 +30,19 @@ export function SearchScreen() {
   const ingredients = searchIngredients(catalog.data ?? [], text, INGREDIENT_MATCHES);
   const recipes = (results.data?.pages ?? []).flatMap((page) => page.results);
   const total = results.data?.pages[0]?.total;
+  const count =
+    total === undefined
+      ? "Recipes"
+      : total === 0
+        ? `No recipe matches “${text.trim()}”`
+        : `${String(total)} ${total === 1 ? "recipe" : "recipes"}`;
+  // Search pages stop at offset 200 (ADR-0012 rule 11), so a broad word
+  // lists fewer than it finds: say so where the list ends.
+  const capped = total !== undefined && !results.hasNextPage && recipes.length < total;
 
   return (
     <main className={styles.screen}>
+      <h1 className={styles.visuallyHidden}>Search recipes</h1>
       <div className={styles.top}>
         <button type="button" className={styles.back} aria-label="Back" onClick={leave}>
           <BackArrow />
@@ -83,13 +93,12 @@ export function SearchScreen() {
 
       {searchable(text) && (
         <section aria-labelledby="recipes-title" className={styles.section}>
-          <h1 id="recipes-title" className={styles.eyebrow} aria-live="polite">
-            {total === undefined
-              ? "Recipes"
-              : total === 0
-                ? `No recipe matches “${text.trim()}”`
-                : `${String(total)} ${total === 1 ? "recipe" : "recipes"}`}
-          </h1>
+          <h2 id="recipes-title" className={styles.eyebrow}>
+            {count}
+          </h2>
+          <p className={styles.visuallyHidden} role="status">
+            {count}
+          </p>
           {results.isError && (
             <p className={styles.status} role="alert">
               We couldn't search just now.{" "}
@@ -126,6 +135,11 @@ export function SearchScreen() {
             >
               {results.isFetchingNextPage ? "Loading…" : "Show more"}
             </button>
+          )}
+          {capped && (
+            <p className={styles.status}>
+              Showing the first {recipes.length}. Add a word to narrow it down.
+            </p>
           )}
         </section>
       )}

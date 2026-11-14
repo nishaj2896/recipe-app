@@ -89,7 +89,7 @@ for (const colorScheme of ["dark", "light"] as const) {
 
       await recipes.getByRole("link", { name: /^See all/ }).click();
       await expect(
-        page.getByRole("heading", { level: 1, name: /^\d+ recipes$/ }),
+        page.getByRole("heading", { level: 2, name: /^\d+ recipes$/ }),
       ).toBeVisible();
       await expectAccessible(page, "search screen");
     });

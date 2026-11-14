@@ -113,5 +113,7 @@ export function useAllRecipeResults(text: string) {
     },
     enabled: searchable(q),
     staleTime: 5 * 60_000,
+    // The last results stay while the next search loads, so the list doesn't blink.
+    placeholderData: (previous) => previous,
   });
 }

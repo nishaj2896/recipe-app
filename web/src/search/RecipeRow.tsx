@@ -59,7 +59,10 @@ export function RecipeRow({
         <span className={styles.name}>{recipe.name}</span>
         <span className={styles.meta}>
           {meta.join(" · ")} ·{" "}
-          <span className={styles.have} data-mostly={have >= total * MOSTLY || undefined}>
+          <span
+            className={styles.have}
+            data-mostly={(total > 0 && have >= total * MOSTLY) || undefined}
+          >
             have {have} of {total}
           </span>
         </span>
