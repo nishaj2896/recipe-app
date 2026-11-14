@@ -7,6 +7,7 @@ from tests.apps import AppFactory, client_for
 pytestmark = pytest.mark.anyio
 
 SEARCH = "/api/v1/recipes/search"
+FIND = "/api/v1/recipes"
 
 
 async def test_search_card_shape(client: AsyncClient) -> None:
@@ -92,6 +93,72 @@ async def test_an_unknown_ingredient_to_avoid_is_a_422(client: AsyncClient) -> N
             "message": "unknown ingredient 'unicorn'",
         }
     ]
+
+
+async def test_recipe_search_shape_and_caching(client: AsyncClient) -> None:
+    response = await client.get(FIND, params={"q": "aloo"})
+
+    assert response.status_code == 200
+    assert response.headers["cache-control"] == "public, max-age=300"
+    body = response.json()
+    assert set(body) == {"results", "total"}
+    assert body["total"] >= len(body["results"]) > 0
+    first = body["results"][0]
+    assert set(first) == {
+        "id",
+        "name",
+        "cuisine",
+        "total_minutes",
+        "diet",
+        "jain",
+        "image",
+        "allergens",
+        "ingredient_ids",
+    }
+    assert first["name"].lower().startswith("aloo")
+    assert "potato" in first["ingredient_ids"]
+
+
+async def test_recipe_search_ignores_food_rules_and_shows_allergens(
+    client: AsyncClient,
+) -> None:
+    """ADR-0012 rule 4: every recipe can be found; the app marks the rest."""
+    body = (await client.get(FIND, params={"q": "chicken", "limit": 20})).json()
+
+    assert any(card["diet"] == "non_veg" for card in body["results"])
+    assert all(isinstance(card["allergens"], list) for card in body["results"])
+
+
+async def test_recipe_search_pages_with_offset(client: AsyncClient) -> None:
+    first = (await client.get(FIND, params={"q": "pa", "limit": 5})).json()
+    second = (
+        await client.get(FIND, params={"q": "pa", "limit": 5, "offset": 5})
+    ).json()
+
+    assert first["total"] == second["total"] > 10
+    shown = [card["id"] for card in first["results"] + second["results"]]
+    assert len(set(shown)) == 10
+
+
+@pytest.mark.parametrize(
+    ("params", "field"),
+    [
+        pytest.param({"q": "a"}, "q", id="one-letter"),
+        pytest.param({"q": "a" * 61}, "q", id="too-long"),
+        pytest.param({}, "q", id="missing"),
+        pytest.param({"q": "pa", "limit": 21}, "limit", id="limit-too-big"),
+        pytest.param({"q": "pa", "limit": 0}, "limit", id="limit-zero"),
+        pytest.param({"q": "pa", "offset": 201}, "offset", id="offset-too-big"),
+    ],
+)
+async def test_recipe_search_rejects_bad_parameters(
+    client: AsyncClient, params: dict[str, str | int], field: str
+) -> None:
+    response = await client.get(FIND, params=params)
+
+    assert response.status_code == 422
+    assert response.headers["content-type"] == PROBLEM_MEDIA_TYPE
+    assert [error["field"] for error in response.json()["errors"]] == [field]
 
 
 async def test_all_staples_card_has_no_percentage(client: AsyncClient) -> None:

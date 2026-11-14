@@ -24,6 +24,29 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
+  "/api/v1/recipes": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    /**
+     * Find Recipes
+     * @description Recipes by name, other name, ingredient or cuisine, best match first.
+     *
+     *     Food rules don't apply here: every recipe can be found, and each result
+     *     carries its allergens and Jain flag for the app to check.
+     */
+    get: operations["find_recipes_api_v1_recipes_get"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   "/api/v1/recipes/search": {
     parameters: {
       query?: never;
@@ -207,6 +230,46 @@ export interface components {
       field: string;
       /** Message */
       message: string;
+    };
+    /**
+     * FoundRecipe
+     * @description A recipe search result: enough for the dropdown and "See all".
+     */
+    FoundRecipe: {
+      /**
+       * Allergens
+       * @description Best-effort: ready-made ingredients can hide allergens.
+       */
+      allergens: components["schemas"]["Allergen"][];
+      cuisine: components["schemas"]["Cuisine"] | null;
+      diet: components["schemas"]["Diet"];
+      /**
+       * Id
+       * Format: uuid
+       */
+      id: string;
+      image: components["schemas"]["RecipeImage"] | null;
+      /**
+       * Ingredient Ids
+       * @description Every ingredient, so the app can count what the pantry has without sending it.
+       */
+      ingredient_ids: string[];
+      /** Jain */
+      jain: boolean;
+      /** Name */
+      name: string;
+      /** Total Minutes */
+      total_minutes: number;
+    };
+    /** FoundRecipes */
+    FoundRecipes: {
+      /** Results */
+      results: components["schemas"]["FoundRecipe"][];
+      /**
+       * Total
+       * @description Every match, for "See all 41 recipes".
+       */
+      total: number;
     };
     /** Health */
     Health: {
@@ -617,6 +680,48 @@ export interface operations {
           [name: string]: unknown;
         };
         content?: never;
+      };
+      /** @description Internal Server Error */
+      500: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/problem+json": components["schemas"]["Problem"];
+        };
+      };
+    };
+  };
+  find_recipes_api_v1_recipes_get: {
+    parameters: {
+      query: {
+        q: string;
+        limit?: number;
+        offset?: number;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Successful Response */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["FoundRecipes"];
+        };
+      };
+      /** @description Unprocessable Entity */
+      422: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/problem+json": components["schemas"]["Problem"];
+        };
       };
       /** @description Internal Server Error */
       500: {

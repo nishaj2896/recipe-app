@@ -16,10 +16,11 @@ from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import MAX_DECK_SIZE, Deck, position_after
 from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe_search import QueryResolver
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.memory import InMemoryRecipeRepository
-from recipe_app.infra.postgres import PostgresRecipeRepository
-from tests.gate.searches import SEARCHES, explain, search_queries
+from recipe_app.infra.postgres import PostgresRecipeRepository, find_query
+from tests.gate.searches import FINDS, SEARCHES, explain, search_queries
 
 pytestmark = pytest.mark.anyio
 
@@ -89,6 +90,40 @@ async def test_postgres_ranks_what_memory_ranks_at_scale(
         assert found == expected
         assert found.scored
         after = position_after(Deck(found.scored, found.all_staples), after)
+
+
+@pytest.mark.parametrize("search", FINDS)
+async def test_recipe_search_reads_names_through_the_trigram_index(
+    engine: AsyncEngine, real_catalog: IngredientCatalog, search: str
+) -> None:
+    """Matching reads the GIN index: LIKE and % both need it (ADR-0012
+    rule 10). Sorting by name then reads every name once, a hash join that
+    is cheaper than 30,000 index lookups when "ch" matches that many.
+    """
+    find = FINDS[search]
+    query = QueryResolver(real_catalog).resolve(find.text)
+    plan = await _plan(engine, find_query(query, find.limit, find.offset))
+    nodes = list(_nodes(plan["Plan"]))
+
+    assert "ix_recipe_search_names_text_trgm" in {n.get("Index Name") for n in nodes}
+    assert "JIT" not in plan
+
+
+@pytest.mark.parametrize("search", FINDS)
+async def test_postgres_finds_what_memory_finds_at_scale(
+    engine: AsyncEngine,
+    real_catalog: IngredientCatalog,
+    memory_repository: InMemoryRecipeRepository,
+    search: str,
+) -> None:
+    find = FINDS[search]
+    query = QueryResolver(real_catalog).resolve(find.text)
+    postgres = await PostgresRecipeRepository.open(engine, real_catalog)
+
+    found = await postgres.find(query, find.limit, find.offset)
+
+    assert found == await memory_repository.find(query, find.limit, find.offset)
+    assert found.recipes
 
 
 @pytest.fixture(scope="module")

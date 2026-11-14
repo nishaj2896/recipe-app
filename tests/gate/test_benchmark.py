@@ -8,6 +8,7 @@ from recipe_app.infra.database import create_engine
 from tests.gate.benchmark import (
     BUDGET_P95_MS,
     DECKS_PER_ROUND,
+    FIND_BUDGET_P95_MS,
     Timings,
     benchmark,
     over_budget,
@@ -43,6 +44,18 @@ def test_the_budget_is_per_search_not_pooled() -> None:
     assert not lines[1].endswith("over budget")
 
 
+def test_each_search_is_held_to_its_own_budget() -> None:
+    find = Timings(
+        "find: slow",
+        tuple([FIND_BUDGET_P95_MS * 1.5] * 100),
+        budget_p95_ms=FIND_BUDGET_P95_MS,
+        budget_p99_ms=FIND_BUDGET_P95_MS * 2,
+    )
+    deck = Timings("deck", tuple([FIND_BUDGET_P95_MS * 1.5] * 100))
+
+    assert over_budget([find, deck]) == [find]
+
+
 def test_the_full_pantry_is_the_largest_the_api_accepts(
     real_catalog: IngredientCatalog,
 ) -> None:
@@ -60,8 +73,12 @@ async def test_the_benchmark_runs_against_the_gate_database(
 ) -> None:
     engine = create_engine(gate_database_url)
     try:
-        [result] = await benchmark(
-            engine, rounds=2, warmup=0, searches=["two rare ingredients"]
+        [result, find] = await benchmark(
+            engine,
+            rounds=2,
+            warmup=0,
+            searches=["two rare ingredients"],
+            finds=["find: chicken"],
         )
     finally:
         await engine.dispose()
@@ -70,3 +87,6 @@ async def test_the_benchmark_runs_against_the_gate_database(
     assert len(result.samples) == 2 * DECKS_PER_ROUND
     assert all(sample > 0 for sample in result.samples)
     assert "two rare ingredients" in report([result])
+    # "ch", "chic", "chicken" per round, against the recipe search budget.
+    assert len(find.samples) == 2 * 3
+    assert find.budget_p95_ms == FIND_BUDGET_P95_MS
