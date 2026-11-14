@@ -372,6 +372,14 @@
               }
             ]
           },
+          "ingredient_ids": {
+            "description": "So the app can hide a pick that uses an ingredient the food rules avoid.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Ingredient Ids",
+            "type": "array"
+          },
           "jain": {
             "title": "Jain",
             "type": "boolean"
@@ -393,6 +401,7 @@
           "diet",
           "jain",
           "allergens",
+          "ingredient_ids",
           "image"
         ],
         "title": "PairCard",

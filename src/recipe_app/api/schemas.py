@@ -236,6 +236,10 @@ class PairCard(BaseModel):
     diet: Diet
     jain: bool
     allergens: list[Allergen]
+    ingredient_ids: list[str] = Field(
+        description="So the app can hide a pick that uses an ingredient the "
+        "food rules avoid."
+    )
     image: RecipeImage | None
 
 

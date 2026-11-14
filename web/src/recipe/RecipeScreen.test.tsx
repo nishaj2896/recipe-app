@@ -156,3 +156,112 @@ test("a recipe without a wait shows no plan ahead note", async () => {
   await screen.findByRole("heading", { name: matar.name });
   expect(screen.queryByText(/Plan ahead/)).toBeNull();
 });
+
+/** Matar paneer with cashews, and two pairings: one with nuts, one without. */
+function withCashewsAndPairs() {
+  const pair = (n: number, name: string, extra: object = {}) => ({
+    id: `00000000-0000-4000-8000-0000000000${String(n)}`,
+    name,
+    total_minutes: 30,
+    courses: ["rice-breads" as const],
+    diet: "vegetarian" as const,
+    jain: false,
+    allergens: [],
+    ingredient_ids: ["flour"],
+    image: null,
+    ...extra,
+  });
+  stubApi(undefined, (card) => ({
+    ...detailOf(card),
+    ingredients: [
+      { id: "paneer", name: "Paneer", amount: 200, unit: "g" },
+      { id: "cashews", name: "Cashews", amount: 12, unit: "piece" },
+    ],
+    allergens: [
+      { allergen: "dairy", ingredients: [{ id: "paneer", name: "Paneer" }] },
+      { allergen: "tree-nuts", ingredients: [{ id: "cashews", name: "Cashews" }] },
+    ],
+    pairs_with: [
+      pair(10, "Phulka"),
+      pair(11, "Kashmiri pulao", { allergens: ["tree-nuts"] }),
+      pair(12, "Coconut rice", { ingredient_ids: ["rice", "coconut"] }),
+      pair(13, "Chicken pulao", { diet: "non_veg" }),
+    ],
+  }));
+}
+
+test("with no food rules, every pairing shows and nothing is flagged", async () => {
+  withCashewsAndPairs();
+  open();
+
+  const pairs = await screen.findByRole("region", { name: "Pairs well with" });
+  expect(
+    within(pairs)
+      .getAllByRole("link")
+      .map((link) => link.textContent),
+  ).toEqual([
+    "PhulkaRice and breads · 30 min",
+    "Kashmiri pulaoRice and breads · 30 min",
+    "Coconut riceRice and breads · 30 min",
+    "Chicken pulaoRice and breads · 30 min",
+  ]);
+  expect(within(pairs).getByRole("link", { name: /Phulka/ })).toHaveAttribute(
+    "href",
+    "/recipe/00000000-0000-4000-8000-000000000010",
+  );
+  expect(screen.queryByRole("note")).not.toBeInTheDocument();
+});
+
+test("a recipe that breaks the food rules says why, and pairings that break them hide", async () => {
+  useDevice.setState({
+    diet: "vegetarian",
+    avoidAllergens: ["tree-nuts"],
+    avoidIngredients: ["coconut"],
+  });
+  withCashewsAndPairs();
+  open();
+
+  const note = await screen.findByRole("note");
+  expect(note).toHaveTextContent(
+    "Contains tree nuts This recipe uses cashews, and your food rules say you're allergic to tree nuts.",
+  );
+  expect(note).toHaveTextContent(
+    "It won't appear in your deck. Ready-made items can hide allergens too, so check their labels.",
+  );
+  expect(screen.getByText("Tree nuts")).toBeInTheDocument();
+
+  const pairs = screen.getByRole("region", { name: "Pairs well with" });
+  expect(
+    within(pairs)
+      .getAllByRole("link")
+      .map((link) => link.textContent),
+  ).toEqual(["PhulkaRice and breads · 30 min"]);
+});
+
+test("an avoided ingredient and a diet are named too", async () => {
+  useDevice.setState({ diet: "vegan", avoidIngredients: ["cashews"] });
+  withCashewsAndPairs();
+  open();
+
+  const note = await screen.findByRole("note");
+  expect(note).toHaveTextContent("Uses cashews Your food rules say you avoid it.");
+  expect(note).toHaveTextContent(
+    "Not for your diet Your food rules say Vegan: nothing from animals, no dairy or honey.",
+  );
+  expect(note).not.toHaveTextContent("Ready-made");
+  expect(screen.getByText("Avoided")).toBeInTheDocument();
+});
+
+test("following a pairing opens that recipe at the top", async () => {
+  const scrollTo = vi.fn();
+  vi.stubGlobal("scrollTo", scrollTo);
+  withCashewsAndPairs();
+  const user = open();
+
+  const pairs = await screen.findByRole("region", { name: "Pairs well with" });
+  scrollTo.mockClear();
+  await user.click(within(pairs).getByRole("link", { name: /Phulka/ }));
+
+  expect(window.location.pathname).toBe("/recipe/00000000-0000-4000-8000-000000000010");
+  expect(scrollTo).toHaveBeenCalledWith(0, 0);
+});
