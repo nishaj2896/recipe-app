@@ -4,6 +4,7 @@ import { Link } from "react-router";
 
 import type { RecipeCard } from "../api/client";
 import { useCatalog, useIngredients } from "../api/queries";
+import { SearchLink } from "../app/SearchLink";
 import { Sheet } from "../app/Sheet";
 import { useAfterPaint } from "../motion/afterPaint";
 import { greetingFor } from "../pantry/greeting";
@@ -293,6 +294,7 @@ export function DeckScreen() {
             {meal.charAt(0).toUpperCase() + meal.slice(1)} picks
           </h1>
         </div>
+        <SearchLink className={styles.back} />
         <Link
           to="/saved"
           className={styles.heartsLink}

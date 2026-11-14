@@ -32,7 +32,7 @@ test("a first visit opens the food rules once; skipping keeps them empty", async
   await user.click(screen.getByRole("button", { name: "Skip for now" }));
 
   expect(
-    await screen.findByRole("searchbox", { name: "Search ingredients" }),
+    await screen.findByRole("searchbox", { name: "Search recipes or ingredients" }),
   ).toBeInTheDocument();
   expect(useDevice.getState()).toMatchObject({
     foodRulesSeen: true,
@@ -61,7 +61,7 @@ test("Jain saves a veg diet with the Jain flag, and allergies are counted", asyn
     avoidAllergens: ["peanuts", "tree-nuts"],
   });
   expect(
-    await screen.findByRole("searchbox", { name: "Search ingredients" }),
+    await screen.findByRole("searchbox", { name: "Search recipes or ingredients" }),
   ).toBeInTheDocument();
 });
 
@@ -120,6 +120,6 @@ test("from the profile, the saved rules show and Back keeps them as they were", 
 
   expect(useDevice.getState().diet).toBe("vegan");
   expect(
-    await screen.findByRole("searchbox", { name: "Search ingredients" }),
+    await screen.findByRole("searchbox", { name: "Search recipes or ingredients" }),
   ).toBeInTheDocument();
 });

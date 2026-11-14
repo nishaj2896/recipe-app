@@ -13,6 +13,7 @@ import styles from "./PantryScreen.module.css";
 import { Sheet } from "../app/Sheet";
 import { PantrySheet } from "./PantrySheet";
 import { POPULAR } from "./presets";
+import { RecipeResults } from "../search/RecipeResults";
 import { searchIngredients } from "./search";
 import { type Listening, useSpeech } from "./speech";
 import { findSpoken } from "./spoken";
@@ -241,8 +242,9 @@ export function PantryScreen() {
         <input
           type="search"
           className={styles.searchInput}
-          placeholder="Search ingredients"
-          aria-label="Search ingredients"
+          placeholder="Search recipes or ingredients"
+          aria-label="Search recipes or ingredients"
+          maxLength={60}
           value={query}
           onChange={(event) => {
             setQuery(event.target.value);
@@ -263,6 +265,7 @@ export function PantryScreen() {
         )}
       </div>
       <VoiceStatus listening={speech.listening} result={voiceResult} />
+      <RecipeResults text={query} />
       <Sheet
         open={voiceNoticeOpen}
         onClose={() => {

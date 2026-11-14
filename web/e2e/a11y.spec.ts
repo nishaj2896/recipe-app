@@ -78,6 +78,22 @@ for (const colorScheme of ["dark", "light"] as const) {
       await expectAccessible(page, "food rules, filled in");
     });
 
+    test("search, in the pantry box and on its own screen", async ({ page }) => {
+      await openPantry(page);
+      await page
+        .getByRole("searchbox", { name: "Search recipes or ingredients" })
+        .fill("paneer");
+      const recipes = page.getByRole("region", { name: "Recipes" });
+      await expect(recipes.getByRole("link").first()).toBeVisible();
+      await expectAccessible(page, "pantry with recipe results");
+
+      await recipes.getByRole("link", { name: /^See all/ }).click();
+      await expect(
+        page.getByRole("heading", { level: 1, name: /^\d+ recipes$/ }),
+      ).toBeVisible();
+      await expectAccessible(page, "search screen");
+    });
+
     test("mood screen, deck, its sheets, the recap and the cookbook", async ({
       page,
     }) => {

@@ -17,3 +17,4 @@ export type StapleKindGroup = components["schemas"]["StapleKindGroup"];
 export type IngredientRef = components["schemas"]["IngredientRef"];
 export type RecipeIngredient = components["schemas"]["RecipeIngredient"];
 export type PairCard = components["schemas"]["PairCard"];
+export type FoundRecipe = components["schemas"]["FoundRecipe"];
