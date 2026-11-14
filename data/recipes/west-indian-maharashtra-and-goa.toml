@@ -131,6 +131,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["sago vada"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Coconut chutney, Masala chai
 ingredients = [
   { id = "sago", amount = 1, unit = "cup" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -206,6 +207,7 @@ courses = ["breakfast", "mains"]
 moods = ["spicy", "tangy", "hearty"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["misal"]
+pairs_with = ["01a18b6c-22f9-7a57-91ea-b67fd75e931c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Masala chaas, Masala chai
 ingredients = [
   { id = "moth-beans", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -251,6 +253,7 @@ cuisine = "street-food"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a18b6c-22f9-7a57-91ea-b67fd75e931c", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chaas, Cold coffee
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "cauliflower", amount = 200, unit = "g" },
@@ -295,6 +298,7 @@ courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["wada pav"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chai, Cold coffee
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -340,6 +344,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["aloo vada"]
+pairs_with = ["01a15175-3c2b-7dd6-aec8-9b35af3404ac", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Garlic chutney, Masala chai
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -378,6 +383,7 @@ cuisine = "west-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "fresh-herby"]
 also_known_as = ["coriander vadi"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cd5-7b59-9694-5bb15b2ee30c"]  # Masala chai, Mint chutney
 ingredients = [
   { id = "coriander-leaves", amount = 2, unit = "bunch" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -450,6 +456,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "comforting"]
 also_known_as = ["pithla"]
+pairs_with = ["01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a18b6c-22f9-7a57-91ea-b67fd75e931c"]  # Laccha onion, Masala chaas
 ingredients = [
   { id = "gram-flour", amount = 0.5, unit = "cup" },
   { id = "sorghum-flour", amount = 2, unit = "cup" },
@@ -486,6 +493,7 @@ cook_minutes = 35
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a18b58-52f6-7b8b-b0da-a2c38c50da7b"]  # Phulka, Amti
 ingredients = [
   { id = "small-brinjal", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
@@ -526,6 +534,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["matki chi usal"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a18b6c-22f9-7a57-91ea-b67fd75e931c"]  # Phulka, Masala chaas
 ingredients = [
   { id = "moth-beans", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -564,6 +573,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["sweet-sour", "comforting"]
 also_known_as = ["maharashtrian amti"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18b58-52f1-7767-bcda-14d639aee637"]  # Jeera rice, Bharli vangi
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tsp" },
@@ -602,6 +612,7 @@ courses = ["mains"]
 moods = ["comforting", "light"]
 weather = ["under-the-weather"]
 also_known_as = ["varan bhat"]
+pairs_with = ["01a18b58-52f1-7767-bcda-14d639aee637", "01a18b58-52eb-7eb1-8b03-2b5182947fb4"]  # Bharli vangi, Kothimbir vadi
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "rice", amount = 1, unit = "cup" },
@@ -629,6 +640,7 @@ cuisine = "west-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["masala bhat"]
+pairs_with = ["01a18b58-52f6-7b8b-b0da-a2c38c50da7b", "01a18b58-52eb-7eb1-8b03-2b5182947fb4"]  # Amti, Kothimbir vadi
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "small-brinjal", amount = 4, unit = "piece" },
@@ -672,6 +684,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "hearty"]
 also_known_as = ["chicken kolhapuri"]
+pairs_with = ["01a18b58-5301-764f-9d6b-6e7bb02c42ac", "01a18b5a-d343-7c1d-a464-f1e946eea2e3", "01a15175-3c10-76ca-bf43-23fffb096acd"]  # Pandhra rassa, Bajre ki roti, Jeera rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -714,6 +727,7 @@ cook_minutes = 75
 cuisine = "west-indian"
 courses = ["soups"]
 moods = ["spicy", "hearty"]
+pairs_with = ["01a18b58-5301-764f-9d6b-6e7bb02c42ac", "01a18b58-52fd-7d0b-b5e8-354771ba26e2"]  # Pandhra rassa, Kolhapuri chicken
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -753,6 +767,7 @@ cook_minutes = 75
 cuisine = "west-indian"
 courses = ["soups"]
 moods = ["creamy", "comforting"]
+pairs_with = ["01a18b58-52ff-70aa-980b-d41eb455ca19", "01a18b58-52fd-7d0b-b5e8-354771ba26e2"]  # Tambda rassa, Kolhapuri chicken
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -791,6 +806,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["malvani chicken sukka"]
+pairs_with = ["01a188e6-a84e-70a4-8c8d-c3da512978e1", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Neer dosa, Sol kadhi
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -833,6 +849,7 @@ image = { file = "01a18b58-5306-7b8f-9289-d0133ecc40bd.webp", sha256 = "eecf272b
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
+pairs_with = ["01a18b58-530f-777a-b779-a17ca0df81c2", "01a18b58-5308-78d1-a568-c475782d78f7", "01a18b58-530a-7001-9bb2-aa8b64b91610"]  # Sol kadhi, Bombil fry, Surmai fry
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -869,6 +886,7 @@ cuisine = "west-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 also_known_as = ["bombay duck fry"]
+pairs_with = ["01a18b58-5306-7b8f-9289-d0133ecc40bd", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Malvani fish curry, Sol kadhi
 ingredients = [
   { id = "bombay-duck", amount = 500, unit = "g" },
   { id = "rice-flour", amount = 0.25, unit = "cup" },
@@ -900,6 +918,7 @@ cuisine = "west-indian"
 courses = ["snacks-starters", "mains"]
 moods = ["crispy", "spicy"]
 also_known_as = ["kingfish fry"]
+pairs_with = ["01a18b58-5306-7b8f-9289-d0133ecc40bd", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Malvani fish curry, Sol kadhi
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "rice-flour", amount = 0.25, unit = "cup" },
@@ -931,6 +950,7 @@ cook_minutes = 25
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18b58-530f-777a-b779-a17ca0df81c2", "01a188e6-a84e-70a4-8c8d-c3da512978e1"]  # Sol kadhi, Neer dosa
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1097,6 +1117,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy", "creamy"]
 also_known_as = ["xitt kodi"]
+pairs_with = ["01a18b58-5327-7ac4-9e26-6ef7a1e20e58", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Goan prawn rava fry, Sol kadhi
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut", amount = 1.5, unit = "cup" },
@@ -1135,6 +1156,7 @@ cook_minutes = 25
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy", "creamy"]
+pairs_with = ["01a18b58-530a-7001-9bb2-aa8b64b91610", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Surmai fry, Sol kadhi
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "coconut", amount = 1.5, unit = "cup" },
@@ -1173,6 +1195,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "hearty"]
 also_known_as = ["xacuti"]
+pairs_with = ["01a18b54-81cc-797d-9841-68d1b732760a", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Ghee rice, Sol kadhi
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1218,6 +1241,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "fresh-herby"]
 also_known_as = ["cafreal"]
+pairs_with = ["01a18b54-81cc-797d-9841-68d1b732760a", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Ghee rice, Kachumber salad
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coriander-leaves", amount = 1, unit = "bunch" },
@@ -1260,6 +1284,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "hearty"]
 also_known_as = ["vindaloo"]
+pairs_with = ["01a18b54-81cc-797d-9841-68d1b732760a", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Ghee rice, Kachumber salad
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "dried-red-chillies", amount = 12, unit = "piece" },
@@ -1299,6 +1324,7 @@ image = { file = "01a18b58-5322-7611-af58-ebf730607c10.webp", sha256 = "8004b2ad
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "hearty"]
+pairs_with = ["01a18b54-81cc-797d-9841-68d1b732760a", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Ghee rice, Kachumber salad
 ingredients = [
   { id = "pork", amount = 1, unit = "kg" },
   { id = "pork-belly", amount = 250, unit = "g" },
@@ -1341,6 +1367,7 @@ cuisine = "west-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["chorizo pulao"]
+pairs_with = ["01a15175-3c2e-777b-bda3-6dd751f0fa1c", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Kachumber salad, Sol kadhi
 ingredients = [
   { id = "chorizo", amount = 250, unit = "g" },
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
@@ -1378,6 +1405,7 @@ cuisine = "west-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 also_known_as = ["prawn rava fry"]
+pairs_with = ["01a18b58-5318-7ff6-81cc-b527f9ba6e9c", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Goan fish curry, Sol kadhi
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "semolina", amount = 0.5, unit = "cup" },

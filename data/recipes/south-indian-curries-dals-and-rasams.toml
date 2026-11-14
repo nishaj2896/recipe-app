@@ -15,6 +15,7 @@ image = { file = "01a15175-3c0c-7410-9068-956c67818f62.webp", sha256 = "a39d5c8e
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy", "comforting"]
+pairs_with = ["01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a188e6-a860-7ddd-8d31-de266d80a111", "01a188ea-3cb8-7efa-b715-9dacb5dc0100"]  # Idli, Medu vada, Beans poriyal
 ingredients = [
   { id = "toor-dal", amount = 150, unit = "g" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -50,6 +51,7 @@ image = { file = "01a15175-3c1d-7c1d-b8aa-d85e1a2b9630.webp", sha256 = "ce1c2ce8
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188ea-3cb6-7424-9dce-c1297ddd5716"]  # Appam, Thoran (cabbage)
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "coconut-milk", amount = 400, unit = "ml" },
@@ -87,6 +89,7 @@ image = { file = "01a15175-3c1e-730e-b9ba-d7d3a63e5dac.webp", sha256 = "3df8eb83
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18b54-81cc-797d-9841-68d1b732760a", "01a188e6-a884-71cb-8e87-cdbd3d356c9e"]  # Ghee rice, Malabar parotta
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -119,6 +122,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy", "comforting"]
 also_known_as = ["murungakkai sambar"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a188ea-3cb8-7efa-b715-9dacb5dc0100"]  # Potato roast, Beans poriyal
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "drumsticks", amount = 2, unit = "piece" },
@@ -159,6 +163,7 @@ cook_minutes = 45
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy", "comforting"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a188ea-3cba-7699-b681-9cf8fa635c20"]  # Potato roast, Carrot poriyal
 ingredients = [
   { id = "toor-dal", amount = 0.75, unit = "cup" },
   { id = "small-brinjal", amount = 4, unit = "piece" },
@@ -202,6 +207,7 @@ courses = ["soups"]
 moods = ["tangy", "spicy", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["saaru"]
+pairs_with = ["01a18b54-81b2-73c3-a493-d7534d850d9b", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Paruppu usili, Potato roast
 ingredients = [
   { id = "tamarind", amount = 1, unit = "tbsp" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -241,6 +247,7 @@ courses = ["soups"]
 moods = ["tangy", "spicy", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["thakkali rasam"]
+pairs_with = ["01a188ea-3cb8-7efa-b715-9dacb5dc0100", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Beans poriyal, Potato roast
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "tamarind", amount = 1, unit = "tsp" },
@@ -280,6 +287,7 @@ courses = ["soups"]
 moods = ["spicy", "tangy"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["milagu rasam"]
+pairs_with = ["01a188ea-3cc1-704c-a751-d4b75825cb38", "01a188ea-3cba-7699-b681-9cf8fa635c20"]  # Vazhakkai fry, Carrot poriyal
 ingredients = [
   { id = "black-pepper", amount = 1.5, unit = "tsp" },
   { id = "cumin-seeds", amount = 1.5, unit = "tsp" },
@@ -317,6 +325,7 @@ cuisine = "south-indian"
 courses = ["soups"]
 moods = ["tangy", "light"]
 weather = ["under-the-weather"]
+pairs_with = ["01a188ea-3cbc-741f-a28d-f2dde86616e8", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Beetroot poriyal, Potato roast
 ingredients = [
   { id = "moong-dal", amount = 0.25, unit = "cup" },
   { id = "tomato", amount = 1, unit = "medium" },
@@ -354,6 +363,7 @@ cuisine = "south-indian"
 courses = ["soups"]
 moods = ["tangy", "spicy"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a18bb3-7947-78e6-9c83-9d7a21edd445", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Cabbage poriyal, Potato roast
 ingredients = [
   { id = "toor-dal", amount = 0.25, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tbsp" },
@@ -394,6 +404,7 @@ cook_minutes = 30
 cuisine = "south-indian"
 courses = ["mains", "sides"]
 moods = ["comforting", "light"]
+pairs_with = ["01a188ea-3c9c-7c7f-aa71-7e8a79791cf3", "01a188ea-3cc1-704c-a751-d4b75825cb38"]  # Tomato rasam, Vazhakkai fry
 ingredients = [
   { id = "moong-dal", amount = 0.333, unit = "cup" },
   { id = "snake-gourd", amount = 1, unit = "medium" },
@@ -428,6 +439,7 @@ cook_minutes = 30
 cuisine = "south-indian"
 courses = ["mains", "sides"]
 moods = ["comforting", "savoury"]
+pairs_with = ["01a188ea-3c9f-74bf-ace5-568ea6e5dff0", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Pepper rasam, Potato roast
 ingredients = [
   { id = "moong-dal", amount = 0.333, unit = "cup" },
   { id = "broad-beans", amount = 250, unit = "g" },
@@ -465,6 +477,7 @@ cuisine = "south-indian"
 courses = ["sides", "mains"]
 moods = ["creamy", "tangy"]
 also_known_as = ["aviyal"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3cb3-7eba-97c5-eeb4d7c942c5"]  # Sambar, Moru curry
 ingredients = [
   { id = "raw-banana", amount = 1, unit = "medium" },
   { id = "elephant-foot-yam", amount = 150, unit = "g" },
@@ -608,6 +621,7 @@ courses = ["mains"]
 moods = ["tangy", "creamy", "light"]
 weather = ["cool-down"]
 also_known_as = ["moru kachiyathu"]
+pairs_with = ["01a188ea-3cb6-7424-9dce-c1297ddd5716", "01a18bb3-7944-7d4c-9de4-2e51067a846f"]  # Thoran (cabbage), Beans mezhukkupuratti
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "coconut", amount = 0.333, unit = "cup" },
@@ -832,6 +846,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["chicken chettinad"]
+pairs_with = ["01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Malabar parotta, Ghee rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -876,6 +891,7 @@ plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188ea-3c9a-72ea-8684-721851036d44", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Rasam, Ghee rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -913,6 +929,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["milagu chicken"]
+pairs_with = ["01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Malabar parotta, Rasam
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "black-pepper", amount = 1, unit = "tbsp" },
@@ -947,6 +964,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["creamy", "light", "comforting"]
 weather = ["under-the-weather"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188e6-a85b-7547-9e70-1b8b55331ede"]  # Appam, Idiyappam
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -984,6 +1002,7 @@ cook_minutes = 45
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a188e6-a85e-7a81-95c3-da336c547c81"]  # Appam, Malabar parotta, Puttu
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1023,6 +1042,7 @@ cook_minutes = 40
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Pappu (Andhra dal), Curd rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1063,6 +1083,7 @@ image = { file = "01a188ea-3cd1-7f7f-80af-7681e7a27bc1.webp", sha256 = "d7bcf85b
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy", "hearty"]
+pairs_with = ["01a18b54-81bc-7a52-880f-c3f97db20b9e", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Pappu (Andhra dal), Curd rice
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "gongura", amount = 2, unit = "bunch" },
@@ -1100,6 +1121,7 @@ cook_minutes = 60
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a188ea-3c9a-72ea-8684-721851036d44", "01a188e6-a84e-70a4-8c8d-c3da512978e1"]  # Rasam, Neer dosa
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1141,6 +1163,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Malabar parotta, Ghee rice
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1184,6 +1207,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["creamy", "light"]
 also_known_as = ["fish molee", "fish moilee"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188e6-a85b-7547-9e70-1b8b55331ede"]  # Appam, Idiyappam
 ingredients = [
   { id = "kingfish", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "large" },
@@ -1220,6 +1244,7 @@ cuisine = "south-indian"
 courses = ["snacks-starters", "mains"]
 moods = ["crispy", "spicy"]
 also_known_as = ["meen varuthathu", "kerala fish fry"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a188ea-3cb3-7eba-97c5-eeb4d7c942c5"]  # Sambar, Moru curry
 ingredients = [
   { id = "mackerel", amount = 4, unit = "piece" },
   { id = "kashmiri-chilli-powder", amount = 1.5, unit = "tbsp" },
@@ -1251,6 +1276,7 @@ image = { file = "01a188ea-3cdc-72fb-9f3a-876114a5e690.webp", sha256 = "441b2961
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
+pairs_with = ["01a188e6-a84e-70a4-8c8d-c3da512978e1", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Neer dosa, Ghee rice
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "dried-red-chillies", amount = 10, unit = "piece" },
@@ -1289,6 +1315,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
 also_known_as = ["mangalorean ghee roast"]
+pairs_with = ["01a188e6-a84e-70a4-8c8d-c3da512978e1", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Neer dosa, Ghee rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },
@@ -1329,6 +1356,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["mutta roast"]
+pairs_with = ["01a188e6-a859-75ba-bfec-282fbe3f42b8", "01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a188e6-a85b-7547-9e70-1b8b55331ede"]  # Appam, Malabar parotta, Idiyappam
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -1367,6 +1395,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["chettinad egg curry"]
+pairs_with = ["01a188e6-a884-71cb-8e87-cdbd3d356c9e", "01a188e6-a85b-7547-9e70-1b8b55331ede"]  # Malabar parotta, Idiyappam
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -1407,6 +1436,7 @@ image = { file = "01a188ea-3ce7-7640-8b27-c05b0f875f5c.webp", sha256 = "e32882b0
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy"]
+pairs_with = ["01a188e6-a84e-70a4-8c8d-c3da512978e1", "01a18b58-530f-777a-b779-a17ca0df81c2"]  # Neer dosa, Sol kadhi
 ingredients = [
   { id = "pomfret", amount = 2, unit = "piece" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -1445,6 +1475,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
 also_known_as = ["ennai kathirikai kuzhambu"]
+pairs_with = ["01a188ea-3c9f-74bf-ace5-568ea6e5dff0", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Pepper rasam, Curd rice
 ingredients = [
   { id = "small-brinjal", amount = 8, unit = "piece" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -1486,6 +1517,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
 also_known_as = ["vathal kuzhambu"]
+pairs_with = ["01a18b54-81b2-73c3-a493-d7534d850d9b", "01a188ea-3cb8-7efa-b715-9dacb5dc0100"]  # Paruppu usili, Beans poriyal
 ingredients = [
   { id = "tamarind", amount = 2, unit = "tbsp" },
   { id = "shallot", amount = 10, unit = "piece" },
@@ -1527,6 +1559,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["creamy", "tangy"]
 weather = ["cool-down"]
+pairs_with = ["01a18b54-81b2-73c3-a493-d7534d850d9b", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Paruppu usili, Potato roast
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },
@@ -1564,6 +1597,7 @@ cook_minutes = 35
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a18b54-81b2-73c3-a493-d7534d850d9b", "01a18bb3-7947-78e6-9c83-9d7a21edd445"]  # Paruppu usili, Cabbage poriyal
 ingredients = [
   { id = "tamarind", amount = 2, unit = "tbsp" },
   { id = "drumsticks", amount = 1, unit = "piece" },
@@ -1638,6 +1672,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["gutti vankaya kura", "stuffed brinjal curry"]
+pairs_with = ["01a18b54-81bf-717b-ba26-18dc1c50374c", "01a15175-3c12-7238-998a-d2b358a0c24e"]  # Tomato pappu, Curd rice
 ingredients = [
   { id = "small-brinjal", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
@@ -1678,6 +1713,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
 also_known_as = ["baghare baingan"]
+pairs_with = ["01a18b54-81d3-759d-859a-3a23caeaf910", "01a18bb5-de50-7373-9e6b-7e673c767eed"]  # Hyderabadi vegetable biryani, Bagara khana
 ingredients = [
   { id = "small-brinjal", amount = 500, unit = "g" },
   { id = "peanuts", amount = 0.25, unit = "cup" },
@@ -1761,6 +1797,7 @@ cook_minutes = 30
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["comforting", "light"]
+pairs_with = ["01a18bb3-7959-75a1-a207-927b44d38346", "01a18bb3-7956-7430-9253-1e115ae45157"]  # Andhra aloo fry, Bendakaya fry
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "spinach", amount = 1, unit = "bunch" },
@@ -1799,6 +1836,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "comforting"]
 also_known_as = ["tomato dal"]
+pairs_with = ["01a18bb3-7954-763c-a83a-726c712c5422", "01a18bb3-7959-75a1-a207-927b44d38346"]  # Dondakaya fry, Andhra aloo fry
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "tomato", amount = 3, unit = "medium" },
@@ -1836,6 +1874,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "creamy"]
 weather = ["cool-down"]
+pairs_with = ["01a18bb3-7947-78e6-9c83-9d7a21edd445", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Cabbage poriyal, Rasam
 ingredients = [
   { id = "curd", amount = 2, unit = "cup" },
   { id = "ash-gourd", amount = 250, unit = "g" },
@@ -1877,6 +1916,7 @@ courses = ["mains"]
 moods = ["spicy", "tangy", "comforting"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["bisibelebath"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7"]  # Boondi raita, Potato roast
 ingredients = [
   { id = "rice", amount = 0.75, unit = "cup" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },
