@@ -16,6 +16,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["sweet-sour", "savoury"]
 also_known_as = ["phad thai"]
+pairs_with = ["01a18c0c-0cc9-72e1-a05c-a224cdf481aa", "01a18c0c-0cb9-7a88-bdde-57551b5d091e", "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"]  # Som tam, Tom yum soup, Thai fish cakes
 ingredients = [
   { id = "flat-rice-noodles", amount = 200, unit = "g" },
   { id = "prawns", amount = 200, unit = "g" },
@@ -55,6 +56,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["spicy", "creamy", "fresh-herby"]
 also_known_as = ["thai green curry", "green curry"]
+pairs_with = ["01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Thai fish cakes, Som tam
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
@@ -90,6 +92,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["spicy", "creamy"]
 also_known_as = ["thai red curry", "red curry"]
+pairs_with = ["01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Thai fish cakes, Som tam
 ingredients = [
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -128,6 +131,7 @@ courses = ["mains"]
 moods = ["creamy", "sweet", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["matsaman curry"]
+pairs_with = ["01a18c0c-0cc9-72e1-a05c-a224cdf481aa", "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"]  # Som tam, Thai fish cakes
 ingredients = [
   { id = "beef", amount = 750, unit = "g" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -165,6 +169,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["creamy", "spicy"]
 also_known_as = ["phanaeng curry"]
+pairs_with = ["01a18c0c-0cc9-72e1-a05c-a224cdf481aa", "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"]  # Som tam, Thai fish cakes
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "thai-curry-paste", amount = 3, unit = "tbsp" },
@@ -197,6 +202,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["creamy", "comforting"]
 also_known_as = ["thai yellow curry"]
+pairs_with = ["01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Thai fish cakes, Som tam
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -231,6 +237,7 @@ courses = ["soups"]
 moods = ["spicy", "tangy", "fresh-herby"]
 weather = ["rainy-day-cosy", "under-the-weather"]
 also_known_as = ["tom yum"]
+pairs_with = ["01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d", "01a18c0c-0cab-74d1-84e6-cbf6625fa8ec"]  # Thai fish cakes, Pad thai
 ingredients = [
   { id = "prawns", amount = 400, unit = "g" },
   { id = "lemongrass", amount = 2, unit = "piece" },
@@ -265,6 +272,7 @@ courses = ["soups"]
 moods = ["creamy", "tangy", "fresh-herby"]
 weather = ["under-the-weather"]
 also_known_as = ["tom kha"]
+pairs_with = ["01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d", "01a18c0c-0cc7-7be5-8dad-725bbc89a6d1"]  # Thai fish cakes, Pineapple fried rice
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -299,6 +307,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["savoury", "sweet"]
 also_known_as = ["pad si ew"]
+pairs_with = ["01a18c0c-0cb9-7a88-bdde-57551b5d091e", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Tom yum soup, Som tam
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -332,6 +341,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["spicy", "fresh-herby", "savoury"]
 also_known_as = ["pad krapow", "thai basil chicken"]
+pairs_with = ["01a18c0c-0cb9-7a88-bdde-57551b5d091e", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Tom yum soup, Som tam
 ingredients = [
   { id = "chicken-mince", amount = 300, unit = "g" },
   { id = "holy-basil", amount = 1, unit = "cup" },
@@ -366,6 +376,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["spicy", "fresh-herby"]
 also_known_as = ["pad kee mao"]
+pairs_with = ["01a18c0c-0cbc-706a-93a0-33a01e525cfd", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Tom kha gai, Som tam
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -402,6 +413,7 @@ cuisine = "thai"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "fresh-herby"]
 also_known_as = ["khao pad krapow"]
+pairs_with = ["01a18c0c-0cb9-7a88-bdde-57551b5d091e", "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"]  # Tom yum soup, Thai fish cakes
 ingredients = [
   { id = "jasmine-rice", amount = 1, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -435,6 +447,7 @@ cuisine = "thai"
 courses = ["rice-breads", "mains"]
 moods = ["sweet", "savoury"]
 also_known_as = ["khao pad sapparot"]
+pairs_with = ["01a18c0c-0cb9-7a88-bdde-57551b5d091e", "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"]  # Tom yum soup, Thai fish cakes
 ingredients = [
   { id = "jasmine-rice", amount = 1.5, unit = "cup" },
   { id = "pineapple", amount = 1, unit = "cup" },
@@ -503,6 +516,7 @@ cuisine = "thai"
 courses = ["salads", "mains"]
 moods = ["spicy", "tangy", "fresh-herby"]
 also_known_as = ["laab", "larb gai"]
+pairs_with = ["01a18c0c-0cc9-72e1-a05c-a224cdf481aa", "01a18c0c-0cb9-7a88-bdde-57551b5d091e"]  # Som tam, Tom yum soup
 ingredients = [
   { id = "chicken-mince", amount = 500, unit = "g" },
   { id = "glutinous-rice", amount = 2, unit = "tbsp" },
@@ -535,6 +549,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["savoury", "sweet"]
 also_known_as = ["gai pad med mamuang"]
+pairs_with = ["01a18c0c-0cc5-74d1-9786-4b44e97a4a3d", "01a18c0c-0cb9-7a88-bdde-57551b5d091e"]  # Thai basil fried rice, Tom yum soup
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "cashews", amount = 0.75, unit = "cup" },
@@ -570,6 +585,7 @@ cuisine = "thai"
 courses = ["mains"]
 moods = ["creamy", "savoury", "spicy"]
 also_known_as = ["peanut noodles"]
+pairs_with = ["01a15175-3c24-7cf4-9ec4-2e239c353e9f", "01a18c0c-0cd2-773b-9416-1958680405f1"]  # Tofu and broccoli stir-fry, Mango sticky rice
 ingredients = [
   { id = "flat-rice-noodles", amount = 250, unit = "g" },
   { id = "peanut-butter", amount = 0.33, unit = "cup" },
@@ -636,6 +652,7 @@ cuisine = "thai"
 courses = ["snacks-starters"]
 moods = ["spicy", "fresh-herby"]
 also_known_as = ["tod mun pla"]
+pairs_with = ["01a18c0c-0cab-74d1-84e6-cbf6625fa8ec", "01a18c0c-0cb9-7a88-bdde-57551b5d091e", "01a18c0c-0cc9-72e1-a05c-a224cdf481aa"]  # Pad thai, Tom yum soup, Som tam
 ingredients = [
   { id = "basa", amount = 400, unit = "g" },
   { id = "thai-curry-paste", amount = 2, unit = "tbsp" },

@@ -15,6 +15,7 @@ image = { file = "01a18c12-05bc-7ee2-a97d-f619d0729c98.webp", sha256 = "cde63b31
 cuisine = "southeast-asian"
 courses = ["mains", "rice-breads"]
 moods = ["spicy", "savoury", "sweet"]
+pairs_with = ["01a18c12-05c1-7817-a7a0-c3bcf90f7c81", "01a18c12-05cc-7f07-8dd1-2c174ad6bd82"]  # Chicken satay (Malaysian), Gado-gado
 ingredients = [
   { id = "rice", amount = 2, unit = "cup" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -49,6 +50,7 @@ image = { file = "01a18c12-05be-7940-8353-deed67958a02.webp", sha256 = "3a955b08
 cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "sweet"]
+pairs_with = ["01a18c12-05c1-7817-a7a0-c3bcf90f7c81", "01a18c12-05cc-7f07-8dd1-2c174ad6bd82"]  # Chicken satay (Malaysian), Gado-gado
 ingredients = [
   { id = "egg-noodles", amount = 200, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },
@@ -88,6 +90,7 @@ cuisine = "southeast-asian"
 courses = ["snacks-starters"]
 moods = ["smoky", "sweet", "savoury"]
 also_known_as = ["chicken satay", "satay"]
+pairs_with = ["01a18c12-05bc-7ee2-a97d-f619d0729c98", "01a18c12-05cc-7f07-8dd1-2c174ad6bd82"]  # Nasi goreng, Gado-gado
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "lemongrass", amount = 2, unit = "piece" },
@@ -127,6 +130,7 @@ cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["spicy", "creamy", "hearty"]
 also_known_as = ["rendang"]
+pairs_with = ["01a18c12-05bc-7ee2-a97d-f619d0729c98", "01a18c12-05cc-7f07-8dd1-2c174ad6bd82"]  # Nasi goreng, Gado-gado
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "coconut-milk", amount = 2, unit = "cup" },
@@ -170,6 +174,7 @@ courses = ["soups", "mains"]
 moods = ["spicy", "creamy", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["curry laksa"]
+pairs_with = ["01a18c12-05c1-7817-a7a0-c3bcf90f7c81", "01a18c0c-0cd4-7ffe-9d0e-415bcdd7df9d"]  # Chicken satay (Malaysian), Thai fish cakes
 ingredients = [
   { id = "rice-vermicelli", amount = 200, unit = "g" },
   { id = "chicken", amount = 300, unit = "g" },
@@ -216,6 +221,7 @@ image = { file = "01a18c12-05c8-719e-9bef-f6d5dd1971d9.webp", sha256 = "4e69fa64
 cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["savoury", "light"]
+pairs_with = ["01a18c0c-0c96-7c75-af1b-2b1ccb034cb6", "01a18c0c-0c86-76cd-838f-e85d444f482c"]  # Garlic bok choy, Wonton soup
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "jasmine-rice", amount = 1.5, unit = "cup" },
@@ -255,6 +261,7 @@ cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["smoky", "savoury"]
 also_known_as = ["char koay teow"]
+pairs_with = ["01a18c12-05c1-7817-a7a0-c3bcf90f7c81", "01a18c0c-0c96-7c75-af1b-2b1ccb034cb6"]  # Chicken satay (Malaysian), Garlic bok choy
 ingredients = [
   { id = "flat-rice-noodles", amount = 300, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },
@@ -332,6 +339,7 @@ courses = ["soups", "mains"]
 moods = ["fresh-herby", "comforting"]
 weather = ["rainy-day-cosy", "under-the-weather"]
 also_known_as = ["beef pho"]
+pairs_with = ["01a18c12-05d7-74e6-b16d-95b0ded08ba3", "01a18c12-05d5-7522-b0bf-1c1591a91e41"]  # Vietnamese spring rolls, Banh mi
 ingredients = [
   { id = "beef", amount = 1, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -377,6 +385,7 @@ courses = ["soups", "mains"]
 moods = ["fresh-herby", "comforting", "light"]
 weather = ["under-the-weather"]
 also_known_as = ["chicken pho"]
+pairs_with = ["01a18c12-05d7-74e6-b16d-95b0ded08ba3", "01a18c12-05d5-7522-b0bf-1c1591a91e41"]  # Vietnamese spring rolls, Banh mi
 ingredients = [
   { id = "chicken", amount = 1.5, unit = "kg" },
   { id = "onion", amount = 1, unit = "large" },
@@ -417,6 +426,7 @@ cook_minutes = 20
 cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["smoky", "fresh-herby", "sweet"]
+pairs_with = ["01a18c12-05d7-74e6-b16d-95b0ded08ba3", "01a18c0c-0cd7-7285-97cc-18da54cdf186"]  # Vietnamese spring rolls, Glass noodle salad
 ingredients = [
   { id = "pork", amount = 400, unit = "g" },
   { id = "pork-belly", amount = 300, unit = "g" },
@@ -456,6 +466,7 @@ cuisine = "southeast-asian"
 courses = ["snacks-starters", "mains"]
 moods = ["fresh-herby", "tangy", "crispy"]
 also_known_as = ["banh mi sandwich"]
+pairs_with = ["01a18c12-05ce-7e43-9ce5-fdc95ffd4fe0", "01a18c12-05d7-74e6-b16d-95b0ded08ba3"]  # Pho bo, Vietnamese spring rolls
 ingredients = [
   { id = "baguette", amount = 2, unit = "piece" },
   { id = "pork", amount = 400, unit = "g" },
@@ -497,6 +508,7 @@ courses = ["snacks-starters"]
 moods = ["fresh-herby", "light"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["summer rolls", "goi cuon"]
+pairs_with = ["01a18c12-05ce-7e43-9ce5-fdc95ffd4fe0", "01a18c12-05d3-7a8e-8f70-738e1d4d1faa", "01a18c12-05da-7eee-8b37-581661776ea3"]  # Pho bo, Bun cha, Lemongrass chicken
 ingredients = [
   { id = "rice-paper", amount = 12, unit = "piece" },
   { id = "rice-vermicelli", amount = 100, unit = "g" },
@@ -530,6 +542,7 @@ cook_minutes = 15
 cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["fresh-herby", "savoury"]
+pairs_with = ["01a18c12-05d7-74e6-b16d-95b0ded08ba3", "01a18c0c-0cd7-7285-97cc-18da54cdf186"]  # Vietnamese spring rolls, Glass noodle salad
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "lemongrass", amount = 3, unit = "piece" },
@@ -563,6 +576,7 @@ cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["tangy", "savoury", "comforting"]
 also_known_as = ["adobo"]
+pairs_with = ["01a18c12-05e3-70a4-aabc-de4de389c7ef", "01a18c12-05e1-798c-bdae-9314d8658870"]  # Lumpia, Sinigang
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "cane-vinegar", amount = 0.5, unit = "cup" },
@@ -594,6 +608,7 @@ cuisine = "southeast-asian"
 courses = ["mains"]
 moods = ["savoury"]
 also_known_as = ["pancit"]
+pairs_with = ["01a18c12-05e3-70a4-aabc-de4de389c7ef", "01a18c12-05dc-7d43-8bbb-a8f70519d3c3"]  # Lumpia, Chicken adobo
 ingredients = [
   { id = "egg-noodles", amount = 250, unit = "g" },
   { id = "chicken", amount = 200, unit = "g" },
@@ -631,6 +646,7 @@ cuisine = "southeast-asian"
 courses = ["soups"]
 moods = ["tangy", "comforting"]
 weather = ["rainy-day-cosy", "under-the-weather"]
+pairs_with = ["01a18c12-05dc-7d43-8bbb-a8f70519d3c3", "01a18c12-05e3-70a4-aabc-de4de389c7ef"]  # Chicken adobo, Lumpia
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "tamarind", amount = 3, unit = "tbsp" },
@@ -665,6 +681,7 @@ cuisine = "southeast-asian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 also_known_as = ["filipino spring rolls"]
+pairs_with = ["01a18c12-05de-731f-9838-1f50081d2e6a", "01a18c12-05dc-7d43-8bbb-a8f70519d3c3", "01a18c12-05e1-798c-bdae-9314d8658870"]  # Pancit canton, Chicken adobo, Sinigang
 ingredients = [
   { id = "spring-roll-wrappers", amount = 20, unit = "piece" },
   { id = "pork", amount = 400, unit = "g" },
@@ -740,6 +757,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["singapore mei fun"]
+pairs_with = ["01a18c0c-0c86-76cd-838f-e85d444f482c", "01a18c12-05c1-7817-a7a0-c3bcf90f7c81"]  # Wonton soup, Chicken satay (Malaysian)
 ingredients = [
   { id = "rice-vermicelli", amount = 150, unit = "g" },
   { id = "prawns", amount = 150, unit = "g" },
