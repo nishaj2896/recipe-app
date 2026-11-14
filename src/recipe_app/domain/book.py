@@ -18,6 +18,7 @@ from recipe_app.domain.recipe import (
     check_plan_ahead,
     check_recipe,
     check_tags,
+    missing_tags,
 )
 from recipe_app.domain.steps import StepMatcher, step_matcher
 
@@ -109,6 +110,8 @@ def _parse_file(
             f"{where}: unknown field {field!r}"
             for field in sorted(set(row) - RECIPE_FIELDS)
         )
+
+        problems.extend(f"{where}: {problem}" for problem in missing_tags(row))
 
         recipe_id = _recipe_id(row.get("id"), where, problems)
         if recipe_id is not None:

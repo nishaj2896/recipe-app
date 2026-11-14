@@ -36,6 +36,9 @@ def recipe_table(**fields: object) -> str:
         "cook_minutes": 20,
         "ingredients": INGREDIENTS,
         "steps": STEPS,
+        "cuisine": "north-indian",
+        "courses": ["mains"],
+        "moods": ["comforting"],
     } | fields
     lines = [
         f"{key} = {_toml(value)}" for key, value in row.items() if value is not None
