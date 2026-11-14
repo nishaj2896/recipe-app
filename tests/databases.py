@@ -15,7 +15,7 @@ import pytest
 from alembic import command
 from alembic.config import Config
 from sqlalchemy import make_url, text
-from sqlalchemy.ext.asyncio import create_async_engine
+from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine
 
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.content import RecipeContent
@@ -77,3 +77,18 @@ async def admin(url: str, statement: str) -> None:
             await connection.execute(text(statement))
     finally:
         await engine.dispose()
+
+
+async def vacuum_analyze(engine: AsyncEngine) -> None:
+    """Leave the gate seed as a long-running database would be: analyzed,
+    and vacuumed so the visibility map is set.
+
+    Without the VACUUM, autovacuum gets to the freshly loaded tables a minute
+    later, in the middle of the benchmark: on CI's two cores, that cost one
+    search seconds per request on some decks, measuring the vacuum rather
+    than the search.
+    """
+    # VACUUM can't run in a transaction block.
+    async with engine.connect() as connection:
+        await connection.execution_options(isolation_level="AUTOCOMMIT")
+        await connection.execute(text("VACUUM (ANALYZE)"))
