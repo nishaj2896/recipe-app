@@ -537,6 +537,7 @@ courses = ["breakfast", "snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["ulundu vadai"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a18b54-81db-76fb-8c2c-f4f8a4475b55"]  # Sambar, Coconut chutney
 ingredients = [
   { id = "urad-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 10, unit = "g" },
@@ -572,6 +573,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["paruppu vadai"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81fb-7b02-a01b-8336a10cf2c5"]  # Coconut chutney, Filter coffee
 ingredients = [
   { id = "chana-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -849,6 +851,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["light"]
 also_known_as = ["ragi ball"]
+pairs_with = ["01a15175-3c0c-7410-9068-956c67818f62", "01a18bb3-794b-7383-92b7-f7ab5bda72f3"]  # Sambar, Keerai kootu
 ingredients = [
   { id = "finger-millet-flour", amount = 1, unit = "cup" },
   { id = "ghee", amount = 1, unit = "tsp" },
@@ -875,6 +878,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["aloo bonda"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81fb-7b02-a01b-8336a10cf2c5"]  # Coconut chutney, Filter coffee
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -914,6 +918,7 @@ cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81fb-7b02-a01b-8336a10cf2c5"]  # Coconut chutney, Filter coffee
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -949,6 +954,7 @@ cuisine = "south-indian"
 courses = ["breakfast", "snacks-starters"]
 moods = ["sweet"]
 also_known_as = ["banana buns"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81fb-7b02-a01b-8336a10cf2c5"]  # Coconut chutney, Filter coffee
 ingredients = [
   { id = "banana", amount = 2, unit = "medium" },
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
@@ -981,6 +987,7 @@ cuisine = "south-indian"
 courses = ["breakfast", "snacks-starters"]
 moods = ["crispy", "savoury"]
 also_known_as = ["paddu"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81de-7c22-a0d5-0f614ac75269"]  # Coconut chutney, Tomato chutney
 ingredients = [
   { id = "idli-rice", amount = 1.5, unit = "cup" },
   { id = "urad-dal", amount = 0.5, unit = "cup" },
@@ -1049,6 +1056,7 @@ cook_minutes = 20
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c29-7980-a562-3e1ffcc1a26f"]  # Cucumber raita, Onion tomato chutney
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "egg", amount = 3, unit = "piece" },

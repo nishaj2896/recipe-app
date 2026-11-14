@@ -50,6 +50,7 @@ courses = ["rice-breads", "mains"]
 moods = ["creamy", "comforting", "light"]
 weather = ["cool-down", "sticky-sluggish", "under-the-weather"]
 also_known_as = ["thayir sadam", "dahi chawal"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a188ea-3cc1-704c-a751-d4b75825cb38"]  # Potato roast, Vazhakkai fry
 ingredients = [
   { id = "rice", amount = 200, unit = "g" },
   { id = "curd", amount = 1.5, unit = "cup" },
@@ -329,6 +330,7 @@ image = { file = "01a18b54-81d1-7921-ad97-8f0eec6cba72.webp", sha256 = "2b3d9be8
 cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a18b54-81ba-79c9-9638-10695d0dc5d7", "01a18b54-81b8-7a60-85b4-7519966796a9", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Mirchi ka salan, Bagara baingan, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -377,6 +379,7 @@ cook_minutes = 75
 cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18b54-81ba-79c9-9638-10695d0dc5d7", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Mirchi ka salan, Cucumber raita
 ingredients = [
   { id = "basmati-rice", amount = 2, unit = "cup" },
   { id = "carrot", amount = 2, unit = "medium" },
@@ -429,6 +432,7 @@ cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["malabar biryani"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Cucumber raita, Kachumber salad
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -477,6 +481,7 @@ image = { file = "01a18b54-81d7-7d2d-84b8-19ea07e126fa.webp", sha256 = "8cb8b592
 cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a188ea-3ce9-78bd-94f6-1d67a1ae09db"]  # Cucumber raita, Ennai kathirikai
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },
@@ -520,6 +525,7 @@ cook_minutes = 70
 cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a188ea-3ce9-78bd-94f6-1d67a1ae09db"]  # Cucumber raita, Ennai kathirikai
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 3, unit = "cup" },

@@ -16,6 +16,7 @@ cuisine = "chinese"
 courses = ["mains"]
 moods = ["savoury", "light"]
 also_known_as = ["tofu broccoli"]
+pairs_with = ["01a18ba9-fd9e-7b63-a4f7-6ab9affd69f7", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Vegetable fried rice, Hot and sour soup
 ingredients = [
   { id = "tofu", amount = 300, unit = "g" },
   { id = "broccoli", amount = 1, unit = "medium" },
@@ -48,6 +49,7 @@ courses = ["soups"]
 moods = ["tangy", "comforting", "creamy"]
 weather = ["rainy-day-cosy", "under-the-weather"]
 also_known_as = ["cream of tomato soup"]
+pairs_with = ["01a18c1e-2c1d-79cb-bab9-f3536cfb8fde", "01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18ba9-fddc-79b7-af5d-a34b3e70e16e"]  # Grilled cheese sandwich, Focaccia, Cheese chilli toast
 ingredients = [
   { id = "tomato", amount = 8, unit = "medium" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -77,6 +79,7 @@ courses = ["soups"]
 moods = ["sweet", "creamy", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["pumpkin soup"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde"]  # Focaccia, Grilled cheese sandwich
 ingredients = [
   { id = "pumpkin", amount = 1, unit = "kg" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -110,6 +113,7 @@ courses = ["soups"]
 moods = ["creamy", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["cream of mushroom soup"]
+pairs_with = ["01a18c1e-2c1d-79cb-bab9-f3536cfb8fde", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Grilled cheese sandwich, Focaccia
 ingredients = [
   { id = "mushroom", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -142,6 +146,7 @@ cuisine = "european"
 courses = ["soups"]
 moods = ["creamy", "comforting"]
 also_known_as = ["broccoli soup"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde"]  # Focaccia, Grilled cheese sandwich
 ingredients = [
   { id = "broccoli", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -173,6 +178,7 @@ courses = ["soups"]
 moods = ["sweet", "comforting", "light"]
 weather = ["under-the-weather"]
 also_known_as = ["carrot soup"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c22-48b2-74d0-8a43-2df3b2454ab2"]  # Focaccia, Quinoa salad
 ingredients = [
   { id = "carrot", amount = 750, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -205,6 +211,7 @@ cuisine = "european"
 courses = ["soups"]
 moods = ["comforting", "hearty"]
 weather = ["rainy-day-cosy", "under-the-weather"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18ba9-fddc-79b7-af5d-a34b3e70e16e"]  # Focaccia, Cheese chilli toast
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -396,6 +403,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["fresh-herby", "light", "savoury"]
 also_known_as = ["grain bowl"]
+pairs_with = ["01a18c22-48ae-7237-aa9d-0567a7439df8", "01a18c22-48d9-7217-90ea-1e9143c5f867"]  # Carrot and ginger soup, Lemonade
 ingredients = [
   { id = "brown-rice", amount = 0.75, unit = "cup" },
   { id = "chickpeas", amount = 1, unit = "can" },
@@ -500,6 +508,7 @@ cuisine = "chinese"
 courses = ["mains", "sides"]
 moods = ["savoury", "light"]
 also_known_as = ["veg stir fry"]
+pairs_with = ["01a15175-3c2c-75c4-a0fb-92fed93ef6e7", "01a18ba9-fdbf-7184-9155-c47cc6706208"]  # Egg fried rice, Hot and sour soup
 ingredients = [
   { id = "broccoli", amount = 1, unit = "small" },
   { id = "bell-pepper", amount = 1, unit = "medium" },
@@ -563,6 +572,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["roast chicken"]
+pairs_with = ["01a18c1a-e260-7bc3-98fd-78f93a8e5b91", "01a18c1e-2c45-70d5-872a-680de59f4bec"]  # Gratin dauphinois, Caesar salad
 ingredients = [
   { id = "chicken", amount = 1.6, unit = "kg" },
   { id = "potato", amount = 750, unit = "g" },
@@ -596,6 +606,7 @@ cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["fresh-herby", "tangy", "light"]
 weather = ["just-pleasant"]
+pairs_with = ["01a18c22-48b2-74d0-8a43-2df3b2454ab2", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Quinoa salad, Garlic butter mushrooms, Greek salad
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -626,6 +637,7 @@ cuisine = "european"
 courses = ["mains"]
 moods = ["fresh-herby", "light"]
 also_known_as = ["baked salmon"]
+pairs_with = ["01a18c22-48b2-74d0-8a43-2df3b2454ab2", "01a18c22-48c6-7ff9-93cf-4d1fe32b816f"]  # Quinoa salad, Garlic butter mushrooms
 ingredients = [
   { id = "salmon", amount = 4, unit = "piece" },
   { id = "dill", amount = 2, unit = "tbsp" },
@@ -655,6 +667,7 @@ image = { file = "01a18c22-48cf-7d5b-9142-9176d2eaf297.webp", sha256 = "48119732
 cuisine = "european"
 courses = ["mains"]
 moods = ["savoury", "creamy"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Focaccia, Greek salad
 ingredients = [
   { id = "prawns", amount = 500, unit = "g" },
   { id = "butter", amount = 3, unit = "tbsp" },
@@ -684,6 +697,7 @@ cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["stuffed capsicum"]
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Greek salad, Tomato soup
 ingredients = [
   { id = "bell-pepper", amount = 4, unit = "large" },
   { id = "beef-mince", amount = 400, unit = "g" },
