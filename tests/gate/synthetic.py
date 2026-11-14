@@ -23,6 +23,30 @@ PREP_WEIGHTS = (10, 25, 25, 15, 10, 8, 5, 2)
 # Most everyday dishes suit any weather and have none (ADR-0012 rule 1).
 WEATHER_COUNTS = (0, 1, 2, 3)
 WEATHER_WEIGHTS = (55, 25, 15, 5)
+# Dish words for names like "Paneer tikka" or "Okra and peas curry", so
+# recipe search meets real-looking names, and many that share a start.
+DISHES = (
+    "curry",
+    "masala",
+    "fry",
+    "tikka",
+    "korma",
+    "biryani",
+    "pulao",
+    "salad",
+    "soup",
+    "stir-fry",
+    "bake",
+    "stew",
+    "noodles",
+    "pasta",
+    "sandwich",
+    "paratha",
+    "kebab",
+    "bhaji",
+    "dal",
+    "pickle",
+)
 
 
 def synthetic_recipes(
@@ -43,6 +67,7 @@ def synthetic_recipes(
     # Tags draw from their own stream, so adding them left the ingredients,
     # and every plan measured before, unchanged.
     tag_rng = random.Random(seed + 1)  # noqa: S311 - test data, not security
+    name_rng = random.Random(seed + 2)  # noqa: S311 - test data, not security
     live = [item for item in catalog.by_id.values() if not item.retired]
     core = sorted(
         item.id for item in live if item.ingredient_class is not IngredientClass.STAPLE
@@ -58,7 +83,7 @@ def synthetic_recipes(
     staple_weights = [1 / rank**0.7 for rank in range(1, len(staples) + 1)]
 
     recipes = []
-    for number in range(count):
+    for _ in range(count):
         wanted = rng.choices(CORE_COUNTS, CORE_WEIGHTS)[0]
         ingredient_ids = _distinct(rng, core, core_weights, wanted)
         ingredient_ids += _distinct(
@@ -67,7 +92,7 @@ def synthetic_recipes(
         recipes.append(
             build_recipe(
                 id=UUID(int=rng.getrandbits(128), version=4),
-                name=f"Synthetic recipe {number + 1}",
+                name=_name(name_rng, catalog, ingredient_ids),
                 prep_minutes=rng.choices(PREP_MINUTES, PREP_WEIGHTS)[0],
                 cook_minutes=max(1, round(rng.lognormvariate(3.2, 0.6))),
                 ingredient_ids=ingredient_ids,
@@ -76,6 +101,15 @@ def synthetic_recipes(
             )
         )
     return tuple(recipes)
+
+
+def _name(
+    rng: random.Random, catalog: IngredientCatalog, ingredient_ids: list[str]
+) -> str:
+    """The first one or two ingredients and a dish word: "Peas and okra curry"."""
+    first, *rest = (catalog.by_id[i].name for i in ingredient_ids)
+    lead = f"{first} and {rest[0].lower()}" if rest and rng.random() < 0.3 else first
+    return f"{lead} {rng.choice(DISHES)}"
 
 
 def _tags(rng: random.Random) -> dict[str, object]:

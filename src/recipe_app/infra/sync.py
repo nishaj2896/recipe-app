@@ -20,6 +20,7 @@ from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.content import Amount, RecipeContent
 from recipe_app.domain.matching import match_weight
 from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe_search import search_names
 from recipe_app.infra import tables
 
 # Any fixed number works; every sync takes the same one, so two never interleave.
@@ -147,6 +148,16 @@ async def sync(
                 }
                 for recipe in recipes
                 for position, paired in enumerate(recipe.tags.pairs_with)
+            ],
+        )
+        await _replace(
+            connection,
+            tables.recipe_search_names,
+            [
+                {"recipe_id": recipe.id, "position": position, "text": text}
+                for recipe in recipes
+                for position, text in enumerate(search_names(recipe))
+                if text
             ],
         )
         await _replace(

@@ -21,6 +21,7 @@ TABLES = {
     "recipe_ingredients",
     "recipe_steps",
     "recipe_pairings",
+    "recipe_search_names",
     "catalog_state",
 }
 

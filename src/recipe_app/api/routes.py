@@ -4,12 +4,13 @@ from dataclasses import dataclass
 from typing import Annotated
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, Request, Response
+from fastapi import APIRouter, Depends, Query, Request, Response
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from recipe_app.api import presenters
 from recipe_app.api.problems import RecipeNotFoundError, problem_responses
 from recipe_app.api.schemas import (
+    FoundRecipes,
     Health,
     IngredientsResponse,
     RecipeDetail,
@@ -17,9 +18,18 @@ from recipe_app.api.schemas import (
     SearchResponse,
     StaplesResponse,
 )
+from recipe_app.domain.recipe_search import (
+    DEFAULT_RESULTS,
+    MAX_OFFSET,
+    MAX_QUERY_LENGTH,
+    MAX_RESULTS,
+    MIN_QUERY_LENGTH,
+)
 from recipe_app.services.search import RecipeService, SearchQuery
 
 JSON = "application/json"
+# Recipe search results change only with a sync (ADR-0012 rule 10).
+FIND_CACHE_CONTROL = "public, max-age=300"
 # Store it, but ask before reusing it: a changed catalog is seen on the next load.
 CATALOG_CACHE_CONTROL = "public, no-cache"
 IF_NONE_MATCH_DOC = {
@@ -91,6 +101,29 @@ async def search_recipes(request: SearchRequest, service: Service) -> SearchResp
         )
     )
     return presenters.search_response(result)
+
+
+@router.get(
+    "/recipes",
+    tags=["recipes"],
+    response_model=FoundRecipes,
+    responses=problem_responses(422, 500),
+)
+async def find_recipes(
+    service: Service,
+    response: Response,
+    q: Annotated[str, Query(min_length=MIN_QUERY_LENGTH, max_length=MAX_QUERY_LENGTH)],
+    limit: Annotated[int, Query(ge=1, le=MAX_RESULTS)] = DEFAULT_RESULTS,
+    offset: Annotated[int, Query(ge=0, le=MAX_OFFSET)] = 0,
+) -> FoundRecipes:
+    """Recipes by name, other name, ingredient or cuisine, best match first.
+
+    Food rules don't apply here: every recipe can be found, and each result
+    carries its allergens and Jain flag for the app to check.
+    """
+    found = await service.find(q, limit=limit, offset=offset)
+    response.headers["Cache-Control"] = FIND_CACHE_CONTROL
+    return presenters.found_recipes(found)
 
 
 @router.api_route(

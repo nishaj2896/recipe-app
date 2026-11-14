@@ -10,6 +10,7 @@ from enum import StrEnum
 
 from sqlalchemy import (
     ARRAY,
+    DDL,
     Boolean,
     CheckConstraint,
     Column,
@@ -26,6 +27,7 @@ from sqlalchemy import (
     Text,
     UniqueConstraint,
     Uuid,
+    event,
     text,
 )
 
@@ -312,6 +314,35 @@ recipe_pairings = Table(
     # The foreign key's other side: checking a recipe is unreferenced reads it.
     Index("ix_recipe_pairings_paired_recipe_id", "paired_recipe_id"),
 )
+
+recipe_search_names = Table(
+    "recipe_search_names",
+    metadata,
+    Column(
+        "recipe_id",
+        ForeignKey("recipes.id", ondelete="CASCADE"),
+        primary_key=True,
+    ),
+    # 0 is the name, then the aliases in the order written.
+    Column("position", SmallInteger, primary_key=True),
+    # A search key (normalization.search_key), so LIKE and pg_trgm compare
+    # what the domain compares (ADR-0012 rule 10).
+    Column("text", Text, nullable=False),
+    CheckConstraint(f"position BETWEEN 0 AND {MAX_ALIASES}", name="position_in_range"),
+    CheckConstraint("text <> ''", name="text_not_empty"),
+    # Serves LIKE 'q%', LIKE '% q%' and the % similarity operator alike.
+    Index(
+        "ix_recipe_search_names_text_trgm",
+        "text",
+        postgresql_using="gin",
+        postgresql_ops={"text": "gin_trgm_ops"},
+    ),
+)
+
+# The trigram index needs pg_trgm; the migrations create it in their own
+# step, and this does the same for metadata.create_all in tests.
+_PG_TRGM = DDL("CREATE EXTENSION IF NOT EXISTS pg_trgm")  # type: ignore[no-untyped-call]
+event.listen(metadata, "before_create", _PG_TRGM)
 
 catalog_state = Table(
     "catalog_state",

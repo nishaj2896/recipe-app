@@ -1,5 +1,6 @@
 """Ingredient-name normalization (ADR-0001 rule 4)."""
 
+import re
 import unicodedata
 
 
@@ -23,3 +24,10 @@ def normalize(text: str) -> str:
     result = result.casefold()
 
     return unicodedata.normalize("NFKC", result)
+
+
+def search_key(text: str) -> str:
+    """Normalized, with punctuation and underscores folded to single spaces:
+    "Peri-peri" -> "peri peri". Recipe search compares these (ADR-0012 rule 10).
+    """
+    return " ".join(re.sub(r"[\W_]+", " ", normalize(text)).split())

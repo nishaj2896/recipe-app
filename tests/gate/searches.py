@@ -146,6 +146,33 @@ SEARCHES: dict[str, GateSearch] = {
 }
 
 
+@dataclass(frozen=True, slots=True)
+class FindSearch:
+    """A recipe search, as the dropdown sends it while someone types."""
+
+    text: str
+    limit: int = 8
+    offset: int = 0
+
+    def as_typed(self) -> list[str]:
+        """Two letters, four letters, then the whole text."""
+        return list(dict.fromkeys([self.text[:2], self.text[:4], self.text]))
+
+
+FINDS: dict[str, FindSearch] = {
+    # Thousands of names start with it, so the sort is the work.
+    "find: chicken": FindSearch("chicken"),
+    # Also every recipe using paneer, peas, pasta...: criterion 4 rows.
+    "find: paneer butter": FindSearch("paneer butter"),
+    # Misspelt: the trigram similarity does the work.
+    "find: biriyani": FindSearch("biriyani"),
+    # A cuisine label: about a twentieth of the recipes.
+    "find: thai": FindSearch("thai"),
+    # "See all", ten pages in (ADR-0012 rule 11).
+    "find: see all, page 10": FindSearch("pa", limit=20, offset=180),
+}
+
+
 def gate_recipes(
     catalog: IngredientCatalog, seed: Sequence[Recipe]
 ) -> tuple[Recipe, ...]:
