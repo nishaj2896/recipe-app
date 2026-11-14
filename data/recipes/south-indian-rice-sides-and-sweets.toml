@@ -16,6 +16,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["tangy", "light"]
 also_known_as = ["chitranna"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18ba9-fdb0-710a-86f5-d04c90f88899", "01a18ba9-fdad-7151-92ab-02f89a09a8f9"]  # Potato roast, Coconut chutney, Gobi 65, Chicken 65
 ingredients = [
   { id = "rice", amount = 250, unit = "g" },
   { id = "peanuts", amount = 30, unit = "g" },
@@ -82,6 +83,7 @@ image = { file = "01a15175-3c29-7980-a562-3e1ffcc1a26f.webp", sha256 = "99ac34b5
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a188e6-a842-793c-b480-e9e5cbe1d5f2", "01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a188e6-a855-71ed-9bfc-0c9d642f82e1", "01a188e6-a882-7190-a8eb-a97911b36be6"]  # Masala dosa, Idli, Uttapam, Kothu parotta
 ingredients = [
   { id = "onion", amount = 2, unit = "medium" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -112,6 +114,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["spicy"]
 also_known_as = ["lahsun chutney"]
+pairs_with = ["01a18b58-52e6-74e8-8b1a-a939423e0b33", "01a18b58-52e9-7d25-bb8c-9e37f438b093", "01a188e6-a842-793c-b480-e9e5cbe1d5f2"]  # Vada pav, Batata vada, Masala dosa
 ingredients = [
   { id = "garlic", amount = 15, unit = "clove" },
   { id = "dried-red-chillies", amount = 6, unit = "piece" },
@@ -138,6 +141,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["tangy", "spicy"]
 also_known_as = ["puliyogare", "puli sadam"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a15175-3c12-7238-998a-d2b358a0c24e", "01a188ea-3cc1-704c-a751-d4b75825cb38"]  # Potato roast, Curd rice, Vazhakkai fry
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tamarind", amount = 2, unit = "tbsp" },
@@ -178,6 +182,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "light"]
 also_known_as = ["thengai sadam"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a188ea-3cec-7210-ab93-705e0b4c0ba2", "01a188ea-3ce1-7124-af6c-a6af4494637a"]  # Potato roast, Vatha kuzhambu, Kerala egg roast
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -213,6 +218,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["tangy", "spicy"]
 also_known_as = ["thakkali sadam"]
+pairs_with = ["01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a188ea-3cc6-740b-bac9-18d04c407137"]  # Potato roast, Boondi raita, Chicken varuval
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tomato", amount = 4, unit = "medium" },
@@ -251,6 +257,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
 also_known_as = ["neichoru"]
+pairs_with = ["01a188ea-3cdf-7d16-b4d2-673f685f5c20", "01a188ea-3cca-76f8-9ac0-90fb54d62175", "01a18bb1-05c3-79ba-b92b-2119c286d751", "01a15175-3c07-7f8f-85c3-388e5af7e04a"]  # Chicken ghee roast, Kerala chicken stew, Kerala vegetable stew, Dal tadka
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -285,6 +292,7 @@ cuisine = "south-indian"
 courses = ["rice-breads"]
 moods = ["spicy", "tangy"]
 also_known_as = ["vangibath"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a188ea-3cbf-7aa1-a5c0-abf9daed67f7", "01a188ea-3c9a-72ea-8684-721851036d44"]  # Boondi raita, Potato roast, Rasam
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "small-brinjal", amount = 300, unit = "g" },
@@ -576,6 +584,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["fresh-herby", "light"]
 also_known_as = ["nariyal chutney"]
+pairs_with = ["01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a188e6-a842-793c-b480-e9e5cbe1d5f2", "01a188e6-a860-7ddd-8d31-de266d80a111", "01a188e6-a845-7924-9cb5-dc4f1fd58989"]  # Idli, Masala dosa, Medu vada, Plain dosa
 ingredients = [
   { id = "coconut", amount = 1, unit = "cup" },
   { id = "chana-dal", amount = 2, unit = "tbsp" },
@@ -606,6 +615,7 @@ cook_minutes = 15
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
+pairs_with = ["01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a188e6-a845-7924-9cb5-dc4f1fd58989", "01a188e6-a87d-7334-8571-e2e0502c93a3"]  # Idli, Plain dosa, Paniyaram
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "onion", amount = 1, unit = "small" },
@@ -639,6 +649,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["savoury"]
 also_known_as = ["verkadalai chutney"]
+pairs_with = ["01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a188e6-a845-7924-9cb5-dc4f1fd58989", "01a188e6-a847-798f-86de-7eb83bd2dc75"]  # Idli, Plain dosa, Rava dosa
 ingredients = [
   { id = "peanuts", amount = 0.5, unit = "cup" },
   { id = "dried-red-chillies", amount = 3, unit = "piece" },
@@ -669,6 +680,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["fresh-herby", "tangy"]
 also_known_as = ["kothamalli chutney"]
+pairs_with = ["01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a18ba9-fdee-7581-95ec-b06f1bf9bfde", "01a188e6-a850-7e21-876b-7a364dca12e0"]  # Idli, Rava dhokla, Pesarattu
 ingredients = [
   { id = "coriander-leaves", amount = 1, unit = "bunch" },
   { id = "coconut", amount = 0.25, unit = "cup" },
@@ -701,6 +713,7 @@ cuisine = "south-indian"
 courses = ["sides"]
 moods = ["spicy"]
 also_known_as = ["podi", "milagai podi"]
+pairs_with = ["01a188e6-a83e-78f1-a1ee-2349f5e25707", "01a188e6-a845-7924-9cb5-dc4f1fd58989", "01a18bb3-7974-7f68-876c-1e6657e9d590"]  # Idli, Plain dosa, Kanchipuram idli
 ingredients = [
   { id = "urad-dal", amount = 0.5, unit = "cup" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },

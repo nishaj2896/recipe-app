@@ -771,6 +771,7 @@ cuisine = "middle-eastern"
 courses = ["sides"]
 moods = ["savoury", "crispy"]
 also_known_as = ["batata harra"]
+pairs_with = ["01a18c16-b202-7160-98cc-bea7bf35c726", "01a18c4f-8e51-78cf-94a3-56308cf794c4", "01a18c16-b1fb-7119-aad6-b093cf759ea7", "01a18c16-b209-7d99-9c42-bc6502136fb5"]  # Chicken shawarma, Shish tawook, Falafel, Mujadara
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "garlic", amount = 6, unit = "clove" },

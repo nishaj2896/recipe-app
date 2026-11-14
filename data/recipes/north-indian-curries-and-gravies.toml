@@ -1639,6 +1639,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "fresh-herby"]
 also_known_as = ["methi aloo"]
+pairs_with = ["01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c08-7c89-b35a-70fd46ca1dcd"]  # Dal tadka, Phulka, Moong dal
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "fenugreek-leaves", amount = 150, unit = "g" },
@@ -1993,6 +1994,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "sweet"]
 also_known_as = ["turnip sabzi"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a18814-ee9d-725a-9e01-d7e3b5ed10fe"]  # Phulka, Dal tadka, Sarson ka saag
 ingredients = [
   { id = "turnip", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2068,6 +2070,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["spicy", "savoury"]
 also_known_as = ["arbi fry", "colocasia masala"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a188a8-fea0-7a73-acf1-d80396c5eb21", "01a188a8-fe9b-7064-9d21-396b09a70f61"]  # Phulka, Dal fry, Kadhi pakora
 ingredients = [
   { id = "colocasia", amount = 500, unit = "g" },
   { id = "carom-seeds", amount = 0.5, unit = "tsp" },
@@ -2142,6 +2145,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "light"]
 also_known_as = ["tinde ki sabzi"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c08-7c89-b35a-70fd46ca1dcd"]  # Phulka, Dal tadka, Moong dal
 ingredients = [
   { id = "tinda", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -2179,6 +2183,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["spicy", "savoury"]
 also_known_as = ["karela fry", "bitter gourd sabzi"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c08-7c89-b35a-70fd46ca1dcd"]  # Phulka, Dal tadka, Moong dal
 ingredients = [
   { id = "bitter-gourd", amount = 400, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -2250,6 +2255,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["sweet", "tangy"]
 also_known_as = ["khatta meetha kaddu", "pumpkin sabzi"]
+pairs_with = ["01a188ac-05b3-7852-994e-2b3ec2b5edf4", "01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a188a8-feab-7a94-b669-c2287146ded7"]  # Puri, Phulka, Kala chana curry
 ingredients = [
   { id = "pumpkin", amount = 500, unit = "g" },
   { id = "fenugreek-seeds", amount = 0.5, unit = "tsp" },
@@ -2287,6 +2293,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["sweet", "savoury"]
 also_known_as = ["gajar matar ki sabzi"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c07-7f8f-85c3-388e5af7e04a", "01a15175-3c08-7c89-b35a-70fd46ca1dcd"]  # Phulka, Dal tadka, Moong dal
 ingredients = [
   { id = "carrot", amount = 3, unit = "medium" },
   { id = "peas", amount = 1, unit = "cup" },

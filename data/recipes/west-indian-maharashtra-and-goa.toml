@@ -419,6 +419,7 @@ cuisine = "west-indian"
 courses = ["sides"]
 moods = ["spicy", "savoury"]
 also_known_as = ["jhunka"]
+pairs_with = ["01a18b58-52ef-72a8-9775-0ca9b1b2a302", "01a18b58-52f8-7dc1-aa5b-d45b61ab1754", "01a18b58-52f6-7b8b-b0da-a2c38c50da7b"]  # Pithla bhakri, Varan bhaat, Amti
 ingredients = [
   { id = "gram-flour", amount = 1, unit = "cup" },
   { id = "onion", amount = 2, unit = "medium" },

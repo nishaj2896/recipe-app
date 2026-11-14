@@ -45,6 +45,7 @@ courses = ["sides"]
 moods = ["fresh-herby", "tangy", "light"]
 weather = ["cool-down"]
 also_known_as = ["salsa fresca"]
+pairs_with = ["01a18c16-b1bc-7bbc-91a7-36928f0fe539", "01a18c16-b1c1-7e5b-9ac6-e79c9ffcfbf1", "01a18c16-b1bf-7519-9fd0-abe8820a9743", "01a18c4f-8e63-7cd3-a190-7be2ee65327a"]  # Chicken tacos, Bean and cheese burrito, Fish tacos, Nachos
 ingredients = [
   { id = "tomato", amount = 4, unit = "medium" },
   { id = "onion", amount = 0.5, unit = "medium" },
@@ -541,6 +542,7 @@ cuisine = "mexican-latin"
 courses = ["rice-breads", "sides"]
 moods = ["savoury"]
 also_known_as = ["spanish rice", "arroz rojo"]
+pairs_with = ["01a18c16-b1ca-78fe-b3fe-a064097e22c9", "01a18c16-b1cc-7b35-81e9-492fe634f2dc", "01a18c16-b1d3-7e3e-863a-992cc0c6d5c8"]  # Chicken enchiladas, Vegetable enchiladas, Chicken fajitas
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "tomato", amount = 2, unit = "medium" },
@@ -573,6 +575,7 @@ cuisine = "mexican-latin"
 courses = ["sides"]
 moods = ["savoury", "creamy", "comforting"]
 also_known_as = ["frijoles refritos"]
+pairs_with = ["01a18c16-b1bc-7bbc-91a7-36928f0fe539", "01a18c16-b1cc-7b35-81e9-492fe634f2dc", "01a18c16-b1c8-7dc9-abcd-f837e31826be"]  # Chicken tacos, Vegetable enchiladas, Cheese quesadilla
 ingredients = [
   { id = "pinto-beans", amount = 2, unit = "can" },
   { id = "onion", amount = 0.5, unit = "medium" },
