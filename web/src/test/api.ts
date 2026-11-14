@@ -134,6 +134,25 @@ export function detailOf(card: RecipeCard): RecipeDetail {
   };
 }
 
+/** A deck card as the recipe search returns it. */
+export function foundOf(card: RecipeCard): components["schemas"]["FoundRecipe"] {
+  return {
+    id: card.id,
+    name: card.name,
+    cuisine: card.cuisine,
+    total_minutes: card.total_minutes,
+    diet: card.diet,
+    jain: card.jain,
+    image: card.image,
+    allergens: card.allergens,
+    ingredient_ids: [
+      ...card.matched_ingredients,
+      ...card.missing_ingredients,
+      ...card.assumed_staples,
+    ].map((item) => item.id),
+  };
+}
+
 export type SearchHandler = (body: SearchRequest) => SearchResponse | Response;
 
 /** One deck: every card, no next page, nothing ignored. */
@@ -168,6 +187,17 @@ export function stubApi(
               { type: "/problems/not-found", title: "Not Found", status: 404 },
               { status: 404, headers: { "content-type": "application/problem+json" } },
             );
+      }
+      if (path === "/api/v1/recipes") {
+        const params = new URL(request.url).searchParams;
+        const q = (params.get("q") ?? "").toLowerCase();
+        const limit = Number(params.get("limit") ?? "8");
+        const offset = Number(params.get("offset") ?? "0");
+        const all = DECK.filter((card) => card.name.toLowerCase().includes(q));
+        return Response.json({
+          results: all.slice(offset, offset + limit).map(foundOf),
+          total: all.length,
+        });
       }
       if (path === "/api/v1/recipes/search") {
         const body = (await request.json()) as SearchRequest;

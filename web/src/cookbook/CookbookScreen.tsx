@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 
 import { recipeQuery } from "../api/queries";
+import { SearchLink } from "../app/SearchLink";
 import { DishArt } from "../art/IngredientArt";
 import { DIETS } from "../deck/diets";
 import { InstallNudge } from "../install/InstallNudge";
@@ -82,6 +83,7 @@ export function CookbookScreen() {
           <span aria-hidden="true">←</span>
         </Link>
         <h1 className={styles.title}>Your cookbook</h1>
+        <SearchLink className={styles.back} />
         {saved.length > 0 && (
           <button type="button" className={styles.clear} onClick={removeAll}>
             Remove all

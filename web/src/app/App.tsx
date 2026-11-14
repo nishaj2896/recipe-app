@@ -14,6 +14,7 @@ import {
   MoodScreen,
   preloadScreens,
   RecipeScreen,
+  SearchScreen,
 } from "./screens";
 
 // If the features can't be fetched, the app still works, only without
@@ -51,6 +52,7 @@ export function App() {
                     <Route path="/" element={<PantryScreen />} />
                     <Route path="/food-rules" element={<FoodRulesScreen />} />
                     <Route path="/mood" element={<MoodScreen />} />
+                    <Route path="/search" element={<SearchScreen />} />
                     <Route path="/deck" element={<DeckScreen />} />
                     <Route path="/saved" element={<CookbookScreen />} />
                     <Route path="/recipe/:recipeId" element={<RecipeScreen />} />

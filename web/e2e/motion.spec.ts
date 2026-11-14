@@ -72,7 +72,9 @@ test("an ingredient flies into the jar without a long task", async ({
       baseURL ?? "",
       async (page) => {
         await fillPantry(page, ["Paneer"]);
-        await page.getByRole("searchbox", { name: "Search ingredients" }).fill("Potato");
+        await page
+          .getByRole("searchbox", { name: "Search recipes or ingredients" })
+          .fill("Potato");
         await page.getByRole("button", { name: "Potato", exact: true }).hover();
       },
       async (page) => {

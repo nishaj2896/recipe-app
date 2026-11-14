@@ -8,6 +8,7 @@ const loadCookbook = () => import("../cookbook/CookbookScreen");
 const loadRecipe = () => import("../recipe/RecipeScreen");
 const loadFoodRules = () => import("../rules/FoodRulesScreen");
 const loadMood = () => import("../rules/MoodScreen");
+const loadSearch = () => import("../search/SearchScreen");
 
 export const DeckScreen = lazy(() =>
   loadDeck().then((module) => ({ default: module.DeckScreen })),
@@ -24,6 +25,9 @@ export const FoodRulesScreen = lazy(() =>
 export const MoodScreen = lazy(() =>
   loadMood().then((module) => ({ default: module.MoodScreen })),
 );
+export const SearchScreen = lazy(() =>
+  loadSearch().then((module) => ({ default: module.SearchScreen })),
+);
 
 /** Fetches the other screens' code while the browser is idle. */
 export function preloadScreens(): void {
@@ -35,6 +39,7 @@ export function preloadScreens(): void {
       loadRecipe(),
       loadFoodRules(),
       loadMood(),
+      loadSearch(),
     ]).catch(() => undefined);
   };
   if ("requestIdleCallback" in window) requestIdleCallback(preload, { timeout: 2000 });
