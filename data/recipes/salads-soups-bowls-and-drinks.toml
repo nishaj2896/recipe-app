@@ -543,7 +543,7 @@ image = { file = "01a18c22-48c6-7ff9-93cf-4d1fe32b816f.webp", sha256 = "b21d29e2
 cuisine = "european"
 courses = ["sides"]
 moods = ["savoury", "creamy"]
-pairs_with = ["01a18c22-48cd-7934-b769-cdb5e04cb99d", "01a18c22-48cb-7c4a-a884-4d880921c8cd", "01a18c4f-8e75-7780-bfa6-e5bcdfe6c1c8"]  # Baked salmon with herbs, Lemon herb grilled chicken, Roasted cauliflower steak
+pairs_with = ["01a18c22-48cd-7934-b769-cdb5e04cb99d", "01a15175-3c22-7b07-abf6-87ad9705c184", "01a18c4f-8e75-7780-bfa6-e5bcdfe6c1c8", "01a18c22-48cb-7c4a-a884-4d880921c8cd"]  # Baked salmon with herbs, Macaroni and cheese, Roasted cauliflower steak, Lemon herb grilled chicken
 ingredients = [
   { id = "mushroom", amount = 500, unit = "g" },
   { id = "butter", amount = 3, unit = "tbsp" },

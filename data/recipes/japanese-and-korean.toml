@@ -600,7 +600,7 @@ courses = ["salads", "sides"]
 moods = ["tangy", "fresh-herby", "light"]
 weather = ["cool-down", "sticky-sluggish"]
 also_known_as = ["sunomono"]
-pairs_with = ["01a18c12-057e-7570-9122-4d5aa8119343", "01a18c12-0581-7b81-9a6b-9632b57e5a6b", "01a18c22-48c0-7d0a-8ea9-de8935531e63", "01a18c12-059e-722d-a067-310f47137a7d"]  # Salmon teriyaki, Chicken katsu, Teriyaki tofu bowl, Vegetable tempura
+pairs_with = ["01a18c12-057e-7570-9122-4d5aa8119343", "01a18c12-059c-795e-86e7-3cf49987770d", "01a18c22-48c0-7d0a-8ea9-de8935531e63", "01a18c12-0581-7b81-9a6b-9632b57e5a6b"]  # Salmon teriyaki, Edamame with sea salt, Teriyaki tofu bowl, Chicken katsu
 ingredients = [
   { id = "cucumber", amount = 2, unit = "medium" },
   { id = "wakame", amount = 1, unit = "tbsp" },

@@ -243,7 +243,7 @@ cuisine = "north-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
 also_known_as = ["lachha pyaz", "onion salad"]
-pairs_with = ["01a15175-3c1b-7327-a70a-a937797a18f2", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a188aa-f1bb-7de8-bf53-445fbba68aca", "01a18bb7-fec4-7656-a6b2-1e578490c3c9"]  # Butter chicken, Dal makhani, Tandoori chicken, Chole bhature
+pairs_with = ["01a15175-3c1b-7327-a70a-a937797a18f2", "01a188a8-fe9e-7b93-be7b-4aae2b2ee97d", "01a18813-915d-78a8-a3da-6f5f2edc97ba", "01a15175-3c0b-7b09-ba59-3db099c27b86"]  # Butter chicken, Dal makhani, Kadai paneer, Rajma
 ingredients = [
   { id = "onion", amount = 2, unit = "medium" },
   { id = "lemon", amount = 1, unit = "medium" },
