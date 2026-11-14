@@ -21,9 +21,10 @@ from recipe_app.domain.deck import (
     position_after,
     resume,
 )
-from recipe_app.domain.matching import Ignored, resolve_pantry
+from recipe_app.domain.matching import Ignored, PantryError, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters
 from recipe_app.domain.scoring import SCORING_VERSION
+from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 from recipe_app.services.ports import RecipeRepository
 
 
@@ -38,6 +39,13 @@ class SearchQuery:
     hidden_recipe_ids: frozenset[UUID] = field(default_factory=frozenset)
     limit: int = MAX_DECK_SIZE
     cursor: str | None = None
+    min_total_minutes: int | None = None
+    jain: bool = False
+    avoid_allergens: frozenset[Allergen] = field(default_factory=frozenset)
+    avoid_ingredient_ids: frozenset[str] = field(default_factory=frozenset)
+    courses: frozenset[Course] = field(default_factory=frozenset)
+    moods: frozenset[Mood] = field(default_factory=frozenset)
+    weather: frozenset[Weather] = field(default_factory=frozenset)
 
     def __post_init__(self) -> None:
         # Here, not in build_deck, so a bad limit fails before any I/O.
@@ -82,6 +90,13 @@ class RecipeService:
                 max_total_minutes=query.max_total_minutes,
                 ingredient_ids=query.ingredient_ids,
                 excluded_staples=query.excluded_staples,
+                min_total_minutes=query.min_total_minutes,
+                jain=query.jain,
+                avoid_allergens=query.avoid_allergens,
+                avoid_ingredient_ids=query.avoid_ingredient_ids,
+                courses=query.courses,
+                moods=query.moods,
+                weather=query.weather,
             ),
         )
         # The cursor first: it is the cheapest check and the likeliest to fail.
@@ -95,10 +110,18 @@ class RecipeService:
             excluded_staples=query.excluded_staples,
             catalog=self._catalog,
         )
+        self._check_avoided(query.avoid_ingredient_ids)
         filters = SearchFilters(
             diet=query.diet,
             max_total_minutes=query.max_total_minutes,
+            min_total_minutes=query.min_total_minutes,
             hidden_recipe_ids=query.hidden_recipe_ids,
+            jain=query.jain,
+            avoid_allergens=query.avoid_allergens,
+            avoid_ingredient_ids=query.avoid_ingredient_ids,
+            courses=query.courses,
+            moods=query.moods,
+            weather=query.weather,
         )
 
         # One more than a deck per tier: the extra one says whether a next deck exists.
@@ -114,3 +137,13 @@ class RecipeService:
             else None
         )
         return SearchResult(deck=deck, ignored=pantry.ignored, next_cursor=next_cursor)
+
+    def _check_avoided(self, ingredient_ids: frozenset[str]) -> None:
+        """Every id to avoid was published once; a retired one is fine to avoid,
+        since no live recipe uses it.
+        """
+        unknown = sorted(i for i in ingredient_ids if i not in self._catalog.by_id)
+        if unknown:
+            raise PantryError(
+                [f"avoid_ingredient_ids: unknown ingredient {i!r}" for i in unknown]
+            )

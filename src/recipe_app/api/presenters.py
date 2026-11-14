@@ -155,6 +155,7 @@ def _scored_card(match: ScoredMatch) -> RecipeCard:
         matched=match.matched,
         missing=match.missing,
         assumed=match.assumed,
+        weather_fit=match.weather_fit,
     )
 
 
@@ -166,6 +167,7 @@ def _all_staples_card(match: AllStaplesMatch) -> RecipeCard:
         matched=(),
         missing=(),
         assumed=match.assumed,
+        weather_fit=match.weather_fit,
     )
 
 
@@ -177,6 +179,7 @@ def _card(
     matched: tuple[Ingredient, ...],
     missing: tuple[Ingredient, ...],
     assumed: tuple[Ingredient, ...],
+    weather_fit: bool,
 ) -> RecipeCard:
     return RecipeCard(
         id=recipe.id,
@@ -195,6 +198,7 @@ def _card(
         cuisine=recipe.tags.cuisine,
         courses=list(recipe.tags.courses),
         moods=list(recipe.tags.moods),
+        weather_fit=weather_fit,
         jain=recipe.jain,
         allergens=list(recipe.allergens),
     )

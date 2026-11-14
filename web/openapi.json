@@ -489,6 +489,11 @@
           "total_minutes": {
             "title": "Total Minutes",
             "type": "integer"
+          },
+          "weather_fit": {
+            "description": "Suits a requested `weather`, for the weather badge.",
+            "title": "Weather Fit",
+            "type": "boolean"
           }
         },
         "required": [
@@ -508,6 +513,7 @@
           "cuisine",
           "courses",
           "moods",
+          "weather_fit",
           "jain",
           "allergens"
         ],
@@ -710,6 +716,40 @@
       "SearchRequest": {
         "additionalProperties": false,
         "properties": {
+          "avoid_allergens": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Allergen"
+            },
+            "maxItems": 14,
+            "title": "Avoid Allergens",
+            "type": "array",
+            "uniqueItems": true
+          },
+          "avoid_ingredient_ids": {
+            "default": [],
+            "items": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+              "type": "string"
+            },
+            "maxItems": 50,
+            "title": "Avoid Ingredient Ids",
+            "type": "array",
+            "uniqueItems": true
+          },
+          "courses": {
+            "default": [],
+            "description": "A recipe needs at least one of them.",
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            },
+            "maxItems": 9,
+            "title": "Courses",
+            "type": "array",
+            "uniqueItems": true
+          },
           "cursor": {
             "anyOf": [
               {
@@ -770,6 +810,12 @@
             "type": "array",
             "uniqueItems": true
           },
+          "jain": {
+            "default": false,
+            "description": "Only Jain recipes; needs `diet` vegetarian or vegan.",
+            "title": "Jain",
+            "type": "boolean"
+          },
           "limit": {
             "default": 20,
             "maximum": 20.0,
@@ -789,6 +835,42 @@
               }
             ],
             "title": "Max Total Minutes"
+          },
+          "min_total_minutes": {
+            "anyOf": [
+              {
+                "maximum": 600.0,
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "With `max_total_minutes`; \"1 hr+\" sends 61.",
+            "title": "Min Total Minutes"
+          },
+          "moods": {
+            "default": [],
+            "description": "A recipe needs at least one; more of them ranks it higher.",
+            "items": {
+              "$ref": "#/components/schemas/Mood"
+            },
+            "maxItems": 12,
+            "title": "Moods",
+            "type": "array",
+            "uniqueItems": true
+          },
+          "weather": {
+            "default": [],
+            "description": "Never removes a recipe; ones that suit any come first.",
+            "items": {
+              "$ref": "#/components/schemas/Weather"
+            },
+            "maxItems": 9,
+            "title": "Weather",
+            "type": "array",
+            "uniqueItems": true
           }
         },
         "required": ["ingredient_ids"],
@@ -910,6 +992,22 @@
           "can"
         ],
         "title": "Unit",
+        "type": "string"
+      },
+      "Weather": {
+        "description": "How the weather makes you feel; it nudges the order, never filters.",
+        "enum": [
+          "cool-down",
+          "rainy-day-cosy",
+          "warming",
+          "just-pleasant",
+          "grey-gloomy",
+          "cosy-night-in",
+          "sticky-sluggish",
+          "breezy-evening",
+          "under-the-weather"
+        ],
+        "title": "Weather",
         "type": "string"
       }
     }

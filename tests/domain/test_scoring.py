@@ -1,7 +1,10 @@
 from collections.abc import Callable
+from types import SimpleNamespace
+from uuid import UUID
 
 import pytest
 
+from recipe_app.domain.ranking import scored_sort_key
 from recipe_app.domain.scoring import (
     EXCLUDED_STAPLE,
     MAIN,
@@ -12,12 +15,24 @@ from recipe_app.domain.scoring import (
     score_triangle,
 )
 
+# A scored match as the sort key reads it, so a reordered key shows up.
+SAMPLE = SimpleNamespace(
+    fit=2, score_int=5, recipe=SimpleNamespace(total_minutes=10, id=UUID(int=1))
+)
+
 # One row per SCORING_VERSION. Add a row when you bump; never edit an old one.
 SCORING_FINGERPRINTS: dict[int, dict[str, object]] = {
     1: {
         "weights": (4, 2, 1),
         "score_int": {(4, 4): 301030, (6, 6): 397940, (14, 16): 571561},
         "match_tenths": {(6, 7): 857, (4, 6): 667, (2, 32): 63},
+    },
+    # Same formula; fit with the mood screen now leads the sort key (ADR-0012).
+    2: {
+        "weights": (4, 2, 1),
+        "score_int": {(4, 4): 301030, (6, 6): 397940, (14, 16): 571561},
+        "match_tenths": {(6, 7): 857, (4, 6): 667, (2, 32): 63},
+        "sort_key": (-2, -5, 10, UUID(int=1)),
     },
 }
 
@@ -85,10 +100,12 @@ def test_scoring_changes_bump_the_version() -> None:
         "weights": (MAIN, SUPPORTING, EXCLUDED_STAPLE),
         "score_int": {key: score_int(*key) for key in ((4, 4), (6, 6), (14, 16))},
         "match_tenths": {key: match_tenths(*key) for key in ((6, 7), (4, 6), (2, 32))},
+        "sort_key": scored_sort_key(SAMPLE),  # type: ignore[arg-type]  # duck-typed
     }
 
     assert SCORING_VERSION in SCORING_FINGERPRINTS, "add a row for the new version"
-    assert current == SCORING_FINGERPRINTS[SCORING_VERSION], (
+    expected = SCORING_FINGERPRINTS[SCORING_VERSION]
+    assert {k: v for k, v in current.items() if k in expected} == expected, (
         "scoring changed: bump SCORING_VERSION and add a row; don't edit the old one"
     )
 

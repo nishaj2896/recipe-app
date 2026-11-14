@@ -20,6 +20,7 @@ from recipe_app.domain.cursor import (
     encode_cursor,
     request_fingerprint,
 )
+from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 
 NOW = 1_800_000_000
 KEY_A = b"a" * 32
@@ -45,8 +46,8 @@ def fingerprint(
 REQ = fingerprint()
 SCOPE = Scope(catalog="c" * 64, scoring=1, req=REQ)
 POSITION = Position(
-    scored=(-571561, 40, UUID(int=7)),
-    all_staples=(15, UUID(int=1001)),
+    scored=(-2, -571561, 40, UUID(int=7)),
+    all_staples=(-1, 15, UUID(int=1001)),
 )
 
 
@@ -75,8 +76,8 @@ def read(
     "position",
     [
         pytest.param(POSITION, id="both-tiers"),
-        pytest.param(Position(scored=(-301030, 20, UUID(int=3))), id="scored-only"),
-        pytest.param(Position(all_staples=(10, UUID(int=1002))), id="staples-only"),
+        pytest.param(Position(scored=(0, -301030, 20, UUID(int=3))), id="scored-only"),
+        pytest.param(Position(all_staples=(0, 10, UUID(int=1002))), id="staples-only"),
         pytest.param(Position(), id="empty"),
     ],
 )
@@ -104,6 +105,19 @@ def test_fingerprint_ignores_list_order() -> None:
     assert fingerprint(ingredient_ids=("peas", "potato")) == REQ
 
 
+def test_fingerprint_ignores_the_order_of_mood_picks() -> None:
+    def picks(*moods: Mood) -> str:
+        return request_fingerprint(
+            diet=None,
+            max_total_minutes=None,
+            ingredient_ids=("potato",),
+            excluded_staples=(),
+            moods=moods,
+        )
+
+    assert picks(Mood.SPICY, Mood.TANGY) == picks(Mood.TANGY, Mood.SPICY)
+
+
 def test_omitted_diet_fingerprints_as_non_veg() -> None:
     """7b.3: both return every recipe (ADR-0002 rule 6)."""
     assert fingerprint(diet=None) == fingerprint(diet=Diet.NON_VEG)
@@ -117,6 +131,27 @@ def test_omitted_diet_fingerprints_as_non_veg() -> None:
         pytest.param(fingerprint(max_total_minutes=None), id="max-time-omitted"),
         pytest.param(fingerprint(ingredient_ids=("potato",)), id="ingredients"),
         pytest.param(fingerprint(excluded_staples=()), id="excluded-staples"),
+        *(
+            pytest.param(
+                request_fingerprint(
+                    diet=Diet.VEGETARIAN,
+                    max_total_minutes=30,
+                    ingredient_ids=("potato", "peas"),
+                    excluded_staples=("turmeric",),
+                    **{name: value},  # type: ignore[arg-type]
+                ),
+                id=name,
+            )
+            for name, value in (
+                ("min_total_minutes", 15),
+                ("jain", True),
+                ("avoid_allergens", (Allergen.PEANUTS,)),
+                ("avoid_ingredient_ids", ("coconut",)),
+                ("courses", (Course.MAINS,)),
+                ("moods", (Mood.SPICY,)),
+                ("weather", (Weather.WARMING,)),
+            )
+        ),
     ],
 )
 def test_fingerprint_changes_with_each_filter(changed: str) -> None:

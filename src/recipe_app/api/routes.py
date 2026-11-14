@@ -81,6 +81,13 @@ async def search_recipes(request: SearchRequest, service: Service) -> SearchResp
             hidden_recipe_ids=frozenset(request.hidden_recipe_ids),
             limit=request.limit,
             cursor=request.cursor,
+            min_total_minutes=request.min_total_minutes,
+            jain=request.jain,
+            avoid_allergens=frozenset(request.avoid_allergens),
+            avoid_ingredient_ids=frozenset(request.avoid_ingredient_ids),
+            courses=frozenset(request.courses),
+            moods=frozenset(request.moods),
+            weather=frozenset(request.weather),
         )
     )
     return presenters.search_response(result)

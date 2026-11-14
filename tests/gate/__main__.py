@@ -15,12 +15,12 @@ import os
 import sys
 from datetime import UTC, datetime
 
-from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncEngine
 
 from recipe_app.infra.data import load_catalog, load_recipes
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.sync import sync
+from tests.databases import vacuum_analyze
 from tests.domain.factories import DATA_DIR
 from tests.gate.benchmark import TOLERANCE, benchmark, over_budget, report
 from tests.gate.searches import SEARCHES, explain, gate_recipes, search_queries
@@ -59,12 +59,10 @@ async def _load(engine: AsyncEngine) -> None:
     recipes = gate_recipes(catalog, load_recipes(catalog, DATA_DIR))
     try:
         report = await sync(engine, catalog, recipes, now=datetime.now(UTC))
-        # begin(), not connect(): a rolled-back ANALYZE keeps no statistics.
-        async with engine.begin() as connection:
-            await connection.execute(text("ANALYZE"))
+        await vacuum_analyze(engine)
     finally:
         await engine.dispose()
-    print(f"synced {report.recipes} recipes and analyzed every table")
+    print(f"synced {report.recipes} recipes, vacuumed and analyzed every table")
 
 
 async def _explain(engine: AsyncEngine) -> None:

@@ -12,6 +12,7 @@ from uuid import UUID
 
 from recipe_app.domain.catalog import IngredientCatalog, IngredientClass
 from recipe_app.domain.recipe import Recipe, build_recipe
+from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
 
 # How many core (class A and B) ingredients a recipe has, and how often.
 CORE_COUNTS = (0, 1, 2, 3, 4, 5, 6)
@@ -19,6 +20,9 @@ CORE_WEIGHTS = (2, 10, 25, 28, 18, 11, 6)
 STAPLE_COUNTS = range(3, 9)
 PREP_MINUTES = (0, 5, 10, 15, 20, 30, 45, 480)
 PREP_WEIGHTS = (10, 25, 25, 15, 10, 8, 5, 2)
+# Most everyday dishes suit any weather and have none (ADR-0012 rule 1).
+WEATHER_COUNTS = (0, 1, 2, 3)
+WEATHER_WEIGHTS = (55, 25, 15, 5)
 
 
 def synthetic_recipes(
@@ -36,6 +40,9 @@ def synthetic_recipes(
     skew is what makes some searches cheap and others expensive.
     """
     rng = random.Random(seed)  # noqa: S311 - test data, not security
+    # Tags draw from their own stream, so adding them left the ingredients,
+    # and every plan measured before, unchanged.
+    tag_rng = random.Random(seed + 1)  # noqa: S311 - test data, not security
     live = [item for item in catalog.by_id.values() if not item.retired]
     core = sorted(
         item.id for item in live if item.ingredient_class is not IngredientClass.STAPLE
@@ -65,9 +72,25 @@ def synthetic_recipes(
                 cook_minutes=max(1, round(rng.lognormvariate(3.2, 0.6))),
                 ingredient_ids=ingredient_ids,
                 catalog=catalog,
+                tags=_tags(tag_rng),
             )
         )
     return tuple(recipes)
+
+
+def _tags(rng: random.Random) -> dict[str, object]:
+    """Cuisine, courses, moods and weather, uniform over each list."""
+    return {
+        "cuisine": rng.choice(list(Cuisine)).value,
+        "courses": [c.value for c in rng.sample(list(Course), rng.randint(1, 2))],
+        "moods": [m.value for m in rng.sample(list(Mood), rng.randint(1, 3))],
+        "weather": [
+            w.value
+            for w in rng.sample(
+                list(Weather), rng.choices(WEATHER_COUNTS, WEATHER_WEIGHTS)[0]
+            )
+        ],
+    }
 
 
 def _distinct(

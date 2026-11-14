@@ -45,6 +45,14 @@ class ScoredMatch:
     assumed: tuple[Ingredient, ...]
     score_int: int
     match_tenths: int
+    # How the recipe fits the mood screen's picks; ranking.rank sets both.
+    mood_fit: int = 0
+    weather_fit: bool = False
+
+    @property
+    def fit(self) -> int:
+        """Picked moods it has, plus 1 for a picked weather (ADR-0012 rule 6)."""
+        return self.mood_fit + self.weather_fit
 
 
 @dataclass(frozen=True, slots=True)
@@ -53,6 +61,13 @@ class AllStaplesMatch:
 
     recipe: Recipe
     assumed: tuple[Ingredient, ...]
+    mood_fit: int = 0
+    weather_fit: bool = False
+
+    @property
+    def fit(self) -> int:
+        """Picked moods it has, plus 1 for a picked weather (ADR-0012 rule 6)."""
+        return self.mood_fit + self.weather_fit
 
 
 class PantryError(ValueError):

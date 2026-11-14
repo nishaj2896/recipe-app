@@ -3,7 +3,6 @@ from collections.abc import Iterator
 from dataclasses import replace
 
 import pytest
-from sqlalchemy import text
 
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.recipe import Recipe
@@ -14,6 +13,7 @@ from tests.databases import (
     drop_database,
     migrate,
     sync_seed,
+    vacuum_analyze,
 )
 from tests.gate.searches import gate_recipes
 
@@ -43,11 +43,8 @@ def gate_database_url(
 
 
 async def _analyze(url: str) -> None:
-    # Autovacuum would get there, but not before the tests read the plans.
     engine = create_engine(url)
     try:
-        # begin(), not connect(): a rolled-back ANALYZE keeps no statistics.
-        async with engine.begin() as connection:
-            await connection.execute(text("ANALYZE"))
+        await vacuum_analyze(engine)
     finally:
         await engine.dispose()

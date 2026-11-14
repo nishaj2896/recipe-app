@@ -30,6 +30,70 @@ async def test_search_card_shape(client: AsyncClient) -> None:
     assert first["image"] is None or set(first["image"]) == {"url", "alt"}
 
 
+async def test_mood_picks_lead_the_deck_and_mark_the_weather(
+    client: AsyncClient,
+) -> None:
+    response = await client.post(
+        SEARCH,
+        json={
+            "ingredient_ids": ["potato", "paneer", "chicken", "rice"],
+            "courses": ["mains"],
+            "moods": ["spicy", "tangy"],
+            "weather": ["rainy-day-cosy"],
+        },
+    )
+
+    assert response.status_code == 200
+    cards = response.json()["results"]
+    assert cards
+    assert all("mains" in card["courses"] for card in cards)
+    assert all({"spicy", "tangy"} & set(card["moods"]) for card in cards)
+    assert any(card["weather_fit"] for card in cards)
+
+
+async def test_food_rules_leave_out_what_they_rule_out(client: AsyncClient) -> None:
+    response = await client.post(
+        SEARCH,
+        json={
+            "ingredient_ids": ["potato", "paneer", "peas"],
+            "diet": "vegetarian",
+            "jain": True,
+            "avoid_allergens": ["dairy"],
+        },
+    )
+
+    cards = response.json()["results"]
+    assert cards
+    assert all(card["jain"] for card in cards)
+    assert all("dairy" not in card["allergens"] for card in cards)
+
+
+async def test_jain_without_a_vegetarian_diet_is_a_422(client: AsyncClient) -> None:
+    response = await client.post(
+        SEARCH, json={"ingredient_ids": ["potato"], "jain": True}
+    )
+
+    assert response.status_code == 422
+    assert response.json()["errors"] == [
+        {"field": "jain", "message": "needs diet vegetarian or vegan"}
+    ]
+
+
+async def test_an_unknown_ingredient_to_avoid_is_a_422(client: AsyncClient) -> None:
+    response = await client.post(
+        SEARCH,
+        json={"ingredient_ids": ["potato"], "avoid_ingredient_ids": ["unicorn"]},
+    )
+
+    assert response.status_code == 422
+    assert response.json()["errors"] == [
+        {
+            "field": "avoid_ingredient_ids",
+            "message": "unknown ingredient 'unicorn'",
+        }
+    ]
+
+
 async def test_all_staples_card_has_no_percentage(client: AsyncClient) -> None:
     response = await client.post(SEARCH, json={"ingredient_ids": ["kingfish"]})
 
