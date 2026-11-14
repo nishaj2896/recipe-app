@@ -24,6 +24,9 @@ DEFAULT_RESULTS = 8
 MAX_OFFSET = 200
 # pg_trgm's default similarity threshold; Postgres compares it as a real.
 MIN_SIMILARITY = 0.3
+# Shorter keys skip criterion 3: two letters are a start, not a spelling,
+# and checking every name for them is the slowest search (ADR-0012 rule 10).
+MIN_SPELLING_LENGTH = 3
 
 
 class Criterion(IntEnum):
@@ -41,7 +44,7 @@ class RecipeQuery:
 
     `key` is the typed text as a search key. `ingredient_ids` are the
     ingredients whose name or a search term starts with it, `cuisines` the
-    cuisines whose label does.
+    cuisines with a word in their label that does.
     """
 
     key: str
@@ -55,6 +58,11 @@ class Found:
 
     recipes: tuple[Recipe, ...]
     total: int
+
+
+def spells_close(key: str) -> bool:
+    """Whether a key is long enough to look for close spellings of it."""
+    return len(key) >= MIN_SPELLING_LENGTH
 
 
 def cuisine_label(cuisine: Cuisine) -> str:
@@ -86,7 +94,11 @@ class QueryResolver:
                 for ingredient_id, keys in self._ingredient_keys
                 if any(k.startswith(key) for k in keys)
             ),
-            cuisines=frozenset(c for c in Cuisine if cuisine_label(c).startswith(key)),
+            # Any word of the label: "indian" finds North Indian and the
+            # other three, "asian" South Asian and Southeast Asian.
+            cuisines=frozenset(
+                c for c in Cuisine if _word_starts(cuisine_label(c), key)
+            ),
         )
 
 
@@ -108,8 +120,12 @@ def match(recipe: Recipe, query: RecipeQuery) -> tuple[Criterion, float] | None:
         return Criterion.NAME_STARTS, 0.0
     if any(_word_starts(name, query.key) for name in names):
         return Criterion.WORD_STARTS, 0.0
-    similarity = max(trigram_similarity(name, query.key) for name in names)
-    if similarity >= _real(MIN_SIMILARITY):
+    similarity = (
+        max(trigram_similarity(name, query.key) for name in names)
+        if spells_close(query.key)
+        else 0.0
+    )
+    if spells_close(query.key) and similarity >= _real(MIN_SIMILARITY):
         return Criterion.CLOSE_SPELLING, similarity
     if recipe.tags.cuisine in query.cuisines or any(
         item.id in query.ingredient_ids for item in recipe.ingredients
