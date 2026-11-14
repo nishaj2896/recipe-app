@@ -66,6 +66,13 @@ test("the search sends the pantry, the staples you're out of, and what you've sk
     hidden_recipe_ids: ["an-old-skip"],
     diet: null,
     max_total_minutes: null,
+    min_total_minutes: null,
+    jain: false,
+    avoid_allergens: [],
+    avoid_ingredient_ids: [],
+    courses: [],
+    moods: [],
+    weather: [],
     cursor: null,
   });
 });

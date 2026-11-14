@@ -15,6 +15,7 @@ from recipe_app.domain.matching import Pantry, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters
 from recipe_app.domain.recipe import Recipe
 from recipe_app.domain.scoring import score_triangle
+from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 from recipe_app.infra.postgres import all_staples_query, scored_query
 from tests.gate.synthetic import synthetic_recipes
 
@@ -120,6 +121,27 @@ SEARCHES: dict[str, GateSearch] = {
     # candidate: the most work a search can ask for (ADR-0007 rule 3).
     "full pantry, out of salt and turmeric": GateSearch(
         FULL_PANTRY, excluded_staples=["salt", "turmeric"]
+    ),
+    # The mood screen with everything picked: fit is computed for every
+    # candidate and leads the sort (ADR-0012 rule 6).
+    "full pantry, mains, spicy or tangy, rainy day": GateSearch(
+        FULL_PANTRY,
+        SearchFilters(
+            courses=frozenset({Course.MAINS}),
+            moods=frozenset({Mood.SPICY, Mood.TANGY}),
+            weather=frozenset({Weather.RAINY_DAY_COSY, Weather.WARMING}),
+            max_total_minutes=60,
+        ),
+    ),
+    # Food rules set once and sent with every search (ADR-0012 rule 4).
+    "full pantry, jain, no peanuts, dairy or coconut": GateSearch(
+        FULL_PANTRY,
+        SearchFilters(
+            diet=Diet.VEGETARIAN,
+            jain=True,
+            avoid_allergens=frozenset({Allergen.PEANUTS, Allergen.DAIRY}),
+            avoid_ingredient_ids=frozenset({"coconut-milk", "coconut-oil"}),
+        ),
     ),
 }
 

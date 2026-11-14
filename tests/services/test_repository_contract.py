@@ -20,6 +20,7 @@ from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import Deck, position_after
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters, rank
+from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 from recipe_app.infra.data import load_catalog, load_recipe_book
 from recipe_app.infra.memory import InMemoryRecipeRepository
 from recipe_app.infra.postgres import PostgresRecipeRepository
@@ -78,6 +79,13 @@ def test_detail_of_unknown_id_is_none(repository: RecipeRepository) -> None:
     max_total_minutes=st.none() | st.integers(1, 600),
     hidden=st.sets(st.sampled_from([recipe.id for recipe in SEED]), max_size=5),
     limit=st.integers(1, 8),
+    min_total_minutes=st.none() | st.integers(1, 90),
+    jain=st.booleans(),
+    avoid_allergens=st.frozensets(st.sampled_from(Allergen), max_size=3),
+    avoid_ingredient_ids=st.frozensets(st.sampled_from(USED), max_size=3),
+    courses=st.frozensets(st.sampled_from(Course), max_size=3),
+    moods=st.frozensets(st.sampled_from(Mood), max_size=3),
+    weather=st.frozensets(st.sampled_from(Weather), max_size=3),
 )
 def test_ranked_pages_through_exactly_the_domain_ranking(
     repository: RecipeRepository,
@@ -87,9 +95,17 @@ def test_ranked_pages_through_exactly_the_domain_ranking(
     max_total_minutes: int | None,
     hidden: set[UUID],
     limit: int,
+    min_total_minutes: int | None,
+    jain: bool,
+    avoid_allergens: frozenset[Allergen],
+    avoid_ingredient_ids: frozenset[str],
+    courses: frozenset[Course],
+    moods: frozenset[Mood],
+    weather: frozenset[Weather],
 ) -> None:
     """Walking every page gives the domain's ranking of every recipe, in order
-    (ADR-0007 rule 6). Small pages, so the keyset resume runs many times.
+    (ADR-0007 rule 6), with every filter and mood pick (ADR-0012 rules 4 to
+    6). Small pages, so the keyset resume runs many times.
     """
     pantry = resolve_pantry(
         ingredient_ids=have, excluded_staples=out_of, catalog=CATALOG
@@ -98,6 +114,13 @@ def test_ranked_pages_through_exactly_the_domain_ranking(
         diet=diet,
         max_total_minutes=max_total_minutes,
         hidden_recipe_ids=frozenset(hidden),
+        min_total_minutes=min_total_minutes,
+        jain=jain,
+        avoid_allergens=avoid_allergens,
+        avoid_ingredient_ids=avoid_ingredient_ids,
+        courses=courses,
+        moods=moods,
+        weather=weather,
     )
     expected = rank(SEED, pantry, filters)
 
@@ -130,3 +153,49 @@ def test_ranked_applies_the_filters(repository: RecipeRepository) -> None:
     assert shown
     assert all(recipe.diet is Diet.VEGAN for recipe in shown)
     assert all(recipe.total_minutes <= 20 for recipe in shown)
+
+
+def test_ranked_applies_the_food_rules(repository: RecipeRepository) -> None:
+    pantry = resolve_pantry(
+        ingredient_ids=CORE_IDS, excluded_staples=[], catalog=CATALOG
+    )
+    filters = SearchFilters(
+        diet=Diet.VEGETARIAN,
+        jain=True,
+        avoid_allergens=frozenset({Allergen.PEANUTS}),
+        avoid_ingredient_ids=frozenset({"coconut-milk"}),
+        min_total_minutes=20,
+    )
+
+    page = asyncio.run(repository.ranked(pantry, filters, Position(), 20))
+    shown = [m.recipe for m in page.scored] + [m.recipe for m in page.all_staples]
+
+    assert shown
+    for recipe in shown:
+        assert recipe.jain
+        assert Allergen.PEANUTS not in recipe.allergens
+        assert "coconut-milk" not in {item.id for item in recipe.ingredients}
+        assert recipe.total_minutes >= 20
+
+
+def test_ranked_puts_the_best_fit_first(repository: RecipeRepository) -> None:
+    pantry = resolve_pantry(
+        ingredient_ids=CORE_IDS, excluded_staples=[], catalog=CATALOG
+    )
+    filters = SearchFilters(
+        courses=frozenset({Course.MAINS}),
+        moods=frozenset({Mood.SPICY, Mood.TANGY}),
+        weather=frozenset({Weather.RAINY_DAY_COSY}),
+    )
+
+    page = asyncio.run(repository.ranked(pantry, filters, Position(), 20))
+
+    assert page.scored
+    for match in page.scored:
+        assert Course.MAINS in match.recipe.tags.courses
+        assert {Mood.SPICY, Mood.TANGY} & set(match.recipe.tags.moods)
+    fits = [m.fit for m in page.scored]
+    assert fits == sorted(fits, reverse=True)
+    # Spicy, tangy and rainy-day cosy all at once leads the seed's mains.
+    assert fits[0] == 3
+    assert fits[-1] < 3

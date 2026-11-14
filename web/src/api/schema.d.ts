@@ -360,6 +360,11 @@ export interface components {
       tier: components["schemas"]["Tier"];
       /** Total Minutes */
       total_minutes: number;
+      /**
+       * Weather Fit
+       * @description Suits a requested `weather`, for the weather badge.
+       */
+      weather_fit: boolean;
     };
     /** RecipeDetail */
     RecipeDetail: {
@@ -432,6 +437,22 @@ export interface components {
     };
     /** SearchRequest */
     SearchRequest: {
+      /**
+       * Avoid Allergens
+       * @default []
+       */
+      avoid_allergens: components["schemas"]["Allergen"][];
+      /**
+       * Avoid Ingredient Ids
+       * @default []
+       */
+      avoid_ingredient_ids: string[];
+      /**
+       * Courses
+       * @description A recipe needs at least one of them.
+       * @default []
+       */
+      courses: components["schemas"]["Course"][];
       /** Cursor */
       cursor?: string | null;
       diet?: components["schemas"]["Diet"] | null;
@@ -448,12 +469,35 @@ export interface components {
       /** Ingredient Ids */
       ingredient_ids: string[];
       /**
+       * Jain
+       * @description Only Jain recipes; needs `diet` vegetarian or vegan.
+       * @default false
+       */
+      jain: boolean;
+      /**
        * Limit
        * @default 20
        */
       limit: number;
       /** Max Total Minutes */
       max_total_minutes?: number | null;
+      /**
+       * Min Total Minutes
+       * @description With `max_total_minutes`; "1 hr+" sends 61.
+       */
+      min_total_minutes?: number | null;
+      /**
+       * Moods
+       * @description A recipe needs at least one; more of them ranks it higher.
+       * @default []
+       */
+      moods: components["schemas"]["Mood"][];
+      /**
+       * Weather
+       * @description Never removes a recipe; ones that suit any come first.
+       * @default []
+       */
+      weather: components["schemas"]["Weather"][];
     };
     /** SearchResponse */
     SearchResponse: {
@@ -517,6 +561,21 @@ export interface components {
       | "leaf"
       | "pinch"
       | "can";
+    /**
+     * Weather
+     * @description How the weather makes you feel; it nudges the order, never filters.
+     * @enum {string}
+     */
+    Weather:
+      | "cool-down"
+      | "rainy-day-cosy"
+      | "warming"
+      | "just-pleasant"
+      | "grey-gloomy"
+      | "cosy-night-in"
+      | "sticky-sluggish"
+      | "breezy-evening"
+      | "under-the-weather";
   };
   responses: never;
   parameters: never;

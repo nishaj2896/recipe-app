@@ -95,6 +95,7 @@ export function recipe(
     cuisine: "north-indian",
     courses: ["mains"],
     moods: ["comforting"],
+    weather_fit: false,
     jain: false,
     allergens: [],
   };

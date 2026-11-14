@@ -14,16 +14,19 @@ from dataclasses import dataclass
 from uuid import UUID
 
 from recipe_app.domain.catalog import Diet
+from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 
-CURSOR_VERSION = 1
+# 2: fit leads both sort keys (ADR-0012 rule 6), so a version 1 position
+# no longer fits them; those cursors expire rather than fail.
+CURSOR_VERSION = 2
 MAX_CURSOR_LENGTH = 1024
 MAX_AGE_SECONDS = 24 * 60 * 60
 MAX_CLOCK_SKEW_SECONDS = 5 * 60
 MIN_KEY_BYTES = 32
 BASE64URL = re.compile(r"[A-Za-z0-9_-]*")
 
-type ScoredKey = tuple[int, int, UUID]
-type AllStaplesKey = tuple[int, UUID]
+type ScoredKey = tuple[int, int, int, UUID]
+type AllStaplesKey = tuple[int, int, UUID]
 
 
 class CursorError(ValueError):
@@ -78,14 +81,30 @@ def request_fingerprint(
     max_total_minutes: int | None,
     ingredient_ids: Iterable[str],
     excluded_staples: Iterable[str],
+    min_total_minutes: int | None = None,
+    jain: bool = False,
+    avoid_allergens: Iterable[Allergen] = (),
+    avoid_ingredient_ids: Iterable[str] = (),
+    courses: Iterable[Course] = (),
+    moods: Iterable[Mood] = (),
+    weather: Iterable[Weather] = (),
 ) -> str:
-    """SHA-256 of the filters that change the list; `hidden_recipe_ids` is left out."""
+    """SHA-256 of the filters that change the list, each list sorted
+    (ADR-0012 rule 7); `hidden_recipe_ids` is left out.
+    """
     canonical = _canonical(
         {
             "diet": str(diet or Diet.NON_VEG),
             "max_total_minutes": max_total_minutes,
+            "min_total_minutes": min_total_minutes,
             "ingredient_ids": sorted(ingredient_ids),
             "excluded_staples": sorted(excluded_staples),
+            "jain": jain,
+            "avoid_allergens": sorted(avoid_allergens),
+            "avoid_ingredient_ids": sorted(avoid_ingredient_ids),
+            "courses": sorted(courses),
+            "moods": sorted(moods),
+            "weather": sorted(weather),
         }
     )
     return hashlib.sha256(canonical).hexdigest()
@@ -183,11 +202,11 @@ def _json_object(payload: bytes) -> dict[str, object]:
 def _position_to_json(position: Position) -> dict[str, object]:
     scored = all_staples = None
     if position.scored is not None:
-        neg_score, minutes, recipe_id = position.scored
-        scored = [neg_score, minutes, str(recipe_id)]
+        neg_fit, neg_score, minutes, recipe_id = position.scored
+        scored = [neg_fit, neg_score, minutes, str(recipe_id)]
     if position.all_staples is not None:
-        minutes, recipe_id = position.all_staples
-        all_staples = [minutes, str(recipe_id)]
+        neg_fit, minutes, recipe_id = position.all_staples
+        all_staples = [neg_fit, minutes, str(recipe_id)]
     return {"scored": scored, "all_staples": all_staples}
 
 
@@ -201,10 +220,15 @@ def _position_from_json(raw: object) -> Position:
         return Position(
             scored=None
             if scored is None
-            else (_int(scored[0]), _int(scored[1]), UUID(scored[2])),
+            else (
+                _int(scored[0]),
+                _int(scored[1]),
+                _int(scored[2]),
+                UUID(scored[3]),
+            ),
             all_staples=None
             if all_staples is None
-            else (_int(all_staples[0]), UUID(all_staples[1])),
+            else (_int(all_staples[0]), _int(all_staples[1]), UUID(all_staples[2])),
         )
     except (AttributeError, KeyError, IndexError, TypeError, ValueError) as error:
         raise InvalidCursorError("bad position") from error

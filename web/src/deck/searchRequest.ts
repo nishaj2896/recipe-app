@@ -32,5 +32,13 @@ export function searchFor(
     hidden_recipe_ids: device.hidden.slice(-MAX_HIDDEN),
     diet: device.diet,
     max_total_minutes: device.maxTotalMinutes,
+    // Food rules and the mood screen fill these in (ADR-0012 rules 4 and 5).
+    min_total_minutes: null,
+    jain: false,
+    avoid_allergens: [],
+    avoid_ingredient_ids: [],
+    courses: [],
+    moods: [],
+    weather: [],
   };
 }

@@ -26,6 +26,7 @@ from sqlalchemy import (
     Uuid,
     any_,
     bindparam,
+    case,
     exists,
     func,
     select,
@@ -44,7 +45,7 @@ from recipe_app.domain.matching import (
     ScoredMatch,
     match_recipe,
 )
-from recipe_app.domain.ranking import Ranking, SearchFilters
+from recipe_app.domain.ranking import Ranking, SearchFilters, mood_fit, weather_fit
 from recipe_app.domain.recipe import Image, PlanAhead, Recipe, RecipeTags
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
@@ -263,9 +264,9 @@ class PostgresRecipeRepository:
         found = {recipe.id: recipe for recipe in self._to_recipes(rows)}
         return Ranking(
             scored=self._scored_cards(
-                [(row.id, row.score_int) for row in scored], found, pantry
+                [(row.id, row.score_int) for row in scored], found, pantry, filters
             ),
-            all_staples=self._all_staples_cards(all_staples, found, pantry),
+            all_staples=self._all_staples_cards(all_staples, found, pantry, filters),
         )
 
     def _scored_cards(
@@ -273,6 +274,7 @@ class PostgresRecipeRepository:
         ranked: list[tuple[UUID, int]],
         found: dict[UUID, Recipe],
         pantry: Pantry,
+        filters: SearchFilters,
     ) -> tuple[ScoredMatch, ...]:
         """Cards in Postgres's order, each checked by the domain (ADR-0007 rule 5)."""
         cards: list[ScoredMatch] = []
@@ -288,11 +290,16 @@ class PostgresRecipeRepository:
                 # Keep Postgres's score: the cursor resumes from this card's
                 # sort key, so it must be the one Postgres sorted by (rule 5).
                 match = replace(match, score_int=score_int)
-            cards.append(match)
+            # Fit comes from the same stored tags Postgres sorted by.
+            cards.append(_fitted(match, filters))
         return tuple(cards)
 
     def _all_staples_cards(
-        self, ranked: list[UUID], found: dict[UUID, Recipe], pantry: Pantry
+        self,
+        ranked: list[UUID],
+        found: dict[UUID, Recipe],
+        pantry: Pantry,
+        filters: SearchFilters,
     ) -> tuple[AllStaplesMatch, ...]:
         cards: list[AllStaplesMatch] = []
         for recipe_id in ranked:
@@ -302,7 +309,7 @@ class PostgresRecipeRepository:
             if not isinstance(match, AllStaplesMatch):
                 self._disagree(recipe_id, "all staples", match)
                 continue
-            cards.append(match)
+            cards.append(_fitted(match, filters))
         return tuple(cards)
 
     def _disagree(self, recipe_id: UUID, postgres: str, domain: object) -> None:
@@ -392,20 +399,57 @@ def scored_query(
     score = func.coalesce(
         triangle[core_q * (core_q - 1) // 2 + weights.c.matched_q], -1
     ).label("score_int")
+    # With no moods or weather picked, every fit is 0: leave it out, so the
+    # query is exactly the one ADR-0007 measured.
+    fit = _fit(filters)
+    leading = [] if fit is None else [-fit]
     query = (
         select(recipes.c.id, score)
         .join(weights, weights.c.recipe_id == recipes.c.id)
         # Scored tier: at least one ticked ingredient (ADR-0003 rule 3).
         .where(weights.c.matched_q > 0, *_filters(filters))
-        .order_by(score.desc(), recipes.c.total_minutes, recipes.c.id)
+        .order_by(*leading, score.desc(), recipes.c.total_minutes, recipes.c.id)
         .limit(limit)
     )
     if after is not None:
         query = query.where(
-            tuple_(-score, recipes.c.total_minutes, recipes.c.id)
-            > tuple_(*_keyset("after_scored", after))
+            tuple_(*leading, -score, recipes.c.total_minutes, recipes.c.id)
+            > tuple_(*_keyset("after_scored", after, with_fit=fit is not None))
         )
     return query
+
+
+def _fit(filters: SearchFilters) -> ColumnElement[int] | None:
+    """The picked moods a recipe has, plus 1 if it suits a picked weather
+    (ADR-0012 rule 6); None when nothing is picked and every fit is 0.
+    """
+    if not filters.ranks_by_fit:
+        return None
+    parts: list[ColumnElement[int]] = []
+    if filters.moods:
+        mood = (
+            func.unnest(recipes.c.moods)
+            .table_valued("value")
+            .render_derived(name="mood")
+        )
+        parts.append(
+            select(func.count())
+            .select_from(mood)
+            .where(mood.c.value == _any_text("fit_moods", filters.moods))
+            .scalar_subquery()
+        )
+    if filters.weather:
+        suits = _overlaps(recipes.c.weather, "fit_weather", filters.weather)
+        parts.append(case((suits, 1), else_=0))
+    return sum(parts[1:], parts[0]).label("fit")
+
+
+def _fitted[M: (ScoredMatch, AllStaplesMatch)](match: M, filters: SearchFilters) -> M:
+    return replace(
+        match,
+        mood_fit=mood_fit(match.recipe, filters),
+        weather_fit=weather_fit(match.recipe, filters),
+    )
 
 
 def _tags(row: RowMapping) -> RecipeTags:
@@ -462,6 +506,8 @@ def all_staples_query(
     All staples, and none of them unticked (rule 3); served by
     ix_recipes_all_staples.
     """
+    fit = _fit(filters)
+    leading = [] if fit is None else [-fit]
     query = (
         select(recipes.c.id)
         .where(
@@ -473,20 +519,23 @@ def all_staples_query(
             ),
             *_filters(filters),
         )
-        .order_by(recipes.c.total_minutes, recipes.c.id)
+        .order_by(*leading, recipes.c.total_minutes, recipes.c.id)
         .limit(limit)
     )
     if after is not None:
         query = query.where(
-            tuple_(recipes.c.total_minutes, recipes.c.id)
-            > tuple_(*_keyset("after_staples", after))
+            tuple_(*leading, recipes.c.total_minutes, recipes.c.id)
+            > tuple_(*_keyset("after_staples", after, with_fit=fit is not None))
         )
     return query
 
 
-def _keyset(name: str, key: ScoredKey | AllStaplesKey) -> list[Any]:
-    """The cursor's sort key as bound parameters, one per column."""
-    return [bindparam(f"{name}_{n}", value) for n, value in enumerate(key)]
+def _keyset(name: str, key: ScoredKey | AllStaplesKey, *, with_fit: bool) -> list[Any]:
+    """The cursor's sort key as bound parameters, one per column. Without
+    fit, the key's leading -fit is 0 for every recipe, so it is dropped.
+    """
+    columns = key if with_fit else key[1:]
+    return [bindparam(f"{name}_{n}", value) for n, value in enumerate(columns)]
 
 
 def _filters(filters: SearchFilters) -> list[ColumnElement[bool]]:
@@ -497,12 +546,40 @@ def _filters(filters: SearchFilters) -> list[ColumnElement[bool]]:
         conditions.append(recipes.c.diet == _any_text("diets", allowed))
     if filters.max_total_minutes is not None:
         conditions.append(recipes.c.total_minutes <= filters.max_total_minutes)
+    if filters.min_total_minutes is not None:
+        conditions.append(recipes.c.total_minutes >= filters.min_total_minutes)
     if filters.hidden_recipe_ids:
         hidden = bindparam(
             "hidden", sorted(filters.hidden_recipe_ids), type_=ARRAY(Uuid)
         )
         conditions.append(~(recipes.c.id == any_(hidden)))
+    if filters.jain:
+        conditions.append(recipes.c.jain)
+    if filters.avoid_allergens:
+        conditions.append(
+            ~_overlaps(recipes.c.allergens, "avoid_allergens", filters.avoid_allergens)
+        )
+    if filters.avoid_ingredient_ids:
+        conditions.append(
+            ~exists().where(
+                recipe_ingredients.c.recipe_id == recipes.c.id,
+                recipe_ingredients.c.ingredient_id
+                == _any_text("avoid_ingredients", filters.avoid_ingredient_ids),
+            )
+        )
+    if filters.courses:
+        conditions.append(_overlaps(recipes.c.courses, "courses", filters.courses))
+    if filters.moods:
+        conditions.append(_overlaps(recipes.c.moods, "moods", filters.moods))
     return conditions
+
+
+def _overlaps(
+    column: ColumnElement[Any], name: str, values: frozenset[str]
+) -> ColumnElement[bool]:
+    """`column && :name`: the text[] column shares a value with the list."""
+    array = bindparam(name, sorted(values), type_=ARRAY(Text))
+    return column.op("&&", is_comparison=True)(array)
 
 
 def _uuids(name: str, values: list[UUID]) -> Any:

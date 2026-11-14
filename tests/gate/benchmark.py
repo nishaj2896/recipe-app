@@ -154,6 +154,19 @@ def _body(name: str) -> dict[str, Any]:
         body["diet"] = filters.diet.value
     if filters.max_total_minutes is not None:
         body["max_total_minutes"] = filters.max_total_minutes
+    if filters.min_total_minutes is not None:
+        body["min_total_minutes"] = filters.min_total_minutes
+    if filters.jain:
+        body["jain"] = True
+    for name in (
+        "avoid_allergens",
+        "avoid_ingredient_ids",
+        "courses",
+        "moods",
+        "weather",
+    ):
+        if values := getattr(filters, name):
+            body[name] = sorted(values)
     return body
 
 

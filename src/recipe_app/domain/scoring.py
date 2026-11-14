@@ -5,7 +5,8 @@ from fractions import Fraction
 
 # Bump whenever the weights, the score formula, the tiers or the sort key
 # change (ADR-0003 rule 9), and add a row to SCORING_FINGERPRINTS in the tests.
-SCORING_VERSION = 1
+# 2: fit with the mood screen leads the sort key (ADR-0012 rule 6).
+SCORING_VERSION = 2
 
 # Weights in quarter units: 4 is 1.0, 2 is 0.5, 1 is 0.25 (ADR-0003 rule 1).
 MAIN = 4

@@ -181,3 +181,5 @@ def test_the_card_carries_tags_and_allergens() -> None:
     assert [m.value for m in card.moods] == ["hearty"]
     assert [a.value for a in card.allergens] == ["dairy"]
     assert card.jain is True
+    assert card.weather_fit is False
+    assert _scored_card(replace(match, weather_fit=True)).weather_fit is True

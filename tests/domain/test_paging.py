@@ -144,7 +144,7 @@ def test_resume_starts_strictly_after_the_position() -> None:
 
 
 def test_position_keeps_a_tier_the_deck_took_nothing_from() -> None:
-    before = Position(all_staples=(20, UUID(int=1001)))
+    before = Position(all_staples=(0, 20, UUID(int=1001)))
     ranking = rank(recipes(5, 0), PANTRY, SearchFilters())
 
     after = position_after(build_deck(ranking, MAX_DECK_SIZE), before)
