@@ -16,6 +16,7 @@ image = { file = "01a188aa-f1bb-7de8-bf53-445fbba68aca.webp", sha256 = "1ce654a4
 cuisine = "north-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["smoky", "spicy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Mint chutney, Butter naan, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 0.75, unit = "cup" },
@@ -53,6 +54,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["smoky", "spicy"]
 also_known_as = ["murgh tikka"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "curd", amount = 0.5, unit = "cup" },
@@ -89,6 +91,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["creamy", "smoky"]
 also_known_as = ["malai tikka", "murgh malai tikka"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -125,6 +128,7 @@ image = { file = "01a188aa-f1c3-75fe-a474-6b5c552d8ff7.webp", sha256 = "8838d877
 cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["smoky", "spicy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "chicken-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -160,6 +164,7 @@ image = { file = "01a188aa-f1c6-79e3-abfa-5caa9d08a92a.webp", sha256 = "39ec43cc
 cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["smoky", "spicy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -197,6 +202,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["creamy", "savoury"]
 also_known_as = ["galawati kebab"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a188ac-05a4-7d6b-8b51-b0183f72ee48"]  # Mint chutney, Laccha onion, Lachha paratha
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -237,6 +243,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["savoury", "crispy"]
 also_known_as = ["shami kabab"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -278,6 +285,7 @@ image = { file = "01a188aa-f1cc-7900-a94f-6142775566e4.webp", sha256 = "929c00d1
 cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["smoky", "spicy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "paneer", amount = 400, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -314,6 +322,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["fresh-herby", "crispy"]
 also_known_as = ["hara bhara kabab"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Masala chai
 ingredients = [
   { id = "spinach", amount = 200, unit = "g" },
   { id = "peas", amount = 0.5, unit = "cup" },
@@ -351,6 +360,7 @@ cook_minutes = 25
 cuisine = "north-indian"
 courses = ["snacks-starters", "sides"]
 moods = ["smoky", "spicy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "potato", amount = 500, unit = "g" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -384,6 +394,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["smoky", "spicy"]
 also_known_as = ["tandoori cauliflower"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "cauliflower", amount = 1, unit = "small-head" },
   { id = "hung-curd", amount = 0.5, unit = "cup" },
@@ -419,6 +430,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
 ingredients = [
   { id = "basa", amount = 500, unit = "g" },
   { id = "gram-flour", amount = 0.5, unit = "cup" },
@@ -455,6 +467,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["samosas", "aloo samosa"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd7-70b5-a340-42122d9c8976", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Imli chutney, Masala chai
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "carom-seeds", amount = 0.5, unit = "tsp" },
@@ -498,6 +511,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["alu tikki"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd7-70b5-a340-42122d9c8976"]  # Mint chutney, Imli chutney
 ingredients = [
   { id = "potato", amount = 4, unit = "medium" },
   { id = "peas", amount = 0.25, unit = "cup" },
@@ -533,6 +547,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["onion pakoda", "onion bhaji"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Masala chai
 ingredients = [
   { id = "onion", amount = 3, unit = "medium" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -565,6 +580,7 @@ cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Masala chai
 ingredients = [
   { id = "gram-flour", amount = 1.5, unit = "cup" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -601,6 +617,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["paneer pakoda"]
+pairs_with = ["01a188e4-2cd7-70b5-a340-42122d9c8976", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Imli chutney, Masala chai
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "gram-flour", amount = 1, unit = "cup" },
@@ -635,6 +652,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["bread pakoda"]
+pairs_with = ["01a188e4-2cd7-70b5-a340-42122d9c8976", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Imli chutney, Masala chai
 ingredients = [
   { id = "white-bread", amount = 8, unit = "slice" },
   { id = "potato", amount = 3, unit = "medium" },
@@ -828,6 +846,7 @@ cuisine = "street-food"
 courses = ["mains", "snacks-starters"]
 moods = ["tangy", "spicy"]
 also_known_as = ["matar kulche"]
+pairs_with = ["01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Laccha onion, Lassi
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -981,6 +1000,7 @@ image = { file = "01a188aa-f1f8-7392-b067-b7fa74c30949.webp", sha256 = "f5ece057
 cuisine = "north-indian"
 courses = ["breakfast", "mains"]
 moods = ["savoury", "spicy"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a188ac-0597-7bfe-8ab8-24300d82453f", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Phulka, Plain paratha, Kachumber salad
 ingredients = [
   { id = "paneer", amount = 300, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },

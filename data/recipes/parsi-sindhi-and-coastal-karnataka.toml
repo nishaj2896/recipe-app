@@ -16,6 +16,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "comforting"]
 also_known_as = ["parsi dhansak"]
+pairs_with = ["01a15175-3c2e-777b-bda3-6dd751f0fa1c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Kachumber salad, Laccha onion
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "toor-dal", amount = 0.5, unit = "cup" },
@@ -62,6 +63,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["sweet", "tangy", "crispy"]
 also_known_as = ["salli boti"]
+pairs_with = ["01a188ac-05a7-7dde-b069-03b15b2dd2b3", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Phulka, Kachumber salad
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -99,6 +101,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["fresh-herby", "savoury"]
 also_known_as = ["patra ni macchi"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Jeera rice, Kachumber salad
 ingredients = [
   { id = "pomfret", amount = 2, unit = "medium" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -197,6 +200,7 @@ image = { file = "01a18bba-7843-7da8-9065-2ad4a677f1b5.webp", sha256 = "03fa7590
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["tangy", "savoury", "comforting"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a15175-3c01-7f7f-bbc8-f5c5fce48a60"]  # Jeera rice, Jeera aloo
 ingredients = [
   { id = "gram-flour", amount = 0.33, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tbsp" },
@@ -238,6 +242,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["sindhi sai bhaji"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Jeera rice, Phulka
 ingredients = [
   { id = "spinach", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.33, unit = "cup" },
@@ -346,6 +351,7 @@ image = { file = "01a18bba-784c-7106-a51f-b79ab68de48c.webp", sha256 = "483f8230
 cuisine = "west-indian"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "tangy", "hearty"]
+pairs_with = ["01a15175-3c26-7418-8595-c4174264ab0c", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Cucumber raita, Kachumber salad
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 2.5, unit = "cup" },
@@ -393,6 +399,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "crispy"]
 also_known_as = ["kori roti"]
+pairs_with = ["01a18b58-530f-777a-b779-a17ca0df81c2", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Sol kadhi, Kachumber salad
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "rice-wafers", amount = 12, unit = "piece" },
@@ -431,6 +438,7 @@ cook_minutes = 40
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188e6-a84e-70a4-8c8d-c3da512978e1", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Neer dosa, Ghee rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coconut", amount = 1, unit = "cup" },
@@ -469,6 +477,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["kundapura chicken"]
+pairs_with = ["01a188e6-a84e-70a4-8c8d-c3da512978e1", "01a18b54-81cc-797d-9841-68d1b732760a"]  # Neer dosa, Ghee rice
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "coconut-milk", amount = 1.5, unit = "cup" },
@@ -507,6 +516,7 @@ cuisine = "west-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury", "hearty"]
 also_known_as = ["dabba gosht"]
+pairs_with = ["01a15175-3c2e-777b-bda3-6dd751f0fa1c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Kachumber salad, Laccha onion
 ingredients = [
   { id = "mutton", amount = 500, unit = "g" },
   { id = "pasta", amount = 150, unit = "g" },
@@ -547,6 +557,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["mangalore bajji"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81fb-7b02-a01b-8336a10cf2c5"]  # Coconut chutney, Filter coffee
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "rice-flour", amount = 2, unit = "tbsp" },
@@ -583,6 +594,7 @@ cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["savoury", "spicy"]
 also_known_as = ["pathrode", "colocasia leaf rolls"]
+pairs_with = ["01a18b54-81db-76fb-8c2c-f4f8a4475b55", "01a18b54-81fb-7b02-a01b-8336a10cf2c5"]  # Coconut chutney, Filter coffee
 ingredients = [
   { id = "colocasia-leaves", amount = 10, unit = "piece" },
   { id = "rice", amount = 1, unit = "cup" },

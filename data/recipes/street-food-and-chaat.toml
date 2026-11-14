@@ -212,6 +212,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["kanda bhajji"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cd5-7b59-9694-5bb15b2ee30c"]  # Masala chai, Mint chutney
 ingredients = [
   { id = "onion", amount = 3, unit = "medium" },
   { id = "gram-flour", amount = 0.75, unit = "cup" },
@@ -282,6 +283,7 @@ cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["spicy", "savoury"]
 also_known_as = ["veg frankie"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chai, Cold coffee
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
@@ -322,6 +324,7 @@ courses = ["mains"]
 moods = ["spicy", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["chole bhatura"]
+pairs_with = ["01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Lassi, Laccha onion
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 1, unit = "tbsp" },
@@ -364,6 +367,7 @@ cuisine = "street-food"
 courses = ["mains"]
 moods = ["spicy", "tangy", "hearty"]
 also_known_as = ["chole kulcha"]
+pairs_with = ["01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Lassi, Laccha onion
 ingredients = [
   { id = "dried-white-peas", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -407,6 +411,7 @@ plan_ahead = { wait_minutes = 120, note = "soak for 2 hours" }
 cuisine = "street-food"
 courses = ["breakfast", "snacks-starters"]
 moods = ["spicy", "crispy", "hearty"]
+pairs_with = ["01a18bb7-ff00-77fb-9d41-8f9f889044fe", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Jalebi, Masala chai
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "moong-dal", amount = 0.5, unit = "cup" },
@@ -452,6 +457,7 @@ courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
 weather = ["rainy-day-cosy"]
 also_known_as = ["moong pakoda"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Mint chutney, Masala chai
 ingredients = [
   { id = "moong-dal", amount = 1, unit = "cup" },
   { id = "ginger", amount = 1, unit = "piece" },
@@ -482,6 +488,7 @@ image = { file = "01a18bb7-fecd-716e-82ca-fabe0a4ffb0f.webp", sha256 = "80c6453f
 cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chai, Cold coffee
 ingredients = [
   { id = "all-purpose-flour", amount = 1, unit = "cup" },
   { id = "whole-wheat-flour", amount = 0.5, unit = "cup" },
@@ -637,6 +644,7 @@ cook_minutes = 30
 cuisine = "street-food"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188e4-2cd3-7853-8804-0034c2b6a9f7", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Boondi raita, Kachumber salad
 ingredients = [
   { id = "basmati-rice", amount = 1.5, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },

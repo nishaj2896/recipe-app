@@ -15,6 +15,7 @@ image = { file = "01a18c4a-5f6c-7ce6-a337-75ae717b09c9.webp", sha256 = "b991ef78
 cuisine = "south-asian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a18c4a-5f75-7fe4-84a0-02a2fb076583", "01a18c4a-5f78-7d6f-a4fe-8f109cab562f", "01a18b54-81c7-70ee-be9d-ec402bc962fd"]  # Pol sambol, Sri Lankan dhal curry, Coconut rice
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 1, unit = "large" },
@@ -54,6 +55,7 @@ image = { file = "01a18c4a-5f73-7aea-a8ab-569912f8df1b.webp", sha256 = "9c54e2cf
 cuisine = "south-asian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
+pairs_with = ["01a18c4a-5f6c-7ce6-a337-75ae717b09c9", "01a18c4a-5f75-7fe4-84a0-02a2fb076583"]  # Sri Lankan chicken curry, Pol sambol
 ingredients = [
   { id = "frozen-parathas", amount = 4, unit = "piece" },
   { id = "chicken", amount = 250, unit = "g" },
@@ -116,6 +118,7 @@ cook_minutes = 25
 cuisine = "south-asian"
 courses = ["mains"]
 moods = ["creamy", "comforting"]
+pairs_with = ["01a18b54-81c7-70ee-be9d-ec402bc962fd", "01a18c4a-5f75-7fe4-84a0-02a2fb076583"]  # Coconut rice, Pol sambol
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "coconut-milk", amount = 1, unit = "cup" },
@@ -183,6 +186,7 @@ cuisine = "south-asian"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["dal bhat"]
+pairs_with = ["01a18c4a-5f81-79c4-af41-905f6eb5afb5", "01a18b6e-64b7-7b9a-b499-16796ab1c345"]  # Aloo tama, Momos (vegetable)
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "rice", amount = 1.5, unit = "cup" },
@@ -220,6 +224,7 @@ cuisine = "south-asian"
 courses = ["snacks-starters"]
 moods = ["smoky", "spicy"]
 also_known_as = ["sekuwa"]
+pairs_with = ["01a18c4a-5f7c-7af2-abda-7824f1b45653", "01a18c4a-5f81-79c4-af41-905f6eb5afb5"]  # Nepali dal bhat, Aloo tama
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "mustard-oil", amount = 2, unit = "tbsp" },
@@ -253,6 +258,7 @@ cuisine = "south-asian"
 courses = ["mains"]
 moods = ["tangy", "savoury"]
 also_known_as = ["alu tama"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18b6e-64b7-7b9a-b499-16796ab1c345"]  # Jeera rice, Momos (vegetable)
 ingredients = [
   { id = "potato", amount = 3, unit = "medium" },
   { id = "bamboo-shoots", amount = 1, unit = "cup" },
@@ -289,6 +295,7 @@ cook_minutes = 35
 cuisine = "south-asian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
+pairs_with = ["01a188ac-05a9-7419-8d55-e9c12cddd474", "01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Tandoori roti, Laccha onion, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "tomato", amount = 5, unit = "medium" },
@@ -326,6 +333,7 @@ cuisine = "south-asian"
 courses = ["snacks-starters"]
 moods = ["spicy", "savoury"]
 also_known_as = ["chapli kabab"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a18c4a-5f87-7180-bffa-d6d81231c9e1"]  # Mint chutney, Laccha onion, Kabuli pulao
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -362,6 +370,7 @@ cuisine = "south-asian"
 courses = ["rice-breads", "mains"]
 moods = ["sweet", "savoury"]
 also_known_as = ["qabuli palaw"]
+pairs_with = ["01a18c4a-5f8a-7fd8-af05-9530d10377b7", "01a15175-3c2e-777b-bda3-6dd751f0fa1c"]  # Mantu, Kachumber salad
 ingredients = [
   { id = "basmati-rice", amount = 2, unit = "cup" },
   { id = "lamb", amount = 750, unit = "g" },
@@ -398,6 +407,7 @@ cuisine = "south-asian"
 courses = ["snacks-starters", "mains"]
 moods = ["savoury", "creamy"]
 also_known_as = ["afghan dumplings"]
+pairs_with = ["01a18c4a-5f87-7180-bffa-d6d81231c9e1", "01a18c4a-5f8c-7d97-8754-92272b4070ad"]  # Kabuli pulao, Bolani
 ingredients = [
   { id = "wonton-wrappers", amount = 30, unit = "piece" },
   { id = "lamb-mince", amount = 400, unit = "g" },
@@ -433,6 +443,7 @@ cook_minutes = 25
 cuisine = "south-asian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Mint chutney, Cucumber raita
 ingredients = [
   { id = "all-purpose-flour", amount = 2, unit = "cup" },
   { id = "potato", amount = 3, unit = "medium" },
