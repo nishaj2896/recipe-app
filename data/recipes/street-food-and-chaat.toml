@@ -324,7 +324,7 @@ courses = ["mains"]
 moods = ["spicy", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["chole bhatura"]
-pairs_with = ["01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Lassi, Laccha onion
+pairs_with = ["01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4", "01a188e4-2cd3-7853-8804-0034c2b6a9f7"]  # Lassi, Boondi raita
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 1, unit = "tbsp" },

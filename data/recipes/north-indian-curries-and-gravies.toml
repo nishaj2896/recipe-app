@@ -2525,7 +2525,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "tangy", "hearty"]
 also_known_as = ["pindi chana"]
-pairs_with = ["01a188ac-05b1-784f-bb14-2bba03c32a18", "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Bhatura, Kulcha, Laccha onion
+pairs_with = ["01a188ac-05b1-784f-bb14-2bba03c32a18", "01a188ac-05b5-7a2d-a31c-b01c1f9f48d2", "01a188e4-2cf4-7621-bf6d-c0b7d6bd2ae4"]  # Bhatura, Kulcha, Lassi
 ingredients = [
   { id = "chickpeas", amount = 1, unit = "cup" },
   { id = "black-tea", amount = 2, unit = "tsp" },
