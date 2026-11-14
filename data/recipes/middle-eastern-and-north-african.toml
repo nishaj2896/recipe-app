@@ -16,6 +16,7 @@ cuisine = "middle-eastern"
 courses = ["breakfast", "mains"]
 moods = ["spicy", "tangy", "savoury"]
 also_known_as = ["shakshouka"]
+pairs_with = ["01a18c16-b21f-7240-a280-85a631ce2371", "01a18c16-b1f7-7efc-a15b-2215d35ab4bd", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Labneh with za'atar, Hummus, Fattoush
 ingredients = [
   { id = "egg", amount = 6, unit = "piece" },
   { id = "bell-pepper", amount = 1, unit = "large" },
@@ -47,6 +48,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters", "sides"]
 moods = ["creamy", "savoury"]
 also_known_as = ["houmous", "humus"]
+pairs_with = ["01a18c16-b1fb-7119-aad6-b093cf759ea7", "01a18c16-b1fe-74e7-bca1-bb959369b478"]  # Falafel, Tabbouleh
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "tahini", amount = 0.33, unit = "cup" },
@@ -78,6 +80,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters", "sides"]
 moods = ["smoky", "creamy"]
 also_known_as = ["baba ghanoush", "baba ghanouj"]
+pairs_with = ["01a18c16-b1fb-7119-aad6-b093cf759ea7", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Falafel, Fattoush
 ingredients = [
   { id = "brinjal", amount = 2, unit = "large" },
   { id = "tahini", amount = 3, unit = "tbsp" },
@@ -109,6 +112,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters"]
 moods = ["crispy", "fresh-herby", "savoury"]
 also_known_as = ["felafel"]
+pairs_with = ["01a18c16-b1f7-7efc-a15b-2215d35ab4bd", "01a18c16-b1fe-74e7-bca1-bb959369b478", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Hummus, Tabbouleh, Fattoush
 ingredients = [
   { id = "chickpeas", amount = 1.5, unit = "cup" },
   { id = "parsley", amount = 1, unit = "cup" },
@@ -213,6 +217,7 @@ cuisine = "middle-eastern"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "spicy"]
 also_known_as = ["shawarma", "shwarma"]
+pairs_with = ["01a18c16-b1f7-7efc-a15b-2215d35ab4bd", "01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b226-7f9a-b520-d9efd665bed4"]  # Hummus, Fattoush, Lebanese garlic potatoes
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -250,6 +255,7 @@ plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
 cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "smoky"]
+pairs_with = ["01a18c16-b226-7f9a-b520-d9efd665bed4", "01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b1f7-7efc-a15b-2215d35ab4bd"]  # Lebanese garlic potatoes, Fattoush, Hummus
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -280,6 +286,7 @@ cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "smoky", "spicy"]
 also_known_as = ["kofta kebab"]
+pairs_with = ["01a18c16-b1f7-7efc-a15b-2215d35ab4bd", "01a18c16-b1fe-74e7-bca1-bb959369b478", "01a18c16-b1f9-7734-b05c-1bd32e66ce7e"]  # Hummus, Tabbouleh, Baba ganoush
 ingredients = [
   { id = "lamb-mince", amount = 600, unit = "g" },
   { id = "onion", amount = 1, unit = "small" },
@@ -315,6 +322,7 @@ cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["mujaddara"]
+pairs_with = ["01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b21f-7240-a280-85a631ce2371"]  # Fattoush, Labneh with za'atar
 ingredients = [
   { id = "green-lentils", amount = 1, unit = "cup" },
   { id = "basmati-rice", amount = 0.75, unit = "cup" },
@@ -346,6 +354,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting", "light"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["shorbat adas"]
+pairs_with = ["01a18c16-b222-7e60-9fe2-ea84a41abf4b", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Manakish, Fattoush
 ingredients = [
   { id = "masoor-dal", amount = 1, unit = "cup" },
   { id = "onion", amount = 1, unit = "medium" },
@@ -376,6 +385,7 @@ cook_minutes = 15
 cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["creamy", "crispy", "savoury"]
+pairs_with = ["01a18c16-b1fe-74e7-bca1-bb959369b478", "01a18c16-b1fb-7119-aad6-b093cf759ea7"]  # Tabbouleh, Falafel
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "pita-bread", amount = 2, unit = "piece" },
@@ -444,6 +454,7 @@ courses = ["mains"]
 moods = ["sweet", "savoury", "comforting"]
 weather = ["cosy-night-in"]
 also_known_as = ["chicken tagine"]
+pairs_with = ["01a18c16-b219-77ad-9f5a-e63ffafc19de", "01a18c16-b21b-72d4-8743-b45d91b056e2"]  # Couscous with vegetables, Harira
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "onion", amount = 2, unit = "medium" },
@@ -481,6 +492,7 @@ cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["sweet", "savoury", "comforting"]
 also_known_as = ["veg tagine"]
+pairs_with = ["01a18c16-b219-77ad-9f5a-e63ffafc19de", "01a18c16-b20b-7687-a8d0-61a4d7a722dc"]  # Couscous with vegetables, Lentil soup (Middle Eastern)
 ingredients = [
   { id = "butternut-squash", amount = 500, unit = "g" },
   { id = "carrot", amount = 2, unit = "medium" },
@@ -515,6 +527,7 @@ cook_minutes = 40
 cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "spicy", "comforting"]
+pairs_with = ["01a18c16-b219-77ad-9f5a-e63ffafc19de", "01a18c16-b1fe-74e7-bca1-bb959369b478"]  # Couscous with vegetables, Tabbouleh
 ingredients = [
   { id = "chickpeas", amount = 2, unit = "can" },
   { id = "sweet-potato", amount = 1, unit = "large" },
@@ -550,6 +563,7 @@ cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "light"]
 also_known_as = ["vegetable couscous"]
+pairs_with = ["01a18c16-b20b-7687-a8d0-61a4d7a722dc", "01a18c16-b21f-7240-a280-85a631ce2371"]  # Lentil soup (Middle Eastern), Labneh with za'atar
 ingredients = [
   { id = "couscous", amount = 1.5, unit = "cup" },
   { id = "vegetable-stock", amount = 4, unit = "cup" },
@@ -586,6 +600,7 @@ cuisine = "middle-eastern"
 courses = ["soups"]
 moods = ["spicy", "comforting", "hearty"]
 weather = ["cosy-night-in"]
+pairs_with = ["01a18c16-b219-77ad-9f5a-e63ffafc19de", "01a18c16-b212-7c32-8007-d7113fc06483"]  # Couscous with vegetables, Moroccan chicken tagine
 ingredients = [
   { id = "lamb", amount = 300, unit = "g" },
   { id = "green-lentils", amount = 0.5, unit = "cup" },
@@ -626,6 +641,7 @@ image = { file = "01a18c16-b21d-736b-a3e1-eac6fbbffba8.webp", sha256 = "fe281864
 cuisine = "middle-eastern"
 courses = ["snacks-starters", "sides"]
 moods = ["smoky", "spicy", "sweet"]
+pairs_with = ["01a18c16-b1fb-7119-aad6-b093cf759ea7", "01a18c16-b222-7e60-9fe2-ea84a41abf4b"]  # Falafel, Manakish
 ingredients = [
   { id = "roasted-red-peppers", amount = 1.5, unit = "cup" },
   { id = "walnuts", amount = 1, unit = "cup" },
@@ -658,6 +674,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters"]
 moods = ["creamy", "tangy", "fresh-herby"]
 also_known_as = ["labneh"]
+pairs_with = ["01a18c16-b222-7e60-9fe2-ea84a41abf4b", "01a18c16-b1fb-7119-aad6-b093cf759ea7", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Manakish, Falafel, Fattoush
 ingredients = [
   { id = "hung-curd", amount = 2, unit = "cup" },
   { id = "zaatar", amount = 1, unit = "tbsp" },
@@ -687,6 +704,7 @@ cuisine = "middle-eastern"
 courses = ["snacks-starters", "breakfast"]
 moods = ["fresh-herby", "savoury"]
 also_known_as = ["manakeesh", "zaatar bread"]
+pairs_with = ["01a18c16-b21f-7240-a280-85a631ce2371", "01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b20b-7687-a8d0-61a4d7a722dc"]  # Labneh with za'atar, Fattoush, Lentil soup (Middle Eastern)
 ingredients = [
   { id = "all-purpose-flour", amount = 2.5, unit = "cup" },
   { id = "active-dry-yeast", amount = 1.5, unit = "tsp" },
@@ -717,6 +735,7 @@ cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "tangy"]
 also_known_as = ["dolma"]
+pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c16-b200-746a-9aa1-ae1a0b39d650"]  # Tzatziki, Fattoush
 ingredients = [
   { id = "bell-pepper", amount = 6, unit = "medium" },
   { id = "rice", amount = 0.5, unit = "cup" },
@@ -780,6 +799,7 @@ cook_minutes = 60
 cuisine = "middle-eastern"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
+pairs_with = ["01a18c16-b200-746a-9aa1-ae1a0b39d650", "01a18c16-b1f7-7efc-a15b-2215d35ab4bd"]  # Fattoush, Hummus
 ingredients = [
   { id = "chicken", amount = 1.2, unit = "kg" },
   { id = "freekeh", amount = 1.5, unit = "cup" },

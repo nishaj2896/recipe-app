@@ -15,6 +15,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "fresh-herby", "light"]
 also_known_as = ["vongole", "spaghetti with clams"]
+pairs_with = ["01a18bbd-3d0b-7ac3-b229-7b08b4010644", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Panzanella, Focaccia
 ingredients = [
   { id = "pasta", amount = 200, unit = "g" },
   { id = "clams", amount = 750, unit = "g" },
@@ -45,6 +46,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["tangy", "savoury", "spicy"]
 also_known_as = ["puttanesca"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "canned-tomatoes", amount = 1, unit = "can" },
@@ -76,6 +78,7 @@ cook_minutes = 25
 cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "spicy", "hearty"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "sausages", amount = 400, unit = "g" },
@@ -110,6 +113,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "creamy"]
 also_known_as = ["ravioli"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d0b-7ac3-b229-7b08b4010644"]  # Caprese salad, Panzanella
 ingredients = [
   { id = "cheese-filled-pasta", amount = 400, unit = "g" },
   { id = "butter", amount = 4, unit = "tbsp" },
@@ -140,6 +144,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting"]
 weather = ["under-the-weather", "rainy-day-cosy"]
 also_known_as = ["tortellini soup"]
+pairs_with = ["01a18bbd-3d08-74ec-bacd-7d6722e788df", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4"]  # Focaccia, Caprese salad
 ingredients = [
   { id = "meat-filled-pasta", amount = 400, unit = "g" },
   { id = "chicken-stock", amount = 6, unit = "cup" },
@@ -170,6 +175,7 @@ cuisine = "italian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
 also_known_as = ["arancini balls"]
+pairs_with = ["01a18bbd-3cfb-7ae2-8e94-3abb35af35c9", "01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3cd9-7a10-8b53-edda3e236417"]  # Minestrone, Caprese salad, Pasta pomodoro
 ingredients = [
   { id = "arborio-rice", amount = 1.5, unit = "cup" },
   { id = "chicken-stock", amount = 4, unit = "cup" },
@@ -204,6 +210,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "fresh-herby"]
 also_known_as = ["saltimbocca alla romana"]
+pairs_with = ["01a18bbd-3ced-73d8-81c8-2c0d851d4356", "01a18bbd-3d0b-7ac3-b229-7b08b4010644"]  # Pea and lemon risotto, Panzanella
 ingredients = [
   { id = "veal", amount = 500, unit = "g" },
   { id = "prosciutto", amount = 8, unit = "slice" },
@@ -235,6 +242,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["ossobuco"]
+pairs_with = ["01a18bbd-3ceb-71d3-8aef-e0474ed06755", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Risotto alla milanese, Focaccia
 ingredients = [
   { id = "veal", amount = 1.2, unit = "kg" },
   { id = "all-purpose-flour", amount = 0.25, unit = "cup" },
@@ -272,6 +280,7 @@ cuisine = "italian"
 courses = ["mains"]
 moods = ["savoury", "tangy"]
 also_known_as = ["norma"]
+pairs_with = ["01a18bbd-3cf9-79db-8fa8-6a5ff29a9ac4", "01a18bbd-3d08-74ec-bacd-7d6722e788df"]  # Caprese salad, Focaccia
 ingredients = [
   { id = "pasta", amount = 400, unit = "g" },
   { id = "brinjal", amount = 2, unit = "medium" },
@@ -305,6 +314,7 @@ cuisine = "spanish-portuguese"
 courses = ["mains"]
 moods = ["savoury", "fresh-herby"]
 also_known_as = ["garlic chicken"]
+pairs_with = ["01a18c1a-e240-7717-ba70-99578e6fe513", "01a18c1a-e23e-7160-97b9-408aa2d7c024"]  # Patatas bravas, Gazpacho
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "garlic", amount = 12, unit = "clove" },
@@ -335,6 +345,7 @@ courses = ["soups"]
 moods = ["savoury", "comforting"]
 weather = ["rainy-day-cosy", "cosy-night-in"]
 also_known_as = ["portuguese kale soup"]
+pairs_with = ["01a18c1e-2c54-7f46-8356-de32c07c1a16", "01a18c1a-e237-7e9e-8a9e-8419d18ce300"]  # Cornbread, Spanish tortilla
 ingredients = [
   { id = "potato", amount = 750, unit = "g" },
   { id = "kale", amount = 200, unit = "g" },
@@ -366,6 +377,7 @@ cuisine = "spanish-portuguese"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
 also_known_as = ["bacalhau"]
+pairs_with = ["01a18c1a-e291-759c-9761-6b3b3ce9322d", "01a18c1a-e23e-7160-97b9-408aa2d7c024"]  # Caldo verde, Gazpacho
 ingredients = [
   { id = "salt-cod", amount = 400, unit = "g" },
   { id = "potato", amount = 500, unit = "g" },
@@ -430,6 +442,7 @@ cuisine = "spanish-portuguese"
 courses = ["mains", "snacks-starters"]
 moods = ["savoury", "tangy"]
 also_known_as = ["spanish meatballs"]
+pairs_with = ["01a18c1a-e240-7717-ba70-99578e6fe513", "01a18c1a-e237-7e9e-8a9e-8419d18ce300", "01a18c1a-e23e-7160-97b9-408aa2d7c024"]  # Patatas bravas, Spanish tortilla, Gazpacho
 ingredients = [
   { id = "beef-mince", amount = 500, unit = "g" },
   { id = "breadcrumbs", amount = 0.5, unit = "cup" },

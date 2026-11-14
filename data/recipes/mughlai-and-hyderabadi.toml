@@ -18,6 +18,7 @@ courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
 weather = ["cosy-night-in"]
 also_known_as = ["hyderabadi haleem"]
+pairs_with = ["01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a18bb5-de59-7c48-b8d3-38a0e1651d9b"]  # Laccha onion, Sheer khurma
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "broken-wheat", amount = 0.75, unit = "cup" },
@@ -63,6 +64,7 @@ image = { file = "01a18bb5-de42-716b-bded-2a9c5cd4e7ae.webp", sha256 = "28c26f1e
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["smoky", "savoury"]
+pairs_with = ["01a18bb5-de50-7373-9e6b-7e673c767eed", "01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Bagara khana, Mint chutney, Laccha onion
 ingredients = [
   { id = "mutton", amount = 500, unit = "g" },
   { id = "raw-papaya", amount = 2, unit = "tbsp" },
@@ -98,6 +100,7 @@ image = { file = "01a18bb5-de44-75ae-a292-eacaadbb0d01.webp", sha256 = "f3cc6f65
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
+pairs_with = ["01a18bb5-de50-7373-9e6b-7e673c767eed", "01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Bagara khana, Butter naan, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -136,6 +139,7 @@ cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["savoury", "creamy"]
 also_known_as = ["shikampuri kabab"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a18bb5-de57-7110-86a3-ee7f153ace2d"]  # Mint chutney, Laccha onion, Kacche gosht ki biryani
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "chana-dal", amount = 0.25, unit = "cup" },
@@ -176,6 +180,7 @@ courses = ["soups"]
 moods = ["creamy", "comforting"]
 weather = ["cosy-night-in", "under-the-weather"]
 also_known_as = ["marag"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a18bb5-de47-78dd-bb0e-531c1d8ba79c"]  # Butter naan, Shikampuri kebab
 ingredients = [
   { id = "mutton", amount = 750, unit = "g" },
   { id = "cashews", amount = 20, unit = "piece" },
@@ -217,6 +222,7 @@ cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "savoury"]
 also_known_as = ["hyderabadi khatti dal"]
+pairs_with = ["01a15175-3c10-76ca-bf43-23fffb096acd", "01a18bb5-de4e-7363-aa58-26f9cf296cb5", "01a188ac-05a7-7dde-b069-03b15b2dd2b3"]  # Jeera rice, Tamatar ka kut, Phulka
 ingredients = [
   { id = "toor-dal", amount = 1, unit = "cup" },
   { id = "tamarind", amount = 1, unit = "tbsp" },
@@ -324,6 +330,7 @@ cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["creamy", "savoury"]
 also_known_as = ["reshmi kebab", "reshmi kabab"]
+pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a188ac-05ad-7540-a452-90d483cf792b"]  # Mint chutney, Laccha onion, Butter naan
 ingredients = [
   { id = "chicken", amount = 600, unit = "g" },
   { id = "cream", amount = 0.25, unit = "cup" },
@@ -358,6 +365,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "spicy", "hearty"]
 also_known_as = ["raan"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Butter naan, Kashmiri pulao, Cucumber raita
 ingredients = [
   { id = "mutton", amount = 1.5, unit = "kg" },
   { id = "curd", amount = 1, unit = "cup" },
@@ -395,6 +403,7 @@ cuisine = "south-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty", "spicy"]
 also_known_as = ["hyderabadi mutton biryani", "kachchi biryani"]
+pairs_with = ["01a18b54-81ba-79c9-9638-10695d0dc5d7", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Mirchi ka salan, Cucumber raita
 ingredients = [
   { id = "mutton", amount = 1, unit = "kg" },
   { id = "basmati-rice", amount = 2.5, unit = "cup" },
@@ -475,6 +484,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["shahi korma"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a188e4-2cbd-7a25-9b2f-bf0fe50666ef"]  # Butter naan, Kashmiri pulao
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "onion", amount = 3, unit = "medium" },
@@ -516,6 +526,7 @@ cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
 also_known_as = ["saffron chicken"]
+pairs_with = ["01a188ac-05ad-7540-a452-90d483cf792b", "01a15175-3c10-76ca-bf43-23fffb096acd", "01a15175-3c26-7418-8595-c4174264ab0c"]  # Butter naan, Jeera rice, Cucumber raita
 ingredients = [
   { id = "chicken", amount = 1, unit = "kg" },
   { id = "saffron", amount = 2, unit = "pinch" },
