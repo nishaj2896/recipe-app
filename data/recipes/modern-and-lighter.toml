@@ -85,7 +85,7 @@ cook_minutes = 55
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["sweet", "savoury", "hearty"]
-pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c22-48b4-727a-95b0-bed292ecbfe6"]  # Guacamole, Chickpea salad
+pairs_with = ["01a18c22-48b4-727a-95b0-bed292ecbfe6", "01a15175-3c28-7e20-acbd-34fc9479bf29"]  # Chickpea salad, Tomato soup
 ingredients = [
   { id = "sweet-potato", amount = 4, unit = "medium" },
   { id = "black-beans", amount = 1, unit = "can" },

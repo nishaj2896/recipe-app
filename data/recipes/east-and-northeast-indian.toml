@@ -823,7 +823,7 @@ cuisine = "street-food"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["chicken kathi roll"]
-pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
+pairs_with = ["01a18b6e-647b-7878-a77e-44bf0f676105", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Jhalmuri, Masala chai
 ingredients = [
   { id = "chicken", amount = 500, unit = "g" },
   { id = "curd", amount = 0.25, unit = "cup" },

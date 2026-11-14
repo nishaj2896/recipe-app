@@ -288,7 +288,7 @@ cuisine = "mexican-latin"
 courses = ["snacks-starters"]
 moods = ["crispy", "creamy", "spicy"]
 also_known_as = ["loaded nachos"]
-pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c", "01a18c16-b1d7-7a3a-a3c6-acade1bb6015"]  # Guacamole, Pico de gallo, Vegetarian chilli
+pairs_with = ["01a18c16-b1d7-7a3a-a3c6-acade1bb6015", "01a18c16-b1de-73bd-83d6-265b83a49fbb", "01a18c16-b1e0-7d3b-b9f3-01fe6b89235a"]  # Vegetarian chilli, Black bean soup, Elote
 ingredients = [
   { id = "corn-tortillas", amount = 12, unit = "piece" },
   { id = "oil", amount = 0.5, unit = "cup" },

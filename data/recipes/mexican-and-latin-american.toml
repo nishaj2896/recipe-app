@@ -175,7 +175,7 @@ cuisine = "mexican-latin"
 courses = ["mains"]
 moods = ["savoury", "spicy", "hearty"]
 also_known_as = ["burrito bowl"]
-pairs_with = ["01a15175-3c25-7f40-bf4a-9042230e50c8", "01a18c16-b1ba-71d5-a397-f131b301bc3c"]  # Guacamole, Pico de gallo
+pairs_with = ["01a18c16-b1e0-7d3b-b9f3-01fe6b89235a", "01a18c16-b1e3-7190-97eb-a925b88fbe38"]  # Elote, Tortilla soup
 ingredients = [
   { id = "rice", amount = 1.5, unit = "cup" },
   { id = "chicken", amount = 600, unit = "g" },
@@ -668,7 +668,7 @@ courses = ["soups"]
 moods = ["spicy", "savoury", "comforting"]
 weather = ["under-the-weather"]
 also_known_as = ["sopa de tortilla"]
-pairs_with = ["01a18c16-b1c8-7dc9-abcd-f837e31826be", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Cheese quesadilla, Guacamole
+pairs_with = ["01a18c16-b1c8-7dc9-abcd-f837e31826be", "01a18c16-b1e0-7d3b-b9f3-01fe6b89235a"]  # Cheese quesadilla, Elote
 ingredients = [
   { id = "chicken", amount = 400, unit = "g" },
   { id = "chicken-stock", amount = 5, unit = "cup" },
@@ -880,7 +880,7 @@ cuisine = "mexican-latin"
 courses = ["snacks-starters"]
 moods = ["tangy", "fresh-herby", "light"]
 weather = ["cool-down", "sticky-sluggish"]
-pairs_with = ["01a18c16-b1e0-7d3b-b9f3-01fe6b89235a", "01a15175-3c25-7f40-bf4a-9042230e50c8"]  # Elote, Guacamole
+pairs_with = ["01a18c16-b1e0-7d3b-b9f3-01fe6b89235a", "01a18c16-b1ec-76ee-b4de-eb918ca0f587"]  # Elote, Empanadas
 ingredients = [
   { id = "cod", amount = 500, unit = "g" },
   { id = "lime", amount = 6, unit = "medium" },

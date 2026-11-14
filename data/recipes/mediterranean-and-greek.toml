@@ -159,7 +159,7 @@ courses = ["mains"]
 moods = ["fresh-herby", "savoury", "smoky"]
 weather = ["breezy-evening"]
 also_known_as = ["souvlaki"]
-pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Tzatziki, Greek salad
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18c16-b226-7f9a-b520-d9efd665bed4"]  # Greek salad, Lebanese garlic potatoes
 ingredients = [
   { id = "chicken", amount = 750, unit = "g" },
   { id = "lemon", amount = 2, unit = "medium" },
@@ -193,7 +193,7 @@ cuisine = "mediterranean"
 courses = ["mains"]
 moods = ["savoury", "hearty"]
 also_known_as = ["gyro"]
-pairs_with = ["01a18c1a-e227-7ec3-9d05-d16f1fce345b", "01a18c1a-e21f-7a45-9042-2fc871e11814"]  # Tzatziki, Greek salad
+pairs_with = ["01a18c1a-e21f-7a45-9042-2fc871e11814", "01a18c16-b226-7f9a-b520-d9efd665bed4"]  # Greek salad, Lebanese garlic potatoes
 ingredients = [
   { id = "pork", amount = 750, unit = "g" },
   { id = "onion", amount = 2, unit = "medium" },

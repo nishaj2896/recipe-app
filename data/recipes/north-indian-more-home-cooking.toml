@@ -1072,7 +1072,7 @@ cuisine = "street-food"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
 also_known_as = ["kheema pav"]
-pairs_with = ["01a188e4-2cd9-7089-b3e0-c0fefca8075b", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Laccha onion, Masala chai
+pairs_with = ["01a15175-3c2e-777b-bda3-6dd751f0fa1c", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Kachumber salad, Masala chai
 ingredients = [
   { id = "lamb-mince", amount = 500, unit = "g" },
   { id = "pav", amount = 8, unit = "piece" },

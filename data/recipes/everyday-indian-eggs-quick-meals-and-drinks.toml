@@ -242,7 +242,7 @@ image = { file = "01a18ba9-fdd8-7039-8578-97176286baee.webp", sha256 = "e16455d5
 cuisine = "street-food"
 courses = ["snacks-starters", "breakfast"]
 moods = ["spicy", "savoury", "crispy"]
-pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a188e4-2cd5-7b59-9694-5bb15b2ee30c"]  # Masala chai, Mint chutney
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chai, Cold coffee
 ingredients = [
   { id = "white-bread", amount = 4, unit = "slice" },
   { id = "potato", amount = 2, unit = "medium" },
@@ -275,7 +275,7 @@ cuisine = "street-food"
 courses = ["snacks-starters", "breakfast"]
 moods = ["fresh-herby", "tangy", "savoury"]
 also_known_as = ["bombay sandwich", "veg sandwich"]
-pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Mint chutney, Cold coffee
+pairs_with = ["01a18bae-8f4d-7d22-8881-78f6ecd7afee", "01a15175-3c27-73b4-819d-e09422b77b02"]  # Cold coffee, Masala chai
 ingredients = [
   { id = "white-bread", amount = 6, unit = "slice" },
   { id = "potato", amount = 1, unit = "medium" },
@@ -535,7 +535,7 @@ cuisine = "street-food"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
 also_known_as = ["paneer roll", "paneer kati roll"]
-pairs_with = ["01a188e4-2cd5-7b59-9694-5bb15b2ee30c", "01a188e4-2cd9-7089-b3e0-c0fefca8075b"]  # Mint chutney, Laccha onion
+pairs_with = ["01a15175-3c27-73b4-819d-e09422b77b02", "01a18bae-8f4d-7d22-8881-78f6ecd7afee"]  # Masala chai, Cold coffee
 ingredients = [
   { id = "paneer", amount = 250, unit = "g" },
   { id = "curd", amount = 2, unit = "tbsp" },
