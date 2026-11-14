@@ -15,6 +15,7 @@ from recipe_app.domain.deck import resume
 from recipe_app.domain.matching import Pantry
 from recipe_app.domain.ranking import Ranking, SearchFilters, passes_filters, rank
 from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe_search import Found, RecipeQuery, find
 
 
 class InMemoryRecipeRepository:
@@ -68,6 +69,9 @@ class InMemoryRecipeRepository:
         return Ranking(
             scored=remaining.scored[:limit], all_staples=remaining.all_staples[:limit]
         )
+
+    async def find(self, query: RecipeQuery, limit: int, offset: int) -> Found:
+        return find(self._by_id.values(), query, limit, offset)
 
     def _candidates(self, pantry: Pantry, filters: SearchFilters) -> Sequence[Recipe]:
         """Every recipe the ranking could show, without scanning them all."""

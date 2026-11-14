@@ -20,6 +20,7 @@ from recipe_app.domain.cursor import Position
 from recipe_app.domain.deck import Deck, position_after
 from recipe_app.domain.matching import AllStaplesMatch, ScoredMatch, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters, rank
+from recipe_app.domain.recipe_search import QueryResolver, find
 from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 from recipe_app.infra.data import load_catalog, load_recipe_book
 from recipe_app.infra.memory import InMemoryRecipeRepository
@@ -199,3 +200,57 @@ def test_ranked_puts_the_best_fit_first(repository: RecipeRepository) -> None:
     # Spicy, tangy and rainy-day cosy all at once leads the seed's mains.
     assert fits[0] == 3
     assert fits[-1] < 3
+
+
+def _typed_texts() -> list[str]:
+    """What people type: name and word starts, misspellings, ingredients
+    and cuisines, drawn from the seed so every criterion is exercised.
+    """
+    texts: set[str] = {"thai", "south asian", "middle", "aloo", "xq"}
+    for recipe in SEED[::7]:
+        name = recipe.name.lower()
+        texts.update({name[:2], name[:5], name})
+        words = name.split()
+        if len(words) > 1:
+            texts.add(words[-1][:4])
+        if len(name) > 4:
+            texts.add(name[:2] + name[3:])  # one letter dropped
+            texts.add(name[:3] + name[2:])  # one letter doubled
+    for item in list(CATALOG.by_id.values())[::25]:
+        texts.add(item.name.lower()[:6])
+    return sorted(t for t in texts if len(t) >= 2)
+
+
+TYPED = _typed_texts()
+RESOLVER = QueryResolver(CATALOG)
+
+
+@settings(max_examples=150, deadline=None)
+@given(
+    text=st.sampled_from(TYPED),
+    limit=st.integers(1, 20),
+    offset=st.integers(0, 40),
+)
+def test_find_is_exactly_the_domain_search(
+    repository: RecipeRepository, text: str, limit: int, offset: int
+) -> None:
+    """Postgres's trigram, LIKE and ingredient matches rank exactly as
+    recipe_search.find does (ADR-0012 rule 10).
+    """
+    query = RESOLVER.resolve(text)
+
+    assert asyncio.run(repository.find(query, limit, offset)) == find(
+        SEED, query, limit, offset
+    )
+
+
+def test_find_past_the_last_match_still_counts_them(
+    repository: RecipeRepository,
+) -> None:
+    query = RESOLVER.resolve("paneer")
+    total = find(SEED, query, 1, 0).total
+
+    found = asyncio.run(repository.find(query, 20, total))
+
+    assert found.recipes == ()
+    assert found.total == total > 0

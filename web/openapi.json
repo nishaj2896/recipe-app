@@ -161,6 +161,99 @@
         "title": "FieldError",
         "type": "object"
       },
+      "FoundRecipe": {
+        "description": "A recipe search result: enough for the dropdown and \"See all\".",
+        "properties": {
+          "allergens": {
+            "description": "Best-effort: ready-made ingredients can hide allergens.",
+            "items": {
+              "$ref": "#/components/schemas/Allergen"
+            },
+            "title": "Allergens",
+            "type": "array"
+          },
+          "cuisine": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Cuisine"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "diet": {
+            "$ref": "#/components/schemas/Diet"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "image": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RecipeImage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ingredient_ids": {
+            "description": "Every ingredient, so the app can count what the pantry has without sending it.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Ingredient Ids",
+            "type": "array"
+          },
+          "jain": {
+            "title": "Jain",
+            "type": "boolean"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "total_minutes": {
+            "title": "Total Minutes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "cuisine",
+          "total_minutes",
+          "diet",
+          "jain",
+          "image",
+          "allergens",
+          "ingredient_ids"
+        ],
+        "title": "FoundRecipe",
+        "type": "object"
+      },
+      "FoundRecipes": {
+        "properties": {
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/FoundRecipe"
+            },
+            "title": "Results",
+            "type": "array"
+          },
+          "total": {
+            "description": "Every match, for \"See all 41 recipes\".",
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": ["results", "total"],
+        "title": "FoundRecipes",
+        "type": "object"
+      },
       "Health": {
         "properties": {
           "status": {
@@ -1061,6 +1154,83 @@
         },
         "summary": "List Ingredients",
         "tags": ["catalog"]
+      }
+    },
+    "/api/v1/recipes": {
+      "get": {
+        "description": "Recipes by name, other name, ingredient or cuisine, best match first.\n\nFood rules don't apply here: every recipe can be found, and each result\ncarries its allergens and Jain flag for the app to check.",
+        "operationId": "find_recipes_api_v1_recipes_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "maxLength": 60,
+              "minLength": 2,
+              "title": "Q",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 8,
+              "maximum": 20,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "maximum": 200,
+              "minimum": 0,
+              "title": "Offset",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FoundRecipes"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        },
+        "summary": "Find Recipes",
+        "tags": ["recipes"]
       }
     },
     "/api/v1/recipes/search": {

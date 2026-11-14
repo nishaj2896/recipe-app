@@ -17,6 +17,7 @@ from uuid import UUID
 
 from sqlalchemy import (
     ARRAY,
+    REAL,
     ColumnElement,
     Integer,
     RowMapping,
@@ -24,13 +25,18 @@ from sqlalchemy import (
     Subquery,
     Text,
     Uuid,
+    and_,
     any_,
     bindparam,
     case,
+    cast,
     exists,
     func,
+    literal,
+    or_,
     select,
     tuple_,
+    union_all,
 )
 from sqlalchemy.dialects.postgresql import aggregate_order_by
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
@@ -47,12 +53,19 @@ from recipe_app.domain.matching import (
 )
 from recipe_app.domain.ranking import Ranking, SearchFilters, mood_fit, weather_fit
 from recipe_app.domain.recipe import Image, PlanAhead, Recipe, RecipeTags
+from recipe_app.domain.recipe_search import (
+    MIN_SIMILARITY,
+    Criterion,
+    Found,
+    RecipeQuery,
+)
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
 from recipe_app.domain.units import Unit
 from recipe_app.infra.tables import (
     recipe_ingredients,
     recipe_pairings,
+    recipe_search_names,
     recipe_steps,
     recipes,
 )
@@ -268,6 +281,32 @@ class PostgresRecipeRepository:
             ),
             all_staples=self._all_staples_cards(all_staples, found, pantry, filters),
         )
+
+    async def find(self, query: RecipeQuery, limit: int, offset: int) -> Found:
+        if not query.key:
+            return Found(recipes=(), total=0)
+        async with self._engine.connect() as connection:
+            await connection.execution_options(isolation_level="REPEATABLE READ")
+            page = (await connection.execute(find_query(query, limit, offset))).all()
+            if page:
+                total = page[0].total
+            else:
+                # Past the last match the window has no row to count on.
+                total = await connection.scalar(find_count(query)) or 0
+            ids = [row.recipe_id for row in page]
+            rows = (
+                (
+                    await connection.execute(
+                        _RECIPE.where(recipes.c.id == any_(_uuids("found", ids)))
+                    )
+                )
+                .mappings()
+                .all()
+                if ids
+                else []
+            )
+        found = {recipe.id: recipe for recipe in self._to_recipes(rows)}
+        return Found(recipes=tuple(found[i] for i in ids if i in found), total=total)
 
     def _scored_cards(
         self,
@@ -618,3 +657,100 @@ def _any_text(
     whatever the list length and asyncpg's prepared-statement cache keeps hitting.
     """
     return any_(bindparam(name, sorted(values), type_=ARRAY(Text)))
+
+
+def _matches(query: RecipeQuery) -> Subquery:
+    """Each matching recipe once, with its best criterion and, for a close
+    spelling, its best similarity (recipe_search.match, in SQL).
+
+    Names and aliases come from ix_recipe_search_names_text_trgm, which
+    serves both LIKEs and the % operator. Search keys hold no % or _ (the
+    key folds them to spaces), so neither LIKE needs escaping.
+    """
+    names = recipe_search_names.c
+    key = bindparam("q", query.key, type_=Text)
+    starts = names.text.like(bindparam("q_prefix", f"{query.key}%", type_=Text))
+    word_starts = names.text.like(bindparam("q_word", f"% {query.key}%", type_=Text))
+    similarity = func.similarity(names.text, key)
+    threshold = cast(MIN_SIMILARITY, REAL)
+    criterion = case(
+        (and_(names.position == 0, starts), int(Criterion.NAME_STARTS)),
+        (or_(starts, word_starts), int(Criterion.WORD_STARTS)),
+        else_=int(Criterion.CLOSE_SPELLING),
+    )
+    no_similarity = cast(0, REAL)
+    parts: list[Select[Any]] = [
+        select(
+            names.recipe_id.label("recipe_id"),
+            criterion.label("criterion"),
+            case(
+                (criterion == int(Criterion.CLOSE_SPELLING), similarity),
+                else_=no_similarity,
+            ).label("similarity"),
+        ).where(
+            or_(
+                starts,
+                word_starts,
+                and_(names.text.op("%")(key), similarity >= threshold),
+            )
+        )
+    ]
+    other = literal(int(Criterion.INGREDIENT_OR_CUISINE))
+    if query.ingredient_ids:
+        parts.append(
+            select(recipe_ingredients.c.recipe_id, other, no_similarity).where(
+                recipe_ingredients.c.ingredient_id
+                == _any_text("q_ingredients", query.ingredient_ids)
+            )
+        )
+    if query.cuisines:
+        parts.append(
+            select(recipes.c.id, other, no_similarity).where(
+                recipes.c.cuisine
+                == _any_text("q_cuisines", {c.value for c in query.cuisines})
+            )
+        )
+    every = union_all(*parts).subquery("every_match")
+    best = func.min(every.c.criterion)
+    return (
+        select(
+            every.c.recipe_id,
+            best.label("criterion"),
+            case(
+                (best == int(Criterion.CLOSE_SPELLING), func.max(every.c.similarity)),
+                else_=no_similarity,
+            ).label("similarity"),
+        )
+        .group_by(every.c.recipe_id)
+        .subquery("matches")
+    )
+
+
+def find_query(query: RecipeQuery, limit: int, offset: int) -> Select[Any]:
+    """One page of recipe search, with the count of every match on each row.
+
+    Sorted as recipe_search.find sorts: criterion, similarity (highest
+    first), the name's search key in code point order, id. Public so the
+    gate can EXPLAIN exactly this.
+    """
+    matches = _matches(query)
+    name = recipe_search_names.alias("name")
+    return (
+        select(matches.c.recipe_id, func.count().over().label("total"))
+        .join(
+            name,
+            and_(name.c.recipe_id == matches.c.recipe_id, name.c.position == 0),
+        )
+        .order_by(
+            matches.c.criterion,
+            matches.c.similarity.desc(),
+            name.c.text.collate("C"),
+            matches.c.recipe_id,
+        )
+        .limit(limit)
+        .offset(offset)
+    )
+
+
+def find_count(query: RecipeQuery) -> Select[Any]:
+    return select(func.count()).select_from(_matches(query))

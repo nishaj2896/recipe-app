@@ -23,6 +23,7 @@ from recipe_app.domain.deck import (
 )
 from recipe_app.domain.matching import Ignored, PantryError, resolve_pantry
 from recipe_app.domain.ranking import SearchFilters
+from recipe_app.domain.recipe_search import Found, QueryResolver
 from recipe_app.domain.scoring import SCORING_VERSION
 from recipe_app.domain.tags import Allergen, Course, Mood, Weather
 from recipe_app.services.ports import RecipeRepository
@@ -75,9 +76,16 @@ class RecipeService:
         self._repository = repository
         self._keys = keys
         self._clock = clock
+        self._resolver = QueryResolver(catalog)
 
     async def get_detail(self, recipe_id: UUID) -> RecipeWithContent | None:
         return await self._repository.detail(recipe_id)
+
+    async def find(self, text: str, *, limit: int, offset: int) -> Found:
+        """Recipe search by name, alias, ingredient or cuisine (ADR-0012 rule
+        10). Food rules don't apply: the app marks what breaks them.
+        """
+        return await self._repository.find(self._resolver.resolve(text), limit, offset)
 
     async def search(self, query: SearchQuery) -> SearchResult:
         """Raises PantryError, InvalidCursorError or ExpiredCursorError."""

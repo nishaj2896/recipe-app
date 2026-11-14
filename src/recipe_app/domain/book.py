@@ -1,6 +1,5 @@
 """The recipe files, data/recipes/*.toml, parsed and checked (ADR-0008 rules 2 to 4)."""
 
-import re
 import tomllib
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, replace
@@ -9,7 +8,7 @@ from uuid import UUID
 
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.content import CONTENT_FIELDS, RecipeContent, build_content
-from recipe_app.domain.normalization import normalize
+from recipe_app.domain.normalization import normalize, search_key
 from recipe_app.domain.recipe import (
     TAG_FIELDS,
     Recipe,
@@ -175,11 +174,6 @@ def _check_pairings(recipes: list[Recipe], problems: list[str]) -> None:
             for paired in recipe.tags.pairs_with
             if paired not in known
         )
-
-
-def search_key(text: str) -> str:
-    """Normalized, punctuation folded to spaces: "Peri-peri" -> "peri peri"."""
-    return " ".join(re.sub(r"[^\w]+", " ", normalize(text)).split())
 
 
 def _check_aliases(recipes: list[Recipe], problems: list[str]) -> None:
