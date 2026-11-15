@@ -13,13 +13,15 @@ export const PANTRY = ["Paneer", "Potato", "Peas", "Milk", "Egg", "Rice"];
 export async function openPantry(page: Page) {
   await page.goto("/");
   await page.getByRole("button", { name: "Skip for now" }).click();
-  await expect(page.getByRole("searchbox", { name: "Search ingredients" })).toBeVisible();
+  await expect(
+    page.getByRole("searchbox", { name: "Search recipes or ingredients" }),
+  ).toBeVisible();
 }
 
 /** Opens the pantry and adds each ingredient by searching for its tile. */
 export async function fillPantry(page: Page, names: readonly string[] = PANTRY) {
   await openPantry(page);
-  const search = page.getByRole("searchbox", { name: "Search ingredients" });
+  const search = page.getByRole("searchbox", { name: "Search recipes or ingredients" });
   for (const name of names) {
     await search.fill(name);
     await page.getByRole("button", { name, exact: true, pressed: false }).click();

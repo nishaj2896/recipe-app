@@ -32,7 +32,10 @@ test("the grid starts with popular ingredients the catalog has", async () => {
 
 test("staples are never offered as tiles", async () => {
   const user = await openApp();
-  await user.type(screen.getByRole("searchbox", { name: "Search ingredients" }), "salt");
+  await user.type(
+    screen.getByRole("searchbox", { name: "Search recipes or ingredients" }),
+    "salt",
+  );
   expect(screen.getByText(/No ingredient matches/)).toBeInTheDocument();
 });
 
@@ -62,7 +65,7 @@ test("tapping a tile adds it to the pantry, flies it to the jar, and tapping aga
 test("search finds an ingredient by another name", async () => {
   const user = await openApp();
   await user.type(
-    screen.getByRole("searchbox", { name: "Search ingredients" }),
+    screen.getByRole("searchbox", { name: "Search recipes or ingredients" }),
     "aubergine",
   );
   expect(screen.getByRole("button", { name: /Brinjal/ })).toBeInTheDocument();

@@ -1,4 +1,7 @@
+import type { components } from "../api/schema";
 import type { Allergen, Course, Diet, Mood, TimeChoice, Weather } from "../store/device";
+
+export type Cuisine = components["schemas"]["Cuisine"];
 
 /**
  * How the fixed lists read in the app (ADR-0012 rule 1: the web app owns
@@ -159,3 +162,27 @@ export function timeLimits(time: TimeChoice): {
  */
 export const keysOf = <K extends string>(labels: Record<K, string>) =>
   Object.keys(labels) as K[];
+
+export const CUISINES: Record<Cuisine, string> = {
+  "north-indian": "North Indian",
+  "south-indian": "South Indian",
+  "east-indian": "East Indian",
+  "west-indian": "West Indian",
+  "indo-chinese": "Indo-Chinese",
+  "street-food": "Street food",
+  chinese: "Chinese",
+  japanese: "Japanese",
+  korean: "Korean",
+  thai: "Thai",
+  "southeast-asian": "Southeast Asian",
+  "middle-eastern": "Middle Eastern",
+  mediterranean: "Mediterranean",
+  italian: "Italian",
+  french: "French",
+  "spanish-portuguese": "Spanish and Portuguese",
+  european: "European",
+  "american-british": "American and British",
+  "mexican-latin": "Mexican and Latin",
+  "african-caribbean": "African and Caribbean",
+  "south-asian": "South Asian",
+};
