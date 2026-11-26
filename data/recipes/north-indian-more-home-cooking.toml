@@ -588,6 +588,7 @@ name = "Parwal aloo"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f73-7954-a359-a708a84fec6b.webp", sha256 = "58ac654df9dfd99335baddb3ff85c7307ea65d8dd6ccf803a891bf92e86c1eb6", alt = "Parwal aloo, pointed gourd and potato in a red-orange gravy" }
 cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
@@ -620,6 +621,7 @@ name = "Kundru fry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bae-8f75-7adb-a179-3994da4ce9da.webp", sha256 = "e8457c17f985298f2d4ffc3f5447e81c4a48671a7ad8f228450dc267c120b564", alt = "Kundru fry, spiced ivy gourd strips" }
 cuisine = "north-indian"
 courses = ["sides"]
 moods = ["crispy", "savoury"]
@@ -650,6 +652,7 @@ name = "Matar paneer pulao"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f77-755d-84da-22f830377a18.webp", sha256 = "edd67b258ebfe679ebad9a896315a7bda1cdf946642515514dccac53f080c5c4", alt = "Matar paneer pulao with peas, paneer and a bay leaf" }
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
@@ -731,6 +734,7 @@ name = "Chicken yakhni pulao"
 serves = 4
 prep_minutes = 15
 cook_minutes = 60
+image = { file = "01a18bae-8f7c-751d-8bce-10e2d58064d8.webp", sha256 = "02ce028bc692def3d28fcb087c16876236635e43d63125a4ef3cf228a4fdadf4", alt = "Chicken yakhni pulao in a bowl" }
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "comforting"]
@@ -773,6 +777,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 110
 plan_ahead = { wait_minutes = 75, note = "marinate for 75 minutes" }
+image = { file = "01a18bae-8f7e-7168-bb7e-22f3e47651f7.webp", sha256 = "38869bb038f3fe6d902bc8f05824d10b6dcdac9caaf8b3b5921d0b942a07c3f8", alt = "Mutton yakhni pulao in a bowl" }
 cuisine = "north-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "comforting", "hearty"]
@@ -854,6 +859,7 @@ name = "Chicken kali mirch"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18bae-8f83-754b-8852-2d3455b18168.webp", sha256 = "419acffc200429011a7efed063f2b4ed855967cdec201a22e287fe5469ded549", alt = "Chicken kali mirch in a creamy white gravy with black pepper" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "spicy"]
@@ -892,6 +898,7 @@ name = "Chicken handi"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18bae-8f85-76b1-8eae-b8384d68bef9.webp", sha256 = "79247df1527147c22257cdb5bfca16c1b5387df56e4814cdaba07d501a4f8788", alt = "Chicken handi in an orange-red gravy with cream and coriander" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -931,6 +938,7 @@ name = "Achari chicken"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18bae-8f87-76cb-9c2c-58f538f6ec3c.webp", sha256 = "b7b137d45c030c722562e353234931e9bfa8666cdf20af2f3718bcbeba875128", alt = "Achari chicken in a reddish-brown pickle-spiced gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
@@ -1127,6 +1135,7 @@ name = "Egg masala fry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f92-7768-99d5-7a7ff414f84e.webp", sha256 = "b13db821c166881e8aaa0c162f62d261a636b890009b1bb80816f018966dce81", alt = "Egg masala fry, boiled egg halves in a dry red masala with curry leaves" }
 cuisine = "north-indian"
 courses = ["sides", "mains"]
 moods = ["spicy", "savoury"]
@@ -1162,6 +1171,7 @@ name = "Punjabi fish curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18bae-8f94-7a30-9403-7a80ed5ac481.webp", sha256 = "0104ed2135e05a5bfed6bf1d4237bb814ce06ca62caa398050f7f1bef2c2a2e2", alt = "Punjabi fish curry in a tomato gravy with coriander" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]

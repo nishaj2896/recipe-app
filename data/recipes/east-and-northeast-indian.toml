@@ -531,6 +531,7 @@ name = "Moong dal (Bengali)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18b6c-2318-7ce3-bf93-e93158d24747.webp", sha256 = "ca9cc8ebd2b6bec5fc87db4a0c01f3f00071df1b6e07e0abca6cdfd6dc8578af", alt = "Bengali moong dal with tomato, cumin, a bay leaf and a dried red chilli" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "light"]

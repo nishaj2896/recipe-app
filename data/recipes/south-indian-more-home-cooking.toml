@@ -50,6 +50,7 @@ name = "Kerala beef fry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 85
+image = { file = "01a18bb1-05bc-726c-a26b-6de1ffd7076c.webp", sha256 = "e91c542fc35c314bfb34717bb82dc9c58e8da8e7dc1c73dbae3ee4dc52f42f78", alt = "Kerala beef fry with shallots, coconut slivers and curry leaves" }
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury"]
@@ -130,6 +131,7 @@ name = "Kappa puzhukku"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+image = { file = "01a18bb1-05c1-7a32-9511-2d06fe5eb8aa.webp", sha256 = "5db72c13fb5f3cb6debbcc5c9e1e5074053e1c44784c0058d055e79f222d72af", alt = "Kappa puzhukku, mashed cassava with coconut, chillies and curry leaves" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting"]
@@ -247,6 +249,7 @@ name = "Kerala parippu curry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18bb3-793b-75c4-8d52-015913570d99.webp", sha256 = "e6652765a45f534736501ca897745db8747b08c17457fc84e3807db25cccde04", alt = "Kerala parippu curry with fried shallots, chillies and curry leaves" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["creamy", "comforting", "light"]
@@ -281,6 +284,7 @@ name = "Pulissery"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bb3-793e-7973-9268-9a1926287bf2.webp", sha256 = "53ae2cca888fa28c22fc08f1c81902b831145bf63f68d7cb67e298296798d38f", alt = "Pulissery, ash gourd in a yellow curd curry with a tempering" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "creamy"]
@@ -318,6 +322,7 @@ name = "Mambazha pulissery"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bb3-7940-7ff5-9eac-98f33926f854.webp", sha256 = "b3500809fd9f3019ffbe2accd066bd19f4d393ac4a353f8376a0760ebccc44d2", alt = "Mambazha pulissery, small mangoes in a yellow curd and coconut curry" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["sweet-sour", "creamy"]
@@ -392,6 +397,7 @@ name = "Beans mezhukkupuratti"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bb3-7944-7d4c-9de4-2e51067a846f.webp", sha256 = "a445aea16700a2cd488f49709266029bca2c91065b372e727e1482427c20020c", alt = "Beans mezhukkupuratti with shallots and curry leaves" }
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["savoury", "light"]
@@ -422,6 +428,7 @@ name = "Cabbage poriyal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 12
+image = { file = "01a18bb3-7947-78e6-9c83-9d7a21edd445.webp", sha256 = "7bcd58a8b54c7342e030c3e682daa8a909dc2f070f71ded56b402914f596672f", alt = "Cabbage poriyal with coconut, curry leaves and a dried red chilli" }
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["light", "savoury"]
@@ -486,6 +493,7 @@ name = "Keerai kootu"
 serves = 4
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18bb3-794b-7383-92b7-f7ab5bda72f3.webp", sha256 = "4f5f13a7f1bfa401a1e3b1b8297844481d7533464bc7be46013af97d987ef062", alt = "Keerai kootu, greens and dal with a tempering on top" }
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["comforting", "light"]
@@ -521,6 +529,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 50
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18bb3-794d-76e7-950d-bbc8eae7d228.webp", sha256 = "cb69a2f23cd488845d9d25cf6f5eaae8ae5de5bbd4f828a1e9894c7479291b81", alt = "Chickpea sundal with coconut, curry leaves and chillies" }
 cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["savoury", "light"]
@@ -626,6 +635,7 @@ name = "Dondakaya fry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bb3-7954-763c-a83a-726c712c5422.webp", sha256 = "87bb81796c96c639e9e6020f11cccf56b169573768d885f2fab0e04ebf2638c1", alt = "Dondakaya fry, ivy gourd with peanut powder and curry leaves" }
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["crispy", "spicy"]
@@ -658,6 +668,7 @@ name = "Bendakaya fry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bb3-7956-7430-9253-1e115ae45157.webp", sha256 = "04de1af786fb6cbffed2fcb4645e71ccb716442794f284adf8f36ccf950ab0d6", alt = "Bendakaya fry, spiced okra with onion and curry leaves" }
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["crispy", "spicy"]
@@ -689,6 +700,7 @@ name = "Andhra aloo fry"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bb3-7959-75a1-a207-927b44d38346.webp", sha256 = "db020dad8f621146014e94817698a54f9fb4f537f06cd63c43bd12ad9fd5d1a4", alt = "Andhra aloo fry, red-spiced potato cubes with curry leaves and dal" }
 cuisine = "south-indian"
 courses = ["sides"]
 moods = ["spicy", "crispy"]
@@ -762,6 +774,7 @@ name = "Royyala iguru"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18bb3-795d-7233-8840-ae154cfab9a6.webp", sha256 = "d73c17d8fb83cf5961b0588bdf92e8d03055c6cf62ef5813d46abbced0f4d9f9", alt = "Royyala iguru, prawns in a dry red masala with coriander" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -796,6 +809,7 @@ name = "Chepala pulusu"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18bb3-795f-7852-a32c-d6a15adbcf7a.webp", sha256 = "02f678a88056c3a061aced62c50bc03c90707d5ab39751615b5357a415b4457f", alt = "Chepala pulusu, fish in a dark tamarind gravy with curry leaves" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
@@ -874,6 +888,7 @@ name = "Mutton pepper fry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 85
+image = { file = "01a18bb3-7964-711c-893d-195e91176c93.webp", sha256 = "2f06f8ea47b6daebbdac2245319ad7fc70abe064769958be7cf6bb2260a0c8a1", alt = "Mutton pepper fry with curry leaves" }
 cuisine = "south-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
@@ -987,6 +1002,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18bb3-796b-752d-9ae0-8c28725c5a12.webp", sha256 = "b46fd16f45209283f65ab876fe1d3404b987b312524ee7f18ed776f0c46d9e46", alt = "Benne dosa glistening with butter, folded in half" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["crispy", "savoury"]
@@ -1019,6 +1035,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 40
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18bb3-796d-7732-9e69-86d64a1571ee.webp", sha256 = "04692c9215a896502d3f0134bc67ab0a75d987cc21276217165a3e09d52ca709", alt = "Ghee roast dosa rolled up on a plate" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["crispy"]
@@ -1075,6 +1092,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 15
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18bb3-7971-73de-9842-b0031efeb536.webp", sha256 = "ffda43c7e740dd438f5f8a318a3170cb96f9e44fee0a44708f98fc3b09b73f69", alt = "Four ragi idlis on a plate" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["light"]

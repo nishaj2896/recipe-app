@@ -164,6 +164,7 @@ name = "Scrambled eggs on toast"
 serves = 2
 prep_minutes = 3
 cook_minutes = 6
+image = { file = "01a18c20-05be-7f89-87a5-a46690a1b378.webp", sha256 = "0b3c1d1b31e471429947366e15c03437b4da4d3bb53723f5a5e8d22828c2c58b", alt = "Scrambled eggs on toast with chives and black pepper" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["savoury", "creamy", "comforting"]
@@ -252,6 +253,7 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 0
 plan_ahead = { wait_minutes = 360, note = "chill for 6 hours" }
+image = { file = "01a18c20-05c4-7ed0-9812-c12262e8b6ae.webp", sha256 = "3314c680b538c6ee4e8cbc90157e7142d338bf23bd9b15060b11e10d82be7946", alt = "Overnight oats in a jar topped with blueberries and almonds" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["creamy", "sweet", "light"]
@@ -308,6 +310,7 @@ name = "Granola"
 serves = 8
 prep_minutes = 10
 cook_minutes = 30
+image = { file = "01a18c20-05c9-72f8-9305-de81aabe8b69.webp", sha256 = "e226ea0b1e4045c2049eb969ac41e0a5993867f2366de055f1bb2a04e6d938ea", alt = "A bowl of granola with almonds, seeds and raisins" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["sweet", "crispy"]
@@ -341,6 +344,7 @@ serves = 2
 prep_minutes = 10
 cook_minutes = 0
 plan_ahead = { wait_minutes = 240, note = "freeze for 4 hours" }
+image = { file = "01a18c20-05cb-7102-ad49-8091770a8bb9.webp", sha256 = "494d497a3611c22222f62ab981aec36bd10f39756ef1b5ce1501d1e9d17791a5", alt = "Smoothie bowl topped with strawberries, blueberries, chia seeds and oats" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["sweet", "light", "fresh-herby"]
@@ -400,6 +404,7 @@ name = "Egg muffins"
 serves = 6
 prep_minutes = 10
 cook_minutes = 22
+image = { file = "01a18c20-05d0-7486-92df-341b2588a19e.webp", sha256 = "f14e25795a35b0fb63cedfe7c125c02c986989c736609a8f6cfdf9c613391fd8", alt = "Three egg muffins with spinach, red pepper and cheddar" }
 cuisine = "american-british"
 courses = ["breakfast", "snacks-starters"]
 moods = ["savoury", "light"]
@@ -467,6 +472,7 @@ name = "Blueberry muffins"
 serves = 12
 prep_minutes = 15
 cook_minutes = 22
+image = { file = "01a18c20-05d4-7e3f-9e19-541b516bebd9.webp", sha256 = "4f1c8c6b742b610d5858baf5d58be98a9f02c8891376b3afd7ee5ba7a95ed04d", alt = "Three blueberry muffins, one split open" }
 cuisine = "american-british"
 courses = ["desserts", "breakfast"]
 moods = ["sweet"]

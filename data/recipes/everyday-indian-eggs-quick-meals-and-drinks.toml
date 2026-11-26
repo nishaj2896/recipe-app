@@ -145,6 +145,7 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 15
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
+image = { file = "01a18ba9-fdd1-7e8b-ae7b-2179246d5302.webp", sha256 = "ed158894de2858a0aab3a835ef97e8006768996fb68fbcfa459c821f4e746b21", alt = "Egg dosa folded in half with a thin layer of egg and green chilli" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["savoury", "crispy"]
@@ -403,6 +404,7 @@ name = "Oats upma"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18ba9-fde3-7bec-bfdf-d6bf0e802090.webp", sha256 = "989143c32b6496f55a16a64c45a0e370850562b46fd2c926253a7ca4e8b4091c", alt = "Oats upma with carrot, peas and coriander" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["savoury", "light"]

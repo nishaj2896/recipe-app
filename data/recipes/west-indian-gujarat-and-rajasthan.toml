@@ -977,6 +977,7 @@ name = "Papad ki sabzi"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18b5a-d341-7472-a13b-3f105ba46983.webp", sha256 = "b6c0933b70fa4a480b5d819a4f6992aacb8e2470956eee04625ed9a7630f0d05", alt = "Papad ki sabzi, broken papad in an orange curd gravy with coriander" }
 cuisine = "west-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
