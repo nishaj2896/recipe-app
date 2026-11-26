@@ -128,6 +128,7 @@ name = "Chingri malai curry"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b6c-2302-77d3-95fa-1e2f06696c89.webp", sha256 = "92c864f4859c12e126daaa6cdb4d5273b764c00a9ccd6170ac09b424c7ef41d5", alt = "Chingri malai curry, prawns in coconut milk with green chillies" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["creamy", "sweet", "savoury"]
@@ -169,6 +170,7 @@ name = "Bhetki paturi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+image = { file = "01a18b6c-2304-726f-9e39-ef2de510ae47.webp", sha256 = "ef437030349f3505c56fc3d4bb56b8f735637d576eea5241ab74f0b57ca13c47", alt = "Bhetki paturi, fish in mustard paste in an opened charred banana leaf" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "smoky"]
@@ -292,6 +294,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 45
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18b6c-230b-7d8e-a2b9-3bc8dc74d927.webp", sha256 = "8e08e8554902fa1e9b52a053b34e9941d371a44e86c889237d98e004581478fd", alt = "Chicken rezala in a pale creamy gravy with green chillies" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
@@ -335,6 +338,7 @@ serves = 6
 prep_minutes = 40
 cook_minutes = 80
 plan_ahead = { wait_minutes = 120, note = "marinate for 2 hours" }
+image = { file = "01a18b6c-230d-791c-8495-74a7000a8fd9.webp", sha256 = "978ba48fb7338e17dc37cde852c212cfc41cdd575158397bb6a821a5fdc419f7", alt = "Kolkata chicken biryani with a potato, a boiled egg and fried onions" }
 cuisine = "east-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty", "comforting"]
@@ -384,6 +388,7 @@ name = "Aloo posto"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18b6c-230f-778c-af4b-21c7e55dd3ec.webp", sha256 = "93b33af715237f545d98ca6a4733857bec7f66a36e595a61c407c55c85d9706d", alt = "Aloo posto, potato cubes in a creamy poppy seed paste with green chillies" }
 cuisine = "east-indian"
 courses = ["sides"]
 moods = ["savoury", "comforting"]
@@ -457,6 +462,7 @@ name = "Begun bhaja"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18b6c-2314-7050-bfd8-e8715f0078ad.webp", sha256 = "d9c7e4d54c211531b5aad35b1d1c8c7df152153a71581c1efdda8781357400ce", alt = "Begun bhaja, three thick slices of fried brinjal" }
 cuisine = "east-indian"
 courses = ["sides"]
 moods = ["crispy", "savoury"]
@@ -485,6 +491,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 45
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+image = { file = "01a18b6c-2316-7333-944f-c7fb46467420.webp", sha256 = "97c0ac65e56fb4a711f5260e9c10dd125bd92959da8fa54c9d6363443d447dd7", alt = "Cholar dal with coconut, raisins, a dried red chilli and a bay leaf" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["sweet", "savoury", "comforting"]
@@ -602,6 +609,7 @@ name = "Chhanar dalna"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b6c-231d-77cc-b585-be73dc4b4092.webp", sha256 = "fadc961180a6c34db838fa2196ad26ce6c655ee1095191acc494121b8fc5cafc", alt = "Chhanar dalna, cottage cheese dumplings and potato in tomato gravy" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "comforting"]
@@ -643,6 +651,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 45
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18b6e-6479-7735-bc32-92b2aa946a9e.webp", sha256 = "741fa2f8f4cc7ebd5c490ec604f51afd18b2e4ba465b8eb6fdc6abe5c24643b0", alt = "Ghugni, white peas and potato topped with onion, green chilli and coriander" }
 cuisine = "east-indian"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "tangy", "savoury"]
@@ -685,6 +694,7 @@ name = "Jhalmuri"
 serves = 2
 prep_minutes = 10
 cook_minutes = 0
+image = { file = "01a18b6e-647b-7878-a77e-44bf0f676105.webp", sha256 = "8c264bd2f45798814c79b262cbfaf3098db9f8594195440eb9907e2ff7c97c2c", alt = "Jhalmuri, puffed rice with onion, tomato, cucumber, peanuts and sev" }
 cuisine = "east-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "tangy", "crispy"]
@@ -745,6 +755,7 @@ name = "Aloo dum (Bengali)"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18b6e-6480-775f-b12f-a5658bb366ac.webp", sha256 = "fba987d35a982329c0439fa94949652f686697ad00bea1a7532b72a09d154ce6", alt = "Bengali aloo dum, small whole potatoes in a red-orange gravy" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "comforting"]
@@ -785,6 +796,7 @@ name = "Kolkata egg roll"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18b6e-6482-79e4-9f51-d47fa2b22864.webp", sha256 = "910ba83cc92f8468ad6d2b2b29deb864972f1f83109bc379d0ebc82a9f966914", alt = "Kolkata egg roll with onion and cucumber, wrapped in white paper" }
 cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["savoury", "spicy"]
@@ -861,6 +873,7 @@ serves = 6
 prep_minutes = 10
 cook_minutes = 30
 plan_ahead = { wait_minutes = 600, note = "set the curd for 8 hours" }
+image = { file = "01a18b6e-6487-70ca-b8aa-f171aefdac39.webp", sha256 = "3f06128da272b9abac155aa71b6bdaa697f9965951eb539c081cda10f8b8c3ff", alt = "Mishti doi in a clay pot with a spoonful taken out" }
 cuisine = "east-indian"
 courses = ["desserts"]
 moods = ["sweet", "creamy"]
@@ -947,6 +960,7 @@ name = "Payesh"
 serves = 6
 prep_minutes = 5
 cook_minutes = 60
+image = { file = "01a18b6e-648d-73e0-b3f4-3b777048a339.webp", sha256 = "229f02c178878bb4b43b941e4f76248d80557fddf3c5454616244bff5d4e8d1e", alt = "Payesh with cashews, raisins and a bay leaf in a clay pot" }
 cuisine = "east-indian"
 courses = ["desserts"]
 moods = ["sweet", "creamy", "comforting"]
@@ -975,6 +989,7 @@ name = "Dalma (Odisha)"
 serves = 4
 prep_minutes = 20
 cook_minutes = 40
+image = { file = "01a18b6e-6490-7cba-afad-65572d8f90dc.webp", sha256 = "286641ff29f744f2ead7fb9f5e3781aaa21407500c09df16cc7bd66c9e78ce26", alt = "Dalma with vegetables, grated coconut, a dried red chilli and a bay leaf" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "light"]
@@ -1049,6 +1064,7 @@ name = "Chhena poda"
 serves = 8
 prep_minutes = 20
 cook_minutes = 60
+image = { file = "01a18b6e-6494-74e3-8ab4-4d77bf0588a3.webp", sha256 = "507a7b7ad46c6da36858b5313eaad70c4ce99f16cd5d57b97adb95c003793a9f", alt = "A wedge of chhena poda with cashews and raisins" }
 cuisine = "east-indian"
 courses = ["desserts"]
 moods = ["sweet", "smoky"]
@@ -1076,6 +1092,7 @@ name = "Machha besara"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b6e-6496-7e21-90e9-1cd2659819ba.webp", sha256 = "8266980d2d799c8c7e3dd63e9efab98828195a4b8f42665296913ba23664fa79", alt = "Machha besara, fish in a yellow mustard gravy" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -1110,6 +1127,7 @@ name = "Santula"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18b6e-6499-77e1-a914-d4c9a399db81.webp", sha256 = "58a6f4c4b51487567f8d51aea02225dae4d8d3ec8d1697fbbe88ad715c86940f", alt = "Santula, mixed vegetables in a light milky broth with green chillies" }
 cuisine = "east-indian"
 courses = ["sides"]
 moods = ["light", "savoury"]
@@ -1222,6 +1240,7 @@ name = "Aloo bhujia (Bihar)"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18b6e-64a1-776c-93f9-48d0d50e9f96.webp", sha256 = "8e949a4071c9195a9a36ad4d06a9f3925a34185e1d056f64b2993c0667d06268", alt = "Aloo bhujia, thin fried potato strips with nigella seeds and slit green chillies" }
 cuisine = "east-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
@@ -1252,6 +1271,7 @@ serves = 4
 prep_minutes = 20
 cook_minutes = 90
 plan_ahead = { wait_minutes = 60, note = "marinate for 1 hour" }
+image = { file = "01a18b6e-64a3-7b87-a420-836caa7f67fd.webp", sha256 = "f93c4d068ab1844af85b8512c4bcc60f7c9bd4b4e1c6ee36ec951b0723a4158c", alt = "Champaran mutton with whole garlic bulbs in a clay pot" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury", "hearty"]
@@ -1296,6 +1316,7 @@ name = "Thekua"
 serves = 12
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18b6e-64a6-7067-ae8d-558056a807fc.webp", sha256 = "59b03feb908ce9fa266ae4ae55e6d2d556ca1af258e96755095cc4f2848cebb4", alt = "A pile of ridged thekua" }
 cuisine = "east-indian"
 courses = ["desserts", "snacks-starters"]
 moods = ["sweet", "crispy"]
@@ -1360,6 +1381,7 @@ name = "Masor tenga"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b6e-64aa-79f6-9493-be17189d679d.webp", sha256 = "b0a5a94e8b4d5125c64f01f3f40c97660c1611d8f0f58e959a453bd7588cba28", alt = "Masor tenga, fish in a sour tomato broth with raw mango and coriander" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["tangy", "light"]
@@ -1392,6 +1414,7 @@ name = "Aloo pitika"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18b6e-64ac-7fa1-a48f-95312700f1b0.webp", sha256 = "8bb5001c39ec10423579d2d5fe63a381d63c7fc0f21ceee6b5aae43fce266f3d", alt = "Aloo pitika, a mound of mashed potato with onion, green chilli and coriander" }
 cuisine = "east-indian"
 courses = ["sides"]
 moods = ["savoury", "comforting"]
@@ -1418,6 +1441,7 @@ name = "Khar"
 serves = 4
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18b6e-64af-7f81-b561-631c3610580d.webp", sha256 = "b6e9e47efe8a60cdb27579c2b846b56e068a5a286fbfdbb210f6e542bd6178c4", alt = "Khar, mashed raw papaya and moong dal in a dark bowl" }
 cuisine = "east-indian"
 courses = ["sides", "mains"]
 moods = ["savoury", "light"]
@@ -1488,6 +1512,7 @@ name = "Pork with bamboo shoot"
 serves = 4
 prep_minutes = 15
 cook_minutes = 70
+image = { file = "01a18b6e-64b3-7a24-ae04-35d68f9de996.webp", sha256 = "3c7974542c3ad1b2b7e516aecbe0e4a9b6454892f4d19f3da62ce0de655a0869", alt = "Pork with bamboo shoot and green chillies in a light brown sauce" }
 cuisine = "east-indian"
 courses = ["mains"]
 moods = ["savoury", "tangy", "spicy"]
@@ -1591,6 +1616,7 @@ name = "Thukpa"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b6e-64bb-7068-87da-4caaa0829038.webp", sha256 = "41d5b6b1d8121fa39f1867bd83c778bffca8bc196f98cb795f3407d69994ab50", alt = "Thukpa, noodle soup with chicken, vegetables and spring onion" }
 cuisine = "east-indian"
 courses = ["soups", "mains"]
 moods = ["savoury", "comforting", "spicy"]
@@ -1630,6 +1656,7 @@ name = "Shapale"
 serves = 4
 prep_minutes = 30
 cook_minutes = 20
+image = { file = "01a18b6e-64be-789f-b77d-282653368b70.webp", sha256 = "3caeee2542b23fb1e1a52ecd9844c645f4d63805ce7b0587d34bbc67e7d7190e", alt = "Shapale, a fried meat pie cut into wedges" }
 cuisine = "east-indian"
 courses = ["snacks-starters"]
 moods = ["savoury", "crispy"]
@@ -1698,6 +1725,7 @@ name = "Jadoh"
 serves = 4
 prep_minutes = 15
 cook_minutes = 45
+image = { file = "01a18b6e-64c2-73ae-9479-2970b1b60659.webp", sha256 = "39fb71195438ac7b5171d84f4e9d16674ade40a666dd770cab7ac6014015103c", alt = "Jadoh, turmeric rice with pork and a bay leaf" }
 cuisine = "east-indian"
 courses = ["rice-breads", "mains"]
 moods = ["savoury", "hearty"]
@@ -1733,6 +1761,7 @@ serves = 4
 prep_minutes = 5
 cook_minutes = 60
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a18b6e-64c4-7f03-969d-49b315c2a6d2.webp", sha256 = "9384f53c7002c53f83db2f3111adae08d8b7f4cb1c96a84d3867966df6593859", alt = "Chak hao kheer, purple black rice pudding with cashews" }
 cuisine = "east-indian"
 courses = ["desserts"]
 moods = ["sweet", "creamy"]
@@ -1760,6 +1789,7 @@ serves = 8
 prep_minutes = 20
 cook_minutes = 15
 plan_ahead = { wait_minutes = 4500, note = "pickle for 3 days" }
+image = { file = "01a18b6e-64c7-7a18-b299-a240be93a862.webp", sha256 = "9004f4cf192816791a5fd0c11dfe2f6246eeaf69f5cee12bc4d1ccab5a370946", alt = "Bamboo shoot pickle with red chilli in mustard oil" }
 cuisine = "east-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
