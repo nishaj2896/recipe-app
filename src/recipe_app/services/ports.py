@@ -14,6 +14,17 @@ from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe_search import Found, RecipeQuery
 
 
+class StoreUnavailableError(Exception):
+    """The store can't answer now: down, unreachable, too slow or out of
+    connections. Retrying later may work, so the API answers 503 (ADR-0013
+    rule 1). `cause` is safe to log: a kind and a class name, never a message.
+    """
+
+    def __init__(self, cause: str) -> None:
+        super().__init__(cause)
+        self.cause = cause
+
+
 class RecipeRepository(Protocol):
     async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:
         """The recipe and what a cook needs for it (ADR-0008), or None if there

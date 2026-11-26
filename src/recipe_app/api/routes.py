@@ -78,7 +78,7 @@ health_router = APIRouter()
     "/recipes/search",
     tags=["recipes"],
     response_model=SearchResponse,
-    responses=problem_responses(413, 422, 500),
+    responses=problem_responses(413, 422, 500, 503),
 )
 async def search_recipes(request: SearchRequest, service: Service) -> SearchResponse:
     """One swipe deck. Follow `next_cursor`, unchanged, for the next deck."""
@@ -107,7 +107,7 @@ async def search_recipes(request: SearchRequest, service: Service) -> SearchResp
     "/recipes",
     tags=["recipes"],
     response_model=FoundRecipes,
-    responses=problem_responses(422, 500),
+    responses=problem_responses(422, 500, 503),
 )
 async def find_recipes(
     service: Service,
@@ -140,7 +140,7 @@ async def search_wrong_method() -> None:
     "/recipes/{recipe_id}",
     tags=["recipes"],
     response_model=RecipeDetail,
-    responses=problem_responses(404, 422, 500),
+    responses=problem_responses(404, 422, 500, 503),
 )
 async def get_recipe(recipe_id: UUID, service: Service) -> RecipeDetail:
     detail = await service.get_detail(recipe_id)

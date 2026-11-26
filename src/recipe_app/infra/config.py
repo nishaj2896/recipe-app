@@ -28,6 +28,7 @@ from sqlalchemy.engine import make_url
 from sqlalchemy.exc import ArgumentError
 
 from recipe_app.domain.cursor import SigningKeys
+from recipe_app.infra.database import EngineLimits
 from recipe_app.infra.logs import LogFormat, LogLevel
 
 KEYS_VARIABLE = "CURSOR_SIGNING_KEYS"
@@ -97,6 +98,22 @@ class ApiSettings(DatabaseSettings):
     cursor_signing_keys: SecretStr = Field(validation_alias="CURSOR_SIGNING_KEYS")
     cursor_active_kid: str = Field(validation_alias="CURSOR_ACTIVE_KID", min_length=1)
     api_docs: bool = Field(False, validation_alias="API_DOCS")
+    connect_timeout: float = Field(
+        3, gt=0, le=60, validation_alias="DATABASE_CONNECT_TIMEOUT_SECONDS"
+    )
+    pool_timeout: float = Field(
+        2, gt=0, le=60, validation_alias="DATABASE_POOL_TIMEOUT_SECONDS"
+    )
+    statement_timeout: float = Field(
+        3, gt=0, le=60, validation_alias="DATABASE_STATEMENT_TIMEOUT_SECONDS"
+    )
+    pool_size: int = Field(5, ge=1, le=100, validation_alias="DATABASE_POOL_SIZE")
+    pool_max_overflow: int = Field(
+        5, ge=0, le=100, validation_alias="DATABASE_POOL_MAX_OVERFLOW"
+    )
+    retry_after_seconds: int = Field(
+        2, ge=1, le=3600, validation_alias="RETRY_AFTER_SECONDS"
+    )
     log_level: LogLevel = Field("INFO", validation_alias="LOG_LEVEL")
     log_format: LogFormat = Field("json", validation_alias="LOG_FORMAT")
     _keys: SigningKeys = PrivateAttr()
@@ -133,6 +150,16 @@ class ApiSettings(DatabaseSettings):
         return self
 
     @property
+    def engine_limits(self) -> EngineLimits:
+        return EngineLimits(
+            connect_timeout=self.connect_timeout,
+            pool_timeout=self.pool_timeout,
+            statement_timeout=self.statement_timeout,
+            pool_size=self.pool_size,
+            max_overflow=self.pool_max_overflow,
+        )
+
+    @property
     def signing_keys(self) -> SigningKeys:
         return self._keys
 
@@ -143,6 +170,12 @@ class ApiSettings(DatabaseSettings):
             ACTIVE_KID_VARIABLE: self.cursor_active_kid,
             KEYS_VARIABLE: f"{_count(len(self._keys.keys), 'key')} ({kids})",
             DOCS_VARIABLE: str(self.api_docs).lower(),
+            "DATABASE_CONNECT_TIMEOUT_SECONDS": f"{self.connect_timeout:g}",
+            "DATABASE_POOL_TIMEOUT_SECONDS": f"{self.pool_timeout:g}",
+            "DATABASE_STATEMENT_TIMEOUT_SECONDS": f"{self.statement_timeout:g}",
+            "DATABASE_POOL_SIZE": str(self.pool_size),
+            "DATABASE_POOL_MAX_OVERFLOW": str(self.pool_max_overflow),
+            "RETRY_AFTER_SECONDS": str(self.retry_after_seconds),
             "LOG_LEVEL": self.log_level,
             "LOG_FORMAT": self.log_format,
         }

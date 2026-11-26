@@ -122,6 +122,9 @@ def test_build_app_logs_its_settings_without_secrets(
     assert (
         "starting with DATABASE_URL=postgresql+asyncpg://u:***@db:5432/app, "
         "CURSOR_ACTIVE_KID=a, CURSOR_SIGNING_KEYS=1 key (a), API_DOCS=false, "
+        "DATABASE_CONNECT_TIMEOUT_SECONDS=3, DATABASE_POOL_TIMEOUT_SECONDS=2, "
+        "DATABASE_STATEMENT_TIMEOUT_SECONDS=3, DATABASE_POOL_SIZE=5, "
+        "DATABASE_POOL_MAX_OVERFLOW=5, RETRY_AFTER_SECONDS=2, "
         "LOG_LEVEL=INFO, LOG_FORMAT=json"
     ) in stdout
     assert "hunter2" not in stdout
