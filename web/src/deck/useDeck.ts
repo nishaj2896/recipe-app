@@ -7,10 +7,29 @@ import type { SearchRequest } from "./searchRequest";
 /** Cursor problems the API answers with 422: the deck starts over. */
 const CURSOR_PROBLEMS = new Set(["/problems/cursor-expired", "/problems/invalid-cursor"]);
 
+/** The longest a busy server can make the deck wait before "Try again". */
+const MAX_WAIT_SECONDS = 30;
+
 export class SearchError extends Error {
-  constructor(readonly cursorRefused: boolean) {
+  /**
+   * `waitSeconds` is set when the API answered 503 (ADR-0013 rule 1): it is
+   * up but can't search right now, and asks clients to wait that long.
+   */
+  constructor(
+    readonly cursorRefused: boolean,
+    readonly waitSeconds: number | null = null,
+  ) {
     super(cursorRefused ? "the next deck's cursor was refused" : "the search failed");
   }
+}
+
+/**
+ * Retry-After in whole seconds, between 1 and MAX_WAIT_SECONDS. The API
+ * always sends seconds; a missing or odd value (an HTTP date, say) waits 2.
+ */
+export function retryAfterSeconds(header: string | null): number {
+  const seconds = header !== null && /^\d+$/.test(header.trim()) ? Number(header) : 2;
+  return Math.min(Math.max(seconds, 1), MAX_WAIT_SECONDS);
 }
 
 /**
@@ -26,7 +45,7 @@ export function useDeck(search: SearchRequest | null, round: number) {
     initialPageParam: null as string | null,
     queryFn: async ({ pageParam }) => {
       if (!search) throw new SearchError(false);
-      const { data, error } = await api.POST("/api/v1/recipes/search", {
+      const { data, error, response } = await api.POST("/api/v1/recipes/search", {
         body: {
           ...search,
           hidden_recipe_ids: useDevice.getState().hidden.slice(-MAX_HIDDEN),
@@ -34,6 +53,12 @@ export function useDeck(search: SearchRequest | null, round: number) {
         },
       });
       if (data) return data;
+      if (response.status === 503) {
+        throw new SearchError(
+          false,
+          retryAfterSeconds(response.headers.get("retry-after")),
+        );
+      }
       throw new SearchError(pageParam !== null && CURSOR_PROBLEMS.has(error.type));
     },
     getNextPageParam: (page) => page.next_cursor,
