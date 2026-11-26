@@ -8,10 +8,13 @@ never killed for being busy.
 
 import asyncio
 import logging
+from collections.abc import Sequence
 from dataclasses import dataclass
 
+from starlette.routing import BaseRoute, Match
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
+from recipe_app.api.access import ResponseCutError
 from recipe_app.api.problems import DEFAULT_RETRY_AFTER_SECONDS, service_unavailable
 
 logger = logging.getLogger(__name__)
@@ -28,9 +31,9 @@ class Guards:
     retry_after: int = DEFAULT_RETRY_AFTER_SECONDS
 
 
-class DeadlineExceededError(Exception):
+class DeadlineExceededError(ResponseCutError):
     """The deadline passed after the response had started, so no 503 can be
-    sent; the server logs this and drops the connection."""
+    sent; the connection is dropped instead."""
 
 
 class RequestDeadline:
@@ -81,12 +84,23 @@ class ConcurrencyLimit:
 
     One event loop per process, so a plain counter is safe: nothing awaits
     between the check and the increment.
+
+    A shed request never reaches the router, so the limit finds its route
+    itself: the access line names it, and a dashboard counts shedding per
+    route instead of as "unmatched" traffic. Only shed requests pay for it.
     """
 
-    def __init__(self, app: ASGIApp, limit: int, retry_after: int) -> None:
+    def __init__(
+        self,
+        app: ASGIApp,
+        limit: int,
+        retry_after: int,
+        routes: Sequence[BaseRoute] = (),
+    ) -> None:
         self.app = app
         self.limit = limit
         self.retry_after = retry_after
+        self.routes = routes
         self.in_flight = 0
 
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
@@ -96,6 +110,11 @@ class ConcurrencyLimit:
 
         if self.in_flight >= self.limit:
             logger.warning("%d requests already in flight; shedding", self.in_flight)
+            route = next(
+                (r for r in self.routes if r.matches(scope)[0] is Match.FULL), None
+            )
+            if route is not None:
+                scope["route"] = route
             await service_unavailable(self.retry_after)(scope, receive, send)
             return
 

@@ -120,11 +120,13 @@ class ApiSettings(DatabaseSettings):
     max_in_flight: int = Field(
         64, ge=1, le=10_000, validation_alias="MAX_IN_FLIGHT_REQUESTS"
     )
-    shutdown_grace: float = Field(
-        20, gt=0, le=300, validation_alias="SHUTDOWN_GRACE_SECONDS"
+    # Whole seconds: uvicorn takes ints, and rounding a float could turn
+    # 0.4 into 0, which means no drain at all.
+    shutdown_grace: int = Field(
+        20, ge=1, le=300, validation_alias="SHUTDOWN_GRACE_SECONDS"
     )
-    keep_alive: float = Field(
-        75, gt=0, le=3600, validation_alias="KEEP_ALIVE_TIMEOUT_SECONDS"
+    keep_alive: int = Field(
+        75, ge=1, le=3600, validation_alias="KEEP_ALIVE_TIMEOUT_SECONDS"
     )
     host: str = Field("127.0.0.1", min_length=1, validation_alias="API_HOST")
     port: int = Field(8000, ge=1, le=65535, validation_alias="API_PORT")
@@ -192,8 +194,8 @@ class ApiSettings(DatabaseSettings):
             "RETRY_AFTER_SECONDS": str(self.retry_after_seconds),
             "REQUEST_TIMEOUT_SECONDS": f"{self.request_timeout:g}",
             "MAX_IN_FLIGHT_REQUESTS": str(self.max_in_flight),
-            "SHUTDOWN_GRACE_SECONDS": f"{self.shutdown_grace:g}",
-            "KEEP_ALIVE_TIMEOUT_SECONDS": f"{self.keep_alive:g}",
+            "SHUTDOWN_GRACE_SECONDS": str(self.shutdown_grace),
+            "KEEP_ALIVE_TIMEOUT_SECONDS": str(self.keep_alive),
             "API_HOST": self.host,
             "API_PORT": str(self.port),
             "LOG_LEVEL": self.log_level,

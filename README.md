@@ -92,8 +92,8 @@ Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` wit
 | `RETRY_AFTER_SECONDS` | The `Retry-After` on a 503 (default 2) |
 | `REQUEST_TIMEOUT_SECONDS` | The whole request; past it the client gets a 503 (default 8) |
 | `MAX_IN_FLIGHT_REQUESTS` | Requests running at once per process; one more gets a 503 at once (default 64) |
-| `SHUTDOWN_GRACE_SECONDS` | After SIGTERM, how long in-flight requests may finish (default 20; under Kubernetes's 30 s) |
-| `KEEP_ALIVE_TIMEOUT_SECONDS` | Idle keep-alive connections close after this; keep it above the load balancer's idle timeout (default 75) |
+| `SHUTDOWN_GRACE_SECONDS` | After SIGTERM, how long in-flight requests may finish (whole seconds, default 20; under Kubernetes's 30 s) |
+| `KEEP_ALIVE_TIMEOUT_SECONDS` | Idle keep-alive connections close after this; keep it above the load balancer's idle timeout (whole seconds, default 75) |
 | `API_HOST`, `API_PORT` | Where `recipe-app serve` listens (defaults `127.0.0.1`, `8000`; the image sets `0.0.0.0`) |
 | `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and the `recipes/` folder of `*.toml` files (default `./data`); only `recipe-app db sync` reads it |
 

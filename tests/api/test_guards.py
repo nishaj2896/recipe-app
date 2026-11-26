@@ -124,6 +124,7 @@ async def test_the_deadline_answers_503_before_any_response() -> None:
 async def test_one_request_too_many_is_shed_at_once(
     make_app: AppFactory, caplog: pytest.LogCaptureFixture
 ) -> None:
+    caplog.set_level(logging.INFO, logger="recipe_app")
     release = asyncio.Event()
     app = make_app(guards=Guards(max_in_flight=2))
 
@@ -143,6 +144,13 @@ async def test_one_request_too_many_is_shed_at_once(
 
     assert shed.status_code == 503
     assert shed.json()["type"] == SERVICE_UNAVAILABLE
+    # Named by its route, not "unmatched", so dashboards count it (#131).
+    shed_lines = [
+        r.__dict__["fields"]
+        for r in caplog.records
+        if r.name == "recipe_app.access" and r.__dict__["fields"]["status"] == 503
+    ]
+    assert [line["route"] for line in shed_lines] == ["/wait"]
     assert alive.status_code == 200
     assert [r.status_code for r in finished] == [200, 200]
     assert after.status_code == 200

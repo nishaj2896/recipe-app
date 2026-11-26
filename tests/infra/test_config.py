@@ -358,7 +358,11 @@ def test_server_settings_load(environ: pytest.MonkeyPatch) -> None:
         ("MAX_IN_FLIGHT_REQUESTS", "0"),
         ("MAX_IN_FLIGHT_REQUESTS", "1.5"),
         ("SHUTDOWN_GRACE_SECONDS", "-1"),
+        # Whole seconds: 0.4 would round to 0, no drain at all.
+        ("SHUTDOWN_GRACE_SECONDS", "0.4"),
+        ("SHUTDOWN_GRACE_SECONDS", "0"),
         ("KEEP_ALIVE_TIMEOUT_SECONDS", "0"),
+        ("KEEP_ALIVE_TIMEOUT_SECONDS", "1.5"),
         ("API_PORT", "70000"),
     ],
 )

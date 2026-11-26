@@ -4,6 +4,7 @@ Pure ASGI, not BaseHTTPMiddleware, which runs the app in another task and
 would lose the request ID's context variable on the way.
 """
 
+import asyncio
 import logging
 import re
 import secrets
@@ -22,6 +23,12 @@ REQUEST_ID_HEADER = "X-Request-ID"
 _VALID_ID = re.compile(r"[A-Za-z0-9_-]{8,64}")
 _METHODS = frozenset({"GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"})
 UNMATCHED = "unmatched"
+
+
+class ResponseCutError(Exception):
+    """Raised after the response started to have the server drop the
+    connection: RequestContext logs the request once and returns, so the
+    server closes it with one line instead of a traceback."""
 
 
 def new_request_id() -> str:
@@ -61,31 +68,76 @@ class RequestContext:
 
         request_id = _incoming_id(scope) or new_request_id()
         token = REQUEST_ID.set(request_id)
-        started = time.perf_counter()
-        status: int | None = None
+        request = _Request(scope, request_id)
+        _OPEN.add(request)
 
         async def send_with_id(message: Message) -> None:
-            nonlocal status
             if message["type"] == "http.response.start":
-                status = message["status"]
+                request.status = message["status"]
                 MutableHeaders(scope=message)[REQUEST_ID_HEADER] = request_id
             await send(message)
 
         failed: str | None = None
         try:
             await self.app(scope, receive, send_with_id)
+        except ResponseCutError as error:
+            # Whoever raised it logged why. Returning without finishing the
+            # response makes the server close the connection.
+            failed = type(error).__name__
+        except asyncio.CancelledError:
+            # The server gave up on the request: the client went away, or the
+            # drain after SIGTERM ran out. It still gets its line.
+            failed = "cancelled"
+            raise
         except Exception as error:
             # Starlette's error middleware sends the 500, after the handler
             # logged the traceback, and then re-raises; the server would log
             # it a second time. Only that case stops here. An error after any
             # other start (a 200 that fails mid-body) goes on to the server,
             # which logs it and drops the connection.
-            if status != 500:
+            if request.status != 500:
                 failed = type(error).__name__
                 raise
         finally:
-            _log_access(scope, status, time.perf_counter() - started, failed)
+            request.finish(failed)
             REQUEST_ID.reset(token)
+
+
+def log_unfinished_requests() -> None:
+    """Write the access line of every request still open, as cancelled.
+
+    Called at application shutdown, which uvicorn runs right after it cancels
+    the requests that outlived SHUTDOWN_GRACE_SECONDS. A cancelled request
+    can take a while to unwind (SQLAlchemy closes its connection politely),
+    and the process exits before it does, so without this its line is lost.
+    """
+    for request in list(_OPEN):
+        request.finish("cancelled")
+
+
+class _Request:
+    """One request's access line, written once, whichever path ends it."""
+
+    def __init__(self, scope: Scope, request_id: str) -> None:
+        self.scope = scope
+        self.request_id = request_id
+        self.started = time.perf_counter()
+        self.status: int | None = None
+
+    def finish(self, failed: str | None) -> None:
+        if self not in _OPEN:
+            return
+        _OPEN.discard(self)
+        token = REQUEST_ID.set(self.request_id)
+        try:
+            _log_access(
+                self.scope, self.status, time.perf_counter() - self.started, failed
+            )
+        finally:
+            REQUEST_ID.reset(token)
+
+
+_OPEN: set[_Request] = set()
 
 
 def _incoming_id(scope: Scope) -> str | None:

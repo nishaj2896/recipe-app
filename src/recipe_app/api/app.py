@@ -12,7 +12,7 @@ from pydantic import BaseModel
 from starlette.types import ASGIApp
 
 from recipe_app.api import presenters
-from recipe_app.api.access import RequestContext
+from recipe_app.api.access import RequestContext, log_unfinished_requests
 from recipe_app.api.guards import ConcurrencyLimit, Guards, RequestDeadline
 from recipe_app.api.headers import DOCS_PAGES, SecurityHeaders
 from recipe_app.api.limits import BodySizeLimit
@@ -103,7 +103,9 @@ def _wrap_stack(app: FastAPI, *, docs: bool, guards: Guards) -> None:
 
     def build_middleware_stack() -> ASGIApp:
         timed = RequestDeadline(build(), guards.request_timeout, guards.retry_after)
-        limited = ConcurrencyLimit(timed, guards.max_in_flight, guards.retry_after)
+        limited = ConcurrencyLimit(
+            timed, guards.max_in_flight, guards.retry_after, app.router.routes
+        )
         secured = SecurityHeaders(limited, DOCS_PAGES if docs else frozenset())
         return RequestContext(secured)
 
@@ -166,6 +168,7 @@ def build_app() -> FastAPI:
             _serve(app, catalog, service)
             yield
         finally:
+            log_unfinished_requests()
             await engine.dispose()
 
     guards = Guards(
