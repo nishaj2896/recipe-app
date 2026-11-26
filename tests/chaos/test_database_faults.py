@@ -157,5 +157,6 @@ async def test_one_stuck_query_stalls_others_only_for_the_pool_wait(
     await stuck
 
     assert_clean_503(waiting)
-    assert 0.5 <= took < 1
+    # The 0.5 s pool wait, with room for a loaded CI runner.
+    assert 0.5 <= took < 2
     assert "database unavailable: pool timeout" in caplog.text

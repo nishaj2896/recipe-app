@@ -145,12 +145,17 @@ async def connected(engine: AsyncEngine) -> AsyncIterator[AsyncConnection]:
     The database being unavailable becomes StoreUnavailableError. A
     TimeoutError here, after the pool handed the connection over, is asyncpg's
     command_timeout: the server's reply never came, so the link may be dead.
-    The connection is dropped rather than returned to the pool, where a
-    ROLLBACK on the same link would wait the whole budget again. SQLAlchemy
-    still tries a polite close of a dropped connection for up to 2 s, so a
-    frozen network costs the client budget plus at most 2 s (tests/chaos).
+    The connection is dropped at once and the cause is named, rather than
+    handed back for a ROLLBACK that would time out on the same link and be
+    logged as "connect timeout". It saves no time: SQLAlchemy still tries a
+    polite close of a dropped connection for up to 2 s, so a frozen network
+    costs the client budget plus at most 2 s either way (tests/chaos).
     One raised by engine.connect() itself stays "connect timeout": no working
     connection in time, new or checked by the pool's pre-ping.
+
+    Put only database calls inside the block. Any TimeoutError in it is taken
+    for the network's, so one from our own code would become a 503 instead
+    of the 500 a bug should be.
     """
     async with unavailable_as_store_error(), engine.connect() as connection:
         try:
