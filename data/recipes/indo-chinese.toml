@@ -49,6 +49,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 10
 plan_ahead = { wait_minutes = 480, note = "chill the rice overnight" }
+image = { file = "01a15175-3c2c-75c4-a0fb-92fed93ef6e7.webp", sha256 = "b35ffa676085ba6412635841bdd2c54c74acae1d2711256f52e51f1dc198b762", alt = "Egg fried rice with spring onion" }
 cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["savoury"]
@@ -117,6 +118,7 @@ name = "Schezwan noodles"
 serves = 3
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18ba9-fd9c-7f81-8dcc-96e4d31e45e9.webp", sha256 = "c9de95f8e50c471155be6358dc4146e2be880e1f1aee883aa4c1d4208be08626", alt = "Schezwan noodles with cabbage, carrot and spring onion" }
 cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -190,6 +192,7 @@ name = "Schezwan fried rice"
 serves = 3
 prep_minutes = 15
 cook_minutes = 10
+image = { file = "01a18ba9-fda0-7088-9d35-66b6ea197a87.webp", sha256 = "2ff577fd3caf8054a73f814a5e6524ae88439f269f062da3638d132ca6c3ec4d", alt = "Schezwan fried rice with vegetables and spring onion" }
 cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["spicy", "savoury"]
@@ -223,6 +226,7 @@ name = "Chicken fried rice"
 serves = 3
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18ba9-fda2-7f0b-a091-d063bc307813.webp", sha256 = "90cfddc46ed8db00bed332f0a3643a95ce992484bab9dac9dcf051466fc19a15", alt = "Chicken fried rice with egg, carrot and spring onion" }
 cuisine = "indo-chinese"
 courses = ["rice-breads", "mains"]
 moods = ["savoury"]
@@ -338,6 +342,7 @@ name = "Chilli paneer"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18ba9-fda9-743f-9389-d41d9343ddd3.webp", sha256 = "662b7605a37a2e502a359055045e77eea5feb85fbad962529bcdf792715767f6", alt = "Chilli paneer with onion and peppers, topped with spring onion" }
 cuisine = "indo-chinese"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
@@ -454,6 +459,7 @@ name = "Gobi 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18ba9-fdb0-710a-86f5-d04c90f88899.webp", sha256 = "bdc32cecd24b814cbac5f60d31c0c853877468da31438a04e8daf21c1e2a6e34", alt = "Gobi 65, red fried cauliflower with curry leaves and green chillies" }
 cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
@@ -489,6 +495,7 @@ name = "Dragon chicken"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18ba9-fdb2-7b32-80d4-c95bb06bd71d.webp", sha256 = "393cb1f50758a3afe662bd49175d8c41aa7a6fe612cf610e61501b2a6640e870", alt = "Dragon chicken with cashews, peppers and dried red chillies" }
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "sweet", "crispy"]
@@ -562,6 +569,7 @@ name = "Chilli mushroom"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18ba9-fdb6-7f73-ac42-3bcb45916094.webp", sha256 = "74b85b17843b2e9858d7f7144ecdcadf441b890daaf7f900a39d915e690b2be4", alt = "Chilli mushroom with onion and peppers, topped with spring onion" }
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "savoury"]
@@ -597,6 +605,7 @@ name = "Paneer 65"
 serves = 4
 prep_minutes = 15
 cook_minutes = 15
+image = { file = "01a18ba9-fdb8-7816-80d3-f8db752846db.webp", sha256 = "331df3fc1ec1c2961b12ced2e54b3c833efd8bcdeb2b0f33fab90e5619bccb85", alt = "Paneer 65, red fried paneer with curry leaves and green chillies" }
 cuisine = "south-indian"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
@@ -740,6 +749,7 @@ name = "Manchow soup"
 serves = 4
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18ba9-fdc1-7b4e-ab76-379c6e5f963e.webp", sha256 = "0d4b8f88fc332e010c9d96d866dbdf3abd4a40c20528e91e4ad64ac2d681830d", alt = "Manchow soup topped with spring onion and crisp fried noodles" }
 cuisine = "indo-chinese"
 courses = ["soups"]
 moods = ["spicy", "savoury", "crispy"]
@@ -817,6 +827,7 @@ name = "Chilli garlic noodles"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18ba9-fdc6-7d5c-9f31-7a852bf6482c.webp", sha256 = "071cd7f26cb27ccdb0efb56a2573493f193331996a36a0748e5c5689eabfe045", alt = "Chilli garlic noodles with fried garlic and spring onion" }
 cuisine = "indo-chinese"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -848,6 +859,7 @@ name = "Crispy corn"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18ba9-fdc8-7466-afa0-8148214eb406.webp", sha256 = "7482cdc04488cbaa58e35bf36433615264060b3d766e2e855c05d77980c6969b", alt = "Crispy corn tossed with onion, pepper and green chilli" }
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
@@ -882,6 +894,7 @@ name = "Triple Schezwan rice"
 serves = 3
 prep_minutes = 25
 cook_minutes = 30
+image = { file = "01a18ba9-fdca-7c7c-926d-f05ec4b04b3a.webp", sha256 = "27e30742367e7f8262f1383bc0ebc1a5e64f4afd997f150e75586f07beaecba3", alt = "Triple Schezwan rice with noodles, red gravy and a fried egg" }
 cuisine = "indo-chinese"
 courses = ["mains", "rice-breads"]
 moods = ["spicy", "savoury", "hearty"]

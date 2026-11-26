@@ -79,6 +79,7 @@ name = "Aloo shimla mirch"
 serves = 4
 prep_minutes = 10
 cook_minutes = 20
+image = { file = "01a18bae-8f54-701e-b1e5-79847bded55e.webp", sha256 = "5206e20497dc955f05893e3625c8e8296eaaba76a9023833d1b9c3af2a530065", alt = "Aloo shimla mirch, potato cubes and green pepper in a dry masala" }
 cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
@@ -111,6 +112,7 @@ name = "Besan shimla mirch"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bae-8f56-7aed-a14d-daf5184ca545.webp", sha256 = "50e0e2d7ad105056082d0c2c6e3711c8e0e5c91336683090eb4370d6efefaef4", alt = "Green pepper pieces coated in roasted gram flour" }
 cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
@@ -180,6 +182,7 @@ name = "Baby corn masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f5a-7ec1-88fd-7cac8198b775.webp", sha256 = "eebf033322e7d190d968b2bc95b06a5f0a8a6c4fdfe7e4f724019a3b640408d8", alt = "Baby corn masala with green pepper in an orange tomato gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -216,6 +219,7 @@ name = "Corn palak"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f5d-7b96-ae0f-7709ea68eb52.webp", sha256 = "3ab51bd181db4eb9e5fa0b796c3c3a1cce42943f74bb713a97b604d2a7a32e7d", alt = "Corn palak, sweetcorn in a green spinach gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
@@ -252,6 +256,7 @@ name = "Dal palak"
 serves = 4
 prep_minutes = 10
 cook_minutes = 35
+image = { file = "01a18bae-8f5f-7b28-bad8-6c02b9e2e36f.webp", sha256 = "fc3e1e55bc53a45b93747d60dac473079d3e1bd9ebb6da3b4bfd0342ecda3300", alt = "Dal palak, toor dal with spinach and tomato" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "light"]
@@ -326,6 +331,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 35
 plan_ahead = { wait_minutes = 60, note = "soak for 1 hour" }
+image = { file = "01a18bae-8f63-7d70-aba2-0c4598d735f9.webp", sha256 = "3db80585460b96134d462483aa8e5f5e9c6f09c91e005ab2f60537d9a72b7b9a", alt = "Lauki dal, chana dal with bottle gourd and coriander" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["comforting", "light"]
@@ -363,6 +369,7 @@ name = "Kadhi chawal"
 serves = 4
 prep_minutes = 10
 cook_minutes = 40
+image = { file = "01a18bae-8f66-7fb8-866a-aeb8c1f8b992.webp", sha256 = "8a7f479cf00578e7e7f767611c826a1599c241b6bb0f2121800279947d5ab65a", alt = "Kadhi chawal, white rice with yellow kadhi and onion slices" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["tangy", "comforting"]
@@ -441,6 +448,7 @@ name = "Matar mushroom"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f6a-7544-a2ed-06d4ce123b92.webp", sha256 = "ee5d5a6cabf4b0ed2a43b436fdfcaf64489b67f304f329a48497e174547189ba", alt = "Matar mushroom in an orange-red gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "spicy"]
@@ -478,6 +486,7 @@ name = "Gobi matar"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f6c-7b4a-82cc-1e5450d5919c.webp", sha256 = "e717035abc1738bf2d38d47ed6225533255e350614ca2a2587fe50a5c513247e", alt = "Gobi matar, cauliflower and peas in a dry masala" }
 cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]
@@ -513,6 +522,7 @@ name = "Bhindi aloo"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bae-8f6e-76d6-a534-93e45d1c3228.webp", sha256 = "1992775f743a79322c2b06cc66be41b667dd276e938a2fae54d6db43ee741b5d", alt = "Bhindi aloo, okra and potato stir-fried with onion" }
 cuisine = "north-indian"
 courses = ["sides"]
 moods = ["savoury", "spicy"]

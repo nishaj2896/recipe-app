@@ -42,6 +42,7 @@ name = "Egg bhurji"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a15175-3c18-79cf-a283-c1a2dae07776.webp", sha256 = "2632d8ab3ff4f14401f8bc19964d806e6cea20d122f1bf8e8cf8e822e6e42bf3", alt = "Egg bhurji with onion, tomato and coriander" }
 cuisine = "north-indian"
 courses = ["breakfast", "mains"]
 moods = ["spicy", "savoury"]
@@ -73,6 +74,7 @@ name = "Boiled egg masala"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18ba9-fdcd-791b-b47d-acf3aa474d11.webp", sha256 = "2b245603186e0d528146cde61fbd33ce9c1c9d48f74ef34a2685ea6bec9aa07c", alt = "Boiled egg halves in a dark red onion and tomato masala with coriander" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -174,6 +176,7 @@ name = "Egg kothu parotta"
 serves = 3
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18ba9-fdd3-7c0d-8ab1-2cddceacd4ed.webp", sha256 = "5a11d346d7912508924ecf23dfd3ec5efd576fc485cf2c787c63154c42187d45", alt = "Egg kothu parotta with shredded paratha, egg and coriander" }
 cuisine = "south-indian"
 courses = ["mains", "snacks-starters"]
 moods = ["spicy", "savoury", "hearty"]
@@ -209,6 +212,7 @@ name = "Bread omelette"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18ba9-fdd5-77e4-b9b3-6274a577f4fe.webp", sha256 = "1408a208998a3086899ee95b971382d187d71b8899587beb605ae0953308c94e", alt = "Toasted bread omelette sandwich cut in half, with ketchup" }
 cuisine = "street-food"
 courses = ["breakfast", "snacks-starters"]
 moods = ["savoury"]
@@ -271,6 +275,7 @@ name = "Vegetable sandwich (Bombay)"
 serves = 2
 prep_minutes = 15
 cook_minutes = 25
+image = { file = "01a18ba9-fdda-7598-be6a-18a91c093cfb.webp", sha256 = "2ed5ad1fa233a46f533f056622e19466ffbe9f98ff56dd7b91ef644d1ea585e7", alt = "Bombay vegetable sandwich in quarters with chutney, potato, beetroot and cucumber" }
 cuisine = "street-food"
 courses = ["snacks-starters", "breakfast"]
 moods = ["fresh-herby", "tangy", "savoury"]
@@ -303,6 +308,7 @@ name = "Cheese chilli toast"
 serves = 2
 prep_minutes = 10
 cook_minutes = 10
+image = { file = "01a18ba9-fddc-79b7-af5d-a34b3e70e16e.webp", sha256 = "930838fc059b361eae2d30a094e1270ac9ed5e9b194cdf036d54faf44df16533", alt = "Cheese chilli toast triangles with green chilli and pepper" }
 cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["spicy", "creamy", "savoury"]
@@ -361,6 +367,7 @@ name = "Vermicelli upma"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18ba9-fde1-74aa-8a02-5e0d20609c87.webp", sha256 = "a6f271a3ad6074b682d51e4652cf5396a03c531deef828cde1708a2eee6f2d21", alt = "Vermicelli upma with carrot, peas and curry leaves" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["savoury", "light"]
@@ -429,6 +436,7 @@ name = "Oats chilla"
 serves = 2
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18ba9-fde5-78d9-9d59-cb9916d25062.webp", sha256 = "7e4d8723f843a34c8457d6d2c850ff8e48e885647c6f7b33dbf87fc7c013affe", alt = "Oats chilla speckled with onion, tomato and coriander" }
 cuisine = "north-indian"
 courses = ["breakfast"]
 moods = ["savoury", "light"]
@@ -493,6 +501,7 @@ name = "Vegetable cutlet"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+image = { file = "01a18ba9-fde9-73b3-96e7-44e6e783f628.webp", sha256 = "ae575eebc9ed5105c5dfa93be00a019c93bb8c1b9c9e2154799da2880a6cefe0", alt = "Vegetable cutlets, one cut open" }
 cuisine = "street-food"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury", "spicy"]
@@ -531,6 +540,7 @@ name = "Paneer kathi roll"
 serves = 4
 prep_minutes = 20
 cook_minutes = 25
+image = { file = "01a18ba9-fdec-7e3c-aa03-7e6a7c198a40.webp", sha256 = "8c9efb68fb28b0129e781b0589eff12c1e0e80fd51485a9e77f10fcbdd1f292a", alt = "Paneer kathi roll cut in half to show paneer, onion and pepper" }
 cuisine = "street-food"
 courses = ["snacks-starters", "mains"]
 moods = ["spicy", "savoury"]
@@ -600,6 +610,7 @@ name = "Banana sheera"
 serves = 4
 prep_minutes = 5
 cook_minutes = 15
+image = { file = "01a18ba9-fdf0-7460-a0c1-bcf8941e1638.webp", sha256 = "485f7c03a14722d7b0c6a7c04838f3ae8c80c6e032d9258d95aaec4f612fd310", alt = "Banana sheera, golden semolina pudding with cashews" }
 cuisine = "west-indian"
 courses = ["desserts", "breakfast"]
 moods = ["sweet", "comforting"]
@@ -627,6 +638,7 @@ name = "Sweet lassi"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+image = { file = "01a18bae-8f3d-714c-aeef-3a819014d2ed.webp", sha256 = "b80e77d101d2cf67833c173947fb4c301f15dcb80a0291646b29583a1b77a4c0", alt = "A tall glass of frothy sweet lassi" }
 cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["sweet", "creamy"]
@@ -650,6 +662,7 @@ name = "Ginger lemon tea"
 serves = 2
 prep_minutes = 5
 cook_minutes = 6
+image = { file = "01a18bae-8f40-7662-8237-31e6885aeeff.webp", sha256 = "6c62310992b0679c9acb8742fc6547e8bd3d52765ce257486e14fbc66cf727b2", alt = "A glass cup of amber ginger lemon tea on a saucer" }
 cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["fresh-herby", "tangy"]
@@ -704,6 +717,7 @@ name = "Kokum sharbat"
 serves = 4
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18bae-8f44-7c2a-a430-1b91b02ba245.webp", sha256 = "a77629ca8d102771e9742b2c318060f0720b1804f017cc818082f2eff7fd6f0b", alt = "A tall glass of ruby-purple kokum sharbat" }
 cuisine = "west-indian"
 courses = ["drinks"]
 moods = ["tangy", "sweet"]
@@ -730,6 +744,7 @@ name = "Aam panna"
 serves = 4
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bae-8f46-7c2c-aa69-2bad3cac75d8.webp", sha256 = "f78db39216416bf26270caeca9ef10233af4f9a3251fda35d716639dc20b767f", alt = "Aam panna, a tall glass of pale green raw mango drink" }
 cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["tangy", "sweet", "fresh-herby"]
@@ -778,6 +793,7 @@ name = "Badam milk"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bae-8f4b-7469-a05d-6c23cca2edf1.webp", sha256 = "f878a1ce3fbfc3cc840e2d78bb32907adbb064ef3953f47a96bcd4696a73f4ca", alt = "Badam milk, a glass of pale gold almond milk" }
 cuisine = "south-indian"
 courses = ["drinks"]
 moods = ["sweet", "creamy"]
@@ -805,6 +821,7 @@ name = "Cold coffee"
 serves = 2
 prep_minutes = 5
 cook_minutes = 0
+image = { file = "01a18bae-8f4d-7d22-8881-78f6ecd7afee.webp", sha256 = "2e8557c8607b4d0f97628fc8814a640da18bacf3d20ac1e687aded9dd2db3bd1", alt = "A tall glass of frothy cold coffee" }
 cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["sweet", "creamy"]
@@ -828,6 +845,7 @@ name = "Kesar pista milk"
 serves = 3
 prep_minutes = 10
 cook_minutes = 15
+image = { file = "01a18bae-8f4f-7453-8b00-7f116896f065.webp", sha256 = "eeff6ee030ad2a3705a923a1849f50d3bb0444bb27299166775c1a55b3052d46", alt = "A glass of saffron milk topped with chopped pistachios" }
 cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["sweet", "creamy"]

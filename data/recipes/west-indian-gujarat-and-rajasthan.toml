@@ -651,6 +651,7 @@ name = "Bajra rotla"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18b5a-d32d-7abf-acf8-0c6a378df2fa.webp", sha256 = "15a749df23ac478dc6d3052159e2e16b1ca1e14ae777080c9b06e5bded1e7340", alt = "Two stacked bajra rotlas glossy with ghee" }
 cuisine = "west-indian"
 courses = ["rice-breads"]
 moods = ["savoury", "hearty"]
@@ -678,6 +679,7 @@ name = "Lilva kachori"
 serves = 6
 prep_minutes = 40
 cook_minutes = 30
+image = { file = "01a18b5a-d32f-79e3-a8e1-428093f3694d.webp", sha256 = "e1870e594c6abbdcec52d25c40d021070b71dc00df650ac3f9ec1ca7f0bf3f7d", alt = "Lilva kachori, one broken open to show the green pigeon pea filling" }
 cuisine = "west-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
@@ -718,6 +720,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 20
 plan_ahead = { wait_minutes = 240, note = "soak for 4 hours" }
+image = { file = "01a18b5a-d331-77b9-9634-59f424560b1f.webp", sha256 = "9aca81f7ec14b820b8534c01c4fca6935b17ea8daa54ba71b92e6786be83875b", alt = "Sev khamani topped with sev, pomegranate, coconut and coriander" }
 cuisine = "west-indian"
 courses = ["snacks-starters"]
 moods = ["sweet-sour", "savoury"]
@@ -785,6 +788,7 @@ serves = 12
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 120, note = "let it set for 2 hours" }
+image = { file = "01a18b5a-d336-7ed8-bf32-09ca1c59aefb.webp", sha256 = "66306514488fd3b74b925ca01fbaaa0007ad951b7f2e5e5bd5214c84dd63217b", alt = "Squares of mohanthal topped with almonds and pistachios" }
 cuisine = "west-indian"
 courses = ["desserts"]
 moods = ["sweet"]
@@ -817,6 +821,7 @@ name = "Aamras"
 serves = 4
 prep_minutes = 15
 cook_minutes = 0
+image = { file = "01a18b5a-d338-7787-a9b6-5894c2da6db3.webp", sha256 = "20091648795bb80dffedaa9a06a049d5418953c4e184f09555bd2beb649d8f93", alt = "Aamras, smooth orange mango pulp in a dark bowl" }
 cuisine = "west-indian"
 courses = ["desserts"]
 moods = ["sweet"]
@@ -893,6 +898,7 @@ name = "Gatte ki sabzi"
 serves = 4
 prep_minutes = 20
 cook_minutes = 35
+image = { file = "01a18b5a-d33d-7fa0-8fc0-a3761af37506.webp", sha256 = "a1df6ee580c7851b84e40f59b777cafe255bfa1fd1ab3349b38620e0e6715677", alt = "Gatte ki sabzi, gram flour dumplings in a curd gravy" }
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
@@ -1005,6 +1011,7 @@ name = "Bajre ki roti"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18b5a-d343-7c1d-a464-f1e946eea2e3.webp", sha256 = "2f185e981b6ed311bdcba1e52da7eddcb148b6271a0bf534d1c0973c1ad1ddb6", alt = "Bajre ki roti glossy with ghee, with crumbled jaggery beside it" }
 cuisine = "west-indian"
 courses = ["rice-breads"]
 moods = ["savoury"]
@@ -1075,6 +1082,7 @@ name = "Mirchi vada"
 serves = 4
 prep_minutes = 25
 cook_minutes = 25
+image = { file = "01a18b6c-22eb-7724-bab0-860096ffe397.webp", sha256 = "b8f625e21b7947538e95daebdf13944d26f61119945bd1e8a66b0ff64922de7c", alt = "Mirchi vada, battered green chillies, one cut open to show the potato filling" }
 cuisine = "west-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "spicy"]
@@ -1114,6 +1122,7 @@ name = "Rajasthani kadhi"
 serves = 4
 prep_minutes = 5
 cook_minutes = 25
+image = { file = "01a18b6c-22ee-78fe-a0d5-b0792dc53b5e.webp", sha256 = "7ab53ba0ee0240cb1cc447d58105f55e0c04da2df8d243af7aa125ccfef4e210", alt = "Rajasthani kadhi dusted with red chilli and coriander" }
 cuisine = "west-indian"
 courses = ["mains"]
 moods = ["tangy", "spicy"]
@@ -1149,6 +1158,7 @@ serves = 4
 prep_minutes = 15
 cook_minutes = 30
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18b6c-22f0-7e80-ab0f-a1d83b9f1ab4.webp", sha256 = "940335e2005e06ec7efef9bc4e47698d88e4d23a7976f835cf97476d068e572a", alt = "Panchkuta, a dark glossy mix of desert beans, berries and raisins" }
 cuisine = "west-indian"
 courses = ["sides"]
 moods = ["tangy", "spicy"]
@@ -1219,6 +1229,7 @@ name = "Malpua"
 serves = 6
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18b6c-22f5-7142-805d-728be34ed8bc.webp", sha256 = "858b0f193959c0cc0d2969f5720a90fbb366a936184b132aad51f9c72748bbf9", alt = "Three malpuas glistening with syrup, topped with pistachios" }
 cuisine = "north-indian"
 courses = ["desserts"]
 moods = ["sweet", "crispy"]
@@ -1250,6 +1261,7 @@ name = "Ghevar"
 serves = 8
 prep_minutes = 30
 cook_minutes = 45
+image = { file = "01a18b6c-22f7-7757-9b55-f7d984bd4268.webp", sha256 = "1624f04143ad5805eb5b7f6e2db736558eaeb9894c4b7b7cbf608c758cc309cb", alt = "Ghevar topped with khoa, almonds and pistachios" }
 cuisine = "west-indian"
 courses = ["desserts"]
 moods = ["sweet", "crispy"]
@@ -1282,6 +1294,7 @@ name = "Masala chaas"
 serves = 4
 prep_minutes = 10
 cook_minutes = 0
+image = { file = "01a18b6c-22f9-7a57-91ea-b67fd75e931c.webp", sha256 = "ac722f9db605e3c89ac5c33aafe1d68547e0c079b6bfdeb35d93a618375077c4", alt = "A tall glass of masala chaas with roasted cumin on top" }
 cuisine = "west-indian"
 courses = ["drinks"]
 moods = ["tangy", "fresh-herby", "light"]
