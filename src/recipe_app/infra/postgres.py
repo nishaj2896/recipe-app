@@ -10,7 +10,8 @@ model of a recipe.
 """
 
 import logging
-from collections.abc import Sequence
+from collections.abc import AsyncIterator, Sequence
+from contextlib import asynccontextmanager
 from dataclasses import replace
 from typing import Any
 from uuid import UUID
@@ -63,6 +64,7 @@ from recipe_app.domain.recipe_search import (
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
 from recipe_app.domain.units import Unit
+from recipe_app.infra.database import unavailable_as_store_error
 from recipe_app.infra.tables import (
     recipe_ingredients,
     recipe_pairings,
@@ -168,8 +170,15 @@ class PostgresRecipeRepository:
         logger.info("score triangle covers core_q up to %d", max_core_q)
         return cls(engine, catalog, max_core_q=max_core_q)
 
+    @asynccontextmanager
+    async def _connect(self) -> AsyncIterator[AsyncConnection]:
+        """A pooled connection; the database being unavailable becomes
+        StoreUnavailableError, here and nowhere else (ADR-0013 rule 1)."""
+        async with unavailable_as_store_error(), self._engine.connect() as connection:
+            yield connection
+
     async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:
-        async with self._engine.connect() as connection:
+        async with self._connect() as connection:
             # One snapshot, as in ranked: a sync committing between these
             # queries would pair one version's amounts with another's
             # ingredients.
@@ -242,7 +251,7 @@ class PostgresRecipeRepository:
     async def ranked(
         self, pantry: Pantry, filters: SearchFilters, after: Position, limit: int
     ) -> Ranking:
-        async with self._engine.connect() as connection:
+        async with self._connect() as connection:
             # One snapshot, so a sync committing between the queries can't
             # rank with one version of a recipe and build it from another.
             await connection.execution_options(isolation_level="REPEATABLE READ")
@@ -286,7 +295,7 @@ class PostgresRecipeRepository:
     async def find(self, query: RecipeQuery, limit: int, offset: int) -> Found:
         if not query.key:
             return Found(recipes=(), total=0)
-        async with self._engine.connect() as connection:
+        async with self._connect() as connection:
             await connection.execution_options(isolation_level="REPEATABLE READ")
             page = (await connection.execute(find_query(query, limit, offset))).all()
             if page:

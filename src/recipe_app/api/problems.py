@@ -20,12 +20,16 @@ from recipe_app.api.access import current_request_id
 from recipe_app.api.schemas import FieldError, Problem
 from recipe_app.domain.cursor import ExpiredCursorError, InvalidCursorError
 from recipe_app.domain.matching import PantryError
+from recipe_app.services.ports import StoreUnavailableError
 
 logger = logging.getLogger(__name__)
 
 PROBLEM_MEDIA_TYPE = "application/problem+json"
 INVALID_CURSOR = "/problems/invalid-cursor"
 CURSOR_EXPIRED = "/problems/cursor-expired"
+SERVICE_UNAVAILABLE = "/problems/service-unavailable"
+# Advice, not a schedule: the web app never retries by itself (ADR-0013 rule 1).
+DEFAULT_RETRY_AFTER_SECONDS = 2
 _REQUEST_LOCATIONS = frozenset({"body", "path", "query", "header", "cookie"})
 # A 50-item list can fail 50 ways; past this many, more errors don't help.
 MAX_ERRORS = 20
@@ -88,6 +92,7 @@ def register_problem_handlers(app: FastAPI) -> None:
     app.exception_handler(InvalidCursorError)(_invalid_cursor)
     app.exception_handler(ExpiredCursorError)(_expired_cursor)
     app.exception_handler(RecipeNotFoundError)(_not_found)
+    app.exception_handler(StoreUnavailableError)(_unavailable)
     app.exception_handler(StarletteHTTPException)(_http)
     app.exception_handler(Exception)(_unhandled)
 
@@ -146,6 +151,30 @@ def _cursor_problem(problem_type: str) -> Problem:
         status=422,
         detail="Send the next_cursor from the previous response unchanged.",
     )
+
+
+def service_unavailable(retry_after: int) -> JSONResponse:
+    """The 503 for every "not now" (ADR-0013 rule 1): the database, the
+    request deadline, the concurrency limit. The detail names no cause."""
+    response = problem_response(
+        Problem(
+            type=SERVICE_UNAVAILABLE,
+            title="Service Unavailable",
+            status=503,
+            detail="We can't answer right now. Try again in a moment.",
+            request_id=current_request_id(),
+        )
+    )
+    response.headers["Retry-After"] = str(retry_after)
+    return response
+
+
+async def _unavailable(request: Request, exc: StoreUnavailableError) -> JSONResponse:
+    # One line per failure, at WARNING: a 503 is expected under failure, not
+    # a bug. The cause is a kind and a class name, never the error's text.
+    logger.warning("database unavailable: %s", exc.cause)
+    retry_after = getattr(request.app.state, "retry_after", DEFAULT_RETRY_AFTER_SECONDS)
+    return service_unavailable(retry_after)
 
 
 async def _not_found(_: Request, exc: RecipeNotFoundError) -> JSONResponse:

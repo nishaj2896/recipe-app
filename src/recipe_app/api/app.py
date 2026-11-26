@@ -130,7 +130,8 @@ def build_app() -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         # One pool per process, opened and closed with the app.
-        engine = create_engine(url)
+        engine = create_engine(url, settings.engine_limits)
+        app.state.retry_after = settings.retry_after_seconds
         try:
             catalog = await read_catalog(engine)
             logger.info(

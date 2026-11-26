@@ -37,6 +37,12 @@ def run_migrations(connection: Connection) -> None:
         autogenerate_plugins=AUTOGENERATE_PLUGINS,
     )
     with context.begin_transaction():
+        # A blocked ALTER TABLE must fail fast: waiting in the lock queue, it
+        # makes every query behind it wait too (ADR-0013 rule 9, issue #30).
+        connection.exec_driver_sql(
+            "SELECT set_config('lock_timeout', '5s', true), "
+            "set_config('statement_timeout', '5min', true)"
+        )
         context.run_migrations()
 
 
