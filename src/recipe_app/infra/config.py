@@ -164,8 +164,13 @@ def _signing_keys(raw: str, active: str) -> SigningKeys:
                 key + "=" * (-len(key) % 4), altchars=b"-_", validate=True
             )
         except (binascii.Error, ValueError):
-            raise ValueError(f"key {kid!r} is not base64url") from None
-    return SigningKeys(active_kid=active, keys=keys)
+            raise ValueError(f"{KEYS_VARIABLE}: key {kid!r} is not base64url") from None
+    try:
+        return SigningKeys(active_kid=active, keys=keys)
+    except ValueError as error:
+        # The domain names kids, never key material; say which variable to fix.
+        variable = ACTIVE_KID_VARIABLE if active not in keys else KEYS_VARIABLE
+        raise ValueError(f"{variable}: {error}") from None
 
 
 def _describe(error: ErrorDetails) -> str:
@@ -188,7 +193,15 @@ def _count(n: int, noun: str) -> str:
 
 
 def _redacted(url: str) -> str:
+    """Scheme, user, host, port and database only.
+
+    The query is dropped whole, not filtered: libpq-style options such as
+    `?password=...` or `?sslpassword=...` carry secrets, and a list of names
+    to hide would miss the next one.
+    """
     try:
-        return make_url(url).render_as_string(hide_password=True)
+        parsed = make_url(url)
     except ArgumentError:
         return "(unparseable)"
+    shown = parsed.set(query={}).render_as_string(hide_password=True)
+    return f"{shown}?***" if parsed.query else shown

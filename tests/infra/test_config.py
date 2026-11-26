@@ -94,6 +94,20 @@ def test_the_summary_hides_the_password(environ: pytest.MonkeyPatch) -> None:
     }
 
 
+@pytest.mark.parametrize(
+    "query",
+    ["?password=s3cret", "?sslpassword=s3cret&ssl=require", "?options=-c%20x%3Ds3cret"],
+)
+def test_the_summary_drops_the_query(environ: pytest.MonkeyPatch, query: str) -> None:
+    """A password can sit in the query, not only before the @ (review of #127)."""
+    environ.setenv("DATABASE_URL", f"postgresql+asyncpg://u@db:5432/app{query}")
+
+    summary = DatabaseSettings.from_env().summary()
+
+    assert summary == {"DATABASE_URL": "postgresql+asyncpg://u@db:5432/app?***"}
+    assert "s3cret" not in str(summary)
+
+
 def test_names_are_exact(environ: pytest.MonkeyPatch) -> None:
     """Only DATABASE_URL counts; a lower-case look-alike is not read."""
     environ.setenv("database_url", URL)
@@ -120,9 +134,18 @@ def test_keys_load(environ: pytest.MonkeyPatch) -> None:
         pytest.param("{nope", "a", "not a JSON object", id="not-json"),
         pytest.param(["a"], "a", "must map key ids", id="not-object"),
         pytest.param({"a": 1}, "a", "must map key ids", id="not-string"),
-        pytest.param({"a": "!!!"}, "a", "not base64url", id="not-base64"),
-        pytest.param({"a": KEY}, "b", "not in keys", id="active-missing"),
-        pytest.param({"a": "c2hvcnQ"}, "a", "shorter than 32", id="short"),
+        pytest.param(
+            {"a": "!!!"},
+            "a",
+            "^CURSOR_SIGNING_KEYS: key 'a' is not base64url$",
+            id="not-base64",
+        ),
+        pytest.param(
+            {"a": KEY}, "b", "^CURSOR_ACTIVE_KID: .*not in keys", id="active-missing"
+        ),
+        pytest.param(
+            {"a": "c2hvcnQ"}, "a", "^CURSOR_SIGNING_KEYS: .*shorter than 32", id="short"
+        ),
     ],
 )
 def test_bad_keys_refuse_to_start(
