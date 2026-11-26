@@ -54,7 +54,6 @@ function AfterFirstPaint({ children }: { children: ReactNode }) {
   return useAfterPaint() ? children : null;
 }
 
-/** The swipe deck: right to save, left to skip, one deck of 20 at a time. */
 /**
  * The API is up but can't search right now (a 503). "Try again" waits as long
  * as its Retry-After asks: every open deck retrying at once would only keep a
@@ -88,6 +87,7 @@ function BusyRetry({ seconds, onRetry }: { seconds: number; onRetry: () => void 
   );
 }
 
+/** The swipe deck: right to save, left to skip, one deck of 20 at a time. */
 export function DeckScreen() {
   const hydration = useDevice((state) => state.hydration);
   const saved = useDevice((state) => state.saved);

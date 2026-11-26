@@ -75,7 +75,7 @@ The app writes one access line per request, at INFO, with `method`, `route` (the
 
 **10. The gate is a chaos test in CI.** Tests in `tests/chaos/` put a small asyncio TCP proxy between the API and Postgres, which can reset, freeze or refuse connections on cue. They cover the database killed mid-request, a frozen network, the deadline firing mid-query with the pool reused afterwards, the database down before a request, an exhausted pool, recovery without a restart, and SIGTERM during a request. Each test checks the status code, the time taken, the body (no traceback, `request_id` present) and the log (one WARNING naming the cause, no SQL). The catalog routes `/api/v1/ingredients` and `/api/v1/staples` are served from memory, so they keep answering 200 while the database is down.
 
-**11. The deck tells a 503 apart from other errors** (#47, first half). It says "The kitchen is busy. Try again in a moment." and keeps "Try again" disabled for the `Retry-After` seconds. The unknown-ingredient half of #47 waits for its own problem type.
+**11. The deck tells a 503 apart from other errors** (#47, first half). It says "Our kitchen is busy right now." and keeps "Try again" disabled for the `Retry-After` seconds, counting down. The unknown-ingredient half of #47 waits for its own problem type.
 
 ## Consequences
 
