@@ -145,7 +145,6 @@ serves = 2
 prep_minutes = 5
 cook_minutes = 15
 plan_ahead = { wait_minutes = 780, note = "soak and ferment overnight" }
-image = { file = "01a18ba9-fdd1-7e8b-ae7b-2179246d5302.webp", sha256 = "f01e697d3a78af984e16982cd30ece960a07837444fe8e8b42d46de5f5e650a3", alt = "Egg dosa folded in half with a layer of spiced egg" }
 cuisine = "south-indian"
 courses = ["breakfast"]
 moods = ["savoury", "crispy"]
