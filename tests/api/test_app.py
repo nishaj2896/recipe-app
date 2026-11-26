@@ -157,3 +157,32 @@ async def test_build_app_refuses_to_start_without_a_database_url(
 
     with pytest.raises(ConfigError, match="DATABASE_URL"):
         build_app()
+
+
+async def test_build_app_refuses_to_start_on_a_bad_docs_flag(
+    settings: pytest.MonkeyPatch,
+) -> None:
+    settings.setenv("DATABASE_URL", "postgresql+asyncpg://u@localhost/db")
+    settings.setenv("API_DOCS", "yes")
+
+    with pytest.raises(ConfigError, match="API_DOCS"):
+        build_app()
+
+
+@pytest.mark.parametrize(
+    ("flag", "status"), [(None, 404), ("false", 404), ("true", 200)]
+)
+async def test_build_app_serves_docs_only_when_asked(
+    settings: pytest.MonkeyPatch, flag: str | None, status: int
+) -> None:
+    """No lifespan here: the docs routes don't touch the database."""
+    settings.setenv("DATABASE_URL", "postgresql+asyncpg://u@localhost/db")
+    if flag is None:
+        settings.delenv("API_DOCS", raising=False)
+    else:
+        settings.setenv("API_DOCS", flag)
+
+    async with client_for(build_app()) as client:
+        responses = [await client.get(p) for p in ("/docs", "/redoc", "/openapi.json")]
+
+    assert [r.status_code for r in responses] == [status] * 3

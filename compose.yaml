@@ -45,6 +45,8 @@ services:
     environment:
       DATABASE_URL: *database-url
       CURSOR_ACTIVE_KID: local
+      # Swagger UI on http://localhost:8000/docs. Off unless set (production).
+      API_DOCS: "true"
       CURSOR_SIGNING_KEYS: '{"local": "U38X7jknf4nxqUX790WM6LqAF_T96KlF6LpFsw0WxrU="}'
     ports:
       - "127.0.0.1:8000:8000"

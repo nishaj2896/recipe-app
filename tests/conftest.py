@@ -56,6 +56,7 @@ def make_app(
         catalog: IngredientCatalog = real_catalog,
         keys: SigningKeys = KEYS,
         now: int = NOW,
+        docs: bool = False,
     ) -> FastAPI:
         service = RecipeService(
             catalog=catalog,
@@ -63,7 +64,7 @@ def make_app(
             keys=keys,
             clock=lambda: now,
         )
-        return create_app(catalog=catalog, service=service)
+        return create_app(catalog=catalog, service=service, docs=docs)
 
     return make
 

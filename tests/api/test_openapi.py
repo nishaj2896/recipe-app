@@ -1,15 +1,24 @@
+from collections.abc import AsyncIterator
 from typing import Any
 
 import pytest
 from httpx import AsyncClient
 
 from recipe_app.api.problems import PROBLEM_MEDIA_TYPE
+from tests.apps import AppFactory, client_for
 
 pytestmark = pytest.mark.anyio
 
 
-async def test_every_error_response_is_a_problem(client: AsyncClient) -> None:
-    schema: dict[str, Any] = (await client.get("/openapi.json")).json()
+@pytest.fixture
+async def documented(make_app: AppFactory) -> AsyncIterator[AsyncClient]:
+    """An app with API_DOCS on, so it serves /openapi.json."""
+    async with client_for(make_app(docs=True)) as client:
+        yield client
+
+
+async def test_every_error_response_is_a_problem(documented: AsyncClient) -> None:
+    schema: dict[str, Any] = (await documented.get("/openapi.json")).json()
 
     for path, operations in schema["paths"].items():
         for method, operation in operations.items():
@@ -26,8 +35,8 @@ async def test_every_error_response_is_a_problem(client: AsyncClient) -> None:
     assert "HTTPValidationError" not in schema["components"]["schemas"]
 
 
-async def test_catalog_routes_document_if_none_match(client: AsyncClient) -> None:
-    schema: dict[str, Any] = (await client.get("/openapi.json")).json()
+async def test_catalog_routes_document_if_none_match(documented: AsyncClient) -> None:
+    schema: dict[str, Any] = (await documented.get("/openapi.json")).json()
 
     for path in ("/api/v1/ingredients", "/api/v1/staples"):
         operation = schema["paths"][path]["get"]

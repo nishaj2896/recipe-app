@@ -7,6 +7,7 @@ import pytest
 from recipe_app.infra.config import (
     ConfigError,
     data_dir_from_env,
+    docs_enabled_from_env,
     signing_keys_from_env,
 )
 
@@ -55,3 +56,23 @@ def test_data_dir_from_env(tmp_path: Path) -> None:
 def test_missing_data_dir_refuses_to_start(tmp_path: Path) -> None:
     with pytest.raises(ConfigError, match="RECIPE_APP_DATA_DIR"):
         data_dir_from_env({"RECIPE_APP_DATA_DIR": str(tmp_path / "nope")})
+
+
+@pytest.mark.parametrize(
+    ("environ", "expected"),
+    [
+        ({}, False),
+        ({"API_DOCS": ""}, False),
+        ({"API_DOCS": "false"}, False),
+        ({"API_DOCS": "true"}, True),
+        ({"API_DOCS": " TRUE "}, True),
+    ],
+)
+def test_docs_flag(environ: dict[str, str], expected: bool) -> None:
+    assert docs_enabled_from_env(environ) is expected
+
+
+@pytest.mark.parametrize("value", ["1", "yes", "on", "ture"])
+def test_bad_docs_flag_refuses_to_start(value: str) -> None:
+    with pytest.raises(ConfigError, match="API_DOCS must be true or false"):
+        docs_enabled_from_env({"API_DOCS": value})
