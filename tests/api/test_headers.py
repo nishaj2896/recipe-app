@@ -10,8 +10,9 @@ from recipe_app.api.app import create_app
 from recipe_app.api.headers import API_CSP, SECURITY_HEADERS
 from recipe_app.api.limits import MAX_BODY_BYTES
 from recipe_app.domain.catalog import IngredientCatalog
+from recipe_app.domain.content import RecipeWithContent
 from recipe_app.domain.ranking import Ranking
-from recipe_app.domain.recipe import Recipe
+from recipe_app.domain.recipe_search import Found
 from recipe_app.services.ports import RecipeRepository
 from recipe_app.services.search import RecipeService
 from tests.apps import KEYS, NOW, AppFactory, client_for
@@ -97,10 +98,13 @@ async def test_not_modified_is_secured(client: AsyncClient) -> None:
 
 
 class BrokenRepository:
-    async def get(self, recipe_id: UUID) -> Recipe | None:
+    async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:
         raise RuntimeError("boom")
 
     async def ranked(self, *_: object) -> Ranking:
+        raise RuntimeError("boom")
+
+    async def find(self, *_: object) -> Found:
         raise RuntimeError("boom")
 
 
