@@ -372,6 +372,11 @@ export interface components {
       detail?: string | null;
       /** Errors */
       errors?: components["schemas"]["FieldError"][] | null;
+      /**
+       * Request Id
+       * @description Server errors (5xx) only: the X-Request-ID of this request, so a report of the error can be matched to the server's logs.
+       */
+      request_id?: string | null;
       /** Status */
       status: number;
       /** Title */

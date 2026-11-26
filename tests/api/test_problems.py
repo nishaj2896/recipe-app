@@ -57,6 +57,8 @@ async def test_crash_is_a_generic_500_without_a_traceback(
         "title": "Internal Server Error",
         "status": 500,
         "detail": "Something went wrong on our side. Try again later.",
+        # ADR-0013 rule 5: a screenshot of the error finds its log lines.
+        "request_id": response.headers["x-request-id"],
     }
     assert "secret" not in response.text
     assert "Traceback" not in response.text

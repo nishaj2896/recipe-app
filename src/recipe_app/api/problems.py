@@ -16,6 +16,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from recipe_app.api.access import current_request_id
 from recipe_app.api.schemas import FieldError, Problem
 from recipe_app.domain.cursor import ExpiredCursorError, InvalidCursorError
 from recipe_app.domain.matching import PantryError
@@ -173,6 +174,7 @@ async def _unhandled(_: Request, exc: Exception) -> JSONResponse:
             title="Internal Server Error",
             status=500,
             detail="Something went wrong on our side. Try again later.",
+            request_id=current_request_id(),
         )
     )
 

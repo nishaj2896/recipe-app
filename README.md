@@ -83,9 +83,13 @@ Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` wit
 | `CURSOR_ACTIVE_KID` | The key id that signs new cursors |
 | `DATABASE_URL` | `postgresql+asyncpg://` URL of the database the sync filled |
 | `API_DOCS` | `true` serves `/docs`, `/redoc` and `/openapi.json`; unset or `false` (production) answers them with 404. `scripts/dev.sh` and `docker compose` turn it on |
+| `LOG_LEVEL` | `DEBUG`, `INFO` (default), `WARNING` or `ERROR` |
+| `LOG_FORMAT` | `json` (default): one JSON object per line on stdout. `text`: readable lines; `scripts/dev.sh` uses it |
 | `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and the `recipes/` folder of `*.toml` files (default `./data`); only `recipe-app db sync` reads it |
 
 The app refuses to start if a key is missing or too short, if `API_DOCS` is anything but `true` or `false`, if `DATABASE_URL` is missing, or if the database has never been synced. A bad setting stops it with one message that names every variable at fault, never their values. Its first log line lists the settings it started with, the password and keys hidden (ADR-0013 rule 8). It loads the catalog once at startup, so after a sync, restart the app to pick up the new catalog. In production the keys come from the secret store, never from the repo or the logs.
+
+Every response carries an `X-Request-ID` header. A valid incoming one (8 to 64 letters, digits, `-` or `_`) is kept, so a proxy can set it; otherwise the app makes a new one. Every log line written during a request carries the same `request_id`, and so does the body of every 5xx error, so the ID from an error screen finds its log lines. Each request writes one access line with its method, route template (never the raw path or query), status and duration (ADR-0013 rules 4 and 5).
 
 | Endpoint | What it does |
 |---|---|

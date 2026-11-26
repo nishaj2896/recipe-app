@@ -37,6 +37,8 @@ source .env
 set +a
 # Swagger UI on :8000/docs, also for a .env made before API_DOCS existed.
 export API_DOCS="${API_DOCS:-true}"
+# Readable log lines in the terminal; production writes JSON (ADR-0013 rule 4).
+export LOG_FORMAT="${LOG_FORMAT:-text}"
 
 step "Installing dependencies"
 uv sync --locked --quiet

@@ -348,3 +348,10 @@ class Problem(BaseModel):
     status: int
     detail: str | None = None
     errors: list[FieldError] | None = None
+    request_id: str | None = Field(
+        None,
+        description=(
+            "Server errors (5xx) only: the X-Request-ID of this request, so "
+            "a report of the error can be matched to the server's logs."
+        ),
+    )

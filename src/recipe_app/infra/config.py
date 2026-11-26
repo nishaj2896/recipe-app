@@ -13,7 +13,14 @@ import json
 from pathlib import Path
 from typing import Any, Self
 
-from pydantic import Field, PrivateAttr, SecretStr, ValidationError, field_validator
+from pydantic import (
+    Field,
+    PrivateAttr,
+    SecretStr,
+    ValidationError,
+    ValidationInfo,
+    field_validator,
+)
 from pydantic import model_validator as model_check
 from pydantic_core import ErrorDetails
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -21,6 +28,7 @@ from sqlalchemy.engine import make_url
 from sqlalchemy.exc import ArgumentError
 
 from recipe_app.domain.cursor import SigningKeys
+from recipe_app.infra.logs import LogFormat, LogLevel
 
 KEYS_VARIABLE = "CURSOR_SIGNING_KEYS"
 ACTIVE_KID_VARIABLE = "CURSOR_ACTIVE_KID"
@@ -89,6 +97,8 @@ class ApiSettings(DatabaseSettings):
     cursor_signing_keys: SecretStr = Field(validation_alias="CURSOR_SIGNING_KEYS")
     cursor_active_kid: str = Field(validation_alias="CURSOR_ACTIVE_KID", min_length=1)
     api_docs: bool = Field(False, validation_alias="API_DOCS")
+    log_level: LogLevel = Field("INFO", validation_alias="LOG_LEVEL")
+    log_format: LogFormat = Field("json", validation_alias="LOG_FORMAT")
     _keys: SigningKeys = PrivateAttr()
 
     @field_validator("api_docs", mode="before")
@@ -103,6 +113,17 @@ class ApiSettings(DatabaseSettings):
         if raw not in ("", "true", "false"):
             raise ValueError(f"{DOCS_VARIABLE} must be true or false")
         return raw == "true"
+
+    @field_validator("log_level", "log_format", mode="before")
+    @classmethod
+    def _normalise_choice(cls, value: Any, info: ValidationInfo) -> Any:
+        """Unset or empty is the default; case and spaces don't matter."""
+        if not isinstance(value, str):
+            return value
+        text = value.strip()
+        if not text:
+            return "INFO" if info.field_name == "log_level" else "json"
+        return text.upper() if info.field_name == "log_level" else text.lower()
 
     @model_check(mode="after")
     def _parse_keys(self) -> Self:
@@ -122,6 +143,8 @@ class ApiSettings(DatabaseSettings):
             ACTIVE_KID_VARIABLE: self.cursor_active_kid,
             KEYS_VARIABLE: f"{_count(len(self._keys.keys), 'key')} ({kids})",
             DOCS_VARIABLE: str(self.api_docs).lower(),
+            "LOG_LEVEL": self.log_level,
+            "LOG_FORMAT": self.log_format,
         }
 
 
