@@ -431,7 +431,6 @@ name = "Cottage pie"
 serves = 6
 prep_minutes = 25
 cook_minutes = 75
-image = { file = "01a18c1e-2c31-74d5-827e-b33a2e491e0e.webp", sha256 = "1ad09c829a2b3a70e49a2d3244f3b298be9ae0b09ef55b1e4da4f0587880aefe", alt = "Cottage pie with a cheddar mash crust, a spoonful taken out" }
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
