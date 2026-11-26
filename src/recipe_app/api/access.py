@@ -137,6 +137,9 @@ class _Request:
             REQUEST_ID.reset(token)
 
 
+# One app per process (one uvicorn worker per pod, ADR-0013 rule 7), so one
+# set is enough. Tests build many apps, but a request leaves the set when it
+# ends, so no app sees another's requests once they have finished.
 _OPEN: set[_Request] = set()
 
 

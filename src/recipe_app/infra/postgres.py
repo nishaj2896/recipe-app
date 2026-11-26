@@ -174,7 +174,10 @@ class PostgresRecipeRepository:
     @asynccontextmanager
     async def _connect(self) -> AsyncIterator[AsyncConnection]:
         """A pooled connection; the database being unavailable becomes
-        StoreUnavailableError, here and nowhere else (ADR-0013 rule 1)."""
+        StoreUnavailableError, here and nowhere else (ADR-0013 rule 1).
+
+        Queries only inside: build recipes after the block (see connected).
+        """
         async with connected(self._engine) as connection:
             yield connection
 
