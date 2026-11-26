@@ -5,18 +5,13 @@
 import argparse
 import asyncio
 import json
-import os
 import sys
 from collections.abc import Sequence
 from datetime import UTC, datetime
 
 from recipe_app.domain.catalog import CatalogError
 from recipe_app.domain.recipe import RecipeError
-from recipe_app.infra.config import (
-    ConfigError,
-    data_dir_from_env,
-    database_url_from_env,
-)
+from recipe_app.infra.config import ConfigError, SyncSettings
 from recipe_app.infra.data import load_catalog, load_recipe_book
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.sync import SyncError, sync
@@ -59,12 +54,11 @@ def _serve() -> None:
 
 
 async def _sync() -> int:
-    url = database_url_from_env(os.environ)
-    data_dir = data_dir_from_env(os.environ)
-    catalog = load_catalog(data_dir)
-    book = load_recipe_book(catalog, data_dir)
+    settings = SyncSettings.from_env()
+    catalog = load_catalog(settings.data_dir)
+    book = load_recipe_book(catalog, settings.data_dir)
 
-    engine = create_engine(url)
+    engine = create_engine(settings.url)
     try:
         report = await sync(
             engine, catalog, book.recipes, now=datetime.now(UTC), content=book.content

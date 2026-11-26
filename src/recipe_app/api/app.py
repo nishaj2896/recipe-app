@@ -2,7 +2,6 @@
 
 import hashlib
 import logging
-import os
 import time
 from collections.abc import AsyncIterator, Callable
 from contextlib import AbstractAsyncContextManager, asynccontextmanager
@@ -19,11 +18,7 @@ from recipe_app.api.problems import problem_media_types, register_problem_handle
 from recipe_app.api.routes import CachedBody, health_router, router
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.infra.catalog_store import read_catalog
-from recipe_app.infra.config import (
-    database_url_from_env,
-    docs_enabled_from_env,
-    signing_keys_from_env,
-)
+from recipe_app.infra.config import ApiSettings
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.logs import configure_logging
 from recipe_app.infra.postgres import PostgresRecipeRepository
@@ -119,9 +114,14 @@ def build_app() -> FastAPI:
     lifespan startup, which stops uvicorn the same way.
     """
     configure_logging()
-    keys = signing_keys_from_env(os.environ)
-    url = database_url_from_env(os.environ)
-    docs = docs_enabled_from_env(os.environ)
+    settings = ApiSettings.from_env()
+    logger.info(
+        "starting with %s",
+        ", ".join(f"{name}={value}" for name, value in settings.summary().items()),
+    )
+    keys = settings.signing_keys
+    url = settings.url
+    docs = settings.api_docs
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
