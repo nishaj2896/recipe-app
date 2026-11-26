@@ -34,16 +34,12 @@ SEARCHES = [
 
 @pytest.fixture(autouse=True)
 def bare_app_logger() -> Iterator[logging.Logger]:
-    """The loggers as a fresh process has them: no handler, no level.
-
-    configure_logging also takes over uvicorn's and the database libraries'
-    loggers, so those are restored too.
-    """
-    names = ("recipe_app", "uvicorn", "uvicorn.access", "sqlalchemy", "asyncpg")
+    """configure_logging changes the root, app and uvicorn loggers; each test
+    gets them back as they were."""
+    names = ("", "recipe_app", "uvicorn", "uvicorn.access")
     loggers = [logging.getLogger(name) for name in names]
     saved = [(lg.handlers[:], lg.level, lg.propagate, lg.disabled) for lg in loggers]
-    app_logger = loggers[0]
-    app_logger.handlers.clear()
+    app_logger = loggers[1]
     app_logger.setLevel(logging.NOTSET)
     yield app_logger
     for lg, (handlers, level, propagate, disabled) in zip(loggers, saved, strict=True):

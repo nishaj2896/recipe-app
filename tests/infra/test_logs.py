@@ -11,6 +11,7 @@ from recipe_app.infra.logs import (
     REQUEST_ID,
     JsonFormatter,
     TextFormatter,
+    _AppHandler,
     configure_logging,
 )
 
@@ -88,10 +89,10 @@ def test_text_lines_end_with_the_request_id(request_id: str) -> None:
 
 @pytest.fixture
 def fresh_loggers() -> Iterator[None]:
-    names = ("recipe_app", "uvicorn", "uvicorn.access", "sqlalchemy", "asyncpg")
+    names = ("", "recipe_app", "uvicorn", "uvicorn.access")
     loggers = [logging.getLogger(name) for name in names]
     saved = [(lg.handlers[:], lg.level, lg.propagate, lg.disabled) for lg in loggers]
-    for lg in loggers:
+    for lg in loggers[1:]:
         lg.handlers.clear()
     yield
     for lg, (handlers, level, propagate, disabled) in zip(loggers, saved, strict=True):
@@ -106,8 +107,24 @@ def test_configure_is_idempotent() -> None:
     configure_logging()
     configure_logging()
 
-    assert len(logging.getLogger("recipe_app").handlers) == 1
-    assert len(logging.getLogger("uvicorn").handlers) == 1
+    ours = [h for h in logging.getLogger().handlers if isinstance(h, _AppHandler)]
+    assert len(ours) == 1
+    assert logging.getLogger("uvicorn").handlers == []
+
+
+@pytest.mark.usefixtures("fresh_loggers")
+def test_every_library_logs_in_the_same_format(
+    capfd: pytest.CaptureFixture[str],
+) -> None:
+    """The handler is on the root, so FastAPI's or alembic's lines are JSON
+    too (review of #128)."""
+    configure_logging()
+
+    logging.getLogger("fastapi").warning("from a library")
+    logging.getLogger("sqlalchemy.pool").info("too chatty")
+
+    lines = [json.loads(line) for line in capfd.readouterr().out.splitlines()]
+    assert [line["logger"] for line in lines] == ["fastapi"]
 
 
 @pytest.mark.usefixtures("fresh_loggers")

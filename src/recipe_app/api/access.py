@@ -71,16 +71,20 @@ class RequestContext:
                 MutableHeaders(scope=message)[REQUEST_ID_HEADER] = request_id
             await send(message)
 
+        failed: str | None = None
         try:
             await self.app(scope, receive, send_with_id)
-        except Exception:
-            # Starlette's error middleware sends the 500 and then re-raises.
-            # The handler already logged the traceback, and the server would
-            # log it a second time, so stop it here once the 500 is out.
-            if status is None:
+        except Exception as error:
+            # Starlette's error middleware sends the 500, after the handler
+            # logged the traceback, and then re-raises; the server would log
+            # it a second time. Only that case stops here. An error after any
+            # other start (a 200 that fails mid-body) goes on to the server,
+            # which logs it and drops the connection.
+            if status != 500:
+                failed = type(error).__name__
                 raise
         finally:
-            _log_access(scope, status, time.perf_counter() - started)
+            _log_access(scope, status, time.perf_counter() - started, failed)
             REQUEST_ID.reset(token)
 
 
@@ -92,11 +96,13 @@ def _incoming_id(scope: Scope) -> str | None:
     return None
 
 
-def _log_access(scope: Scope, status: int | None, seconds: float) -> None:
+def _log_access(
+    scope: Scope, status: int | None, seconds: float, failed: str | None
+) -> None:
     method = scope["method"] if scope["method"] in _METHODS else "OTHER"
     route = getattr(scope.get("route"), "path", None) or UNMATCHED
     duration_ms = round(seconds * 1000, 1)
-    shown = "aborted" if status is None else status
+    shown = "aborted" if status is None or failed else status
     logger.info(
         "%s %s %s %sms",
         method,
@@ -109,6 +115,7 @@ def _log_access(scope: Scope, status: int | None, seconds: float) -> None:
                 "route": route,
                 "status": status,
                 "duration_ms": duration_ms,
+                **({"error": failed} if failed else {}),
             }
         },
     )

@@ -5,8 +5,9 @@ import re
 
 import pytest
 from fastapi import FastAPI
+from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
-from recipe_app.api.access import REQUEST_ID_HEADER, new_request_id
+from recipe_app.api.access import REQUEST_ID_HEADER, RequestContext, new_request_id
 from recipe_app.infra.logs import REQUEST_ID
 from tests.apps import AppFactory, client_for
 
@@ -163,3 +164,56 @@ async def test_the_context_is_cleared_after_the_request(make_app: AppFactory) ->
         await client.get("/api/v1/ingredients")
 
     assert REQUEST_ID.get() is None
+
+
+def asgi_app(status: int) -> ASGIApp:
+    """Starts a response with `status`, then fails before the body."""
+
+    async def app(scope: Scope, receive: Receive, send: Send) -> None:
+        await send({"type": "http.response.start", "status": status, "headers": []})
+        raise RuntimeError("mid-body")
+
+    return app
+
+
+async def run(app: RequestContext) -> list[Message]:
+    sent: list[Message] = []
+
+    async def receive() -> Message:
+        return {"type": "http.request", "body": b"", "more_body": False}
+
+    async def send(message: Message) -> None:
+        sent.append(message)
+
+    scope: Scope = {"type": "http", "method": "GET", "path": "/x", "headers": []}
+    await app(scope, receive, send)
+    return sent
+
+
+async def test_an_error_after_a_200_still_reaches_the_server(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """Only the 500 that Starlette already sent is stopped (review of #128);
+    a failure after any other start must be logged by the server."""
+    caplog.set_level(logging.INFO, logger="recipe_app")
+
+    with pytest.raises(RuntimeError, match="mid-body"):
+        await run(RequestContext(asgi_app(200)))
+
+    (line,) = access_lines(caplog)
+    assert fields(line)["status"] == 200
+    assert fields(line)["error"] == "RuntimeError"
+    assert "aborted" in line.getMessage()
+
+
+async def test_the_re_raise_after_a_sent_500_is_stopped(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    caplog.set_level(logging.INFO, logger="recipe_app")
+
+    sent = await run(RequestContext(asgi_app(500)))
+
+    assert sent[0]["status"] == 500
+    (line,) = access_lines(caplog)
+    assert fields(line)["status"] == 500
+    assert "error" not in fields(line)

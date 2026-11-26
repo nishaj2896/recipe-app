@@ -22,11 +22,8 @@ TEXT_FORMAT = "%(asctime)s %(levelname)s %(name)s: %(message)s"
 # Set per request by recipe_app.api.access.RequestContext; None outside one.
 REQUEST_ID: ContextVar[str | None] = ContextVar("request_id", default=None)
 
-# The loggers this app writes through its handler: its own, the server's and
-# the database driver's warnings.
 _APP_LOGGER = "recipe_app"
 _SERVER_LOGGER = "uvicorn"
-_LIBRARY_LOGGERS = ("sqlalchemy", "asyncpg")
 
 
 class JsonFormatter(logging.Formatter):
@@ -69,32 +66,27 @@ class _AppHandler(logging.StreamHandler):  # type: ignore[type-arg]
 
 
 def configure_logging(level: LogLevel = "INFO", fmt: LogFormat = "json") -> None:
-    """Idempotent: a second call, or a handler a host already added, is kept.
+    """Idempotent: a second call adds no second handler.
 
-    uvicorn's own handler is replaced so its lines are JSON too, and its access
-    log is switched off: the app writes one access line per request itself.
+    The handler sits on the root logger, so every library's lines (uvicorn,
+    SQLAlchemy, asyncpg, FastAPI) come out in the same format. The app and the
+    server log at `level`; libraries at WARNING. uvicorn's own handler is
+    dropped so its lines reach the root, and its access log is off: the app
+    writes one access line per request itself.
     """
-    handler = _AppHandler(sys.stdout)
-    handler.setFormatter(JsonFormatter() if fmt == "json" else TextFormatter())
+    root = logging.getLogger()
+    if not any(isinstance(h, _AppHandler) for h in root.handlers):
+        handler = _AppHandler(sys.stdout)
+        handler.setFormatter(JsonFormatter() if fmt == "json" else TextFormatter())
+        root.addHandler(handler)
+    root.setLevel(logging.WARNING)
 
-    app_logger = logging.getLogger(_APP_LOGGER)
-    app_logger.setLevel(level)
-    if not app_logger.handlers:
-        app_logger.addHandler(handler)
-
+    logging.getLogger(_APP_LOGGER).setLevel(level)
     server = logging.getLogger(_SERVER_LOGGER)
-    if not any(isinstance(h, _AppHandler) for h in server.handlers):
-        server.handlers = [handler]
-        server.propagate = False
+    server.handlers = []
+    server.propagate = True
     server.setLevel(level)
     logging.getLogger(f"{_SERVER_LOGGER}.access").disabled = True
-
-    for name in _LIBRARY_LOGGERS:
-        library = logging.getLogger(name)
-        if not library.handlers:
-            library.addHandler(handler)
-            library.setLevel(logging.WARNING)
-            library.propagate = False
 
 
 def _utc(created: float) -> str:
