@@ -38,7 +38,7 @@ The mapping lives at the infrastructure boundary: the Postgres adapter turns the
 
 `Retry-After: 2` is advice, not a schedule. The web app never retries on its own: a person presses "Try again" (rule 11), so the API's own clients can't pile on during an outage. If a client that retries by itself ever arrives, it must add jitter and back off, and the value is a setting so it can grow without a release.
 
-**2. Every wait has a budget, and each budget sits inside the next.** All are settings, with these defaults:
+**2. Every wait has a budget, and the request deadline bounds them all.** All are settings, with these defaults:
 
 | Setting | Default | What it bounds |
 | --- | --- | --- |
