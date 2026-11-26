@@ -51,6 +51,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 70
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18bb1-059b-75c8-9915-6cfb22b09272.webp", sha256 = "f2be401bd0c1054581e646824cdacec62a4f7ee2c67bfeb1aaa2ac6989e9f12b", alt = "Kashmiri rajma in a deep red gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
@@ -87,6 +88,7 @@ name = "Nadru yakhni"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18bb1-059d-74f9-b761-6e010a3b1ddb.webp", sha256 = "98871dfb629c3cb001bd2432f1401c68fe5fad138aefeb37d9bd0e3ccd616ea1", alt = "Nadru yakhni, lotus root slices in a white curd gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
@@ -152,6 +154,7 @@ name = "Modur pulao"
 serves = 4
 prep_minutes = 15
 cook_minutes = 30
+image = { file = "01a18bb1-05a1-73ca-961f-164794f6a53a.webp", sha256 = "083b90275b6a4e808c7b1445922a729fc9fe7d8420ac03b0d7dd8c230fce0e21", alt = "Modur pulao, saffron rice with cashews, almonds and raisins" }
 cuisine = "north-indian"
 courses = ["rice-breads"]
 moods = ["sweet"]
@@ -188,6 +191,7 @@ name = "Kahwa"
 serves = 4
 prep_minutes = 5
 cook_minutes = 8
+image = { file = "01a18bb1-05a4-7444-aa2a-a0032794431b.webp", sha256 = "b230af15504ec3f66de973dff6a302b6e4141073931467c60947ee7a1425024f", alt = "Kahwa, saffron green tea with slivered almonds in a glass cup" }
 cuisine = "north-indian"
 courses = ["drinks"]
 moods = ["fresh-herby", "comforting"]
@@ -216,6 +220,7 @@ name = "Gushtaba"
 serves = 4
 prep_minutes = 30
 cook_minutes = 50
+image = { file = "01a18bb1-05a6-7840-bb37-3b8210e9410c.webp", sha256 = "6f5d39be5c9fbdfc7c14d68474d0866bf26cdaffdc04202ba96d765b7237d651", alt = "Gushtaba, lamb meatballs in a white curd gravy with dried mint" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury", "comforting"]
@@ -289,6 +294,7 @@ name = "Tabak maaz"
 serves = 4
 prep_minutes = 10
 cook_minutes = 75
+image = { file = "01a18bb1-05aa-7929-a5d8-a9666f0669c5.webp", sha256 = "aa25f3425b48b57ecbf02c8acdb8ed8deab975588396e786ffe6a8e84607b907", alt = "Tabak maaz, fried lamb ribs" }
 cuisine = "north-indian"
 courses = ["snacks-starters"]
 moods = ["crispy", "savoury"]
@@ -322,6 +328,7 @@ name = "Chaman kaliya"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18bb1-05ad-75ec-b930-539fe274a355.webp", sha256 = "b23ee4a1b8e449bf45af6bddc5cb5611d60916e53b9f018e7b52bd6a1d6f8cff", alt = "Chaman kaliya, paneer squares in a pale milk gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
@@ -357,6 +364,7 @@ name = "Kashmiri chicken masala"
 serves = 4
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18bb1-05af-7689-9a69-93152b5454a4.webp", sha256 = "a475c1079f9df0ce9ad76e1fc25929ee50f21af387478f8c4421ad7a33afc920", alt = "Kashmiri chicken masala in a thin deep red gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["spicy", "savoury"]
@@ -431,6 +439,7 @@ serves = 4
 prep_minutes = 10
 cook_minutes = 60
 plan_ahead = { wait_minutes = 480, note = "soak overnight" }
+image = { file = "01a18bb1-05b3-7b1d-9b2c-1aac51d99625.webp", sha256 = "26fe2fb7ac700bfeed48ea0ab67bf7b0b0b6052880d64e51e8aa4b08b0b970fc", alt = "Madra, chickpeas in a creamy curd gravy with cashews and raisins" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["creamy", "savoury"]
@@ -469,6 +478,7 @@ name = "Chha gosht"
 serves = 4
 prep_minutes = 15
 cook_minutes = 80
+image = { file = "01a18bb1-05b5-723b-a26c-80807806dc9b.webp", sha256 = "b0fd8452159f64d8a50db04c3ab3d8b0d9873e6311908377f73585775e328fc7", alt = "Chha gosht, mutton in a pale buttermilk gravy" }
 cuisine = "north-indian"
 courses = ["mains"]
 moods = ["savoury", "creamy", "comforting"]
@@ -509,6 +519,7 @@ serves = 4
 prep_minutes = 25
 cook_minutes = 25
 plan_ahead = { wait_minutes = 540, note = "soak overnight" }
+image = { file = "01a18bb1-05b8-798b-b1d6-b0df8a8844c7.webp", sha256 = "c7c4ace8e480ad7c458abb5ee8fe30ac962c345d3d530fc1d4a20f175ab275c3", alt = "Babru, puffed fried breads, one cut open to show the lentil filling" }
 cuisine = "north-indian"
 courses = ["snacks-starters", "breakfast"]
 moods = ["crispy", "savoury"]

@@ -119,6 +119,7 @@ name = "Grilled cheese sandwich"
 serves = 1
 prep_minutes = 3
 cook_minutes = 8
+image = { file = "01a18c1e-2c1d-79cb-bab9-f3536cfb8fde.webp", sha256 = "fb93f5868a9935485bbd45f495d8acc0f93d9402fa394877e789a40468e00528", alt = "Grilled cheese sandwich cut in half with melted cheddar" }
 cuisine = "american-british"
 courses = ["snacks-starters", "breakfast"]
 moods = ["savoury", "creamy", "comforting"]
@@ -176,6 +177,7 @@ name = "BLT"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18c1e-2c21-7ce1-8dcc-e12e823755ce.webp", sha256 = "c2816594cf62406d1f1ebd2e89cbe1e1f69cafd43f7f769f030df9d42c4eab1a", alt = "BLT on toasted sourdough with bacon, lettuce and tomato" }
 cuisine = "american-british"
 courses = ["snacks-starters", "breakfast"]
 moods = ["savoury", "crispy"]
@@ -311,6 +313,7 @@ name = "Meatloaf"
 serves = 6
 prep_minutes = 15
 cook_minutes = 65
+image = { file = "01a18c1e-2c2a-7bcb-8d05-73263c3cdc7b.webp", sha256 = "34e3b29ddaa5cffde4333f05abea471173a342164cb68228a4fe1afd8b0ca9c4", alt = "Glazed meatloaf slices" }
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
@@ -539,6 +542,7 @@ name = "Full English breakfast"
 serves = 2
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18c1e-2c37-7643-ad0f-a16fdffaaf04.webp", sha256 = "a0e9ec3e85ae1d3bf23206822c6ebdeb50a46afe270015eb6143ed169e238197", alt = "Full English breakfast with sausages, bacon, egg, mushrooms, tomato, beans and toast" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["savoury", "hearty"]
@@ -572,6 +576,7 @@ name = "Beans on toast"
 serves = 2
 prep_minutes = 3
 cook_minutes = 7
+image = { file = "01a18c1e-2c39-7c33-ac5f-b66eb4710ee0.webp", sha256 = "230be455e7e5920e76d2491c1bcb73b62107bcaf476ddfb2049ba71096da7ee6", alt = "Beans on toast with melted cheddar" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["savoury", "comforting"]
@@ -597,6 +602,7 @@ name = "Jacket potato with beans and cheese"
 serves = 2
 prep_minutes = 5
 cook_minutes = 75
+image = { file = "01a18c1e-2c3c-7654-8b7b-2e17dd08e871.webp", sha256 = "3b86a5ec0c1db2d7b0641c7c949f841333c1e748ec56f9f8cff2a65f68b8c93f", alt = "Jacket potato with butter, baked beans and cheddar" }
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "comforting", "hearty"]
@@ -703,6 +709,7 @@ name = "Corn chowder"
 serves = 4
 prep_minutes = 15
 cook_minutes = 35
+image = { file = "01a18c1e-2c42-74c3-bbf2-53e1786b026a.webp", sha256 = "26c3cab83174b34046e4bb843e21dd857c83a51a1fffbfad3ef05791a7969c69", alt = "Corn chowder topped with bacon and chives" }
 cuisine = "american-british"
 courses = ["soups"]
 moods = ["creamy", "comforting", "sweet"]
@@ -772,6 +779,7 @@ name = "Cobb salad"
 serves = 4
 prep_minutes = 20
 cook_minutes = 20
+image = { file = "01a18c1e-2c47-7cbd-8480-1d9e29512b63.webp", sha256 = "38f337d79ce85bd2f7ed31c5424ac8eb7a45ce4778ab63fecb8dc2ad3b4b2772", alt = "Cobb salad in rows of chicken, bacon, egg, avocado, tomato and blue cheese" }
 cuisine = "american-british"
 courses = ["salads"]
 moods = ["savoury", "hearty"]
@@ -839,6 +847,7 @@ name = "Potato salad"
 serves = 6
 prep_minutes = 15
 cook_minutes = 20
+image = { file = "01a18c1e-2c4b-7dfc-a7c9-42e2549bc691.webp", sha256 = "548257aa02a84c74e348fed92132b8571f3316764d1bfff299d14e160de68ab0", alt = "Potato salad with egg, celery and dill" }
 cuisine = "american-british"
 courses = ["sides", "salads"]
 moods = ["creamy", "tangy"]
@@ -870,6 +879,7 @@ name = "Sloppy joes"
 serves = 4
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18c1e-2c4e-7bdf-9eca-a5a35480b940.webp", sha256 = "1da13063f3500dd582aafcc271801fc8a8c025c9a3ca6051d89ec865fa7495df", alt = "Sloppy joe in a toasted bun" }
 cuisine = "american-british"
 courses = ["mains"]
 moods = ["savoury", "sweet", "comforting"]
@@ -944,6 +954,7 @@ name = "Biscuits and gravy"
 serves = 4
 prep_minutes = 20
 cook_minutes = 30
+image = { file = "01a18c1e-2c52-7def-8eef-dd4df039aaf2.webp", sha256 = "c5de1e21555a93f35fa12f5bfecc6ebaad9256553d7376c8cb057996b6652714", alt = "Split biscuits covered in peppery white sausage gravy" }
 cuisine = "american-british"
 courses = ["breakfast"]
 moods = ["savoury", "creamy", "comforting"]
@@ -974,6 +985,7 @@ name = "Cornbread"
 serves = 8
 prep_minutes = 10
 cook_minutes = 25
+image = { file = "01a18c1e-2c54-7f46-8356-de32c07c1a16.webp", sha256 = "5700107879c76c7d4c48577ac7982b78262741046674e368319a170402eac2fb", alt = "Cornbread cut into wedges in a cast iron pan" }
 cuisine = "american-british"
 courses = ["sides", "rice-breads"]
 moods = ["sweet", "savoury"]
@@ -1167,6 +1179,7 @@ name = "Sticky toffee pudding"
 serves = 8
 prep_minutes = 20
 cook_minutes = 40
+image = { file = "01a18c1e-2c62-7dfa-8781-22ef6d936677.webp", sha256 = "60ebf7ed5d06deedd597296e57caa3c9aae52ca8d73dac57a70a256f2bf36aef", alt = "Sticky toffee pudding with toffee sauce and pouring cream" }
 cuisine = "american-british"
 courses = ["desserts"]
 moods = ["sweet", "comforting"]

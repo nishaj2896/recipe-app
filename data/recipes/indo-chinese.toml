@@ -680,6 +680,7 @@ name = "Chicken lollipop"
 serves = 4
 prep_minutes = 30
 cook_minutes = 25
+image = { file = "01a18ba9-fdbd-7cb8-a034-c8d022f8c3d9.webp", sha256 = "8c5b699e912365002073101f17d15f1d8fefb34839403eb935fb6c25473c98df", alt = "Seven deep red chicken lollipops on a plate" }
 cuisine = "indo-chinese"
 courses = ["snacks-starters"]
 moods = ["spicy", "crispy"]
