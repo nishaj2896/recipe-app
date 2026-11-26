@@ -569,6 +569,7 @@ name = "Tarte tatin"
 serves = 8
 prep_minutes = 20
 cook_minutes = 50
+image = { file = "01a18c1a-e274-71eb-abbf-f561ec0bfebe.webp", sha256 = "93152b74559b6c2ae01da37cec12085991a73e8dc3b59f507f42f5432bacaab7", alt = "Tarte tatin with a spoon of crème fraîche" }
 cuisine = "french"
 courses = ["desserts"]
 moods = ["sweet", "comforting"]
@@ -597,6 +598,7 @@ name = "Clafoutis"
 serves = 6
 prep_minutes = 15
 cook_minutes = 40
+image = { file = "01a18c1a-e276-70f6-9c90-7482fa8cd145.webp", sha256 = "6b05af48ea6880dab1a2a8ec5ae08f51a6d8ed0e5d77ab67109793fb160028f1", alt = "Cherry clafoutis dusted with icing sugar" }
 cuisine = "french"
 courses = ["desserts"]
 moods = ["sweet"]
@@ -627,6 +629,7 @@ name = "Pain perdu"
 serves = 2
 prep_minutes = 5
 cook_minutes = 10
+image = { file = "01a18c1a-e279-7e60-ab6c-6f57abcd4c82.webp", sha256 = "d6774e5b83a3e52779368a777ec61adfd01c48eeeeed7d011b3b061258800431", alt = "Pain perdu dusted with icing sugar" }
 cuisine = "french"
 courses = ["breakfast", "desserts"]
 moods = ["sweet", "comforting"]
