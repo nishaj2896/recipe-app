@@ -114,6 +114,20 @@ class ApiSettings(DatabaseSettings):
     retry_after_seconds: int = Field(
         2, ge=1, le=3600, validation_alias="RETRY_AFTER_SECONDS"
     )
+    request_timeout: float = Field(
+        8, gt=0, le=300, validation_alias="REQUEST_TIMEOUT_SECONDS"
+    )
+    max_in_flight: int = Field(
+        64, ge=1, le=10_000, validation_alias="MAX_IN_FLIGHT_REQUESTS"
+    )
+    shutdown_grace: float = Field(
+        20, gt=0, le=300, validation_alias="SHUTDOWN_GRACE_SECONDS"
+    )
+    keep_alive: float = Field(
+        75, gt=0, le=3600, validation_alias="KEEP_ALIVE_TIMEOUT_SECONDS"
+    )
+    host: str = Field("127.0.0.1", min_length=1, validation_alias="API_HOST")
+    port: int = Field(8000, ge=1, le=65535, validation_alias="API_PORT")
     log_level: LogLevel = Field("INFO", validation_alias="LOG_LEVEL")
     log_format: LogFormat = Field("json", validation_alias="LOG_FORMAT")
     _keys: SigningKeys = PrivateAttr()
@@ -176,6 +190,12 @@ class ApiSettings(DatabaseSettings):
             "DATABASE_POOL_SIZE": str(self.pool_size),
             "DATABASE_POOL_MAX_OVERFLOW": str(self.pool_max_overflow),
             "RETRY_AFTER_SECONDS": str(self.retry_after_seconds),
+            "REQUEST_TIMEOUT_SECONDS": f"{self.request_timeout:g}",
+            "MAX_IN_FLIGHT_REQUESTS": str(self.max_in_flight),
+            "SHUTDOWN_GRACE_SECONDS": f"{self.shutdown_grace:g}",
+            "KEEP_ALIVE_TIMEOUT_SECONDS": f"{self.keep_alive:g}",
+            "API_HOST": self.host,
+            "API_PORT": str(self.port),
             "LOG_LEVEL": self.log_level,
             "LOG_FORMAT": self.log_format,
         }

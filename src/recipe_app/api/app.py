@@ -13,6 +13,7 @@ from starlette.types import ASGIApp
 
 from recipe_app.api import presenters
 from recipe_app.api.access import RequestContext
+from recipe_app.api.guards import ConcurrencyLimit, Guards, RequestDeadline
 from recipe_app.api.headers import DOCS_PAGES, SecurityHeaders
 from recipe_app.api.limits import BodySizeLimit
 from recipe_app.api.problems import problem_media_types, register_problem_handlers
@@ -28,16 +29,21 @@ from recipe_app.services.search import RecipeService
 logger = logging.getLogger(__name__)
 
 API_VERSION = "1.0.0"
+DEFAULT_GUARDS = Guards()
 
 
 Lifespan = Callable[[FastAPI], AbstractAsyncContextManager[None]]
 
 
 def create_app(
-    *, catalog: IngredientCatalog, service: RecipeService, docs: bool = False
+    *,
+    catalog: IngredientCatalog,
+    service: RecipeService,
+    docs: bool = False,
+    guards: Guards = DEFAULT_GUARDS,
 ) -> FastAPI:
     """Build the app around ready parts; tests call this with their own."""
-    app = _new_app(docs=docs)
+    app = _new_app(docs=docs, guards=guards)
     _serve(app, catalog, service)
     return app
 
@@ -50,7 +56,12 @@ def openapi_schema() -> dict[str, Any]:
     return _new_app().openapi()
 
 
-def _new_app(lifespan: Lifespan | None = None, *, docs: bool = False) -> FastAPI:
+def _new_app(
+    lifespan: Lifespan | None = None,
+    *,
+    docs: bool = False,
+    guards: Guards = DEFAULT_GUARDS,
+) -> FastAPI:
     app = FastAPI(
         title="Pantry to Plate",
         version=API_VERSION,
@@ -69,7 +80,8 @@ def _new_app(lifespan: Lifespan | None = None, *, docs: bool = False) -> FastAPI
         redoc_url="/redoc" if docs else None,
     )
     app.add_middleware(BodySizeLimit)
-    _add_security_headers(app, docs=docs)
+    app.state.retry_after = guards.retry_after
+    _wrap_stack(app, docs=docs, guards=guards)
     register_problem_handlers(app)
     app.include_router(router)
     app.include_router(health_router)
@@ -77,15 +89,22 @@ def _new_app(lifespan: Lifespan | None = None, *, docs: bool = False) -> FastAPI
     return app
 
 
-def _add_security_headers(app: FastAPI, *, docs: bool) -> None:
-    """Wrap the whole stack, so the 500s that Starlette's outermost error
-    middleware sends carry the headers and the request ID too; add_middleware
-    sits inside it. RequestContext is outermost: its ID is set before anything
-    logs, and its access line times the whole response."""
+def _wrap_stack(app: FastAPI, *, docs: bool, guards: Guards) -> None:
+    """Wrap the whole stack, outside Starlette's error middleware, which
+    add_middleware would sit inside. From the outside in:
+
+    - RequestContext: its ID is set before anything logs, and its access line
+      times the whole response, 503s from the guards included.
+    - SecurityHeaders: every response carries them, the 500 and 503s too.
+    - ConcurrencyLimit, then RequestDeadline (ADR-0013 rule 7): a shed request
+      never starts its deadline, and the deadline covers the error handlers.
+    """
     build = app.build_middleware_stack
 
     def build_middleware_stack() -> ASGIApp:
-        secured = SecurityHeaders(build(), DOCS_PAGES if docs else frozenset())
+        timed = RequestDeadline(build(), guards.request_timeout, guards.retry_after)
+        limited = ConcurrencyLimit(timed, guards.max_in_flight, guards.retry_after)
+        secured = SecurityHeaders(limited, DOCS_PAGES if docs else frozenset())
         return RequestContext(secured)
 
     app.build_middleware_stack = build_middleware_stack  # type: ignore[method-assign]
@@ -131,7 +150,6 @@ def build_app() -> FastAPI:
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         # One pool per process, opened and closed with the app.
         engine = create_engine(url, settings.engine_limits)
-        app.state.retry_after = settings.retry_after_seconds
         try:
             catalog = await read_catalog(engine)
             logger.info(
@@ -150,7 +168,12 @@ def build_app() -> FastAPI:
         finally:
             await engine.dispose()
 
-    return _new_app(lifespan, docs=docs)
+    guards = Guards(
+        request_timeout=settings.request_timeout,
+        max_in_flight=settings.max_in_flight,
+        retry_after=settings.retry_after_seconds,
+    )
+    return _new_app(lifespan, docs=docs, guards=guards)
 
 
 def _cache(model: BaseModel) -> CachedBody:

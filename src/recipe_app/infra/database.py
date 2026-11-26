@@ -98,7 +98,13 @@ def unavailable_cause(error: BaseException) -> str | None:
     if isinstance(error, DBAPIError):
         sqlstate = _sqlstate(error)
         if sqlstate == "57014":
-            return "statement timeout"
+            # 57014 is any cancel: our statement_timeout, or someone running
+            # pg_cancel_backend. The server's own message tells them apart; it
+            # is read, never logged. A server whose messages aren't in English
+            # gets the honest, vaguer label.
+            if "statement timeout" in str(error.orig):
+                return "statement timeout"
+            return "query cancelled (57014)"
         if error.connection_invalidated:
             return f"connection lost ({sqlstate or _name(error)})"
         if sqlstate is not None and sqlstate.startswith(_UNAVAILABLE_SQLSTATE_CLASSES):

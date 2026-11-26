@@ -1,11 +1,13 @@
 import asyncio
+import logging
 from collections.abc import AsyncIterator, Callable, Iterator
 
 import pytest
 from fastapi import FastAPI
 from httpx import AsyncClient
 
-from recipe_app.api.app import create_app
+from recipe_app.api.app import DEFAULT_GUARDS, create_app
+from recipe_app.api.guards import Guards
 from recipe_app.domain.book import RecipeBook
 from recipe_app.domain.catalog import IngredientCatalog
 from recipe_app.domain.cursor import SigningKeys
@@ -57,6 +59,7 @@ def make_app(
         keys: SigningKeys = KEYS,
         now: int = NOW,
         docs: bool = False,
+        guards: Guards = DEFAULT_GUARDS,
     ) -> FastAPI:
         service = RecipeService(
             catalog=catalog,
@@ -64,7 +67,7 @@ def make_app(
             keys=keys,
             clock=lambda: now,
         )
-        return create_app(catalog=catalog, service=service, docs=docs)
+        return create_app(catalog=catalog, service=service, docs=docs, guards=guards)
 
     return make
 
@@ -119,3 +122,20 @@ def seeded_database_url(
         yield url
     finally:
         drop_database(server, url)
+
+
+@pytest.fixture
+def bare_app_logger() -> Iterator[logging.Logger]:
+    """configure_logging changes the root, app and uvicorn loggers; each test
+    gets them back as they were."""
+    names = ("", "recipe_app", "uvicorn", "uvicorn.access")
+    loggers = [logging.getLogger(name) for name in names]
+    saved = [(lg.handlers[:], lg.level, lg.propagate, lg.disabled) for lg in loggers]
+    app_logger = loggers[1]
+    app_logger.setLevel(logging.NOTSET)
+    yield app_logger
+    for lg, (handlers, level, propagate, disabled) in zip(loggers, saved, strict=True):
+        lg.handlers[:] = handlers
+        lg.setLevel(level)
+        lg.propagate = propagate
+        lg.disabled = disabled

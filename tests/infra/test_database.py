@@ -29,15 +29,29 @@ SOME_RECIPE = UUID("01938e5c-0000-7000-8000-000000000000")
 class DriverError(Exception):
     """What a driver error looks like to SQLAlchemy: it may carry a SQLSTATE."""
 
-    def __init__(self, sqlstate: str | None = None) -> None:
-        super().__init__("password=hunter2 at db.internal")
+    def __init__(
+        self, sqlstate: str | None = None, message: str = "password=hunter2"
+    ) -> None:
+        super().__init__(f"{message} at db.internal")
         self.sqlstate = sqlstate
 
 
-def wrapped(sqlstate: str | None = None, *, invalidated: bool = False) -> DBAPIError:
+def wrapped(
+    sqlstate: str | None = None,
+    *,
+    invalidated: bool = False,
+    message: str = "password=hunter2",
+) -> DBAPIError:
     return DBAPIError(
-        "SELECT secret", {}, DriverError(sqlstate), connection_invalidated=invalidated
+        "SELECT secret",
+        {},
+        DriverError(sqlstate, message),
+        connection_invalidated=invalidated,
     )
+
+
+TIMED_OUT = "canceling statement due to statement timeout"
+CANCELLED = "canceling statement due to user request"
 
 
 # Which errors mean "not now"
@@ -47,7 +61,14 @@ def wrapped(sqlstate: str | None = None, *, invalidated: bool = False) -> DBAPIE
     ("error", "cause"),
     [
         pytest.param(PoolTimeoutError(), "pool timeout", id="pool"),
-        pytest.param(wrapped("57014"), "statement timeout", id="statement"),
+        pytest.param(
+            wrapped("57014", message=TIMED_OUT), "statement timeout", id="statement"
+        ),
+        pytest.param(
+            wrapped("57014", message=CANCELLED),
+            "query cancelled (57014)",
+            id="cancelled",
+        ),
         pytest.param(
             wrapped("57P01", invalidated=True), "connection lost (57P01)", id="killed"
         ),

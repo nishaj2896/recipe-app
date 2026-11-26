@@ -3,7 +3,7 @@
 import base64
 import json
 import logging
-from collections.abc import AsyncIterator, Iterator
+from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
 import pytest
@@ -21,7 +21,7 @@ from recipe_app.infra.tables import recipes
 from tests.apps import AppFactory, client_for
 from tests.databases import sync_seed
 
-pytestmark = pytest.mark.anyio
+pytestmark = [pytest.mark.anyio, pytest.mark.usefixtures("bare_app_logger")]
 
 KEY = base64.urlsafe_b64encode(b"k" * 32).decode()
 SEARCHES = [
@@ -30,23 +30,6 @@ SEARCHES = [
     {"ingredient_ids": ["paneer", "rice"], "diet": "vegetarian"},
     {"ingredient_ids": ["egg"], "max_total_minutes": 20, "limit": 5},
 ]
-
-
-@pytest.fixture(autouse=True)
-def bare_app_logger() -> Iterator[logging.Logger]:
-    """configure_logging changes the root, app and uvicorn loggers; each test
-    gets them back as they were."""
-    names = ("", "recipe_app", "uvicorn", "uvicorn.access")
-    loggers = [logging.getLogger(name) for name in names]
-    saved = [(lg.handlers[:], lg.level, lg.propagate, lg.disabled) for lg in loggers]
-    app_logger = loggers[1]
-    app_logger.setLevel(logging.NOTSET)
-    yield app_logger
-    for lg, (handlers, level, propagate, disabled) in zip(loggers, saved, strict=True):
-        lg.handlers[:] = handlers
-        lg.setLevel(level)
-        lg.propagate = propagate
-        lg.disabled = disabled
 
 
 @asynccontextmanager
@@ -125,6 +108,9 @@ def test_build_app_logs_its_settings_without_secrets(
         "DATABASE_CONNECT_TIMEOUT_SECONDS=3, DATABASE_POOL_TIMEOUT_SECONDS=2, "
         "DATABASE_STATEMENT_TIMEOUT_SECONDS=3, DATABASE_POOL_SIZE=5, "
         "DATABASE_POOL_MAX_OVERFLOW=5, RETRY_AFTER_SECONDS=2, "
+        "REQUEST_TIMEOUT_SECONDS=8, MAX_IN_FLIGHT_REQUESTS=64, "
+        "SHUTDOWN_GRACE_SECONDS=20, KEEP_ALIVE_TIMEOUT_SECONDS=75, "
+        "API_HOST=127.0.0.1, API_PORT=8000, "
         "LOG_LEVEL=INFO, LOG_FORMAT=json"
     ) in stdout
     assert "hunter2" not in stdout

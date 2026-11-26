@@ -1,12 +1,16 @@
 """The Task 2 gate, part 1: migrations go up and down cleanly (ADR-0005 rule 3)."""
 
 import asyncio
+import threading
+import time
 from collections.abc import Callable
 from pathlib import Path
 
+import pytest
 from alembic import command
 from alembic.config import Config
 from sqlalchemy import inspect, text
+from sqlalchemy.exc import DBAPIError
 from sqlalchemy.ext.asyncio import create_async_engine
 
 from recipe_app.infra.tables import metadata
@@ -129,3 +133,41 @@ def test_constraints_indexes_and_columns_match_tables_py(
         row for row in schema_objects(migrated) if row[0] != "alembic_version"
     }
     assert from_migrations == schema_objects(created)
+
+
+def test_a_migration_behind_a_held_lock_gives_up(empty_database_url: str) -> None:
+    """ADR-0013 rule 9 (issue #30): a migration waits 5 s for a lock, not forever.
+
+    Waiting in the lock queue, an ALTER TABLE would make every query behind it
+    wait too, which takes the API down with it.
+    """
+    config = alembic_config(empty_database_url)
+    command.upgrade(config, "head")
+    locked, release = threading.Event(), threading.Event()
+
+    async def hold() -> None:
+        engine = create_async_engine(empty_database_url)
+        try:
+            async with engine.begin() as connection:
+                await connection.execute(
+                    text("LOCK TABLE alembic_version IN ACCESS EXCLUSIVE MODE")
+                )
+                locked.set()
+                await asyncio.to_thread(release.wait, 30)
+        finally:
+            await engine.dispose()
+
+    holder = threading.Thread(target=asyncio.run, args=(hold(),))
+    holder.start()
+    try:
+        assert locked.wait(10)
+        started = time.monotonic()
+        with pytest.raises(DBAPIError) as caught:
+            command.downgrade(config, "-1")
+        waited = time.monotonic() - started
+    finally:
+        release.set()
+        holder.join()
+
+    assert getattr(caught.value.orig, "sqlstate", None) == "55P03"
+    assert 4.5 < waited < 15
