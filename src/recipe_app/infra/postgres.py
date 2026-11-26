@@ -65,7 +65,7 @@ from recipe_app.domain.recipe_search import (
 from recipe_app.domain.scoring import SCORING_VERSION, score_triangle
 from recipe_app.domain.tags import Course, Cuisine, Mood, Weather
 from recipe_app.domain.units import Unit
-from recipe_app.infra.database import unavailable_as_store_error
+from recipe_app.infra.database import connected
 from recipe_app.infra.tables import (
     recipe_ingredients,
     recipe_pairings,
@@ -175,7 +175,7 @@ class PostgresRecipeRepository:
     async def _connect(self) -> AsyncIterator[AsyncConnection]:
         """A pooled connection; the database being unavailable becomes
         StoreUnavailableError, here and nowhere else (ADR-0013 rule 1)."""
-        async with unavailable_as_store_error(), self._engine.connect() as connection:
+        async with connected(self._engine) as connection:
             yield connection
 
     async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:

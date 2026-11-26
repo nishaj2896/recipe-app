@@ -1,5 +1,6 @@
 """Request IDs and the access line (ADR-0013 rules 4 and 5)."""
 
+import asyncio
 import logging
 import re
 
@@ -7,7 +8,13 @@ import pytest
 from fastapi import FastAPI
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
-from recipe_app.api.access import REQUEST_ID_HEADER, RequestContext, new_request_id
+from recipe_app.api.access import (
+    REQUEST_ID_HEADER,
+    RequestContext,
+    log_unfinished_requests,
+    new_request_id,
+)
+from recipe_app.api.guards import DeadlineExceededError
 from recipe_app.infra.logs import REQUEST_ID
 from tests.apps import AppFactory, client_for
 
@@ -217,3 +224,70 @@ async def test_the_re_raise_after_a_sent_500_is_stopped(
     (line,) = access_lines(caplog)
     assert fields(line)["status"] == 500
     assert "error" not in fields(line)
+
+
+# Cut responses (review of #131)
+
+
+async def test_a_cut_response_is_logged_once_and_not_raised(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """The server then closes the connection with one line, no traceback."""
+    caplog.set_level(logging.INFO, logger="recipe_app")
+
+    async def cut(scope: Scope, receive: Receive, send: Send) -> None:
+        await send({"type": "http.response.start", "status": 200, "headers": []})
+        raise DeadlineExceededError
+
+    sent = await run(RequestContext(cut))
+
+    assert [m["type"] for m in sent] == ["http.response.start"]
+    (line,) = access_lines(caplog)
+    assert fields(line)["status"] == 200
+    assert fields(line)["error"] == "DeadlineExceededError"
+    assert "aborted" in line.getMessage()
+
+
+async def test_a_request_open_at_shutdown_gets_its_line_once(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """uvicorn cancels a request that outlives the drain, then shuts the app
+    down; the process can exit before the cancelled request unwinds."""
+    caplog.set_level(logging.INFO, logger="recipe_app")
+    entered = asyncio.Event()
+
+    async def hangs(scope: Scope, receive: Receive, send: Send) -> None:
+        entered.set()
+        await asyncio.sleep(30)
+
+    task = asyncio.create_task(run(RequestContext(hangs)))
+    await entered.wait()
+    log_unfinished_requests()
+    (line,) = access_lines(caplog)
+    task.cancel()
+    with pytest.raises(asyncio.CancelledError):
+        await task
+
+    assert access_lines(caplog) == [line]
+    assert fields(line)["status"] is None
+    assert fields(line)["error"] == "cancelled"
+
+
+async def test_a_cancelled_request_is_logged_as_cancelled(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    caplog.set_level(logging.INFO, logger="recipe_app")
+    entered = asyncio.Event()
+
+    async def hangs(scope: Scope, receive: Receive, send: Send) -> None:
+        entered.set()
+        await asyncio.sleep(30)
+
+    task = asyncio.create_task(run(RequestContext(hangs)))
+    await entered.wait()
+    task.cancel()
+    with pytest.raises(asyncio.CancelledError):
+        await task
+
+    (line,) = access_lines(caplog)
+    assert fields(line)["error"] == "cancelled"

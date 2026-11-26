@@ -14,7 +14,7 @@ from sqlalchemy import event
 from sqlalchemy.engine import Connection
 from sqlalchemy.exc import DBAPIError
 from sqlalchemy.exc import TimeoutError as PoolTimeoutError
-from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine
+from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine, create_async_engine
 
 from recipe_app.services.ports import StoreUnavailableError
 
@@ -136,6 +136,28 @@ async def unavailable_as_store_error() -> AsyncIterator[None]:
         if cause is None:
             raise
         raise StoreUnavailableError(cause) from error
+
+
+@asynccontextmanager
+async def connected(engine: AsyncEngine) -> AsyncIterator[AsyncConnection]:
+    """A pooled connection for one API request (ADR-0013 rules 1 and 2).
+
+    The database being unavailable becomes StoreUnavailableError. A
+    TimeoutError here, after the pool handed the connection over, is asyncpg's
+    command_timeout: the server's reply never came, so the link may be dead.
+    The connection is dropped rather than returned to the pool, where a
+    ROLLBACK on the same link would wait the whole budget again. SQLAlchemy
+    still tries a polite close of a dropped connection for up to 2 s, so a
+    frozen network costs the client budget plus at most 2 s (tests/chaos).
+    One raised by engine.connect() itself stays "connect timeout": no working
+    connection in time, new or checked by the pool's pre-ping.
+    """
+    async with unavailable_as_store_error(), engine.connect() as connection:
+        try:
+            yield connection
+        except TimeoutError as error:
+            await connection.invalidate(error)
+            raise StoreUnavailableError("statement timeout (client)") from error
 
 
 def _sqlstate(error: DBAPIError) -> str | None:

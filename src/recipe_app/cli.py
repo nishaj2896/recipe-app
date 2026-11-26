@@ -75,12 +75,12 @@ def _serve() -> None:
         access_log=False,
         # After SIGTERM, in-flight requests get this long; then the server
         # closes them and exits. Kubernetes kills at 30 s by default.
-        timeout_graceful_shutdown=round(settings.shutdown_grace),
+        timeout_graceful_shutdown=settings.shutdown_grace,
         # Longer than a load balancer's idle timeout (60 s on most), so the
         # balancer, not the app, closes an idle connection. The other way
         # round, it can send a request on a connection the app is closing and
         # answer the client 502.
-        timeout_keep_alive=round(settings.keep_alive),
+        timeout_keep_alive=settings.keep_alive,
     )
 
 
