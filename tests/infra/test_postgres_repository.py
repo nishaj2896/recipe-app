@@ -18,6 +18,7 @@ from recipe_app.domain.ranking import Ranking, SearchFilters
 from recipe_app.domain.recipe import Image, Recipe, build_recipe
 from recipe_app.domain.scoring import score_int
 from recipe_app.domain.units import Unit
+from recipe_app.infra import postgres
 from recipe_app.infra.database import create_engine
 from recipe_app.infra.postgres import PostgresRecipeRepository, reachable_core_q
 from recipe_app.infra.sync import sync
@@ -355,17 +356,15 @@ async def test_detail_reads_one_version_while_a_sync_commits(
     repository = await PostgresRecipeRepository.open(empty_engine, one)
     edited = replace(recipe, ingredients=recipe.ingredients[:1])
     edited_content = replace(content, amounts=content.amounts[:1])
-    read_content = PostgresRecipeRepository._content
+    read_content = postgres._content_rows
 
-    async def sync_first(
-        self: PostgresRecipeRepository, connection: AsyncConnection, recipe_id: UUID
-    ) -> RecipeContent | None:
+    async def sync_first(connection: AsyncConnection, recipe_id: UUID) -> object:
         await sync(
             empty_engine, one, [edited], now=NOW, content={recipe.id: edited_content}
         )
-        return await read_content(self, connection, recipe_id)
+        return await read_content(connection, recipe_id)
 
-    monkeypatch.setattr(PostgresRecipeRepository, "_content", sync_first)
+    monkeypatch.setattr(postgres, "_content_rows", sync_first)
 
     assert await repository.detail(recipe.id) == RecipeWithContent(
         recipe=recipe, content=content

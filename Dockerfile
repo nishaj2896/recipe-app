@@ -26,9 +26,11 @@ COPY alembic.ini ./
 COPY migrations ./migrations
 COPY data ./data
 ENV PATH=/app/.venv/bin:$PATH \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    API_HOST=0.0.0.0
 USER app
 EXPOSE 8000
-# `recipe-app` alone listens on 127.0.0.1, which is unreachable from outside
-# the container.
-CMD ["uvicorn", "--factory", "recipe_app.api.app:build_app", "--host", "0.0.0.0", "--port", "8000"]
+# Every limit (deadline, shutdown grace, keep-alive) comes from the settings
+# (ADR-0013 rule 7). API_HOST is 0.0.0.0 here: the default, 127.0.0.1, is
+# unreachable from outside the container.
+CMD ["recipe-app", "serve"]

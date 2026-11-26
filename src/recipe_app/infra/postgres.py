@@ -21,6 +21,7 @@ from sqlalchemy import (
     REAL,
     ColumnElement,
     Integer,
+    Row,
     RowMapping,
     Select,
     Subquery,
@@ -178,6 +179,8 @@ class PostgresRecipeRepository:
             yield connection
 
     async def detail(self, recipe_id: UUID) -> RecipeWithContent | None:
+        # Only queries inside the boundary; recipes are built after, so a bug
+        # in building one stays a 500 and is never read as an outage.
         async with self._connect() as connection:
             # One snapshot, as in ranked: a sync committing between these
             # queries would pair one version's amounts with another's
@@ -188,64 +191,19 @@ class PostgresRecipeRepository:
                 .mappings()
                 .one_or_none()
             )
-            recipe = None if row is None else next(iter(self._to_recipes([row])), None)
-            if recipe is None:
+            if row is None:
                 return None
-            content = await self._content(connection, recipe_id)
-            pairs = await self._pairs(connection, recipe.tags.pairs_with)
-        return RecipeWithContent(recipe=recipe, content=content, pairs=pairs)
-
-    async def _pairs(
-        self, connection: AsyncConnection, pair_ids: tuple[UUID, ...]
-    ) -> tuple[Recipe, ...]:
-        """The paired recipes in the order written, read in the caller's
-        transaction; one this process can't build is left out.
-        """
-        if not pair_ids:
-            return ()
-        rows = (
-            (
-                await connection.execute(
-                    _RECIPE.where(recipes.c.id == any_(_uuids("pairs", list(pair_ids))))
-                )
-            )
-            .mappings()
-            .all()
-        )
-        found = {recipe.id: recipe for recipe in self._to_recipes(rows)}
-        return tuple(found[pair] for pair in pair_ids if pair in found)
-
-    async def _content(
-        self, connection: AsyncConnection, recipe_id: UUID
-    ) -> RecipeContent | None:
-        """The recipe's content, read in the caller's transaction."""
-        row = (
-            (await connection.execute(_CONTENT.where(recipes.c.id == recipe_id)))
-            .mappings()
-            .one_or_none()
-        )
-        if row is None or row["serves"] is None:
+            content = await _content_rows(connection, recipe_id)
+            pair_ids = tuple(row["pairs_with"] or ())
+            pair_rows = await _recipe_rows(connection, "pairs", pair_ids)
+        recipe = next(iter(self._to_recipes([row])), None)
+        if recipe is None:
             return None
-        amounts = (
-            await connection.execute(
-                select(recipe_ingredients.c.amount, recipe_ingredients.c.unit)
-                .where(recipe_ingredients.c.recipe_id == recipe_id)
-                .order_by(recipe_ingredients.c.position)
-            )
-        ).all()
-        steps = await connection.scalars(
-            select(recipe_steps.c.text)
-            .where(recipe_steps.c.recipe_id == recipe_id)
-            .order_by(recipe_steps.c.position)
-        )
-        return RecipeContent(
-            serves=row["serves"],
-            amounts=tuple(
-                None if unit is None else Amount(value=float(amount), unit=Unit(unit))
-                for amount, unit in amounts
-            ),
-            steps=tuple(steps),
-            image=_image(row),
+        found = {pair.id: pair for pair in self._to_recipes(pair_rows)}
+        return RecipeWithContent(
+            recipe=recipe,
+            content=None if content is None else _to_content(*content),
+            pairs=tuple(found[pair] for pair in pair_ids if pair in found),
         )
 
     async def ranked(
@@ -531,6 +489,69 @@ def _tags(row: RowMapping) -> RecipeTags:
         also_known_as=tuple(row["also_known_as"]),
         # array_agg over no rows is NULL.
         pairs_with=tuple(row["pairs_with"] or ()),
+    )
+
+
+async def _recipe_rows(
+    connection: AsyncConnection, name: str, ids: Sequence[UUID]
+) -> Sequence[RowMapping]:
+    """Recipe rows for `ids`, read in the caller's transaction, in no order."""
+    if not ids:
+        return []
+    return (
+        (
+            await connection.execute(
+                _RECIPE.where(recipes.c.id == any_(_uuids(name, list(ids))))
+            )
+        )
+        .mappings()
+        .all()
+    )
+
+
+type _ContentRows = tuple[RowMapping, Sequence[Row[Any, Any]], Sequence[str]]
+
+
+async def _content_rows(
+    connection: AsyncConnection, recipe_id: UUID
+) -> _ContentRows | None:
+    """The rows a recipe's content is built from, read in the caller's
+    transaction; None when the recipe has no content yet."""
+    row = (
+        (await connection.execute(_CONTENT.where(recipes.c.id == recipe_id)))
+        .mappings()
+        .one_or_none()
+    )
+    if row is None or row["serves"] is None:
+        return None
+    amounts = (
+        await connection.execute(
+            select(recipe_ingredients.c.amount, recipe_ingredients.c.unit)
+            .where(recipe_ingredients.c.recipe_id == recipe_id)
+            .order_by(recipe_ingredients.c.position)
+        )
+    ).all()
+    steps = (
+        await connection.scalars(
+            select(recipe_steps.c.text)
+            .where(recipe_steps.c.recipe_id == recipe_id)
+            .order_by(recipe_steps.c.position)
+        )
+    ).all()
+    return row, amounts, steps
+
+
+def _to_content(
+    row: RowMapping, amounts: Sequence[Row[Any, Any]], steps: Sequence[str]
+) -> RecipeContent:
+    return RecipeContent(
+        serves=row["serves"],
+        amounts=tuple(
+            None if unit is None else Amount(value=float(amount), unit=Unit(unit))
+            for amount, unit in amounts
+        ),
+        steps=tuple(steps),
+        image=_image(row),
     )
 
 

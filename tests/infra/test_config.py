@@ -24,6 +24,12 @@ VARIABLES = (
     "RECIPE_APP_DATA_DIR",
     "LOG_LEVEL",
     "LOG_FORMAT",
+    "REQUEST_TIMEOUT_SECONDS",
+    "MAX_IN_FLIGHT_REQUESTS",
+    "SHUTDOWN_GRACE_SECONDS",
+    "KEEP_ALIVE_TIMEOUT_SECONDS",
+    "API_HOST",
+    "API_PORT",
 )
 
 
@@ -307,3 +313,60 @@ def test_bad_log_settings_refuse_to_start(
         ApiSettings.from_env()
 
     assert value not in str(caught.value)
+
+
+# The server's limits (ADR-0013 rule 7)
+
+
+def test_server_defaults(environ: pytest.MonkeyPatch) -> None:
+    set_api(environ)
+
+    settings = ApiSettings.from_env()
+
+    assert settings.request_timeout == 8
+    assert settings.max_in_flight == 64
+    assert settings.shutdown_grace == 20
+    # Above a load balancer's 60 s idle timeout, so the balancer closes first.
+    assert settings.keep_alive == 75
+    # Loopback unless told otherwise; the image sets API_HOST=0.0.0.0.
+    assert (settings.host, settings.port) == ("127.0.0.1", 8000)
+
+
+def test_server_settings_load(environ: pytest.MonkeyPatch) -> None:
+    set_api(environ)
+    environ.setenv("REQUEST_TIMEOUT_SECONDS", "2.5")
+    environ.setenv("MAX_IN_FLIGHT_REQUESTS", "10")
+    environ.setenv("SHUTDOWN_GRACE_SECONDS", "5")
+    environ.setenv("KEEP_ALIVE_TIMEOUT_SECONDS", "90")
+    environ.setenv("API_HOST", "0.0.0.0")  # noqa: S104 (a test value)
+    environ.setenv("API_PORT", "9000")
+
+    settings = ApiSettings.from_env()
+
+    assert settings.request_timeout == 2.5
+    assert settings.max_in_flight == 10
+    assert settings.shutdown_grace == 5
+    assert settings.keep_alive == 90
+    assert (settings.host, settings.port) == ("0.0.0.0", 9000)  # noqa: S104
+
+
+@pytest.mark.parametrize(
+    ("name", "value"),
+    [
+        ("REQUEST_TIMEOUT_SECONDS", "0"),
+        ("REQUEST_TIMEOUT_SECONDS", "soon"),
+        ("MAX_IN_FLIGHT_REQUESTS", "0"),
+        ("MAX_IN_FLIGHT_REQUESTS", "1.5"),
+        ("SHUTDOWN_GRACE_SECONDS", "-1"),
+        ("KEEP_ALIVE_TIMEOUT_SECONDS", "0"),
+        ("API_PORT", "70000"),
+    ],
+)
+def test_bad_server_settings_refuse_to_start(
+    environ: pytest.MonkeyPatch, name: str, value: str
+) -> None:
+    set_api(environ)
+    environ.setenv(name, value)
+
+    with pytest.raises(ConfigError, match=f"^{name}: "):
+        ApiSettings.from_env()

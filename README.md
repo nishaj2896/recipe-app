@@ -72,7 +72,7 @@ It also signs its "generate more" cursors, so it needs a signing key before it s
 export CURSOR_ACTIVE_KID=dev
 export CURSOR_SIGNING_KEYS="{\"dev\": \"$(uv run python -c 'import base64, os; print(base64.urlsafe_b64encode(os.urandom(32)).decode())')\"}"
 export API_DOCS=true         # serve /docs; off unless set
-uv run recipe-app            # or: uv run uvicorn --factory recipe_app.api.app:build_app --reload
+uv run recipe-app serve      # or: uv run uvicorn --factory recipe_app.api.app:build_app --reload
 ```
 
 Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` with `{"ingredient_ids": ["potato", "peas"]}`.
@@ -90,13 +90,18 @@ Then open <http://127.0.0.1:8000/docs> and try `POST /api/v1/recipes/search` wit
 | `DATABASE_STATEMENT_TIMEOUT_SECONDS` | One SQL statement, set by Postgres per transaction; the driver gives up a second later (default 3) |
 | `DATABASE_POOL_SIZE`, `DATABASE_POOL_MAX_OVERFLOW` | Connections per process: 5 kept, 5 more under load (defaults). Pods × their sum must stay under Postgres's `max_connections` |
 | `RETRY_AFTER_SECONDS` | The `Retry-After` on a 503 (default 2) |
+| `REQUEST_TIMEOUT_SECONDS` | The whole request; past it the client gets a 503 (default 8) |
+| `MAX_IN_FLIGHT_REQUESTS` | Requests running at once per process; one more gets a 503 at once (default 64) |
+| `SHUTDOWN_GRACE_SECONDS` | After SIGTERM, how long in-flight requests may finish (default 20; under Kubernetes's 30 s) |
+| `KEEP_ALIVE_TIMEOUT_SECONDS` | Idle keep-alive connections close after this; keep it above the load balancer's idle timeout (default 75) |
+| `API_HOST`, `API_PORT` | Where `recipe-app serve` listens (defaults `127.0.0.1`, `8000`; the image sets `0.0.0.0`) |
 | `RECIPE_APP_DATA_DIR` | Folder with `ingredients.v1.toml` and the `recipes/` folder of `*.toml` files (default `./data`); only `recipe-app db sync` reads it |
 
 The app refuses to start if a key is missing or too short, if `API_DOCS` is anything but `true` or `false`, if `DATABASE_URL` is missing, or if the database has never been synced. A bad setting stops it with one message that names every variable at fault, never their values. Its first log line lists the settings it started with, the password and keys hidden (ADR-0013 rule 8). It loads the catalog once at startup, so after a sync, restart the app to pick up the new catalog. In production the keys come from the secret store, never from the repo or the logs.
 
 Every response carries an `X-Request-ID` header. A valid incoming one (8 to 64 letters, digits, `-` or `_`) is kept, so a proxy can set it; otherwise the app makes a new one. Every log line written during a request carries the same `request_id`, and so does the body of every 5xx error, so the ID from an error screen finds its log lines. Each request writes one access line with its method, route template (never the raw path or query), status and duration (ADR-0013 rules 4 and 5).
 
-When the database is down, too slow, or out of connections, the API answers `503` with the problem type `/problems/service-unavailable` and `Retry-After`, and logs one WARNING naming the cause (`statement timeout`, `pool timeout`, `connection lost (57P01)`, ...). `/api/v1/ingredients` and `/api/v1/staples` keep answering from memory. Any other error is still a `500` (ADR-0013 rule 1).
+When the database is down, too slow, or out of connections, the API answers `503` with the problem type `/problems/service-unavailable` and `Retry-After`, and logs one WARNING naming the cause (`statement timeout`, `pool timeout`, `connection lost (57P01)`, `query cancelled (57014)` when someone cancelled it by hand, ...). `/api/v1/ingredients` and `/api/v1/staples` keep answering from memory. Any other error is still a `500` (ADR-0013 rule 1).
 
 | Endpoint | What it does |
 |---|---|
