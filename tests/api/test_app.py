@@ -32,16 +32,21 @@ SEARCHES = [
 ]
 
 
-@pytest.fixture
+@pytest.fixture(autouse=True)
 def bare_app_logger() -> Iterator[logging.Logger]:
-    """The `recipe_app` logger as a fresh process has it: no handler, no level."""
-    app_logger = logging.getLogger("recipe_app")
-    saved = app_logger.handlers[:], app_logger.level
-    app_logger.handlers.clear()
+    """configure_logging changes the root, app and uvicorn loggers; each test
+    gets them back as they were."""
+    names = ("", "recipe_app", "uvicorn", "uvicorn.access")
+    loggers = [logging.getLogger(name) for name in names]
+    saved = [(lg.handlers[:], lg.level, lg.propagate, lg.disabled) for lg in loggers]
+    app_logger = loggers[1]
     app_logger.setLevel(logging.NOTSET)
     yield app_logger
-    app_logger.handlers[:], level = saved
-    app_logger.setLevel(level)
+    for lg, (handlers, level, propagate, disabled) in zip(loggers, saved, strict=True):
+        lg.handlers[:] = handlers
+        lg.setLevel(level)
+        lg.propagate = propagate
+        lg.disabled = disabled
 
 
 @asynccontextmanager
@@ -58,7 +63,11 @@ def settings(monkeypatch: pytest.MonkeyPatch) -> pytest.MonkeyPatch:
     return monkeypatch
 
 
-async def test_build_app_logs_the_catalog_hash_to_stderr(
+def log_lines(output: str) -> list[dict[str, object]]:
+    return [json.loads(line) for line in output.splitlines() if line]
+
+
+async def test_build_app_logs_the_catalog_hash_to_stdout(
     settings: pytest.MonkeyPatch,
     seeded_database_url: str,
     real_catalog: IngredientCatalog,
@@ -67,16 +76,35 @@ async def test_build_app_logs_the_catalog_hash_to_stderr(
 ) -> None:
     """ADR-0002 rule 7: you can always tell which catalog a pod runs.
 
-    Reads stderr, not caplog: caplog sees records that no handler would print.
+    Reads stdout, not caplog: caplog sees records that no handler would print.
+    Every line is one JSON object (ADR-0013 rule 4).
     """
     settings.setenv("DATABASE_URL", seeded_database_url)
 
     async with started(build_app()):
         pass
 
-    stderr = capfd.readouterr().err
-    assert real_catalog.content_hash in stderr
-    assert "INFO recipe_app.api.app" in stderr
+    lines = log_lines(capfd.readouterr().out)
+    loaded = [line for line in lines if "loaded catalog" in str(line["message"])]
+    assert len(loaded) == 1
+    assert real_catalog.content_hash in str(loaded[0]["message"])
+    assert loaded[0]["level"] == "INFO"
+    assert loaded[0]["logger"] == "recipe_app.api.app"
+
+
+async def test_log_format_text_keeps_readable_lines(
+    settings: pytest.MonkeyPatch,
+    seeded_database_url: str,
+    capfd: pytest.CaptureFixture[str],
+    bare_app_logger: logging.Logger,
+) -> None:
+    settings.setenv("DATABASE_URL", seeded_database_url)
+    settings.setenv("LOG_FORMAT", "text")
+
+    async with started(build_app()):
+        pass
+
+    assert "INFO recipe_app.api.app: loaded catalog" in capfd.readouterr().out
 
 
 def test_build_app_logs_its_settings_without_secrets(
@@ -90,13 +118,14 @@ def test_build_app_logs_its_settings_without_secrets(
 
     build_app()
 
-    stderr = capfd.readouterr().err
+    stdout = capfd.readouterr().out
     assert (
         "starting with DATABASE_URL=postgresql+asyncpg://u:***@db:5432/app, "
-        "CURSOR_ACTIVE_KID=a, CURSOR_SIGNING_KEYS=1 key (a), API_DOCS=false"
-    ) in stderr
-    assert "hunter2" not in stderr
-    assert KEY not in stderr
+        "CURSOR_ACTIVE_KID=a, CURSOR_SIGNING_KEYS=1 key (a), API_DOCS=false, "
+        "LOG_LEVEL=INFO, LOG_FORMAT=json"
+    ) in stdout
+    assert "hunter2" not in stdout
+    assert KEY not in stdout
 
 
 async def test_the_database_app_answers_like_the_file_app(

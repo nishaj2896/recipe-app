@@ -452,6 +452,18 @@
             ],
             "title": "Errors"
           },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Server errors (5xx) only: the X-Request-ID of this request, so a report of the error can be matched to the server's logs.",
+            "title": "Request Id"
+          },
           "status": {
             "title": "Status",
             "type": "integer"

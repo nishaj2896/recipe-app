@@ -22,6 +22,8 @@ VARIABLES = (
     "CURSOR_ACTIVE_KID",
     "API_DOCS",
     "RECIPE_APP_DATA_DIR",
+    "LOG_LEVEL",
+    "LOG_FORMAT",
 )
 
 
@@ -199,6 +201,8 @@ def test_the_api_summary_names_kids_not_keys(environ: pytest.MonkeyPatch) -> Non
     assert summary["CURSOR_SIGNING_KEYS"] == "2 keys (a, b)"
     assert summary["CURSOR_ACTIVE_KID"] == "b"
     assert summary["API_DOCS"] == "false"
+    assert summary["LOG_LEVEL"] == "INFO"
+    assert summary["LOG_FORMAT"] == "json"
 
 
 @pytest.mark.parametrize(
@@ -257,3 +261,49 @@ def test_missing_data_dir_refuses_to_start(
 
     with pytest.raises(ConfigError, match="RECIPE_APP_DATA_DIR"):
         SyncSettings.from_env()
+
+
+# LOG_LEVEL and LOG_FORMAT
+
+
+def test_log_defaults_are_info_and_json(environ: pytest.MonkeyPatch) -> None:
+    set_api(environ)
+
+    settings = ApiSettings.from_env()
+
+    assert (settings.log_level, settings.log_format) == ("INFO", "json")
+
+
+@pytest.mark.parametrize(
+    ("level", "fmt", "expected"),
+    [
+        ("debug", " TEXT ", ("DEBUG", "text")),
+        ("", "", ("INFO", "json")),
+        ("Warning", "json", ("WARNING", "json")),
+    ],
+)
+def test_log_settings_ignore_case_and_spaces(
+    environ: pytest.MonkeyPatch, level: str, fmt: str, expected: tuple[str, str]
+) -> None:
+    set_api(environ)
+    environ.setenv("LOG_LEVEL", level)
+    environ.setenv("LOG_FORMAT", fmt)
+
+    settings = ApiSettings.from_env()
+
+    assert (settings.log_level, settings.log_format) == expected
+
+
+@pytest.mark.parametrize(
+    ("name", "value"), [("LOG_LEVEL", "verbose"), ("LOG_FORMAT", "xml")]
+)
+def test_bad_log_settings_refuse_to_start(
+    environ: pytest.MonkeyPatch, name: str, value: str
+) -> None:
+    set_api(environ)
+    environ.setenv(name, value)
+
+    with pytest.raises(ConfigError, match=f"^{name}: ") as caught:
+        ApiSettings.from_env()
+
+    assert value not in str(caught.value)

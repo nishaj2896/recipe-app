@@ -12,6 +12,7 @@ from pydantic import BaseModel
 from starlette.types import ASGIApp
 
 from recipe_app.api import presenters
+from recipe_app.api.access import RequestContext
 from recipe_app.api.headers import DOCS_PAGES, SecurityHeaders
 from recipe_app.api.limits import BodySizeLimit
 from recipe_app.api.problems import problem_media_types, register_problem_handlers
@@ -78,11 +79,14 @@ def _new_app(lifespan: Lifespan | None = None, *, docs: bool = False) -> FastAPI
 
 def _add_security_headers(app: FastAPI, *, docs: bool) -> None:
     """Wrap the whole stack, so the 500s that Starlette's outermost error
-    middleware sends carry the headers too; add_middleware sits inside it."""
+    middleware sends carry the headers and the request ID too; add_middleware
+    sits inside it. RequestContext is outermost: its ID is set before anything
+    logs, and its access line times the whole response."""
     build = app.build_middleware_stack
 
     def build_middleware_stack() -> ASGIApp:
-        return SecurityHeaders(build(), DOCS_PAGES if docs else frozenset())
+        secured = SecurityHeaders(build(), DOCS_PAGES if docs else frozenset())
+        return RequestContext(secured)
 
     app.build_middleware_stack = build_middleware_stack  # type: ignore[method-assign]
 
@@ -113,8 +117,8 @@ def build_app() -> FastAPI:
     here, before the server binds; a missing or unsynced database fails the
     lifespan startup, which stops uvicorn the same way.
     """
-    configure_logging()
     settings = ApiSettings.from_env()
+    configure_logging(settings.log_level, settings.log_format)
     logger.info(
         "starting with %s",
         ", ".join(f"{name}={value}" for name, value in settings.summary().items()),
