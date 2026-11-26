@@ -5,14 +5,13 @@ from DATABASE_URL, so no password ever lives in alembic.ini.
 """
 
 import asyncio
-import os
 from logging.config import fileConfig
 
 from alembic import context
 from sqlalchemy import Connection
 from sqlalchemy.ext.asyncio import create_async_engine
 
-from recipe_app.infra.config import database_url_from_env
+from recipe_app.infra.config import DatabaseSettings
 from recipe_app.infra.tables import metadata
 
 config = context.config
@@ -42,7 +41,7 @@ def run_migrations(connection: Connection) -> None:
 
 
 async def run_async_migrations() -> None:
-    url = config.attributes.get("url") or database_url_from_env(os.environ)
+    url = config.attributes.get("url") or DatabaseSettings.from_env().url
     engine = create_async_engine(url)
     try:
         async with engine.connect() as connection:

@@ -79,6 +79,26 @@ async def test_build_app_logs_the_catalog_hash_to_stderr(
     assert "INFO recipe_app.api.app" in stderr
 
 
+def test_build_app_logs_its_settings_without_secrets(
+    settings: pytest.MonkeyPatch,
+    capfd: pytest.CaptureFixture[str],
+    bare_app_logger: logging.Logger,
+) -> None:
+    """ADR-0013 rule 8: the first thing to check on a misbehaving pod."""
+    settings.setenv("DATABASE_URL", "postgresql+asyncpg://u:hunter2@db:5432/app")
+    settings.delenv("API_DOCS", raising=False)
+
+    build_app()
+
+    stderr = capfd.readouterr().err
+    assert (
+        "starting with DATABASE_URL=postgresql+asyncpg://u:***@db:5432/app, "
+        "CURSOR_ACTIVE_KID=a, CURSOR_SIGNING_KEYS=1 key (a), API_DOCS=false"
+    ) in stderr
+    assert "hunter2" not in stderr
+    assert KEY not in stderr
+
+
 async def test_the_database_app_answers_like_the_file_app(
     settings: pytest.MonkeyPatch, seeded_database_url: str, make_app: AppFactory
 ) -> None:
