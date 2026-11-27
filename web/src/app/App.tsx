@@ -3,6 +3,7 @@ import { LazyMotion, MotionConfig } from "motion/react";
 import { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 
+import { shouldRetry } from "../api/client";
 import { ArtSprite } from "../art/IngredientArt";
 import { FlightProvider } from "../motion/flight";
 import { PantryScreen } from "../pantry/PantryScreen";
@@ -30,8 +31,11 @@ const loadMotionFeatures = () =>
     });
 
 export function App() {
-  // One client per mount, so tests never share a cache.
-  const [queryClient] = useState(() => new QueryClient());
+  // One client per mount, so tests never share a cache. No query retries a
+  // 503 by itself (ADR-0013 rule 1); see shouldRetry.
+  const [queryClient] = useState(
+    () => new QueryClient({ defaultOptions: { queries: { retry: shouldRetry } } }),
+  );
   useEffect(preloadScreens, []);
   return (
     <QueryClientProvider client={queryClient}>
