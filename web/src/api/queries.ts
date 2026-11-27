@@ -1,6 +1,6 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 
-import { api } from "./client";
+import { ApiError, api } from "./client";
 
 // The catalog changes only when the data is synced, and the browser
 // revalidates with the ETag the API sends, so one fetch per visit is enough.
@@ -9,8 +9,11 @@ const ONCE_PER_VISIT = { staleTime: Infinity, gcTime: Infinity } as const;
 const ingredientsQuery = {
   queryKey: ["ingredients"],
   queryFn: async () => {
-    const { data, error } = await api.GET("/api/v1/ingredients");
-    if (error) throw new Error("could not load the ingredients");
+    const { data, error, response } = await api.GET("/api/v1/ingredients");
+    // By status, not by body: a proxy's 503 has none, and openapi-fetch then
+    // reports no error.
+    if (!response.ok || error)
+      throw new ApiError("could not load the ingredients", response.status);
     return data.ingredients;
   },
   ...ONCE_PER_VISIT,
@@ -33,8 +36,9 @@ export function useStaples() {
   return useQuery({
     queryKey: ["staples"],
     queryFn: async () => {
-      const { data, error } = await api.GET("/api/v1/staples");
-      if (error) throw new Error("could not load the staples");
+      const { data, error, response } = await api.GET("/api/v1/staples");
+      if (!response.ok || error)
+        throw new ApiError("could not load the staples", response.status);
       return data.groups;
     },
     ...ONCE_PER_VISIT,
@@ -50,12 +54,15 @@ export function recipeQuery(id: string) {
   return {
     queryKey: ["recipe", id],
     queryFn: async () => {
-      const { data, error, response } = await api.GET("/api/v1/recipes/{recipe_id}", {
+      const { data, response } = await api.GET("/api/v1/recipes/{recipe_id}", {
         params: { path: { recipe_id: id } },
       });
       if (data) return data;
       if (response.status === 404) return null;
-      throw new Error(`could not load recipe ${id}: ${error.title}`);
+      throw new ApiError(
+        `could not load recipe ${id} (${String(response.status)})`,
+        response.status,
+      );
     },
     // A recipe never changes within a visit.
     staleTime: Infinity,
@@ -77,10 +84,15 @@ export const MAX_SEARCH_OFFSET = 200;
  * `offset`. Only for 2 to 60 characters, which the API accepts.
  */
 async function findRecipes(text: string, limit: number, offset: number) {
-  const { data, error } = await api.GET("/api/v1/recipes", {
+  const { data, error, response } = await api.GET("/api/v1/recipes", {
     params: { query: { q: text, limit, offset } },
   });
-  if (error) throw new Error(`could not search recipes: ${error.title}`);
+  if (!response.ok || error) {
+    throw new ApiError(
+      `could not search recipes (${String(response.status)})`,
+      response.status,
+    );
+  }
   // The text rides along: while the next search loads, the last results
   // still show, and must be described by the text they answer.
   return { ...data, q: text };

@@ -191,17 +191,26 @@ test("with reduced motion on, nothing flies", async () => {
   expect(useDevice.getState().pantry).toEqual(["milk"]);
 });
 
-test("a catalog that fails to load says so and offers a retry", async () => {
-  vi.stubGlobal(
-    "fetch",
-    vi.fn(() => Promise.resolve(new Response(null, { status: 503 }))),
+test("a busy API is not retried behind the user's back: one request, then Try again", async () => {
+  const fetch = vi.fn((request: Request) =>
+    Promise.resolve(
+      new URL(request.url).pathname === "/api/v1/ingredients"
+        ? new Response(null, { status: 503, headers: { "retry-after": "2" } })
+        : Response.json({ groups: [] }),
+    ),
   );
+  vi.stubGlobal("fetch", fetch);
   render(<App />);
+  // At once: no automatic retries first (ADR-0013 rule 1).
   expect(
-    await screen.findByText(/couldn't load the ingredients/, {}, { timeout: 8000 }),
+    await screen.findByText(/couldn't load the ingredients/, {}, { timeout: 500 }),
   ).toBeInTheDocument();
   expect(screen.getByRole("button", { name: "Try again" })).toBeInTheDocument();
-}, 10_000);
+  const catalogCalls = fetch.mock.calls.filter(
+    ([request]) => new URL(request.url).pathname === "/api/v1/ingredients",
+  );
+  expect(catalogCalls).toHaveLength(1);
+});
 
 test("nothing can be tapped until the saved pantry has been read", async () => {
   useDevice.setState({ hydration: "pending" });
