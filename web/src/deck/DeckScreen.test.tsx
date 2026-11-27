@@ -349,6 +349,43 @@ test("a failed search can be retried", async () => {
   await nextCardIs("Matar Paneer");
 });
 
+test("a busy API makes the deck wait as long as Retry-After asks", async () => {
+  let calls = 0;
+  stubApi(() => {
+    calls += 1;
+    return calls === 1
+      ? new Response(
+          JSON.stringify({
+            type: "/problems/service-unavailable",
+            title: "Service unavailable",
+            status: 503,
+          }),
+          {
+            status: 503,
+            headers: { "content-type": "application/problem+json", "retry-after": "1" },
+          },
+        )
+      : { results: DECK, next_cursor: null, ignored_ingredients: [] };
+  });
+  const user = userEvent.setup();
+  render(<App />);
+
+  const alert = await screen.findByRole("alert");
+  expect(within(alert).getByText("Our kitchen is busy right now.")).toBeVisible();
+  expect(within(alert).getByRole("button", { name: "Try again in 1 s" })).toBeDisabled();
+
+  // Enabled once the wait is over, and not before.
+  const retry = await within(alert).findByRole(
+    "button",
+    { name: "Try again" },
+    { timeout: 2000 },
+  );
+  expect(calls).toBe(1);
+  await user.click(retry);
+  await nextCardIs("Matar Paneer");
+  expect(calls).toBe(2);
+});
+
 test("the first visit shows the swipe hint until the first swipe, then never again", async () => {
   const { user } = await openDeck();
 

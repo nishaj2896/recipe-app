@@ -55,6 +55,39 @@ function AfterFirstPaint({ children }: { children: ReactNode }) {
 }
 
 /** The swipe deck: right to save, left to skip, one deck of 20 at a time. */
+/**
+ * The API is up but can't search right now (a 503). "Try again" waits as long
+ * as its Retry-After asks: every open deck retrying at once would only keep a
+ * recovering database busy (ADR-0013 rule 1).
+ */
+function BusyRetry({ seconds, onRetry }: { seconds: number; onRetry: () => void }) {
+  const [left, setLeft] = useState(seconds);
+  useEffect(() => {
+    if (left <= 0) return;
+    const timer = setTimeout(() => {
+      setLeft(left - 1);
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [left]);
+
+  return (
+    <>
+      <p>Our kitchen is busy right now.</p>
+      <p className={styles.muted}>Your pantry is safe. Give it a moment.</p>
+      <button
+        type="button"
+        className={styles.primary}
+        disabled={left > 0}
+        onClick={onRetry}
+      >
+        {left > 0 ? `Try again in ${left} s` : "Try again"}
+      </button>
+    </>
+  );
+}
+
 export function DeckScreen() {
   const hydration = useDevice((state) => state.hydration);
   const saved = useDevice((state) => state.saved);
@@ -234,6 +267,10 @@ export function DeckScreen() {
     if (pages.length <= deckIndex + 1) void deck.fetchNextPage();
   }
 
+  function retry() {
+    void (pages.length > 0 ? deck.fetchNextPage() : deck.refetch());
+  }
+
   function startOver() {
     setSavedOnFreshDeck(new Set(useDevice.getState().saved));
     setRound((value) => value + 1);
@@ -354,16 +391,17 @@ export function DeckScreen() {
                 Deal a fresh deck
               </button>
             </>
+          ) : deck.error instanceof SearchError && deck.error.waitSeconds !== null ? (
+            <BusyRetry
+              // A new 503 restarts the countdown.
+              key={deck.errorUpdatedAt}
+              seconds={deck.error.waitSeconds}
+              onRetry={retry}
+            />
           ) : (
             <>
               <p>We couldn't find recipes just now.</p>
-              <button
-                type="button"
-                className={styles.primary}
-                onClick={() => {
-                  void (pages.length > 0 ? deck.fetchNextPage() : deck.refetch());
-                }}
-              >
+              <button type="button" className={styles.primary} onClick={retry}>
                 Try again
               </button>
             </>

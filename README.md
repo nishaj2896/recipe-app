@@ -103,6 +103,22 @@ Every response carries an `X-Request-ID` header. A valid incoming one (8 to 64 l
 
 When the database is down, too slow, or out of connections, the API answers `503` with the problem type `/problems/service-unavailable` and `Retry-After`, and logs one WARNING naming the cause (`statement timeout`, `pool timeout`, `connection lost (57P01)`, `query cancelled (57014)` when someone cancelled it by hand, ...). `/api/v1/ingredients` and `/api/v1/staples` keep answering from memory. Any other error is still a `500` (ADR-0013 rule 1).
 
+In the app, the swipe deck answers a `503` with "Our kitchen is busy right now" and keeps its "Try again" button disabled for the `Retry-After` seconds, counting down. Every open deck retrying at once would only keep a recovering database busy.
+
+**Break it on purpose.** `tests/chaos` does this in CI through a proxy that cuts, freezes or refuses the database link. To see it by hand, with `docker compose up --build` running, in a second terminal:
+
+```bash
+curl -si 'http://127.0.0.1:8000/api/v1/recipes?q=paneer' | head -1   # 200
+docker compose kill postgres
+curl -si 'http://127.0.0.1:8000/api/v1/recipes?q=paneer'             # 503 at once, with Retry-After and a request_id
+curl -si 'http://127.0.0.1:8000/api/v1/ingredients' | head -1        # still 200: served from memory
+docker compose logs api | grep 'database unavailable'                  # one WARNING per failed request, naming the cause
+docker compose start postgres
+curl -si 'http://127.0.0.1:8000/api/v1/recipes?q=paneer' | head -1   # 200 again once it is up: no API restart
+```
+
+Open the deck at <http://localhost:5173> while the database is down to see its message. Expect no stack trace in any response and no request that hangs: the 503 comes within the request deadline (8 s), usually at once.
+
 | Endpoint | What it does |
 |---|---|
 | `POST /api/v1/recipes/search` | One swipe deck for a pantry, with filters and a `next_cursor` |
